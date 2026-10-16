@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    The C-H stretch in an organic molecule appears near 2900 cm-1. You replace that H by D. Where do
+    you expect the stretch to move, assuming the force constant stays the same?
+  options:
+    - To about 4100 cm-1, because the heavier atom stores more energy.
+    - To about 2100 cm-1, because the frequency scales as one over the square root of the reduced mass.
+    - To about 1450 cm-1, because doubling the mass halves the frequency.
+    - Nowhere, because isotopes have identical chemistry and identical spectra.
+  correct: 1
+  explanation: >-
+    The frequency goes as the square root of k over mu. Deuterium nearly doubles the reduced mass of
+    a C-H bond, so the wavenumber drops by roughly a factor of 1/sqrt(2), to about 2100 cm-1.
+- id: q2
+  question: >-
+    Your pendulum data give a good straight line of T squared against L, but the line crosses the T
+    squared axis well above zero. What is the most likely cause, and does it spoil g?
+  options:
+    - The stopwatch was slow; g is wrong by the size of the intercept.
+    - The swings were too small; g is too large and must be corrected.
+    - Every length had the same offset; g from the slope is still fine.
+    - The string stretched under load; g cannot be found from these data.
+  correct: 2
+  explanation: >-
+    A constant length error, such as measuring to the top of the keys, shifts the line sideways, which shows up as an intercept, but it does not
+    change the slope. Because g comes from the slope, it is unaffected.
+- id: q3
+  question: >-
+    An IR band sits at a wavelength of 5.00 micrometres. What is its wavenumber?
+  options:
+    - 2000 cm-1
+    - 5000 cm-1
+    - 200 cm-1
+    - 20000 cm-1
+  correct: 0
+  explanation: >-
+    Wavenumber is one over the wavelength in centimetres: 5.00 micrometres is 5.00e-4 cm, and
+    1/5.00e-4 = 2000 cm-1. Mistakes in the micrometre-to-centimetre step give the other answers.
+- id: q4
+  question: >-
+    You compute a bond force constant as mu times (2 pi c times wavenumber) squared and get
+    5.16e-2 N/m, while textbooks quote hundreds of N/m for single bonds. What slipped?
+  options:
+    - The reduced mass should be replaced by the mass of the lighter atom alone.
+    - The 2 pi factor should be removed, since the wavenumber is already angular.
+    - The wavenumber must be converted to a wavelength before use.
+    - The speed of light was taken in m/s while the wavenumber was in cm-1.
+  correct: 3
+  explanation: >-
+    With the wavenumber in cm-1, c must be in cm/s. Using 3.00e8 instead of 3.00e10 makes the
+    angular frequency 100 times too small and k, which goes as its square, 10000 times too small.

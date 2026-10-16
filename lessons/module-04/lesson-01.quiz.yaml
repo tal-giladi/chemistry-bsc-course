@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    You compute the rms speed of N2 at 298 K as sqrt(3RT/M) and get 16.3 m/s. A classmate says
+    gas molecules move at hundreds of metres per second. What went wrong?
+  options:
+    - Nothing; 16.3 m/s is right because N2 is a heavy diatomic molecule.
+    - The temperature should have been in Celsius, which gives a larger answer.
+    - The molar mass was entered as 28.0 g/mol instead of 0.0280 kg/mol.
+    - The formula needs Boltzmann's constant instead of R, which gives a larger answer.
+  correct: 2
+  explanation: >-
+    With M in g/mol the answer is too small by sqrt(1000), about 32 times. In kg/mol you get
+    515 m/s. R goes with molar quantities, so R with M in kg/mol is the correct pairing.
+- id: q2
+  question: >-
+    A potential-energy curve U(r) for two atoms has its minimum at 0.13 nm. At r = 0.15 nm the
+    curve rises with positive slope. Which way does the force on the atoms point there?
+  options:
+    - Towards smaller r, pulling the atoms back together, because F = -dU/dr is negative.
+    - Towards larger r, pushing the atoms apart, because the slope is positive.
+    - There is no force, because the force is zero everywhere except at the minimum.
+    - Towards larger r, because stretched bonds always break.
+  correct: 0
+  explanation: >-
+    The force is minus the slope. A positive slope gives a negative force, pointing towards smaller
+    r: the bond pulls the atoms back towards the bottom of the well.
+- id: q3
+  question: >-
+    Thermal energy at room temperature is about 0.026 eV per molecule, and the H-Cl bond needs about
+    4.4 eV to break. What does this comparison tell you?
+  options:
+    - Collisions break about 0.6 % of HCl bonds every second at room temperature.
+    - A typical collision has far too little energy, so HCl does not fall apart from heat alone at room temperature.
+    - The bond breaks after about 170 collisions, because the energies add up.
+    - The comparison is meaningless, because eV and kT measure different kinds of energy.
+  correct: 1
+  explanation: >-
+    Both numbers are energies per molecule, so they compare directly. A ratio of about 170 means
+    ordinary collisions cannot supply the bond energy; light or a flame is needed. Collision energies
+    do not accumulate in a bond, because the bond keeps losing energy in later collisions.
+- id: q4
+  question: >-
+    An N2 molecule moving at 500 m/s hits the wall of its container head-on and bounces back at the
+    same speed. How large is its momentum change, given m = 4.65e-26 kg?
+  options:
+    - 2.33e-23 kg m/s, its momentum before the impact.
+    - Zero, because the speed is the same before and after.
+    - 5.81e-21 kg m/s, its kinetic energy in joules.
+    - 4.65e-23 kg m/s, twice its momentum, because the velocity reverses.
+  correct: 3
+  explanation: >-
+    Momentum is a vector. It goes from +mv to -mv, a change of 2mv = 4.65e-23 kg m/s. The speed is
+    unchanged, but the direction is not, and that change is what pushes on the wall.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    Two ions are pulled from 0.30 nm apart to 0.60 nm apart. By what factors do the Coulomb force and
+    the Coulomb energy between them change?
+  options:
+    - Both fall to one half.
+    - Both fall to one quarter.
+    - The force falls to one half and the energy to one quarter.
+    - The force falls to one quarter and the energy to one half.
+  correct: 3
+  explanation: >-
+    The force goes as 1/r squared and the energy as 1/r. Doubling r divides the force by 4 and the
+    energy by 2.
+- id: q2
+  question: >-
+    A salt dissolves readily in water but hardly at all in hexane. Which property of the solvent best
+    explains the difference?
+  options:
+    - Its relative permittivity, which sets how much the ion attraction is weakened.
+    - Its density, because denser solvents push ions apart more strongly.
+    - Its boiling point, because a solvent must boil above the salt's melting point.
+    - Its molar mass, because lighter solvent molecules fit between ions more easily.
+  correct: 0
+  explanation: >-
+    Coulomb attraction is divided by the relative permittivity, about 78 for water and 2 for hexane. In water the ion-pair energy drops to
+    a few RT, so thermal motion separates the ions; in hexane it stays far above RT.
+- id: q3
+  question: >-
+    A cell drives electrons through a potential difference of 2.0 V. How much energy is that per mole
+    of electrons?
+  options:
+    - 2.0 kJ/mol, because one volt is one kilojoule per mole.
+    - 193 kJ/mol, from 2.0 V times the Faraday constant.
+    - 3.2e-19 kJ/mol, from 2.0 V times the elementary charge.
+    - 48 kJ/mol, from 2.0 V divided by the Faraday constant.
+  correct: 1
+  explanation: >-
+    Energy per mole is charge per mole times voltage: 96485 C/mol times 2.0 J/C = 1.93e5 J/mol = 193
+    kJ/mol. The elementary charge gives the energy per electron, not per mole.
+- id: q4
+  question: >-
+    A molecule's measured dipole moment is 1.09 D and its bond length 0.127 nm. A fully ionic bond of
+    that length would have about 6.1 D. What do you conclude?
+  options:
+    - The bond is fully ionic, because any dipole means charges of plus and minus e.
+    - The bond is nonpolar, because 1.09 D is less than 6.1 D.
+    - The atoms carry partial charges of about 0.18 e, so the bond is polar covalent.
+    - The bond length must be wrong, because the two dipoles should be equal.
+  correct: 2
+  explanation: >-
+    The ratio 1.09/6.1 = 0.18 gives the effective partial charge in units of e. This is HCl: a polar
+    covalent bond, neither ionic nor nonpolar.

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" width="560" height="250" font-family="Arial, Helvetica, sans-serif" font-size="14">
+  <title>LED measurement circuit for lesson 04.5</title>
+  <desc>Three AA cells in series (4.5 V) feed a 1 kilohm potentiometer used as a variable resistor, then a 150 ohm resistor, then an LED, and back to the battery minus. The voltage V_res is measured across the 150 ohm resistor and V_led across the LED.</desc>
+  <rect x="0" y="0" width="560" height="250" fill="#ffffff"/>
+  <g stroke="#222222" stroke-width="2" fill="none">
+    <line x1="60" y1="50" x2="60" y2="105"/>
+    <line x1="40" y1="105" x2="80" y2="105"/>
+    <line x1="50" y1="117" x2="70" y2="117" stroke-width="4"/>
+    <line x1="60" y1="117" x2="60" y2="200"/>
+    <line x1="60" y1="50" x2="120" y2="50"/>
+    <rect x="120" y="38" width="80" height="24" fill="#f4f4f4"/>
+    <line x1="160" y1="85" x2="160" y2="62"/>
+    <polyline points="154,70 160,62 166,70"/>
+    <line x1="200" y1="50" x2="260" y2="50"/>
+    <rect x="260" y="38" width="70" height="24" fill="#f4f4f4"/>
+    <line x1="330" y1="50" x2="440" y2="50"/>
+    <line x1="440" y1="50" x2="440" y2="100"/>
+    <polygon points="425,100 455,100 440,128" fill="#ffe08a"/>
+    <line x1="425" y1="128" x2="455" y2="128"/>
+    <line x1="440" y1="128" x2="440" y2="200"/>
+    <line x1="460" y1="104" x2="478" y2="92"/>
+    <line x1="462" y1="118" x2="480" y2="106"/>
+    <line x1="60" y1="200" x2="440" y2="200"/>
+  </g>
+  <g stroke="#1f5fbf" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+    <path d="M 262 70 Q 295 105 328 70"/>
+    <path d="M 420 92 Q 395 114 420 136"/>
+  </g>
+  <g fill="#222222">
+    <text x="118" y="30">1 kΩ potentiometer</text>
+    <text x="262" y="30">R = 150 Ω</text>
+    <text x="490" y="118">LED</text>
+    <text x="88" y="100">+</text>
+    <text x="88" y="130">−</text>
+    <text x="8" y="160">3 × AA</text>
+    <text x="8" y="178">4.5 V</text>
+  </g>
+  <g fill="#1f5fbf">
+    <text x="270" y="120">V_res</text>
+    <text x="350" y="118">V_led</text>
+    <text x="120" y="230">I = V_res / R    (read both voltages at each knob setting)</text>
+  </g>
+</svg>

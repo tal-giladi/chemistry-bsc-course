@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" width="640" height="230" font-family="Arial, Helvetica, sans-serif" font-size="13">
+  <title>The electromagnetic spectrum and what each region does to molecules</title>
+  <desc>Regions from low to high photon energy: radio waves flip nuclear spins (NMR), microwaves rotate molecules, infrared makes bonds vibrate, visible and ultraviolet light move valence electrons, and X-rays remove core electrons. Typical wavelengths and photon energies are marked.</desc>
+  <rect x="0" y="0" width="640" height="230" fill="#ffffff"/>
+  <g stroke="#333333" stroke-width="1">
+    <rect x="20" y="60" width="110" height="50" fill="#d9e6f5"/>
+    <rect x="130" y="60" width="110" height="50" fill="#d6efe0"/>
+    <rect x="240" y="60" width="130" height="50" fill="#f8e3c8"/>
+    <rect x="370" y="60" width="40" height="50" fill="#e9d8f2"/>
+    <rect x="410" y="60" width="100" height="50" fill="#f4d1d6"/>
+    <rect x="510" y="60" width="110" height="50" fill="#e0e0e0"/>
+  </g>
+  <g fill="#111111" text-anchor="middle">
+    <text x="75" y="82" font-weight="bold">Radio</text>
+    <text x="75" y="100">NMR: nuclear spin</text>
+    <text x="185" y="82" font-weight="bold">Microwave</text>
+    <text x="185" y="100">rotation</text>
+    <text x="305" y="82" font-weight="bold">Infrared</text>
+    <text x="305" y="100">bond vibration</text>
+    <text x="390" y="82" font-weight="bold">Vis</text>
+    <text x="460" y="82" font-weight="bold">Ultraviolet</text>
+    <text x="420" y="100">valence electrons</text>
+    <text x="565" y="82" font-weight="bold">X-ray</text>
+    <text x="565" y="100">core electrons</text>
+  </g>
+  <g fill="#333333" text-anchor="middle">
+    <text x="320" y="30">wavelength gets shorter, frequency and photon energy get larger →</text>
+    <text x="75" y="135">~1 m (400 MHz)</text>
+    <text x="185" y="135">~1 cm</text>
+    <text x="305" y="135">2.5–25 µm</text>
+    <text x="390" y="135">400–700 nm</text>
+    <text x="460" y="150">10–400 nm</text>
+    <text x="565" y="135">~0.1 nm</text>
+    <text x="75" y="175">~10⁻⁶ eV</text>
+    <text x="185" y="175">~10⁻⁴ eV</text>
+    <text x="305" y="175">0.05–0.5 eV</text>
+    <text x="410" y="190">1.8–3.1 eV (vis), up to ~120 eV (UV)</text>
+    <text x="565" y="175">~10⁴ eV</text>
+  </g>
+</svg>

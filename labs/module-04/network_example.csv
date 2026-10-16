@@ -1,0 +1,8 @@
+quantity,value,note
+Vs_V,3.119,battery terminal voltage with the network connected
+R1_ohm,217.7,measured out of circuit; nominal 220 ohm
+R2_ohm,477.9,measured out of circuit; nominal 470 ohm
+R3_ohm,327.8,measured out of circuit; nominal 330 ohm
+R4_ohm,988.0,measured out of circuit; nominal 1000 ohm
+VA_V,1.921,node A to battery minus
+VB_V,1.445,node B to battery minus

@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    You want the current through a 470 ohm resistor in a working circuit. Your multimeter has a
+    10 A socket and a volts setting. What is the safest way to get the current?
+  options:
+    - Put the meter on the 10 A range and touch the probes across the resistor.
+    - Set the meter to volts, measure across the resistor, and divide by 470 ohm.
+    - Set the meter to ohms and measure the resistor while the circuit is powered.
+    - Put the meter on the 10 A range directly across the battery to read the total current.
+  correct: 1
+  explanation: >-
+    A voltmeter across a component draws almost no current, and Ohm's law gives I = V/R. A meter on
+    a current range placed across anything is nearly a short circuit, and resistance readings in a
+    powered circuit are meaningless.
+- id: q2
+  question: >-
+    A coulometric analysis passes 0.200 A for 600 s, reducing Ag+ to Ag (one electron per ion,
+    M = 107.87 g/mol) at 100 % efficiency. How much silver is deposited?
+  options:
+    - 0.067 g, from half the moles of electrons.
+    - 7.2 g, from using 10 minutes instead of 600 seconds and then multiplying by 60.
+    - 0.134 g, from 120 C divided by 96485 C/mol times 107.87 g/mol.
+    - 1.24 g, from 120 C times 107.87 divided by 10465.
+  correct: 2
+  explanation: >-
+    Q = It = 120 C, n(e) = 120/96485 = 1.24e-3 mol, and with one electron per Ag ion that is the
+    moles of silver: 1.24e-3 times 107.87 = 0.134 g. Halving applies only to two-electron ions such as Cu2+.
+- id: q3
+  question: >-
+    Two 1.0 kilohm resistors are connected in parallel across a 3.0 V source. What total current does
+    the source supply?
+  options:
+    - 1.5 mA, because the combination is 2.0 kilohm.
+    - 3.0 mA, because each resistor takes 3.0 V divided by 1.0 kilohm and only one path counts.
+    - 0.75 mA, because parallel resistors share the voltage between them.
+    - 6.0 mA, because the combination is 500 ohm.
+  correct: 3
+  explanation: >-
+    In parallel each resistor sees the full 3.0 V and takes 3.0 mA; the currents add to 6.0 mA. The
+    equivalent resistance is 1.0 times 1.0 over 2.0 = 0.50 kilohm, and 3.0/500 = 6.0 mA.
+- id: q4
+  question: >-
+    An old AA cell reads 1.55 V on the meter with nothing connected, but a clock using it stops. What
+    is the most likely explanation?
+  options:
+    - Its internal resistance has grown, so its voltage drops sharply once current flows.
+    - Its EMF has risen above the clock's rating, so the clock protects itself.
+    - The meter reads too high because voltmeters add their own voltage.
+    - The cell has reversed polarity, which a meter cannot detect.
+  correct: 0
+  explanation: >-
+    The terminal voltage is EMF minus I times r. With no load I is almost zero, so even a worn cell
+    reads well. Under load a large internal resistance makes the voltage collapse.
