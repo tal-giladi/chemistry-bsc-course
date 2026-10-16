@@ -1,5 +1,8 @@
 # Self-taught Chemistry Degree — Technion B.Sc. track
 
+> [!IMPORTANT]
+> Every agent working on this course must first read the Academy's binding build rules: `C:\Users\TalGiladi\OneDrive\repos\tals-academy\docs\new-course-instructions.md`. When this plan disagrees with that file, that file wins. Build state and resume steps: `BUILD_PROGRESS.md`.
+
 This curriculum mirrors the Technion B.Sc. in Chemistry (Schulich Faculty of Chemistry, program 012042-1-000). That degree is 124 credit points over 3 years, full time. Here it is turned into a part-time self-study plan of about 10–12 hours a week.
 
 The wet labs are replaced by interactive simulations that we build inside the courses, plus real published data and a few safe home experiments. This follows Tal's rule: a simulation counts if you learn everything the lab teaches apart from the physical hand practice.
