@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A degradation reaction takes 20 minutes for the concentration to fall from 0.080 to 0.040 mol/L
+    and another 40 minutes to fall to 0.020 mol/L. What is its order?
+  options:
+    - First order, because the concentration halved twice.
+    - It cannot be decided without plotting ln c against time.
+    - Zero order, because the half-life grew as the reactant was used up.
+    - Second order, because the half-life doubled when the concentration halved.
+  correct: 3
+  explanation: >-
+    Second-order half-lives are 1/(k c0), so they double each time c0 halves. A first-order half-life
+    would stay at 20 minutes; a zero-order one would get shorter.
+- id: q2
+  question: >-
+    You integrate dc/dt = -k c with Euler's method and get c = 0.0290 mol/L at 300 s with a 15 s step.
+    With a 7.5 s step you get 0.0296. Roughly what would a 3.75 s step give?
+  options:
+    - About 0.0302, since each halving moves the answer by the same 0.0006.
+    - About 0.0296, since Euler has already converged at 7.5 s.
+    - About 0.0299, since halving the step roughly halves the remaining error.
+    - About 0.0284, since smaller steps add more rounding error.
+  correct: 2
+  explanation: >-
+    Euler is a first-order method: the error is proportional to h. The change from 15 s to 7.5 s was
+    0.0006, so the next halving moves it about 0.0003, towards the exact 0.0301.
+- id: q3
+  question: >-
+    A reactor is fed so that dc/dt = r - k c with r = 0.010 mol/(L min) and k = 0.020 per minute, starting
+    from c = 0. What concentration does it settle at?
+  options:
+    - 0.50 mol/L, where the feed rate equals the reaction rate.
+    - 0.0002 mol/L, the product of r and k.
+    - 2.0 mol/L, the ratio k divided by r in reciprocal units.
+    - It keeps rising, because there is always fresh feed.
+  correct: 0
+  explanation: >-
+    At steady state dc/dt = 0, so c = r/k = 0.010/0.020 = 0.50 mol/L. The approach is exponential with
+    time constant 1/k = 50 minutes.
+- id: q4
+  question: >-
+    You simulate a reaction with solve_ivp at its default tolerances. Concentrations are around 1e-6
+    mol/L and the result looks jagged and inaccurate. What is the best fix?
+  options:
+    - Switch to Euler's method, which has no tolerances to set.
+    - Set atol well below 1e-6, for example 1e-12, and a tight rtol such as 1e-8.
+    - Switch from RK45 to LSODA, which does not use tolerances at all.
+    - Pass many more points in t_eval so the solver takes smaller steps.
+  correct: 1
+  explanation: >-
+    The default atol of 1e-6 allows absolute errors as big as the signal. t_eval only chooses where
+    the answer is reported; it does not make the solver more accurate.

@@ -20,6 +20,7 @@ Repo root: `C:\Users\TalGiladi\OneDrive\repos\course-creator\chemistry-bsc-cours
 - Images: SVG files in `assets/` named `mNN-<name>.svg` (hand-written SVG is fine; must have meaningful alt text where used). Prefer mermaid for flow diagrams.
 - Glossary: do NOT edit `glossary.md`. Write `curriculum/glossary-inbox/module-NN.md` with lines `- **term** — definition (lessons/module-NN/lesson-MM.md)`.
 - Research log: write `curriculum/research-inbox/module-NN.md` as a table: source | url | date accessed | claim supported | lesson(s).
+- Templates in `templates/` (lab-report, notebook-page, error-analysis, spectrum-assignment, research-proposal): link the relevant one from Hands-on (`../../templates/lab-report.md`).
 - Simulations: just link them with the names/presets in outline §5 (built later; the checker flags these links as broken until then — expected, list them in your report).
 
 ## Sources policy

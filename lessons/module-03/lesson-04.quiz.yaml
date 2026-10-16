@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A balance pan has m = 0.50 kg, an effective spring constant k = 200 N/m and damping b = 30 kg/s.
+    How does it behave after you put a sample on it?
+  options:
+    - It oscillates many times, because the spring is stiff.
+    - It is critically damped, because b is larger than k divided by m.
+    - It creeps to rest without oscillating, because b squared is larger than 4mk.
+    - It oscillates once and stops, because Q is exactly 1.
+  correct: 2
+  explanation: >-
+    b^2 = 900 and 4mk = 400, so the discriminant is positive and the system is overdamped. Critical
+    damping would need b = 2 sqrt(mk) = 20 kg/s.
+- id: q2
+  question: >-
+    Carbon monoxide (12C16O) has a harmonic wavenumber of about 2170 cm^-1. Which mass belongs in
+    k = mu (2 pi c omega_e)^2?
+  options:
+    - The reduced mass, 12 times 16 divided by 28, about 6.86 u.
+    - The mass of the oxygen atom, 16 u, since it is the heavier partner.
+    - The total mass, 28 u, since the whole molecule vibrates.
+    - The mass of the carbon atom, 12 u, since carbon carries the bond.
+  correct: 0
+  explanation: >-
+    Two atoms vibrating against each other act like one mass mu = m1 m2/(m1 + m2). For CO the masses
+    are similar, so mu is about half of either; using a single atom's mass gives k about twice too big.
+- id: q3
+  question: >-
+    Your home pendulum's amplitude falls from 20 cm to 10 cm in 70 s and its period is 1.4 s. What is
+    its quality factor Q?
+  options:
+    - About 50, the number of swings in 70 s.
+    - About 0.010, the damping rate in 1/s.
+    - About 35, half the number of seconds.
+    - About 220, from omega0 / (2 gamma) with gamma = ln 2 / 70 s.
+  correct: 3
+  explanation: >-
+    gamma = ln 2 / 70 s = 0.0099 per second and omega0 = 2 pi / 1.4 s = 4.49 rad/s, so
+    Q = 4.49 / 0.0198, about 227.
+- id: q4
+  question: >-
+    You want to solve m x'' + b x' + k x = 0 with scipy's solve_ivp. What do you pass as the state and
+    the right-hand side?
+  options:
+    - The state x alone, with the right-hand side -(b + k) x / m.
+    - The state [x, v], with the right-hand side [v, -(b v + k x)/m].
+    - The state [x, v], with the right-hand side [-(b v + k x)/m, v].
+    - The state x'' alone, since solve_ivp handles second derivatives directly.
+  correct: 1
+  explanation: >-
+    solve_ivp only solves first-order systems. With v = x' the equation becomes x' = v and
+    v' = -(b v + k x)/m, returned in the same order as the state.

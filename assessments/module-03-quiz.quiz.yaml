@@ -1,0 +1,148 @@
+- id: q1
+  question: >-
+    A quality-control lab measures a two-dye drink at 430 nm and 630 nm, where each dye absorbs
+    mainly at one of the wavelengths. A new technician proposes 430 nm and 450 nm instead, because
+    the signals are bigger. What do you tell them?
+  options:
+    - >-
+      Fine, because larger absorbances always give smaller relative errors in both concentrations.
+    - >-
+      Fine, as long as the cuvette path length is the same at both wavelengths.
+    - >-
+      No, because both wavelengths see mainly the same dye, so the system is ill-conditioned.
+    - >-
+      No, because Beer-Lambert only holds at the absorption maximum of each dye.
+  correct: 2
+  explanation: >-
+    If both wavelengths respond to the dyes in nearly the same ratio, the two equations are nearly
+    parallel; the condition number is large and noise can even give a negative concentration.
+- id: q2
+  question: >-
+    You balance a reaction by computing the null space of its composition matrix and get two
+    independent vectors. What does that mean for your report?
+  options:
+    - >-
+      Two independent reactions fit the species, so observations must fix their ratio.
+    - >-
+      The calculation failed, because a balanced reaction always has unique coefficients.
+    - >-
+      You can add the two vectors and report the sum as the balanced equation.
+    - >-
+      One of the elements was entered twice, so delete a row and compute again.
+  correct: 0
+  explanation: >-
+    A two-dimensional null space means any mix of two reactions balances the atoms, for example
+    complete and incomplete combustion. Atom counting cannot choose; the product analysis must.
+- id: q3
+  question: >-
+    A Hückel calculation for a molecule gives eigenvalues x = 2.0, 1.0, 1.0, -1.0, -1.0, -2.0 and
+    the molecule has six pi electrons. What is its total pi energy?
+  options:
+    - 6 alpha + 0 beta, since the eigenvalues add up to zero.
+    - 6 alpha + 8 beta, from filling the three highest x values with two electrons each.
+    - 6 alpha - 8 beta, from filling the three lowest x values with two electrons each.
+    - 6 alpha + 4 beta, from filling only the largest x value with all six electrons.
+  correct: 1
+  explanation: >-
+    beta is negative, so the largest x values are the lowest orbitals. Two electrons each in x = 2, 1
+    and 1 gives 2(2 + 1 + 1) beta = 8 beta, the benzene result.
+- id: q4
+  question: >-
+    The stretch of 12C16O is near 2143 cm^-1. A student predicts the 13C16O band by assuming the same
+    force constant. Roughly where should it appear?
+  options:
+    - Near 2190 cm^-1, because a heavier isotope stiffens the bond.
+    - Near 1978 cm^-1, because the wavenumber scales with 12/13.
+    - Near 2143 cm^-1, because isotopes do not change vibrations.
+    - Near 2096 cm^-1, because it scales with the root of the reduced-mass ratio.
+  correct: 3
+  explanation: >-
+    mu is 6.857 u for 12C16O and 7.172 u for 13C16O; the wavenumber goes as 1/sqrt(mu), so it falls
+    by sqrt(6.857/7.172) = 0.978, to about 2096 cm^-1.
+- id: q5
+  question: >-
+    A drug degrades in solution. Plots of c, ln c and 1/c against time over 3 months give R^2 of
+    0.990, 0.998 and 0.991. The three-month loss is 15 %. What do you conclude about the order?
+  options:
+    - >-
+      First order is most likely, but at low conversion all three plots look nearly straight.
+    - >-
+      Zero order, because its R^2 is close to the highest and it is the simplest model.
+    - >-
+      Second order, because it gives the second-highest R^2 and degradation is bimolecular.
+    - >-
+      The order cannot be judged from integrated rate laws, only from initial rates.
+  correct: 0
+  explanation: >-
+    At 15 % conversion c, ln c and 1/c are all nearly linear in t, so R^2 differences are small. The
+    highest R^2 plus the residual patterns favour first order; a longer run would make it decisive.
+- id: q6
+  question: >-
+    You integrate a stiff rate system (one step a million times faster than another) with
+    solve_ivp's default RK45. It runs for minutes and takes millions of tiny steps. What do you change?
+  options:
+    - Switch to Euler's method with a large fixed step to speed it up.
+    - Loosen rtol to 1e-1 so that RK45 can take longer steps.
+    - Use an implicit method such as LSODA, BDF or Radau.
+    - Request fewer output points with t_eval so the solver does less work.
+  correct: 2
+  explanation: >-
+    Explicit methods like RK45 must keep the step below the fastest time scale to stay stable.
+    Implicit methods stay stable with much larger steps. Euler with a large step would blow up.
+- id: q7
+  question: >-
+    A reactor is fed so that dc/dt = r - k c with k = 0.10 per minute. After a feed change, how
+    long until c has gone 95 % of the way to its new steady state?
+  options:
+    - About 10 minutes, one time constant 1/k.
+    - About 30 minutes, since 95 % takes ln 20, about 3 time constants.
+    - About 7 minutes, one half-life ln 2 / k.
+    - It depends on r, so it cannot be found without the feed rate.
+  correct: 1
+  explanation: >-
+    The approach is c - c_ss proportional to e^(-kt). 95 % done means e^(-kt) = 0.05, so
+    t = ln 20 / k = 3.0/0.10 = 30 minutes, whatever r is.
+- id: q8
+  question: >-
+    An analytical balance pan oscillates many times before settling, which slows weighing. The
+    designer can change only the damping coefficient b. What setting gives the fastest settling
+    without overshoot?
+  options:
+    - b as large as possible, because more damping always settles faster.
+    - b = 0, because without friction the pan returns at once.
+    - b = sqrt(k/m), equal to the natural frequency.
+    - b = 2 sqrt(m k), which is critical damping.
+  correct: 3
+  explanation: >-
+    At b^2 = 4mk the characteristic equation has a double root and the pan returns as fast as possible
+    without oscillating. Larger b is overdamped and creeps back more slowly.
+- id: q9
+  question: >-
+    In a synthesis A → B → C, B is the product you sell. The plant measured k1 = 0.40 per hour and
+    k2 = 0.020 per hour. The operator stops the batch at 24 hours. Is that a good choice?
+  options:
+    - >-
+      No, too late; B peaks after about 7.9 hours and some of it has decomposed by 24 hours.
+    - >-
+      Yes, because it allows about ten half-lives of the first step and so collects the most B.
+    - >-
+      No, too early; B peaks after one time constant of the slow step, 50 hours.
+    - >-
+      Yes, because B never decreases when k2 is twenty times smaller than k1.
+  correct: 0
+  explanation: >-
+    t_max = ln(0.40/0.020)/(0.40 - 0.020) = 3.00/0.38 = 7.9 h. After the peak B is lost at rate
+    k2 B, so by 24 hours a quarter of the peak amount has turned into C.
+- id: q10
+  question: >-
+    You solve a network of first-order reactions with the eigenvalues of its rate matrix and find
+    one eigenvalue equal to +0.05 per second. What does this tell you?
+  options:
+    - One species grows exponentially, which is normal in first-order networks.
+    - There is an error in the rate matrix, since a closed first-order network cannot grow.
+    - The positive eigenvalue belongs to the equilibrium state of the network.
+    - The system oscillates with a period of 2 pi divided by 0.05 seconds.
+  correct: 1
+  explanation: >-
+    In a closed first-order network every column of K sums to zero and material only moves between
+    species, so the eigenvalues are zero or negative. A positive one signals a sign or index mistake.

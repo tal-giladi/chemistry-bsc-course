@@ -1,0 +1,56 @@
+- id: q1
+  question: >-
+    You diagonalise a Hückel matrix with np.linalg.eigh and get x = [-1.618, -0.618, 0.618, 1.618]
+    for butadiene. Which two values describe the occupied orbitals of the ground state?
+  options:
+    - 1.618 and 0.618, because beta is negative so larger x means lower energy.
+    - -1.618 and -0.618, because eigh lists the lowest energies first.
+    - 0.618 and -0.618, because the frontier orbitals are always nearest zero.
+    - -1.618 and 1.618, because the outer values are the bonding pair.
+  correct: 0
+  explanation: >-
+    E = alpha + x beta with beta below zero, so the largest x gives the lowest energy. eigh sorts x,
+    not E, in ascending order, so the occupied orbitals are the last two values.
+- id: q2
+  question: >-
+    A 2x2 matrix [[3, 2], [2, 3]] describes two coupled identical oscillators. What are its
+    eigenvalues?
+  options:
+    - 3 and 2, the diagonal and off-diagonal entries.
+    - 6 and 0, from adding and subtracting the rows.
+    - 5 and 1, from (3 - lambda) squared equal to 4.
+    - 9 and 4, the squares of the entries.
+  correct: 2
+  explanation: >-
+    det(A - lambda I) = (3 - lambda)^2 - 4 = 0 gives 3 - lambda = plus or minus 2, so lambda = 1 or
+    5, with eigenvectors (1, -1) and (1, 1).
+- id: q3
+  question: >-
+    You build the force-constant matrix K of a molecule and take its eigenvalues directly as omega
+    squared. The frequencies come out absurd. What went wrong?
+  options:
+    - >-
+      The eigenvalues of K are frequencies already, so you should not take the square root.
+    - >-
+      K must be mass-weighted first, dividing each entry by the square root of the two masses.
+    - >-
+      Force constants must be in kJ/mol, so K has to be converted before diagonalising it.
+    - >-
+      np.linalg.eigh cannot handle force constants, so np.linalg.eig is required instead.
+  correct: 1
+  explanation: >-
+    The equations of motion contain the masses. Only the mass-weighted matrix D = K/sqrt(m_i m_j)
+    has eigenvalues in s^-2 that equal omega squared.
+- id: q4
+  question: >-
+    Hückel theory gives hexatriene a delocalization energy of 0.988 beta and benzene 2.000 beta,
+    with six pi electrons each. What does this predict?
+  options:
+    - Both are equally stabilised, since they have the same number of pi electrons.
+    - Hexatriene is more stable, because a chain has more freedom than a ring.
+    - The difference is meaningless, because beta has different values for rings.
+    - Closing the ring roughly doubles the stabilisation, the extra stability of aromatic benzene.
+  correct: 3
+  explanation: >-
+    The ring adds one bond to the connection matrix, which raises the occupied x values. With beta
+    about -75 kJ/mol, benzene gains about 75 kJ/mol more than hexatriene.

@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A → B → C with k1 = 0.30 and k2 = 0.10 per hour. You want the most B. When do you stop the
+    reaction?
+  options:
+    - After 3.3 hours, one time constant of the first step.
+    - After about 5.5 hours, from ln(k1/k2) divided by (k1 - k2).
+    - After 10 hours, one time constant of the second step.
+    - After 2.3 hours, from ln 2 divided by k1.
+  correct: 1
+  explanation: >-
+    Setting dB/dt = 0 gives t_max = ln(0.30/0.10)/(0.30 - 0.10) = 1.0986/0.20 = 5.5 hours. The other
+    times describe A or B alone, not the balance between forming and losing B.
+- id: q2
+  question: >-
+    You write A → B → C as dc/dt = K c. Which statement about the eigenvalues of K is correct?
+  options:
+    - They are k1, k2 and k1 + k2, all positive, one per species.
+    - They are complex, because coupled species always oscillate.
+    - They depend on the starting concentrations of A, B and C.
+    - They are -k1, -k2 and 0, the diagonal of the triangular matrix.
+  correct: 3
+  explanation: >-
+    K is lower triangular, so its eigenvalues are the diagonal entries -k1, -k2 and 0. The zero
+    eigenvalue belongs to the final state, all C, and reflects the conserved total.
+- id: q3
+  question: >-
+    You follow only the intermediate B by its colour, and you do not know its absorptivity. Two fits
+    with k1 and k2 swapped match equally well. What should you do?
+  options:
+    - Also measure A or C, or determine B's absorptivity, to break the tie.
+    - Keep the fit with k1 larger than k2, since first steps are always faster.
+    - Report the average of the two fits for each rate constant.
+    - Fit with more points in time, since more data always removes the ambiguity.
+  correct: 0
+  explanation: >-
+    B(t) has the same shape when k1 and k2 are swapped and only its scale changes. With the scale
+    unknown, no amount of B data can tell them apart; a second species or the scale can.
+- id: q4
+  question: >-
+    For A → B → C with k1 = 0.010 and k2 = 2.0 per second, a colleague uses B = k1 A / k2. When is
+    that approximation good?
+  options:
+    - Never, because it ignores the formation of C.
+    - Only at t = 0, where B is still zero.
+    - After the first few seconds, once B has reached its steady state.
+    - Only when k1 equals k2, so that formation and loss balance.
+  correct: 2
+  explanation: >-
+    With k2 much larger than k1, B relaxes to its steady state within a few times 1/k2 = 0.5 s and
+    then follows k1 A / k2 closely while A slowly decays.

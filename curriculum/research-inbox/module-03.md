@@ -1,0 +1,23 @@
+# Research log — Module 03
+
+| source | url | date accessed | claim supported | lesson(s) |
+|---|---|---|---|---|
+| MIT OCW 18.06 Linear Algebra | https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/ | 2026-10-16 | course exists (Strang, Spring 2010), depth reference | 03.1, 03.2 |
+| MIT OCW 18.03 Differential Equations | https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/ | 2026-10-16 | course exists (Miller and Mattuck, Spring 2010), depth reference | 03.3, 03.4, 03.5 |
+| OpenStax Chemistry 2e, 4.1 Writing and Balancing Chemical Equations | https://openstax.org/books/chemistry-2e/pages/4-1-writing-and-balancing-chemical-equations | 2026-10-16 | balancing by conservation of atoms | 03.1 |
+| LibreTexts, UV/Vis Analysis of Two-Component Mixtures (Davis) | https://chem.libretexts.org/Courses/Manchester_University/CHEM_235%3A_Analytical_Chemistry_(Davis)/08%3A_Analysis_and_Separation_of_Mixtures/8.01%3A_UV_Vis_Analysis_of_Two-Component_Mixtures | 2026-10-16 | additive Beer–Lambert; n wavelengths for n components; choose wavelengths where each analyte dominates | 03.1 |
+| SciPy v1.18 manual, scipy.linalg.null_space | https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.null_space.html | 2026-10-16 | null_space(A, rcond=None, *, overwrite_a, check_finite, lapack_driver) exists in 1.18 | 03.1, labs |
+| LibreTexts Physical Chemistry, 10.6 Butadiene Delocalization Energy | https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/10%3A_Bonding_in_Polyatomic_Molecules/10.06%3A_Butadiene_is_Stabilized_by_a_Delocalization_Energy | 2026-10-16 | butadiene E = α ± 1.618β, α ± 0.618β; Eπ = 4α + 4.472β; β ≈ −75 kJ/mol, deloc ≈ −35 kJ/mol | 03.2 |
+| NIST CCCBDB, CO2 experimental vibrations | https://cccbdb.nist.gov/exp2x.asp?casno=124389&charge=0 | 2026-10-16 | symmetric stretch 1333, antisymmetric stretch 2349, bend 667 cm⁻¹ | 03.2, labs |
+| NumPy v2.5 manual, numpy.linalg.eigh | https://numpy.org/doc/stable/reference/generated/numpy.linalg.eigh.html | 2026-10-16 | ascending real eigenvalues; eigenvectors in columns | 03.2, labs |
+| NIST CODATA 2022, atomic mass constant | https://physics.nist.gov/cgi-bin/cuu/Value?u | 2026-10-16 | m_u = 1.66053906892(52) × 10⁻²⁷ kg | 03.2, 03.4, labs |
+| OpenStax Chemistry 2e, 12.4 Integrated Rate Laws | https://openstax.org/books/chemistry-2e/pages/12-4-integrated-rate-laws | 2026-10-16 | integrated laws and half-lives for orders 0, 1, 2 | 03.3 |
+| OpenStax Calculus Vol. 2, 4.3 Separable Equations | https://openstax.org/books/calculus-volume-2/pages/4-3-separable-equations | 2026-10-16 | separation of variables; mixing tank and cooling examples | 03.3 |
+| SciPy v1.18 manual, scipy.integrate.solve_ivp | https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html | 2026-10-16 | default RK45, rtol 1e-3, atol 1e-6; stiff methods Radau, BDF, LSODA | 03.3, 03.4, 03.5, labs |
+| OpenStax University Physics Vol. 1, 15.5 Damped Oscillations | https://openstax.org/books/university-physics-volume-1/pages/15-5-damped-oscillations | 2026-10-16 | ω = √(ω0² − (b/2m)²); under/critical/overdamped by b² vs 4mk | 03.4 |
+| NIST Chemistry WebBook, HCl diatomic constants | https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=1000 | 2026-10-16 | H35Cl X state: ωe 2990.9463, ωexe 52.8186, Be 10.593416 cm⁻¹, re 1.274552 Å | 03.4, labs |
+| NIST Atomic Weights and Isotopic Compositions, Cl | https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Cl&ascii=html&isotype=some | 2026-10-16 | ³⁵Cl 34.968852682 u (75.76 %), ³⁷Cl 36.965902602 u | 03.4, labs |
+| LibreTexts, Steady State Approximation | https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Kinetics/03%3A_Rate_Laws/3.02%3A_Reaction_Mechanisms/3.2.06%3A_Steady_State_Approximation | 2026-10-16 | consecutive first-order reactions; SSA B = k1A/k2 for slow first step, fast second | 03.5 |
+| Weiss (2023), Pharm Res 40:2147–2153 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10547630/ | 2026-10-16 | Bateman function C(t) = A(e^(−ke t) − e^(−ka t)), one-compartment first-order absorption | 03.5 |
+
+Not verified / not used: IUPAC Gold Book "Bateman function" entry (goldbook.iupac.org returned HTTP 403 to the fetcher), so not cited. The t_max = ln(k1/k2)/(k1 − k2) and B_max formulas are derived in the lesson and checked numerically in the lab, not taken from a fetched source. The HCl fundamental near 2886 cm⁻¹ and the D35Cl ωe near 2145 cm⁻¹ are computed/standard values, not separately fetched. `scipy.linalg.expm` and `curve_fit` behaviour checked by running the labs with scipy 1.18.1.
