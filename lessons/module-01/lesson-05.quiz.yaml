@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    Your five water repeats give 1.012, 1.011, 1.012, 1.012 and 1.011 g/mL using the syringe marks.
+    Water at your temperature is 0.9975 g/mL. What is the best next step?
+  options:
+    - Do ten more repeats, so that the mean moves closer to 0.9975 g/mL.
+    - Calculate a calibration factor from the water and apply it to the sugar results.
+    - Discard the water data, since it clearly contains a mistake, and start again.
+    - Report 1.012 g/mL as the density of water at this temperature, since it is precise.
+  correct: 1
+  explanation: >-
+    The repeats are precise but all about 1.4% high: a systematic error, probably in the syringe marks. More
+    repeats cannot remove bias; a calibration against the known density of water can.
+- id: q2
+  question: >-
+    On a scale with 1 g steps, all five of your repeats read exactly 104 g, so the standard deviation is zero.
+    What should you say about the uncertainty of the mass?
+  options:
+    - It is zero, because the repeats agree perfectly with each other.
+    - It cannot be estimated at all without at least ten repeats.
+    - It equals 1 g, the step of the scale, used as a standard uncertainty.
+    - It is limited by resolution, so use a Type B estimate of about 1 g/√6.
+  correct: 3
+  explanation: >-
+    Identical readings show that the scale's resolution, not random scatter, limits the result. Each reading has
+    u = d/√12, and a difference of two readings has d/√6, about 0.4 g here.
+- id: q3
+  question: >-
+    A mass has a relative standard uncertainty of 0.3% and the volume one of 0.4%. What is the relative
+    standard uncertainty of the density m/V?
+  options:
+    - 0.5%
+    - 0.7%
+    - 0.1%
+    - 0.35%
+  correct: 0
+  explanation: >-
+    For a quotient, independent relative uncertainties combine as the square root of the sum of squares:
+    √(0.3² + 0.4²) = 0.5%. Simple addition (0.7%) overestimates; subtraction or averaging is wrong.
+- id: q4
+  question: >-
+    You measure 1.091 ± 0.004 g/mL (standard uncertainty) for a 20% sugar solution. The reference at your
+    temperature is 1.080 g/mL. What do you conclude?
+  options:
+    - It agrees, because the two values differ by only about 1%.
+    - It agrees, because 1.091 rounds to 1.09, close to 1.08.
+    - It disagrees, with |z| near 3, so check your procedure for a bias.
+    - It disagrees, so the reference value must be for a different temperature.
+  correct: 2
+  explanation: >-
+    The difference is 0.011 g/mL, almost three times the uncertainty, so |z| ≈ 2.8 > 2. Before doubting a
+    well-established reference, check your own procedure for bias.

@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    PubChem lists pure acetic acid as Danger, with H314 (causes severe skin burns). Your kitchen vinegar is
+    5% acetic acid. What is the right conclusion?
+  options:
+    - Vinegar is corrosive and should only be handled with gloves and a face shield.
+    - PubChem must be wrong, because vinegar is sold as food in every supermarket.
+    - The classification applies to vinegar too, because the substance is the same.
+    - The data are for the pure acid; at 5% the hazard is much lower, so read the label.
+  correct: 3
+  explanation: >-
+    GHS data in PubChem describe the pure substance. Concentration changes the classification: dilute vinegar is
+    not corrosive, though it still stings eyes. Always read the label of the product you actually have.
+- id: q2
+  question: >-
+    You want to clean a stained toilet faster and think of using bleach together with an acidic descaler.
+    Which section of the bleach SDS tells you whether this is safe?
+  options:
+    - Section 10, Stability and reactivity.
+    - Section 9, Physical and chemical properties.
+    - Section 4, First-aid measures.
+    - Section 14, Transport information.
+  correct: 0
+  explanation: >-
+    Section 10 lists incompatible materials. For bleach it names acids, which release toxic chlorine gas when mixed
+    with it. Use one product, rinse, and never combine them.
+- id: q3
+  question: >-
+    Two products show the same pictogram. One label says "Warning", the other says "Danger".
+    What does this tell you?
+  options:
+    - The "Warning" product is more hazardous, because warnings come first in the GHS.
+    - The "Danger" product has a more severe hazard category than the "Warning" one.
+    - The two words mean the same; the choice depends only on the manufacturer's country.
+    - The "Danger" product is a physical hazard and the "Warning" one is a health hazard.
+  correct: 1
+  explanation: >-
+    The GHS uses two signal words. "Danger" marks the more severe hazard categories and "Warning" the less severe ones,
+    whatever the type of hazard.
+- id: q4
+  question: >-
+    A learner in Israel wants to do a titration at home and plans to order 1 L of concentrated hydrochloric acid
+    from an online lab supplier. What does this course advise?
+  options:
+    - Order it, but keep the bottle in the fridge, away from food, to keep it stable.
+    - Order it, since one litre for private use is too small to need a permit.
+    - Do not; it may need a permit and a fume hood, so use vinegar and baking soda.
+    - Do not; ask a pharmacy to dilute it to household strength before delivery.
+  correct: 2
+  explanation: >-
+    Under the Hazardous Substances Law 1993 many reagents are restricted to permit holders, and home benches have no
+    fume hood or training. The course uses kitchen and pharmacy materials only; vinegar titrated with baking soda
+    teaches the same ideas.

@@ -1,0 +1,118 @@
+- id: m1q1
+  question: >-
+    It is the week before the module quiz. You have 6 hours of study time left and five lessons you read once,
+    two weeks ago. Which plan gives the best result?
+  options:
+    - Reread all five lessons carefully, highlighting anything that seems new.
+    - Read the key takeaways of each lesson three times in a row tonight.
+    - Spread the hours over several days and redo each lesson's problems without the answers.
+    - Watch videos on each topic so you hear the ideas explained a different way.
+  correct: 2
+  explanation: >-
+    Practice testing and distributed practice are the two best-supported study methods. Rereading, highlighting
+    and passive watching feel productive but improve recall far less.
+- id: m1q2
+  question: >-
+    A recipe for a cleaning test asks for 0.50 g of citric acid per 250 mL of water. You want 1.5 L.
+    How much citric acid do you weigh?
+  options:
+    - 3.0 g
+    - 0.30 g
+    - 1.9 g
+    - 0.75 g
+  correct: 0
+  explanation: >-
+    1.5 L is 1500 mL, and 1500 mL × (0.50 g / 250 mL) = 3.0 g. Answers like 0.30 g or 0.75 g come from not
+    converting litres to millilitres or from setting up the factor upside down.
+- id: m1q3
+  question: >-
+    You weigh a cup (148 g), then the cup with liquid (251 g), on a scale with 1 g steps. The liquid's volume is
+    100.0 mL. Which density is reported with the right number of digits?
+  options:
+    - 1.03000 g/mL
+    - 1.0 g/mL
+    - 1.030 g/mL
+    - 1.03 g/mL
+  correct: 3
+  explanation: >-
+    The mass is 251 − 148 = 103 g: subtraction keeps no decimal places, giving 3 sig figs. Dividing by 100.0 mL
+    (4 sig figs) leaves 3, so 1.03 g/mL.
+- id: m1q4
+  question: >-
+    A classmate's notebook says only "density 1.04, matches book". A month later you want to check it.
+    What is the most important thing missing?
+  options:
+    - A neat, typed copy of the page, so it is easier to read later.
+    - The raw readings, units, instrument resolution and date.
+    - The textbook page number where the matching value appears.
+    - A drawing of the equipment used, with the brand of each item.
+  correct: 1
+  explanation: >-
+    Without raw readings, units, the instrument and its resolution, and a date, nobody can check the arithmetic,
+    judge the precision or repeat the work. A drawing or a page reference helps, but cannot replace the data.
+- id: m1q5
+  question: >-
+    A drain cleaner label shows the corrosion pictogram, the word "Danger" and H314. A glass cleaner shows the
+    exclamation mark, "Warning" and H319. Which statement is correct?
+  options:
+    - The drain cleaner can cause severe skin burns and is the more severe hazard.
+    - The glass cleaner is more hazardous, because "Warning" is the stronger word.
+    - Both are equally hazardous, because each carries one pictogram.
+    - Neither is hazardous if used indoors, because H codes apply only to transport.
+  correct: 0
+  explanation: >-
+    "Danger" marks the more severe categories, and H314 means severe skin burns and eye damage. H319 is serious eye
+    irritation, a lower category shown with the exclamation mark and "Warning".
+- id: m1q6
+  question: >-
+    To titrate vinegar at home, a learner finds a cheap online offer for sodium hydroxide pellets and a burette.
+    Using this course's rules and Israeli law, what should they do?
+  options:
+    - Buy the pellets, but dissolve them only outdoors with gloves and glasses.
+    - Buy the pellets, since small private purchases are outside the 1993 law.
+    - Use a lab reagent only if a pharmacist checks the order before delivery.
+    - Use baking soda and a pharmacy syringe instead, and buy no lab reagents.
+  correct: 3
+  explanation: >-
+    The course uses kitchen and pharmacy materials only. Many reagents are restricted under the Hazardous
+    Substances Law 1993, and a home bench has no fume hood or training. Baking soda and an oral syringe teach the
+    same titration ideas safely.
+- id: m1q7
+  question: >-
+    You calibrate a syringe with water and find that five fills deliver 98.6 mL instead of 100.0 mL. You then
+    measure a juice using the syringe marks. What happens if you skip the correction?
+  options:
+    - Nothing important, because averaging five repeats cancels the error.
+    - The juice density will come out about 1.4% too low every time.
+    - The juice density will come out about 1.4% too high in some repeats and low in others.
+    - The juice density will come out about 1.4% too high every time.
+  correct: 1
+  explanation: >-
+    Using 100.0 mL when only 98.6 mL was delivered divides the mass by too large a volume, so the density is low by
+    about 1.4% in every repeat. It is a systematic error: averaging does not remove it.
+- id: m1q8
+  question: >-
+    Two learners measure the same 10% sugar solution. A gets 1.036 ± 0.002 g/mL; B gets 1.045 ± 0.010 g/mL
+    (standard uncertainties). The reference is 1.038 g/mL. Which is the fair verdict?
+  options:
+    - Only A agrees, because B's value is further from the reference.
+    - Neither agrees, because neither matches 1.038 exactly.
+    - Both agree within |z| ≤ 2, but A's result is far more precise.
+    - Only B agrees, because its larger uncertainty is more honest.
+  correct: 2
+  explanation: >-
+    For A, |z| = 0.002/0.002 = 1; for B, |z| = 0.007/0.010 = 0.7. Both agree. A's uncertainty is five times smaller,
+    so A's result tells you much more.
+- id: m1q9
+  question: >-
+    A job advert asks for "experience with titration and analytical balances". You have finished this course,
+    including all the simulations. What is the honest way to describe yourself?
+  options:
+    - I have hands-on titration experience from the simulations and home labs.
+    - I understand titration and its error analysis, but have no supervised bench training.
+    - I have equivalent experience, because the simulations replace the real lab.
+    - I have no relevant knowledge, because the course did not use real balances.
+  correct: 1
+  explanation: >-
+    The course trains understanding of procedures, safety reasoning and data analysis, but not bench hands,
+    reagent handling or supervised lab work. Saying so is both honest and a real strength.

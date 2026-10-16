@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    You finish reading a lesson and it all feels clear. You have 30 minutes left tonight.
+    Which use of that time will help you most to remember the lesson next month?
+  options:
+    - Read the lesson a second time and highlight the key sentences.
+    - Copy the key takeaways neatly into your notebook while the page is open.
+    - Close the page and do the hands-on problems without looking at the answers.
+    - Watch a video on the same topic to see it explained a second way.
+  correct: 2
+  explanation: >-
+    Practice testing, meaning recall or problem solving without looking, is one of the two best-supported
+    study methods. Rereading, highlighting and copying feel productive but leave little behind.
+- id: q2
+  question: >-
+    A friend finishes this whole course and says they are now ready to work as a lab technician.
+    What is the most accurate reply?
+  options:
+    - They understand the experiments and data, but still need supervised bench training.
+    - They are ready, because the simulations teach everything a real lab teaches.
+    - They are ready for analytical labs, but not for organic synthesis labs.
+    - They need a degree certificate, but their practical skills are already complete.
+  correct: 0
+  explanation: >-
+    Simulations teach procedure, reasoning, safety and data analysis, but not hand skills, reagent handling,
+    instrument operation or supervised work. An employer would still train them at the bench.
+- id: q3
+  question: >-
+    A module has four lessons. Each has 20 minutes of reading and 60 minutes of practice, plus a
+    10-minute quiz. The module quiz takes 20 minutes. About how long is the module, before review?
+  options:
+    - About 5.7 hours.
+    - About 6.3 hours.
+    - About 6.0 hours.
+    - About 5.3 hours.
+  correct: 1
+  explanation: >-
+    Each lesson is 20 + 60 + 10 = 90 minutes, so four lessons are 360 minutes. Adding the 20-minute module quiz
+    gives 380 minutes, about 6.3 hours. Leaving out the lesson quizzes or the module quiz gives the other answers.
+- id: q4
+  question: >-
+    You finished lesson 01.2 on Monday. Which review schedule follows the spaced-review advice in this lesson?
+  options:
+    - Review it again on Monday evening, then never again.
+    - Review it every evening for the next seven days.
+    - Review it once, the night before the module quiz.
+    - Review it on Wednesday, the following Monday and about a month later.
+  correct: 3
+  explanation: >-
+    Distributed practice spreads reviews out with growing gaps, for example 2 days, 1 week and 1 month.
+    Reviewing the same evening or cramming before a test gives much weaker long-term recall.

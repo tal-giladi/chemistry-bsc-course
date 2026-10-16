@@ -1,0 +1,63 @@
+- id: q1
+  question: >-
+    You need the amount of sugar in 50.0 mL of a 0.200 M sugar solution. Which answer is right?
+  options:
+    - 10.0 mol
+    - 0.0100 mol
+    - 0.00400 mol
+    - 250 mol
+  correct: 1
+  explanation: >-
+    Molarity is moles per litre, so convert first: 50.0 mL = 0.0500 L, and 0.0500 L × 0.200 mol/L = 0.0100 mol.
+    Multiplying by 50.0 without converting gives 10.0 mol, which is 1000 times too large.
+- id: q2
+  question: >-
+    A sample weighs 12.6 g and fills 11.85 mL. Your calculator shows 1.063291139 g/mL.
+    How should you report the density?
+  options:
+    - 1.063 g/mL
+    - 1.06329 g/mL
+    - 1.1 g/mL
+    - 1.06 g/mL
+  correct: 3
+  explanation: >-
+    For division, the answer keeps the sig figs of the least precise input. 12.6 g has 3 sig figs and 11.85 mL has 4,
+    so the density gets 3: 1.06 g/mL.
+- id: q3
+  question: >-
+    You repeat a measurement 5 times and take the mean. You then divide by the exact factor 1000 to change units.
+    Which statement about sig figs is correct?
+  options:
+    - Neither the 5 repeats nor the factor 1000 limits the sig figs of the result.
+    - The result can have at most 1 sig fig, because 5 has only one digit.
+    - The result can have at most 1 sig fig, because 1000 has one non-zero digit.
+    - The result keeps 4 sig figs, because 1000 is written with four digits.
+  correct: 0
+  explanation: >-
+    Counted numbers and defined conversion factors are exact, with unlimited sig figs. Only the measured values
+    limit the digits of the result.
+- id: q4
+  question: >-
+    A classmate computes a temperature from T = PV/(nR) with P in kPa, V in L, n in mol and R = 0.08206 L atm mol⁻¹ K⁻¹.
+    The answer is about 100 times too big. What went wrong?
+  options:
+    - The volume should have been converted from litres to cubic metres first.
+    - The amount n should have been in millimoles to match kilopascals.
+    - The pressure units do not cancel; R must be in kPa units, 8.314 L kPa mol⁻¹ K⁻¹.
+    - The temperature came out in Celsius and must have 273.15 added.
+  correct: 2
+  explanation: >-
+    Checking the units shows kPa/atm left over, so they do not cancel. Using R in matching units, 8.314 L kPa mol⁻¹ K⁻¹,
+    makes all units cancel to kelvin, and the answer drops by the factor 101.325.
+- id: q5
+  question: >-
+    Why has the kilogram, since 2019, no longer been defined by a metal cylinder kept near Paris?
+  options:
+    - Because the cylinder was lost, so a new standard had to be made from water.
+    - Because it is now defined by fixing the exact value of the Planck constant.
+    - Because it is now defined as the mass of exactly one litre of pure water.
+    - Because it is now defined by the mass of one mole of carbon-12 atoms.
+  correct: 1
+  explanation: >-
+    The 2019 SI fixes seven constants of nature at exact values. Fixing the Planck constant, together with the second
+    and the metre, defines the kilogram, so it no longer depends on one physical object.
