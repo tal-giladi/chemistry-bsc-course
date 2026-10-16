@@ -33,7 +33,7 @@ def check_html_and_links(path, text, html=True):
     for m in re.finditer(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)", body):
         url = m.group(1)
         if url.startswith(("http://", "https://", "mailto:", "#")):
-            if "github.io" in url:
+            if "tal-giladi.github.io" in url or "tal-giladi/chemistry-bsc-course" in url:
                 err(path, f"absolute link to course pages: {url}")
             continue
         if url == "/":

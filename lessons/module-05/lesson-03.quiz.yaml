@@ -1,0 +1,55 @@
+- id: q1
+  question: >-
+    You fit a calibration line to single absorbance readings of six standards. You have no
+    independent estimate of the noise. How should you call curve_fit?
+  options:
+    - With sigma set to 0.001 for every point and absolute_sigma=True, as a safe default.
+    - Without sigma and with the default absolute_sigma=False, so the scatter sets the uncertainty.
+    - With sigma equal to each absorbance and absolute_sigma=True, so bigger signals count less.
+    - Without sigma, then divide the reported uncertainties by the square root of six.
+  correct: 1
+  explanation: >-
+    When the noise level is unknown, the residual scatter is the best estimate of it. The default
+    rescales the covariance so the reduced chi-square is 1, which does exactly that.
+- id: q2
+  question: >-
+    A weighted fit with absolute_sigma=True of 25 kinetic points (3 parameters) gives a reduced
+    chi-square of 4.8. What is the most reasonable conclusion?
+  options:
+    - The fit is excellent, because a large chi-square means the model explains a lot.
+    - The parameter uncertainties are too large and can be divided by 4.8.
+    - The model is wrong or the stated sigmas are too small; inspect the residual plot.
+    - Nothing, because reduced chi-square is meaningful only for straight lines.
+  correct: 2
+  explanation: >-
+    With 22 degrees of freedom, values near 1 are expected and 4.8 is far outside the normal range.
+    Either the model misses a feature (a pattern in the residuals shows it) or the errors were
+    underestimated.
+- id: q3
+  question: >-
+    You predict an unknown from a calibration line. Treating slope and intercept as independent
+    gives plus or minus 0.047, while keeping their correlation of -0.78 gives plus or minus 0.033.
+    Which do you report, and why?
+  options:
+    - 0.047, because the larger uncertainty is always the safer and more honest choice.
+    - The average, 0.040, because both methods are approximations of the same thing.
+    - 0.047, because correlations only matter for nonlinear models.
+    - 0.033, because slope and intercept errors partly cancel.
+  correct: 3
+  explanation: >-
+    A steeper fitted line is also a lower one, so their errors partly cancel in the prediction.
+    correlated_values keeps this; the textbook formula gives the same 0.033.
+- id: q4
+  question: >-
+    A dye-fading data set has noise of 0.026 at the start and 0.004 at the end. An unweighted fit
+    quotes k with an uncertainty of 0.0004 per minute. What does a Monte Carlo test most likely show?
+  options:
+    - It scatters more than 0.0004, because noisy points count as much as precise ones.
+    - The unweighted k scatters exactly 0.0004, because curve_fit's covariance is always exact.
+    - The unweighted k scatters less than 0.0004, because more noise averages out faster.
+    - The scatter cannot be tested, because the true k of real data is unknown.
+  correct: 0
+  explanation: >-
+    Without weights the noisy points pull the fit as hard as the precise ones, and the default
+    scaling assumes one average noise level. The real scatter is larger than quoted; weighting with
+    absolute_sigma=True fixes both.

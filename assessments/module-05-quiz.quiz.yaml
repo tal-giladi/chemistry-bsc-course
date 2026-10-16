@@ -1,0 +1,136 @@
+- id: q1
+  question: >-
+    A lab group shares one analysis script. On one laptop the fitted rate constant is 0.0235 per
+    minute; on another the script stops with an AttributeError. Nobody wrote down any versions.
+    What should the group do first?
+  options:
+    - Rewrite the script without numpy and scipy, so that versions no longer matter.
+    - Keep using the laptop where it works, since that one must have the correct versions.
+    - Agree on one Python version and a pinned requirements file, rebuild each venv, and rerun.
+    - Upgrade every package on both laptops to the newest release and accept whatever comes out.
+  correct: 2
+  explanation: >-
+    A pinned environment that everyone rebuilds is the only way to know both laptops run the same
+    code. "It works here" says nothing about which result is right, and unpinned upgrades just move the problem.
+- id: q2
+  question: >-
+    You compute k = A exp(-Ea/(R T)) with Ea as an array of 5 values and T as an array of 40
+    temperatures, and you want a 5-by-40 table. Which preparation is correct?
+  options:
+    - Reshape Ea to a column of shape (5, 1) and keep T as shape (40,).
+    - Reshape T to a column of shape (40, 1) and keep Ea as shape (5,).
+    - Repeat T eight times so both arrays have 40 elements, then divide element by element.
+    - Loop over the 40 temperatures and append each result to a Python list.
+  correct: 0
+  explanation: >-
+    A (5, 1) column broadcast with a (40,) row gives (5, 40), one row per activation energy.
+    Making T the column gives the transposed (40, 5) table instead.
+- id: q3
+  question: >-
+    A script normalises a speed distribution with np.trapezoid(f, v, axis=0), where f has shape
+    (3, 2501): three temperatures by 2501 speeds. It prints 2501 numbers instead of 3. What is wrong?
+  options:
+    - np.trapezoid only works on one-dimensional arrays, so loop over the rows.
+    - The speeds must be in km/s, because large x values overflow the trapezoid rule.
+    - The function should be np.trapz, which handles two-dimensional arrays correctly.
+    - It integrates over temperature; use axis=-1, where the speeds are.
+  correct: 3
+  explanation: >-
+    axis=0 sums across the three temperatures at each speed, giving 2501 meaningless numbers.
+    The speeds lie along the last axis, so axis=-1 gives one integral per temperature.
+- id: q4
+  question: >-
+    A UV-Vis calibration line has single readings at six standards, and you have no independent
+    noise estimate. A classmate sets sigma to 0.001 for every point with absolute_sigma=True,
+    "to be safe". What happens to the reported slope uncertainty?
+  options:
+    - Nothing, because absolute_sigma only matters for nonlinear models.
+    - It reflects the made-up 0.001, not the real scatter, so it may be badly wrong.
+    - It becomes exactly the same as with the default, because equal sigmas cancel.
+    - It is always larger, which makes the result more conservative and therefore correct.
+  correct: 1
+  explanation: >-
+    With absolute_sigma=True the sigmas are taken as real standard uncertainties. A made-up value
+    sets the error bars directly; the default instead estimates the noise from the residuals.
+- id: q5
+  question: >-
+    A calibration gives slope 0.1055 with uncertainty 0.0007 and intercept 0.0018 with uncertainty
+    0.0032, correlation -0.8. You need the uncertainty of an unknown concentration read from it.
+    Which approach is right?
+  options:
+    - Treat slope and intercept as independent, because that gives the safest, largest uncertainty.
+    - Use only the slope uncertainty, because the intercept is close to zero.
+    - Propagate with correlated_values from the fit covariance, or the textbook calibration formula.
+    - Report the R squared of the line as the uncertainty of the concentration.
+  correct: 2
+  explanation: >-
+    Slope and intercept errors partly cancel in a prediction near the centre of the data. Keeping
+    the covariance gives the right answer; treating them as independent overstates it.
+- id: q6
+  question: >-
+    A weighted fit of 30 kinetic points with 3 parameters, using the instrument's stated noise,
+    gives a reduced chi-square of 0.95 and residuals that scatter randomly. A second model with one
+    extra parameter gives 0.92. Which do you report?
+  options:
+    - The first model, because it already matches the noise level.
+    - The second model, because a lower chi-square is always better.
+    - The second model, because more parameters always reduce bias.
+    - Neither, because a reduced chi-square below 1 means the errors were overestimated.
+  correct: 0
+  explanation: >-
+    With 27 degrees of freedom, 0.95 and 0.92 are both well within normal scatter of 1. The simpler
+    model already describes the data, so the extra parameter is not justified.
+- id: q7
+  question: >-
+    A colleague's spectrum plot shows a peak absorbance of about 9000. The data came from a NIST
+    JCAMP-DX file read with a self-written parser. Which label should you check first?
+  options:
+    - DELTAX, because a wrong x step changes the height of every band.
+    - TITLE, because a wrong compound name means the wrong file was downloaded.
+    - XUNITS, because micrometres instead of wavenumbers would raise the peak.
+    - YFACTOR, because the stored integers must be scaled by it.
+  correct: 3
+  explanation: >-
+    JCAMP-DX stores scaled integers. Forgetting YFACTOR (around 1e-4 in NIST files) inflates every
+    y value by the same large factor; comparing with MAXY confirms the fix.
+- id: q8
+  question: >-
+    You open an instrument export with pd.read_csv(path, sep=";", skiprows=8). There is no error,
+    and df["A"].max() returns '0,8752'. What does this tell you?
+  options:
+    - The export is fine, because pandas shows decimal commas in the local style.
+    - The column is text, because decimal commas need decimal=","; check df.dtypes.
+    - The file has a hidden byte-order mark, so it needs encoding="utf-16".
+    - The maximum is correct but the minimum will be wrong, so use np.max instead.
+  correct: 1
+  explanation: >-
+    The quotes show a string. pandas 3 keeps unreadable numbers as str without warning, so the
+    "maximum" is chosen alphabetically. decimal="," gives float64 columns.
+- id: q9
+  question: >-
+    Before handing in a notebook, you notice its cell numbers run [1], [2], [9], [4], [11], and one
+    cell that removed an outlier was deleted after running it. What do you do?
+  options:
+    - Hand it in, because the outputs on the page are what the reader needs.
+    - Renumber the cells by hand so they run in order, then hand it in.
+    - Put the outlier step back in code, then restart and run all cells.
+    - Save the variables to a file so the outputs can be reloaded next time.
+  correct: 2
+  explanation: >-
+    The page no longer describes how the numbers were made. Putting the exclusion back as visible
+    code and running top to bottom makes the notebook and its results agree.
+- id: q10
+  question: >-
+    Sucrose standards from 0 to 30 percent give a straight-line fit with R squared 0.998, residuals
+    positive at both ends and negative in the middle, and reduced chi-square 9. You must measure a
+    diet drink near 0 percent. What is the best decision?
+  options:
+    - Use the straight line, because R squared above 0.99 is the usual acceptance rule.
+    - Use the straight line, but double the uncertainty to cover the misfit.
+    - Drop the 0 and 30 percent standards, because they cause the large residuals.
+    - Use a quadratic, since the line misfits the ends where the diet drink lies.
+  correct: 3
+  explanation: >-
+    The U-shaped residuals mean the line is the wrong shape and is biased most at the ends. A
+    quadratic with random residuals and reduced chi-square near 1 removes the bias; inflating errors or
+    deleting standards only hides it.

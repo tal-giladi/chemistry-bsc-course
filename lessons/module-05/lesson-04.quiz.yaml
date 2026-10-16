@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You read a spectrophotometer export with pd.read_csv(path, sep=";", skiprows=8). No error
+    appears, but df.dtypes shows both columns as str. What is the most likely cause?
+  options:
+    - The file is not UTF-8, so pandas could only read it as text.
+    - The numbers use decimal commas, so you also need decimal=",".
+    - skiprows=8 is one line too few, so the header became a data row.
+    - pandas 3 reads every CSV column as str until you call astype(float).
+  correct: 1
+  explanation: >-
+    Values like 0,8752 cannot be read as floats with the default decimal point, so pandas 3 keeps
+    them as str without warning. decimal="," makes both columns float64.
+- id: q2
+  question: >-
+    Your JCAMP-DX reader reports a peak absorbance of 8730 for a gas-phase IR spectrum. The
+    header has YFACTOR=0.000112097. What went wrong?
+  options:
+    - The spectrum is in transmittance, so absorbance must be computed as 2 minus log10 of it.
+    - The file is compressed, so each digit stands for a different number.
+    - The x values were not multiplied by XFACTOR, which shifts every band.
+    - The stored integers were not multiplied by YFACTOR, which gives 0.979.
+  correct: 3
+  explanation: >-
+    JCAMP-DX stores y as integers; the true values are integer times YFACTOR. 8730 x 0.000112097
+    = 0.979, a sensible absorbance. Checking against the MAXY label catches this.
+- id: q3
+  question: >-
+    A JCAMP-DX file says NPOINTS=880, but your reader collects 870 y values. Which conclusion and
+    next step are right?
+  options:
+    - The reader lost data, so find where; a $$ comment or a skipped line is a common cause.
+    - The difference is under 2 percent, so interpolate the missing points and continue.
+    - NPOINTS is only a hint in JCAMP-DX, so trust your count and continue.
+    - The last line is always incomplete in JCAMP-DX, so add ten zeros at the end.
+  correct: 0
+  explanation: >-
+    NPOINTS is a check the file gives you. A mismatch means the parse is wrong; the per-line x
+    checkpoints show where the first missing value is.
+- id: q4
+  question: >-
+    You want to share your IR analysis of ethanol on a public GitHub repo, including the NIST
+    WebBook spectrum. What is the right way to handle the spectrum?
+  options:
+    - Commit the JCAMP file, because NIST is a government agency and all its data are public domain.
+    - Commit a CSV you converted from it, because conversion makes it your own data.
+    - Commit a download script plus the citation, and keep the downloaded file out of git.
+    - Paste the y values into your script as a list, because code is not covered by copyright.
+  correct: 2
+  explanation: >-
+    The WebBook states its data compilation is copyrighted with all rights reserved. A script that
+    fetches the file, with a proper citation, lets others reproduce your work without redistributing it.

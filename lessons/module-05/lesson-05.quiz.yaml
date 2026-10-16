@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    Your notebook shows a final result of 9.9 percent sugar, and the cell numbers read [3], [12],
+    [5], [14], [9]. A colleague restarts the kernel, runs all cells and gets 9.5 percent. What
+    explains this?
+  options:
+    - The colleague has a different random seed, because pandas uses random numbers by default.
+    - Hidden state, because cells ran out of order and possibly twice before you saved.
+    - A rounding difference, because Restart and Run All uses lower float precision.
+    - A broken kernel on the colleague's side, because notebooks always reproduce their own outputs.
+  correct: 1
+  explanation: >-
+    The kernel keeps whatever was run, in whatever order. The out-of-order cell numbers show the
+    page and the memory had drifted apart; only the top-to-bottom run is a trustworthy result.
+- id: q2
+  question: >-
+    One repeat in your density data is clearly wrong: you remember spilling some solution. What is
+    the reproducible way to handle it?
+  options:
+    - Delete the row in the CSV and save it, so the raw file is clean for everyone.
+    - Replace the value in the CSV by the mean of the other repeats.
+    - Keep the raw file and drop the row in code, with the reason in a comment.
+    - Leave it in and never mention it, because excluding data is always wrong.
+  correct: 2
+  explanation: >-
+    Raw data stay as measured. An exclusion in code, with its reason, is visible to every reader and
+    can be undone; an edited CSV hides the decision for good.
+- id: q3
+  question: >-
+    A straight-line calibration of density against sugar content has R squared of 0.9985, but its
+    residuals form a U shape and the reduced chi-square is 9. A quadratic gives random residuals and
+    1.3. Which model do you use, and why?
+  options:
+    - The straight line, because an R squared above 0.998 proves the model fits.
+    - The straight line, because a quadratic always overfits seven points.
+    - Either one, because both give almost the same answer for every sample.
+    - The quadratic, because the residuals show the line has the wrong shape.
+  correct: 3
+  explanation: >-
+    R squared hides systematic misfit. Structured residuals and a reduced chi-square far above 1 mean
+    the line is the wrong model; it biases samples near the ends, such as a diet drink.
+- id: q4
+  question: >-
+    You share your notebook folder. It opens data with pd.read_csv("C:/Users/you/Desktop/density.csv")
+    and does not print any versions. What two changes help most?
+  options:
+    - Use a relative path inside the folder, and print the package versions.
+    - Convert the notebook to PDF, and add more comments to each cell.
+    - Move all code into one big cell, and set a random seed.
+    - Use the newest pandas release, and turn off all warnings.
+  correct: 0
+  explanation: >-
+    A relative path works in anyone's copy of the folder, and a version record lets others rebuild
+    the same environment from the pins. The other changes do not make the result repeatable.
