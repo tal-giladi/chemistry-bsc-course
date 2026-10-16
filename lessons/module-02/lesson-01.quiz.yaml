@@ -1,0 +1,56 @@
+- id: q1
+  question: >-
+    You fit ln k against 1/T and get a slope of -6000 K, but your script used np.log10 for the
+    y values. What activation energy should you report?
+  options:
+    - >-
+      About 49.9 kJ/mol, from 6000 K times 8.314 J/(mol K).
+    - >-
+      About 21.7 kJ/mol, from dividing 49.9 kJ/mol by 2.303 for the base change.
+    - >-
+      About 115 kJ/mol, because a base-10 slope must be multiplied by 2.303 first.
+    - >-
+      About 6.0 kJ/mol, because the slope in kelvin is already the energy per mole.
+  correct: 2
+  explanation: >-
+    A log10 plot has a slope 2.303 times smaller than the ln plot, so the ln slope is -13 816 K and
+    Ea = 13 816 times 8.314 J/mol, about 115 kJ/mol.
+- id: q2
+  question: >-
+    Rinse water from a lab sink goes from pH 5.0 to pH 3.0. How has the hydrogen-ion
+    concentration changed?
+  options:
+    - It has increased 100-fold.
+    - It has increased 2-fold.
+    - It has decreased 100-fold.
+    - It has increased about 7.4-fold.
+  correct: 0
+  explanation: >-
+    pH is minus log10 of the concentration, so each pH unit lower is ten times more H+. Two units
+    lower is 10 times 10, a 100-fold increase.
+- id: q3
+  question: >-
+    A drug decays by first-order kinetics with a half-life of 6.0 h. What fraction is left 15 h
+    after a dose?
+  options:
+    - About 40 %, since 15 h is 2.5 times 6 h and 1/2.5 is 0.4.
+    - About 18 %, since 15 h is 2.5 half-lives and 0.5 to the power 2.5 is 0.18.
+    - About 25 %, since 15 h is a bit more than two half-lives.
+    - About 8 %, since the rate constant is 6.0 per hour.
+  correct: 1
+  explanation: >-
+    Each half-life multiplies the amount by 1/2, so after n half-lives the fraction is (1/2)^n.
+    With n = 2.5 that is 0.177.
+- id: q4
+  question: >-
+    You suspect the rate of a reaction follows rate = k[A]^n and want n from measured rates at
+    several concentrations. Which plot gives a straight line whose slope is n?
+  options:
+    - Rate against [A] on ordinary linear axes.
+    - ln(rate) against [A].
+    - Rate against 1/[A].
+    - log(rate) against log[A].
+  correct: 3
+  explanation: >-
+    Taking logs of a power law gives log(rate) = log k + n log[A], a straight line in log-log
+    coordinates with slope n.

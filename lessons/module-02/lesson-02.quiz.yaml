@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You need the initial rate of a decaying reactant and only have readings at t = 0, 30 and 60 s.
+    You take (c at 30 s minus c at 0 s) divided by 30 s. How does this compare with the true
+    initial rate?
+  options:
+    - It is too large, because the concentration falls fastest between the first two points.
+    - It is too small, because the decay slows down so the average over 0-30 s is below the starting slope.
+    - It is exact, because the forward difference is defined at the first point.
+    - It is too small only when the data are noisy, otherwise it is exact.
+  correct: 1
+  explanation: >-
+    For a decay that bends upward the secant over the first interval is shallower than the tangent
+    at t = 0, so a forward difference underestimates the initial rate even with perfect data.
+- id: q2
+  question: >-
+    For c = c0 exp(-kt), which expression is dc/dt?
+  options:
+    - -k c0 exp(-kt), which equals -k c.
+    - c0 exp(-kt), because the exponential is its own derivative.
+    - -kt c0 exp(-kt - 1), from the power rule on the exponent.
+    - -c0 exp(-kt) / k, from dividing by the inner derivative.
+  correct: 0
+  explanation: >-
+    By the chain rule you differentiate the outer exponential (unchanged) and multiply by the
+    derivative of the inner -kt, which is -k. So dc/dt = -k c, the first-order rate law.
+- id: q3
+  question: >-
+    You differentiate noisy concentration data with central differences and the rate jumps up and
+    down wildly from point to point. Which change helps most?
+  options:
+    - Use more points by interpolating between the measured ones, so the step h becomes smaller.
+    - Switch to forward differences, which use only one neighbour and so pick up less noise.
+    - Use a larger step, or fit a model to c(t) and differentiate the model instead.
+    - Report the rate in different units so the scatter looks smaller.
+  correct: 2
+  explanation: >-
+    The noise in a finite difference grows like 1/h. Interpolation does not add information, and
+    forward differences are no less noisy. A larger step or a fitted model averages the noise out.
+- id: q4
+  question: >-
+    For a reaction with Ea = 50 kJ/mol near 298 K, the relative sensitivity (1/k)(dk/dT) is about
+    0.068 per kelvin. Your water bath drifts by plus or minus 0.5 K. Roughly how much does k drift?
+  options:
+    - About plus or minus 0.07 %.
+    - About plus or minus 68 %.
+    - About plus or minus 13.6 %.
+    - About plus or minus 3.4 %.
+  correct: 3
+  explanation: >-
+    The relative change is the sensitivity times the change in T: 0.068 per K times 0.5 K is
+    0.034, about 3.4 %.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A gas expands reversibly and isothermally from 10 L to 25 L. A student estimates the work as
+    the starting pressure times 15 L. How does this estimate compare with the true work?
+  options:
+    - It is too small, because pressure rises as the gas expands.
+    - It is too large, because the pressure falls during the expansion and the true area is smaller.
+    - It is exact, because the temperature is constant so the pressure is constant too.
+    - It is too large only if the gas is not ideal.
+  correct: 1
+  explanation: >-
+    At constant T, p = nRT/V falls as V grows, so the area under p(V) is less than the rectangle
+    built on the starting pressure. The exact work is nRT ln(V2/V1).
+- id: q2
+  question: >-
+    You integrate a measured reaction rate, in mol per litre per second, over 120 s. What does the
+    result represent?
+  options:
+    - The average rate over the 120 s, in mol per litre per second.
+    - The rate constant of the reaction, in 1/s.
+    - The change in concentration over the 120 s, in mol per litre.
+    - The total amount in moles, independent of the volume.
+  correct: 2
+  explanation: >-
+    The integral of a rate gives the net change of the quantity. Units multiply: mol per litre per
+    second times seconds is mol per litre.
+- id: q3
+  question: >-
+    You call scipy.integrate.simpson(cp) on heat-capacity values measured every 10 K, without
+    passing x. What happens?
+  options:
+    - SciPy reads the spacing from the array length and returns the correct heat.
+    - SciPy raises an error because x is required.
+    - The result is correct but in kJ instead of J.
+    - SciPy assumes a spacing of 1, so the heat comes out 10 times too small.
+  correct: 3
+  explanation: >-
+    Without x (or dx) SciPy uses unit spacing. With real steps of 10 K the true integral is ten
+    times larger, so always pass x=T.
+- id: q4
+  question: >-
+    For N2 between 298 K and 500 K, using a constant Cp of 29.12 J/(mol K) gives a heat 0.5 % below
+    the Shomate integral. When is the constant-Cp shortcut most likely to fail badly?
+  options:
+    - For a polyatomic gas such as CO2 heated over several hundred kelvin.
+    - For N2 heated over 10 K near room temperature.
+    - For any gas heated at constant pressure rather than constant volume.
+    - For a gas whose Cp is given in J/(mol K) rather than J/(g K).
+  correct: 0
+  explanation: >-
+    Cp of molecules with many vibrations rises steeply with temperature, so a constant value
+    misses a growing area. Over a small range, or for a diatomic near room temperature, it is fine.

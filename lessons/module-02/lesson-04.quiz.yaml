@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A student uses [H+] = sqrt(Ka C) for an acid with Ka = 1.0e-3 at C = 0.020 M and gets
+    [H+] = 4.5e-3 M. What should they conclude?
+  options:
+    - The answer is fine, because Ka is much smaller than 1.
+    - The answer is fine, because the pH error of a square-root shortcut is always below 0.01.
+    - The shortcut is not safe, because x/C is about 22 %, so the quadratic must be solved.
+    - The shortcut is not safe, because Ka is larger than C.
+  correct: 2
+  explanation: >-
+    The check compares x with C: 4.5e-3 / 0.020 is 22 %, far above 5 % (C/Ka = 20, far below 400).
+    Ka is still smaller than C, but that is not the test.
+- id: q2
+  question: >-
+    Which two-term approximation is correct for small x?
+  options:
+    - ln(x) is about x.
+    - exp(x) is about x.
+    - sqrt(1 + x) is about 1 + 2x.
+    - ln(1 + x) is about x.
+  correct: 3
+  explanation: >-
+    The expansion is around x = 0 for ln(1 + x): ln(1 + x) = x - x^2/2 + ... . exp(x) is about
+    1 + x and sqrt(1 + x) is about 1 + x/2.
+- id: q3
+  question: >-
+    You measure product concentration during the first 2 % of a first-order reaction and it rises
+    in a straight line with time. Why is a straight line expected here?
+  options:
+    - Because 1 - exp(-kt) is about kt when kt is small, so conversion grows linearly at first.
+    - Because first-order reactions become zero-order once the product starts to form.
+    - Because the rate constant k grows linearly with time at the start.
+    - Because the logarithm of concentration is linear in time for all reactions.
+  correct: 0
+  explanation: >-
+    The Taylor series exp(-kt) = 1 - kt + ... gives a conversion of about kt for small kt. That is
+    the basis of the initial-rate method; the curve bends only later.
+- id: q4
+  question: >-
+    A bond's potential energy V(r) has its minimum at r_e. Why does the vibration near r_e behave
+    like a mass on a spring?
+  options:
+    - Because V(r) is exactly a parabola for every chemical bond.
+    - Because at the minimum V'(r_e) = 0, so the first non-constant Taylor term is quadratic in r - r_e.
+    - Because the first Taylor term V'(r_e)(r - r_e) is linear, like Hooke's law.
+    - Because the cubic term of the expansion cancels the quadratic one near r_e.
+  correct: 1
+  explanation: >-
+    The linear term vanishes at a minimum, so V is approximately V(r_e) + (1/2) V''(r_e)(r - r_e)^2,
+    a harmonic potential with spring constant V''(r_e). Real bonds deviate further out.

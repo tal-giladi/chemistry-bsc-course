@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    A sealed rigid flask holds an ideal gas. You want to know how much the pressure rises per
+    kelvin of warming. Which quantity answers that?
+  options:
+    - The partial derivative of p with respect to T at constant n and V, equal to nR/V.
+    - The partial derivative of p with respect to T at constant p, equal to zero.
+    - The partial derivative of p with respect to V at constant T, equal to -nRT/V^2.
+    - The ordinary derivative dp/dT along a path where V grows with T.
+  correct: 0
+  explanation: >-
+    A sealed rigid flask fixes both n and V, so the relevant slope is the partial derivative of p
+    with respect to T holding n and V constant: nR/V.
+- id: q2
+  question: >-
+    You predict a quantity f from x and y. The error terms are |df/dx| u_x = 0.30 and
+    |df/dy| u_y = 0.40, and the two errors are independent. What is the combined uncertainty?
+  options:
+    - 0.70, because independent error terms add.
+    - 0.40, because only the larger term matters.
+    - 0.50, from the square root of 0.30 squared plus 0.40 squared.
+    - 0.35, from the average of the two terms.
+  correct: 2
+  explanation: >-
+    Independent random errors combine in quadrature: sqrt(0.09 + 0.16) = 0.50. Straight addition
+    assumes both errors push the same way at full size, which is unlikely.
+- id: q3
+  question: >-
+    In your cooling-curve error budget, the k term is 32 s and the room-temperature term is 14 s
+    for the time to reach 60 C. Which change would improve the prediction most?
+  options:
+    - Buying a more precise room thermometer.
+    - Recording a longer, cleaner cooling curve to pin down k.
+    - Weighing the water on a more precise scale.
+    - Reading the mug temperature every 10 s instead of every 60 s for the first minute only.
+  correct: 1
+  explanation: >-
+    The k term dominates, so reducing the uncertainty in k pays off most. A better room thermometer
+    shrinks the smaller term and barely changes the combined uncertainty; the water mass does not
+    enter the time prediction at all.
+- id: q4
+  question: >-
+    Your real cooling data give a log plot of ln(T - T_env) against time that curves downward
+    during the first few minutes and is straight afterwards. What is the most likely reason?
+  options:
+    - The thermometer was reading in Fahrenheit for the first few minutes.
+    - Newton's law forbids any curvature, so the data must be wrong and should be discarded.
+    - The room temperature was set too low in the fit, which only affects the late points.
+    - Evaporation and heating of the cold mug wall add extra early heat loss that the one-constant model ignores.
+  correct: 3
+  explanation: >-
+    Early on the hot surface evaporates strongly and the mug wall is still warming up, so heat leaves
+    faster than plain convection predicts. Fit the later straight part separately and report both.
