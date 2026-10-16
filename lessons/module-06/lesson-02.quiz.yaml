@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A protein has a computed pI of 5.2. You want it to bind to an anion-exchange column, which
+    carries fixed positive groups. Which buffer pH is the sensible first choice?
+  options:
+    - pH 4.0, because the protein is then positive and the column holds it.
+    - pH 5.2, because at its pI the protein binds most strongly to any column.
+    - pH 3.5, because extra H+ makes the carboxylate groups more negative.
+    - pH 7.0, because the protein is then negative and binds the positive groups.
+  correct: 3
+  explanation: >-
+    Above its pI a protein carries a net negative charge, so one to two units above the pI it binds to
+    positive groups. At the pI the net charge is zero and it binds poorly; below it, the protein is positive.
+- id: q2
+  question: >-
+    Histidine (side-chain pKa about 6.5) sits in an enzyme's active site. The cell pH drops from 7.4
+    to 6.5. What happens to the fraction of histidine side chains that are positively charged?
+  options:
+    - It stays near zero, because histidine is a nonpolar residue.
+    - It rises from about 0.11 to 0.50.
+    - It falls from about 0.89 to 0.50.
+    - It stays near 1.0, because histidine is a basic residue.
+  correct: 1
+  explanation: >-
+    f+ = 1/(1 + 10^(pH - pKa)): at pH 7.4 it is 1/(1 + 10^0.9) = 0.11, at pH 6.5 it is 0.50. This
+    sensitivity near physiological pH is why histidine is common in active sites.
+- id: q3
+  question: >-
+    In Mol* you click residue 28 in ubiquitin's alpha-helix. Which backbone hydrogen bonds do you
+    expect this residue to make?
+  options:
+    - Its C=O to the N-H of residue 32, and its N-H to the C=O of residue 24.
+    - Its C=O to the N-H of residue 29, and its N-H to the C=O of residue 27.
+    - Only side-chain hydrogen bonds, because helix backbones point into the solvent.
+    - Its C=O to the N-H of residue 60, because helices bond to distant strands.
+  correct: 0
+  explanation: >-
+    In an alpha-helix the C=O of residue i accepts from the N-H of residue i+4, so residue 28 accepts
+    from 32 and donates to 24. Neighbours i+1 are held apart by the planar peptide geometry.
+- id: q4
+  question: >-
+    Your script finds 47 backbone hydrogen bonds in ubiquitin, averaging -9 kJ/mol each. A classmate
+    concludes that ubiquitin is stabilised by about 420 kJ/mol. What is wrong with this?
+  options:
+    - Nothing, because hydrogen-bond energies simply add up in a folded protein.
+    - The DSSP energy is in kcal/mol, so the true total is about 1760 kJ/mol.
+    - In the unfolded chain the same groups bond to water, so folding gains only a small difference.
+    - Backbone hydrogen bonds are repulsive, so they destabilise the fold by 420 kJ/mol.
+  correct: 2
+  explanation: >-
+    Folding swaps hydrogen bonds to water for internal ones and pays an entropy cost to fix the chain.
+    The net stability of most globular proteins is a small difference of large terms, only marginal.

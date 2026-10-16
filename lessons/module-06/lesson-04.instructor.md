@@ -1,0 +1,9 @@
+# Instructor notes — 06.4 Metabolism and energy currency (module practical)
+
+- Objective: ΔG = ΔG°' + RT ln Q for ATP hydrolysis in a cell; coupling (Na⁺/K⁺ pump budget with concentration and electrical terms); respiration versus fermentation energy budgets and efficiency; module practical: yeast fermentation → CO₂ → ATP, and polar contacts of ATP in PDB 1ATP.
+- Likely confusion: mM inside ln Q (Q here has units of concentration; must use mol/L); sign of the electrical term for an ion moving in or out.
+- Misconception: "ATP has a high-energy bond that releases energy when broken." Breaking bonds costs energy; the products are more stable (less charge repulsion, better solvation, resonance).
+- Analogy: ATP as a charged rechargeable battery, not a fuel tank: the cell holds few batteries but recharges each one many times.
+- Expected hands-on result: Part A −47.6 kJ/mol; +40 yes (−12.7), +60 no (+7.3); 52 % and 38 % at 50 kJ/mol per ATP. Script (example data): ΔG cell −52.7 kJ/mol; fermentation Hess estimate −260 kJ/mol; respiration stores 54 %, fermentation 41 % at −52.7; CO₂ 8.4 g of 10.29 g (82 %), 0.191 mol ATP, 10.1 kJ, early rate 0.81 g/h = 2.6 mmol ATP per g yeast per h. 1ATP: 21 contacts below 3.3 Å with 13 residues, 6 via Mn²⁺ (Asp184), 15 candidate H-bonds (adenine 3: Glu121 O, Val123 N, Thr183 OG1; ribose 4; phosphates 8). Real bottles: 50–90 % of the theoretical CO₂ in 24 h, depending on temperature and yeast.
+- Safety: never cap the bottle (pressure); warm not hot water; fermented liquid contains alcohol, do not drink; WARNING box.
+- Extension: repeat with the bottle in the fridge (about 5 °C) and estimate an activation energy from the two early rates with the Arrhenius equation of lesson 02.1; or run lesson04_atp_site.py on another kinase with an ATP analogue (for example ligand ANP) and compare the hinge contacts.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    In a muscle cell at 37 C (RT = 2.58 kJ/mol), ATP is 5.0 mM, ADP 0.05 mM and Pi 5.0 mM. With
+    a standard value of -30.5 kJ/mol, what is the free energy of ATP hydrolysis?
+  options:
+    - About -30.5 kJ/mol, because the standard value applies inside cells.
+    - About -38 kJ/mol, from using the concentrations in mM inside ln Q.
+    - About -56 kJ/mol, from Q = 5.0e-5 in mol/L.
+    - About -6 kJ/mol, from adding RT ln Q with the wrong sign.
+  correct: 2
+  explanation: >-
+    Q = (0.05e-3)(5.0e-3)/(5.0e-3) = 5.0e-5, ln Q = -9.9, so Delta G = -30.5 - 25.5 = -56 kJ/mol.
+    Using mM gives Q = 0.05 and only -38 kJ/mol; the units do not cancel in this Q.
+- id: q2
+  question: >-
+    A transporter wants to move one glucose molecule into a cell against a 1000-fold concentration
+    ratio (no charge, 37 C). Can the hydrolysis of one ATP (-52 kJ/mol in the cell) pay for it?
+  options:
+    - No, because moving against a gradient needs at least two ATP per molecule.
+    - Yes, because the cost is RT ln 1000 = about 18 kJ/mol, well below 52 kJ/mol.
+    - No, because the cost is 1000 times RT, about 2580 kJ/mol.
+    - Yes, but only if the membrane potential is positive inside.
+  correct: 1
+  explanation: >-
+    The concentration term is RT ln(c_to/c_from) = 2.58 x ln 1000 = 17.8 kJ/mol. Glucose is neutral,
+    so there is no electrical term. One ATP covers it with free energy to spare.
+- id: q3
+  question: >-
+    Your fermentation bottle lost 6.0 g in 24 h and the control lost 0.6 g. How many moles of ATP did
+    the yeast make by fermentation?
+  options:
+    - About 0.12 mol, from 5.4 g of CO2 at 44 g/mol and one ATP per CO2.
+    - About 0.14 mol, from the full 6.0 g loss without the control.
+    - About 0.25 mol, from two ATP per CO2.
+    - About 0.016 mol, from dividing 5.4 g by the molar mass of sucrose.
+  correct: 0
+  explanation: >-
+    CO2 = 6.0 - 0.6 = 5.4 g, which is 5.4/44.0 = 0.123 mol. Fermentation makes 2 ATP and 2 CO2 per
+    glucose, so one ATP per CO2: about 0.12 mol of ATP.
+- id: q4
+  question: >-
+    In the ATP site of PDB 1ATP your distance script lists Asp184 OD2 within 3.0 A of three phosphate
+    oxygens. Why should you not count these as three hydrogen bonds?
+  options:
+    - Because Asp184 is a backbone atom, and backbone atoms cannot form hydrogen bonds.
+    - Because distances below 3.3 A are covalent bonds, not hydrogen bonds.
+    - Because a Mn2+ ion bridges these acceptor oxygens; no hydrogen sits between them.
+    - Because aspartate is positively charged at pH 7 and repels the phosphates.
+  correct: 2
+  explanation: >-
+    Carboxylate and phosphate oxygens are both acceptors. They sit close together because a metal ion
+    holds both, so the contact is a metal bridge. A distance test cannot see hydrogens; check metals first.

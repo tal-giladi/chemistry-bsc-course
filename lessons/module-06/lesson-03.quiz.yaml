@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A primer has the sequence 5'-AGCTTGCA-3'. Which strand will it pair with, written 5' to 3'?
+  options:
+    - 5'-TCGAACGT-3', the complement of each base in the same order.
+    - 5'-TGCAAGCT-3', the complement of each base read backwards.
+    - 5'-ACGTTCGA-3', the original sequence read backwards.
+    - 5'-AGCTTGCA-3', because this sequence pairs with itself only.
+  correct: 1
+  explanation: >-
+    The strands are antiparallel, so the partner is the reverse complement: complement each base
+    (A-T, G-C) and reverse the order. TCGAACGT is the complement written 3' to 5'.
+- id: q2
+  question: >-
+    Two 20-base primers have GC contents of 30 % and 70 %. In the same salt solution, which statement
+    about their melting temperatures is right?
+  options:
+    - Both melt at the same temperature, because both are 20 bases long.
+    - The 30 % GC primer melts higher, because A-T pairs stack more strongly.
+    - The 70 % GC primer melts about 16 C higher, from the Wallace rule.
+    - The 70 % GC primer melts about 4 C higher, because each G-C pair adds one degree.
+  correct: 2
+  explanation: >-
+    Wallace: 2(A+T) + 4(G+C). 30 % GC gives 2x14 + 4x6 = 52 C; 70 % gives 2x6 + 4x14 = 68 C, a
+    16 C difference. G-C pairs have three hydrogen bonds and stack more strongly.
+- id: q3
+  question: >-
+    In the codon AAG (Lys) of a gene, the middle A changes to T, giving ATG. What kind of mutation is
+    this, and what does the protein get at that position?
+  options:
+    - A missense mutation; Lys is replaced by Met.
+    - A silent mutation; the protein still has Lys.
+    - A nonsense mutation; the protein stops before this position.
+    - A frameshift; every amino acid after this position changes.
+  correct: 0
+  explanation: >-
+    ATG codes for methionine, so one amino acid changes: a missense mutation. A frameshift needs an
+    insertion or deletion; a nonsense mutation would give TAA, TAG or TGA.
+- id: q4
+  question: >-
+    In the strawberry extraction, a friend skips the salt but uses cold alcohol. Very little DNA comes
+    out. What is the best chemical explanation?
+  options:
+    - Salt is needed to break the cell walls, so the cells stayed closed.
+    - Salt is the enzyme that cuts histone proteins away from the DNA.
+    - Without salt the alcohol mixes with the water and cannot form a separate layer.
+    - Without Na+ to pair with the phosphates, the DNA stays charged and dissolved.
+  correct: 3
+  explanation: >-
+    DNA precipitates when its negative phosphates pair with cations. Alcohol's low permittivity
+    strengthens that pairing, but it needs the Na+ from the salt. Cell walls break mechanically, the
+    detergent opens membranes, and the protease is optional.

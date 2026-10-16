@@ -1,0 +1,132 @@
+- id: q1
+  question: >-
+    A tissue engineer grows a cube of cells 2 mm thick with no blood vessels, fed only from its
+    surface. Oxygen diffuses with D about 2e-9 m^2/s. Roughly how long does oxygen take to reach the
+    centre, 1 mm in, and what does that suggest?
+  options:
+    - About 0.25 s, so diffusion easily feeds the centre of the cube.
+    - About 250 s, so the centre is fed slowly while cells on the way use oxygen.
+    - About 2.5 s, so oxygen arrives quickly at any depth of the cube.
+    - About 25 000 s, so the cells on the outside starve first.
+  correct: 1
+  explanation: >-
+    t = x^2/2D = (1e-3)^2/(4e-9) = 250 s. Meanwhile the outer cells consume much of the oxygen, so the
+    core goes short; this is why thick engineered tissues need channels or perfusion.
+- id: q2
+  question: >-
+    Two drug candidates have the same size. A is neutral with a few polar groups; B is the same
+    molecule with a permanent positive charge. B is far more potent on the isolated target protein,
+    but works poorly in whole cells. What is the most likely reason?
+  options:
+    - B is too large to pass through the small pores in the membrane.
+    - B is pulled back out of the cell by the positive potential inside.
+    - B is broken down chemically by the hydrophobic core of the membrane.
+    - B cannot dissolve in the nonpolar core of the bilayer, so it barely enters.
+  correct: 3
+  explanation: >-
+    Charged molecules pay a large Coulomb penalty to move from water into the oily core, so without a
+    transporter they hardly cross. The neutral form crosses by simple diffusion. The inside is negative.
+- id: q3
+  question: >-
+    A nurse has only 0.45 % NaCl (half-strength saline) and 5 % glucose (0.28 mol/L) on hand. Blood
+    plasma is about 0.29 osmol/L. Which statement about red blood cells placed in each is right?
+  options:
+    - In 0.45 % NaCl they swell (about 0.15 osmol/L); in 5 % glucose they stay about normal.
+    - In 0.45 % NaCl they stay normal, because NaCl gives two ions; in 5 % glucose they shrink.
+    - Both solutions are isotonic, because both are close to 0.3 mol/L of dissolved solute.
+    - In both solutions they shrink, because neither glucose nor NaCl can enter the cells.
+  correct: 0
+  explanation: >-
+    0.45 % NaCl is 4.5 g/L = 0.077 mol/L, about 0.15 osmol/L: hypotonic, so water enters and cells
+    swell. 5 % glucose is 0.28 osmol/L, close to plasma, so there is little net flow at first.
+- id: q4
+  question: >-
+    A drug blocks the K+ channels that keep a resting membrane mostly permeable to K+. Inside K+ is
+    150 mM, outside 4 mM; inside Na+ is 15 mM, outside 145 mM. What happens to the resting potential?
+  options:
+    - It becomes more negative, moving from about -70 mV towards -97 mV.
+    - It stays at -70 mV, because the Na+/K+ pump sets the potential directly.
+    - It moves towards the Na+ potential of about +61 mV, becoming less negative.
+    - It jumps to exactly 0 mV, because no ions can cross the membrane any more.
+  correct: 2
+  explanation: >-
+    The resting potential sits near E_K because K+ dominates the permeability. Blocking K+ channels
+    leaves other ions, mainly Na+ (E_Na about +61 mV), with more influence, so the membrane depolarises.
+- id: q5
+  question: >-
+    A lab wants to purify a protein with computed pI 8.9 on a cation-exchange column (fixed negative
+    groups). A student suggests a buffer at pH 9.5. What is the better plan, and why?
+  options:
+    - Keep pH 9.5, because a protein binds best just above its pI.
+    - Use pH 11, because the protein then carries more positive charge.
+    - Use pH 8.9, because at its pI the protein binds every column type.
+    - Use about pH 7.5, so the protein is clearly positive and binds the column.
+  correct: 3
+  explanation: >-
+    Below its pI a protein is positively charged, so at pH 7.5, more than a unit below 8.9, it binds a
+    cation exchanger. At pH 9.5 it is negative and flows straight through.
+- id: q6
+  question: >-
+    A mutation replaces a buried Leu in a protein's hydrophobic core with Asp. The structure shows the
+    Asp has no partner to bond or pair with. What is the most likely outcome?
+  options:
+    - The protein becomes more stable, since Asp can form extra hydrogen bonds.
+    - The protein is destabilised, maybe enough to unfold, since a buried charge costs energy.
+    - Nothing changes, since the backbone hydrogen bonds hold the fold on their own.
+    - The protein's pI rises, since Asp is one of the basic amino acid residues.
+  correct: 1
+  explanation: >-
+    Folded proteins are only marginally stable. Burying an unpaired charge in a low-permittivity core
+    costs a lot of free energy and removes favourable hydrophobic contacts, often enough to unfold it.
+- id: q7
+  question: >-
+    You design two PCR primers. Primer F is 20 bases with 9 G or C; primer R is 20 bases with 15 G or
+    C. Using the Wallace rule, what do you conclude?
+  options:
+    - F has Tm about 58 C and R about 70 C; the pair is mismatched and R needs redesign.
+    - Both have Tm about 60 C, because both primers are the same length of 20 bases.
+    - F has Tm about 70 C and R about 58 C, because A-T pairs hold together more strongly.
+    - The Tm values cannot be estimated at all without knowing the template sequence.
+  correct: 0
+  explanation: >-
+    Wallace: F = 2(11) + 4(9) = 58 C; R = 2(5) + 4(15) = 70 C. A 12 C gap means no single annealing
+    temperature suits both; shift or shorten R so the two match within a few degrees.
+- id: q8
+  question: >-
+    In a gene the codon for residue 30 changes from TGG (Trp) to TGA. What is the effect on the
+    protein, which is normally 120 residues long?
+  options:
+    - A silent change, because TGG and TGA differ only in their last base.
+    - A missense change: Trp30 becomes another amino acid, length stays 120.
+    - A frameshift: every residue after 30 changes, length stays about 120.
+    - A nonsense change: translation stops early, giving a 29-residue fragment.
+  correct: 3
+  explanation: >-
+    TGA (UGA in mRNA) is a stop codon, so the ribosome stops after residue 29. A single substitution
+    never shifts the reading frame; that needs an insertion or a deletion.
+- id: q9
+  question: >-
+    A cell's ATP/ADP ratio falls from 10 to 1 at constant Pi = 2 mM and 37 C (RT = 2.58 kJ/mol).
+    How does the free energy available from each ATP hydrolysis change?
+  options:
+    - It becomes less negative by about 5.9 kJ/mol, since RT ln 10 is 5.9 kJ/mol.
+    - It does not change, because the standard value Delta G0' is a constant.
+    - It becomes more negative by about 5.9 kJ/mol, because more ADP is present.
+    - It becomes less negative by about 26 kJ/mol, since 10 times RT is 26 kJ/mol.
+  correct: 0
+  explanation: >-
+    Delta G = Delta G0' + RT ln([ADP][Pi]/[ATP]); a tenfold rise in ADP/ATP raises ln Q by ln 10, so
+    Delta G rises by 2.58 x 2.30 = 5.9 kJ/mol. An energy-starved cell gets less from each ATP.
+- id: q10
+  question: >-
+    A brewer's yeast tank switches from aerobic growth to fermentation as oxygen runs out. To keep
+    making ATP at the same rate, roughly how much faster must the yeast consume glucose?
+  options:
+    - About 2 times faster, because fermentation makes 2 ATP per glucose.
+    - The same rate, because each glucose releases the same free energy.
+    - About 15 times faster, because it makes 2 ATP per glucose, not about 30.
+    - About 30 times faster, because fermentation makes no ATP from glucose.
+  correct: 2
+  explanation: >-
+    Respiration gives about 30 ATP per glucose, fermentation 2, so the same ATP flow needs about 15
+    times as much glucose. The rest of the energy stays in the ethanol, which is why brewers get alcohol.
