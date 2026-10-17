@@ -1,0 +1,14 @@
+# Water reference values for lesson 31.3.
+# Calculated rows: PySCF 2.14.0 + geomeTRIC 1.1.1, run 2026-10-17 for this course (RHF or RKS, DFT grid level 4,
+# harmonic frequencies from the analytic Hessian). ORCA 6.1.1 with the same method and basis should agree to
+# about 0.002 Angstrom, 0.3 degrees and 10 cm-1; total energies can differ in the third decimal (grids, B3LYP variant).
+# GFN2-xTB row: xtb 6.7.1pre, check_setup.py. Experiment: CCCBDB experimental geometry (equilibrium r_e) and
+# fundamentals; the harmonic experimental frequencies are the CCCBDB "harmonic" values.
+level,r_OH_A,angle_HOH_deg,energy_Eh,nu_bend,nu_sym,nu_asym
+HF/def2-SVP,0.9450,105.13,-75.961338,1750.4,4148.5,4244.7
+HF/def2-TZVP,0.9420,106.51,-76.059579,1734.5,4110.1,4212.1
+B3LYP/def2-SVP,0.9667,103.10,-76.358316,1638.6,3791.7,3887.1
+B3LYP/def2-TZVP,0.9627,105.24,-76.462996,1616.8,3785.3,3890.5
+GFN2-xTB,0.9592,107.30,-5.070544,1538.8,3643.1,3651.6
+experiment (harmonic),0.958,104.48,,1649,3832,3943
+experiment (fundamental),0.958,104.48,,1595,3657,3756

@@ -1,0 +1,15 @@
+# py lesson04_spectra_solution.py - xtb 6.7.1pre, Python 3.14.3, Windows 11, 2026-10-17 (no ORCA outputs present)
+Part A - formaldehyde IR, GFN2-xTB
+      calc   scaled    exp  error
+    1085.6   1087.7   1167    -79
+    1202.7   1205.1   1249    -44
+    1489.6   1492.5   1500     -7
+    1805.5   1809.1   1746    +63
+    2790.1   2795.6   2782    +14
+    2836.6   2842.3   2843     -1
+  scale factor 1.0020; RMS error 46 cm-1 unscaled, 46 cm-1 scaled
+  (no orca/04_formaldehyde_ir.out yet - run it to add the r2SCAN-3c spectrum)
+  plot: runs/lesson04_ir.png
+
+Part B - acetone NMR from ORCA shieldings
+  ORCA outputs not found: run orca/04_acetone_opt.inp, 04_acetone_nmr.inp, 04_tms_opt.inp and 04_tms_nmr.inp first (README.md).

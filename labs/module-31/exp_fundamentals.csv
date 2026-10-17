@@ -1,0 +1,30 @@
+# Experimental gas-phase vibrational fundamentals (cm-1) and IR intensities (km/mol) from the NIST
+# Computational Chemistry Comparison and Benchmark Database (CCCBDB), "Experimental
+# vibrational frequencies", https://cccbdb.nist.gov/exp2x.asp?casno=<CAS number>, retrieved 2026-10-17.
+# Frequencies mostly from T. Shimanouchi (NSRDS-NBS 39, 1972) and Herzberg; intensity sources as listed
+# there. US government work. Degeneracy from the symmetry label (E and Pi = 2, T2 = 3).
+# Blank intensity = not reported (or IR inactive).
+molecule,cas,mode,symmetry,degeneracy,wavenumber_cm1,ir_intensity_km_mol,description
+H2O,7732185,1,A1,1,3657,2.9,OH symmetric stretch
+H2O,7732185,2,A1,1,1595,62.5,bend
+H2O,7732185,3,B2,1,3756,41.7,OH antisymmetric stretch
+NH3,7664417,1,A1,1,3337,7.1,symmetric stretch
+NH3,7664417,2,A1,1,950,138.0,symmetric deformation (umbrella)
+NH3,7664417,3,E,2,3444,4.3,degenerate stretch
+NH3,7664417,4,E,2,1627,28.2,degenerate deformation
+CH4,74828,1,A1,1,2917,,symmetric stretch (IR inactive)
+CH4,74828,2,E,2,1534,,degenerate deformation (IR inactive)
+CH4,74828,3,T2,3,3019,69.7,degenerate stretch
+CH4,74828,4,T2,3,1306,33.4,degenerate deformation
+CO2,124389,1,Sigma_g,1,1333,,symmetric stretch (IR inactive)
+CO2,124389,2,Sigma_u,1,2349,665.0,antisymmetric stretch
+CO2,124389,3,Pi_u,2,667,54.2,bend
+H2CO,50000,1,A1,1,2782,75.5,CH2 symmetric stretch
+H2CO,50000,2,A1,1,1746,74.0,CO stretch
+H2CO,50000,3,A1,1,1500,11.2,CH2 scissors
+H2CO,50000,4,B1,1,1167,6.5,CH2 wag
+H2CO,50000,5,B2,1,2843,87.6,CH2 antisymmetric stretch
+H2CO,50000,6,B2,1,1249,9.9,CH2 rock
+HCN,74908,1,Sigma,1,3312,53.3,CH stretch
+HCN,74908,2,Sigma,1,2089,,CN stretch
+HCN,74908,3,Pi,2,712,57.7,bend

@@ -1,0 +1,5 @@
+# Lesson 31.3 - water at B3LYP/def2-SVP: tight optimisation + analytic frequencies.
+# ORCA 6.1.1:  orca 03_water_b3lyp_svp.inp > 03_water_b3lyp_svp.out   (seconds to a minute)
+! B3LYP def2-SVP TightOpt Freq
+%maxcore 1000
+* xyzfile 0 1 ../molecules/water.xyz

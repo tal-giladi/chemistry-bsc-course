@@ -1,0 +1,56 @@
+- id: q1
+  question: >-
+    Going from HF/def2-TZVP to HF with a much larger basis, the O-H bond of water stays about 0.015 A
+    shorter than experiment. What does that tell you?
+  options:
+    - The basis is still too small; keep enlarging it until the error disappears.
+    - The geometry did not converge, because a larger basis must always lengthen bonds.
+    - The error comes from the method: Hartree-Fock lacks electron correlation.
+    - The experimental value is wrong, since a complete basis gives the exact answer.
+  correct: 2
+  explanation: >-
+    As the basis grows, HF approaches its own limit, and that limit still has bonds that are too short
+    because the mean-field picture leaves out correlation. Only a correlated method (DFT, MP2, coupled
+    cluster) removes this error.
+- id: q2
+  question: >-
+    You need the geometry of the anion of phenol (phenolate). Which setup is most appropriate for the
+    final structure?
+  options:
+    - HF/def2-SVP, because anions are dominated by electrostatics that HF describes exactly.
+    - A hybrid functional with dispersion in a triple-zeta basis that includes diffuse functions.
+    - B3LYP/def2-SVP without changes, because basis sets matter only for energies, not geometries.
+    - GFN2-xTB alone, because semiempirical methods are parameterised for charged species.
+  correct: 1
+  explanation: >-
+    An anion's extra electron is spread out and needs diffuse functions (for example def2-TZVPD), and a
+    correlated method with dispersion gives reliable geometries. xtb is a good pre-optimiser, not the
+    final level.
+- id: q3
+  question: >-
+    An optimisation converges normally. The frequency calculation shows one mode at -38 cm-1, a methyl
+    rotation. What is the best next step?
+  options:
+    - Displace the structure along that mode and re-optimise with tighter thresholds, then recheck.
+    - Ignore it, because modes below 50 cm-1 never affect any computed property.
+    - Report the structure as a transition state for methyl rotation and compute the barrier from it.
+    - Switch to a larger basis set and repeat the frequency calculation on the same geometry.
+  correct: 0
+  explanation: >-
+    A soft imaginary mode after a converged optimisation usually means the optimiser stopped on a flat
+    saddle. Pushing along the mode and optimising more tightly finds the real minimum; a new basis on the
+    same geometry does not fix the geometry.
+- id: q4
+  question: >-
+    For a 25-atom organic molecule you want reliable geometries at modest cost on a laptop. Which choice
+    matches the advice of this lesson?
+  options:
+    - HF/def2-TZVP, the cheapest method that still has a triple-zeta basis.
+    - B3LYP/def2-SVP, because double-zeta basis sets give the best balance for all properties.
+    - CCSD(T)/def2-TZVP, because only coupled cluster gives trustworthy bond lengths.
+    - An xtb pre-optimisation followed by r2SCAN-3c, then a frequency check at that level.
+  correct: 3
+  explanation: >-
+    r2SCAN-3c gives hybrid-like geometries at GGA cost, and starting from an xtb structure saves
+    optimisation steps. HF lacks correlation, def2-SVP is too small for final angles, and CCSD(T) is far
+    too expensive for 25 atoms on a laptop.

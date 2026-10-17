@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    A B3LYP/def2-TZVP calculation puts the C=O stretch of a ketone at 1795 cm-1; the measured gas-phase
+    band is at 1731 cm-1. What is the most reasonable reading?
+  options:
+    - The structure must be wrong, because a correct structure reproduces the band within 10 cm-1.
+    - The basis set is too small, since only basis errors make calculated frequencies too high.
+    - The calculation should be repeated with HF, which has smaller frequency errors than B3LYP.
+    - This is the normal harmonic overestimate; scaled by about 0.965 it lands near 1732 cm-1.
+  correct: 3
+  explanation: >-
+    Calculated frequencies are harmonic and the measured band is anharmonic, so B3LYP values come out
+    about 3-4 % high. 1795 x 0.965 = 1732 cm-1, essentially the measured value.
+- id: q2
+  question: >-
+    Your calculation of CO2 lists a mode at 1370 cm-1 with zero IR intensity. A classmate says the
+    calculation failed because no IR band is seen there. What do you answer?
+  options:
+    - The mode is the symmetric stretch, which does not change the dipole moment and is IR inactive.
+    - The mode is an artefact of the optimiser and should be removed from the frequency list.
+    - The intensity is zero because the basis set lacks diffuse functions for oxygen.
+    - The mode is the bend, which only shows up in IR when the molecule is in the liquid phase.
+  correct: 0
+  explanation: >-
+    The symmetric stretch of a linear O=C=O keeps the dipole at zero, so its IR intensity is zero; it is
+    seen in the Raman spectrum (lesson 20.3) near 1333 cm-1.
+- id: q3
+  question: >-
+    You compute 13C shieldings for a molecule with B3LYP/pcSseg-1 and for TMS with PBE0/pcSseg-1, then
+    take the differences as shifts. Every carbon comes out about 4 ppm off in the same direction. Why?
+  options:
+    - The conformers were not averaged, which shifts all carbons by the same amount.
+    - The reference and the molecule were calculated at different levels, so the reference is offset.
+    - pcSseg-1 is not designed for shieldings, so all values carry the same basis error.
+    - The shifts are correct, because 4 ppm is the normal random scatter for 13C.
+  correct: 1
+  explanation: >-
+    A shift is a difference of shieldings, so TMS must be computed with exactly the same method, basis
+    and geometry level. A different functional moves the reference shielding and therefore every shift.
+- id: q4
+  question: >-
+    After fitting one scale factor to 30 modes of five molecules, your RMS error drops from 110 to 35
+    cm-1. A colleague proposes fitting a separate factor for every single mode to reach zero error. Why is
+    that a bad idea?
+  options:
+    - Because a scale factor must always be smaller than 1, and some modes would need one above 1.
+    - Because the RMS error is already below the experimental uncertainty of gas-phase spectra.
+    - Because per-mode factors fitted to the answer have no predictive value for a new molecule.
+    - Because scaling only works for stretching modes and must not be applied to bends.
+  correct: 2
+  explanation: >-
+    One factor per level captures the systematic error and transfers to new molecules. A factor per mode
+    simply copies the experimental numbers back and tells you nothing about a molecule you have not
+    measured.

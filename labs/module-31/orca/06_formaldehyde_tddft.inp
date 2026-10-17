@@ -1,0 +1,8 @@
+# Lesson 31.6 - formaldehyde: a dark n->pi* state and bright states at higher energy.
+# Uses the GFN2-xTB geometry made by lesson06_uvvis.py. ORCA 6.1.1:  orca 06_formaldehyde_tddft.inp > 06_formaldehyde_tddft.out
+! CAM-B3LYP def2-SVP
+%maxcore 1000
+%tddft
+  NRoots 5
+end
+* xyzfile 0 1 ../runs/31.6-polyenes/formaldehyde/xtbopt.xyz

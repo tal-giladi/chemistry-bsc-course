@@ -1,0 +1,9 @@
+# Lesson 31.5 (extension) - HCN -> HNC isomerisation: nudged elastic band + TS search with GFN2-xTB.
+# The two xyz files list the atoms in the same order (C, N, H); NEB needs that.
+# ORCA 6.1.1:  orca 05_hcn_hnc_nebts.inp > 05_hcn_hnc_nebts.out   (about a minute)
+! XTB2 NEB-TS Freq
+%neb
+  NEB_End_XYZFile "../molecules/hnc.xyz"
+  NImages 8
+end
+* xyzfile 0 1 ../molecules/hcn.xyz

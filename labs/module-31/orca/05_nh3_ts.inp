@@ -1,0 +1,9 @@
+# Lesson 31.5 - planar ammonia, the inversion transition state, at r2SCAN-3c.
+# OptTS follows one negative-curvature mode uphill; Calc_Hess computes the exact Hessian first.
+# ORCA 6.1.1:  orca 05_nh3_ts.inp > 05_nh3_ts.out
+! r2SCAN-3c OptTS Freq
+%maxcore 1000
+%geom
+  Calc_Hess true
+end
+* xyzfile 0 1 ../molecules/ammonia_planar.xyz

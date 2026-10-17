@@ -1,0 +1,21 @@
+# Polyene UV data for lesson 31.6.
+# experiment: lambda_max (nm) from OpenStax Organic Chemistry, 14.8 Interpreting Ultraviolet Spectra: The Effect
+#   of Conjugation, https://openstax.org/books/organic-chemistry/pages/14-8-interpreting-ultraviolet-spectra-the-effect-of-conjugation
+#   (retrieved 2026-10-17); solution band maxima, not gas-phase vertical energies.
+# Calculated rows: brightest of the three lowest singlet states (E in eV, oscillator strength f) from PySCF 2.14.0,
+#   run 2026-10-17 for this course on the GFN2-xTB geometries made by lesson06_uvvis.py, def2-SVP basis, grid level 3.
+#   "TDA" = Tamm-Dancoff approximation (ORCA's default); "full" = full linear-response TD-DFT (ORCA: TDA false).
+#   ORCA 6.1.1 with the same settings should agree to about 0.02 eV.
+molecule,level,lambda_exp_nm,E_eV,f
+butadiene,experiment,217,,
+hexatriene,experiment,258,,
+octatetraene,experiment,290,,
+butadiene,CAM-B3LYP/def2-SVP full,,6.225,0.721
+hexatriene,CAM-B3LYP/def2-SVP full,,5.098,1.123
+octatetraene,CAM-B3LYP/def2-SVP full,,4.383,1.546
+butadiene,CAM-B3LYP/def2-SVP TDA,,6.727,1.069
+hexatriene,CAM-B3LYP/def2-SVP TDA,,5.526,1.663
+octatetraene,CAM-B3LYP/def2-SVP TDA,,4.756,2.272
+butadiene,B3LYP/def2-SVP full,,6.062,0.674
+hexatriene,B3LYP/def2-SVP full,,4.888,1.064
+octatetraene,B3LYP/def2-SVP full,,4.148,1.474

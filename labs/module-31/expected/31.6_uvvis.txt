@@ -1,0 +1,18 @@
+# py lesson06_uvvis_solution.py - xtb 6.7.1pre, Python 3.14.3, Windows 11, 2026-10-17 (no ORCA outputs present; reference rows from polyenes_uv.csv)
+Part A - GFN2-xTB geometries for the TD-DFT inputs
+  butadiene     lowest mode   145.1 cm-1, imaginary modes 0  -> butadiene/xtbopt.xyz
+  hexatriene    lowest mode    86.6 cm-1, imaginary modes 0  -> hexatriene/xtbopt.xyz
+  octatetraene  lowest mode    54.9 cm-1, imaginary modes 0  -> octatetraene/xtbopt.xyz
+  formaldehyde  lowest mode  1085.6 cm-1, imaginary modes 0  -> formaldehyde/xtbopt.xyz
+
+Part B - brightest pi -> pi* state against the measured lambda_max
+  butadiene     B3LYP/def2-SVP full (reference)         6.06 eV  204.5 nm  f = 0.674   exp 217 nm (5.71 eV)  error +0.35 eV
+  butadiene     CAM-B3LYP/def2-SVP TDA (reference)      6.73 eV  184.3 nm  f = 1.069   exp 217 nm (5.71 eV)  error +1.01 eV
+  butadiene     CAM-B3LYP/def2-SVP full (reference)     6.22 eV  199.2 nm  f = 0.721   exp 217 nm (5.71 eV)  error +0.51 eV
+  hexatriene    B3LYP/def2-SVP full (reference)         4.89 eV  253.7 nm  f = 1.064   exp 258 nm (4.81 eV)  error +0.08 eV
+  hexatriene    CAM-B3LYP/def2-SVP TDA (reference)      5.53 eV  224.4 nm  f = 1.663   exp 258 nm (4.81 eV)  error +0.72 eV
+  hexatriene    CAM-B3LYP/def2-SVP full (reference)     5.10 eV  243.2 nm  f = 1.123   exp 258 nm (4.81 eV)  error +0.29 eV
+  octatetraene  B3LYP/def2-SVP full (reference)         4.15 eV  298.9 nm  f = 1.474   exp 290 nm (4.28 eV)  error -0.13 eV
+  octatetraene  CAM-B3LYP/def2-SVP TDA (reference)      4.76 eV  260.7 nm  f = 2.272   exp 290 nm (4.28 eV)  error +0.48 eV
+  octatetraene  CAM-B3LYP/def2-SVP full (reference)     4.38 eV  282.9 nm  f = 1.546   exp 290 nm (4.28 eV)  error +0.11 eV
+  dotted lines: measured lambda_max.  plot: runs/lesson06_uvvis.png

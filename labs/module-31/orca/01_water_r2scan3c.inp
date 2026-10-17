@@ -1,0 +1,7 @@
+# Lesson 31.1 - first ORCA job: water, r2SCAN-3c optimisation + harmonic frequencies.
+# ORCA 6.1.1. Run from this folder:  orca 01_water_r2scan3c.inp > 01_water_r2scan3c.out
+# (on Linux/macOS call ORCA with its full path if you want parallel runs; see README.md)
+# Expect well under a minute on a laptop.
+! r2SCAN-3c Opt Freq
+%maxcore 1000
+* xyzfile 0 1 ../molecules/water.xyz

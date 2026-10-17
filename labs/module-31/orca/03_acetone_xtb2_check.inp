@@ -1,0 +1,4 @@
+# Lesson 31.3 - is the start geometry a minimum? GFN2-xTB (through ORCA's otool_xtb) opt + freq.
+# ORCA 6.1.1:  orca 03_acetone_xtb2_check.inp > 03_acetone_xtb2_check.out
+! XTB2 Opt NumFreq
+* xyzfile 0 1 ../molecules/acetone.xyz

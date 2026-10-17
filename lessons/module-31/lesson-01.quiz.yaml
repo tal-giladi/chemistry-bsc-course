@@ -1,0 +1,69 @@
+- id: q1
+  question: >-
+    You optimise a molecule with GFN2-xTB and get a total energy of -13.53 Eh. A classmate optimises
+    the same molecule with B3LYP/def2-SVP in ORCA and gets -193.1 Eh. What do you conclude?
+  options:
+    - B3LYP is far more stable, so the molecule is better described by DFT than by xtb.
+    - The two total energies use different references, so their difference means nothing chemically.
+    - One of the two runs must have the wrong charge, because the energies should agree within 1 Eh.
+    - The xtb run did not converge, since a converged energy for this molecule is near -193 Eh.
+  correct: 1
+  explanation: >-
+    Total energies are measured from a method-specific reference; GFN2-xTB leaves out the core electrons
+    and uses its own parameters. Only differences within one model chemistry, such as two conformers at
+    the same level, have chemical meaning.
+- id: q2
+  question: >-
+    An ORCA geometry optimisation output ends with "ORCA TERMINATED NORMALLY", but further up it says
+    the optimisation did not converge after the maximum number of cycles. What should you do with the
+    final energy?
+  options:
+    - Use it, because normal termination means the program found the minimum.
+    - Use it, but add the remaining gradient times the step size as a correction.
+    - Do not use it yet; restart the optimisation from the last geometry until it converges.
+    - Do not use it; switch to a larger basis set, which always fixes convergence problems.
+  correct: 2
+  explanation: >-
+    Normal termination only means the program did not crash. An unconverged optimisation stopped
+    somewhere on the slope, so its energy and geometry are not those of a stationary point. Restarting
+    from the last geometry usually finishes the job.
+- id: q3
+  question: >-
+    Two conformers optimised at the same level differ by 0.0038 Eh. What is the difference in kJ/mol?
+  options:
+    - About 0.10 kJ/mol
+    - About 0.37 kJ/mol
+    - About 10 kJ/mol
+    - About 103 kJ/mol
+  correct: 2
+  explanation: >-
+    1 Eh is 2625.5 kJ/mol, so 0.0038 Eh is 0.0038 x 2625.5 = 10.0 kJ/mol. Multiplying by 27.2 (eV) or
+    misplacing the decimal gives the other values.
+- id: q4
+  question: >-
+    You work as an analyst at a food company and want to use ORCA at work to predict the IR spectra of
+    flavour compounds. Under the ORCA EULA (June 2025), what applies?
+  options:
+    - You need a commercial licence from FACCTs, because work-related use is neither academic nor private.
+    - You may use it freely, because ORCA is free of charge for every user who registers on the forum.
+    - You may use it if you run it on your own laptop at home, which counts as private use.
+    - You may use it if you publish the results in a journal, which makes the work academic.
+  correct: 0
+  explanation: >-
+    The EULA allows academic use in schools, universities and Max Planck institutes and private use that
+    is non-commercial and not work-related. Calculations that serve an employer need a commercial
+    licence, wherever the computer is.
+- id: q5
+  question: >-
+    A frequency calculation on a structure you believe is a stable molecule prints one value of
+    -245 cm-1 and many positive ones. How do you read this?
+  options:
+    - The structure is a minimum; negative values only mean the mode is IR inactive.
+    - The structure is a minimum, but the zero-point energy will be slightly too low.
+    - The structure is a second-order saddle point, because negative values come in pairs.
+    - The structure is not a minimum; there is one direction in which the energy goes down.
+  correct: 3
+  explanation: >-
+    A negative printed frequency is an imaginary one: negative curvature along one mode. The structure is
+    a first-order saddle point, so you displace it along that mode and optimise again (or, if you wanted
+    a transition state, you have one candidate).

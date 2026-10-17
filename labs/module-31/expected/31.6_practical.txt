@@ -1,0 +1,14 @@
+# py lesson06_practical_solution.py - xtb 6.7.1pre, Python 3.14.3, Windows 11, 2026-10-17 (no ORCA outputs present)
+(no orca/06_ir_*.out files yet - run the six ORCA inputs to add r2SCAN-3c)
+
+GFN2-xTB: 32 modes in 6 molecules
+  scale factor 0.9824; RMS error 94 cm-1 unscaled -> 85 cm-1 scaled
+  H2O   RMS unscaled    69  scaled   118 cm-1
+  NH3   RMS unscaled    97  scaled    87 cm-1
+  CH4   RMS unscaled    89  scaled    54 cm-1
+  CO2   RMS unscaled   138  scaled   117 cm-1
+  H2CO  RMS unscaled    46  scaled    60 cm-1
+  HCN   RMS unscaled   114  scaled   100 cm-1
+  worst modes after scaling: CO2 2349 (calc 2546); NH3 950 (calc 1139); H2O 3756 (calc 3586)
+
+plot: runs/lesson06_practical.png

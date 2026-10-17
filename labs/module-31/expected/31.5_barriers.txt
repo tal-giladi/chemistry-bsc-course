@@ -1,0 +1,12 @@
+# py lesson05_barriers_solution.py - xtb 6.7.1pre, Python 3.14.3, Windows 11, 2026-10-17 (no ORCA outputs present)
+ammonia inversion (GFN2-xTB)
+  imaginary modes: minimum 0, transition state 1 (975i cm-1)
+  electronic barrier   25.6 kJ/mol   (experiment 24.2 kJ/mol)
+  ZPE change  -4.3 kJ/mol -> barrier with ZPE   21.3 kJ/mol
+  Eyring k(298 K) with the ZPE barrier: 1.17e+09 s-1
+ethane rotation (GFN2-xTB)
+  imaginary modes: minimum 0, transition state 1 (293i cm-1)
+  electronic barrier   10.8 kJ/mol   (experiment 12.0 kJ/mol)
+  ZPE change  -0.8 kJ/mol -> barrier with ZPE   10.0 kJ/mol
+  Eyring k(298 K) with the ZPE barrier: 1.10e+11 s-1
+(no orca/05_nh3_min.out and 05_nh3_ts.out yet - run them to add r2SCAN-3c)

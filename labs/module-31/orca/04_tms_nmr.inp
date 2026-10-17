@@ -1,0 +1,6 @@
+# Lesson 31.4 - step 2 of 2: GIAO NMR shieldings of tms at B3LYP/pcSseg-1 on the r2SCAN-3c geometry.
+# Run 04_tms_opt.inp first. ORCA 6.1.1:  orca 04_tms_nmr.inp > 04_tms_nmr.out   (a few minutes)
+# Use the SAME method, basis and geometry level for acetone and TMS, or the shifts are meaningless.
+! B3LYP pcSseg-1 NMR
+%maxcore 1000
+* xyzfile 0 1 04_tms_opt.xyz

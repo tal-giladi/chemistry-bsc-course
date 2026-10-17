@@ -1,0 +1,16 @@
+# py lesson02_conformers_solution.py - RDKit 2026.9.1, xtb 6.7.1pre, Python 3.14.3, Windows 11, 2026-10-17
+Part A - butane torsion, kJ/mol relative to anti
+  point             GFN2-xTB  MMFF94 (15.2)
+  anti                   0.0            0.0
+  gauche                 2.5            3.5
+  eclipsed CH3/H        10.7           16.6
+  syn                   20.7           21.8
+
+Part B - n-pentane conformers
+  name    g  MMFF94   GFN2  (kJ/mol, relative)
+  tt      1    0.00   0.00   populations 46.1 % / 35.4 %
+  tg      4    3.47   2.40   populations 45.4 % / 53.8 %
+  g+g+    2    5.95   4.93   populations  8.3 % /  9.7 %
+  g+g-    2   15.48  10.16   populations  0.2 % /  1.2 %
+
+plot: runs/lesson02_conformers.png

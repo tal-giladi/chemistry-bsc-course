@@ -1,0 +1,8 @@
+# Instructor notes — 31.4 Calculated IR and NMR spectra versus experiment
+
+- Objective: the learner explains harmonic versus fundamental wavenumbers, fits and applies a least-squares scale factor, predicts IR activity, broadens sticks into a spectrum, and converts GIAO shieldings into shifts with a same-level TMS reference.
+- Likely confusion: experimental "harmonic" values (CCCBDB lists both) versus fundamentals; shielding sign convention; why GFN2-xTB needs a scale near 1 but still has large errors.
+- Misconception: "a good method needs no scaling." Even a perfect harmonic calculation is above the anharmonic fundamentals. Second: "scaling fixes every mode" (the water bend gets worse after scaling).
+- Analogy: a scale factor is like correcting a ruler that is printed 4 % too long: it fixes the systematic part of every reading, but not your shaky hand.
+- Expected hands-on result: xtb 6.7.1 formaldehyde 1085.6, 1202.7, 1489.6, 1805.5, 2790.1, 2836.6 cm⁻¹ against 1167, 1249, 1500, 1746, 2782, 2843; s = 1.0020; RMS 46 cm⁻¹ before and after. Worked example: B3LYP/def2-TZVP water s = 0.9674, RMS 108 → 19 cm⁻¹; HF/def2-SVP s = 0.885. ORCA r2SCAN-3c IR and B3LYP/pcSseg-1 NMR were not run by the author; expect acetone C=O roughly 200–215 ppm, CH3 25–35 ppm, H about 2 ppm against 207.07, 30.92, 2.17 (CDCl3).
+- Extension: Boltzmann-average the 13C shifts of n-pentane over the four conformers from 31.2; or fit a linear regression of calculated shieldings against measured shifts for ten small molecules (look up the measured shifts on SDBS) and use slope and intercept as a scaling for an unknown.

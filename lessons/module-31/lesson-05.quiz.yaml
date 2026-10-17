@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    An OptTS job converges. The frequency calculation shows one imaginary mode at 85i cm-1, and its
+    animation is a methyl group rotating, while the reaction you want breaks a C-Cl bond. What now?
+  options:
+    - Report it, because exactly one imaginary frequency is all a transition state needs.
+    - Restart the TS search following the C-Cl stretch, for example with TS_Mode set to that bond.
+    - Run a minimisation from this structure, since a small imaginary value means it is a minimum.
+    - Lower the SCF convergence threshold, which removes spurious imaginary modes.
+  correct: 1
+  explanation: >-
+    The saddle point found belongs to the wrong motion. A transition state for the reaction must have its
+    single imaginary mode along the bond being broken, so the search has to follow that coordinate.
+- id: q2
+  question: >-
+    At one level of theory, a reactant has E = -250.10000 Eh and the transition state -250.07000 Eh. The
+    zero-point energy is 4.0 kJ/mol lower at the TS. What is the ZPE-corrected barrier?
+  options:
+    - About 74.8 kJ/mol
+    - About 82.8 kJ/mol
+    - About 78.8 kJ/mol
+    - About 0.82 kJ/mol
+  correct: 0
+  explanation: >-
+    0.03000 Eh x 2625.5 = 78.8 kJ/mol electronic; a lower ZPE at the TS reduces the barrier by 4.0 to 74.8
+    kJ/mol. Adding the ZPE change instead of subtracting gives 82.8, and forgetting the conversion gives the
+    tiny value.
+- id: q3
+  question: >-
+    A free-energy barrier of 80 kJ/mol gives a half-life of about 12 s at 298 K. A better calculation
+    lowers the barrier by 11.4 kJ/mol. What happens to the rate?
+  options:
+    - It roughly doubles, because the barrier fell by about 15 %.
+    - It rises about 10 times, because each 11.4 kJ/mol is a factor of 10.
+    - It rises about 100 times, because each 5.7 kJ/mol is a factor of 10 at 298 K.
+    - It rises about 1000 times, because rates depend on the cube of the barrier.
+  correct: 2
+  explanation: >-
+    RT ln 10 = 5.71 kJ/mol at 298 K, so 11.4 kJ/mol is two factors of 10: the reaction becomes about 100
+    times faster and the half-life drops to about 0.1 s.
+- id: q4
+  question: >-
+    For a hydrogen transfer at 200 K, your Eyring rate from a carefully computed barrier is 30 times lower
+    than the measured rate. What is the most likely physical reason?
+  options:
+    - The ZPE correction was applied, which always makes Eyring rates too low.
+    - The reaction must have a different mechanism, since TST is exact for elementary steps.
+    - The measured rate is wrong, because rates cannot exceed the transition-state theory value.
+    - Hydrogen tunnels through the top of the barrier, which TST does not include.
+  correct: 3
+  explanation: >-
+    Transition-state theory counts only passage over the barrier. Light atoms, above all hydrogen, also
+    tunnel through it, and the effect grows at low temperature (lesson 12.3).

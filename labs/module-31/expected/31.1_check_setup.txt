@@ -1,0 +1,9 @@
+# py check_setup.py, xtb 6.7.1pre (Windows build of v6.7.1), run 2026-10-17. First line (the xtb path) removed.
+* xtb version 6.7.1pre (5071a88) compiled by 'Marcel@Raven' on 2024-07-23
+optimisation converged : True
+total energy           : -5.070544 Eh
+r(O-H)                 : 0.9592 and 0.9592 Angstrom
+angle H-O-H            : 107.30 degrees
+frequencies (cm-1)     : 1538.8, 3643.1, 3651.6
+IR intensity (km/mol)  : 133.3, 6.8, 16.7
+imaginary frequencies  : 0 (0 means a true minimum)

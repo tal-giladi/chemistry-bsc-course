@@ -1,0 +1,137 @@
+- id: q1
+  question: >-
+    A postdoc in a university group wants to install ORCA on a shared group server and also e-mail the
+    installer to a collaborator at a pharmaceutical company so they can reproduce the results. What does
+    the ORCA EULA allow?
+  options:
+    - Both, because ORCA is free of charge and the collaborator only reproduces published work.
+    - Neither, because ORCA may only be installed on personal laptops and never on servers.
+    - The group installation for academic research, but not passing the program to anyone else.
+    - Passing it on, provided the collaborator registers later and cites the 2025 ORCA paper.
+  correct: 2
+  explanation: >-
+    Academic research at a university is allowed, and duplication needed to use the software is fine.
+    The EULA forbids making the software available to third parties, and work for or with a for-profit
+    company needs its own licence.
+- id: q2
+  question: >-
+    You must predict the most stable conformer of a flexible drug-like molecule with 7 rotatable bonds and
+    have one laptop afternoon. Which workflow fits?
+  options:
+    - Optimise the drawn structure with B3LYP/def2-TZVP and report it as the global minimum.
+    - Run a stochastic MMFF94 search, re-optimise the low-energy conformers with xtb, refine the best few with r2SCAN-3c.
+    - Run a systematic search of all 3^7 conformers, each optimised with B3LYP/def2-TZVP.
+    - Use UFF for everything, because it covers every element and is the fastest force field.
+  correct: 1
+  explanation: >-
+    The funnel spends cheap methods on the many structures and expensive ones on the few that matter. One
+    DFT optimisation finds only the nearest minimum, 2187 DFT optimisations do not fit in an afternoon, and
+    UFF is too rough for final ranking.
+- id: q3
+  question: >-
+    Three conformers have GFN2-xTB energies of 0.0, 2.0 and 2.0 kJ/mol; the last two are mirror images.
+    Ignoring entropy, what is the population of the lowest conformer at 298 K?
+  options:
+    - About 53 %, because the mirror-image pair shares the rest.
+    - About 69 %, counting the mirror-image pair as a single conformer.
+    - About 33 %, because gaps smaller than RT give equal populations.
+    - About 80 %, because the lowest conformer always holds most of the material.
+  correct: 0
+  explanation: >-
+    Each mirror image has the weight exp(-2000/(8.314 x 298)) = 0.446, so the weights are 1, 0.446 and
+    0.446 and the lowest conformer has 1/1.893 = 53 %. Forgetting the second mirror image gives 1/1.446 = 69 %.
+- id: q4
+  question: >-
+    HF/def2-TZVP gives an O-H bond 0.016 A shorter than experiment, B3LYP/def2-TZVP 0.005 A longer. A
+    student concludes that HF needs a bigger basis. What is the better diagnosis?
+  options:
+    - HF lacks electron correlation; its basis-set limit still has bonds that are too short.
+    - B3LYP is wrong because its bond is longer, and HF is closer to the true bond length.
+    - Both errors are basis-set errors, so def2-QZVP will bring both methods to experiment.
+    - The experimental bond length is a fundamental, so it cannot be compared with either method.
+  correct: 0
+  explanation: >-
+    Enlarging the basis moved the HF bond further from experiment, which points to the method. Correlation,
+    included approximately in DFT, lengthens bonds; HF at any basis size misses it.
+- id: q5
+  question: >-
+    A converged optimisation of a molecule gives one imaginary frequency of 41i cm-1, a CH3 rotation. You
+    need the zero-point energy and entropy for a reaction free energy. What do you do?
+  options:
+    - Use the results, because the imaginary mode is simply left out of the thermochemistry.
+    - Replace 41i by +41 cm-1 in the output and recompute the thermochemistry by hand.
+    - Displace along the mode, re-optimise with tighter criteria and repeat the frequency calculation.
+    - Run the same frequency calculation in a larger basis, which removes small imaginary modes.
+  correct: 2
+  explanation: >-
+    The structure is a saddle point, so its frequency list and thermochemistry are wrong by one mode.
+    Pushing along the imaginary mode and optimising tightly (xtb writes xtbhess.xyz for this) gives the true
+    minimum.
+- id: q6
+  question: >-
+    Your r2SCAN-3c frequencies for six small molecules give an RMS error of 95 cm-1 against measured gas
+    fundamentals; with one least-squares scale factor of 0.97 it drops to 30 cm-1. What does the 30 cm-1 that
+    remains represent?
+  options:
+    - The basis-set error, which a scale factor cannot touch.
+    - Mode-to-mode differences in anharmonicity and method error that one factor cannot fit.
+    - An error in the fitting formula, since a correct least-squares fit reaches zero.
+    - The experimental uncertainty of gas-phase IR bands, typically 30 cm-1.
+  correct: 1
+  explanation: >-
+    A single factor removes the systematic part of the error. Modes are anharmonic to different degrees
+    (X-H stretches most), and the method errs differently for different modes, so a random scatter remains.
+- id: q7
+  question: >-
+    You calculate 13C shifts of an unknown at B3LYP/pcSseg-1 on r2SCAN-3c geometries, with TMS at the same
+    level. One carbon is 12 ppm away from the measured value; all the others are within 3 ppm. What is the
+    most useful next step?
+  options:
+    - Change the functional for that carbon only until it matches.
+    - Accept the structure, since an average error of a few ppm is normal for 13C.
+    - Recalculate TMS with a larger basis, because the reference must be better than the molecule.
+    - Check the conformers and the assignment near that carbon, then consider other candidate structures.
+  correct: 3
+  explanation: >-
+    A few ppm is normal scatter; a single 12 ppm outlier with the rest fine usually means a wrong conformer,
+    a wrong assignment or a wrong structure near that atom. Changing the reference or the functional for one
+    atom would hide the problem.
+- id: q8
+  question: >-
+    You start an OptTS job for an SN2 reaction from a guess taken from the highest point of a relaxed scan of
+    the C-Nu distance. Which result proves you have the transition state you want?
+  options:
+    - The optimiser converged and the energy is the highest of all structures you computed.
+    - The structure has two imaginary frequencies, one for each bond that changes.
+    - One imaginary frequency whose motion forms C-Nu and breaks C-X, confirmed by an IRC to both minima.
+    - The energy of the structure equals the top of the relaxed scan within 1 kJ/mol.
+  correct: 2
+  explanation: >-
+    A transition state is a first-order saddle point: exactly one imaginary frequency, and it must be the
+    reaction motion. An IRC shows that it connects the intended reactant and product.
+- id: q9
+  question: >-
+    CAM-B3LYP/def2-SVP TD-DFT puts the bright pi -> pi* state of a polyene 0.5 eV above the measured band
+    maximum, and the error shrinks as the chain gets longer. What is the most reasonable reading?
+  options:
+    - The calculation is wrong, because TD-DFT always reproduces UV maxima within 0.05 eV.
+    - The molecule cannot be a polyene, since longer chains always show larger TD-DFT errors.
+    - The oscillator strengths are missing, which moves every excitation energy upwards.
+    - A systematic error of method, basis and band comparison; trust the trend more than the number.
+  correct: 3
+  explanation: >-
+    Vertical TD-DFT energies in a small basis, compared with a solution band maximum, carry systematic errors
+    of tenths of an eV. A smooth trend along a series is more reliable than any single absolute number.
+- id: q10
+  question: >-
+    For a reaction with GFN2-xTB barrier 70 kJ/mol you get an r2SCAN-3c barrier of 81.4 kJ/mol. How much
+    slower does r2SCAN-3c predict the reaction at 298 K (same prefactor)?
+  options:
+    - About 100 times slower
+    - About 2 times slower
+    - About 11 times slower
+    - About 1000 times slower
+  correct: 0
+  explanation: >-
+    The difference is 11.4 kJ/mol and RT ln 10 is 5.7 kJ/mol at 298 K, so the rate falls by two powers of
+    ten. Small barrier differences matter: method choice can change predicted rates by orders of magnitude.

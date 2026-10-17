@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A TD-DFT job on a dye lists five states: 2.10 eV (f = 0.002), 2.45 eV (f = 0.95), 2.90 eV (f = 0.01),
+    3.30 eV (f = 0.20) and 3.60 eV (f = 0.00). Where do you expect the main visible absorption band?
+  options:
+    - Near 590 nm, from the lowest state, because absorption always goes to the lowest excited state.
+    - Near 506 nm, from the 2.45 eV state, which carries almost all the oscillator strength.
+    - Near 376 nm, from the 3.30 eV state, because higher states absorb more strongly.
+    - Near 344 nm, from the 3.60 eV state, because the band maximum lies at the highest computed state.
+  correct: 1
+  explanation: >-
+    Intensity follows the oscillator strength, and 1239.84/2.45 = 506 nm. The 2.10 eV state is nearly dark;
+    it hardly appears in absorption even though it is lowest.
+- id: q2
+  question: >-
+    You run butadiene with ORCA's default TD-DFT settings and get the bright state 1.0 eV above the measured
+    band. Which change is most likely to reduce the error noticeably?
+  options:
+    - Asking for more roots, because the bright state is missing from the list.
+    - Adding a dispersion correction, because it lowers all excitation energies.
+    - Switching off the Tamm-Dancoff approximation with TDA false in the %tddft block.
+    - Removing the oscillator strengths from the output, which are known to shift the energies.
+  correct: 2
+  explanation: >-
+    ORCA uses TDA by default, and for bright pi -> pi* states of polyenes TDA comes out about 0.5 eV higher
+    than full TD-DFT (6.73 versus 6.22 eV for butadiene with CAM-B3LYP/def2-SVP).
+- id: q3
+  question: >-
+    A donor-acceptor dye shows a low-energy band in which an electron moves from one end of the molecule to
+    the other. B3LYP puts it 0.8 eV below the measured band. What is the best next step?
+  options:
+    - Repeat with a range-separated hybrid such as CAM-B3LYP or wB97X-D3.
+    - Keep B3LYP and shift every calculated energy up by 0.8 eV for all future dyes.
+    - Switch to Hartree-Fock-based CIS, which has no self-interaction and is exact for such states.
+    - Remove the polarisation functions from the basis set to raise the energy.
+  correct: 0
+  explanation: >-
+    Global hybrids put charge-transfer states far too low. Range-separated hybrids include full exact exchange
+    at long range and fix most of this error; a fixed shift would not transfer to other dyes.
+- id: q4
+  question: >-
+    Your calculated bright states for three polyenes are 0.51, 0.29 and 0.11 eV above the measured maxima.
+    A colleague wants to correct new polyenes by subtracting 0.30 eV. What is the main weakness of that plan?
+  options:
+    - The correction should be added, not subtracted, because TD-DFT underestimates energies.
+    - The errors depend on chain length, so one constant shift fits none of the three well.
+    - A correction in eV must first be converted to nm before it can be applied.
+    - Measured maxima carry no uncertainty, so any correction must reproduce them exactly.
+  correct: 1
+  explanation: >-
+    The error shrinks steadily along the series, so a single shift over-corrects the long chains and
+    under-corrects the short ones. Use the trend within the series, or a correction that depends on length.

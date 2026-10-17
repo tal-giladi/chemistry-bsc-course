@@ -1,0 +1,8 @@
+# Instructor notes — 31.5 Transition states and reaction barriers
+
+- Objective: the learner builds a TS guess (symmetry, scan, NEB), optimises a saddle point, proves it with exactly one imaginary frequency of the right motion, computes ΔE‡ and the ZPE-corrected barrier, converts to an Eyring rate and recognises when tunnelling breaks TST.
+- Likely confusion: why a plain optimisation from a symmetric guess stays on a saddle (zero gradient along the symmetry-breaking mode); why the TS has one real mode fewer for the ZPE; "imaginary" printed as a negative number.
+- Misconception: "one imaginary frequency means it is the transition state I want." It must be the reaction motion (quiz q1). Second: "Eyring rates are upper limits" (tunnelling can exceed them).
+- Analogy: TS search is finding a mountain pass in fog with an altimeter that also tells you the slope in every direction: you walk uphill along the one direction that goes up and downhill in all others, then check the ground falls away on both sides of the saddle.
+- Expected hands-on result (xtb 6.7.1pre): NH3 E(min) −4.426244, E(TS) −4.416506 Eh; TS 975i cm⁻¹; ΔE‡ 25.6, ΔZPE −4.3, ΔE0‡ 21.3 kJ/mol; k = 1.17e9 s⁻¹. Ethane staggered/eclipsed: 293i cm⁻¹; ΔE‡ 10.8, ΔZPE −0.8, 10.0 kJ/mol; k = 1.10e11 s⁻¹. Measured: about 24.2 (NH3, effective) and 12 kJ/mol (ethane). Tunnelling: 23.79 GHz splitting, about 21 ps, roughly 5e10 s⁻¹, 40 times the Eyring value. ORCA OptTS and NEB-TS inputs were not run by the author; check one imaginary frequency.
+- Extension: run `orca/05_hcn_hnc_nebts.inp`, then an `! XTB2 IRC` from the TS, and plot energy against the IRC coordinate; or compute the NH3 barrier at B3LYP-D4/def2-TZVP and compare three levels.

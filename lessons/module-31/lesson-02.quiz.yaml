@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    You need the conformers of a ruthenium complex with an unusual ligand. RDKit's MMFF94 setup fails
+    because it has no parameters for ruthenium. What is the most sensible next step?
+  options:
+    - Replace ruthenium by iron, which MMFF94 covers, and keep the resulting geometries.
+    - Build the structures with UFF, then re-optimise and rank them with GFN2-xTB.
+    - Skip the search and optimise the one drawn structure with DFT, since DFT finds all conformers.
+    - Use MMFF94 anyway with the ruthenium atom frozen, which removes the missing parameters.
+  correct: 1
+  explanation: >-
+    UFF has rough parameters for the whole periodic table, good enough to generate starting structures,
+    and GFN2-xTB covers metals with quantum mechanics for re-ranking. A single DFT optimisation only
+    finds the nearest minimum.
+- id: q2
+  question: >-
+    A molecule has three conformers with relative energies 0, 1.0 and 1.0 kJ/mol; the two higher ones
+    are mirror images of each other. Ignoring entropy, what fraction is in the lowest conformer at 298 K?
+  options:
+    - About 60 %, counting the mirror-image pair as one conformer.
+    - About 50 %, because the energy differences are smaller than RT.
+    - About 43 %, because the two mirror images together outweigh it.
+    - About 33 %, because energies below RT give equal populations.
+  correct: 2
+  explanation: >-
+    The weights are 1 for the lowest form and 2 x exp(-1000/(8.314 x 298)) = 2 x 0.668 = 1.34 for the
+    pair, so the lowest conformer has 1/2.34 = 43 %. Forgetting the degeneracy gives 60 %.
+- id: q3
+  question: >-
+    Your stochastic search with 50 starting structures finds 14 unique conformers. With 100 starts you
+    find 21, and with 200 starts 26. What do you conclude?
+  options:
+    - The search has not converged; keep increasing the starts or switch to a metadynamics search.
+    - The search has converged, since the number of new conformers per start is falling.
+    - The extra conformers are duplicates that the duplicate filter failed to remove.
+    - The force field is unstable, because a proper search returns the same number every time.
+  correct: 0
+  explanation: >-
+    New unique conformers keep appearing, so low-energy ones may still be missing. A converged search stops
+    finding new low-energy structures when you add starts; CREST-type metadynamics explores more
+    systematically.
+- id: q4
+  question: >-
+    A rigid scan of a dihedral in a crowded molecule gives a barrier of 45 kJ/mol; a relaxed scan of the
+    same dihedral gives 18 kJ/mol. Which value should you compare with a measured rotation barrier?
+  options:
+    - The rigid value, because it measures the torsion term alone without other contributions.
+    - The relaxed value, because the real molecule adjusts its other angles and bonds as it rotates.
+    - Their average, because the truth lies between an unrelaxed and a fully relaxed path.
+    - Neither, because scans only give energies at fixed points and never barriers.
+  correct: 1
+  explanation: >-
+    In the rigid scan the rest of the molecule cannot get out of the way, so atoms clash and the energy
+    is far too high. A real molecule relaxes, which is what the relaxed scan models.

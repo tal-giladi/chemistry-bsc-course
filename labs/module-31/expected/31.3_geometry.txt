@@ -1,0 +1,14 @@
+# py lesson03_geometry_solution.py - xtb 6.7.1pre, Python 3.14.3, Windows 11, 2026-10-17 (no ORCA outputs present)
+Part A - water geometry (errors relative to experiment r = 0.958 A, angle = 104.48 deg)
+  level                                r(OH)      dr   angle     da
+  GFN2-xTB (your run)                 0.9593 +0.0013  107.22  +2.74
+  HF/def2-SVP (reference)             0.9450 -0.0130  105.13  +0.65
+  HF/def2-TZVP (reference)            0.9420 -0.0160  106.51  +2.03
+  B3LYP/def2-SVP (reference)          0.9667 +0.0087  103.10  -1.38
+  B3LYP/def2-TZVP (reference)         0.9627 +0.0047  105.24  +0.76
+  GFN2-xTB (reference)                0.9592 +0.0012  107.30  +2.82
+
+Part B - acetone: is the optimised structure a minimum?
+  first try : E = -13.534140 Eh, lowest mode   -62.4 cm-1, imaginary modes: 1
+  restart   : E = -13.534178 Eh, lowest mode    71.8 cm-1, imaginary modes: 0
+  energy gained by the restart: 0.10 kJ/mol

@@ -48,7 +48,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M28
 - [x] M29
 - [x] M30
-- [ ] M31
+- [x] M31
 - [x] M32
 - [x] M33
 
@@ -77,7 +77,6 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [ ] final QA: `py scripts/check.py` clean, `npm run check-course` 0 problems, git clean, TODO_FOR_TAL.md ready
 
 ## Now working
-- agent: M31
 
 ## Decisions
 - 2026-10-16 Tal: whole degree in one course; non-chemistry subjects as short bridge modules.
@@ -124,3 +123,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M32 done; M33 spawned.
 - M33 done.
 - sims batch 1 done (common, measurement-error, glassware, gas-laws, calorimetry). QA: fix 07.7 parallax wording (burette reads low from above). Batch 2 spawned.
+- M31 done.
