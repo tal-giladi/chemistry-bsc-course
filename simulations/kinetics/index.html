@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kinetics bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="kinetics.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Kinetics bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="orders" aria-controls="tab-orders" id="tabbtn-orders">Rate laws and order</button>
+    <button type="button" data-tab="consecutive" aria-controls="tab-consec" id="tabbtn-consecutive">A → B → C</button>
+    <button type="button" data-tab="arrhenius" aria-controls="tab-arr" id="tabbtn-arrhenius">Arrhenius</button>
+    <button type="button" data-tab="dye" aria-controls="tab-dye" id="tabbtn-dye">Dye fading in bleach</button>
+    <button type="button" data-tab="enzyme" aria-controls="tab-enz" id="tabbtn-enzyme">Enzyme (Michaelis–Menten)</button>
+  </div>
+
+  <!-- ===================== ORDERS ===================== -->
+  <section id="tab-orders" aria-labelledby="tabbtn-orders" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Reaction</h2>
+          <div class="field"><label for="o-n">Order in A</label>
+            <select id="o-n"><option value="0">zero: dc/dt = −k</option><option value="1">first: dc/dt = −k c</option><option value="2">second: dc/dt = −k c² (2A → products)</option></select></div>
+          <div class="field"><label for="o-k" id="o-k-label">k</label><output id="o-k-out" for="o-k"></output><input type="range" id="o-k" min="-5" max="0" step="0.001"></div>
+          <div class="field"><label for="o-c0">c₀ / mol L⁻¹</label><output id="o-c0-out" for="o-c0"></output><input type="range" id="o-c0" min="0.001" max="0.200" step="0.001"></div>
+          <div class="field"><label for="o-tend">Follow for / s</label><input type="number" id="o-tend" min="10" max="100000" step="10"></div>
+          <h3>Measurement</h3>
+          <div class="field"><label for="o-npts">Number of readings</label><input type="number" id="o-npts" min="5" max="61" step="1" value="21"></div>
+          <div class="field"><label for="o-noise">Noise (standard deviation) / mol L⁻¹</label><input type="number" id="o-noise" min="0" max="0.01" step="0.0001" value="0.0005"></div>
+          <div class="row">
+            <button type="button" class="primary" id="o-measure">Take readings</button>
+            <button type="button" id="o-rerun">Re-run (new seed)</button>
+          </div>
+          <h3>Euler's method</h3>
+          <div class="row"><label><input type="checkbox" id="o-euler"> Overlay Euler steps</label></div>
+          <div class="field"><label for="o-h">Step h / s</label><input type="number" id="o-h" min="0.01" max="100000" step="any" value="60"></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Concentration against time</h2>
+          <canvas id="o-plot" class="plot" aria-label="Concentration of A against time, with half-life markers and readings"></canvas>
+          <div class="kv" id="o-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Which plot is straight?</h2>
+          <div class="field"><label for="o-lin">Plot the readings as</label>
+            <select id="o-lin"><option value="c">c against t (zero order)</option><option value="ln">ln c against t (first order)</option><option value="inv">1/c against t (second order)</option></select></div>
+          <canvas id="o-lplot" class="plot short" aria-label="Linearised plot of the readings with its straight-line fit"></canvas>
+          <div class="table-wrap"><table class="data" id="o-fits"><thead><tr><th>Plot</th><th>Slope</th><th>k from slope</th><th>R²</th></tr></thead><tbody></tbody></table></div>
+          <canvas id="o-rplot" class="plot short" aria-label="Residuals of the straight-line fit"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONSECUTIVE ===================== -->
+  <section id="tab-consec" aria-labelledby="tabbtn-consecutive" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>A → B → C</h2>
+          <div class="field"><label for="c-k1">k₁ / min⁻¹</label><output id="c-k1-out" for="c-k1"></output><input type="range" id="c-k1" min="-3" max="1" step="0.001"></div>
+          <div class="field"><label for="c-k2">k₂ / min⁻¹</label><output id="c-k2-out" for="c-k2"></output><input type="range" id="c-k2" min="-3" max="1" step="0.001"></div>
+          <div class="field"><label for="c-a0">A₀ / mM</label><input type="number" id="c-a0" min="0.1" max="100" step="0.1" value="10.0"></div>
+          <div class="field"><label for="c-tend">Show up to / min</label><input type="number" id="c-tend" min="1" max="1000" step="1" value="60"></div>
+          <div class="row"><label><input type="checkbox" id="c-ssa" checked> Show the steady-state approximation for C</label></div>
+          <div class="row"><label><input type="checkbox" id="c-swap"> Show B with k₁ and k₂ swapped, scaled to the same peak</label></div>
+          <div class="row"><label><input type="checkbox" id="c-data"> Add readings every 2 min with 0.10 mM noise</label></div>
+          <div class="row">
+            <button type="button" id="c-r20">k₂ = 20 k₁</button>
+            <button type="button" id="c-r1">k₂ = k₁</button>
+            <button type="button" id="c-rerun">New noise (new seed)</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Concentrations</h2>
+          <canvas id="c-plot" class="plot tall" aria-label="Concentrations of A, B and C against time"></canvas>
+          <div class="kv" id="c-info"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ARRHENIUS ===================== -->
+  <section id="tab-arr" aria-labelledby="tabbtn-arrhenius" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>k = A (T/298 K)ⁿ e<sup>−E/RT</sup></h2>
+          <div class="field"><label for="a-ea">E<sub>a</sub> (or E) / kJ mol⁻¹</label><output id="a-ea-out" for="a-ea"></output><input type="range" id="a-ea" min="5" max="200" step="0.5"></div>
+          <div class="field"><label for="a-la">log₁₀(A / s⁻¹)</label><output id="a-la-out" for="a-la"></output><input type="range" id="a-la" min="4" max="17" step="0.001"></div>
+          <div class="field"><label for="a-n">Temperature exponent n (0 = plain Arrhenius)</label><output id="a-n-out" for="a-n"></output><input type="range" id="a-n" min="0" max="3" step="0.1" value="0"></div>
+          <h3>Compare two temperatures</h3>
+          <div class="row">
+            <div class="field inline"><label for="a-t1">T₁ / °C</label><input type="number" id="a-t1" min="-50" max="500" step="1" value="25"></div>
+            <div class="field inline"><label for="a-t2">T₂ / °C</label><input type="number" id="a-t2" min="-50" max="500" step="1" value="35"></div>
+          </div>
+          <h3>Measure k at several temperatures</h3>
+          <div class="row">
+            <div class="field inline"><label for="a-tlo">from / °C</label><input type="number" id="a-tlo" min="-50" max="500" step="1" value="15"></div>
+            <div class="field inline"><label for="a-thi">to / °C</label><input type="number" id="a-thi" min="-50" max="1000" step="1" value="55"></div>
+          </div>
+          <div class="field"><label for="a-noise">Scatter of each k / %</label><input type="number" id="a-noise" min="0" max="30" step="1" value="5"></div>
+          <div class="row">
+            <button type="button" class="primary" id="a-measure">Measure 6 rate constants</button>
+            <button type="button" id="a-rerun">Re-run (new seed)</button>
+          </div>
+          <div class="row">
+            <button type="button" id="a-n2o5">N₂O₅ → NO₂ + NO₃ (IUPAC)</button>
+            <button type="button" id="a-rule">"Doubles per 10 K"</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Arrhenius plot</h2>
+          <canvas id="a-plot" class="plot" aria-label="ln k against 1/T with the measured points and the fitted line"></canvas>
+          <div class="kv" id="a-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Fit of your measurements</h2>
+          <div class="kv" id="a-fit"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DYE FADING ===================== -->
+  <section id="tab-dye" aria-labelledby="tabbtn-dye" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Blue dye (E133) in dilute bleach</h2>
+          <p class="small muted">200 mL of water, household bleach (about 0.54 M NaOCl), 2 drops of blue colouring (about 1 × 10⁻⁵ M dye). The phone photographs the cup 31 times (every 30 s for 15 min by default); the red channel, linearised and compared with a blank, gives a pseudo-absorbance.</p>
+          <div class="field"><label for="d-bleach">Bleach / mL</label><input type="number" id="d-bleach" min="0.1" max="10" step="0.1" value="2.0"></div>
+          <div class="field"><label for="d-temp">Water temperature at the start / °C</label><input type="number" id="d-temp" min="5" max="40" step="0.5" value="20"></div>
+          <div class="field"><label for="d-room">Room temperature / °C</label><input type="number" id="d-room" min="10" max="30" step="0.5" value="20"></div>
+          <div class="field"><label for="d-len">Photograph for / min (31 photos)</label>
+            <select id="d-len"><option value="15" selected>15</option><option value="30">30</option><option value="60">60</option><option value="120">120</option></select></div>
+          <div class="row"><label><input type="checkbox" id="d-lock" checked> Exposure and white balance locked</label></div>
+          <div class="row"><label><input type="checkbox" id="d-ainf" checked> Fit the offset A∞ (A = A₀e<sup>−k′t</sup> + A∞)</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="d-run">Run: take the photos</button>
+            <button type="button" id="d-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Never more than 10 mL of bleach in total; bleach never with acids or ammonia.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Pseudo-absorbance against time</h2>
+          <canvas id="d-plot" class="plot" aria-label="Pseudo-absorbance of the dye against time with the fitted exponential"></canvas>
+          <canvas id="d-lplot" class="plot short" aria-label="ln(A minus A infinity) against time"></canvas>
+          <div class="kv" id="d-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Your runs</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="d-runs"><thead><tr><th>#</th><th>Bleach / mL</th><th>T mean / °C</th><th>k′ / 10⁻³ s⁻¹</th><th>t½ / min</th></tr></thead><tbody></tbody></table></div>
+          <div class="kv" id="d-derived"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ENZYME ===================== -->
+  <section id="tab-enz" aria-labelledby="tabbtn-enzyme" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>v = V<sub>max</sub>[S] / (K<sub>m</sub> + [S])</h2>
+          <div class="field"><label for="z-km">K<sub>m</sub> / mM</label><output id="z-km-out" for="z-km"></output><input type="range" id="z-km" min="-1" max="2.5" step="0.001"></div>
+          <div class="field"><label for="z-vm">V<sub>max</sub> / (mM min⁻¹)</label><output id="z-vm-out" for="z-vm"></output><input type="range" id="z-vm" min="0.1" max="10" step="0.01"></div>
+          <div class="field"><label for="z-f">Mark the [S] that gives this fraction of V<sub>max</sub></label><output id="z-f-out" for="z-f"></output><input type="range" id="z-f" min="0.05" max="0.99" step="0.01" value="0.5"></div>
+          <h3>Inhibitor</h3>
+          <div class="field"><label for="z-inh">Type</label>
+            <select id="z-inh"><option value="none">none</option><option value="comp">competitive (binds E)</option><option value="uncomp">uncompetitive (binds ES)</option><option value="noncomp">noncompetitive (binds E and ES equally)</option></select></div>
+          <div class="field"><label for="z-i">[I] / K<sub>i</sub></label><output id="z-i-out" for="z-i"></output><input type="range" id="z-i" min="0" max="5" step="0.1" value="1"></div>
+          <h3>Assay</h3>
+          <div class="field"><label for="z-design">Substrate concentrations</label>
+            <select id="z-design"><option value="good">good design: 0.2 to 6.4 K<sub>m</sub>, each step ×2</option><option value="poor">poor design: 2 to 10 K<sub>m</sub></option><option value="low">only below K<sub>m</sub>: 0.05 to 0.4 K<sub>m</sub></option></select></div>
+          <div class="field"><label for="z-noise">Noise of each rate / % of V<sub>max</sub></label><input type="number" id="z-noise" min="0" max="20" step="0.5" value="3"></div>
+          <div class="row">
+            <button type="button" class="primary" id="z-measure">Measure initial rates</button>
+            <button type="button" id="z-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono seed"></span>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Saturation curve</h2>
+          <canvas id="z-plot" class="plot" aria-label="Initial rate against substrate concentration"></canvas>
+          <div class="kv" id="z-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Lineweaver–Burk plot (to look, not to fit)</h2>
+          <canvas id="z-lb" class="plot short" aria-label="1/v against 1/[S]"></canvas>
+          <div class="kv" id="z-fit"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <button type="button" id="x-data">Data of this tab (CSV)</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Change one thing at a time: a starting concentration, a temperature or the excess reagent, and keep everything else fixed.</li>
+        <li>Follow the reaction past at least two half-lives, with readings spread evenly in time.</li>
+        <li>Find the order: plot c, ln c and 1/c against t and look for the straight one and for random residuals; better, change c₀ and see how the rate or half-life responds.</li>
+        <li>Use a large excess of one reagent (pseudo-first-order), and measure k′ at two or more excess concentrations to get the order in that reagent.</li>
+        <li>Measure k at four or more temperatures and fit ln k against 1/T for E<sub>a</sub>; fit enzyme rates with the hyperbola directly.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Over a small conversion every order gives a nearly straight line; only a long run or a change of c₀ decides the order.</li>
+        <li>Only first-order half-lives are independent of c₀; second-order half-lives double as c halves.</li>
+        <li>With B in large excess, [B] hardly changes, so k[A][B] behaves like k′[A]; a tenfold excess makes k′ a few per cent off, fiftyfold negligible.</li>
+        <li>The intercept of an Arrhenius plot is far outside the data, so A is always much less certain than E<sub>a</sub>.</li>
+        <li>K<sub>m</sub> is defined by the bend of the curve; substrate concentrations must straddle it.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Bleach (sodium hypochlorite) burns eyes and skin (GHS H314, H318): glasses and gloves, small amounts, always added to plenty of water.</li>
+        <li>Never mix bleach with acids (chlorine gas) or ammonia (chloramines); work in moving air.</li>
+        <li>Warm water for a temperature run: no hotter than about 50 °C.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Deciding the order from a short run, or from R² alone; a curved residual pattern is the stronger sign.</li>
+        <li>Too little excess reagent: the decay is no longer a single exponential.</li>
+        <li>Ignoring the end offset A∞: the ln plot bends at late times and k′ comes out low.</li>
+        <li>Auto-exposure on the phone: the camera brightens a fading cup and flattens the curve.</li>
+        <li>A warm cup cools during the run, so its temperature, and E<sub>a</sub>, are uncertain.</li>
+        <li>Taking K<sub>m</sub> and V<sub>max</sub> from a Lineweaver–Burk line: the slowest, least certain rates dominate it.</li>
+        <li>Euler's method with a large step: its error is proportional to h, and for first order it oscillates when hk &gt; 2.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the data of each tab (CSV) and analyse them in Python in the Module 3, 22, 23 and 29 lab folders: integrated rate laws by linear fits, A → B → C with solve_ivp or the matrix exponential, Arrhenius and Eyring fits with uncertainties from the covariance matrix, A = A₀e<sup>−k′t</sup> + A∞ with curve_fit, and Michaelis–Menten by nonlinear least squares.</p>
+    </details>
+    <p class="small muted">Not trained here: mixing quickly and starting the clock, keeping a cup at constant temperature, pipetting enzyme assays.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Data: R and k<sub>B</sub>, h from CODATA 2022. N₂O₅ high-pressure limit k<sub>∞</sub> = 0.065 s⁻¹ at 298 K, E<sub>a</sub> 92.5 kJ/mol (IUPAC 1997, NIST SRD 17; Lesson 22.4). Dye fading: illustrative k = 0.55 M⁻¹ s⁻¹ at 20 °C and E<sub>a</sub> 50 kJ/mol, as in the Lesson 23.4 example data (not measured); household bleach taken as 0.54 M NaOCl; about 8 hypochlorite ions used per dye molecule (illustrative). Invertase K<sub>m</sub> 16.7 mM (Michaelis and Menten 1913, via Johnson and Goody 2011). Model: exact integrated rate laws and the analytical A → B → C solution; noisy readings from a seeded random generator.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="kinetics.js"></script>
+</body>
+</html>

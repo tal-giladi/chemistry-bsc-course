@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titration bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="titration.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Titration bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="acidbase" aria-controls="tab-run" id="tabbtn-acidbase">Acid–base</button>
+    <button type="button" data-tab="potentiometric" aria-controls="tab-run" id="tabbtn-potentiometric">Potentiometric</button>
+    <button type="button" data-tab="buffer" aria-controls="tab-run" id="tabbtn-buffer">Buffer capacity</button>
+    <button type="button" data-tab="redox" aria-controls="tab-run" id="tabbtn-redox">Redox (Fe/Ce)</button>
+    <button type="button" data-tab="precipitation" aria-controls="tab-run" id="tabbtn-precipitation">Precipitation (Mohr)</button>
+    <button type="button" data-tab="edta" aria-controls="tab-run" id="tabbtn-edta">EDTA hardness</button>
+    <button type="button" data-tab="manganese" aria-controls="tab-mn" id="tabbtn-manganese">Mn in steel</button>
+  </div>
+
+  <!-- ===================== TITRATION BENCH ===================== -->
+  <section id="tab-run">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2 id="setup-title">Set-up</h2>
+          <div id="setup"></div>
+          <h3>Preparing the burette</h3>
+          <div class="row"><label><input type="checkbox" id="prep-rinse" checked> Rinse the burette twice with titrant</label></div>
+          <div class="row"><label><input type="checkbox" id="prep-bubble" checked> Clear the air bubble from the tip</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="start">Fill burette, start a titration</button>
+            <button type="button" id="rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="seed"></span>. Same seed, same sample and same noise.</p>
+        </div>
+
+        <div class="panel" id="electrode-panel" hidden>
+          <h2>pH electrode</h2>
+          <div class="field"><label for="el-age">Electrode</label>
+            <select id="el-age"><option value="fresh">New electrode (slope about 98–99 % of Nernst)</option><option value="aged">Aged electrode (low slope, slow, drifting)</option></select></div>
+          <div class="field"><label for="el-buf">Calibration buffers</label>
+            <select id="el-buf"><option value="4-7">pH 4.01 and 7.00</option><option value="7-10">pH 7.00 and 10.01</option></select></div>
+          <div class="row">
+            <button type="button" id="el-cal">Calibrate (two buffers)</button>
+            <button type="button" id="el-uncal">Forget calibration</button>
+          </div>
+          <div class="kv small" id="el-info" aria-live="polite"></div>
+        </div>
+
+        <div class="panel" id="meter-panel" hidden>
+          <h2>Meter readings</h2>
+          <div class="field"><label for="m-wait">Wait after each addition before reading / s</label>
+            <select id="m-wait"><option value="5">5 (impatient)</option><option value="15">15</option><option value="30" selected>30 (until stable)</option><option value="60">60</option></select></div>
+          <div class="field"><label for="m-show">Display</label>
+            <select id="m-show"><option value="ph">pH</option><option value="mv">potential / mV</option></select></div>
+          <p class="small muted" id="m-note">A reading is logged after every addition.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="cols-2">
+          <div class="panel">
+            <h2>Burette</h2>
+            <canvas id="bview" class="bview" aria-label="Close-up of the burette scale around the meniscus, as seen from your eye position"></canvas>
+            <div class="field"><label for="eye">Your eye when you read the burette</label>
+              <select id="eye">
+                <option value="free">Not checked (wherever it happens to be)</option>
+                <option value="0" selected>Level with the meniscus</option>
+                <option value="2">2 cm above</option>
+                <option value="5">5 cm above</option>
+                <option value="-2">2 cm below</option>
+                <option value="-5">5 cm below</option>
+              </select></div>
+            <div class="kv small" id="bur-info"></div>
+            <div class="row add-row" id="add-row">
+              <button type="button" data-add="5">+5 mL</button>
+              <button type="button" data-add="1">+1 mL</button>
+              <button type="button" data-add="0.5">+0.5 mL</button>
+              <button type="button" data-add="0.1">+0.1 mL</button>
+              <button type="button" data-add="drop">+1 drop</button>
+              <button type="button" data-add="half">½ drop (touch off)</button>
+            </div>
+            <div class="row">
+              <button type="button" id="tap">Open the tap (stream)</button>
+              <button type="button" class="primary" id="stop">Stop: end point here</button>
+            </div>
+            <div class="row">
+              <button type="button" id="reveal">Reveal the equivalence point</button>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>Flask</h2>
+            <canvas id="flask" class="flask" aria-label="The titration flask; its colour shows the indicator"></canvas>
+            <p><span class="muted">Colour:</span> <b id="colour-name" aria-live="polite">—</b></p>
+            <p class="small" id="cue" aria-live="polite"></p>
+            <div class="kv small" id="live"></div>
+          </div>
+        </div>
+
+        <div class="panel" id="curve-panel" hidden>
+          <h2 id="curve-title">Titration curve from your readings</h2>
+          <canvas id="plot" class="plot" aria-label="Meter readings against burette reading"></canvas>
+          <div class="row">
+            <label><input type="checkbox" id="show-theory"> Show the exact curve (after you have finished)</label>
+          </div>
+          <canvas id="dplot" class="plot short" aria-label="First derivative of the readings against volume"></canvas>
+          <div class="row" id="gran-row">
+            <div class="field inline"><label for="g-lo">Gran window from / % of end point</label><input type="number" id="g-lo" min="10" max="95" step="5" value="50"></div>
+            <div class="field inline"><label for="g-hi">to / %</label><input type="number" id="g-hi" min="20" max="99" step="1" value="95"></div>
+          </div>
+          <canvas id="gplot" class="plot short" aria-label="Gran plot: volume times ten to the minus pH against volume, with the fitted line"></canvas>
+        </div>
+
+        <div class="panel">
+          <h2>Analysis</h2>
+          <div class="kv" id="analysis"></div>
+        </div>
+
+        <div class="panel">
+          <h2>Your titrations</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="runs"><thead><tr><th>#</th><th>Experiment</th><th>End point / mL</th><th>Equivalence / mL</th><th>Error</th><th>Result</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row">
+            <button type="button" id="x-run">Readings of this titration (CSV)</button>
+            <button type="button" id="x-all">All titrations (CSV)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MANGANESE IN STEEL ===================== -->
+  <section id="tab-mn" aria-labelledby="tabbtn-manganese" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Manganese in steel (periodate method)</h2>
+          <div class="field"><label for="mn-mass">Steel sample / g</label><input type="number" id="mn-mass" min="0.2" max="1.5" step="0.0001" value="0.8000"></div>
+          <p class="small muted">Dissolved in hot HNO₃ and made up to 100.0 mL; a 10.00 mL aliquot goes through the colour step and is made up to 100.0 mL. Standards of 0–10 mg/L Mn go through the same steps.</p>
+          <h3>Steps you carry out</h3>
+          <div class="row"><label><input type="checkbox" id="mn-nox" checked> Boil with peroxydisulfate to destroy nitrogen oxides and carbon</label></div>
+          <div class="row"><label><input type="checkbox" id="mn-h3po4" checked> Add H₃PO₄ to mask the yellow Fe³⁺</label></div>
+          <div class="row"><label><input type="checkbox" id="mn-io4" checked> Heat with KIO₄ for 10 minutes (full oxidation to MnO₄⁻)</label></div>
+          <div class="row"><label><input type="checkbox" id="mn-blank" checked> Measure a reagent blank (untreated aliquot) and subtract it</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="mn-run">Run standards and sample</button>
+            <button type="button" id="mn-rerun">New steel sample (new seed)</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Calibration at 525 nm</h2>
+          <canvas id="mn-plot" class="plot" aria-label="Absorbance of the manganese standards against concentration, with the sample"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Readings and result</h2>
+          <div class="table-wrap"><table class="data" id="mn-table"><thead><tr><th>Solution</th><th>Mn / mg L⁻¹</th><th>Absorbance</th></tr></thead><tbody></tbody></table></div>
+          <div class="kv" id="mn-result"></div>
+          <div class="row"><button type="button" id="mn-x">Readings (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Rinse the burette twice with a few mL of titrant, fill it above zero, open the tap briefly to clear the air bubble from the tip.</li>
+        <li>Pipette the sample into the flask, add the indicator (or put in the electrode) and read the burette at eye level: the initial reading.</li>
+        <li>Add titrant quickly while the colour change is far away, then in 0.1 mL steps, then drop by drop with swirling. Where each drop lands the colour flashes and fades: that warns you the end point is near.</li>
+        <li>Stop at the first colour change that lasts 30 s. Read the burette again at eye level, to two decimals. The volume is the difference.</li>
+        <li>With an electrode, log a reading after every addition and take small, even steps (0.05–0.1 mL) through the jump; find the end point from the derivatives or a Gran plot.</li>
+        <li>Repeat until three titrations agree; run a blank where an indicator needs an excess of titrant (Mohr).</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Water left in an unrinsed burette dilutes the titrant, so every titration needs more of it and every result comes out high.</li>
+        <li>An air bubble that escapes from the tip counts as delivered volume although no titrant reached the flask.</li>
+        <li>The scale is on the front of the glass and the meniscus in the middle of the tube: only a sight line level with it gives the right mark (parallax).</li>
+        <li>An indicator is a weak acid (or a redox couple, or a metal complex) that changes over about pK<sub>In</sub> ± 1. Its window must fall inside the steep jump of the curve, or the end point is far from equivalence.</li>
+        <li>Mohr needs pH 7–10: in acid chromate becomes HCrO₄⁻ and the red Ag₂CrO₄ appears late; above pH 10 silver oxide precipitates. The visible colour always needs some excess silver, so a blank is subtracted.</li>
+        <li>EDTA binds metals only as Y⁴⁻, whose share falls steeply below pH 10; the conditional constant K<sub>f</sub>′ = α<sub>Y⁴⁻</sub>K<sub>f</sub> decides whether the end point is sharp. At pH 12 Mg(OH)₂ precipitates and only Ca is titrated.</li>
+        <li>A pH electrode has its own offset and slope; two buffers measure both. An aged electrode is slower and its slope is lower.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>0.1 M NaOH and HCl are irritant to eyes: safety glasses always. Fill the burette below eye level, with a funnel, and remove the funnel before titrating.</li>
+        <li>Cerium(IV) solutions are in 1 M sulfuric acid: corrosive. Concentrated acids for dissolving steel need a fume hood.</li>
+        <li>Silver nitrate stains skin and is toxic to aquatic life; potassium chromate is a carcinogen (GHS H350): gloves, small amounts, collect the waste, never down the sink.</li>
+        <li>The ammonia buffer for EDTA titrations is irritant and smells: use it in a hood or a well-ventilated room.</li>
+        <li>That is why most of these titrations are only simulated in this course; the home titration of vinegar uses baking soda and red cabbage.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Overshooting: a 1 mL addition, or a tap closed too late, carries you past the end point; one drop is 0.05 mL, about 0.2 % of 25 mL.</li>
+        <li>Choosing the indicator by habit: methyl red with acetic acid stops about a third of the way.</li>
+        <li>Reading from above or below the meniscus, and not the same way each time.</li>
+        <li>Reading an electrode before it settles: the curve lags behind the titrant and the end point comes late.</li>
+        <li>An uncalibrated electrode: the end-point volume is still right, but every pH, and so the pK<sub>a</sub>, is off.</li>
+        <li>Mohr in acid, or without a blank; EDTA at pH 8, where Mg barely reacts.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the readings (burette reading in mL and pH, mV or pAg) and analyse them in Python (Module 9 and 10 lab folders): first-derivative peak, second-derivative zero crossing and, for a weak acid, a Gran plot of V·10<sup>−pH</sup> against V over 50–95 % of the way. For visual titrations, report the mean of three or more end points with their standard deviation and the uncertainty budget of a burette volume: tolerance 0.05/√3, two readings of ±0.02 mL and ± half a drop.</p>
+    </details>
+    <p class="small muted">Not trained here: the feel of the stopcock, swirling with one hand, filling a burette safely and judging a real colour by eye.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Data (Harvey, Analytical Chemistry 2.1, LibreTexts): pK<sub>a</sub> acetic acid 4.757, KHP 5.41; K<sub>w</sub> 1.0 × 10⁻¹⁴; indicator pK<sub>In</sub> methyl orange 3.7, methyl red 5.0, bromothymol blue 7.1, phenol red 7.8, phenolphthalein 9.6 (Table 9.2.3); E°′ Fe³⁺/Fe²⁺ 0.68 V, Ce⁴⁺/Ce³⁺ 1.44 V (1 M H₂SO₄) and 1.70 V (1 M HClO₄), ferroin 1.147 V, Ag/AgCl (sat. KCl) 0.197 V; K<sub>sp</sub> AgCl 1.8 × 10⁻¹⁰, Ag₂CrO₄ 1.2 × 10⁻¹²; HCrO₄⁻ pK<sub>a</sub> 6.51; EDTA pK<sub>a</sub> 0.0, 1.5, 2.0, 2.66, 6.16, 10.24; log K<sub>f</sub> CaY 10.69, MgY 8.79; Eriochrome Black T pK<sub>a</sub> 6.3 and 11.6 with log K MgIn 7.0, CaIn 5.4. MnO₄⁻ ε<sub>525</sub> = 2.4 × 10³ L mol⁻¹ cm⁻¹. Nernst slope from CODATA 2022 R and F at 25 °C. Burette: Class A 50 mL, ±0.05 mL (ASTM E287); parallax geometry as in the glassware simulation. Model: exact charge, electron and mass balances solved at every volume; drop 0.050 ± 0.004 mL; colours from Beer–Lambert absorbance in three colour channels.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="titration.js"></script>
+</body>
+</html>

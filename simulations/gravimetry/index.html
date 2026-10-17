@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gravimetry and coulometry</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="gravimetry.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Gravimetry, electrogravimetry and coulometry</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="precipitate" aria-controls="tab-precipitate" id="tabbtn-precipitate">Chloride as AgCl</button>
+    <button type="button" data-tab="electrogravimetry" aria-controls="tab-electro" id="tabbtn-electrogravimetry">Copper by electrodeposition</button>
+    <button type="button" data-tab="coulometry" aria-controls="tab-coul" id="tabbtn-coulometry">Coulometric titration</button>
+    <button type="button" data-tab="oven" aria-controls="tab-oven" id="tabbtn-oven">Baking soda to constant mass</button>
+  </div>
+
+  <!-- ===================== PRECIPITATION GRAVIMETRY ===================== -->
+  <section id="tab-precipitate" aria-labelledby="tabbtn-precipitate" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>1. Precipitate</h2>
+          <div class="field"><label for="p-mass">Sample of the chloride salt / g (analytical balance)</label><input type="number" id="p-mass" min="0.1000" max="0.5000" step="0.0001" value="0.2500"></div>
+          <div class="field"><label for="p-how">How you add the AgNO₃</label>
+            <select id="p-how"><option value="slow">slowly, with stirring, to a hot dilute solution (about 80 °C, 150 mL)</option><option value="fast">quickly, to a cold concentrated solution (25 mL)</option></select></div>
+          <div class="field"><label for="p-excess">AgNO₃ excess over the chloride</label>
+            <select id="p-excess"><option value="0">none (exactly stoichiometric)</option><option value="10" selected>about 10 %</option><option value="50">about 50 %</option></select></div>
+          <div class="row"><label><input type="checkbox" id="p-digest" checked> Digest: keep it hot for 1 h, then cool in the dark</label></div>
+          <div class="row"><label><input type="checkbox" id="p-dark" checked> Work in subdued light (AgCl darkens in light)</label></div>
+          <h2>2. Filter and wash</h2>
+          <div class="field"><label for="p-filter">Filter</label>
+            <select id="p-filter"><option value="fine">sintered-glass crucible, fine porosity (weighed to constant mass)</option><option value="coarse">sintered-glass crucible, coarse porosity</option></select></div>
+          <div class="field"><label for="p-wash">Wash liquid</label>
+            <select id="p-wash"><option value="hno3">dilute HNO₃ (0.01 M), several small portions</option><option value="water">pure water</option></select></div>
+          <div class="field"><label for="p-nwash">Number of 10 mL washes</label>
+            <select id="p-nwash"><option value="3">3</option><option value="5" selected>5</option><option value="10">10</option></select></div>
+          <div class="row"><button type="button" class="primary" id="p-start">Precipitate, filter and wash</button></div>
+          <h2>3. Dry and weigh</h2>
+          <div class="field"><label for="p-cool">Before each weighing</label>
+            <select id="p-cool"><option value="desic">cool 30 min in a desiccator</option><option value="bench">cool 30 min on the bench</option><option value="warm">weigh after 5 min, still warm</option></select></div>
+          <div class="row">
+            <button type="button" id="p-dry">Dry 1 h at 130 °C, cool, weigh</button>
+            <button type="button" class="primary" id="p-accept">Accept the last mass</button>
+          </div>
+          <div class="row"><button type="button" id="p-rerun">New sample (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. The balance reads to 0.1 mg.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Analytical balance</h2>
+          <p><span class="readout" id="p-readout" aria-live="polite">0.0000 g</span></p>
+          <div class="kv" id="p-info"></div>
+          <div class="table-wrap"><table class="data" id="p-weighings"><thead><tr><th>Weighing</th><th>Crucible + AgCl / g</th><th>Change / mg</th></tr></thead><tbody></tbody></table></div>
+        </div>
+        <div class="panel">
+          <h2>Result</h2>
+          <div class="kv" id="p-result"></div>
+          <h3>Where the mass went (revealed after you accept)</h3>
+          <div class="table-wrap"><table class="data" id="p-budget"><thead><tr><th>Effect</th><th>Mass / mg</th><th>Effect on % Cl</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ELECTROGRAVIMETRY ===================== -->
+  <section id="tab-electro" aria-labelledby="tabbtn-electrogravimetry" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Copper on a platinum gauze cathode</h2>
+          <p class="small muted">100.0 mL of sample in 0.5 M H₂SO₄ with a little HNO₃; stated copper 0.1581 g. The weighed Pt gauze is the cathode, a Pt spiral the anode.</p>
+          <div class="field"><label for="e-mode">Control</label>
+            <select id="e-mode"><option value="pot">controlled cathode potential (potentiostat)</option><option value="cur">constant current</option></select></div>
+          <div class="field" id="e-pot-f"><label for="e-pot">Cathode potential / V vs SHE</label>
+            <select id="e-pot"><option value="0.30">+0.30</option><option value="0.20">+0.20</option><option value="0.10" selected>+0.10</option><option value="0.00">0.00</option><option value="-0.20">−0.20</option><option value="-0.40">−0.40</option></select></div>
+          <div class="field" id="e-cur-f" hidden><label for="e-cur">Current / A</label>
+            <select id="e-cur"><option value="0.2">0.20</option><option value="0.5" selected>0.50</option><option value="1.0">1.00</option></select></div>
+          <div class="field"><label for="e-time">Electrolysis time / min</label>
+            <select id="e-time"><option value="16">16</option><option value="30">30</option><option value="45" selected>45</option><option value="60">60</option><option value="90">90</option></select></div>
+          <div class="row"><label><input type="checkbox" id="e-stir" checked> Stir the solution</label></div>
+          <div class="row"><label><input type="checkbox" id="e-lift" checked> Lift the cathode out and rinse it while the current is still on</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="e-run">Weigh cathode, electrolyse, weigh again</button>
+            <button type="button" id="e-check">Completeness test: raise the level 1 cm, 10 more minutes</button>
+          </div>
+          <div class="row"><button type="button" id="e-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Current against time</h2>
+          <canvas id="e-plot" class="plot" aria-label="Cell current against time, copper and hydrogen parts"></canvas>
+          <div class="row"><label><input type="checkbox" id="e-log" checked> Logarithmic current axis</label></div>
+        </div>
+        <div class="panel">
+          <h2>Result</h2>
+          <div class="kv" id="e-result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COULOMETRIC TITRATION ===================== -->
+  <section id="tab-coul" aria-labelledby="tabbtn-coulometry" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Iodine generated from iodide</h2>
+          <p class="small muted">50 mL of 0.1 M KI with starch; the sample aliquot contains vitamin C (stated 8.81 mg, 0.0500 mmol). At the Pt anode 2I⁻ → I₂ + 2e⁻; the iodine oxidises the ascorbic acid at once. The cathode sits in a separate compartment behind a frit.</p>
+          <div class="field"><label for="c-sample">In the cell</label>
+            <select id="c-sample"><option value="vitc">vitamin C sample</option><option value="blank">reagent blank (KI and starch only)</option></select></div>
+          <div class="field"><label for="c-cur">Generating current / mA</label>
+            <select id="c-cur"><option value="5">5.000</option><option value="10" selected>10.000</option><option value="20">20.000</option><option value="50">50.000</option><option value="100">100.00</option></select></div>
+          <div class="field"><label for="c-det">End-point detection</label>
+            <select id="c-det"><option value="starch">starch, by eye (first lasting blue)</option><option value="amp">biamperometric: two small Pt electrodes at 100 mV</option></select></div>
+          <div class="row">
+            <button type="button" class="primary" id="c-go">Start generating</button>
+            <button type="button" id="c-p1">Pulse 1 s</button>
+            <button type="button" id="c-p5">Pulse 5 s</button>
+          </div>
+          <div class="row">
+            <button type="button" id="c-stop">Stop: end point here</button>
+            <button type="button" id="c-new">New titration</button>
+          </div>
+          <p class="small muted">The clock runs 20× faster than real time while generating.</p>
+        </div>
+      </div>
+      <div>
+        <div class="cols-2">
+          <div class="panel">
+            <h2>Cell</h2>
+            <canvas id="c-cell" class="cell" aria-label="The titration cell; it turns blue when iodine is in excess"></canvas>
+            <p><span class="muted">Colour:</span> <b id="c-colour" aria-live="polite">—</b></p>
+          </div>
+          <div class="panel">
+            <h2>Coulometer</h2>
+            <p><span class="readout" id="c-readout" aria-live="polite">0.0 s</span></p>
+            <div class="kv small" id="c-live"></div>
+          </div>
+        </div>
+        <div class="panel" id="c-amp-panel">
+          <h2>Indicator current</h2>
+          <canvas id="c-plot" class="plot short" aria-label="Biamperometric indicator current against generation time"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Result</h2>
+          <div class="kv" id="c-result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OVEN: BAKING SODA ===================== -->
+  <section id="tab-oven" aria-labelledby="tabbtn-oven" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Volatilisation: 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂</h2>
+          <p class="small muted">The rehearsal for the home experiment of Lesson 10.4: a foil tray, a kitchen scale reading to 0.01 g and a kitchen oven.</p>
+          <div class="field"><label for="o-mass">Baking soda in the tray / g</label><input type="number" id="o-mass" min="2" max="20" step="0.01" value="10.00"></div>
+          <div class="field"><label for="o-temp">Oven setting / °C</label>
+            <select id="o-temp"><option value="120">120</option><option value="160">160</option><option value="200" selected>200</option><option value="240">240</option></select></div>
+          <div class="field"><label for="o-cool">Before each weighing</label>
+            <select id="o-cool"><option value="board">cool 15 min on a board in the kitchen air</option><option value="jar">cool 15 min in a closed jar with a silica-gel sachet</option><option value="hot">weigh after 2 min, still warm</option></select></div>
+          <div class="row">
+            <button type="button" class="primary" id="o-start">Weigh tray and sample</button>
+            <button type="button" id="o-heat">Heat 15 min, cool, weigh</button>
+          </div>
+          <div class="row"><button type="button" id="o-rerun">Re-run (new seed)</button></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Kitchen scale</h2>
+          <p><span class="readout" id="o-readout" aria-live="polite">0.00 g</span></p>
+          <canvas id="o-plot" class="plot short" aria-label="Mass of tray and sample against total heating time"></canvas>
+          <div class="table-wrap scroll-y"><table class="data" id="o-table"><thead><tr><th>Heating / min</th><th>Tray + sample / g</th><th>Loss / %</th></tr></thead><tbody></tbody></table></div>
+        </div>
+        <div class="panel">
+          <h2>Result</h2>
+          <div class="kv" id="o-result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <h2>Your results</h2>
+    <div class="table-wrap scroll-y">
+      <table class="data" id="runs"><thead><tr><th>#</th><th>Experiment</th><th>Choices</th><th>Result</th><th>Stated</th><th>Error</th></tr></thead><tbody></tbody></table>
+    </div>
+    <div class="row">
+      <button type="button" id="x-run">Readings of the last experiment (CSV)</button>
+      <button type="button" id="x-all">All results (CSV)</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Precipitation: weigh the sample, dissolve it in about 150 mL of water with a little HNO₃, heat, add AgNO₃ slowly with stirring until a little excess, digest hot for an hour, cool in the dark.</li>
+        <li>Filter through a sintered-glass crucible already dried to constant mass; wash with several small portions of dilute HNO₃; dry at 130 °C, cool in a desiccator, weigh; repeat until two weighings agree within 0.2–0.3 mg.</li>
+        <li>Electrogravimetry: weigh the clean, dry Pt gauze cathode; electrolyse the stirred, acidified solution at a controlled cathode potential; test for completeness; lift the cathode out with the current still on, rinse with water and ethanol, dry briefly, weigh.</li>
+        <li>Coulometric titration: generate the titrant at constant current, watch the end point, stop; the charge Q = I t replaces the burette reading.</li>
+        <li>Volatilisation: heat, cool the same way every time, weigh, repeat to constant mass.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Low relative supersaturation (slow, hot, dilute) gives few large crystals that filter well and trap fewer impurities; digestion lets small crystals dissolve and large ones grow.</li>
+        <li>A small excess of Ag⁺ lowers the solubility of AgCl (common-ion effect); a large excess is adsorbed on the solid and co-precipitates.</li>
+        <li>Pure water peptises AgCl back into a colloid that runs through the filter; a dilute volatile electrolyte (HNO₃) keeps it coagulated and leaves nothing on drying.</li>
+        <li>Constant mass, not a fixed time, proves the water is gone. A warm crucible reads light (rising air) and a dry solid picks up water while it cools in room air; a desiccator prevents that.</li>
+        <li>At a cathode held below +0.10 V vs SHE, copper is deposited to better than 99.99 %; much more negative potentials also reduce H⁺ (wasting charge, giving a spongy deposit).</li>
+        <li>Faraday's law, n = Q/(zF), counts moles only at 100 % current efficiency; a blank removes charge used by impurities in the reagents.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Silver nitrate stains skin and is toxic to aquatic life: gloves, glasses, collect silver residues for recovery.</li>
+        <li>Hot nitric and sulfuric acids burn: glasses, gloves, fume hood for heating.</li>
+        <li>Electrolysis cells make hydrogen at the cathode and oxygen at the anode: no flames, good ventilation, and never touch the electrodes while the supply is on.</li>
+        <li>A hot oven and tray burn: oven mitts and a heat-proof board. Sodium carbonate irritates eyes (GHS H319): glasses.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Fast, cold precipitation: fine particles pass the filter (low) and trap impurities (high).</li>
+        <li>Washing with pure water: peptisation losses. No digestion: more of everything.</li>
+        <li>Stopping after one drying, or weighing warm or after cooling in moist air.</li>
+        <li>Too positive a cathode potential: copper left in solution. Too negative: hydrogen evolution, low current efficiency, flaking deposit. Switching off before lifting the cathode: copper redissolves in the nitric acid.</li>
+        <li>Coulometry at high current: some charge oxidises water instead of iodide; overshooting the end point because the clock runs fast.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Gravimetric factor for chloride from AgCl: 35.453/143.32 = 0.2474. Each mass is a difference of two balance readings, u = d/√6 for a balance of resolution d. Q = I t (constant current) or the integral of current over time; n = Q/(zF) with F = 96 485.332 12 C/mol (CODATA 2022). Export the weighings or the current record (CSV) and analyse them in the Module 10 lab folder.</p>
+    </details>
+    <p class="small muted">Not trained here: handling a crucible with tongs, filtering by suction, and the real feel of a balance draught shield.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Data: K<sub>sp</sub> AgCl 1.8 × 10⁻¹⁰ (Harvey, Analytical Chemistry 2.1, App. 16.10); M(AgCl) 143.32 and M(Cl) 35.453 g/mol; E°(Cu²⁺/Cu) = 0.339 V (Harvey App. 16.13); F = 96 485.332 12 C/mol (CODATA 2022); 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂ loses 36.92 % of the mass; ascorbic acid 176.12 g/mol, 2 electrons per molecule. Model: losses to filtering, peptisation and solubility, co-precipitation and drying from rough rules of thumb (illustrative sizes); copper deposition limited by mass transport with Nernstian completeness and a Tafel hydrogen current; current efficiency of iodine generation falling at high current densities. All numbers are an educational model.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="gravimetry.js"></script>
+</body>
+</html>

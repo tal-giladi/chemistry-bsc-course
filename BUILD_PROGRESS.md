@@ -57,9 +57,9 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] glassware
 - [x] gas-laws
 - [x] calorimetry
-- [ ] titration
-- [ ] gravimetry
-- [ ] kinetics
+- [x] titration
+- [x] gravimetry
+- [x] kinetics
 - [ ] oscillators
 - [ ] rlc
 - [ ] quantum-box
@@ -124,3 +124,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M33 done.
 - sims batch 1 done (common, measurement-error, glassware, gas-laws, calorimetry). QA: fix 07.7 parallax wording (burette reads low from above). Batch 2 spawned.
 - M31 done.
+- sims batch 2 done (titration, gravimetry, kinetics); batch 4 spawned.

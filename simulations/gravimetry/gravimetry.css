@@ -1,0 +1,7 @@
+/* gravimetry: page-specific styles (shared ones are in ../common/sim.css) */
+.cell { width: 100%; height: 180px; display: block; border-radius: 6px; }
+#tab-precipitate .field input[type="number"], #tab-oven .field input[type="number"] { width: 8em; }
+#c-go[aria-pressed="true"] { background: var(--bad); color: #fff; border-color: var(--bad); }
+.hit { color: var(--good); }
+.miss { color: var(--bad); font-weight: 600; }
+[hidden] { display: none !important; }
