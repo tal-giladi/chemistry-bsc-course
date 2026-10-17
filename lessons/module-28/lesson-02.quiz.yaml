@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    Light-induced chlorination of butane gives 72 % 2-chlorobutane and 28 % 1-chlorobutane. Butane
+    has 6 primary and 4 secondary hydrogens. What is the per-hydrogen secondary/primary selectivity?
+  options:
+    - About 2.6, the ratio of the two product percentages.
+    - About 1.7, the product ratio multiplied by 4/6.
+    - About 0.4, because primary hydrogens are more numerous.
+    - About 3.9, the product ratio multiplied by 6/4.
+  correct: 3
+  explanation: >-
+    Divide each percentage by its number of hydrogens: (72/4)/(28/6) = 18/4.67 = 3.9. Forgetting to
+    correct for the count gives 2.6; inverting the correction gives 1.7.
+- id: q2
+  question: >-
+    Bromine-atom abstraction of a secondary H from propane is uphill by about 46 kJ/mol. What does the
+    Hammond postulate predict about its transition state?
+  options:
+    - It is late and resembles the radical, so radical stability lowers the barrier almost fully.
+    - It is early and resembles propane, so radical stability barely affects the rate.
+    - It lies exactly halfway, because one bond breaks while another forms.
+    - It cannot be described, because transition states are too short-lived to have a structure.
+  correct: 0
+  explanation: >-
+    An endothermic step has a transition state close in energy, and so in structure, to its products.
+    That is why bromination feels nearly all of the 10.5 kJ/mol difference between secondary and primary radicals.
+- id: q3
+  question: >-
+    A series of reactions follows Marcus behaviour with a reorganisation energy of 80 kJ/mol. One
+    member has a reaction free energy of -20 kJ/mol. What are its barrier and its alpha?
+  options:
+    - 20 kJ/mol and 0.50, because the intrinsic barrier does not depend on the driving force.
+    - 11 kJ/mol and 0.38, so the transition state is early.
+    - 31 kJ/mol and 0.63, so the transition state is late.
+    - 10 kJ/mol and 0.25, because the barrier falls by half the driving force.
+  correct: 1
+  explanation: >-
+    Barrier = (80/4)(1 - 20/80)^2 = 20 x 0.5625 = 11.3 kJ/mol; alpha = (1 - 0.25)/2 = 0.375. A downhill
+    step has an early, reactant-like transition state.
+- id: q4
+  question: >-
+    A student argues that because two substrates react with a carbocation at 3e9 and 2e9 M-1 s-1, the
+    transition states must be very early. What is the best reply?
+  options:
+    - Agreed, because low selectivity always means an early transition state.
+    - Agreed, because rate constants above 1e9 M-1 s-1 imply an exothermic step.
+    - Not proven, because at the diffusion limit the rate measures encounters, not the barrier.
+    - Not proven, because selectivity can only be measured with radical reactions.
+  correct: 2
+  explanation: >-
+    Near 1e9-1e10 M-1 s-1 reactions occur at almost every encounter, so all substrates react at about the
+    diffusion rate. The reactivity-selectivity principle says nothing about such reactions.

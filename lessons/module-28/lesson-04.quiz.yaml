@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    An acid-catalysed reaction of an alcohol gives a product whose carbon skeleton differs from the
+    starting material, with the new group on a more substituted carbon. What most likely happened?
+  options:
+    - A radical chain formed, because radicals are the only intermediates that rearrange.
+    - A 1,2-shift turned the first carbocation into a more stable one before capture.
+    - An SN2 reaction inverted the carbon, which looks like a skeletal change.
+    - A carbene inserted into a C-H bond, because acids generate carbenes from alcohols.
+  correct: 1
+  explanation: >-
+    Acid turns the OH into a leaving group and a carbocation forms; a neighbouring H or alkyl group can
+    shift with its bonding pair to give a more substituted, more stable cation, which the nucleophile then captures.
+- id: q2
+  question: >-
+    The C-H bond enthalpies are 439.3 kJ/mol in methane and 371.5 kJ/mol for the CH3 group of propene.
+    What does this say about the allyl radical?
+  options:
+    - It is 68 kJ/mol less stable than methyl, because its C-H bond breaks more easily.
+    - It is about as stable as a tertiary alkyl radical, because both are carbon radicals.
+    - It is 68 kJ/mol more stable than methyl, mostly from resonance over three carbons.
+    - Its stability cannot be judged from bond enthalpies, only from rate constants.
+  correct: 2
+  explanation: >-
+    RSE = 439.3 - 371.5 = 68 kJ/mol. A weaker R-H bond means a more stable radical; allylic resonance
+    is worth about twice the 36 kJ/mol that three methyl groups give the tert-butyl radical.
+- id: q3
+  question: >-
+    Cumyl chlorides ionise in an SN1 reaction with rho = -4.54. A chemist predicts the effect of a
+    para-methoxy group with sigma_p = -0.27 and gets 17 times faster. What is wrong?
+  options:
+    - The sign of rho should be positive, because chloride leaves with a negative charge.
+    - Nothing, because sigma_p is the correct scale for every para substituent.
+    - Methoxy should slow the reaction, because oxygen is more electronegative than carbon.
+    - Sigma-plus (-0.78) applies, because the lone pair conjugates with the cation: about 3500 times.
+  correct: 3
+  explanation: >-
+    A cation next to the ring is stabilised directly by a para donor's lone pair, which sigma_p does not
+    include. With sigma-plus, 10^(4.54 x 0.78) = 3500.
+- id: q4
+  question: >-
+    A carbene adds to cis-2-butene and gives only cis-1,2-dimethylcyclopropane; trans-2-butene gives
+    only the trans product. What do you conclude?
+  options:
+    - The carbene reacted as a singlet, adding both bonds in one step.
+    - The carbene reacted as a triplet, because triplets are the ground state of CH2.
+    - The reaction went through a diradical that could not rotate in solution.
+    - The result says nothing about spin, because all cyclopropanations keep alkene geometry.
+  correct: 0
+  explanation: >-
+    This is the Skell test: concerted singlet addition keeps the alkene geometry. A triplet adds stepwise
+    through a diradical that can rotate, so both alkenes would give similar cis/trans mixtures.

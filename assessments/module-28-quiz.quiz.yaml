@@ -1,0 +1,133 @@
+- id: q1
+  question: >-
+    A process chemist must store an isolated isomer that slowly converts to its partner over a
+    free-energy barrier of 95 kJ/mol. At 25 degrees C the half-life is about 1.4 hours. A colleague
+    proposes storing it at 5 degrees C instead. Roughly what half-life should they expect?
+  options:
+    - About 2 hours, because 20 K is less than 7 % of the absolute temperature.
+    - About 2.6 hours, because rates halve for every 10 K of cooling.
+    - About 23 hours, because the Eyring rate constant falls about 17-fold.
+    - About 5 days, because the rate depends on the square of the temperature change.
+  correct: 2
+  explanation: >-
+    k = (kBT/h)exp(-dG/RT). The ratio k(298)/k(278) = (298/278) x exp[(95000/8.314)(1/278 - 1/298)] = 1.07 x
+    e^2.76 = 17, so 1.4 h becomes about 23 h. The doubling-per-10 K rule only holds near 50 kJ/mol.
+- id: q2
+  question: >-
+    A computed energy profile has the intermediate 50 kJ/mol above the reactants, TS1 at +70 and TS2
+    at +95 kJ/mol. A student says step 1 is rate-determining because it is the step that forms the
+    intermediate. What is correct?
+  options:
+    - Step 1, because its 70 kJ/mol barrier is larger than the 45 kJ/mol between intermediate and TS2.
+    - Step 2, because TS2 is the highest point measured from the reactants, the lowest preceding state.
+    - Neither, because an uphill intermediate makes the reaction impossible.
+    - Both equally, because the intermediate is in fast equilibrium with the reactants.
+  correct: 1
+  explanation: >-
+    The rate-determining transition state is the one highest above the lowest state before it. TS2 at
+    +95 kJ/mol limits the rate; the 45 kJ/mol step barrier from the intermediate is not the relevant number.
+- id: q3
+  question: >-
+    Chlorine atoms react with 2-methylpropane (9 primary H, 1 tertiary H). Suppose the per-H
+    tertiary/primary selectivity is 5. What fraction of the monochloride is the tertiary chloride?
+  options:
+    - About 36 %, because 5 x 1 tertiary against 1 x 9 primary gives 5/14.
+    - About 83 %, because a tertiary H is five times more reactive.
+    - About 10 %, because only one of ten hydrogens is tertiary.
+    - About 50 %, because chlorination is unselective by the Hammond postulate.
+  correct: 0
+  explanation: >-
+    Multiply each per-H reactivity by its count: 5 x 1 = 5 against 1 x 9 = 9, so 5/14 = 36 %. Ignoring the
+    count gives 83 %; ignoring the selectivity gives 10 %.
+- id: q4
+  question: >-
+    Why does bromine-atom abstraction distinguish secondary from primary C-H bonds far better than
+    chlorine-atom abstraction?
+  options:
+    - Bromine atoms are larger, so steric hindrance blocks the primary hydrogens.
+    - The H-Br bond is stronger than H-Cl, so bromine abstraction is more exothermic.
+    - Bromine reacts through a carbocation and chlorine through a radical.
+    - Abstraction by bromine is uphill, so its late transition state feels the radical stability.
+  correct: 3
+  explanation: >-
+    H-Br (366 kJ/mol) is weaker than a secondary C-H bond (412.5), so the step is endothermic and, by Hammond,
+    product-like (alpha about 1). Chlorine's exothermic step has an early transition state (alpha about 0.3).
+- id: q5
+  question: >-
+    A drug team needs a substituted phenol with pKa near 8.4. Phenol has pKa 9.99 and rho = 2.11.
+    Which substitution pattern is the best first candidate (sigma_m of Cl 0.37, sigma_p of Cl 0.23)?
+  options:
+    - 3,5-dichloro, because two meta chlorines give sigma 0.74 and a predicted pKa near 8.4.
+    - 4-chloro, because sigma 0.23 lowers the pKa by exactly 0.23 units.
+    - 4-nitro, because sigma_p 0.78 gives a predicted pKa of about 8.3.
+    - 3-chloro, because meta substituents are always stronger than para ones.
+  correct: 0
+  explanation: >-
+    9.99 - 2.11 x 0.74 = 8.43 (measured 8.18). 4-Chloro gives about 9.5. 4-Nitro looks right with sigma_p,
+    but a phenoxide needs sigma-minus for a para nitro group: its real pKa is 7.15.
+- id: q6
+  question: >-
+    Rates of a reaction of substituted benzyl substrates give rho = +0.8 with normal sigma and no
+    curvature for para donors. Which description of the transition state fits best?
+  options:
+    - A benzylic cation forms, because any non-zero rho shows ionisation.
+    - The reaction is insensitive to electronic effects, so no charge develops at all.
+    - A modest negative charge builds near the ring, as in an SN2 attack by an anion.
+    - A large positive charge builds at the benzylic carbon and conjugates with para donors.
+  correct: 2
+  explanation: >-
+    A small positive rho (benzyl chlorides with iodide give 0.79) means slight build-up of negative charge
+    near the ring; an SN1 cation would give a negative rho and need sigma-plus.
+- id: q7
+  question: >-
+    In SN1 solvolysis of cumyl chlorides (rho = -4.54), which prediction for the p-methoxy compound
+    (sigma_p = -0.27, sigma_p+ = -0.78) matches experiment, and why?
+  options:
+    - 17 times faster, because sigma_p already includes the full resonance of methoxy.
+    - 3500 times faster, because the lone pair conjugates directly with the benzylic cation.
+    - 17 times slower, because methoxy withdraws electrons through the sigma bonds.
+    - 3500 times slower, because both rho and sigma are negative numbers.
+  correct: 1
+  explanation: >-
+    10^(-4.54 x -0.78) = 3500. Sigma-plus was defined from this reaction because para donors conjugate
+    with the developing cation; a negative rho times a negative sigma gives a rate increase.
+- id: q8
+  question: >-
+    An alkene with HCl gives a product with a rearranged carbon skeleton, while the same alkene with
+    HBr and peroxides (a radical chain) gives an unrearranged product. What explains this?
+  options:
+    - Radicals are less stable than carbocations, so they react before they can rearrange.
+    - HBr is a stronger acid, so it protonates the alkene at the other carbon.
+    - Carbocations rearrange by 1,2-shifts to more stable cations; simple alkyl radicals do not.
+    - Peroxides block 1,2-shifts by oxidising the group that would migrate.
+  correct: 2
+  explanation: >-
+    1,2-Hydride and alkyl shifts are fast in carbocations, whose empty orbital accepts the migrating pair.
+    Simple alkyl radicals do not undergo such shifts, so the radical pathway keeps the skeleton.
+- id: q9
+  question: >-
+    Oxidation of a drug by a liver enzyme shows kH/kD = 1.1 when the C-H bond that is oxidised is
+    deuterated. A team plans a deuterated version to make the drug last longer. What do you advise?
+  options:
+    - Go ahead, because any isotope effect above 1 slows metabolism substantially.
+    - Go ahead, because the effect will grow to about 7 inside the body at 37 degrees C.
+    - Drop it, because a value near 1 proves that no C-H bond is ever broken.
+    - Expect little gain, because C-H cleavage is not the rate-determining step here.
+  correct: 3
+  explanation: >-
+    A value of 1.1 is at most a small secondary effect: another step (binding or electron transfer) limits
+    the rate. The C-H bond still breaks, but later, so deuteration will barely change the lifetime.
+- id: q10
+  question: >-
+    A substrate with a cyclopropylmethyl group is used to test for a radical. With 0.05 M of a trap at
+    37 degrees C, 10 % of the product is ring-opened and 90 % unrearranged. The clock opens at
+    1.2e8 s-1. What do you conclude?
+  options:
+    - A radical formed, and the trap catches it at about 2e10 M-1 s-1.
+    - No radical formed, because most of the product is unrearranged.
+    - A radical formed, and the trap rate constant is about 3e7 M-1 s-1.
+    - A carbocation formed, because only cations open three-membered rings.
+  correct: 0
+  explanation: >-
+    Any ring-opened product shows that a radical lived long enough to open. kT = (90/10) x 1.2e8 / 0.05 =
+    2.2e10 M-1 s-1. Inverting the product ratio gives the 3e7 slip.

@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    A transition-state search ends at a geometry whose Hessian has two negative eigenvalues. A
+    colleague wants to report it as the transition state of the reaction. What do you advise?
+  options:
+    - Report it, because any stationary point with negative curvature is a transition state.
+    - Reject it as a minimum, because negative eigenvalues mean the energy is lowest there.
+    - Accept it only if the energy is lower than the reactants, which proves it is on the path.
+    - Keep searching, because a transition state has exactly one negative eigenvalue.
+  correct: 3
+  explanation: >-
+    A transition state is a first-order saddle point: one direction of negative curvature (one imaginary
+    frequency) and positive curvature in all others. Two negative eigenvalues mean a higher-order saddle,
+    which lies above a lower pass and is not on the best route.
+- id: q2
+  question: >-
+    A two-step reaction has Gibbs energies relative to the reactants of TS1 +60, intermediate +35,
+    TS2 +78 and products -20 kJ/mol. Which statement is correct?
+  options:
+    - Step 1 is rate-determining, because it is the first barrier the reactants meet.
+    - Step 2 is rate-determining, with an effective barrier of 78 kJ/mol from the reactants.
+    - Step 2 is rate-determining, with an effective barrier of 43 kJ/mol from the intermediate.
+    - Neither step limits the rate, because the overall reaction is downhill by 20 kJ/mol.
+  correct: 1
+  explanation: >-
+    The rate-determining transition state is the one highest above the lowest state that precedes it.
+    TS2 is 78 kJ/mol above the reactants; the intermediate is not the reference because it lies above them.
+- id: q3
+  question: >-
+    Two interconverting forms of a drug are separated. The barrier between them is 100 kJ/mol at
+    25 degrees C. How would a 5.7 kJ/mol higher barrier change the time the pure form survives?
+  options:
+    - It would roughly double, because the barrier rises by about 6 %.
+    - It would barely change, because 5.7 kJ/mol is close to RT at room temperature.
+    - It would rise about tenfold, because 5.7 kJ/mol is RT ln 10 at 298 K.
+    - It would rise about a hundredfold, because the rate depends on the barrier squared.
+  correct: 2
+  explanation: >-
+    From the Eyring equation k is proportional to exp(-dG/RT); at 298 K, RT ln 10 = 5.71 kJ/mol, so each
+    5.7 kJ/mol lowers k, and lengthens the half-life, by a factor of 10.
+- id: q4
+  question: >-
+    Conformers A (83 %) and B (17 %) of a substrate interconvert in microseconds; each reacts slowly
+    to its own product. The transition state from B is 2 kJ/mol lower in Gibbs energy than the one
+    from A. What product ratio do you expect at 298 K?
+  options:
+    - About 2.2 to 1 in favour of B's product, set by the two transition states.
+    - About 5 to 1 in favour of A's product, set by the conformer populations.
+    - About 1 to 1, because fast interconversion averages the two pathways.
+    - About 11 to 1 in favour of B's product, set by the ratio of the separate rate constants.
+  correct: 0
+  explanation: >-
+    Curtin-Hammett: with fast-equilibrating conformers the ratio depends only on the difference between
+    the transition states, exp(2.0/2.479) = 2.2. The rate-constant ratio alone ignores B's low population.

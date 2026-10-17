@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    Deuterating the hydrogen that a base removes in an elimination gives kH/kD = 6.5 at 25 degrees C.
+    What is the best conclusion?
+  options:
+    - The C-H bond breaks in the rate-determining step, as in a concerted E2 reaction.
+    - The reaction goes through a carbocation first, so it must be E1.
+    - Only a secondary effect is present, because primary effects are below 2.
+    - The base must tunnel through the barrier, because any value above 2 means tunnelling.
+  correct: 0
+  explanation: >-
+    A primary deuterium effect of about 2-7 means the labelled bond breaks in the slow step; 6.5 is close
+    to the zero-point-energy ceiling of about 6-7 at 298 K. Tunnelling is suspected only well above that.
+- id: q2
+  question: >-
+    In an electrophilic substitution of an aromatic ring, replacing the ring H by D at the reacting
+    carbon gives kH/kD = 1.05. Which step is rate-determining?
+  options:
+    - Loss of the proton from the sigma-complex, because that is where the C-H bond breaks.
+    - Neither, because an effect near 1 means the reaction is diffusion-controlled.
+    - Attack of the electrophile to form the sigma-complex, because the C-H bond breaks later.
+    - Both steps equally, because the isotope effect is between 1 and 2.
+  correct: 2
+  explanation: >-
+    No primary isotope effect means the C-H bond is not broken in the slow step. The electrophile's attack
+    is rate-determining; the proton leaves afterwards in a fast step, as Melander found for nitration.
+- id: q3
+  question: >-
+    A cyclopropylcarbinyl radical clock (1.2e8 s-1 at 37 degrees C) is used with 0.20 M of a trap.
+    Unrearranged and ring-opened products form in a 1 to 1 ratio. What is the trap's rate constant?
+  options:
+    - 2.4e7 M-1 s-1, from the clock rate constant times the trap concentration.
+    - 1.2e8 M-1 s-1, because equal products mean equal rate constants.
+    - 1.7e-9 M-1 s-1, from the trap concentration divided by the clock rate constant.
+    - 6.0e8 M-1 s-1, from the clock rate constant divided by the trap concentration.
+  correct: 3
+  explanation: >-
+    Unrearranged/rearranged = kT[T]/kr = 1, so kT = kr/[T] = 1.2e8/0.20 = 6.0e8 M-1 s-1. Equal products
+    mean equal pseudo-first-order rates (kT[T] = kr), not equal rate constants.
+- id: q4
+  question: >-
+    A Hammett plot of eight rate constants gives R2 = 0.968 with sigma_p and 0.976 with sigma_p+. The
+    sigma_p residuals bend, with the p-methoxy point 0.4 log units below the line. What do you report?
+  options:
+    - Sigma_p, because both R2 values are above 0.95 and it is the standard scale.
+    - Sigma_p+, because the residuals show direct conjugation of the para donor that sigma_p misses.
+    - Neither, because an R2 below 0.99 means the Hammett equation does not apply.
+    - Sigma_p, after deleting the methoxy point as an outlier.
+  correct: 1
+  explanation: >-
+    R2 barely separates the two scales; the systematic residual pattern does. A donor whose lone pair
+    conjugates with a cationic centre needs sigma-plus, and deleting the informative point hides the effect.

@@ -45,7 +45,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M25
 - [x] M26
 - [x] M27
-- [ ] M28
+- [x] M28
 - [ ] M29
 - [ ] M30
 - [ ] M31
@@ -77,7 +77,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [ ] final QA: `py scripts/check.py` clean, `npm run check-course` 0 problems, git clean, TODO_FOR_TAL.md ready
 
 ## Now working
-- agent: M28
+- agent: M30
 - agent: M29
 
 ## Decisions
@@ -119,3 +119,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M25 done; M27 spawned.
 - M26 done; M28 spawned.
 - M27 done; M29 spawned.
+- M28 done; M30 spawned.

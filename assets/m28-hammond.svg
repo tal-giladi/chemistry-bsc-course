@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="Arial, Helvetica, sans-serif" font-size="13">
+  <title>Early and late transition states</title>
+  <desc>Two energy profiles side by side. Left: an exothermic step whose transition state lies close to the reactants along the reaction coordinate and resembles them (early transition state). Right: an endothermic step whose transition state lies close to the products and resembles them (late transition state).</desc>
+  <rect width="640" height="300" fill="#ffffff"/>
+  <g>
+    <line x1="40" y1="260" x2="300" y2="260" stroke="#333" stroke-width="1.5"/>
+    <line x1="40" y1="260" x2="40" y2="30" stroke="#333" stroke-width="1.5"/>
+    <text x="170" y="285" text-anchor="middle">reaction coordinate</text>
+    <path d="M 55 130 C 85 130, 95 75, 115 75 S 160 200, 200 215 S 260 220, 290 220" fill="none" stroke="#1f5fa8" stroke-width="3"/>
+    <circle cx="115" cy="75" r="4" fill="#b03030"/>
+    <text x="115" y="62" text-anchor="middle" fill="#b03030">early TS</text>
+    <text x="55" y="150">reactants</text>
+    <text x="290" y="240" text-anchor="end">products</text>
+    <text x="170" y="40" text-anchor="middle" font-weight="bold">exothermic: TS looks like reactants</text>
+  </g>
+  <g>
+    <line x1="350" y1="260" x2="610" y2="260" stroke="#333" stroke-width="1.5"/>
+    <line x1="350" y1="260" x2="350" y2="30" stroke="#333" stroke-width="1.5"/>
+    <text x="480" y="285" text-anchor="middle">reaction coordinate</text>
+    <path d="M 365 220 C 405 220, 450 210, 490 150 S 515 75, 535 75 S 565 130, 600 130" fill="none" stroke="#1f5fa8" stroke-width="3"/>
+    <circle cx="535" cy="75" r="4" fill="#b03030"/>
+    <text x="535" y="62" text-anchor="middle" fill="#b03030">late TS</text>
+    <text x="365" y="240">reactants</text>
+    <text x="600" y="150" text-anchor="end">products</text>
+    <text x="480" y="40" text-anchor="middle" font-weight="bold">endothermic: TS looks like products</text>
+  </g>
+</svg>

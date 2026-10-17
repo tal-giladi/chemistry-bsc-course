@@ -1,0 +1,19 @@
+# Coupling of 3-aminothiophene with para-substituted benzenediazonium cations X-C6H4-N2+ in
+# 50 % water - 50 % DMSO (v/v), 20 C, ionic strength 0.1 M (KCl), stopped-flow spectrophotometry.
+# Source: R. El Abed, T. Slama, F. Mahdhaoui, T. Boubaker, ChemPhysChem 26, e202500553 (2025),
+# Table 1, doi:10.1002/cphc.202500553, open access under CC BY 4.0
+# (https://pmc.ncbi.nlm.nih.gov/articles/PMC12710183/), retrieved 2026-10-17.
+# k_pH2, k_pH1: observed second-order rate constants (M-1 s-1) at pH 2 and pH 1.
+# k1_pH2, k1_pH1: rate constants for the free (unprotonated) amine, M-1 s-1, computed by the authors
+#   from k, [H3O+] and Ka = 10^-3.38 of the aminothiophene.
+# kD_*: the same constants for 2-deuterio-3-aminothiophene (blank = not measured).
+# sigma_p, sigma_p_plus: as listed in the paper's Table 1 (Hansch, Leo and Taft 1991).
+X,k_pH2,kD_pH2,k1_pH2,k1D_pH2,k_pH1,kD_pH1,k1_pH1,k1D_pH1,sigma_p,sigma_p_plus
+OCH3,0.530,0.490,13.3,12.3,0.0600,0.0530,14.5,13.0,-0.27,-0.78
+CH3,2.78,,69.5,,0.240,,58.8,,-0.17,-0.31
+H,17.1,17.9,427,445,1.93,1.67,465,412,0.00,0.00
+F,41.2,,1030,,4.19,,1010,,0.06,-0.07
+Cl,84.6,,2110,,8.54,,2060,,0.23,0.11
+CF3,1030,,25700,,107,,25800,,0.54,0.61
+CN,1380,1210,34400,30200,129,131,31000,32100,0.66,0.66
+NO2,3830,,95500,,345,,83200,,0.78,0.79

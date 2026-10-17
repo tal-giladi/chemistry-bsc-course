@@ -1,0 +1,8 @@
+# Instructor notes — 28.2 The Hammond postulate and selectivity
+
+- Objective: the learner predicts early or late transition states with Hammond, converts product ratios into per-H selectivity and $\delta\Delta^\ddagger G$, computes abstraction enthalpies from BDEs, and estimates α with Bell–Evans–Polanyi/Leffler and Marcus.
+- Likely confusion: Hammond is about structure (resemblance), not directly about barrier height; the per-H correction; the sign convention for abstraction enthalpy (bond broken minus bond made).
+- Misconception: "more stable product always means faster" — true only in proportion to α; for an early transition state (chlorination) product stability barely matters. Second: "low selectivity proves an early transition state" (diffusion limit, Part B question 4).
+- Analogy: two hikers cross a ridge toward different valleys. If the far valley is much lower than the ridge (exothermic), the pass sits near the start; if the far valley is nearly as high as the pass (endothermic), the pass sits next to it and looks like it.
+- Expected hands-on result: per-H selectivity 3.7 (Cl), 97.0 (Br); $\delta\Delta^\ddagger G$ 3.22 and 11.34 kJ/mol; abstraction enthalpies Cl −8.6/−19.1, Br +56.8/+46.3 kJ/mol; α 0.31 and 1.08; 2-methylpropane estimate 55 % (Cl, rough) and 99.8 % (Br); Marcus λ = 60: α 0.34 and 0.89, barriers 7.0 and 47.1 kJ/mol. Pencil: 2300 per H, 99.6 %; 5 × 10⁴; 11.3/20.0/31.3 kJ/mol with α 0.375/0.5/0.625; diffusion limit.
+- Extension: compare the BEP estimate for chlorination of 2-methylpropane with a measured product ratio from a primary source, and discuss why one α does not transfer across a 19 kJ/mol range; or fit α as a function of temperature from published propane chlorination ratios at several temperatures.

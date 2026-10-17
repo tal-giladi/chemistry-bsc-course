@@ -1,0 +1,8 @@
+# Instructor notes — 28.4 Reactive intermediates: carbocations, radicals, carbenes
+
+- Objective: the learner ranks carbocations and radicals (hyperconjugation, resonance, BDEs, RSE), predicts 1,2-shifts, uses σ+ with ρ = −4.54 for cumyl chloride SN1 rates, and distinguishes singlet and triplet carbenes (Skell test).
+- Likely confusion: low BDE means a stable radical, not a strong bond; why radicals gain less from substitution than cations; spin multiplicity and degeneracy (triplet = three spin states).
+- Misconception: "carbocations rearrange only to tertiary" — any shift that gives a more stable cation (including to resonance-stabilised or oxocarbenium ions) can happen; and "a triplet ground-state carbene reacts as a triplet" (Curtin–Hammett link to 28.1).
+- Analogy: an empty p orbital is a hole that neighbours fill: σ bonds lean in a little (hyperconjugation), a π bond or lone pair pours in (resonance).
+- Expected hands-on result: RSE +16.3, +26.8, +35.5, +64.0, +67.8, −23.9, −33.1 kJ/mol; cumyl factors 3.48e3 (p-OCH₃), 25.6, 2.08, 0.317, 0.208 (p-Br), 1.7e-3 (p-CF₃), 2.6e-4 (p-NO₂); σp would give 16.8 for p-OCH₃; singlet fraction 5.5e-7 (33 kJ/mol, g = 1 and 3). Worked: 1.3e7 between p-OCH₃ and p-NO₂; toluene benzylic +9.1 versus ring +106.2 kJ/mol. Pencil: 2-bromo-2-methylbutane; phenyl < ethyl < tert-butyl < methoxymethyl; triplet; about 2e8 (upper limit).
+- Extension: look up the gas-phase hydride ion affinities of the methyl, ethyl, isopropyl and tert-butyl cations (NIST WebBook ion energetics) and compare the spread with the radical RSEs; or use RDKit to enumerate all 1,2-shift products of a given cation and rank them by substitution.
