@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" width="560" height="340" font-family="Arial, Helvetica, sans-serif" font-size="14">
+  <title>Energy profile of a reaction with and without a catalyst</title>
+  <desc>Potential energy against reaction coordinate. Reactants on the left, products lower on the right. The uncatalysed path rises to a high transition state; the catalysed path has a lower maximum. The activation energy is the height from reactants to the top; the reaction energy, the difference between reactants and products, is the same for both paths.</desc>
+  <rect width="560" height="340" fill="#ffffff"/>
+  <line x1="60" y1="300" x2="540" y2="300" stroke="#000" stroke-width="1.5"/>
+  <line x1="60" y1="300" x2="60" y2="30" stroke="#000" stroke-width="1.5"/>
+  <text x="300" y="328" text-anchor="middle">reaction coordinate</text>
+  <text x="22" y="170" text-anchor="middle" transform="rotate(-90 22 170)">potential energy</text>
+  <path d="M 80 200 C 160 200, 200 60, 280 60 C 360 60, 400 250, 520 250" fill="none" stroke="#1f4e9c" stroke-width="3"/>
+  <path d="M 80 200 C 170 200, 210 140, 280 140 C 350 140, 400 250, 520 250" fill="none" stroke="#c0392b" stroke-width="3" stroke-dasharray="8 5"/>
+  <line x1="80" y1="200" x2="150" y2="200" stroke="#555" stroke-dasharray="3 3"/>
+  <line x1="450" y1="250" x2="520" y2="250" stroke="#555" stroke-dasharray="3 3"/>
+  <line x1="130" y1="200" x2="130" y2="62" stroke="#1f4e9c" stroke-width="1.5"/>
+  <text x="138" y="120" fill="#1f4e9c">Ea</text>
+  <line x1="190" y1="200" x2="190" y2="142" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="198" y="176" fill="#c0392b">Ea (catalysed)</text>
+  <line x1="490" y1="200" x2="490" y2="250" stroke="#000" stroke-width="1.5"/>
+  <line x1="470" y1="200" x2="520" y2="200" stroke="#555" stroke-dasharray="3 3"/>
+  <text x="430" y="228" text-anchor="end">reaction energy (same for both)</text>
+  <text x="280" y="50" text-anchor="middle" fill="#1f4e9c">transition state ‡</text>
+  <text x="80" y="222">reactants</text>
+  <text x="520" y="272" text-anchor="end">products</text>
+</svg>

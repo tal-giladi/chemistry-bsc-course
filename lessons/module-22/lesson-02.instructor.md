@@ -1,0 +1,8 @@
+# Instructor notes — 22.2 Measuring rates: methods and data analysis
+
+- Objective: the learner matches methods to timescales, converts a linear physical property into fraction converted, understands the endpoint problem, finds orders by initial rates, half-lives and isolation, and fits nonlinearly with uncertainties and residuals.
+- Likely confusion: why the absorptivity or specific rotation is not needed (it cancels in $x$); relaxation time versus half-life ($t_{1/2} = \tau\ln 2$); which window counts as "initial".
+- Misconception: "more free parameters always give a better answer". The free-endpoint fit of experiment 5 has a smaller residual but an endpoint 2.2σ from the theoretical one and a $k$ 25 % above the fixed-endpoint value. Second: "the last reading is the infinity value".
+- Analogy: the physical-property method is like timing a bath filling by watching the water line on the tiles — you need to know where the line will be when the bath is full, but not how many litres a tile holds.
+- Expected hands-on result: $x$ = 0.021, 0.149, 0.331, 0.451, 0.611, 0.737, 0.860; $k$ = 0.0206 min⁻¹ (theoretical endpoint), 0.0668 (last reading as endpoint), 0.0258 ± 0.0018 with $P_\infty$ = −0.210 ± 0.033° (free); experiment 1 initial rate 0.0379 °/min = 0.680 mM/min; local orders 0.76, 0.53, 0.33, 0.28, 0.17, 0.00. Pencil: second order, $k$ = 1.0 L mol⁻¹ s⁻¹; $k_f$ = 3.75e5, $k_r$ = 1.25e5 s⁻¹; 0.0116 vs 0.0127 s⁻¹.
+- Extension: implement the Guggenheim method (pairs of readings a fixed interval apart, no endpoint needed) on experiment 5 and compare its $k$ with the three values above; or vary the initial-rate window for experiment 1 (10, 26, 49 min) and plot how the rate falls as products accumulate.

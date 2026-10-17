@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    The rate constant of 2NO + O2 -> 2NO2 falls from 2.35e-38 to 7.98e-39 cm6 molecule-2 s-1 between
+    270 and 600 K. Which mechanism explains this best?
+  options:
+    - A single termolecular collision, whose barrier is lower at high temperature.
+    - A rate-determining first step whose activation energy is very large.
+    - A fast exothermic pre-equilibrium 2NO <=> N2O2 followed by a slower step with O2.
+    - A chain reaction in which heating destroys the chain carriers faster than it makes them.
+  correct: 2
+  explanation: >-
+    With a pre-equilibrium, k = K1 k2 and Ea = Ea,2 + dH1. The dimerisation is exothermic, so K1 falls
+    with temperature faster than k2 rises, giving the observed Ea of about -4.4 kJ/mol.
+- id: q2
+  question: >-
+    In A -> I -> P with k1 = 1.0 s-1, a student applies the steady-state approximation to I. For which
+    value of k2 is that approximation reliable after the first second?
+  options:
+    - k2 = 0.1 s-1, because I then accumulates to a steady high level.
+    - k2 = 1.0 s-1, because the two steps then balance each other exactly.
+    - Any k2, because d[I]/dt is always zero for an intermediate.
+    - k2 = 50 s-1, because I is then destroyed much faster than it forms.
+  correct: 3
+  explanation: >-
+    The SSA needs a short-lived intermediate, k2 much larger than k1, and is valid after an induction
+    time of a few 1/k2. With k2 = k1 the product curve is off by over a third of [A]0.
+- id: q3
+  question: >-
+    N2O5 decomposition at 298 K is first order at 1 bar of N2 but its rate constant falls when the
+    pressure is lowered to 1 mbar. What is the best explanation?
+  options:
+    - At low pressure, too few collisions energise N2O5, so activation becomes rate-limiting.
+    - At low pressure, N2O5 condenses on the walls and reacts on the surface instead.
+    - At low pressure, the products recombine faster and reverse the decomposition.
+    - At low pressure, the activation energy of the bond fission rises.
+  correct: 0
+  explanation: >-
+    In the Lindemann mechanism the energised molecule must be made by collisions. When k0[M] falls
+    below k_inf (near 29 mbar here), activation limits the rate and k_uni = k0[M] becomes pressure dependent.
+- id: q4
+  question: >-
+    A rate law is v = k[H2][Br2]^(1/2) / (1 + k'[HBr]/[Br2]). What does the half order in Br2 tell you
+    about the mechanism?
+  options:
+    - Half of the Br2 molecules are too slow to collide, so only half react.
+    - Bromine atoms from a dissociation equilibrium Br2 <=> 2Br carry the reaction.
+    - The reaction is elementary, with half a bromine molecule in the activated complex.
+    - The product HBr reacts with half of the Br2 and regenerates hydrogen.
+  correct: 1
+  explanation: >-
+    Steady-state on the chain carriers gives [Br] proportional to [Br2]^(1/2), the square root of the
+    dissociation equilibrium (initiation balancing termination). Fractional orders point to such chains.
+- id: q5
+  question: >-
+    A proposed mechanism adds up to the overall equation and reproduces the measured rate law. What
+    may you conclude?
+  options:
+    - The mechanism is proven, since the rate law is unique to it.
+    - The mechanism is wrong unless every step is unimolecular.
+    - The mechanism is consistent with the data but other mechanisms may fit too.
+    - The mechanism is correct only if the rate-determining step is the last step.
+  correct: 2
+  explanation: >-
+    Different mechanisms can give the same rate law. Independent evidence, such as detecting the
+    intermediate or isotope labelling, is needed to tell them apart.

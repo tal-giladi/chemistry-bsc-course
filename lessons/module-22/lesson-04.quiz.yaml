@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A stability study finds a drug degrades with Ea = 100 kJ/mol. A distributor proposes storing it at
+    37 degrees C instead of 25 degrees C. Roughly how much faster will it degrade?
+  options:
+    - About 1.5 times faster, because 12 K is a small change in absolute temperature.
+    - About 2.2 times faster, as for any reaction warmed by about 10 K.
+    - About 4.8 times faster, from exp[(Ea/R)(1/298 - 1/310)].
+    - About 12 times faster, because the rate rises in proportion to the temperature in degrees C.
+  correct: 2
+  explanation: >-
+    exp[(100000/8.314)(1/298.15 - 1/310.15)] = e^1.56 = 4.8. The "doubling per 10 K" rule only holds
+    for Ea near 50 kJ/mol; a higher Ea means a steeper temperature dependence.
+- id: q2
+  question: >-
+    Collision theory predicts 3.4e-10 cm3 molecule-1 s-1 for the pre-exponential factor of OH + CH4,
+    but experiment gives 1.6e-12. What is the best interpretation?
+  options:
+    - Only collisions with the right geometry react, so the steric factor is about 0.005.
+    - The activation energy was measured wrongly, which lowers the apparent A.
+    - Most collisions between OH and CH4 are too slow, because CH4 is heavy.
+    - The experiment was done in the falloff region, so A is pressure dependent.
+  correct: 0
+  explanation: >-
+    The ratio, about 1/200, is the steric factor P: OH must approach a C-H bond end-on. Transition-state
+    theory expresses this as a negative entropy of activation.
+- id: q3
+  question: >-
+    An Eyring analysis of a gas-phase decomposition gives an entropy of activation of +36 J mol-1 K-1.
+    What does this suggest about the transition state?
+  options:
+    - It is tight and ordered, like two molecules locked together.
+    - It is loose, with a stretched bond and freer motion than the reactant.
+    - It has the same structure as the reactant, so the barrier is purely enthalpic.
+    - It is a stable intermediate that could be isolated at low temperature.
+  correct: 1
+  explanation: >-
+    A positive entropy of activation means more freedom at the top of the barrier, typical of bond
+    fission such as N2O5 -> NO2 + NO3. Associations and ring closures have negative values.
+- id: q4
+  question: >-
+    Rate constants of OH + CH4 measured at 200-300 K give Ea = 14 kJ/mol. A combustion modeller uses
+    this straight line to predict k at 1800 K. What goes wrong?
+  options:
+    - Nothing, because Ea is a property of the barrier and does not change with temperature.
+    - The prediction is too high, because tunnelling speeds the reaction up at high temperature.
+    - The prediction is wrong only because the units change from cm3 to L at high temperature.
+    - The prediction is far too low, because the local Ea rises to about 34 kJ/mol at high temperature.
+  correct: 3
+  explanation: >-
+    The Arrhenius plot of OH + CH4 curves upwards: temperature-dependent prefactors raise the local Ea
+    with T, and tunnelling flattens the low-T end. The low-T line underestimates k at 1800 K about fifteenfold.
+- id: q5
+  question: >-
+    For a unimolecular reaction at 300 K, an Arrhenius plot gives Ea = 102.3 kJ/mol. What is the
+    enthalpy of activation?
+  options:
+    - 102.3 kJ/mol, because Ea and the activation enthalpy are the same quantity.
+    - 99.8 kJ/mol, because the activation enthalpy is Ea minus RT.
+    - 104.8 kJ/mol, because the activation enthalpy is Ea plus RT.
+    - 2.5 kJ/mol, because the activation enthalpy equals RT at 300 K.
+  correct: 1
+  explanation: >-
+    For a unimolecular reaction Ea = dH + RT, so dH = 102.3 - 8.314 x 300/1000 = 99.8 kJ/mol. The
+    difference is small but matters when you compare with calculated barriers.

@@ -1,0 +1,8 @@
+# Instructor notes — 22.1 Rate laws and integrated rate laws
+
+- Objective: the learner defines $v$ with stoichiometric coefficients, gives units of $k$ (including cm³ molecule⁻¹ s⁻¹), separates order from molecularity, uses pseudo-first-order conditions and lifetimes, solves A ⇌ B and decides an order from how the rate responds to concentration.
+- Likely confusion: $v$ versus $-d[\mathrm{A}]/dt$ (factor 2 for $2\mathrm{A}$); the relaxation constant is $k_f + k_r$, not $k_f$; lifetime $1/k'$ versus half-life $\ln 2/k'$.
+- Misconception: "orders are the coefficients". Second: "a high $R^2$ proves the order" — the 333 mM invertase run gives $R^2 > 0.999$ for both zero and first order because only 21 % reacted.
+- Analogy: pseudo-first-order is a supermarket with a huge stock of one product — the shelf never looks emptier, so sales depend only on how many customers come in.
+- Expected hands-on result: zero-order rates 0.594 (333 mM) and 0.600 mM/min (166.7 mM); first-order $k$ 0.0191 (41.6 mM) and 0.0209 min⁻¹ (20.8 mM); $R^2$ first 0.983/0.982 vs zero 0.931/0.942; OH + CH₄ $k(272\ \mathrm{K}) = 3.54\times10^{-15}$ cm³ s⁻¹, lifetime 9.0 yr at $10^6$ cm⁻³ (9.5 yr at $9.4\times10^5$). Pencil: 7.1e3 L² mol⁻² s⁻¹; $K = 3$, $\tau = 25$ s, $[\mathrm{A}](30\ \mathrm{s}) = 0.48$ M; $k = 0.24$ L mol⁻¹ s⁻¹; 10 yr.
+- Extension: fit the 83 mM run and show its first-order $k$ (0.012 min⁻¹) lies between the two limits — the order changes smoothly, which motivates the Michaelis–Menten law in 22.5. Or derive the methane lifetime's temperature sensitivity from $E_a$ = 14.8 kJ/mol (about 2.4 % per K at 272 K).

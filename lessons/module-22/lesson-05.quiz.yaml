@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A supplier claims its new catalyst raises the equilibrium yield of a reversible reaction from 40 % to
+    70 % at the same temperature and pressure. How should you judge the claim?
+  options:
+    - Plausible, because a lower barrier makes the forward reaction win at equilibrium.
+    - Plausible only for heterogeneous catalysts, which hold the product on their surface.
+    - Impossible, because a catalyst speeds both directions equally and leaves K unchanged.
+    - Plausible if the catalyst is used in large amounts, so that it takes part in the equilibrium.
+  correct: 2
+  explanation: >-
+    A catalyst does not change the reaction Gibbs energy, so K = kf/kr is fixed and both rate constants
+    rise by the same factor. It can only shorten the time to reach the same equilibrium yield.
+- id: q2
+  question: >-
+    An enzyme has Km = 2 mM. You double the substrate concentration from 40 mM to 80 mM. What happens
+    to the initial rate?
+  options:
+    - It barely changes, because the enzyme is already almost saturated.
+    - It doubles, because the reaction is first order in substrate.
+    - It halves, because the extra substrate inhibits the enzyme.
+    - It rises fourfold, because two substrate molecules bind each enzyme.
+  correct: 0
+  explanation: >-
+    At [S] = 20 Km the enzyme works at 95 % of Vmax; at 40 Km at 98 %. The reaction is near zero order in
+    substrate, so doubling [S] raises the rate by only about 2 %.
+- id: q3
+  question: >-
+    Two enzymes act on the same substrate. Enzyme X has kcat = 100 s-1 and Km = 10 mM; enzyme Y has
+    kcat = 10 s-1 and Km = 0.1 mM. Which converts the substrate faster at 0.01 mM?
+  options:
+    - X, because its turnover number is ten times larger.
+    - X, because a large Km means the enzyme releases product quickly.
+    - Both equally, because at low substrate the rate depends only on the enzyme concentration.
+    - Y, because its kcat/Km is ten times larger and controls the rate at low substrate.
+  correct: 3
+  explanation: >-
+    At [S] much below Km, v = (kcat/Km)[E]0[S]. kcat/Km is 1e4 M-1 s-1 for X and 1e5 M-1 s-1 for Y, so
+    Y is ten times faster at 0.01 mM even though its kcat is smaller.
+- id: q4
+  question: >-
+    Fitting the 1913 invertase time courses without product inhibition gives Vmax = 0.65 mM/min and
+    with it 0.78 mM/min, with half the RMS residual. What does this tell you?
+  options:
+    - Both models are equally good, because each fits the data with one parameter.
+    - Product inhibition is real: glucose and fructose slow the enzyme as they accumulate.
+    - The enzyme loses activity over time, which the inhibition term happens to mimic.
+    - The initial rates were measured wrongly, because Vmax should not depend on the model.
+  correct: 1
+  explanation: >-
+    With KF and KG measured independently, the inhibition model has no extra free parameter yet fits
+    twice as well; the simpler model must lower Vmax to follow the late, product-rich points.
+- id: q5
+  question: >-
+    In the yeast and hydrogen peroxide demonstration, foam starts again when fresh peroxide is added to
+    a glass whose reaction had stopped. What does this show?
+  options:
+    - The catalase was regenerated in each cycle and was not used up.
+    - The first portion of peroxide was too dilute to react with the yeast.
+    - The soap reacts with peroxide once the yeast has been consumed.
+    - Oxygen from the first portion dissolved and then catalysed the second.
+  correct: 0
+  explanation: >-
+    The reaction stopped because the peroxide ran out, not the enzyme. A catalyst comes out of each
+    cycle unchanged, so new substrate is converted by the same enzyme.

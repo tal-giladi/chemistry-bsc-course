@@ -1,0 +1,8 @@
+# Instructor notes — 22.3 Mechanisms and the steady-state approximation
+
+- Objective: the learner builds a mechanism from elementary steps, derives its rate law with the RDS, pre-equilibrium and steady-state approximations, tests the SSA numerically, applies Lindemann to N₂O₅ falloff and reads negative activation energies and fractional orders as mechanistic clues.
+- Likely confusion: the difference between pre-equilibrium and SSA (the first is a limit of the second, Part A question 2); why $d[\mathrm{I}]/dt \approx 0$ does not mean $[\mathrm{I}] = 0$; which concentration counts as [M] in Lindemann (all molecules, mostly N₂).
+- Misconception: "a unimolecular reaction is always first order". Second: "a negative activation energy means the barrier is negative" — it is a composite of $E_{a,2}$ and an exothermic pre-equilibrium.
+- Analogy: the rate-determining step is a car ferry on a motorway — the traffic over the river is set by the ferry, however fast the roads; a pre-equilibrium is the queue at the dock, which grows or shrinks with how attractive waiting is.
+- Expected hands-on result: SSA maximum error 0.043 ($k_2/k_1$ = 20), 0.368 (= 1), about 0.01 (= 100); N₂O₅ at 298 K: $k_0 = 9.31\times10^{-20}$ cm³ s⁻¹, $k_\infty$ = 0.065 s⁻¹, $k/k_\infty$ = 0.003, 0.034, 0.259, 0.778, 0.972 at 1e-4 to 1 bar; half-pressure 29 mbar; 2NO + O₂ $k$ = 2.35e-38 (270 K), 1.95e-38 (298 K), 1.24e-38 (400 K), 7.98e-39 (600 K). Worked: $E_a$ = −4.41 kJ/mol.
+- Extension: add the IUPAC temperature dependence and plot the N₂O₅ falloff at 220 K (stratosphere) and 298 K on one graph — the half-pressure moves; or integrate the full Lindemann scheme (A, A*) numerically for one pressure and check the SSA on A*.

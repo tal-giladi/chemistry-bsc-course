@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A protein unfolds with a half-life of about 3 ms after it is mixed with a denaturant. Which method
+    can measure this rate?
+  options:
+    - Taking samples by hand and quenching them in ice before analysis.
+    - A stopped-flow instrument, whose dead time is about 1 ms, with fluorescence detection.
+    - A shock tube, which heats the sample to over 1000 K in microseconds.
+    - Reading the absorbance every 10 s in an ordinary spectrophotometer.
+  correct: 1
+  explanation: >-
+    The method's dead time must be well below the half-life. Stopped flow mixes in about a millisecond;
+    hand sampling and 10 s readings are far too slow, and a shock tube is for hot gas-phase reactions.
+- id: q2
+  question: >-
+    A student follows a first-order reaction by absorbance and uses the last reading, taken after two
+    half-lives, as the infinity value. How does this affect the rate constant from the ln plot?
+  options:
+    - It has no effect, because only the slope of the ln plot matters.
+    - It makes k too small, because the reaction looks as if it had barely started.
+    - It makes k too large, because late points fall steeply toward ln 0 on the plot.
+    - It only adds scatter, which averages out in a least-squares fit.
+  correct: 2
+  explanation: >-
+    With P_inf set to a late reading, P - P_inf heads to zero too early, its logarithm plunges and the
+    slope steepens. In the 1913 experiment 5 data the error is more than a factor of three.
+- id: q3
+  question: >-
+    Initial rates are 2.0, 8.1 and 31.8 (arbitrary units) at starting concentrations of 0.010, 0.020
+    and 0.040 M. What is the order in this reactant?
+  options:
+    - 2, because each doubling of the concentration multiplies the rate by about 4.
+    - 1, because the rate rises steadily as the concentration rises.
+    - 4, because the rate changes by a factor of 4 between neighbouring runs.
+    - It cannot be found, because the rates are in arbitrary units.
+  correct: 0
+  explanation: >-
+    The slope of ln v0 against ln [A]0 is ln 4/ln 2 = 2. Arbitrary units cancel in the ratios, so no
+    calibration is needed for an order from initial rates.
+- id: q4
+  question: >-
+    A nonlinear fit of a decay gives k = 0.026 +/- 0.002 min-1 with a free endpoint, but the fitted
+    endpoint disagrees with the value measured after 24 h by twice its uncertainty. What should you do?
+  options:
+    - Report 0.026 +/- 0.002 min-1, since the uncertainty of the fit is small.
+    - Average the fitted and measured endpoints and refit the data with that value.
+    - Discard the 24 h reading, because the fit uses many more data points.
+    - Suspect the model; refit with the measured endpoint and test the model.
+  correct: 3
+  explanation: >-
+    A free endpoint can absorb a model error. An independent endpoint is a test; disagreement means the
+    simple exponential may be wrong, as product inhibition makes it for invertase.

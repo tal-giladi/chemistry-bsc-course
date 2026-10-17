@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    In the reaction 2N2O5 -> 4NO2 + O2, a detector shows NO2 appearing at 4.0e-5 mol L-1 s-1. What is
+    the rate of reaction v?
+  options:
+    - 4.0e-5 mol L-1 s-1, because v is the rate of whichever species you measure.
+    - 2.0e-5 mol L-1 s-1, because N2O5 is consumed half as fast as NO2 forms.
+    - 1.0e-5 mol L-1 s-1, because v is the NO2 rate divided by its coefficient 4.
+    - 1.6e-4 mol L-1 s-1, because v is the NO2 rate times its coefficient 4.
+  correct: 2
+  explanation: >-
+    v = (1/4) d[NO2]/dt = 1.0e-5 mol L-1 s-1. Dividing each species' rate by its coefficient gives one
+    number for the whole reaction, the same as -(1/2) d[N2O5]/dt or d[O2]/dt.
+- id: q2
+  question: >-
+    A student writes the rate law of 2NO + O2 -> 2NO2 as second order in NO "because the coefficient
+    of NO is 2". When is that reasoning valid?
+  options:
+    - Always, because orders are the stoichiometric coefficients of the balanced equation.
+    - Only if the equation is an elementary step; otherwise the orders must be measured.
+    - Only in the gas phase, where molecules collide as written in the equation.
+    - Only at equilibrium, where forward and reverse rates follow the coefficients.
+  correct: 1
+  explanation: >-
+    Coefficients equal orders only for an elementary reaction. Here the measured law happens to be
+    second order in NO, but it comes from a two-step mechanism (lesson 22.3), so it had to be measured.
+- id: q3
+  question: >-
+    A dye at 2e-5 M reacts with OH- at 0.050 M and decays exponentially with k' = 0.015 s-1. Repeating
+    at 0.100 M OH- gives k' = 0.030 s-1. What do you conclude?
+  options:
+    - The reaction is first order in OH- and k = 0.30 L mol-1 s-1.
+    - The reaction is zero order in OH-, because each run is a single exponential.
+    - The reaction is second order in OH-, because k' changed when OH- changed.
+    - The dye is second order, because k' doubled when the base doubled.
+  correct: 0
+  explanation: >-
+    Under pseudo-first-order conditions k' = k[OH-]^beta. Doubling [OH-] doubled k', so beta = 1, and
+    k = 0.015/0.050 = 0.30 L mol-1 s-1. The single exponential only shows first order in the dye.
+- id: q4
+  question: >-
+    An isomerisation A <=> B is started from pure A. The concentration of A falls exponentially to a
+    plateau with an observed rate constant 0.050 s-1, and K = [B]/[A] = 4 at the end. What is kf?
+  options:
+    - 0.050 s-1, because the observed decay constant is the forward rate constant.
+    - 0.0125 s-1, because kf is the observed constant divided by K.
+    - 0.200 s-1, because kf is the observed constant multiplied by K.
+    - 0.040 s-1, because kf + kr = 0.050 s-1 and kf/kr = 4.
+  correct: 3
+  explanation: >-
+    A reversible first-order reaction relaxes with kf + kr. With kf/kr = 4 and kf + kr = 0.050 s-1,
+    kr = 0.010 s-1 and kf = 0.040 s-1.
+- id: q5
+  question: >-
+    In the 1913 invertase data, 333 mM and 166.7 mM sucrose both react at about 0.60 mM per minute,
+    while at 20.8 mM the fraction converted decays exponentially. Which statement fits?
+  options:
+    - The reaction is first order everywhere, but the high-concentration runs were too short to show it.
+    - The reaction is zero order in sucrose at high concentration and close to first order at low concentration.
+    - The reaction is second order, because the rate stays high at high sucrose concentration.
+    - The order cannot be found, because the R^2 of every plot at 333 mM is above 0.99.
+  correct: 1
+  explanation: >-
+    Halving the concentration left the rate unchanged, the sign of zero order: the enzyme is saturated.
+    At low sucrose the enzyme is mostly free and the rate becomes proportional to [S], first order.
