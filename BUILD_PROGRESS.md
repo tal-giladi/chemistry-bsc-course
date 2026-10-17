@@ -30,7 +30,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M10
 - [x] M11
 - [x] M12
-- [ ] M13
+- [x] M13
 - [ ] M14
 - [ ] M15
 - [ ] M16
@@ -77,7 +77,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [ ] final QA: `py scripts/check.py` clean, `npm run check-course` 0 problems, git clean, TODO_FOR_TAL.md ready
 
 ## Now working
-- agent: M13
+- agent: M15
 - agent: M14
 
 ## Decisions
@@ -101,3 +101,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M10 done; M12 spawned.
 - M11 done; M13 spawned.
 - M12 done; M14 spawned.
+- M13 done; M15 spawned.

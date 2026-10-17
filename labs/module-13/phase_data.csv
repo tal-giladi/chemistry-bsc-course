@@ -1,0 +1,14 @@
+substance,quantity,value,unit,source
+H2O,T_triple,273.16,K,IAPWS (fixed point; NIST WebBook lists p_triple 0.0061 bar)
+H2O,p_triple,0.00611657,bar,IAPWS-IF97 tables (611.657 Pa)
+H2O,T_crit,647.096,K,IAPWS-95 (NIST WebBook average 647 +- 2 K)
+H2O,p_crit,220.64,bar,NIST WebBook phase change data (Sato et al. 1991)
+H2O,dH_fus,6.01,kJ/mol,OpenStax Chemistry 2e 10.3
+H2O,dH_vap_373,40.67,kJ/mol,OpenStax Chemistry 2e 10.3
+H2O,Vm_liquid_273,18.02,cm3/mol,density 1.000 g/cm3 at 0 C (approximate)
+H2O,Vm_ice_273,19.65,cm3/mol,density 0.917 g/cm3 at 0 C (approximate)
+CO2,T_triple,216.58,K,NIST WebBook phase change data (Marsh 1987)
+CO2,p_triple,5.185,bar,NIST WebBook phase change data (Angus et al. 1976)
+CO2,T_crit,304.18,K,NIST WebBook phase change data (Suehiro et al. 1996)
+CO2,p_crit,73.80,bar,NIST WebBook phase change data (Suehiro et al. 1996)
+CO2,dH_sub_207,26.1,kJ/mol,NIST WebBook phase change data (Stephenson and Malanowski 1987)

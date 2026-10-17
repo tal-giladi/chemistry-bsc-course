@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    Two cups in a freezer: pure water and 0.50 mol/kg NaCl. Your thermometer reads +0.3 C on the
+    pure-water plateau and -1.4 C at the start of the salt-water plateau. What is the best estimate of
+    the freezing-point depression, and why?
+  options:
+    - 1.4 K, because the pure-water reading should simply be ignored.
+    - 1.1 K, because the offset must be subtracted from the salt reading only.
+    - 1.7 K, because the same thermometer's offset cancels in the difference.
+    - 1.86 K, because the measured value must equal the ideal prediction.
+  correct: 2
+  explanation: >-
+    Both readings carry the same +0.3 C offset, so Delta Tf = 0.3 - (-1.4) = 1.7 K. That is a little
+    below the ideal 1.86 K, as expected for real NaCl (osmotic coefficient about 0.9).
+- id: q2
+  question: >-
+    Why does the equilibrium expression for CaCO3(s) -> CaO(s) + CO2(g) contain only the CO2
+    pressure?
+  options:
+    - Because solids do not take part in the reaction at equilibrium.
+    - Because pure solids have activity 1 in their standard state, so they drop out of K.
+    - Because the concentrations of solids are too small to measure.
+    - Because CO2 is the only species whose amount changes during the reaction.
+  correct: 1
+  explanation: >-
+    K is a product of activities. A pure solid is in its standard state, so its activity is 1 however
+    much is present. Both solids react, and their amounts do change.
+- id: q3
+  question: >-
+    A student calculates the ionic strength of a 0.010 mol/kg MgSO4 solution as 0.010 and gets a
+    mean activity coefficient of 0.79. What went wrong?
+  options:
+    - Nothing; MgSO4 behaves like NaCl at the same molality.
+    - The limiting law should use the molar mass of MgSO4 instead of the charges.
+    - Activity coefficients of ions are always above 1, so the sign is wrong.
+    - The charges were ignored; I = 0.040 and |z+z-| = 4, giving about 0.39.
+  correct: 3
+  explanation: >-
+    I = 1/2 x (0.010 x 2^2 + 0.010 x 2^2) = 0.040. log gamma = -0.509 x 4 x 0.2 = -0.41, so
+    gamma is about 0.39. Doubly charged ions are much less ideal.
+- id: q4
+  question: >-
+    In Module 8 you found K = 0.91 for the water-gas shift at 1000 K using constant Delta H and
+    Delta S. NIST data with heat capacities give 1.44, matching the JANAF table. What does that mean
+    for a reactor designer?
+  options:
+    - Use 1.44, because the shortcut ignores how Delta H and Delta S change with T.
+    - Use 0.91, because the 298 K table values are the most reliable data available.
+    - Average the two, because both methods carry about the same size of error.
+    - Neither, because K cannot be calculated from tables and must be measured.
+  correct: 0
+  explanation: >-
+    Delta_r Cp is not zero, so both Delta H and Delta S move with T. The full calculation agrees with
+    an independent table within 1 %, so it is the number to design with.

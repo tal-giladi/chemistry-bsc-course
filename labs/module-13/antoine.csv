@@ -1,0 +1,7 @@
+substance,Tmin_K,Tmax_K,A,B,C,reference
+H2O,273,303,5.40221,1838.675,-31.737,Bridgeman and Aldrich 1964
+H2O,304,333,5.20389,1733.926,-39.485,Bridgeman and Aldrich 1964
+H2O,334,363,5.0768,1659.793,-45.854,Bridgeman and Aldrich 1964
+H2O,344,373,5.08354,1663.125,-45.622,Bridgeman and Aldrich 1964
+H2O,379,573,3.55959,643.748,-198.043,Liu and Lindsay 1970
+CO2,154.26,195.89,6.81228,1301.679,-3.494,Giauque and Egan 1937 (sublimation)

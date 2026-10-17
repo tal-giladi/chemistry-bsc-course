@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    Two students compress 1 mol of ideal gas at 298 K from 1 bar to 2 bar. One pushes slowly
+    (reversibly), the other in one sudden push against 2 bar. Which statement about the two runs is
+    correct?
+  options:
+    - Both need the same work, because the start and end states are the same.
+    - The slow push needs more work, because it takes much longer to do.
+    - The sudden push needs more work and gives out more heat; Delta U is zero for both.
+    - The sudden push needs more work, so Delta U is larger for it.
+  correct: 2
+  explanation: >-
+    Work and heat are path functions: about 1.72 kJ reversibly against 2.48 kJ in one step. U of an
+    ideal gas depends only on T, so Delta U = 0 on both paths and q = -w each time.
+- id: q2
+  question: >-
+    A gas in a cylinder absorbs 300 J of heat while it expands and pushes a piston, doing 120 J of
+    work on the surroundings. Using the IUPAC convention, what is Delta U of the gas?
+  options:
+    - +180 J, because q = +300 J and w = -120 J.
+    - +420 J, because heat and work both add energy.
+    - -180 J, because expansion always lowers internal energy.
+    - +300 J, because work done by the gas does not change U.
+  correct: 0
+  explanation: >-
+    Delta U = q + w with w the work done on the system. The gas does 120 J on the surroundings, so
+    w = -120 J and Delta U = 300 - 120 = +180 J.
+- id: q3
+  question: >-
+    A bicycle pump is pushed hard and fast, and the air inside heats up. Which description of the
+    compression fits best?
+  options:
+    - Isothermal, because the pump is at room temperature, so q = -w.
+    - Isochoric, because the pump volume is fixed, so no work is done.
+    - Reversible isothermal, because the air ends at the same pressure each time.
+    - Close to adiabatic, so little heat escapes and the work raises U and T.
+  correct: 3
+  explanation: >-
+    A fast stroke leaves no time for heat to leave, so q is about 0 and Delta U = w > 0. For an ideal
+    gas U depends on T, so the temperature rises (T V^(gamma-1) stays constant).
+- id: q4
+  question: >-
+    In the syringe experiment the scale reads higher on the way in than on the way out at every
+    volume mark. What is the best way to handle this?
+  options:
+    - Use only the "in" readings, because they were taken first and the seal was fresh.
+    - Average the two readings at each mark, because friction opposes each motion equally.
+    - Use only the "out" readings, because the gas has had more time to cool to room temperature.
+    - Discard the run, because any difference between them means the seal is leaking air.
+  correct: 1
+  explanation: >-
+    Friction always opposes the motion, so it raises the force when pushing and lowers it when
+    letting go by about the same amount. The mean removes it. A leak would show as a reading that
+    does not return to zero at 10 mL.

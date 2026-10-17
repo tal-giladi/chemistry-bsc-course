@@ -1,0 +1,135 @@
+- id: q1
+  question: >-
+    A compressor engineer must fill a tank from 1 bar to 10 bar and can either compress slowly with
+    cooling (close to reversible isothermal) or fast without cooling. Per mole of gas at 298 K, the
+    slow route needs RT ln 10 = 5.7 kJ. What can you say about the fast route?
+  options:
+    - It needs exactly 5.7 kJ as well, because the start and end pressures are the same.
+    - It needs less work, because there is no time for any heat to leak away from the gas.
+    - It needs more work, and the gas comes out hot, because the push is fast and adiabatic.
+    - It needs no work at all, because no heat is exchanged with the surroundings.
+  correct: 2
+  explanation: >-
+    Work is a path function. Reversible isothermal compression is the minimum; a fast adiabatic push
+    puts all the work into U, so the gas heats up and its pressure rises faster, requiring more work.
+- id: q2
+  question: >-
+    A food lab burns 1.00 g of a fat in a bomb calorimeter and reports Delta U. The fat burns as
+    C57H110O6 + 81.5 O2 -> 57 CO2 + 55 H2O(l). Should they convert Delta U to Delta H before
+    publishing an enthalpy of combustion?
+  options:
+    - Yes, Delta n_gas = 57 - 81.5 = -24.5 mol, so Delta H is about 61 kJ/mol more negative than Delta U.
+    - No, because a bomb calorimeter measures enthalpy directly.
+    - Yes, Delta n_gas = 57 + 55 - 81.5 = +30.5 mol, so Delta H is less negative than Delta U.
+    - No, because the correction RT is only 2.5 J/mol and negligible.
+  correct: 0
+  explanation: >-
+    A sealed bomb gives Delta U. Only gases count: 57 - 81.5 = -24.5, and Delta n RT = -24.5 x 2.479
+    = -61 kJ/mol, about 0.2 % of a fat's combustion enthalpy, which is larger than a good bomb's
+    uncertainty. Liquid water does not count, and RT is 2.5 kJ/mol, not J/mol.
+- id: q3
+  question: >-
+    An ammonia plant designer takes Delta_r H = -91.9 kJ/mol from a 298 K table to size the cooling of
+    a reactor at 700 K. With Delta_r Cp around -40 J/(mol K), what is the likely error?
+  options:
+    - None, because enthalpies of reaction do not depend on temperature at all.
+    - About 40 J/mol, because Delta Cp is given in J/(mol K) and is small.
+    - About 400 kJ/mol, because the temperature rises by about 400 K.
+    - About 13-18 kJ/mol, because by Kirchhoff the reaction is more exothermic at 700 K.
+  correct: 3
+  explanation: >-
+    Delta H(700) = Delta H(298) + integral of Delta Cp dT. With -40 J/(mol K) over 400 K that is about
+    -16 kJ/mol; the full NIST integral gives -105.3 kJ/mol, 13 kJ/mol more exothermic than the table.
+- id: q4
+  question: >-
+    A geothermal engineer proposes a plant using water at 120 C with cooling at 30 C, and promises 35 %
+    efficiency. Should an investor believe it?
+  options:
+    - Yes, because 35 % is below the 100 % allowed by the first law.
+    - No, because the Carnot limit is 1 - 303/393 = 23 %, so 35 % is impossible.
+    - Yes, because the Carnot limit is 1 - 30/120 = 75 %.
+    - No, because heat engines cannot work below 100 C.
+  correct: 1
+  explanation: >-
+    The second law caps any heat engine at 1 - T_c/T_h in kelvin: 1 - 303.15/393.15 = 0.23. Using
+    Celsius gives the wrong 75 %. Real plants reach well below the Carnot limit.
+- id: q5
+  question: >-
+    Two litres of gas, one of N2 and one of O2, at the same T and p, are separated by a partition
+    that is then removed. The gases mix. What is the entropy change, and is the reverse possible?
+  options:
+    - Zero, because no heat flows and no work is done.
+    - Positive, -n R sum x ln x; unmixing by itself would lower total entropy and does not happen.
+    - Negative, because mixing makes the gas more uniform and therefore more ordered.
+    - Positive, but the reverse also happens often because both have the same probability.
+  correct: 1
+  explanation: >-
+    Each gas expands into the full volume: Delta_mix S = -nR(x1 ln x1 + x2 ln x2) > 0, with no change in
+    the surroundings. Spontaneous unmixing would need Delta S_total < 0, which the second law forbids.
+- id: q6
+  question: >-
+    In a reactor at 700 K, Delta_r G standard for a reaction is +54 kJ/mol, but a gas sample gives
+    Q = 6e-7 (K = 9e-5). An operator says no product can form. What is the correct analysis?
+  options:
+    - The operator is right, because a positive Delta G standard means the reaction cannot run.
+    - The reaction runs backwards, because Q is far below 1.
+    - The reaction is at equilibrium, because Q and K are both small numbers.
+    - Delta G = 54 + RT ln Q = 54 - 83 = -29 kJ/mol, so product forms until Q reaches K.
+  correct: 3
+  explanation: >-
+    Direction depends on Delta G = Delta G standard + RT ln Q. With RT = 5.82 kJ/mol and ln Q = -14.3,
+    Delta G is negative. Q < K always means the forward reaction runs.
+- id: q7
+  question: >-
+    A hiker in the mountains at 0.70 bar wants to know at what temperature her pasta water boils.
+    Water's Delta_vap H is about 41 kJ/mol and it boils at 373 K at 1.013 bar. Which estimate is right?
+  options:
+    - About 363 K (90 C), from the Clausius-Clapeyron equation.
+    - About 373 K, because boiling points do not depend on pressure.
+    - About 393 K, because lower pressure raises the boiling point.
+    - About 261 K, from multiplying 373 K by 0.70.
+  correct: 0
+  explanation: >-
+    1/T2 = 1/373 - (R/Delta H) ln(0.70/1.013) = 0.002681 + 0.0000749 = 0.002756, so T2 = 363 K. Lower
+    pressure lowers the boiling point; the relation is logarithmic, not proportional.
+- id: q8
+  question: >-
+    A freeze-dryer must remove ice from a vaccine without melting it. At the shelf temperature of
+    -30 C, what condition must the chamber pressure meet?
+  options:
+    - It must be above the triple-point pressure, so that the ice melts gently first.
+    - It must be exactly 1 atm, so that the ice stays solid throughout the drying.
+    - It must be below the vapour pressure of ice at -30 C, so ice turns straight to vapour.
+    - Any pressure works, because ice sublimes at every pressure when it is below 0 C.
+  correct: 2
+  explanation: >-
+    Below the triple point the liquid cannot exist; ice sublimes when the surrounding water vapour
+    pressure is below its sublimation pressure at that temperature (about 0.4 mbar at -30 C). At 1
+    atm, sublimation is far too slow.
+- id: q9
+  question: >-
+    A pH meter is used on acetic acid in seawater (ionic strength about 0.7). A student uses the
+    textbook Ka = 1.8e-5 with concentrations and finds the measured pH lower than predicted. Why?
+  options:
+    - The pH meter must be broken, because Ka is a true constant in every solution.
+    - Salt reacts with acetic acid to form HCl, and the HCl lowers the pH.
+    - Ions become more ideal at high ionic strength, so the acid dissociates less.
+    - Ka uses activities; ion activity coefficients below 1 raise the concentration ratio.
+  correct: 3
+  explanation: >-
+    Ka = gamma^2 [H+][A-]/[HA]. With gamma below 1, the concentration ratio Kc = Ka/gamma^2 exceeds Ka,
+    so more acid dissociates. The limiting law is not valid at 0.7, but the direction is right.
+- id: q10
+  question: >-
+    You measure a 0.50 mol/kg NaCl solution freezing 1.70 K below pure water. Kf of water is
+    1.86 K kg/mol. What does this tell you?
+  options:
+    - It is slightly non-ideal; phi = 1.70/1.86 = 0.91, so the ions act as fewer particles.
+    - NaCl does not dissociate at all, so each formula unit counts as one particle.
+    - The thermometer must be wrong, because the ideal law has to hold exactly for salt.
+    - The water activity is lower than ideal, because the measured depression is smaller.
+  correct: 0
+  explanation: >-
+    Ideal with two ions: 1.86 x 2 x 0.50 = 1.86 K. The measured 1.70 K gives an osmotic coefficient of
+    0.91 and a water activity slightly above the Raoult value: ion attraction makes the salt act like
+    fewer free particles.

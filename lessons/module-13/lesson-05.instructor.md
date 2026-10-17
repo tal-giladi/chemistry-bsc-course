@@ -1,0 +1,9 @@
+# Instructor notes — 13.5 Phase equilibria and phase diagrams
+
+- Objective: phase rule; μ(T) slopes as the origin of phase lines; Clapeyron (any transition) and Clausius–Clapeyron (with a gas); water and CO₂ diagrams from NIST data; local boiling point measured at home.
+- Likely confusion: when to use Clapeyron vs Clausius–Clapeyron, and sea-level-corrected vs station pressure (weather apps almost always show the corrected value; at 800 m the difference is about 90 hPa, i.e. 2.5 °C in boiling point).
+- Misconception: "ice skating works because pressure melts ice" (the slope says well under 1 K for realistic pressures; surface premelting and frictional heating are the accepted explanations). Also "dry ice melts".
+- Analogy: phase lines as borders between countries on a map of (T, p); the triple point is the spot where three countries meet; the critical point is where a border simply ends in open land.
+- Expected hands-on result: rolling boil steady within 0.2 °C; sea level 99.5–100.5 °C, Jerusalem (~0.92 bar) ~97.3 °C, Dead Sea (~1.06 bar) ~101.3 °C, within the thermometer's ±0.5–1 °C after the ice-point offset. Script: melting slope −135 bar/K; Antoine p(373.15) 1.0133 bar; Tb 100.00 °C (1.01325 bar), 97.32 °C (0.92), 101.27 °C (1.06); CO₂ sublimation at 194.65 K: 1.013 bar (C–C), 1.006 bar (Antoine); CO₂ average ΔvapH 16.6 kJ/mol; vdW a 3.656, b 0.0428 (LibreTexts table 3.640, 0.04267).
+- Data note: ice and water molar volumes (19.65, 18.02 cm³/mol) are from rounded densities 0.917 and 1.000 g/cm³; the slope is good to about 1 %. The ΔsubH of water used in the plot (51.1 kJ/mol) is ΔfusH + ΔvapH near 273 K.
+- Extension: freeze-drying. Using the solid–vapour line, find the temperature at which ice has a vapour pressure of 0.1 mbar (about −40 °C), the regime of a lab freeze-dryer.

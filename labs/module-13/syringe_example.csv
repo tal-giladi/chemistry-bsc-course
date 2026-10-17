@@ -1,0 +1,13 @@
+direction,V_mL,scale_g
+in,10,15
+in,9,283
+in,8,546
+in,7,835
+in,6,1236
+in,5,1772
+out,5,1539
+out,6,981
+out,7,585
+out,8,298
+out,9,66
+out,10,0

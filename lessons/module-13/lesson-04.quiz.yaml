@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    A reaction has Delta_r G standard = +20 kJ/mol at 600 K, yet a sample of the reacting gas mixture
+    is observed to form more product. Which explanation is consistent with thermodynamics?
+  options:
+    - The measurement must be wrong, because a positive Delta G standard forbids any product.
+    - A catalyst in the reactor has made Delta G standard negative.
+    - The mixture has Q so far below K that RT ln Q outweighs +20 kJ/mol, making Delta_r G negative.
+    - At 600 K the sign of Delta G standard no longer matters, only the sign of Delta H.
+  correct: 2
+  explanation: >-
+    Direction follows Delta_r G = Delta_r G standard + RT ln Q. A positive Delta G standard only means
+    K < 1; a mixture with Q < K still reacts forward. A catalyst changes the rate, not Delta G.
+- id: q2
+  question: >-
+    Compressing 1 mol of an ideal gas at 298 K from 1 bar to 10 bar raises its Gibbs energy by 5.7 kJ.
+    By roughly how much does the same pressure rise change G of 1 mol of liquid water (18 cm3/mol)?
+  options:
+    - About 16 J, because dG = V dp and the liquid's volume is tiny.
+    - About 5.7 kJ, because G changes by RT ln(p2/p1) for every substance.
+    - About 0.57 kJ, because liquids are ten times less compressible than gases.
+    - Zero, because liquids are incompressible and so G cannot depend on pressure.
+  correct: 0
+  explanation: >-
+    (dG/dp)_T = V. For water, 18e-6 m3/mol x 9e5 Pa = 16 J/mol. The RT ln(p2/p1) form comes from
+    V = RT/p and holds only for ideal gases. G of a liquid does depend on p, just weakly.
+- id: q3
+  question: >-
+    A student computes K for ammonia synthesis at 800 K using Delta H and Delta S at 298 K, and gets
+    4.5e-5. The full calculation with NIST heat capacities gives 9.0e-6. What is the main lesson?
+  options:
+    - The heat-capacity data must be wrong, because K cannot change by a factor of 5.
+    - Both values are acceptable, because K is only ever known to a factor of 10.
+    - The error comes from using kelvin instead of Celsius in RT.
+    - Delta_r H and Delta_r S change with T via Delta_r Cp, so the shortcut fails.
+  correct: 3
+  explanation: >-
+    Kirchhoff and the integral of Delta_r Cp / T move both Delta H and Delta S. Their errors partly
+    cancel in Delta G but still leave several kJ/mol, and K depends exponentially on Delta G. The
+    full value matches the JANAF table.
+- id: q4
+  question: >-
+    The NIST-JANAF table lists log10 Kf = -2.029 for NH3(g) at 700 K. What is K for
+    N2 + 3 H2 -> 2 NH3 at 700 K?
+  options:
+    - 10^-2.029 = 9.4e-3, because Kf is the K of the synthesis.
+    - 10^(2 x -2.029) = 8.8e-5, because the equation as written forms 2 mol of NH3.
+    - 10^(-2.029/2) = 9.7e-2, because the equation needs half of the formation reaction.
+    - e^-2.029 = 0.13, because log Kf is a natural logarithm.
+  correct: 1
+  explanation: >-
+    Kf refers to forming 1 mol of NH3 from 1/2 N2 + 3/2 H2. The written equation is twice that, and
+    doubling an equation squares K: (10^-2.029)^2 = 8.8e-5.

@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    A chemist wants to distil a solvent that boils at 150 C at 1 atm, but it decomposes above 100 C.
+    Its Delta_vap H is about 40 kJ/mol. What should she do?
+  options:
+    - Heat it to 100 C at 1 atm and wait longer, since it will boil slowly below its boiling point.
+    - Raise the pressure, because higher pressure lowers the boiling point.
+    - Add salt to the solvent, which lowers its boiling point.
+    - Lower the pressure so that its vapour pressure reaches the applied pressure below 100 C.
+  correct: 3
+  explanation: >-
+    A liquid boils when its vapour pressure equals the applied pressure. Clausius-Clapeyron gives a
+    vapour pressure of roughly 0.22 bar at 100 C for these numbers, so a vacuum below that lets it
+    boil safely. Dissolved solutes raise, not lower, the boiling point.
+- id: q2
+  question: >-
+    A block of dry ice is left on a kitchen table at 1 atm. Why does it turn straight into gas
+    without forming a liquid?
+  options:
+    - Its triple-point pressure (5.185 bar) is above 1 atm, so liquid CO2 cannot exist at 1 atm.
+    - Its critical temperature is below room temperature, so the liquid cannot form.
+    - Its melting line has a negative slope, like water, so pressure melts it.
+    - It does melt, but the liquid evaporates too fast to be seen.
+  correct: 0
+  explanation: >-
+    Liquid CO2 exists only above 5.185 bar. At 1 atm the solid is in equilibrium with the gas at
+    -78.5 C and sublimes. CO2's critical temperature (304 K) is above room temperature, and its
+    melting line slopes positively.
+- id: q3
+  question: >-
+    On a phase diagram of a pure substance, a point lies on the liquid-vapour line. How many
+    intensive variables can you change independently while keeping both phases present?
+  options:
+    - Two, temperature and pressure, because both are intensive variables.
+    - One, because choosing the temperature fixes the pressure on the line.
+    - None, because two phases in equilibrium fix both temperature and pressure.
+    - Three, temperature, pressure and the amount of each phase.
+  correct: 1
+  explanation: >-
+    Phase rule F = C - P + 2 = 1 - 2 + 2 = 1. Only at the triple point (P = 3) is F = 0. The amounts
+    of each phase are extensive and not counted.
+- id: q4
+  question: >-
+    Liquid water is denser than ice. Using the Clapeyron equation, what happens to the melting point
+    of ice when the pressure rises by 100 bar?
+  options:
+    - It rises by about 0.7 K, because Delta_fus V is positive for water.
+    - It falls by about 135 K, because dp/dT is -135 bar/K.
+    - It falls by about 0.7 K, because Delta_fus V is negative (dT/dp = -0.0074 K/bar).
+    - It does not change, because solids and liquids are both incompressible.
+  correct: 2
+  explanation: >-
+    dp/dT = Delta H / (T Delta V) = 6010 / (273.15 x -1.63e-6) = -135 bar/K, so dT/dp is about
+    -0.0074 K/bar and 100 bar lowers the melting point by about 0.74 K.

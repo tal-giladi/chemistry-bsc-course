@@ -1,0 +1,9 @@
+# Instructor notes — 13.6 Solutions, activity and equilibrium constants
+
+- Objective: partial molar quantities; Raoult and Henry; μ = μ° + RT ln a with explicit standard states; Kf from ΔfusH and water activity from a freezing point; ionic strength and the Debye–Hückel limiting law; K in activities. Module practical: water-gas shift data sheet from NIST plus home freezing-point measurement.
+- Likely confusion: which standard state goes with which species (molality vs mole fraction vs pure phase), and why solids "disappear" from K (activity 1, not concentration 1).
+- Misconception: "activity coefficients are a fudge factor". Show that a single, measurable quantity (the freezing point) gives a_w directly, and that Kf itself is a derived, not empirical, constant.
+- Analogy: activity as "effective concentration", like a crowded room where people can only move so freely; ions with their oppositely charged atmosphere are each held back by their neighbours.
+- Expected hands-on result: home freezing — supercooling to −2 to −5 °C is common; plateaus about 1.6–1.9 K apart for 0.50 mol/kg NaCl with a 0.1 °C kitchen thermometer (the example data are a seeded model with true ΔTf 1.72 K and a +0.3 °C offset; the script reports 1.70 K, φ 0.91, a_w 0.9836 vs x_w 0.9823). If no supercooling jump appears (stirring often triggers early freezing), the plateau start is still usable. Water-gas shift: ΔrH −39.82 (500 K) to −32.82 (1200 K); K NIST/JANAF 137/138 (500 K), 9.42/9.44 (700 K), 1.44/1.44 (1000 K), 0.729/0.731 (1200 K); constant-ΔH 0.90 at 1000 K; conversion 1:1 0.921 (500 K), 0.545 (1000 K); 1:3 0.798 at 1000 K.
+- Data note: osmotic coefficients of real NaCl around 0.5 mol/kg are roughly 0.9; the lesson quotes only the OpenStax i = 1.9 at 0.050 m and keeps the rest qualitative.
+- Extension: repeat with sugar (sucrose 342.3 g/mol, ν = 1) at 0.50 mol/kg (34.2 g in 200 g water) and compare φ; or measure two salt concentrations and see φ change.

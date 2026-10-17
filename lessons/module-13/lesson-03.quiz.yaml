@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    Water freezes in a freezer at -18 C, and its entropy falls. A friend says this breaks the second
+    law. What is the right reply?
+  options:
+    - It does break the law, and that is exactly why a freezer needs electricity to run.
+    - The second law applies only to gases, so a liquid freezing is not covered by it.
+    - The water's entropy actually rises, because ice forms a more ordered crystal lattice.
+    - Only the total must rise; the heat released raises the surroundings' entropy by more.
+  correct: 3
+  explanation: >-
+    Delta S_total = Delta S_sys + Delta S_surr. Freezing releases heat q to colder surroundings, which
+    gain q/T_surr, more than the water loses. The law limits the total, not one part.
+- id: q2
+  question: >-
+    1.00 mol of ideal gas expands freely into a vacuum at 300 K, doubling its volume. No work is done
+    and no heat flows. What is the entropy change of the gas?
+  options:
+    - Zero, because no heat flows (q = 0) and Delta S = q/T.
+    - +5.76 J/K, from a reversible isothermal path between the same states.
+    - -5.76 J/K, because the gas did no work on the surroundings.
+    - +1.73 kJ/K, because Delta S = nRT ln 2 for a doubling of volume.
+  correct: 1
+  explanation: >-
+    Entropy is a state function, so use a reversible path: Delta S = nR ln(V2/V1) = 8.314 x ln 2 =
+    +5.76 J/K. The real heat (zero) is irreversible heat and does not count. The surroundings do not
+    change, so Delta S_total is also +5.76 J/K.
+- id: q3
+  question: >-
+    A geothermal plant has steam at 180 C and cools with air at 30 C. What is the most it can
+    possibly convert to work from each 100 kJ of heat taken in?
+  options:
+    - About 33 kJ, from 1 - 303/453.
+    - About 83 kJ, from 1 - 30/180.
+    - About 67 kJ, from 303/453.
+    - 100 kJ, because energy is conserved.
+  correct: 0
+  explanation: >-
+    The Carnot limit is 1 - T_c/T_h with kelvin: 1 - 303.15/453.15 = 0.33. Using Celsius gives the
+    wrong 0.83, and the first law alone allows 100 % only because it ignores entropy.
+- id: q4
+  question: >-
+    Mixing 100 g of water at 60 C with 100 g at 20 C gives 40 C. Why is the total entropy change
+    positive even though the heat lost equals the heat gained?
+  options:
+    - Heat always creates new entropy whenever it flows, whatever the two temperatures are.
+    - The hot water gains entropy as it cools, because its molecules slow down and spread.
+    - The same heat counts for more entropy at a lower temperature, so the cold side gains more.
+    - Stirring adds a little energy, and that energy becomes the extra entropy in the cup.
+  correct: 2
+  explanation: >-
+    Each sample changes by m c ln(T_f/T): -25.9 J/K for the hot water, +27.6 J/K for the cold. q/T is
+    larger when T is smaller, so the net change is +1.7 J/K.

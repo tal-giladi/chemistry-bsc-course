@@ -1,0 +1,8 @@
+# Instructor notes — 13.1 Systems, state functions and the first law
+
+- Objective: state vs path functions (with the mixed-partials exactness test from 02.5); ΔU = q + w with the IUPAC sign; reversible vs one-step isothermal work; reversible adiabatic ideal gas; a measured p–V isotherm.
+- Likely confusion: the sign of w. Physics books (and many engineering ones) use ΔU = q − w. Ask students to write the convention at the top of every page and to check every answer by asking "was work done on the gas or by it?".
+- Misconception: "heat is something the gas contains" and "isothermal means no heat flows". Both are wrong; in an isothermal ideal-gas compression all the work leaves as heat.
+- Analogy: altitude vs distance walked on Masada (state vs path). A bank account: the balance (U) changes by deposits of two kinds, cash (q) and transfers (w); the balance does not remember which.
+- Expected hands-on result: example data pV = 1.024 J ± 0.4 %, work on gas 0.697 J (= reversible value), friction ~1.2 N, atmosphere 0.504 J, hand 0.193 J, one-step 0.996 J. Real 10 mL syringes: 1.5–1.8 kg at 5 mL; pV constant within 2–5 %; the usual failure is a leaking seal (reading does not return to zero) or an underestimated dead volume (pV drifts upwards as V shrinks). Part C: (a) w = −6.39 kJ, q = +6.39 kJ; (b) w = −2.00 kJ, q = +2.00 kJ; first differential exact (z = x²y), second not.
+- Extension: push fast (1 s) from 10 to 5 mL and read the peak scale value immediately; it is higher than the slow reading, because the compression is partly adiabatic (expect up to 2^1.4 rather than 2 times the absolute pressure in the ideal limit; in practice in between, and friction confounds it). Ask which γ the data imply.

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" font-family="Arial, Helvetica, sans-serif" font-size="13">
+  <title>Schematic phase diagram of water</title>
+  <desc>Pressure against temperature for water, not to scale. Three lines meet at the triple point (0.01 °C, 611.657 Pa): the solid-liquid line leans slightly to the left (negative slope), the liquid-vapour line rises to the critical point (374 °C, 220.6 bar), and the solid-vapour line falls away below the triple point. Regions are labelled solid (ice), liquid and vapour; beyond the critical point is the supercritical fluid. A dashed line at 1 atm crosses the melting line at 0 °C and the boiling line at 100 °C.</desc>
+  <rect width="560" height="380" fill="#ffffff"/>
+  <line x1="70" y1="330" x2="530" y2="330" stroke="#222" stroke-width="1.5"/>
+  <line x1="70" y1="330" x2="70" y2="25" stroke="#222" stroke-width="1.5"/>
+  <text x="520" y="355" text-anchor="end">temperature T</text>
+  <text x="28" y="40" transform="rotate(-90 28 40)" text-anchor="end">pressure p (log scale)</text>
+  <!-- triple point at (200,250); critical at (450,90) -->
+  <path d="M200,250 C230,215 300,170 450,90" fill="none" stroke="#1d3557" stroke-width="2.5"/>
+  <path d="M200,250 C170,280 130,305 90,322" fill="none" stroke="#2a9d8f" stroke-width="2.5"/>
+  <path d="M200,250 L188,35" fill="none" stroke="#e76f51" stroke-width="2.5"/>
+  <circle cx="200" cy="250" r="6" fill="#222"/>
+  <circle cx="450" cy="90" r="6" fill="#222"/>
+  <text x="212" y="270">triple point</text>
+  <text x="212" y="286" font-size="11">273.16 K, 611.657 Pa</text>
+  <text x="440" y="74" text-anchor="end">critical point</text>
+  <text x="440" y="60" text-anchor="end" font-size="11">647.1 K, 220.6 bar</text>
+  <!-- 1 atm line -->
+  <line x1="70" y1="160" x2="530" y2="160" stroke="#888" stroke-dasharray="5 4"/>
+  <text x="525" y="153" text-anchor="end" fill="#555">1 atm</text>
+  <circle cx="195" cy="160" r="4" fill="#e76f51"/>
+  <circle cx="318" cy="160" r="4" fill="#1d3557"/>
+  <text x="182" y="178" text-anchor="end" font-size="11">melts 0 °C</text>
+  <text x="330" y="178" font-size="11">boils 100 °C</text>
+  <!-- region labels -->
+  <text x="120" y="120" font-size="15" font-weight="bold">solid (ice)</text>
+  <text x="270" y="110" font-size="15" font-weight="bold">liquid</text>
+  <text x="360" y="250" font-size="15" font-weight="bold">vapour</text>
+  <text x="470" y="40" font-size="12" fill="#444">supercritical</text>
+  <text x="470" y="54" font-size="12" fill="#444">fluid</text>
+  <text x="185" y="30" text-anchor="middle" font-size="11" fill="#9c3d22">melting line leans left</text>
+</svg>

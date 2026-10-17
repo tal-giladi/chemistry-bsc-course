@@ -1,0 +1,55 @@
+- id: q1
+  question: >-
+    A bomb calorimeter gives Delta_c U = -5150 kJ/mol for naphthalene, C10H8(s), which burns as
+    C10H8 + 12 O2 -> 10 CO2 + 4 H2O(l). What is Delta_c H at 298 K (RT = 2.479 kJ/mol)?
+  options:
+    - -5150 kJ/mol, because a bomb measures enthalpy directly.
+    - About -5155 kJ/mol, because Delta n_gas = -2 makes Delta H more negative.
+    - About -5145 kJ/mol, because Delta n_gas = +2 makes Delta H less negative.
+    - About -5185 kJ/mol, because all 14 product molecules count as gas.
+  correct: 1
+  explanation: >-
+    Only gases count: 10 CO2 minus 12 O2 gives Delta n_gas = -2. Delta H = Delta U + Delta n RT =
+    -5150 - 2 x 2.479 = -5155 kJ/mol. The bomb is sealed, so it measures Delta U.
+- id: q2
+  question: >-
+    Two students calibrate the same bomb with benzoic acid. One uses the raw peak temperature rise,
+    the other extrapolates the before and after lines to the firing time. Their calorimeter constants
+    differ by 2 %. Whose value should be used, and why?
+  options:
+    - The raw-peak value, because the thermometer reading is the direct measurement.
+    - Either, because the error cancels when the unknown is measured the same way.
+    - The average of both, because averaging removes systematic errors.
+    - The extrapolated value, because it corrects for heat exchanged with the room.
+  correct: 3
+  explanation: >-
+    Heat leaks in or out while the bath warms, so the raw peak is not the rise the reaction alone
+    caused. Extrapolating both lines to the firing time corrects for it; the error would only cancel
+    if the unknown had exactly the same time course.
+- id: q3
+  question: >-
+    N2 has Cp = 29.12 J/(mol K) at 298 K and 32.69 J/(mol K) at 1000 K. What is the best explanation
+    for the rise?
+  options:
+    - The N2 vibration starts to be excited at high temperature and takes up energy.
+    - The molecules start to rotate only above room temperature.
+    - The gas stops being ideal at high temperature, so Cp - Cv is no longer R.
+    - N2 starts to dissociate into atoms, which absorbs heat.
+  correct: 0
+  explanation: >-
+    At 298 K, N2 has translation plus rotation, Cp close to 7/2 R = 29.10. Its stiff vibration needs
+    more energy; as T rises it becomes partly excited and adds to Cp. Rotation is already fully active
+    at room temperature, and dissociation needs thousands of kelvin.
+- id: q4
+  question: >-
+    An engineer needs Delta_r H for ammonia synthesis at 750 K and uses the 298 K table value,
+    -91.9 kJ/mol. The integrated NIST data give about -106 kJ/mol. What does this tell you?
+  options:
+    - The table value is wrong and should be replaced by -106 kJ/mol at all temperatures.
+    - Reaction enthalpies never change with temperature, so the NIST integral must contain an error.
+    - Delta_r Cp is not zero, so the enthalpy changes with temperature and Kirchhoff's law is needed.
+    - The difference comes from using kJ instead of J and would vanish with consistent units.
+  correct: 2
+  explanation: >-
+    Delta_r H(T) = Delta_r H(298) + integral of Delta_r Cp dT. Here Delta_r Cp is negative, so the
+    reaction becomes more exothermic as T rises; over 450 K the change is about 14 kJ/mol.
