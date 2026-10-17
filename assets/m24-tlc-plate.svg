@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300" font-family="Helvetica, Arial, sans-serif" font-size="12">
+  <title>TLC plate with three lanes</title>
+  <desc>A TLC plate with lanes for starting material, a co-spot and the reaction mixture, showing the start line, the solvent front and how Rf is measured.</desc>
+  <rect width="420" height="300" fill="#ffffff"/>
+  <rect x="40" y="20" width="200" height="260" fill="#f4f1e8" stroke="#555" stroke-width="2"/>
+  <line x1="40" y1="250" x2="240" y2="250" stroke="#333" stroke-dasharray="4 3"/>
+  <text x="246" y="254" fill="#333">start line (pencil)</text>
+  <line x1="40" y1="50" x2="240" y2="50" stroke="#1f77b4" stroke-width="2"/>
+  <text x="246" y="54" fill="#1f77b4">solvent front</text>
+  <text x="70" y="275" text-anchor="middle">SM</text>
+  <text x="140" y="275" text-anchor="middle">co</text>
+  <text x="210" y="275" text-anchor="middle">RM</text>
+  <ellipse cx="70" cy="170" rx="11" ry="7" fill="#7b4fa0"/>
+  <ellipse cx="140" cy="170" rx="11" ry="7" fill="#7b4fa0"/>
+  <ellipse cx="140" cy="110" rx="11" ry="7" fill="#d98c1f"/>
+  <ellipse cx="210" cy="110" rx="11" ry="7" fill="#d98c1f"/>
+  <ellipse cx="210" cy="170" rx="7" ry="4" fill="#7b4fa0" opacity="0.5"/>
+  <line x1="20" y1="250" x2="20" y2="50" stroke="#1f77b4" marker-end="url(#a)"/>
+  <text x="14" y="150" text-anchor="middle" transform="rotate(-90 14 150)" fill="#1f77b4">front distance</text>
+  <line x1="228" y1="250" x2="228" y2="112" stroke="#d98c1f" marker-end="url(#b)"/>
+  <text x="300" y="120" fill="#d98c1f">product spot</text>
+  <text x="300" y="175" fill="#7b4fa0">starting material</text>
+  <text x="246" y="210" fill="#333">Rf = spot distance / front distance</text>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1f77b4"/></marker>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d98c1f"/></marker>
+  </defs>
+</svg>

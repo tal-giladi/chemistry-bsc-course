@@ -1,0 +1,11 @@
+# Paper chromatogram. Copy to chromatogram.csv and replace the example rows with your measurements.
+# Distances in mm from the pencil start line to the solvent front and to the CENTRE of each spot.
+# The example rows are invented to show the format; they are not reference values for any brand.
+sample,spot,front_mm,spot_mm,solvent
+blue food colouring,1,80,62,salt water 0.4 %
+yellow food colouring,1,80,55,salt water 0.4 %
+green food colouring,blue,80,61,salt water 0.4 %
+green food colouring,yellow,80,54,salt water 0.4 %
+black marker,1,80,12,salt water 0.4 %
+black marker,2,80,38,salt water 0.4 %
+black marker,3,80,70,salt water 0.4 %

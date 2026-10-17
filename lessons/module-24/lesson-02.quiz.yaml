@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    A compound melts at 75 °C. It is very soluble in hot toluene (bp 111 °C) and in hot ethanol
+    (bp 78 °C), and poorly soluble in both when cold. Which is the better recrystallisation solvent?
+  options:
+    - Toluene, because its higher boiling point dissolves more compound per millilitre.
+    - Either one, because only the hot and cold solubilities matter.
+    - Ethanol, but only after adding toluene to lower its boiling point.
+    - Neither, because both boil above 75 °C; use a lower-boiling solvent or a pair.
+  correct: 3
+  explanation: >-
+    Both solvents boil above the melting point, so the compound would melt in the hot solution and
+    oil out, trapping impurities. A lower-boiling solvent or a two-solvent pair worked at a lower
+    temperature avoids this.
+- id: q2
+  question: >-
+    A solid dissolves to 0.060 g/mL in the boiling solvent and 0.004 g/mL in the cold solvent. You
+    dissolve 3.0 g in 100 mL instead of the minimum volume. What is the best possible recovery?
+  options:
+    - 87 %
+    - 93 %
+    - 67 %
+    - 50 %
+  correct: 0
+  explanation: >-
+    100 mL keeps 0.004 × 100 = 0.40 g dissolved when cold, so at most (3.0 − 0.4)/3.0 = 87 % crystallises.
+    With the minimum 50 mL only 0.20 g would be lost (93 %).
+- id: q3
+  question: >-
+    Your recrystallised product has a sharp melting point, but the second crop from the concentrated
+    mother liquor melts 6 °C lower over a wide range. Why?
+  options:
+    - The second crop cooled more slowly, so its crystals are larger and less dense.
+    - The impurities were concentrated in the mother liquor, so the second crop carries more of them.
+    - The second crop is a different polymorph that always melts lower.
+    - The first crop took all the solvent of crystallisation, so the second crop is anhydrous.
+  correct: 1
+  explanation: >-
+    Impurities stay in the mother liquor; boiling it down raises their concentration, so later crops
+    are less pure. Keep crops separate and check each melting point.
+- id: q4
+  question: >-
+    Two liquids boil at 80 °C and 110 °C and form a nearly ideal solution with relative volatility
+    about 2.4. A simple distillation of a 50:50 mixture gives a first distillate of about 71 % of the
+    lower boiler. What is the right change to get 95 %?
+  options:
+    - Heat faster so that the vapour leaves before it can mix.
+    - Use a vacuum, because a lower pressure always separates liquids better.
+    - Add a fractionating column worth at least about 3 to 4 theoretical plates and distil slowly.
+    - Collect only the first drop, which is pure lower boiler in a simple distillation.
+  correct: 2
+  explanation: >-
+    One boil is one equilibrium stage. The Fenske equation, ln(19)/ln(2.4) ≈ 3.4, gives the minimum
+    number of stages for 95 %; a column provides them, and slow distillation lets each stage equilibrate.

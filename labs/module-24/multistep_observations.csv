@@ -1,0 +1,10 @@
+# Illustrative bench observations for the benzaldehyde -> benzoin -> benzil -> benzilic acid sequence (lesson 24.6).
+# These are NOT measured spectra. They were written for this exercise to match literature band positions
+# (OpenStax Organic Chemistry 12.8 and 13.4) and melting points (PubChem, NIST WebBook); the virtual bench
+# (organic-bench, preset multistep) gives similar numbers. Compare with real spectra in NIST WebBook / SDBS.
+# ir_cm-1: strong bands, semicolon-separated ("b" = broad). nmr: shift_ppm:protons:multiplicity, CDCl3 or DMSO-d6.
+sample,step,mass_g,start_g,mp_lo,mp_hi,ir_cm-1,nmr
+S1,1,6.10,10.46,134,136,3415;3060;1679;1597;1450,7.92:2:d;7.55-7.25:8:m;5.95:1:d;4.55:1:d
+S2a,2,3.62,4.00,82,91,3410;3060;1675;1595;1450,7.98:4:d;7.66:2:t;7.50:4:t;5.95:0.2:s
+S2b,2,3.31,4.00,94,95,3060;1677;1660;1595;1450,7.98:4:d;7.66:2:t;7.50:4:t
+S3,3,1.62,2.00,149,151,3405;3300-2500b;1718;1490;1450,7.45-7.25:10:m;6.4:1:br;12.8:1:br

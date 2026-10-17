@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A four-step synthesis has step yields of 85 %, 70 %, 90 % and 60 %. About what overall yield do you
+    expect?
+  options:
+    - 32 %, the product of the four steps
+    - 76 %, the average of the four steps
+    - 60 %, the yield of the worst step
+    - 15 %, the four losses added together subtracted from 100 %
+  correct: 0
+  explanation: >-
+    Yields multiply: 0.85 × 0.70 × 0.90 × 0.60 = 0.32. Averaging or taking the worst step hides the
+    compounding losses that make long sequences expensive.
+- id: q2
+  question: >-
+    After oxidising benzoin, your product's ¹H NMR shows the aromatic region integrating to 10.0 H and a
+    small singlet at 5.9 ppm integrating to 0.35 H. What do you conclude?
+  options:
+    - The sample is pure benzil; the 5.9 ppm peak is the solvent.
+    - The sample is 3.5 mol% benzoin, because the aromatic protons dilute the signal tenfold.
+    - The sample contains about 35 mol% benzoin, so recrystallise or re-oxidise before step 3.
+    - The sample is benzilic acid, whose OH appears at 5.9 ppm.
+  correct: 2
+  explanation: >-
+    Both compounds have 10 aromatic H, so scaling to 10.0 counts all molecules. Only benzoin has the
+    CH(OH) proton, so 0.35 H means 35 mol% benzoin: an incomplete oxidation that must be fixed.
+- id: q3
+  question: >-
+    Which single observation best shows that step 3 (benzil to benzilic acid) has happened?
+  options:
+    - The product is a bright yellow solid that melts near 95 °C.
+    - A one-proton singlet near 10 ppm appears in the ¹H NMR.
+    - A one-proton CH(OH) doublet appears near 5.9 ppm.
+    - A broad O–H at 2500–3300 cm⁻¹ and a C=O near 1715 cm⁻¹ appear.
+  correct: 3
+  explanation: >-
+    The carboxylic acid gives the broad, hydrogen-bonded O–H and an acid C=O. Yellow with mp 95 °C is
+    benzil itself; 10 ppm is an aldehyde; 5.9 ppm is the CH(OH) of benzoin.
+- id: q4
+  question: >-
+    You need 2.0 g of benzilic acid (228.25 g/mol) and expect 60 %, 80 % and 75 % for the three steps.
+    Roughly how much benzaldehyde (106.12 g/mol) should you start with?
+  options:
+    - About 1.9 g
+    - About 2.6 g
+    - About 5.2 g
+    - About 10 g
+  correct: 2
+  explanation: >-
+    2.0 g is 8.76 mmol. At 36 % overall you need enough for 8.76/0.36 = 24.3 mmol at 100 %, and two
+    benzaldehydes make each benzoin: 48.7 mmol, 5.2 g. 1.9 g ignores the losses, 2.6 g forgets the 2:1
+    ratio, and 10 g counts the ratio twice.

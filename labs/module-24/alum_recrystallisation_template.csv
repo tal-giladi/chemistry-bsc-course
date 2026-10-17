@@ -1,0 +1,4 @@
+# Your home alum (or sugar) recrystallisation runs. Copy to alum_recrystallisation.csv and replace the example row.
+# alum_dissolved_g = mass that went into solution (weighed before minus undissolved left over); water_mL = water used.
+run,alum_dissolved_g,water_mL,crystals_dry_g,cooling,notes
+1,30.0,100,18.5,slow (towel-wrapped jar overnight),example values - replace with yours

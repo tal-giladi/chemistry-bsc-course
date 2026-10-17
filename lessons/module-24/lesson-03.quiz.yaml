@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    On a silica TLC plate in 20 % ethyl acetate–hexane, the solvent front moved 50 mm. Spot A moved
+    35 mm and spot B moved 12 mm. One is a ketone and one is an alcohol of similar size. Which is which?
+  options:
+    - A (Rf 0.70) is the alcohol, because O–H groups dissolve better in ethyl acetate.
+    - B (Rf 0.24) is the ketone, because C=O is the most polar bond and sticks hardest.
+    - A (Rf 0.70) is the ketone; B (Rf 0.24) is the alcohol, held back by its O–H on the silica.
+    - They cannot be told apart, because Rf depends only on molecular mass.
+  correct: 2
+  explanation: >-
+    Rf = 35/50 = 0.70 and 12/50 = 0.24. Silica is polar and binds hydrogen-bond donors strongly, so
+    the alcohol runs lower than the ketone.
+- id: q2
+  question: >-
+    Both of your spots sit near the start line (Rf below 0.1) in 10 % ethyl acetate–hexane. What
+    should you change?
+  options:
+    - Use pure hexane, so the compounds dissolve better and move further.
+    - Load more sample, so the spots become large enough to move.
+    - Run the plate longer, letting the solvent run off the top edge.
+    - Increase the share of ethyl acetate, because a more polar eluent moves compounds up.
+  correct: 3
+  explanation: >-
+    A more polar mobile phase competes better for the silica and moves everything up. Hexane would
+    hold them even lower; overloading causes streaks; running off the top destroys the front reference.
+- id: q3
+  question: >-
+    Your product melts at 112–118 °C; the literature value is 122 °C. A 1:1 mixture with an authentic
+    sample melts at 104–113 °C. What is the most likely conclusion?
+  options:
+    - Your product is the right compound but wet, so drying will fix both readings.
+    - Your product is a different compound, since the mixture melts lower still.
+    - The authentic sample is impure, because mixtures should melt between the two values.
+    - You heated too fast, which makes mixed samples read low.
+  correct: 1
+  explanation: >-
+    If the two were the same compound, mixing would not lower the melting point further. A further drop
+    shows each acts as an impurity in the other. Fast heating gives readings that are too high, not low.
+- id: q4
+  question: >-
+    For benzoic acid (Tm 395.5 K, enthalpy of fusion 18.0 kJ/mol), about how far does 3 mol% of a
+    soluble impurity lower the end of the melting range, assuming an ideal solution?
+  options:
+    - About 2 K
+    - About 22 K
+    - About 0.2 K
+    - About 7 K
+  correct: 0
+  explanation: >-
+    ΔT ≈ R Tm² x / ΔfusH = 8.314 × 395.5² × 0.03 / 18000 ≈ 2.2 K. The wrong values come from slips by a
+    factor of ten (0.2 K or 22 K) or from using 10 mol% instead of 3 mol% (7 K).

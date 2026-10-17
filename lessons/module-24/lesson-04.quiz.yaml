@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You react 3.00 g of salicylic acid (138.12 g/mol) with 6.0 mL of acetic anhydride (1.082 g/mL,
+    102.09 g/mol). What is the theoretical yield of aspirin (180.16 g/mol)?
+  options:
+    - 11.5 g, from the acetic anhydride
+    - 3.91 g, from the salicylic acid
+    - 3.00 g, because mass is conserved in the reaction
+    - 2.30 g, from dividing by the aspirin molar mass
+  correct: 1
+  explanation: >-
+    Salicylic acid is 21.7 mmol and the anhydride 63.6 mmol, so salicylic acid is limiting. 21.7 mmol ×
+    180.16 g/mol = 3.91 g. Using the anhydride ignores which reagent runs out first.
+- id: q2
+  question: >-
+    Your dry, recrystallised product melts sharply at 134–136 °C but gives a faint violet colour with
+    iron(III) chloride. What is the best interpretation?
+  options:
+    - The product is not aspirin, because aspirin never reacts with iron(III).
+    - The product is wet, because water turns iron(III) chloride violet.
+    - A trace of salicylic acid remains; the sensitive test sees it before the melting point does.
+    - The test is unreliable for esters, so the result can be ignored.
+  correct: 2
+  explanation: >-
+    The violet complex forms with free phenol groups, and the test detects very small amounts. A sharp
+    melting point near 135 °C says the bulk is pure; a second recrystallisation would remove the trace.
+- id: q3
+  question: >-
+    In a hurry, a student adds hot water quickly to the reaction mixture straight from the bath. What
+    is the main risk?
+  options:
+    - Violent reaction of the excess acetic anhydride with water, spattering hot acid.
+    - The aspirin dissolves completely and cannot be recovered.
+    - The phosphoric acid catalyst turns into a gas.
+    - The salicylic acid crystallises before it can react.
+  correct: 0
+  explanation: >-
+    Hydrolysis of the excess anhydride is exothermic and releases acetic acid vapour. Water is added
+    slowly to the cooled mixture so the heat can escape safely.
+- id: q4
+  question: >-
+    Which spectral change best proves that the phenol of salicylic acid became an acetyl ester?
+  options:
+    - A broad O–H band from 2500 to 3300 cm⁻¹ appears in the IR.
+    - The aromatic protons move from 7 ppm to 2 ppm in the ¹H NMR.
+    - The molecular ion in the mass spectrum loses 42 mass units.
+    - A new ester C=O near 1750 cm⁻¹ and a 3H singlet near 2.3 ppm appear.
+  correct: 3
+  explanation: >-
+    Acetylation adds an ester carbonyl, absorbing near 1750 cm⁻¹, and an acetyl CH₃ seen as a 3H singlet
+    near 2.3 ppm. The broad acid O–H is in both compounds; aromatic protons stay near 7–8 ppm; the
+    product is 42 units heavier, not lighter.

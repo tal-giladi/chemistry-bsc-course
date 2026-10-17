@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    You extract a reaction mixture with dichloromethane (1.33 g/mL) and water. Your product is a
+    neutral organic compound. Which layer do you keep, and how do you confirm it?
+  options:
+    - The top layer, because the organic layer always floats; no check is needed.
+    - The bottom layer, because dichloromethane is denser; a few drops of water join the top layer.
+    - The bottom layer, because the product is heavier than water; it will look cloudy.
+    - The top layer, because neutral compounds prefer the less dense phase; test its pH.
+  correct: 1
+  explanation: >-
+    The denser liquid sinks, so the dichloromethane layer with the neutral product is at the bottom.
+    Water dropped in joins the aqueous (top) layer. Keep both layers until the product is isolated.
+- id: q2
+  question: >-
+    An ether solution contains a carboxylic acid (pKa 4.2) and a neutral ketone. Which wash moves the
+    acid, and only the acid, into the water layer with the least risk to other groups?
+  options:
+    - Pure water, because carboxylic acids are polar and dissolve in water.
+    - Dilute hydrochloric acid, because it protonates the acid and makes it ionic.
+    - Saturated brine, because the salt pulls polar molecules out of ether.
+    - Aqueous sodium hydrogen carbonate, because at pH about 8 the acid becomes its anion.
+  correct: 3
+  explanation: >-
+    At pH 8.3, four units above the pKa, D drops about 10,000-fold and the carboxylate stays in the
+    water. Water alone leaves D near its neutral value; acid keeps the acid neutral; NaOH would also
+    work but can hydrolyse esters.
+- id: q3
+  question: >-
+    You heat a reaction in ethanol under reflux and see the ring of condensing vapour rising out of
+    the top of the condenser. What do you do?
+  options:
+    - Turn the heat down, because vapour is escaping and the reflux ring should stay low.
+    - Close the top of the condenser with a stopper so that no vapour can escape.
+    - Turn off the condenser water so the vapour stays hot and returns faster.
+    - Add boiling chips now, because the liquid has started to superheat.
+  correct: 0
+  explanation: >-
+    The ring should stay in the lower third of the condenser; too much heat sends solvent vapour out.
+    A closed system builds pressure, and boiling chips must never be added to a hot liquid because it
+    can boil over violently.
+- id: q4
+  question: >-
+    After a brine wash you add anhydrous sodium sulfate to an ether solution. The first two spatulas
+    clump into a sticky mass at the bottom and the solution is slightly cloudy. What next?
+  options:
+    - Filter now, because clumping shows the agent has done its job.
+    - Evaporate the ether, because the remaining water leaves with the solvent.
+    - Add more in small portions until fresh crystals stay free-flowing and the solution is clear.
+    - Add water to dissolve the clump, then repeat with fresh drying agent.
+  correct: 2
+  explanation: >-
+    Clumping means the agent is still taking up water. When newly added crystals move freely and the
+    solution is clear, the water is gone. Evaporating a wet solution leaves a wet product.

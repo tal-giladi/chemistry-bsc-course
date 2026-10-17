@@ -1,0 +1,133 @@
+- id: q1
+  question: >-
+    A reaction in ethyl acetate is finished. The mixture contains your neutral product, a carboxylic
+    acid by-product (pKa 4.5) and an amine catalyst (conjugate acid pKa 10). Which wash sequence leaves
+    only the product in the ethyl acetate?
+  options:
+    - Wash with dilute HCl, then with aqueous NaHCO₃, then brine; dry and evaporate.
+    - Wash three times with water only, because all three are partly water-soluble.
+    - Wash with aqueous NaOH only, because a strong base removes everything polar.
+    - Wash with brine only, then dry; the drying agent binds the acid and the amine.
+  correct: 0
+  explanation: >-
+    Acid protonates the amine, making it an ion held by water; bicarbonate turns the carboxylic acid into
+    its anion. Neutral molecules stay in the organic layer. NaOH would leave the amine neutral in the
+    organic layer and can hydrolyse esters.
+- id: q2
+  question: >-
+    During a work-up a student is unsure which layer is aqueous: one is dichloromethane extract, the other
+    a water wash, and both are colourless. What is the quickest reliable test?
+  options:
+    - Smell both layers; the organic one smells of solvent.
+    - Assume the top layer is organic, as it usually is.
+    - Add a few drops of water and see which layer they join.
+    - Measure the pH of each layer with indicator paper.
+  correct: 2
+  explanation: >-
+    Water drops mix into the aqueous layer and pass through the organic one. Here the denser
+    dichloromethane is at the bottom, so habit would mislead; smelling solvents is unsafe.
+- id: q3
+  question: >-
+    A compound dissolves to 0.080 g/mL in hot ethanol and 0.010 g/mL in cold ethanol. A student
+    recrystallises 4.0 g using 100 mL. What is the best possible recovery, and what should they have used?
+  options:
+    - 75 %; the minimum is 100 mL, so nothing could be improved.
+    - 99 %; cold solubility does not matter once crystals form.
+    - 50 %; they should have used 200 mL to keep impurities dissolved.
+    - 75 %; about 50 mL would have allowed up to 88 %.
+  correct: 3
+  explanation: >-
+    100 mL keeps 1.0 g dissolved cold, so at most 3.0/4.0 = 75 % crystallises. The minimum hot volume is
+    4.0/0.080 = 50 mL, which loses only 0.5 g (88 %).
+- id: q4
+  question: >-
+    Your aspirin is a dry white powder that melts at 126–132 °C (literature 135 °C) and turns violet with
+    iron(III) chloride. The crude yield is 94 %. What do you do next?
+  options:
+    - Report 94 %, since the product is dry and the yield is high.
+    - Recrystallise it, dry it, and measure the yield and melting point again.
+    - Heat it at 130 °C for an hour to drive off the salicylic acid.
+    - Wash it with aqueous NaOH to remove the phenol.
+  correct: 1
+  explanation: >-
+    A broad, low melting range and a positive phenol test mean unreacted salicylic acid. Recrystallisation
+    removes it; heating near the melting point decomposes aspirin, and NaOH hydrolyses the ester.
+- id: q5
+  question: >-
+    A Grignard run uses 20 mmol of phenylmagnesium bromide and 20 mmol of benzophenone. The ether contained
+    0.10 g of water. What is the largest possible yield of triphenylmethanol (260.3 g/mol)?
+  options:
+    - 5.2 g, because water does not react with Grignard reagents.
+    - 2.6 g, because water halves any organometallic reagent.
+    - 3.8 g, because 5.6 mmol of the reagent is destroyed by the water.
+    - 4.7 g, because water only slows the reaction down.
+  correct: 2
+  explanation: >-
+    0.10 g of water is 5.6 mmol and protonates 5.6 mmol of PhMgBr to benzene. 14.4 mmol remain, so at most
+    14.4 mmol × 260.3 g/mol = 3.8 g of product, and some benzophenone is left over.
+- id: q6
+  question: >-
+    On silica, a reaction mixture shows a spot at Rf 0.45. The starting material alone runs at 0.43. In the
+    co-spot lane you see two touching spots at 0.43 and 0.45. What does this tell you?
+  options:
+    - The spots are the same compound; small Rf differences are noise.
+    - The product and starting material are different compounds, and both are present.
+    - The plate was overloaded, which always splits one compound into two.
+    - Nothing, because co-spots only work for coloured compounds.
+  correct: 1
+  explanation: >-
+    One compound in the co-spot lane runs as one spot. Two spots on the same plate mean two compounds. To
+    see them better, change the eluent so they move apart.
+- id: q7
+  question: >-
+    You must separate cyclohexane (bp 81 °C) from toluene (bp 111 °C). The relative volatility is about 2.4
+    and you want a distillate of 95 % cyclohexane from a 50:50 mixture. What setup do you use?
+  options:
+    - A fractionating column worth at least 3–4 theoretical plates, distilling slowly.
+    - A simple distillation, heated fast so the vapour leaves before mixing.
+    - A rotary evaporator, which separates any liquids with different boiling points.
+    - A steam distillation, because both liquids are immiscible with water.
+  correct: 0
+  explanation: >-
+    One boil gives about 71 % cyclohexane. The Fenske equation gives ln(19)/ln(2.4), about 3.4 plates at
+    minimum; a column provides them and slow distillation lets each plate reach equilibrium.
+- id: q8
+  question: >-
+    In the 1-bromobutane work-up a student keeps the lower layer after every wash. After the cold
+    concentrated sulfuric acid wash, the "product" is gone. What happened?
+  options:
+    - The product reacted with the acid and was destroyed.
+    - The product evaporated, because the acid wash is exothermic.
+    - The product dissolved in the acid, which is why that wash is used.
+    - The product floats on concentrated acid, so the student kept the acid layer.
+  correct: 3
+  explanation: >-
+    1-Bromobutane (1.27 g/mL) is below water but above concentrated sulfuric acid (1.84 g/mL). The acid
+    removes butanol and dibutyl ether, not the alkyl bromide; the product was in the discarded top layer.
+- id: q9
+  question: >-
+    In a three-step synthesis, the second intermediate gives a melting point 6 °C low and a small NMR
+    signal of the previous compound worth 15 mol%. You are short of time. What is the right decision?
+  options:
+    - Use it in step 3; the impurity will be removed with the final product.
+    - Purify it (recrystallise) and check it again before step 3.
+    - Use it in step 3 with 15 % more reagent to make up for the impurity.
+    - Discard the whole sequence and start again from step 1.
+  correct: 1
+  explanation: >-
+    Impurities travel and can react in later steps, giving new by-products that are harder to remove.
+    Recrystallising one intermediate costs far less than repeating the sequence or purifying a mixture
+    at the end.
+- id: q10
+  question: >-
+    Benzaldehyde → benzoin → benzil → benzilic acid runs at 55 %, 85 % and 70 %. Which statement about the
+    sequence is correct?
+  options:
+    - The overall yield is about 70 %, the average of the steps.
+    - The overall yield is 55 %, set by the worst step.
+    - The overall yield is about 33 %, and step 1 is the best one to improve.
+    - The overall yield is about 33 %, and step 3 is the best one to improve.
+  correct: 2
+  explanation: >-
+    0.55 × 0.85 × 0.70 = 0.33. The lowest step yield (55 %, the benzoin condensation) offers the largest
+    gain: raising it to 85 % would lift the overall yield to about 51 %.

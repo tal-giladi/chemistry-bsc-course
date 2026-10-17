@@ -1,0 +1,63 @@
+- id: q1
+  question: >-
+    In the 1-bromobutane work-up you shake the crude product (1.27 g/mL) with cold concentrated
+    sulfuric acid (1.84 g/mL). Which layer contains your product?
+  options:
+    - The lower layer, because 1-bromobutane is denser than water.
+    - Neither, because the product dissolves in concentrated sulfuric acid.
+    - The upper layer, because it is less dense than the concentrated acid.
+    - Whichever layer is larger, because the product is the main component.
+  correct: 2
+  explanation: >-
+    Density, not habit, decides: 1.27 g/mL floats on 1.84 g/mL. The acid dissolves butanol and dibutyl
+    ether, not the alkyl bromide. In the earlier water wash the product was the lower layer.
+- id: q2
+  question: >-
+    A Grignard reaction never starts: the ether stays clear, the iodine colour does not fade, and nothing
+    warms up. What is the most likely cause and fix?
+  options:
+    - The benzophenone was added too early; add it after the reaction warms.
+    - The oxide layer on the magnesium blocks it; crush a turning or warm gently with dry glassware.
+    - The ether is too dry; add one drop of water to start the reaction.
+    - Bromobenzene is too unreactive; switch to chlorobenzene, which reacts faster.
+  correct: 1
+  explanation: >-
+    Magnesium is coated with oxide, and initiation needs a fresh metal surface. Water destroys the
+    reagent, and aryl chlorides react more slowly than bromides, not faster.
+- id: q3
+  question: >-
+    A student's triphenylmethanol is a yellowish solid melting at 140–155 °C. The student added all the
+    bromobenzene at once. What is the likely impurity and how is it removed?
+  options:
+    - Biphenyl from coupling; wash it out with cold hexane, then recrystallise.
+    - Benzene formed by traces of water; evaporate it in an oven at 150 °C.
+    - Magnesium salts left from the work-up; wash the solid with dry ether.
+    - Benzophenone left by too much Grignard reagent; wash it with water.
+  correct: 0
+  explanation: >-
+    Fast addition raises the local bromobenzene concentration and temperature, which favour Ph–Ph
+    coupling. Biphenyl is non-polar and dissolves in cold hexane; the alcohol does not.
+- id: q4
+  question: >-
+    You run the aldol with 1 equivalent of benzaldehyde per acetone instead of 2. What do you expect?
+  options:
+    - Dibenzalacetone in half the yield, with acetone left over.
+    - No reaction, because the enolate needs two aldehydes to form.
+    - Mainly a self-aldol product of benzaldehyde, which now forms its own enolate.
+    - Mainly benzalacetone, the single condensation product, with a lower melting point.
+  correct: 3
+  explanation: >-
+    With one aldehyde per acetone most acetone reacts only once, giving benzalacetone. Benzaldehyde has
+    no α-hydrogens, so it cannot self-condense.
+- id: q5
+  question: >-
+    Which IR change shows that benzophenone was converted into triphenylmethanol?
+  options:
+    - The C=O band moves from 1715 to 1660 cm⁻¹ because of conjugation.
+    - A C=O near 1660 cm⁻¹ disappears and an O–H band near 3470 cm⁻¹ appears.
+    - A new C–Br stretch appears below 700 cm⁻¹.
+    - A broad band from 2500 to 3300 cm⁻¹ appears because an acid forms.
+  correct: 1
+  explanation: >-
+    The ketone carbonyl is consumed and an alcohol O–H forms. No carboxylic acid or bromide is in the
+    product; the conjugation shift describes the aldol product.
