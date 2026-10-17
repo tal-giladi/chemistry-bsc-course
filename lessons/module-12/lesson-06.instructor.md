@@ -1,0 +1,8 @@
+# Instructor notes — 12.6 Many-electron atoms, molecular orbitals and selection rules
+
+- Objective: the learner uses the variational principle (helium), builds MO configurations and bond orders for second-row diatomics, decides allowed and forbidden transitions from parity and the transition dipole, and completes the module practical with the numerical solver.
+- Likely confusion: why $\sigma_{2p}$ and $\pi_{2p}$ swap between N₂ and O₂; "forbidden" versus "weak"; why parity is taken about the centre of the box.
+- Misconception: "A better calculation can give a lower energy than experiment." Variational energies are upper bounds. Also: "O₂ has all electrons paired because it has a double bond."
+- Analogy: the variational principle is like finding the lowest point of a valley while blindfolded: every spot you stand on is at or above the true bottom, so the lowest spot found is the best estimate.
+- Expected hands-on result: validation errors about 5e−6 (box) and 7e−6 (oscillator); box dipoles zero for m + n even, 0.9000 for 1→2, 0.0720 for 1→4; harmonic 0.5000, 0.7071, 0.8660, 1.0000 next to the diagonal only; HCl Morse ⟨0|x|2⟩/⟨0|x|1⟩ = 0.096; helium ζ = 1.6875, −2.8477 hartree (−77.49 eV), IE 23.07 eV vs 24.59; dyes fit β = 0.1243 nm, δ = 0.156 nm, 309/410/512 nm, prediction 613 nm. Part A: N₂ BO 3 vs N₂⁺ 2.5; B₂ paramagnetic; Li⁺ ζ = 2.6875, −7.2227 hartree.
+- Extension: add a second variational parameter (two different exponents, an "open-shell" trial) for helium and see how far below −2.8477 it reaches; or compute the 2×2 LCAO problem for H₂⁺ with a tabulated overlap and resonance integral at several distances to get a bond curve.

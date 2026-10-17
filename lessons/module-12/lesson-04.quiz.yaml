@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A diatomic molecule has omega_e = 2000 per cm and omega_e x_e = 20 per cm. Where do you expect
+    the fundamental and the first overtone?
+  options:
+    - 2000 and 4000 per cm, because the levels are equally spaced.
+    - 1960 and 3880 per cm, from G(1) - G(0) and G(2) - G(0) with anharmonicity.
+    - 1960 and 3920 per cm, because the overtone is twice the fundamental.
+    - 1980 and 3940 per cm, subtracting omega_e x_e once from each gap.
+  correct: 1
+  explanation: >-
+    The fundamental is omega_e - 2 omega_e x_e = 1960 and the overtone 2 omega_e - 6 omega_e x_e =
+    3880 per cm, lower than twice the fundamental.
+- id: q2
+  question: >-
+    You deuterate the O-H group of a molecule with an O-H stretch at 3600 per cm. Treating it as a
+    diatomic with reduced mass close to the H or D mass, where should the O-D stretch appear?
+  options:
+    - Near 1800 per cm, because the mass doubles.
+    - Near 3600 per cm, because the bond and force constant are unchanged.
+    - Near 5090 per cm, because a heavier atom vibrates faster.
+    - Near 2620 per cm, because the wavenumber scales as one over the square root of mu.
+  correct: 3
+  explanation: >-
+    The force constant is unchanged. With mu(OH) = 0.948 u and mu(OD) = 1.789 u, the ratio of the
+    square roots is 0.728, so 3600 x 0.728 is about 2620 per cm.
+- id: q3
+  question: >-
+    Which statement about the v = 0 level of a harmonic oscillator is correct?
+  options:
+    - It has energy h-bar omega/2 and a tail beyond the classical turning points.
+    - It has zero energy, because the molecule is at rest at the bottom of the well.
+    - It has one node at the equilibrium position, where the spring force vanishes.
+    - It is antisymmetric, so it cannot absorb infrared light at all.
+  correct: 0
+  explanation: >-
+    The ground state holds the zero-point energy half of h-bar omega, has no nodes, is symmetric, and
+    has a Gaussian tail into the classically forbidden region.
+- id: q4
+  question: >-
+    A C-H bond is fully broken in the rate-determining step. The C-H and C-D stretches are 2900 and
+    2100 per cm. What is the largest isotope effect zero-point energy alone predicts at 298 K?
+  options:
+    - About 2, because the masses differ by a factor of two.
+    - About 1.4, the square root of the mass ratio.
+    - About 7, from exp of the zero-point difference over RT.
+    - About 50, because deuterium cannot tunnel.
+  correct: 2
+  explanation: >-
+    The zero-point difference is (2900 - 2100)/2 = 400 per cm = 4.8 kJ/mol. exp(4.8/2.48) is about
+    7. Much larger values point to tunnelling.

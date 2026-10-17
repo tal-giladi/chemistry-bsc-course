@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A student's variational calculation for helium reports E = -2.95 hartree, below the accurate
+    value of -2.9037 hartree. What do you conclude?
+  options:
+    - The trial function is better than the accurate calculation and should be published.
+    - The result is fine, because variational energies scatter around the true value.
+    - There is an error, because a variational energy can never fall below the true ground state.
+    - The difference is relativistic, so both values are correct in their own way.
+  correct: 2
+  explanation: >-
+    The variational principle guarantees E_trial is at or above the exact ground-state energy. A
+    lower number means a mistake in the integrals or the Hamiltonian.
+- id: q2
+  question: >-
+    Superoxide, O2 minus, has one more electron than O2. What do MO theory and its bond order
+    predict about it compared with O2?
+  options:
+    - A shorter bond and no unpaired electrons, because the extra electron pairs up.
+    - A longer, weaker bond with bond order 1.5 and one unpaired electron.
+    - The same bond length, because the extra electron goes into a non-bonding orbital.
+    - A stronger bond with bond order 2.5, because more electrons means more bonding.
+  correct: 1
+  explanation: >-
+    The extra electron enters a pi-star antibonding orbital: bond order (8 - 5)/2 = 1.5, so the bond
+    is longer and weaker, and one pi-star electron is left unpaired.
+- id: q3
+  question: >-
+    Your transition-dipole table for a particle in a box shows exactly zero for n = 1 to 3 but a
+    non-zero value for n = 1 to 4. Why?
+  options:
+    - States 1 and 3 have the same parity about the centre, so the integrand of x is odd.
+    - The 1 to 3 gap is too large for one photon, while 1 to 4 is resonant.
+    - The grid is too coarse to resolve n = 3, so its overlap comes out as zero.
+    - Odd-numbered states cannot absorb light, while even-numbered ones can.
+  correct: 0
+  explanation: >-
+    Box states alternate parity about the centre. psi_1 and psi_3 are both even, so psi_1 x psi_3
+    is odd and integrates to zero; 1 and 4 have opposite parity.
+- id: q4
+  question: >-
+    A hydrogen atom in the 3d state emits light. To which lower state can it go directly by an
+    electric-dipole transition?
+  options:
+    - 1s, because the electron always returns to the ground state.
+    - 3s, because the energy is lowest within the same shell.
+    - 2s, because it lies lower and has a radial node.
+    - 2p, because the angular momentum must change by one unit.
+  correct: 3
+  explanation: >-
+    The rule is delta l = plus or minus 1. From l = 2 only p states (l = 1) are reachable, and 2p is
+    the lower p state; 3d to 1s or 2s would need delta l = 2.

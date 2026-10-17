@@ -1,0 +1,21 @@
+# Research log — Module 12
+
+| source | url | date accessed | claim supported | lesson(s) |
+|---|---|---|---|---|
+| MIT OCW 5.61 Physical Chemistry (Field, Fall 2017) | https://ocw.mit.edu/courses/5-61-physical-chemistry-fall-2017/ | 2026-10-17 | course exists; instructor Robert Field; topics particles and waves, wave mechanics, matrix mechanics, MO theory, spectroscopy | 12.1–12.6 |
+| NIST Handbook of Basic Atomic Spectroscopic Data, hydrogen table 2 | https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable2.htm | 2026-10-17 | H I air wavelengths 6562.8518, 4861.3615, 4340.462, 4101.74 Å | 12.1 (lab data) |
+| NIST CODATA 2022, Rydberg constant | https://physics.nist.gov/cgi-bin/cuu/Value?ryd | 2026-10-17 | R∞ = 10 973 731.568 157(12) m⁻¹ | 12.1 |
+| NIST CODATA 2022, electron mass | https://physics.nist.gov/cgi-bin/cuu/Value?me | 2026-10-17 | m_e = 9.109 383 7139(28) × 10⁻³¹ kg | 12.1, 12.2 |
+| NIST CODATA 2022, Bohr radius | https://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0 | 2026-10-17 | a₀ = 5.291 772 105 44(82) × 10⁻¹¹ m | 12.5 |
+| NIST CODATA 2022, Hartree energy in eV | https://physics.nist.gov/cgi-bin/cuu/Value?hrev | 2026-10-17 | E_h = 27.211 386 245 981(30) eV | 12.5, 12.6 |
+| LibreTexts Physical Chemistry, table of contents (chapters 1–10) | https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts) | 2026-10-17 | chapter URLs for dawn of quantum theory, Schrödinger equation and box, postulates, oscillator and rotor, hydrogen atom, multielectron atoms, diatomic bonding | 12.1–12.6 |
+| LibreTexts Zielinski et al., 4.2 Cyanine Dyes | https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/04%3A_Electronic_Spectroscopy_of_Cyanine_Dyes/4.02%3A_Cyanine_Dyes | 2026-10-17 | dyes with 3, 5, 7 chain carbons absorb at 309, 409, 512 nm (Simpson 1948); π electrons = carbons + 3; L = bβ + 2δ | 12.2, 12.6 |
+| LibreTexts Zielinski et al., 4.6 Selection Rules for the Particle in a Box | https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/04%3A_Electronic_Spectroscopy_of_Cyanine_Dyes/4.06%3A_Selection_Rules_for_the_Particle-in-a-Box | 2026-10-17 | page exists (search result); transition dipole and box selection rules | 12.6 |
+| SciPy v1.18 manual, scipy.linalg.eigh_tridiagonal | https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eigh_tridiagonal.html | 2026-10-17 | signature, select="i" with select_range; docs for 1.18.0 | 12.2 (solver) |
+| OpenStax University Physics Vol. 3, 7.7 Quantum Tunneling | https://phys.libretexts.org/Bookshelves/University_Physics/University_Physics_(OpenStax)/University_Physics_III_-_Optics_and_Modern_Physics_(OpenStax)/07%3A_Quantum_Mechanics/7.07%3A_Quantum_Tunneling_of_Particles_through_Potential_Barriers | 2026-10-17 | page exists (search result); barrier transmission, STM | 12.3 |
+| Flambaum and Kozlov 2007, arXiv 0704.2301 | https://arxiv.org/abs/0704.2301 | 2026-10-17 | NH3 inversion transition λ = 1.25 cm (≈ 23.79 GHz) is a tunnelling splitting | 12.3 |
+| Nuckolls, Rueger and Lyons 1953, Phys. Rev. 89, 1101 (NIST archive) | https://tf.nist.gov/general/pdf/2840.pdf | 2026-10-17 | ND3 inversion lines 1589–2540 MHz (J = K = 1 at 1589.10 MHz, per search snippet; PDF text not machine-readable) | 12.3 |
+| NIST Chemistry WebBook, HCl diatomic constants | https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=1000 | 2026-10-17 | H35Cl X state: ωe 2990.9463, ωexe 52.8186, ωeye 0.22437, Be 10.593416, αe 0.307181, De 5.3194e-4 cm⁻¹, re 1.274552 Å | 12.4, 12.5 |
+| NIST Atomic Weights and Isotopic Compositions (Cl) | https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Cl | 2026-10-17 | ³⁵Cl 34.968 852 682 u, ³⁷Cl 36.965 902 602 u | 12.4 |
+| NIST Handbook, helium table 1 / NIST ionization energies | https://physics.nist.gov/PhysRefData/Handbook/Tables/heliumtable1.htm | 2026-10-17 | He I ionisation energy 198 310.669 cm⁻¹ = 24.587 387 eV | 12.6 |
+| Sims and Hagstrom (NIST publication, via search) | https://www.nist.gov/publications/ | 2026-10-17 | He non-relativistic ground-state energy −2.903 724 377 hartree | 12.6 |

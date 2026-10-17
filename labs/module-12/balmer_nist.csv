@@ -1,0 +1,8 @@
+# H I Balmer lines, strongest component, wavelengths in air (nm).
+# Source: NIST Handbook of Basic Atomic Spectroscopic Data, Hydrogen table 2 (strong lines),
+# https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable2.htm (accessed 2026-10-17). US government work.
+name,n_upper,lambda_air_nm
+H-alpha,3,656.28518
+H-beta,4,486.13615
+H-gamma,5,434.0462
+H-delta,6,410.174

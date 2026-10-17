@@ -1,0 +1,132 @@
+- id: q1
+  question: >-
+    A telescope records lines at 656.3, 486.1 and 434.0 nm from a hydrogen cloud. The spectrograph
+    also reaches shorter wavelengths. Where should the next line of the same series appear?
+  options:
+    - Near 397.0 nm, the n = 7 to 2 line, because the series skips one level each time.
+    - Near 364.6 nm, because the lines run straight into the series limit after three.
+    - Near 410.2 nm, the n = 6 to 2 line, from the Rydberg formula with n1 = 2.
+    - Near 388.9 nm, the n = 8 to 2 line, since the spacing between lines is constant.
+  correct: 2
+  explanation: >-
+    The three lines are n = 3, 4 and 5 to n = 2. The next is n = 6 to 2: 1/lambda = R_H(1/4 - 1/36)
+    gives 410.2 nm in air. The lines crowd together towards the limit at 364.6 nm.
+- id: q2
+  question: >-
+    A materials chemist wants to separate H2 from D2 by adsorption in pores 0.7 nm wide at 20 K. At
+    that temperature H2 has a thermal de Broglie wavelength of about 0.4 nm. Should quantum effects
+    be part of the model?
+  options:
+    - Yes, because the wavelength is comparable to the pore, so confinement energies matter.
+    - No, because molecules are always classical and only electrons need quantum mechanics.
+    - No, because H2 is about 3700 times heavier than an electron, which rules out quantum behaviour.
+    - Yes, but only because hydrogen gas is quantum at every temperature and pore size.
+  correct: 0
+  explanation: >-
+    The test is the de Broglie wavelength against the confinement size. At 20 K in a 0.7 nm pore
+    they are comparable, and the lighter H2 has the larger zero-point energy, which is the basis of
+    quantum sieving.
+- id: q3
+  question: >-
+    A dye maker lengthens a symmetric cyanine dye by one CH=CH unit, adding two pi electrons and
+    about 0.25 nm of box. Where do you expect the absorption maximum to move?
+  options:
+    - To the blue, because more electrons raise the energy of the highest occupied level.
+    - Nowhere, because the end groups set the colour and the chain only adds mass.
+    - To the red by a factor of two, because the box length roughly doubles.
+    - To the red by roughly 100 nm, because L squared grows faster than N + 1.
+  correct: 3
+  explanation: >-
+    lambda = 8 m c L^2 / (h (N + 1)). Each added unit raises L^2 much more than N + 1, so the band
+    shifts to longer wavelength; the dye series 309, 409, 512 nm moves about 100 nm per unit.
+- id: q4
+  question: >-
+    An STM operates with a decay constant kappa = 10 per nm. The tip is pulled back by 0.05 nm.
+    What fraction of the original tunnelling current remains?
+  options:
+    - About 95 %, because 0.05 nm is a tiny fraction of the gap.
+    - About 37 %, because the current falls as exp(-2 kappa d) and 2 x 10 x 0.05 = 1.
+    - About 13 %, because each 0.05 nm divides the current by eight.
+    - About 61 %, because the current falls as exp(-kappa d) and 10 x 0.05 = 0.5.
+  correct: 1
+  explanation: >-
+    The current tracks the probability, which goes as exp(-2 kappa d). exp(-1) = 0.37. The factor of
+    eight applies to 0.1 nm, and using exp(-kappa d) forgets the square of the amplitude.
+- id: q5
+  question: >-
+    The infrared spectrum of HCl gas shows a strong band at 2886 per cm and a much weaker one at
+    5668 per cm. What is the weak band?
+  options:
+    - The 0 to 1 band of H37Cl, which is shifted by the heavier chlorine isotope.
+    - The first overtone, 0 to 2, allowed weakly because the bond is anharmonic.
+    - A hot band from v = 1, which is strongly populated at room temperature.
+    - The pure rotational spectrum, which appears at about twice the vibrational wavenumber.
+  correct: 1
+  explanation: >-
+    2 omega_e - 6 omega_e x_e (plus a small cubic term) gives 5668 per cm. The isotope shift is only
+    about 2 per cm, v = 1 is barely populated at 298 K, and rotational lines lie below 300 per cm.
+- id: q6
+  question: >-
+    An N-H stretch at 3300 per cm moves to 2420 per cm after the sample is shaken with D2O. Is that
+    consistent with N-D formation, given mu(NH) = 0.940 u and mu(ND) = 1.761 u?
+  options:
+    - No, because doubling the hydrogen mass should halve the wavenumber to about 1650 per cm.
+    - No, because the force constant changes on deuteration, so no prediction is possible.
+    - No, because a heavier atom should vibrate faster and move the band above 3300 per cm.
+    - Yes, because the predicted ratio is the square root of 0.940/1.761, about 0.73, giving 2410 per cm.
+  correct: 3
+  explanation: >-
+    The potential and force constant are unchanged; the wavenumber scales as the inverse square
+    root of the reduced mass. 3300 x 0.730 = 2410 per cm, within anharmonic corrections of 2420.
+- id: q7
+  question: >-
+    A student looks for the pure rotational (microwave) spectrum of N2 and finds nothing, while CO
+    shows a ladder of lines. Why?
+  options:
+    - N2 has no permanent dipole moment, so light cannot drive its rotational transitions.
+    - N2 is too heavy to rotate at room temperature, so all molecules stay in J = 0.
+    - N2 rotational levels are not quantised, so its absorption is a smooth continuum.
+    - N2 has a rotational constant so large that its lines fall in the ultraviolet.
+  correct: 0
+  explanation: >-
+    A pure rotational transition needs a permanent dipole. Homonuclear N2 has none, so it has no
+    microwave spectrum; its rotation is seen in Raman spectra instead (Module 20).
+- id: q8
+  question: >-
+    He+ is a hydrogen-like ion with Z = 2, and its energies scale as Z squared. Hydrogen's n = 2 to 1
+    line is at 121.6 nm. Where is the same line for He+?
+  options:
+    - At 121.6 nm, because the quantum numbers of the transition are the same.
+    - At 60.8 nm, because the nuclear charge doubles the energy.
+    - At 30.4 nm, because the energies grow by a factor of four.
+    - At 243.2 nm, because a heavier nucleus lowers every level.
+  correct: 2
+  explanation: >-
+    E_n is proportional to Z^2/n^2, so every gap is four times larger and the wavelength four times
+    shorter: 121.6/4 = 30.4 nm, in the extreme ultraviolet.
+- id: q9
+  question: >-
+    Liquid oxygen is attracted to a magnet, although its Lewis structure shows all electrons paired.
+    Which part of the MO picture explains this?
+  options:
+    - O2 has an odd number of electrons, so one must remain unpaired.
+    - The sigma 2s antibonding orbital holds a single electron.
+    - O2 has a triple bond in MO theory, which creates a magnetic moment.
+    - Two electrons occupy the two degenerate pi-star orbitals with parallel spins.
+  correct: 3
+  explanation: >-
+    O2 has 12 valence electrons; the last two go into the two degenerate pi-star orbitals, one each,
+    with parallel spins by Hund's rule. The bond order is 2 and the molecule is paramagnetic.
+- id: q10
+  question: >-
+    Your radial solver for hydrogen uses r up to 30 bohr. It gives 1s and 2s correctly, but the
+    n = 4 energies are clearly too high. What do you change first?
+  options:
+    - Extend r_max well beyond the n = 4 orbitals, refine the grid, and recheck convergence.
+    - Switch from eigh_tridiagonal to a general eigensolver, since the matrix is not symmetric.
+    - Ask for more eigenvalues, because higher states need a larger number of requested states.
+    - Normalise the wavefunctions again, because energy errors come from normalisation.
+  correct: 0
+  explanation: >-
+    The mean radius of hydrogen orbitals grows as n squared (about 24 bohr for 4s), so a box ending
+    at 30 bohr squeezes them and raises their energies. Enlarge the box, then test convergence.

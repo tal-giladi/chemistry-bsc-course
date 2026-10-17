@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    An electron in a box absorbs at 400 nm for the n = 1 to n = 2 transition. The box is made
+    1.5 times longer. Where does the same transition absorb now?
+  options:
+    - 600 nm, because the wavelength scales with the box length.
+    - 900 nm, because the energy gap scales as one over the length squared.
+    - 267 nm, because a longer box raises the energy of every level.
+    - 400 nm, because the quantum numbers of the transition are unchanged.
+  correct: 1
+  explanation: >-
+    E_n = n^2 h^2/(8 m L^2), so every gap falls by 1.5^2 = 2.25 and the wavelength rises by the same
+    factor: 400 x 2.25 = 900 nm.
+- id: q2
+  question: >-
+    A conjugated chain has 8 pi electrons treated as particles in a box. Which levels are involved
+    in the lowest-energy absorption?
+  options:
+    - n = 1 to n = 2, the two lowest levels of the box.
+    - n = 8 to n = 9, because there are eight electrons.
+    - n = 4 to n = 5, from the highest filled to the lowest empty level.
+    - n = 3 to n = 4, because the top level is only half filled.
+  correct: 2
+  explanation: >-
+    Two electrons per level fill n = 1 to 4. The first absorption lifts an electron from the HOMO,
+    n = 4, to the LUMO, n = 5.
+- id: q3
+  question: >-
+    Your finite-difference solver gives E1 = 0.37557 eV with 25 grid points and 0.37591 eV with 50
+    points, for a box whose exact E1 is 0.37603 eV. What do you expect with 100 points?
+  options:
+    - About 0.37600 eV, because the error drops about four times per halving of the spacing.
+    - About 0.37615 eV, because the numerical value will overshoot the exact one.
+    - About 0.37597 eV, because the error halves each time the spacing halves.
+    - Exactly 0.37603 eV, because 100 points resolve the sine wave completely.
+  correct: 0
+  explanation: >-
+    The central difference is second order: errors of 4.6e-4 and 1.2e-4 eV shrink about four times
+    per halving, so the next error is about 3e-5 eV, still from below.
+- id: q4
+  question: >-
+    A particle sits in a box with walls of finite height instead of infinite walls. What changes in
+    its ground state?
+  options:
+    - The energy rises, because the particle must push against softer walls.
+    - Nothing changes as long as the walls are higher than the ground-state energy.
+    - The wavefunction becomes zero exactly at the walls, but with a sharper curvature.
+    - The energy falls and the wavefunction leaks into the walls with an exponential tail.
+  correct: 3
+  explanation: >-
+    Inside a finite wall the wavefunction decays instead of stopping, so the wave has more room, less
+    curvature and lower energy. Only a finite number of states remain bound.
