@@ -1,0 +1,132 @@
+- id: q1
+  question: >-
+    A new pH-based method for citric acid in juice gives results with an RSD of 0.3 %, but a certified juice
+    reference reads 3 % low every time. The supervisor wants to report results now because "the precision is
+    excellent". What is the right response?
+  options:
+    - Report them, since an RSD of 0.3 % shows that any error is far below 3 %.
+    - Report them with a larger confidence interval to cover the 3 % difference.
+    - Do not report yet; a consistent 3 % shortfall is a systematic error that must be found or corrected.
+    - Average more replicates until the difference from the reference disappears.
+  correct: 2
+  explanation: >-
+    Precision says nothing about bias. A difference that repeats with the same sign against a CRM is systematic;
+    more repeats cannot remove it, and widening the interval hides it instead of fixing it.
+- id: q2
+  question: >-
+    Five results for iron in a tablet are 50.2, 50.6, 49.9, 50.4 and 50.3 mg (mean 50.28, s = 0.26). The label
+    claims 52.0 mg. With t = 2.776 for 4 degrees of freedom, what do you conclude?
+  options:
+    - The tablet contains significantly less iron than claimed; the 95 % CI is 50.28 ± 0.32 mg.
+    - There is no significant difference, since the CI 50.28 ± 0.72 mg is close to 52.0 mg.
+    - There is no significant difference, since 52.0 − 50.28 is smaller than 2.776 × 0.26 × 5.
+    - The test cannot be done, because a label claim has no stated uncertainty.
+  correct: 0
+  explanation: >-
+    The CI is 50.28 ± 2.776 × 0.26/√5 = 50.28 ± 0.32 mg, and 52.0 lies far outside it (t_exp ≈ 14.8). Using s
+    instead of s/√n, or multiplying by n, gives an interval that is far too wide.
+- id: q3
+  question: >-
+    Two labs compare their copper results on the same sample. Lab A: s = 0.12 (n = 6); lab B: s = 0.15 (n = 6).
+    The critical F for 5 and 5 degrees of freedom is 7.15. Which test do you use for the means?
+  options:
+    - Welch's t-test, because the two standard deviations are not identical.
+    - Grubbs' test, because a difference between labs means one has an outlier.
+    - A one-sample t-test of lab B against lab A's mean, treating A as the true value.
+    - The pooled two-sample t-test, because F = 1.56 is well below 7.15.
+  correct: 3
+  explanation: >-
+    F = 0.15²/0.12² = 1.56, so the variances can be pooled. Neither lab's mean is a certified value, so a one-sample
+    test against it is wrong; Grubbs' test is for single suspect values, not for comparing groups.
+- id: q4
+  question: >-
+    A result is c = m/(M V) with u(m)/m = 0.10 %, u(V)/V = 0.40 % and u(M)/M = 0.01 %. Your budget shows the
+    volume as 94 % of the variance. Management offers a balance with ten times better resolution. Is it worth it?
+  options:
+    - Yes, because the mass is the first quantity measured and errors start there.
+    - No; the combined uncertainty would fall only from about 0.41 % to 0.40 %.
+    - Yes, because uncertainties add, so 0.09 % would come off the total of 0.51 %.
+    - No, because mass uncertainties never matter in volumetric analysis.
+  correct: 1
+  explanation: >-
+    Relative uncertainties add in quadrature: √(0.10² + 0.40² + 0.01²) = 0.41 %, and with 0.01 % for the mass it
+    is still 0.40 %. Improve the dominant term, the volume; adding linearly overstates the gain.
+- id: q5
+  question: >-
+    A pH electrode reads a solution as 3.20 ± 0.05 (standard uncertainty). A colleague reports
+    [H₃O⁺] = 6.31 × 10⁻⁴ mol/L ± 0.05 %. What is wrong, and what is the right relative uncertainty?
+  options:
+    - Nothing; the pH and the concentration have the same relative uncertainty.
+    - The uncertainty should be 1.6 %, which is 0.05/3.20.
+    - It should be about 12 %, since u(c)/c = 2.303 × u(pH).
+    - It should be about 2 %, from 0.434 × 0.05.
+  correct: 2
+  explanation: >-
+    For c = 10^(−pH) the relative uncertainty is 2.303 × 0.05 = 0.115, about 12 %. A small pH uncertainty is a large
+    concentration uncertainty; 0.434 is the factor for the opposite direction.
+- id: q6
+  question: >-
+    A lead method has a blank standard deviation of 0.0008 absorbance units and a slope of 0.040 L/µg. A drinking-water
+    sample reads 0.050 µg/L. How should it be reported?
+  options:
+    - Report not detected (< 0.06 µg/L), because the result is below the LOD of 3 × 0.0008/0.040.
+    - Report 0.050 µg/L, because every result read from the line is a valid concentration.
+    - Report detected but below the LOQ, because it is above the LOD but below the LOQ of 0.20 µg/L.
+    - Report not detected (< 0.20 µg/L), because anything below the LOQ counts as zero.
+  correct: 0
+  explanation: >-
+    LOD = 3 × 0.0008/0.040 = 0.06 µg/L and LOQ = 0.20 µg/L. At 0.050 µg/L the signal cannot be told apart from the
+    blank, so it is reported as not detected with the LOD stated.
+- id: q7
+  question: >-
+    Phosphate in river water reads 0.82 mg/L on an external calibration. A spike of 0.50 mg/L is recovered as
+    0.40 mg/L, while spikes in pure water are recovered fully. What is the best estimate, and the best method?
+  options:
+    - 0.82 mg/L; recovery problems affect only the spike, not the sample.
+    - About 1.0 mg/L, from 0.82/0.80, but confirm it by standard additions in the river water.
+    - About 0.66 mg/L, from 0.82 × 0.80, because the matrix adds signal.
+    - About 1.32 mg/L, from 0.82 + 0.50, because the spike shows what is missing.
+  correct: 1
+  explanation: >-
+    An 80 % recovery means the matrix lowers the sensitivity, so the sample result is low by the same factor:
+    0.82/0.80 ≈ 1.0 mg/L. Standard additions measures the slope in the sample itself and is the proper fix.
+- id: q8
+  question: >-
+    You titrate 20.00 mL of a weak acid (pKa 6.0) with NaOH. The equivalence pH is about 9.5. Which indicator do you
+    choose, and why?
+  options:
+    - Methyl orange (3.4–4.4), because it changes sharply in acidic solution where the acid starts.
+    - Bromothymol blue (6.0–7.6), because its range contains the pKa of the acid.
+    - Phenolphthalein (8.3–10.0), because its range lies on the steep part around the equivalence pH.
+    - Any of them, because all acid–base indicators change at the equivalence point.
+  correct: 2
+  explanation: >-
+    The end point must fall where the curve is steep, around the equivalence pH. Bromothymol blue would change in
+    the buffer region near half-equivalence, and methyl orange right at the start.
+- id: q9
+  question: >-
+    A pH-titration of an unknown acid gives an end point of 16.80 mL and pH 5.12 at 8.40 mL. The pH meter was
+    calibrated, but in buffers that were a year old and had absorbed CO₂. What is your pKa, and what should you
+    worry about?
+  options:
+    - 5.12, with nothing to worry about, since a half-equivalence pKa is exact.
+    - 2.56, because the pKa is half the pH measured at half the end-point volume.
+    - 10.24, because the pKa is twice the pH measured at half the end-point volume.
+    - 5.12, but a meter bias shifts it one to one; recalibrate with fresh buffers.
+  correct: 3
+  explanation: >-
+    At half-equivalence pH = pKa, so the estimate is 5.12. A meter bias moves every pH by the same amount, so it
+    enters the pKa one to one; it is a systematic error that no derivative or repeat can remove.
+- id: q10
+  question: >-
+    A method needs pH 4.8 and each sample adds 0.2 mmol of acid to 50 mL of buffer. The pH may move by at most 0.1.
+    Which buffer is the smallest that will do?
+  options:
+    - 0.010 M acetate, since the buffer pH depends only on the acid-to-base ratio.
+    - 0.10 M acetate, since β ≈ 0.058 mol/L per pH limits the change to about 0.07.
+    - 0.10 M phosphate, since phosphate buffers always hold more acid than acetate ones.
+    - 1.0 M acetate, since any buffer below 1 M fails when samples add acid to it.
+  correct: 1
+  explanation: >-
+    0.2 mmol in 50 mL is 0.004 mol/L of acid; divided by β ≈ 0.058 that is a pH change of about 0.07, inside the
+    limit. At 0.010 M the change would be ten times larger, and phosphate has no pKa near 4.8.

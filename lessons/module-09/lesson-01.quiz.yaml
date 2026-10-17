@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    An analyst repeats a titration ten times and gets results that agree to 0.05 %. Her supervisor asks
+    whether the method is accurate. What is the right answer?
+  options:
+    - Yes, because ten results that agree closely cannot all share the same error.
+    - Yes, as long as the standard deviation is below the uncertainty of the burette.
+    - Not yet known, because the results must first be compared with a reference material.
+    - No, because a very small spread usually means a gross error was made in every run.
+  correct: 2
+  explanation: >-
+    Close agreement shows precision only. A systematic error shifts every repeat by the same amount, so
+    trueness can be judged only against an independent reference such as a CRM or a spiked sample.
+- id: q2
+  question: >-
+    A CRM is certified at 50.0 ± 0.4 mg/kg (k = 2). Six results give a mean of 49.2 mg/kg with s = 0.6 mg/kg.
+    Using the z-score from the lesson, what do you conclude?
+  options:
+    - The bias of −0.8 mg/kg is real, since z is about 2.5 and above 2.
+    - There is no evidence of bias, since 0.8 is smaller than the expanded uncertainty plus s.
+    - The bias is real, since any difference from a certified value proves a systematic error.
+    - There is no evidence of bias, since z = 0.8/√(0.6² + 0.2²) ≈ 1.3.
+  correct: 0
+  explanation: >-
+    The combined standard uncertainty is √(0.6²/6 + 0.2²) = 0.32 mg/kg, so z = 0.8/0.32 ≈ 2.5. Divide U by k and
+    s by √n before combining; using s alone or the expanded U inflates the uncertainty and hides the bias.
+- id: q3
+  question: >-
+    Portions of a reference material from 0.1 g to 1.0 g are analysed. The fit of amount found against
+    amount taken has the expected slope but an intercept of +0.9 mg that is clearly not zero. What kind of
+    error is this, and which samples does it hurt most?
+  options:
+    - A proportional error, which hurts all samples by the same percentage.
+    - A random error, which hurts the largest samples most because they scatter more.
+    - A proportional error, which hurts the largest samples most because the slope is fixed.
+    - A constant error, which hurts the smallest samples most in relative terms.
+  correct: 3
+  explanation: >-
+    An intercept with the right slope means a fixed amount is added whatever the sample size, such as an
+    indicator blank. Its relative effect is largest when the sample, and so the true amount, is small.
+- id: q4
+  question: >-
+    You weigh coins on a kitchen scale and find a slope of 3.53 g per coin against a nominal 3.50 g. Why can
+    you not say the scale has a +0.9 % proportional error?
+  options:
+    - Because a proportional error can only be found from the intercept of the line.
+    - Because the coins' real masses are not certified, so coin wear and scale gain are mixed together.
+    - Because a 0.1 g scale cannot detect any error smaller than 1 %, whatever the number of coins.
+    - Because ten coins are too few for a straight-line fit to give any slope uncertainty.
+  correct: 1
+  explanation: >-
+    The slope equals the true coin mass times the scale's gain. Without a reference mass whose value you trust,
+    you cannot split the two. That is the job of calibrated weights and CRMs.

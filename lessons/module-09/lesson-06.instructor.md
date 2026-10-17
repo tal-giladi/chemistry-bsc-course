@@ -1,0 +1,9 @@
+# Instructor notes — 09.6 Buffers and gravimetric analysis (module practical)
+
+- **Objective:** compute buffer capacity and design a buffer; do gravimetric calculations and judge solubility and co-precipitation errors; run the module practical — a full calibration with linear range, LOD/LOQ, an unknown with uncertainty and a check standard, written up as a lab report.
+- **Likely confusion:** pH versus capacity (same pH, very different capacity; quiz q2); the direction of the gravimetric factor (quiz q3).
+- **Misconception:** "a buffer holds any pH you calculate with Henderson–Hasselbalch". Outside pKa ± 1 there is almost no capacity (quiz q1).
+- **Analogy:** a buffer is a sponge for H⁺ and OH⁻; its pKa sets where it is half-wet, its concentration sets how big it is.
+- **Expected hands-on result:** β = 0.0576 (0.10 M) and 0.0058 (0.010 M) at pH 4.76; 0.10 M buffer + 1.00 mmol HCl → 4.581 (H–H 4.581); 59.48 % chloride; AgCl loss 0.38 mg in water, 0.0005 mg with 0.010 M chloride. Practical example data: linear to 6 %, A = 0.0018 + 0.1000 c, s_bl = 0.0038, LOD 0.115 %, LOQ 0.383 %, unknown 4.74 ± 0.04 % (true 4.7), check 100.7 %, z = +0.8; unlinearised slope 2.2× smaller. Real phone photos: s_bl is typically 2–5 times larger than in the example unless exposure is locked; linear range 5–10 %.
+- **Extension:** lighting changes move all three channels together, while the dye barely absorbs blue. Use the ratio R/B instead of R alone and show that the blank scatter, and so the LOD, falls. Or let the learner fit a quadratic over the full range and compare the unknown's result.
+- **Scope:** say once that the photo method trains calibration reasoning, not spectrophotometer use, and that gravimetry here is a calculation only (no silver nitrate at home: it is a lab reagent and stains skin).

@@ -1,0 +1,15 @@
+# Simulated (make_data.py, seed 1). Chloride CRM, certified 25.0 +/- 0.3 mg/L (k = 2).
+# True model: analyst A no bias, sd 0.8; analyst B bias -1.2 mg/L, sd 0.2.
+analyst,chloride_mg_per_L
+A,25.28
+A,25.66
+A,25.26
+A,23.96
+A,25.72
+A,25.36
+B,23.69
+B,23.92
+B,23.87
+B,23.86
+B,23.81
+B,23.91

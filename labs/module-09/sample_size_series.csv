@@ -1,0 +1,10 @@
+# Simulated (make_data.py, seed 2). Chloride found by titration in weighed portions of pure NaCl.
+# Expected chloride = 606.6 mg/g x sample mass. True errors: proportional -1.5 %, constant +0.80 mg.
+sample_g,chloride_found_mg
+0.0500,30.72
+0.0750,45.48
+0.1000,60.45
+0.1500,89.82
+0.2000,120.76
+0.2500,150.47
+0.3000,179.98

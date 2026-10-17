@@ -1,0 +1,26 @@
+# Simulated (make_data.py, seed 7). Blue food colouring, % of stock by mass, phone photos from above.
+# True: A_red = 0.105 c, 3 % stray light, lighting noise 1.5 %. Unknown 4.7 %; check standard 5.0 %.
+# type: standard, blank (repeat photos of the water cup), unknown, check (independent 5 % standard).
+type,c_percent_stock,R,G,B
+standard,0,231,234,229
+standard,1,209,230,228
+standard,2,188,224,226
+standard,3,168,219,225
+standard,4,153,215,224
+standard,6,124,206,222
+standard,8,103,200,222
+standard,10,87,194,222
+standard,14,63,177,216
+blank,0,230,233,228
+blank,0,232,234,229
+blank,0,232,234,229
+blank,0,231,234,229
+blank,0,230,232,227
+blank,0,231,234,228
+blank,0,232,235,230
+unknown,,141,211,222
+unknown,,142,212,224
+unknown,,141,210,221
+check,5,137,210,222
+check,5,136,209,221
+check,5,138,211,224

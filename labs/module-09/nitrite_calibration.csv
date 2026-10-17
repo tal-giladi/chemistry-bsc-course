@@ -1,0 +1,28 @@
+# Simulated (make_data.py, seed 5). Nitrite (as N) by a Griess-type colour reaction, 540 nm, 1 cm.
+# True: A = 0.004 + 2.90 c; unknown 0.0620 mg/L; addition sample 0.0400 mg/L with slope x 0.88 (matrix).
+# type: standard (c = standard conc), blank, unknown (c empty), addition (c = conc added by the spike).
+type,c_mg_per_L,absorbance
+standard,0.000,0.0024
+standard,0.020,0.0589
+standard,0.050,0.1483
+standard,0.100,0.2955
+standard,0.150,0.4438
+standard,0.200,0.5845
+standard,0.250,0.7259
+blank,0.000,0.0024
+blank,0.000,0.0055
+blank,0.000,0.0073
+blank,0.000,0.0046
+blank,0.000,0.0015
+blank,0.000,0.0021
+blank,0.000,0.0072
+blank,0.000,0.0044
+blank,0.000,0.0005
+blank,0.000,0.0038
+unknown,,0.1804
+unknown,,0.1820
+unknown,,0.1824
+addition,0.000,0.1043
+addition,0.050,0.2354
+addition,0.100,0.3610
+addition,0.150,0.4863

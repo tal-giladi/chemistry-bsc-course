@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    You titrate an unknown weak acid with NaOH using a pH meter. The equivalence point is at 18.40 mL and the
+    pH at 9.20 mL is 4.20. What is the best estimate of the acid's pKa?
+  options:
+    - About 8.4, the pH you would expect at the equivalence point.
+    - 4.20, because at half-equivalence the acid and its conjugate base are equal.
+    - 2.10, half of the pH measured at half the equivalence volume.
+    - It cannot be found without knowing the acid's concentration first.
+  correct: 1
+  explanation: >-
+    At half-equivalence n(A⁻) = n(HA), so the log term in Henderson–Hasselbalch is zero and pH = pKa. The
+    concentration is not needed for this, which is why titration is a standard way to measure pKa.
+- id: q2
+  question: >-
+    Why is the pH at the equivalence point of acetic acid titrated with NaOH about 8.7, not 7?
+  options:
+    - Because some acetic acid is always left unreacted at the equivalence point.
+    - Because NaOH is added in a small excess to make the indicator change colour.
+    - Because at equivalence the solution contains acetate, a weak base that makes OH⁻ from water.
+    - Because the Kw of water rises when sodium ions are present in the solution.
+  correct: 2
+  explanation: >-
+    At equivalence all the acid has become acetate, the conjugate base, with Kb = Kw/Ka. Its reaction with water
+    gives [OH⁻] ≈ √(Kb c), so the solution is basic. Only strong acid with strong base gives pH 7.
+- id: q3
+  question: >-
+    A lab titrates a weak acid (equivalence pH 8.8) with bromothymol blue, which changes over pH 6.0–7.6.
+    What is the effect on the results?
+  options:
+    - They are systematically low, because the colour changes before the equivalence point.
+    - They are systematically high, because the indicator needs extra base to change colour.
+    - They scatter more, but the mean is unaffected because indicator errors are random.
+    - They are unaffected, because any acid–base indicator marks the equivalence point.
+  correct: 0
+  explanation: >-
+    The colour changes on the rising part of the curve, before all the acid has reacted, so too little titrant
+    is recorded every time. That is a systematic titration error, not random scatter.
+- id: q4
+  question: >-
+    pH-meter data are taken in 0.50 mL steps near the end point. The largest pH jump is between 24.50 and
+    25.00 mL. What does the first-derivative method report, and how could you do better?
+  options:
+    - 25.00 mL; repeat the titration and average to remove the step-size error.
+    - 24.50 mL; the end point is always the volume just before the largest jump.
+    - 24.75 mL; nothing better is possible without a different indicator.
+    - 24.75 mL; use smaller steps near the end point or interpolate the second-derivative zero crossing.
+  correct: 3
+  explanation: >-
+    The derivative is assigned to the midpoint of the interval, so it can only be right to about half a step.
+    Smaller steps near the end point or second-derivative interpolation give a better estimate.

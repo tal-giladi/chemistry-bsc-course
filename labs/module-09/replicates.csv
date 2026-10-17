@@ -1,0 +1,17 @@
+# Simulated (make_data.py, seed 4). Chloride CRM certified 25.0 +/- 0.3 mg/L (k = 2).
+# True model: titration unbiased sd 0.35; ISE bias -0.6 sd 0.30; ISE result 5 has a +2.0 slip.
+method,chloride_mg_per_L
+titration,24.77
+titration,24.94
+titration,25.58
+titration,25.23
+titration,24.43
+titration,25.00
+titration,24.78
+ise,24.44
+ise,23.92
+ise,24.47
+ise,24.47
+ise,26.87
+ise,24.49
+ise,24.55

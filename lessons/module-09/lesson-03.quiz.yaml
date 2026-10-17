@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    A concentration is c = m/(M V). The mass has a relative uncertainty of 0.05 %, the molar mass is exact,
+    and the volume has 0.20 %. What is the relative uncertainty of c?
+  options:
+    - 0.25 %, because the relative uncertainties add.
+    - 0.21 %, because the relative uncertainties add in quadrature.
+    - 0.15 %, because the mass uncertainty is subtracted from the volume's.
+    - 0.20 %, because only the largest uncertainty ever counts.
+  correct: 1
+  explanation: >-
+    For a product or quotient of independent inputs, relative uncertainties combine as √(0.05² + 0.20²) = 0.21 %.
+    Simple addition overstates it, and the small term is not zero, just minor.
+- id: q2
+  question: >-
+    A pH meter reads 9.25 with a standard uncertainty of 0.03. What is the relative uncertainty of the
+    hydronium concentration [H₃O⁺] calculated from it?
+  options:
+    - About 0.3 %, the same relative uncertainty as the pH reading.
+    - About 1.3 %, from 0.434 × 0.03.
+    - About 3 %, the pH uncertainty expressed as a percentage.
+    - About 7 %, from 2.303 × 0.03.
+  correct: 3
+  explanation: >-
+    [H₃O⁺] = 10^(−pH), so u([H₃O⁺])/[H₃O⁺] = 2.303 × u(pH) = 0.069, about 7 %. The factor 0.434 is for the
+    opposite direction, from a concentration to a logarithm.
+- id: q3
+  question: >-
+    A burette has a zero offset of +0.04 mL that affects every reading equally. A delivered volume is
+    found as final reading minus initial reading. How does the offset affect the volume?
+  options:
+    - It cancels, because the same offset appears in both readings of the difference.
+    - It adds 0.04 mL × √2 to the uncertainty, because two readings are involved.
+    - It adds 0.08 mL, because the offset is counted once in each reading.
+    - It adds 0.04 mL/√3, because an offset is a rectangular Type B term.
+  correct: 0
+  explanation: >-
+    A fully correlated error (r = 1) of equal size cancels in a difference. Treating it as independent would
+    wrongly add it in quadrature; it would add directly only in a sum.
+- id: q4
+  question: >-
+    In a budget, the end point gives 0.15 % and the burette tolerance 0.12 %, while the mass and purity give
+    0.01 % each. Which statement is right?
+  options:
+    - A balance with ten times better resolution would cut the combined value nearly in half.
+    - Monte Carlo is needed, because the first-order rule fails whenever there are four inputs.
+    - Improving the end-point detection gives the largest gain; the mass and purity barely matter.
+    - The combined value is 0.29 %, so every input must be improved by the same factor.
+  correct: 2
+  explanation: >-
+    The combined value is √(0.15² + 0.12² + 0.01² + 0.01²) ≈ 0.19 %, and the end point alone carries about 60 %
+    of the variance. The mass term is already negligible, and the number of inputs does not decide whether
+    first-order propagation works.

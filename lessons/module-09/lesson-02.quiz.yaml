@@ -1,0 +1,50 @@
+- id: q1
+  question: >-
+    Three replicate results have a mean of 10.20 mg/L and s = 0.15 mg/L. What is the 95 % confidence
+    interval of the mean?
+  options:
+    - 10.20 ± 0.17 mg/L, using 1.96 × 0.15/√3.
+    - 10.20 ± 0.37 mg/L, using 4.303 × 0.15/√3.
+    - 10.20 ± 0.65 mg/L, using 4.303 × 0.15.
+    - 10.20 ± 0.30 mg/L, using 2 × 0.15.
+  correct: 1
+  explanation: >-
+    With n = 3 there are 2 degrees of freedom, so t = 4.303, and the interval uses the standard error
+    s/√n. The 1.96 value is for a very large sample; multiplying s alone describes single results, not the mean.
+- id: q2
+  question: >-
+    A one-sample t-test of five results against a certified value gives p = 0.21. Which statement is correct?
+  options:
+    - The method has been shown to be free of bias at the 95 % level.
+    - There is a 21 % chance that the method is biased.
+    - The certified value must be wrong, because the test failed to find a difference.
+    - These data give no evidence of bias, but a small bias could still be hidden by the scatter.
+  correct: 3
+  explanation: >-
+    A large p-value means the difference is within what scatter could explain. It does not prove there is no
+    bias; with only five results a real but small bias is easily missed (a type II error).
+- id: q3
+  question: >-
+    Two methods give s = 0.90 (n = 6) and s = 0.25 (n = 6). The critical F for 5 and 5 degrees of freedom
+    is 7.15. How should you compare their means?
+  options:
+    - Use Welch's t-test, because F = 13 shows the variances differ and must not be pooled.
+    - Use the pooled t-test, because both methods have the same number of results.
+    - Use the pooled t-test, because F = 3.6 is below the critical value.
+    - Use Grubbs' test on the less precise method until its s matches the other one.
+  correct: 0
+  explanation: >-
+    F is the ratio of variances, 0.90²/0.25² ≈ 13, not the ratio of standard deviations (3.6). It exceeds 7.15,
+    so the precisions differ and Welch's test is the right choice. Removing data to match s is never valid.
+- id: q4
+  question: >-
+    Grubbs' test flags one of eight results as an outlier at the 95 % level. What should you do?
+  options:
+    - Remove it, run Grubbs' test again on the remaining seven, and repeat until nothing is flagged.
+    - Keep it in all cases, because removing any data is scientific misconduct.
+    - Look for a recorded cause; if removing it, report that and why, and do not re-test the rest.
+    - Replace it with the mean of the other seven so that the sample size stays at eight.
+  correct: 2
+  explanation: >-
+    A significant G is a reason to look for a blunder, not an automatic deletion. Grubbs' test is meant for one
+    suspect only; applying it repeatedly makes false rejections likely.
