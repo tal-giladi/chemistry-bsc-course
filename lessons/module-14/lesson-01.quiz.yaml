@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You plot T squared against the total hanging mass for a phone bouncing on a spring. The best
+    straight line has slope 1.65 s^2/kg and crosses the mass axis at -0.012 kg. What do you report?
+  options:
+    - k = 0.61 N/m, from one over the slope, leaving out the 4 pi^2.
+    - k = 23.9 N/m and an effective spring mass of 12 g, from slope and intercept.
+    - k = 23.9 N/m, and the intercept is a calibration error of the scale that can be ignored.
+    - k = 3.8 N/m, from 2 pi over the slope, as if T rather than T^2 were plotted.
+  correct: 1
+  explanation: >-
+    T^2 = (4 pi^2/k)(m + m_eff), so k = 39.48/1.65 = 23.9 N/m. The line reaches zero at m = -m_eff,
+    so the spring itself adds 12 g to the moving mass.
+- id: q2
+  question: >-
+    Your static method gives k = 24.4 +/- 0.3 N/m and your dynamic method 23.2 +/- 0.2 N/m, computed
+    with the phone mass only. What is the most sensible next step?
+  options:
+    - Report the average, 23.8 N/m, because two methods always scatter a little.
+    - Trust the static value, because rulers are more reliable than phone sensors.
+    - Redo the dynamic fit with the spring's mass included; the gap is over 3 sigma.
+    - Report both values unchanged, because a 5 % difference is within normal lab error.
+  correct: 2
+  explanation: >-
+    The difference is 1.2 N/m against a combined uncertainty of 0.36 N/m, about 3.3 sigma: a real
+    systematic effect. Leaving out about a third of the spring mass makes the dynamic k low by this much.
+- id: q3
+  question: >-
+    phyphox reports the period of a bouncing phone with a scatter of 0.004 s at T = 0.80 s. What is
+    the relative uncertainty of a single dynamic k value?
+  options:
+    - 0.5 %, the same as the relative uncertainty of the period.
+    - 0.25 %, because the square root in the period formula halves the error.
+    - 2 %, because the period enters four times through 4 pi^2.
+    - 1.0 %, because k depends on one over T squared.
+  correct: 3
+  explanation: >-
+    k = 4 pi^2 m / T^2, so u_k/k = 2 u_T/T = 2 x 0.004/0.80 = 1.0 %. Constants such as 4 pi^2 carry
+    no uncertainty.
+- id: q4
+  question: >-
+    The static plot of spring length against mass is flat between 0 and 50 g and then rises in a
+    straight line. Which handling of the data is correct?
+  options:
+    - Use only the points from 50 g up, because the spring has built-in tension below that load.
+    - Fit all points with one line, because removing data is never allowed.
+    - Fit a curve through all points, because the spring is anharmonic at small loads.
+    - Discard the experiment, because a spring that is not linear everywhere cannot be measured.
+  correct: 0
+  explanation: >-
+    Many extension springs are wound with initial tension and do not extend until a minimum load.
+    Above it they obey Hooke's law, so fit the straight part and say in the report why you cut the rest.

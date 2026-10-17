@@ -1,0 +1,133 @@
+- id: q1
+  question: >-
+    You hang 0.25 kg on a spring and phyphox reports T = 0.65 s. A friend computes k from 4 pi^2
+    m/T^2 and gets 23.4 N/m, but the static stretch gave 24.6 +/- 0.2 N/m. The spring itself weighs
+    45 g. What do you conclude?
+  options:
+    - The phone sensor is miscalibrated, so only the static value can be reported.
+    - The spring is anharmonic, so the static and dynamic constants are genuinely different.
+    - The spring's mass was left out; adding about 15 g gives about 24.8 N/m.
+    - The difference is within normal scatter, so report the mean of the two values.
+  correct: 2
+  explanation: >-
+    About a third of the spring mass moves with the load. With m = 0.265 kg, k = 39.48 x 0.265/0.4225
+    = 24.8 N/m, in line with the static value. A 5 % gap is far outside the 0.2 N/m uncertainty.
+- id: q2
+  question: >-
+    Two set-ups ring down at the same 1.5 Hz. Set-up A loses half its amplitude in 20 cycles, set-up
+    B in 4 cycles. Which statement is right?
+  options:
+    - A has Q about 91 and B about 18, so A gives the narrower spectral line.
+    - A has Q about 20 and B about 4, because Q is the number of cycles to halve.
+    - Both have the same Q, because Q depends only on the frequency.
+    - A has Q about 18 and B about 91, because faster decay means a sharper resonance.
+  correct: 0
+  explanation: >-
+    Q = pi/delta with delta = ln2/n per cycle, so Q = pi n/ln 2: 91 and 18. Line width is f0/Q, so
+    the high-Q set-up has the narrower line.
+- id: q3
+  question: >-
+    A phone on a loop of elastic bands rings down; its frequency climbs from 1.97 to 2.00 Hz as the
+    swing dies away, with no sideways motion. What is the best molecular analogy?
+  options:
+    - A harmonic bond whose force constant grows as it cools down.
+    - A softening bond such as a Morse potential, whose level spacing shrinks at high energy.
+    - A bond that stiffens when stretched, so its overtones lie above twice the fundamental.
+    - A damped bond, since damping always raises the frequency as the amplitude decays.
+  correct: 1
+  explanation: >-
+    Frequency lower at large amplitude means the restoring force softens with stretch, like a real
+    bond. In the quantum picture the levels crowd together and the overtone falls below 2x the
+    fundamental.
+- id: q4
+  question: >-
+    Three equal pendulums joined by equal rubber bands give omega^2 = 19.6, 20.4 and 22.0 per s^2.
+    You now make the middle bob twice as heavy. What happens?
+  options:
+    - All three modes shift by the same amount, because gravity acts on every bob.
+    - Only mode 3 changes, because the heaviest bob dominates the highest mode.
+    - Nothing changes, because pendulum frequencies do not depend on mass.
+    - Mode 2 stays at 20.4 per s^2, because the middle bob does not move in it.
+  correct: 3
+  explanation: >-
+    Mode 2 has shape (1, 0, -1); the middle bob is still, so its mass never enters. Modes 1 and 3
+    move the middle bob, and the extra mass changes how the coupling acts on it.
+- id: q5
+  question: >-
+    A computational chemistry program reports for a linear triatomic molecule: 0, 0, 0, 0, 0, 640,
+    640, 1350 and 2300 per cm. A student says two vibrations are missing. What do you tell them?
+  options:
+    - Two modes failed to converge, so the calculation must be repeated.
+    - The zeros are three translations and two rotations, which leaves all four vibrations.
+    - Linear molecules have 3N - 6 vibrations, so one of the 640 values is an error.
+    - The zero values are the stretches, which programs cannot compute for linear molecules.
+  correct: 1
+  explanation: >-
+    Nine coordinates minus three translations and two rotations leave four vibrations: the
+    symmetric and antisymmetric stretches and a doubly degenerate bend.
+- id: q6
+  question: >-
+    An atmospheric chemist wants to measure the 13C fraction of CO2 by IR. Which band should she use
+    and why?
+  options:
+    - The symmetric stretch near 1333 per cm, because it is the strongest IR band.
+    - The bend near 667 per cm, because the bend is the only mode that feels the carbon mass.
+    - The antisymmetric stretch near 2349 per cm, which is IR active and shifts with 13C.
+    - Any band, because all three modes shift equally with the carbon mass.
+  correct: 2
+  explanation: >-
+    nu3 moves the carbon strongly and absorbs IR, so 13CO2 appears near 2282 per cm, well separated.
+    nu1 is IR inactive and does not move with the carbon mass at all.
+- id: q7
+  question: >-
+    You want to separate two vibration peaks 0.05 Hz apart, near 3 Hz, using the phone
+    accelerometer at 100 Hz with a Hann window. What recording do you need?
+  options:
+    - About 40 s or more, because the window needs a separation of about 2/T.
+    - About 2 s, because the 100 Hz sample rate is far above the 3 Hz signal.
+    - About 0.3 s, one period of the 3 Hz signal.
+    - About 4 s, if you zero-pad the record to ten times its length.
+  correct: 0
+  explanation: >-
+    Resolution depends only on record length: 2/T at most 0.05 Hz gives T of at least 40 s. The
+    sample rate only sets the highest frequency (50 Hz); zero-padding adds no resolution.
+- id: q8
+  question: >-
+    A student uses a phone app that samples sound at 8 kHz and records a 5.0 kHz whistle. The
+    spectrum shows a clear peak at 3.0 kHz. What is the right interpretation?
+  options:
+    - The whistle really contains a 3 kHz tone that the ear does not notice.
+    - The microphone distorts the tone, which always moves peaks down by a fixed amount.
+    - The 3 kHz peak is the second harmonic of a 1.5 kHz fundamental.
+    - The 5 kHz tone is above the 4 kHz Nyquist limit and aliases to 8 - 5 = 3 kHz.
+  correct: 3
+  explanation: >-
+    With fs = 8 kHz the Nyquist frequency is 4 kHz. A 5 kHz tone folds to |5 - 8| = 3 kHz and looks
+    like a real 3 kHz peak; sample faster or filter before sampling.
+- id: q9
+  question: >-
+    Your RLC fit gives f0 = 1540 Hz, Q = 2.1 and a peak ratio of 0.21 with a 10.0 ohm resistor. The
+    ohmmeter reads 28 ohm for the coil. What does the fit say about the coil?
+  options:
+    - At 1.5 kHz it acts like about 38 ohm, more than its 28 ohm DC value.
+    - Its resistance must be exactly 28 ohm, so the fitted peak height is wrong.
+    - Its inductance is zero, because the peak ratio is below 1.
+    - Its resistance does not matter, because Q depends only on L and C.
+  correct: 0
+  explanation: >-
+    R_total = R/A = 10.0/0.21 = 48 ohm, so the coil contributes about 38 ohm at 1.5 kHz. Core and
+    winding losses grow with frequency, which is why the measured Q is below the DC-based estimate.
+- id: q10
+  question: >-
+    A technician sets up the RLC project with the phone on its charger, earphones in, and the volume
+    at maximum. Which change matters most for safety?
+  options:
+    - Swap the film capacitor for an electrolytic one rated at a higher voltage.
+    - Unplug the charger, run on battery, and take the earphones out first.
+    - Leave everything as it is, because the circuit only draws a few milliamperes.
+    - Replace the 10 ohm resistor by a bare wire to reduce heating.
+  correct: 1
+  explanation: >-
+    The project rule is battery or USB power only, with nothing mains-powered connected, and a loud
+    tone in earphones can damage hearing. A bare wire would short the output; electrolytics are
+    polarised.

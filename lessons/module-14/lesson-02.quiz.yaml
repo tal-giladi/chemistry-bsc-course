@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A ringdown at 2.0 Hz has acceleration peaks that fall from 3.0 to 1.5 m/s^2 in 11 cycles. What
+    is its quality factor?
+  options:
+    - About 11, the number of cycles it took for the amplitude to halve.
+    - About 25, from pi divided by twice the decrement ln2/11 per cycle.
+    - About 50, from pi divided by the decrement ln2/11 per cycle.
+    - About 16, from the number of cycles divided by ln 2.
+  correct: 2
+  explanation: >-
+    The logarithmic decrement is delta = ln2/11 = 0.063 per cycle, so Q = pi/delta = 50. The
+    amplitude falls by e in 1/delta = 16 cycles, and Q is pi times that.
+- id: q2
+  question: >-
+    The semi-log plot of your ringdown peaks is a straight line for the last 40 s but bends steeply
+    downward during the first 5 s, when you had pulled the phone 8 cm. What explains this?
+  options:
+    - The sensor saturates at high acceleration, so the first peaks read too high.
+    - Air drag grows faster than linearly with speed, so big swings lose energy faster.
+    - The spring is anharmonic, which changes the damping rate but never the frequency.
+    - The fit window was too short, which always bends the start of a semi-log plot.
+  correct: 1
+  explanation: >-
+    At high speed air drag goes as velocity squared, which is not exponential decay. Once the swing is
+    small the drag is linear in velocity and the plot straightens. Start from smaller pulls.
+- id: q3
+  question: >-
+    Windowed fits of a ringdown give 1.52 Hz at the start and 1.49 Hz near the end, while the phone
+    hung steadily without twisting. What does this tell you about the restoring force?
+  options:
+    - It stiffens at large stretch, so the frequency is higher when the amplitude is large.
+    - It softens at large stretch, so the frequency is lower when the amplitude is large.
+    - It is perfectly harmonic, and the drift comes from the damping slowing the motion.
+    - It is harmonic, and the drift shows that the spring is losing mass during the run.
+  correct: 0
+  explanation: >-
+    The frequency fell as the amplitude decayed, so it was higher at large amplitude: beta > 0, a
+    stiffening force. Light damping shifts the frequency by far less than 2 %.
+- id: q4
+  question: >-
+    Why is the first overtone of HCl at 5668 per cm rather than at twice the 2886 per cm fundamental?
+  options:
+    - Because damping by collisions lowers the frequency of every higher level.
+    - Because the overtone uses the reduced mass of the chlorine atom instead.
+    - Because the overtone is a different normal mode with its own force constant.
+    - Because the bond softens when stretched, so the level gaps shrink as v rises.
+  correct: 3
+  explanation: >-
+    The Morse-like bond is an anharmonic, softening oscillator: G(v+1) - G(v) = omega_e - 2 omega_e
+    x_e (v+1) falls with v, so the 0 to 2 gap is less than twice the 0 to 1 gap.

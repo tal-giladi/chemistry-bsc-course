@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Series RLC circuit driven by a phone</title>
+  <desc id="d">The phone headphone output tip connects through a 10 mH inductor, a 1.0 microfarad capacitor and a 10 ohm resistor back to the sleeve, which is ground. The multimeter on AC volts reads Vin between tip and sleeve, and VR across the resistor.</desc>
+  <rect x="0" y="0" width="640" height="300" fill="#ffffff"/>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#222222" stroke-linecap="round">
+    <!-- source -->
+    <rect x="20" y="90" width="110" height="120" rx="12" fill="#eef3f8" stroke="#1f4e79" stroke-width="2"/>
+    <text x="34" y="125">phone on</text>
+    <text x="34" y="145">battery,</text>
+    <text x="34" y="165">sine from</text>
+    <text x="34" y="185">headphones</text>
+    <text x="138" y="96">tip</text>
+    <text x="138" y="232">sleeve (ground)</text>
+    <!-- wires -->
+    <path d="M130 110 H190" stroke="#222222" stroke-width="2" fill="none"/>
+    <!-- inductor: loops -->
+    <path d="M190 110 q10 -20 20 0 q10 -20 20 0 q10 -20 20 0 q10 -20 20 0" stroke="#222222" stroke-width="2" fill="none"/>
+    <text x="196" y="80">L = 10 mH</text>
+    <path d="M270 110 H340" stroke="#222222" stroke-width="2" fill="none"/>
+    <!-- capacitor -->
+    <path d="M340 92 V128 M352 92 V128" stroke="#222222" stroke-width="3" fill="none"/>
+    <text x="318" y="80">C = 1.0 µF</text>
+    <path d="M352 110 H470 V140" stroke="#222222" stroke-width="2" fill="none"/>
+    <!-- resistor vertical zigzag -->
+    <path d="M470 140 l10 6 l-20 12 l20 12 l-20 12 l20 12 l-10 6" stroke="#222222" stroke-width="2" fill="none"/>
+    <text x="490" y="176">R = 10 Ω</text>
+    <path d="M470 200 V250 H130 V190" stroke="#222222" stroke-width="2" fill="none"/>
+    <!-- meter labels -->
+    <path d="M150 110 V160" stroke="#1f4e79" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+    <path d="M150 250 V200" stroke="#1f4e79" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+    <text x="158" y="186" fill="#1f4e79">Vin</text>
+    <path d="M560 140 H600 V200 H560" stroke="#1f4e79" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+    <path d="M470 140 H560 M470 200 H560" stroke="#1f4e79" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+    <text x="566" y="226" fill="#1f4e79">VR</text>
+    <text x="250" y="285" fill="#555555">meter on AC mV, same range for Vin and VR</text>
+  </g>
+</svg>

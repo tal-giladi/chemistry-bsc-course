@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A colleague says CO2 cannot be a greenhouse gas because it is a symmetric, non-polar molecule.
+    What is the best reply?
+  options:
+    - She is right; only polar molecules such as water absorb infrared light.
+    - The bend and antisymmetric stretch make a dipole oscillate, so those modes absorb IR.
+    - CO2 absorbs only because of collisions with water, which give it a temporary dipole.
+    - All vibrations absorb IR, so symmetry has nothing to do with it.
+  correct: 1
+  explanation: >-
+    IR absorption needs a changing dipole, not a permanent one. In nu2 and nu3 the carbon moves
+    against both oxygens and the dipole oscillates; only the symmetric stretch is IR inactive.
+- id: q2
+  question: >-
+    You replace 12C by 13C in CO2. Which band stays at the same wavenumber in the harmonic model?
+  options:
+    - The antisymmetric stretch, because both bonds keep their force constants.
+    - The bend, because bending depends only on the angle, not on masses.
+    - The symmetric stretch, because the carbon atom does not move in that mode.
+    - None of the bands, because every mode depends on the total mass.
+  correct: 2
+  explanation: >-
+    In nu1 the two oxygens move oppositely and the carbon stays at the centre of mass, so omega1^2 =
+    (k + k12)/m_O contains no carbon mass. nu2 and nu3 both move the carbon and shift down.
+- id: q3
+  question: >-
+    With one force constant per bond, CO2 should have nu3/nu1 = 1.915, but the measured ratio is
+    1.762. Which change to the model fixes this with the fewest new parameters?
+  options:
+    - Add a bond-bond interaction constant, so in-phase and out-of-phase stretches differ in stiffness.
+    - Replace the oxygen mass by the reduced mass of one C=O bond.
+    - Add a bending constant, because the bend couples strongly to the stretches in a linear molecule.
+    - Use the harmonic wavenumbers instead, because anharmonicity explains the whole difference.
+  correct: 0
+  explanation: >-
+    A term k12 s1 s2 makes the symmetric stretch stiffer (k + k12) and the antisymmetric one softer
+    (k - k12). Two constants then fit both stretches exactly; the harmonic ratio 2396/1351 = 1.77 is
+    still far from 1.915.
+- id: q4
+  question: >-
+    How many vibrational modes does linear CO2 have, and how many IR fundamentals do you expect to
+    see in its gas-phase spectrum?
+  options:
+    - Three modes and three IR bands, one for each atom.
+    - Three modes and two IR bands, because one stretch is symmetric.
+    - Four modes and four IR bands, because every mode absorbs at its own frequency.
+    - Four modes but two IR positions: nu1 is inactive and the two bends coincide.
+  correct: 3
+  explanation: >-
+    3N - 5 = 4 for a linear molecule: nu1, two degenerate nu2 bends and nu3. nu1 does not absorb and
+    the bends share one wavenumber, so the fundamentals appear near 667 and 2349 per cm.

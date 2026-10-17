@@ -1,0 +1,50 @@
+- id: q1
+  question: >-
+    A series circuit has L = 22 mH and C = 0.47 uF. At what frequency does it resonate?
+  options:
+    - About 9800 Hz, from 1 over the square root of LC.
+    - About 1560 Hz, from 1 over 2 pi times the square root of LC.
+    - About 4.9 Hz, from 1 over 2 pi times LC.
+    - About 49 Hz, from the same formula with the inductance entered as 22 H.
+  correct: 1
+  explanation: >-
+    f0 = 1/(2 pi sqrt(LC)) = 1/(2 pi sqrt(0.022 x 4.7e-7)) = 1/(2 pi x 1.017e-4) = 1565 Hz. The
+    value without 2 pi is omega0 in rad/s.
+- id: q2
+  question: >-
+    Your fit gives f0 = 1600 Hz and Q = 2.5. Between which frequencies does the ratio VR/Vin stay
+    above 1/sqrt(2) of its peak?
+  options:
+    - Between 960 and 2240 Hz, because the band is Q times f0 divided by 2.5.
+    - Between 1500 and 1700 Hz, because the band is always about 200 Hz wide.
+    - Between about 1310 and 1950 Hz, a bandwidth of f0/Q = 640 Hz.
+    - Between 640 and 4000 Hz, from f0 divided and multiplied by Q.
+  correct: 2
+  explanation: >-
+    The half-power bandwidth is f0/Q = 640 Hz. For a broad resonance the band is not symmetric:
+    f0 (sqrt(1 + x^2) -/+ x) with x = 1/(2Q) gives about 1310 and 1950 Hz.
+- id: q3
+  question: >-
+    You read Vin once at 1 kHz and then only VR at every frequency. The fitted Q comes out 30 %
+    higher than with the full ratio method. What went wrong?
+  options:
+    - The phone output sags near resonance, so VR alone distorts the curve's shape.
+    - The meter is more accurate at high frequency, so VR readings there are too large.
+    - Q depends on Vin, so a single reading always gives the wrong Q.
+    - The resistor heats up near resonance, which changes R during the sweep.
+  correct: 0
+  explanation: >-
+    The source has internal resistance, so Vin is lowest at resonance where the circuit impedance is
+    smallest. Dividing by Vin at each point removes this and the meter's frequency response.
+- id: q4
+  question: >-
+    Which pair correctly matches the RLC circuit to a mass on a spring with damping?
+  options:
+    - Resistance is like the mass, and capacitance is like the friction.
+    - Capacitance is like the mass, and inductance is like the stiffness.
+    - Inductance is like the friction, and resistance is like the stiffness.
+    - Inductance is like the mass, and one over capacitance is like the stiffness.
+  correct: 3
+  explanation: >-
+    L q'' + R q' + q/C = V matches m x'' + b x' + k x = F: L plays mass, R friction and 1/C
+    stiffness, so omega0 = 1/sqrt(LC) matches sqrt(k/m).

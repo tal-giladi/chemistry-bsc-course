@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A pump vibrates at 70 Hz. Your phone accelerometer samples at 100 Hz. Where does the vibration
+    appear in the spectrum?
+  options:
+    - At 70 Hz, because the sensor is fast enough to see it.
+    - Nowhere, because frequencies above Nyquist are simply lost.
+    - At 30 Hz, because 70 Hz lies above the 50 Hz Nyquist limit.
+    - At 35 Hz, because the spectrum shows half of every frequency.
+  correct: 2
+  explanation: >-
+    The Nyquist frequency is 50 Hz. The 70 Hz signal aliases to |70 - 100| = 30 Hz and looks like a
+    real 30 Hz vibration.
+- id: q2
+  question: >-
+    Two modes at 0.700 and 0.720 Hz merge into one peak in a 20 s accelerometer record sampled at
+    200 Hz. What separates them?
+  options:
+    - Recording for about 100 s or more, since a windowed peak needs about 2/T.
+    - Raising the sample rate to 500 Hz, which gives finer frequency steps.
+    - Zero-padding the 20 s record to ten times its length before the FFT.
+    - Removing the window, because windows always merge neighbouring peaks.
+  correct: 0
+  explanation: >-
+    Resolution is 1/T and depends only on record length. With a window you need 2/T at most 0.02 Hz,
+    so T of about 100 s. Zero-padding only smooths the curve.
+- id: q3
+  question: >-
+    A 10 s recording of a spring with gamma = 0.04 per s gives a peak 0.09 Hz wide. What Q do you
+    report?
+  options:
+    - About 16, from f0 divided by the measured line width.
+    - About 110, from the time fit; the 10 s line width only reflects 1/T.
+    - About 32, because the line width must be halved for a power spectrum.
+    - About 55, from the average of the spectral and time-domain values.
+  correct: 1
+  explanation: >-
+    The true width gamma/pi is 0.013 Hz, far below the 0.1 Hz resolution of a 10 s record, so the
+    measured width is instrumental. Use the time-domain fit, or record many decay times.
+- id: q4
+  question: >-
+    Your spectrum of a pure ringdown shows small extra peaks spaced evenly on both sides of the main
+    one. With a Hann window they disappear. What were they?
+  options:
+    - Real weak modes of the spring that the window hid.
+    - Aliases of the main peak from a sample rate that was too low.
+    - Overtones caused by anharmonicity of the spring.
+    - Side lobes from the abrupt start and end of the record.
+  correct: 3
+  explanation: >-
+    Cutting a record sharply spreads each peak into side lobes. A window tapers the edges and removes
+    them; real modes and overtones survive windowing.

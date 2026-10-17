@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You pass the force-constant matrix K of a three-mass chain to an eigensolver and get eigenvalues
+    25, 100 and 225 (SI units). What are the mode frequencies in hertz?
+  options:
+    - 25, 100 and 225 Hz, because the eigenvalues are the frequencies.
+    - 0.80, 1.59 and 2.39 Hz, from the square roots divided by 2 pi.
+    - 5, 10 and 15 Hz, from the square roots of the eigenvalues.
+    - 3.98, 15.9 and 35.8 Hz, from the eigenvalues divided by 2 pi.
+  correct: 1
+  explanation: >-
+    Eigenvalues are omega^2 (with M included). omega = 5, 10, 15 rad/s, and f = omega/2 pi = 0.80,
+    1.59, 2.39 Hz.
+- id: q2
+  question: >-
+    Three equal pendulums are joined by equal rubber bands. You measure omega^2 = 20.0, 21.0 and
+    23.0 per s^2 for the three modes. What does this say about the simple chain model?
+  options:
+    - It works, because the shifts 1 and 3 show the predicted 0 to 1 to 3 pattern.
+    - It fails, because the three omega^2 values should be equally spaced.
+    - It works only if the pendulums are much longer than the bands are wide.
+    - It fails, because the shifts 1.0 and 3.0 should be in the ratio 1 to 2.
+  correct: 0
+  explanation: >-
+    The model predicts omega^2 = g/L + c(0, 1, 3). Shifts of 1.0 and 3.0 per s^2 match with c = 1.0
+    per s^2 and g/L = 20.0 per s^2.
+- id: q3
+  question: >-
+    In a chain of three masses between walls you double the middle mass. Which mode keeps its
+    frequency?
+  options:
+    - Mode 1, because all three masses move the same way in it.
+    - Mode 3, because the outer masses dominate the highest mode.
+    - None, because changing any mass changes every frequency.
+    - Mode 2, because the middle mass stands still in it.
+  correct: 3
+  explanation: >-
+    In mode 2 the shape is (1, 0, -1): the middle mass does not move, so its mass never enters the
+    equation for that mode. The other two modes move it and shift down.
+- id: q4
+  question: >-
+    You pull only pendulum 1 of a weakly coupled chain and let go. After about 20 s pendulum 1 is
+    almost still and the others swing. Why?
+  options:
+    - Pendulum 1 lost its energy to air drag, and the others picked up a draft.
+    - The release started several normal modes, which drift out of step at their beat frequency.
+    - The rubber bands store the energy for a while and then release it to the far end.
+    - Pendulum 1 has a different natural frequency from the others, so it stops resonating.
+  correct: 1
+  explanation: >-
+    Releasing one pendulum is a sum of normal modes. Their frequencies differ slightly, so their sum
+    moves from pendulum 1 to the others and back with the beat period between modes.
