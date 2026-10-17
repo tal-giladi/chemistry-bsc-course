@@ -1,0 +1,116 @@
+- id: q1
+  question: >-
+    A learner proposes: "Does air pollution in my street change the colour of red-cabbage indicator left
+    on the windowsill?" Which feasibility check fails first, and what is a better move?
+  options:
+    - The hours check; the learner should plan two years of daily observations instead of 180 hours.
+    - The tools check; the learner should buy a commercial gas analyser to measure the pollutants.
+    - The safety check; cabbage extract is hazardous and must be replaced by a lab indicator.
+    - The reference check; nothing independent gives the true pollution, so narrow to a measurable question.
+  correct: 3
+  explanation: >-
+    Without an independent reference the colour change cannot be tied to pollution rather than light,
+    temperature or mould. A question needs something to compare with before it is worth the hours.
+- id: q2
+  question: >-
+    Your plan gives the data phase 50 hours. You want 40 molecules, each taking 15 minutes of your time to
+    build and check, with a rerun factor of 1.3, and 30 minutes of machine time each. What do you conclude?
+  options:
+    - It does not fit, because the 26 hours of machine time must be added to your 13 hours.
+    - It fits, because your attended time is 13 hours; the 26 hours of machine time cost about three days.
+    - It does not fit, because 40 molecules always take more than 50 hours of work.
+    - It fits only without reruns, because the rerun factor pushes the total above 50 hours.
+  correct: 1
+  explanation: >-
+    Attended time is 40 x 15 x 1.3 / 60 = 13 h. Machine time, 40 x 30 x 1.3 / 60 = 26 h, needs calendar days
+    but not your hours.
+- id: q3
+  question: >-
+    Before running 30 molecules, a learner reproduces the published formaldehyde frequencies from Lesson 31.4
+    and gets values 300 cm-1 off. What should happen next?
+  options:
+    - Run all 30 molecules anyway; the scale factor fitted later will absorb the offset.
+    - Report the 300 cm-1 offset as a finding about the method in the final report.
+    - Stop and find the cause, such as wrong units or a mode mismatch, before collecting main data.
+    - Drop formaldehyde from the set, since one bad molecule does not affect the result.
+  correct: 2
+  explanation: >-
+    The known-answer test exists to catch a broken method early. A failure means the method or its use is
+    wrong, and every later number would carry the same error.
+- id: q4
+  question: >-
+    A pilot of five runs gives a standard deviation of 0.050 %. You need a 95 % half-width of at most 0.040 %.
+    With the t values from the quiz page, what is the smallest number of runs?
+  options:
+    - 5 runs, because the pilot already reaches a half-width close to 0.040 %.
+    - 4 runs, because 0.050 divided by the square root of 4 is 0.025, below the target.
+    - 9 runs, because 8 runs give 2.36 x 0.050 / 2.83 = 0.042 and 9 runs give 0.0385.
+    - 16 runs, because the half-width must shrink in proportion to the number of runs.
+  correct: 2
+  explanation: >-
+    The half-width is t s / sqrt(n). Five runs give 2.78 x 0.050 / 2.24 = 0.062 %; forgetting t gives the
+    too-small count of 4, and dropping the square root gives 16.
+- id: q5
+  question: >-
+    Two vinegar brands are titrated: brand A on Sunday with a fresh baking-soda solution, brand B on Wednesday
+    with the same solution. B comes out 1.5 % lower. What can you claim?
+  options:
+    - Brand B is weaker than brand A, because the difference is larger than the repeatability.
+    - Nothing about the brands yet, because the brand difference is mixed with the ageing of the titrant.
+    - Brand A is stronger than its label, because it was measured with the fresher solution.
+    - The titrant lost 1.5 % of its strength between Sunday and Wednesday.
+  correct: 1
+  explanation: >-
+    Measuring each brand in a block confounds brand with day. A shuffled order with a standard titrated each
+    day would separate them; with this design neither cause can be isolated.
+- id: q6
+  question: >-
+    A solubility model built on 800 compounds has an RMS error of 0.45 log units on those compounds and 0.81
+    on 200 compounds it never saw. A friend says to report 0.45 because it uses more data. What do you report?
+  options:
+    - 0.81 on the held-out compounds, as the error a new user should expect.
+    - 0.45, because the larger set gives the more precise estimate of the error.
+    - 0.63, the average, because both sets contain real measured solubilities.
+    - Both without comment, and let the reader choose the number that suits them.
+  correct: 0
+  explanation: >-
+    The fitting set gives an optimistic error because the model was tuned to it. The held-out error measures
+    how the model performs on new compounds; a large gap is itself a finding (overfitting) worth discussing.
+- id: q7
+  question: >-
+    Late in the project you find that one titration in your raw CSV was recorded with the wrong mass, and your
+    notebook has the right one. What do you do?
+  options:
+    - Edit the CSV, because the corrected file is the true record of the experiment.
+    - Delete the run from the CSV, since a wrong mass makes the whole run worthless.
+    - Leave the raw file unchanged and correct the run in code, citing the notebook entry.
+    - Repeat the whole series, because any correction in a data set invalidates all of it.
+  correct: 2
+  explanation: >-
+    Raw data stay read-only; the correction lives in the code with its reason, so a reader can see and
+    check it. One wrong entry does not require repeating everything.
+- id: q8
+  question: >-
+    Which poster plan best passes the ten-second test at an A0 poster session?
+  options:
+    - The full report text in three columns at 16 pt, so every detail is available to visitors.
+    - A title naming the topic, an introduction block at the top, and the results at the bottom right.
+    - Six equally sized figures with no titles, so visitors can draw their own conclusions.
+    - A title stating the result and a central figure titled with its conclusion, labels at 24 pt.
+  correct: 3
+  explanation: >-
+    A visitor reads the title and the main figure first; both must carry the result. Small text, topic titles
+    and untitled figures make the visitor walk on.
+- id: q9
+  question: >-
+    A researcher you e-mailed answered your question and pointed out a Fermi resonance you had missed. How do you
+    present the work afterwards?
+  options:
+    - As your project, revised after the researcher's comments, naming them only with permission.
+    - As a project supervised by the researcher, since they corrected the analysis.
+    - As a joint paper, adding the researcher as co-author without asking, to give them credit.
+    - Without mentioning the comment, since it came by private e-mail.
+  correct: 0
+  explanation: >-
+    State exactly what the reader did and ask before naming them. Supervision or co-authorship would claim
+    more than happened; hiding the help would claim less.

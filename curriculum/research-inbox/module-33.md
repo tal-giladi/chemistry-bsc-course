@@ -1,0 +1,24 @@
+# Research log — Module 33
+
+| source | url | date accessed | claim supported | lesson(s) |
+|---|---|---|---|---|
+| Technion SAP course descriptions (open-data mirror, michael-maltsev/technion-sap-info-fetcher, gh-pages, courses_2025_200.json) | https://github.com/michael-maltsev/technion-sap-info-fetcher | 2026-10-17 | 01240353: 4 points, 180 h in research labs of academic institutions or approved companies, prior approval, final report approved by the researcher, handed in the semester after, 75 points accumulated; 01240355: 6 points, about 240 h in a faculty group, proposal abstract approved by the supervisor, poster at a faculty forum, final report | plan, 33.1, 33.3, projects |
+| NIST CCCBDB | https://cccbdb.nist.gov/ | 2026-10-17 | release 22 (May 2022), SRD 101; experimental and calculated vibrational frequencies, scale factors | 33.1, projects/ir-benchmark |
+| Sorkun, Khetan and Er (2019), AqSolDB, Sci. Data 6, 143 | https://doi.org/10.1038/s41597-019-0151-1 | 2026-10-17 | about 9,982 curated aqueous solubilities merged from nine data sets, reliability labels | 33.1, projects/solubility-model |
+| AqSolDB on Harvard Dataverse (API) | https://doi.org/10.7910/DVN/OVHAW8 | 2026-10-17 | licence CC0 1.0; version 1, released 2019-07-18; file curated-solubility-dataset.tab | 33.1, 33.4, projects/solubility-model |
+| IUPAC Digitized pKa Dataset (GitHub README) | https://github.com/IUPAC/Dissociation-Constants | 2026-10-17 | v2.4a, digitized from Serjeant 1979, Perrin 1965 and 1972; 24,211 rows, 10,626 molecules; CC BY-NC 4.0 with required IUPAC attribution; Zenodo DOI 10.5281/zenodo.7236452 | 33.1, 33.4, projects/hammett-pka |
+| Delaney (2004), ESOL, J. Chem. Inf. Comput. Sci. 44, 1000 | https://doi.org/10.1021/ci034243x | 2026-10-17 | DOI resolves; four-descriptor ESOL baseline (logP, MW, rotatable bonds, aromatic proportion) | projects/solubility-model |
+| Wilson et al. (2017), Good enough practices in scientific computing, PLOS Comput. Biol. 13, e1005510 | https://doi.org/10.1371/journal.pcbi.1005510 | 2026-10-17 | project layout (README, data raw, results, src, doc), raw data unchanged, one script reruns all | 33.2, labs make_project.py |
+| Wilkinson et al. (2016), FAIR Guiding Principles, Sci. Data 3, 160018 (via GO FAIR Foundation page) | https://www.gofair.foundation/fair-principles | 2026-10-17 | FAIR = Findable, Accessible, Interoperable, Reusable; sub-principles | 33.2 |
+| NIST/SEMATECH e-Handbook 1.3.5.2 | https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm | 2026-10-17 | confidence limits for the mean: mean ± t(1−α/2, N−1) s/√N | 33.2, labs lesson02 |
+| Mensh and Kording (2017), Ten simple rules for structuring papers, PLOS Comput. Biol. 13, e1005619 | https://doi.org/10.1371/journal.pcbi.1005619 | 2026-10-17 | one central contribution, figure titles state conclusions, abstract self-contained, time on title/abstract/figures, seek feedback | 33.3 |
+| Erren and Bourne (2007), Ten simple rules for a good poster presentation, PLoS Comput. Biol. 3, e102 | https://doi.org/10.1371/journal.pcbi.0030102 | 2026-10-17 | ten-second test, title as headline, layout, concise content, contact afterwards | 33.3 |
+| ISO 216:2007 catalogue page | https://www.iso.org/standard/36631.html | 2026-10-17 | current edition defining A series (page found via search, direct fetch 403); A0 841 × 1189 mm, area 1 m², ratio 1:√2 (secondary sources agree) | 33.3 |
+| Bourne and Korngreen (2006), Ten simple rules for reviewers, PLoS Comput. Biol. 2, e110 | https://doi.org/10.1371/journal.pcbi.0020110 | 2026-10-17 | fair, useful, neutral reviews with a firm recommendation | 33.4 |
+| Zenodo about page | https://about.zenodo.org/ | 2026-10-17 | funded by CERN, OpenAIRE, EC; open to research from all disciplines; metadata registered with DataCite | 33.4 |
+| ORCID, What is ORCID | https://info.orcid.org/what-is-orcid/ | 2026-10-17 | persistent identifier, free of charge to researchers | 33.4 |
+| ChemRxiv author FAQ (via search; direct fetch 403) | https://chemrxiv.org/engage/assets/public/chemrxiv/term/author-faq.htm | 2026-10-17 | preprints are manuscripts before formal peer review; all authors must agree; curation by PhD chemists. Eligibility of unaffiliated authors NOT confirmed | 33.4 |
+| Israel Chemical Society home page | https://www.chemistry.org.il/ | 2026-10-17 | 89th annual meeting 10–11 Feb 2026, Tel Aviv University; undergraduate student membership 50 NIS | 33.4 |
+| Open University of Israel (FAQ seen in search results; English site redirected) | https://www.openu.ac.il/en | 2026-10-17 | undergraduate enrolment open without matriculation (lesson says to check current rules) | 33.4 |
+| Creative Commons CC BY 4.0 deed | https://creativecommons.org/licenses/by/4.0/ | 2026-10-17 | licence suggested for report and poster | 33.4 |
+| Git documentation | https://git-scm.com/doc | 2026-10-17 | version control reference | 33.2 |

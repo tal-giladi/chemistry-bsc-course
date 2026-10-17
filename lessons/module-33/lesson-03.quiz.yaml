@@ -1,0 +1,50 @@
+- id: q1
+  question: >-
+    Which title best serves a research report on 30 calculated carbonyl stretches compared with experiment?
+  options:
+    - A study of calculated infrared spectra of carbonyl compounds with a semi-empirical method
+    - GFN2-xTB overestimates carbonyl stretches by about 50 cm-1, most for amides
+    - Calculated versus experimental IR frequencies, an investigation using xtb and NIST data
+    - Carbonyl stretching frequencies, theory, computation and comparison with experiment
+  correct: 1
+  explanation: >-
+    A title should state the central result. The other three name the topic and leave the reader to find
+    out what was found.
+- id: q2
+  question: >-
+    Seven amides show a mean error of 78 plus or minus 9 cm-1 and fourteen ketones and aldehydes 41 plus or
+    minus 7 cm-1 (95 % intervals). Which sentence matches the evidence?
+  options:
+    - The method fails for all amides and should never be used for peptides.
+    - The difference between the classes is within the uncertainty and cannot be claimed.
+    - Amides and ketones behave the same once the scale factor is applied to both.
+    - In this set the error is larger for amides; seven molecules suggest a class effect worth testing.
+  correct: 3
+  explanation: >-
+    The intervals do not overlap, so the difference in this set is real, but seven molecules cannot prove
+    a rule for all amides. The wording should be as strong as the evidence and no stronger.
+- id: q3
+  question: >-
+    Your A0 poster uses 18 pt axis labels. You print it on one A4 sheet to check it. What do you expect, and
+    what should you do?
+  options:
+    - The labels print at 4.5 pt and are unreadable at 50 cm, so remake the figures at print size with larger labels.
+    - The labels print at 9 pt because A4 is half of A0, which is readable, so nothing needs to change.
+    - The test print says nothing, because A4 and A0 have different aspect ratios, so print a full A0 proof.
+    - The labels print at 18 pt because printers rescale fonts, so check the body text instead.
+  correct: 0
+  explanation: >-
+    A4 is one quarter of A0 in each direction (same 1 to square-root-2 ratio), so 18 pt becomes 4.5 pt, and
+    50 cm corresponds to reading the A0 poster from 2 m. Labels of 24 pt or more are needed at A0.
+- id: q4
+  question: >-
+    Which limitations section is most useful to an expert reader of a home research project?
+  options:
+    - None, because pointing out weaknesses makes the reader trust the result less.
+    - One sentence saying that more work is needed before any conclusions can be drawn.
+    - Named limits of the data, the method and the home setting, each with what would remove it.
+    - A list of every problem met during the 180 hours, in the order they happened.
+  correct: 2
+  explanation: >-
+    Specific limits with a remedy show that you understand your result and tell the reader what to do next.
+    A vague sentence or a diary of problems does neither.

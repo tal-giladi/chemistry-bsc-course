@@ -1,0 +1,50 @@
+- id: q1
+  question: >-
+    You want an expert to comment on your project. Which request is most likely to get a useful answer?
+  options:
+    - A long e-mail about your background with the full 16-page report attached and a request for general feedback.
+    - The same short e-mail sent at once to twenty researchers, so that at least one of them replies.
+    - A message asking whether they would supervise your future research, with the report to follow later.
+    - A short e-mail to an author you cited, with the result, one specific question and the time it takes.
+  correct: 3
+  explanation: >-
+    A specific question from someone who used their work is easy to answer in a few minutes. Mass mailing,
+    vague requests and large unrequested attachments are usually ignored.
+- id: q2
+  question: >-
+    A researcher read your abstract and answered one question by e-mail. How do you describe this in the report?
+  options:
+    - Supervised by the researcher, since their comment changed one of the results.
+    - Read and commented on by the researcher, if they agree to be named.
+    - Approved by the researcher, as in the Technion research project course.
+    - Nothing at all, because informal feedback should never be mentioned.
+  correct: 1
+  explanation: >-
+    Describe exactly what happened and ask before naming them. Supervision and approval mean they checked the
+    work as it was done, which a reader did not.
+- id: q3
+  question: >-
+    Your project used AqSolDB (CC0), IUPAC pKa data (CC BY-NC 4.0) and SDBS spectra (viewing only, no
+    redistribution). What do you deposit on Zenodo?
+  options:
+    - Everything, since a scientific archive is exempt from data licences.
+    - Only the report, since no data or code may ever be archived with a course project.
+    - Your code, results and report, the CC0 and CC BY-NC data with attribution, and links to the SDBS entries.
+    - Your code and results and the SDBS spectra, since spectra are facts and not covered by any terms.
+  correct: 2
+  explanation: >-
+    Each source keeps its own licence. CC0 and non-commercial CC BY data may be shared with attribution in a
+    non-commercial archive; SDBS terms forbid redistribution, so you link to the entries instead.
+- id: q4
+  question: >-
+    The package check reports that numpy is listed without a version and that the hours log has 171 hours. What
+    is the best response?
+  options:
+    - Pin every package with its exact version and check the log for missing or misnamed sessions before sending.
+    - Ignore both, because readers care about the result and not about versions or hours.
+    - Add 9 hours to the analysis phase so the log reaches 180, then send the report.
+    - Remove requirements.txt, since an unpinned list is worse than none at all.
+  correct: 0
+  explanation: >-
+    Pinned versions let a reader rerun the analysis; the log is evidence of the work and must be honest. If
+    sessions were not logged, find them in the notebook; never invent hours.

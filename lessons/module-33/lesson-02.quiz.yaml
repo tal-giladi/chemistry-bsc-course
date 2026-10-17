@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A pilot of four runs gives a standard deviation of 0.12 (in the unit of your result). You need a 95 %
+    confidence half-width of 0.10 or less. Roughly how many runs do you need?
+  options:
+    - 2, because 0.12 is already close to 0.10 and two runs halve the scatter.
+    - 9, because the half-width is t times s over the square root of n and t also falls with n.
+    - 4, because the pilot already has four runs and the standard deviation will not change.
+    - 36, because the half-width falls with n, not with the square root of n.
+  correct: 1
+  explanation: >-
+    With t(0.975, 7) = 2.36 eight runs give 0.102; with t(0.975, 8) = 2.31 nine runs give 0.094. Using z
+    = 1.96 instead of t, or forgetting the square root, gives the wrong counts.
+- id: q2
+  question: >-
+    You will titrate four vinegar brands, nine times each, over two days with one baking-soda solution that
+    slowly absorbs CO2 from the air. Which order of runs protects the comparison of brands?
+  options:
+    - All nine runs of brand A first, then B, C and D, so each brand is measured under steady conditions.
+    - Brands A and B on day 1 and brands C and D on day 2, so each day has a complete pair.
+    - A shuffled order across all 36 runs and both days, written down before you start.
+    - The brand you expect to be most acidic first, while the solution is freshest.
+  correct: 2
+  explanation: >-
+    Drift in the titrant then spreads over all brands instead of looking like a brand difference. Blocks by
+    brand or by day mix the brand effect with the drift.
+- id: q3
+  question: >-
+    You fit an IR scale factor to 20 molecules and get an RMS error of 11.6 cm-1 on those molecules. On 10
+    molecules you held out, the RMS is 14.3 cm-1. Which value goes into the report as the method's error?
+  options:
+    - The 14.3 cm-1 held-out value, because the fitting set gives an optimistic estimate.
+    - The 11.6 cm-1 value, because it uses twice as many molecules as the held-out set.
+    - The average of the two, 13.0 cm-1, because both sets are equally valid samples.
+    - Neither, because an RMS error should only be reported for the scale factor itself.
+  correct: 0
+  explanation: >-
+    The fitted parameter was tuned to the fitting molecules, so their residuals are too small. The held-out
+    error is what a new user of the method should expect.
+- id: q4
+  question: >-
+    In week 9 you notice a mistyped value in a raw data file you downloaded. What is the right way to fix it?
+  options:
+    - Correct the value in the raw file directly and note the date of the change in your notebook.
+    - Delete the row from the raw file, since a mistyped point would bias the fit.
+    - Leave it, because raw data must never be changed and errors average out.
+    - Keep the raw file unchanged and correct the value in code, with the reason in a comment.
+  correct: 3
+  explanation: >-
+    Raw data stay read-only; corrections live in code, so they are visible, repeatable and can be checked
+    by a reader. Leaving a known error in the analysis is not acceptable either.

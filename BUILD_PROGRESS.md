@@ -50,7 +50,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M30
 - [ ] M31
 - [x] M32
-- [ ] M33
+- [x] M33
 
 ## Simulations
 - [ ] measurement-error
@@ -73,11 +73,10 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 
 ## After modules
 - [ ] merge glossary-inbox → glossary.md; research-inbox → references/research-log.md; template-inbox → templates/
-- [ ] projects/ briefs (research project ideas)
+- [x] projects/ briefs (written with M33)
 - [ ] final QA: `py scripts/check.py` clean, `npm run check-course` 0 problems, git clean, TODO_FOR_TAL.md ready
 
 ## Now working
-- agent: M33
 - agent: M31
 
 ## Decisions
@@ -123,3 +122,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M29 done; M31 spawned.
 - M30 done; M32 spawned.
 - M32 done; M33 spawned.
+- M33 done.
