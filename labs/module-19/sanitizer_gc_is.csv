@@ -1,0 +1,15 @@
+# simulated: GC-FID, every vial holds 0.50 % v/v 1-butanol; sample diluted 1 + 99 (true product 68.4 % v/v)
+type,ethanol_percent_v_v,area_ethanol,area_is
+standard,0.2,14296,57162
+standard,0.2,13067,52884
+standard,0.4,22284,44775
+standard,0.4,22722,45696
+standard,0.6,43074,57108
+standard,0.6,41456,55456
+standard,0.8,51960,52042
+standard,0.8,46478,46809
+standard,1.0,67897,54151
+standard,1.0,55947,45215
+sample_1to100,,45715,53614
+sample_1to100,,44943,52634
+sample_1to100,,45113,53255

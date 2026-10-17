@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You must extract a weak acid (pKa 4.8) from 100 mL of water into an organic solvent and have 60 mL
+    of solvent. Which plan extracts the most?
+  options:
+    - Adjust the water to pH 8, then extract once with all 60 mL.
+    - Adjust the water to pH 8, then extract three times with 20 mL each.
+    - Adjust the water to pH 2.8, then extract once with all 60 mL.
+    - Adjust the water to pH 2.8, then extract three times with 20 mL each.
+  correct: 3
+  explanation: >-
+    Two pH units below the pKa the acid is almost all neutral, so D is close to K_D. With the same
+    total volume, several small portions leave less behind than one large portion.
+- id: q2
+  question: >-
+    Two peaks have resolution 1.0. Their selectivity is 1.04 and the later one has k = 4. Which change
+    is most likely to reach baseline separation quickly and cheaply?
+  options:
+    - Double the column length, because doubling N doubles the resolution.
+    - Change the mobile-phase composition slightly to raise the selectivity to about 1.06.
+    - Raise k to 20 by weakening the mobile phase a lot.
+    - Halve the flow rate, because slower flow always gives more plates.
+  correct: 1
+  explanation: >-
+    Resolution grows only with the square root of N, and k/(1+k) is already 0.8. Raising alpha from
+    1.04 to 1.06 increases (alpha-1)/alpha by about 1.5 times, enough for Rs about 1.5 with the same
+    column.
+- id: q3
+  question: >-
+    A van Deemter fit gives A = 0.30 mm, B = 8.0 mm cm/s and C = 0.020 mm s/cm. What are the optimum
+    velocity and the smallest plate height?
+  options:
+    - 20 cm/s and 1.10 mm.
+    - 400 cm/s and 0.30 mm.
+    - 20 cm/s and 0.80 mm.
+    - 0.05 cm/s and 1.10 mm.
+  correct: 0
+  explanation: >-
+    u_opt = sqrt(B/C) = sqrt(400) = 20 cm/s. H_min = A + 2 sqrt(BC) = 0.30 + 2 x 0.40 = 1.10 mm.
+- id: q4
+  question: >-
+    An analyst sets the carrier gas well below the optimum velocity to "give the column more time".
+    What happens to the peaks?
+  options:
+    - They sharpen, because mass transfer has more time to reach equilibrium.
+    - Nothing changes, because the plate height does not depend on velocity.
+    - They broaden, because longitudinal diffusion spreads each band while it waits.
+    - They split into two, because the stationary phase becomes overloaded.
+  correct: 2
+  explanation: >-
+    At low velocity the B/u term dominates: molecules diffuse along the column for longer before
+    they leave it, so H rises steeply and the peaks broaden.

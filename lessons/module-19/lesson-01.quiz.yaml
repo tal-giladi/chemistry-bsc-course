@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    A sample reads A = 2.35 on a spectrophotometer whose calibration standards run from A = 0.05 to
+    A = 0.95. The instrument has about 0.4 % stray light. What is the best next step?
+  options:
+    - Extend the calibration line upwards, since Beer-Lambert is linear at every absorbance.
+    - Report the value from the line and add a note that it is above the top standard.
+    - Dilute the sample by a known factor so it reads near 0.4-0.6, then measure and multiply back.
+    - Switch to a 2 cm cell so the light passes through more of the sample.
+  correct: 2
+  explanation: >-
+    With 0.4 % stray light the highest possible reading is about 2.4, so 2.35 is near the ceiling and
+    far below the true absorbance. Diluting into the calibrated range, near the error minimum, fixes
+    both problems; a longer cell makes it worse.
+- id: q2
+  question: >-
+    You need to measure a nucleic acid at 260 nm. Which cuvette do you choose, and why?
+  options:
+    - Polystyrene, because it is disposable and avoids contamination between samples.
+    - Quartz, because glass and ordinary plastics absorb strongly below about 300 nm.
+    - Glass, because it is more transparent than quartz in the ultraviolet.
+    - Any material, because the blank cancels the cell's own absorbance completely.
+  correct: 1
+  explanation: >-
+    Below about 300 nm glass and common plastics absorb so much that little light reaches the
+    detector; the blank cannot correct for a cell that transmits almost nothing. Fused silica
+    (quartz) stays transparent down to about 190 nm.
+- id: q3
+  question: >-
+    A calibration through ten standards has R squared = 0.985. Its residuals are negative at both ends
+    and positive in the middle, and the top standard is far below the line. What does this tell you?
+  options:
+    - The line is acceptable because R squared is above 0.98.
+    - The lowest standards were contaminated and should be remade.
+    - The detector has a constant offset that a blank subtraction will remove.
+    - The response bends at high concentration, so the working range must be cut back.
+  correct: 3
+  explanation: >-
+    A systematic curve in the residuals shows the straight-line model is wrong over that range, here
+    from stray light flattening the top. Keep only the standards where the residuals scatter randomly
+    and dilute samples into that range.
+- id: q4
+  question: >-
+    Your simple spectrophotometer has a constant transmittance noise of 0.2 %T. Which reading gives
+    the smallest relative error in concentration?
+  options:
+    - About A = 0.43, where the error from constant transmittance noise is at its minimum.
+    - About A = 0.05, because the sample barely disturbs the light beam.
+    - About A = 2.0, because the absorbance signal is largest there.
+    - Any reading, because constant noise gives the same relative error everywhere.
+  correct: 0
+  explanation: >-
+    The relative error 0.4343 s_T / (T |log T|) is large at low absorbance, where two similar signals
+    are subtracted, and at high absorbance, where little light arrives. Its minimum is at A = 0.434.

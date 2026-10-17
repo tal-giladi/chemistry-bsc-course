@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A lab must measure glucose and fructose in fruit juice. Which approach fits best without extra
+    chemistry?
+  options:
+    - Split-injection GC with an FID, because sugars burn well in the flame.
+    - Headspace GC, because the sugars evaporate from the warm juice.
+    - GC with an electron-capture detector, because sugars have many oxygen atoms.
+    - HPLC, because sugars are not volatile and decompose before they vaporise.
+  correct: 3
+  explanation: >-
+    Sugars char rather than evaporate, so GC needs a derivatisation step first. HPLC separates them
+    in solution (with a refractive-index or other suitable detector).
+- id: q2
+  question: >-
+    An unknown peak gives a retention index of 1100 on a DB-5 column and 1550 on a DB-Wax column.
+    What does the large increase on the wax column suggest?
+  options:
+    - The compound is a saturated hydrocarbon, which is strongly retained by polar phases.
+    - The compound can hydrogen-bond, for example an alcohol, so the polar phase holds it back.
+    - The wax column was run at a lower temperature, which always adds about 450 units.
+    - The index cannot be compared between columns, so the difference means nothing.
+  correct: 1
+  explanation: >-
+    Alkanes define the index on every column, so a hydrocarbon keeps roughly the same index on both.
+    A compound with an OH group interacts strongly with polyethylene glycol and moves several hundred
+    units higher, as linalool does (1098 to 1552).
+- id: q3
+  question: >-
+    Manual GC injections vary by about 10 % in volume. Which calibration keeps the results precise?
+  options:
+    - Add the same amount of an internal standard to every vial and calibrate on the area ratio.
+    - Inject each standard three times and use the largest area.
+    - Use a single-point calibration with the most concentrated standard.
+    - Switch the FID for a TCD, which is less sensitive to injection volume.
+  correct: 0
+  explanation: >-
+    A smaller injection lowers the analyte and internal-standard peaks by the same fraction, so their
+    ratio stays the same. That cancels the injection error that raw areas carry.
+- id: q4
+  question: >-
+    A method runs at 1.0 mL/min on a 5 micrometre column at 90 bar. You move it to a 2.5 micrometre
+    column of the same size at the same flow. Roughly what pressure do you expect?
+  options:
+    - About 90 bar, because the flow has not changed.
+    - About 180 bar, because pressure doubles when particle size halves.
+    - About 360 bar, because pressure rises with the inverse square of particle size.
+    - About 45 bar, because smaller particles pack more tightly and resist flow less.
+  correct: 2
+  explanation: >-
+    Back-pressure scales roughly as 1/d_p squared, so halving the particle size quadruples it. That
+    is close to the 400 bar limit of a classic HPLC pump.

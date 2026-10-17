@@ -1,0 +1,14 @@
+# simulated: packed GC column 2 m, N2 carrier; H = A + B/u + C u with A=0.35 mm, B=6.0 mm cm/s, C=0.040 mm s/cm
+u_cm_per_s,H_mm
+2,3.404
+3,2.461
+4,1.948
+6,1.564
+8,1.369
+10,1.342
+12,1.346
+15,1.315
+20,1.459
+25,1.552
+30,1.744
+40,2.078

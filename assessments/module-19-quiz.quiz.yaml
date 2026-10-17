@@ -1,0 +1,142 @@
+- id: q1
+  question: >-
+    A calibration for iron(II) with a colour reagent is linear to A = 0.9. Samples from a mine
+    drainage read between 1.6 and 2.3, and two of them give the same reading although one is visibly
+    darker. What explains this and what do you do?
+  options:
+    - The colour reagent is used up in both, so add more reagent and read again undiluted.
+    - The darker sample has a different pH, so buffer both samples and read again undiluted.
+    - Stray light caps readings near the top, so dilute both into the linear range and read again.
+    - The detector is saturated by too much light, so narrow the slit and read again undiluted.
+  correct: 2
+  explanation: >-
+    At high absorbance almost no light passes the sample and the small stray fraction dominates, so
+    readings flatten and different samples give the same value. Diluting into the calibrated range
+    restores a meaningful reading.
+- id: q2
+  question: >-
+    You can measure a fluorescent drug in plasma by UV absorbance at 280 nm or by fluorescence with
+    280 nm excitation and 340 nm emission. Plasma proteins also absorb at 280 nm. Which choice is
+    better and why?
+  options:
+    - Absorbance, because it is free from quenching and the proteins can be blanked out.
+    - Fluorescence, because it is read against a dark background at a second, selective wavelength.
+    - Absorbance, because fluorescence is only linear above an absorbance of 0.1.
+    - Fluorescence, because its signal does not depend on the concentration of the drug.
+  correct: 1
+  explanation: >-
+    Many plasma components absorb at 280 nm, but few also emit at the drug's emission wavelength.
+    Fluorescence adds that second filter and is far more sensitive; quenching must still be checked,
+    for example by spike recovery.
+- id: q3
+  question: >-
+    Calcium by flame AAS in a phosphate-rich mineral water reads 25 % lower than by ICP-OES. Adding
+    lanthanum to all solutions brings the AAS result up to the ICP value. What was the problem?
+  options:
+    - An ionisation interference, which lanthanum suppresses by releasing electrons.
+    - A spectral interference from phosphate absorbing at the calcium line.
+    - A drifting hollow-cathode lamp, which lanthanum ions stabilise.
+    - A chemical interference: phosphate held calcium in a compound that does not atomise.
+  correct: 3
+  explanation: >-
+    Phosphate binds calcium into a refractory compound in the flame. Lanthanum binds the phosphate
+    preferentially and releases the calcium. An ionisation interference is fixed with K or Cs, a
+    spectral one with background correction.
+- id: q4
+  question: >-
+    A weak base (pKa of its conjugate acid 9.5) must be extracted from water into an organic
+    solvent, leaving neutral and acidic impurities behind as far as possible. Which plan works best?
+  options:
+    - Wash at pH 2 with solvent to remove neutrals, then raise to pH 11.5 and extract the base.
+    - Extract at pH 2, where the base is protonated and moves into the solvent.
+    - Extract at pH 9.5, where half the base is neutral, with one large portion of solvent.
+    - Extract at pH 7, then wash the solvent with pH 11 water to pull the base back out.
+  correct: 0
+  explanation: >-
+    At pH 2 the base is protonated and stays in the water while neutrals are washed out. Two units
+    above the pKa it is neutral and extracts well, while acids are ionised and stay behind.
+- id: q5
+  question: >-
+    Two drug impurities overlap with Rs = 0.8 on an HPLC column (alpha = 1.03, k = 6). A colleague
+    plans to connect three identical columns in series. What does the Purnell equation predict?
+  options:
+    - Rs = 2.4, because resolution grows in proportion to column length.
+    - Rs = 0.8, because selectivity alone sets the resolution, not the length.
+    - Rs near 1.4 at three times the run time; changing selectivity would be cheaper.
+    - Rs near 0.5, because longer columns broaden peaks more than they separate them.
+  correct: 2
+  explanation: >-
+    Three columns give three times N, and resolution grows as the square root of N: 0.8 x 1.73 = 1.4,
+    still short of baseline at a heavy cost in time and pressure. A small change that raises alpha
+    is usually the better first move.
+- id: q6
+  question: >-
+    A GC method on nitrogen carrier runs at the van Deemter optimum. The lab switches to hydrogen to
+    save cost and time. What should the analyst expect and do?
+  options:
+    - The same optimum velocity, so the method can stay unchanged.
+    - A lower optimum velocity, so the flow must be reduced to keep the plates.
+    - No change in efficiency, but the FID will stop working without helium.
+    - A higher, flatter optimum: raise the velocity, check resolution and revalidate.
+  correct: 3
+  explanation: >-
+    Hydrogen diffuses faster, so its van Deemter curve is flatter and its optimum lies at higher
+    velocity, allowing shorter runs. The method must be revalidated and hydrogen safety measures,
+    such as leak sensors, put in place.
+- id: q7
+  question: >-
+    A peak in a whisky aroma run has retention index 1098 on a DB-5 column. The library lists
+    linalool at 1098 and another compound at 1096 on that phase. What is the most efficient way to
+    decide?
+  options:
+    - Run the sample on a polar wax column and compare indices, or check the mass spectrum.
+    - Accept linalool, because its index matches the peak exactly.
+    - Re-run on the same DB-5 column with a slower ramp and compare again.
+    - Report the peak as unknown, because retention indices cannot identify compounds.
+  correct: 0
+  explanation: >-
+    Two candidates within 2 units on one phase cannot be told apart there. A column of different
+    polarity moves an alcohol such as linalool by hundreds of units, and a mass spectrum adds
+    independent evidence.
+- id: q8
+  question: >-
+    In a GC-FID assay, the internal-standard peak area is 20 % lower than usual in one sample, but
+    the ratio of analyte to internal standard looks normal. What is the best interpretation?
+  options:
+    - The analyte concentration is 20 % too low and must be corrected upwards.
+    - The internal standard was forgotten in that vial, so the result is invalid.
+    - Less sample was injected; the ratio has cancelled that and the result can be used.
+    - The FID flame has gone out, so all results of the day must be rejected.
+  correct: 2
+  explanation: >-
+    A smaller injection lowers both peaks by the same fraction, which is exactly what the internal
+    standard corrects. A forgotten internal standard would give a missing peak, not a 20 % smaller
+    one.
+- id: q9
+  question: >-
+    A new organic redox molecule gives a CV with a cathodic peak but almost no anodic return peak at
+    100 mV/s. At 5 V/s the return peak appears. What is happening?
+  options:
+    - The molecule is adsorbed, so it reacts only at fast scan rates.
+    - The reduced product reacts chemically; fast scans return before it has time to react.
+    - The reference electrode is drifting, which hides the return peak at slow scan rates.
+    - The supporting electrolyte is too concentrated and blocks the oxidation at slow scans.
+  correct: 1
+  explanation: >-
+    A missing return peak means the product is gone before the scan comes back. Scanning faster
+    shortens that time, so the product survives long enough to be re-oxidised: the signature of a
+    chemical step following electron transfer.
+- id: q10
+  question: >-
+    A lab must measure 0.5 microgram per litre of cadmium in drinking water on a small budget, with
+    only a few samples a week. Which electrochemical approach fits?
+  options:
+    - Cyclic voltammetry, because its peak current is proportional to concentration.
+    - Potentiometry with a cadmium ion-selective electrode, because it draws no current.
+    - Coulometry, because counting the total charge needs no calibration at all.
+    - Anodic stripping voltammetry, because the metal is first concentrated on the electrode.
+  correct: 3
+  explanation: >-
+    Plain CV and ion-selective electrodes work at roughly micromolar levels, far above 0.5 microgram
+    per litre (about 4 nanomolar). Stripping deposits the metal for minutes and then oxidises it in
+    one sharp peak, lowering the detection limit about a thousandfold.

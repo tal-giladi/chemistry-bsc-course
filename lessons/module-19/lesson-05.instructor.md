@@ -1,0 +1,8 @@
+# Instructor notes — 19.5 Electroanalysis and cyclic voltammetry (module practical)
+
+- Objective: the learner explains the three-electrode cell, supporting electrolyte and purging; reads Ep, ip, ΔEp, E½ and the current ratio from a CV and classifies the couple; uses Randles–Ševčík in both directions; and, in the practical, develops and validates an HPLC-UV method under a pressure limit.
+- Likely confusion: sign conventions (IUPAC vs US); measuring the return peak from the decaying forward current; why ΔEp is 57 mV and not 0 (the peaks are diffusion-shaped, not at E°′ itself); n^(3/2) in the equation.
+- Misconception: "a bigger ΔEp means more current" or "peak separation measures concentration". It measures electron-transfer kinetics; concentration comes from ip.
+- Analogy: the CV peak is a queue at a shop that suddenly opens: a rush of customers who were nearby (the peak), then only those walking in from further away (the decay).
+- Expected hands-on result: ΔEp 64/66/70/76/82 mV at 25–400 mV/s; E½ ≈ 0.22 V; ratio 1.01–1.02; D 7.0 × 10⁻⁶ (slowest) to 6.5 × 10⁻⁶ cm²/s (fastest), 6.4 × 10⁻⁶ from the five-point fit; simulation input 7.2 × 10⁻⁶. Practical: 5 µm u_opt 1.43 mm/s, 0.92 mL/min, Rs 1.33; core–shell u_opt 2.74 mm/s would need 486 bar, run at 1.46 mL/min, H 8.8 µm, N ≈ 11 400, Rs 1.82, t_R 3.0 min; slope 21.47; LOD 0.065, LOQ 0.22 mg/L; recovery 98 %; drink 306 ± 1 mg/L (96 % of label), warning required.
+- Extension: change k0 in `make_data.py` (for example 0.002 and 1 cm/s), regenerate the CV file and watch ΔEp respond; or add a stripping-voltammetry calibration. Forward to 25.6 (CV in practice: scan rates and quasi-reversibility in the simulator).

@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A one-electron couple gives peak separations of 59, 60 and 58 mV at 20, 100 and 500 mV/s, with
+    equal anodic and cathodic peak currents. What do you conclude?
+  options:
+    - The couple is quasi-reversible, because the separation is not exactly 57 mV.
+    - The couple is electrochemically reversible, because the separation is near 57 mV and does not change.
+    - The product reacts away chemically, because the peaks are far apart.
+    - The species is adsorbed on the electrode, because the separation is constant.
+  correct: 1
+  explanation: >-
+    A reversible one-electron couple shows about 57-59 mV at 25 C, independent of scan rate, with a
+    current ratio of 1. Slow electron transfer would make the separation grow with scan rate.
+- id: q2
+  question: >-
+    When the scan rate is raised from 25 to 400 mV/s, the cathodic peak current rises from 16 to
+    62 microamperes. What does this indicate?
+  options:
+    - The current grows with the scan rate itself, so the species is adsorbed.
+    - The current should be constant, so the electrode surface is fouling.
+    - The current grows faster than linearly, so a catalytic reaction is present.
+    - The current grows with the square root of the scan rate, so the species diffuses to the electrode.
+  correct: 3
+  explanation: >-
+    The scan rate rose 16 times and the current about 3.9 times, close to the square root of 16. That
+    is the Randles-Sevcik behaviour of a diffusing species; an adsorbed species would give 16 times.
+- id: q3
+  question: >-
+    A student sees a large reduction wave below -0.2 V vs Ag/AgCl in a blank of 0.1 M KCl. What is
+    the most likely cause and fix?
+  options:
+    - Dissolved oxygen being reduced; purge the solution with nitrogen or argon.
+    - The supporting electrolyte being reduced; use a lower KCl concentration.
+    - The reference electrode passing current; connect it to the counter lead instead.
+    - Charging current; raise the scan rate so the wave disappears.
+  correct: 0
+  explanation: >-
+    Oxygen dissolved from air is reduced at negative potentials and gives a broad wave in any aqueous
+    blank. Purging removes it; raising the scan rate would only increase the charging current.
+- id: q4
+  question: >-
+    Using the Randles-Sevcik equation, what happens to the peak current if you double both the
+    concentration and the electrode area at the same scan rate?
+  options:
+    - It doubles, because only concentration enters the equation.
+    - It rises by the square root of 2, because area enters as a square root.
+    - It rises four times, because current is proportional to both area and concentration.
+    - It stays the same, because the larger area dilutes the current density.
+  correct: 2
+  explanation: >-
+    i_p is proportional to A and to C (and to the square roots of D and v), so doubling both gives
+    four times the current.
+- id: q5
+  question: >-
+    In a method practical, the column with the best van Deemter curve needs 486 bar at its optimum
+    flow, but the pump stops at 400 bar. What is the sensible choice?
+  options:
+    - Reject the column, because it cannot reach its optimum velocity.
+    - Run it as fast as the pump allows, since the curve is flat near its minimum.
+    - Run it at the optimum anyway, because short pressure overloads do not harm a pump.
+    - Halve the flow, so the column runs at half the pressure limit for safety.
+  correct: 1
+  explanation: >-
+    Near the minimum the plate height changes little with velocity, so running just below the optimum
+    loses few plates. Halving the flow moves onto the steep diffusion side and wastes time.

@@ -1,0 +1,18 @@
+# simulated: blue food dye at 630 nm, 1 cm cell, 0.40 % stray light; sample = sports drink (true 64.0 mg/L)
+type,c_mg_per_L,absorbance
+standard,0,-0.0007
+standard,1,0.1612
+standard,2,0.3190
+standard,4,0.6330
+standard,6,0.9475
+standard,8,1.2469
+standard,10,1.5387
+standard,12,1.7959
+standard,15,2.1009
+standard,20,2.3369
+undiluted,,2.3981
+undiluted,,2.4007
+undiluted,,2.4004
+diluted_1to20,,0.5068
+diluted_1to20,,0.5121
+diluted_1to20,,0.5097

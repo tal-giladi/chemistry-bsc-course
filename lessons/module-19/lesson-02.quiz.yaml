@@ -1,0 +1,70 @@
+- id: q1
+  question: >-
+    A fluorescence calibration for a dye is straight up to 0.5 mg/L and then bends down, although the
+    detector is far from saturation. At 0.5 mg/L the solution has an absorbance of 0.08. What is the
+    most likely cause?
+  options:
+    - Photobleaching, because higher concentrations are destroyed faster by the lamp.
+    - The inner-filter effect, because the sample now absorbs enough light to shade the back of the cell.
+    - A wrong emission wavelength, because the Stokes shift grows with concentration.
+    - Stray light, which bends fluorescence calibrations in the same way as absorbance ones.
+  correct: 1
+  explanation: >-
+    Fluorescence is proportional to concentration only while the absorbance stays below about 0.01.
+    At A = 0.08 the front of the cell absorbs much of the excitation light, so the signal grows more
+    slowly than the concentration. Diluting restores linearity.
+- id: q2
+  question: >-
+    Quinine has a Stern-Volmer constant of about 130 L/mol for chloride. A sample has 0.020 mol/L
+    chloride. Roughly what fraction of the unquenched signal remains?
+  options:
+    - About 98 %, because 0.020 mol/L is a small concentration.
+    - About 72 %, because the signal falls in proportion to the chloride added.
+    - About 28 %, because F0/F = 1 + 130 x 0.020 = 3.6.
+    - About 3 %, because the signal falls exponentially with the quencher.
+  correct: 2
+  explanation: >-
+    F0/F = 1 + K[Q] = 1 + 2.6 = 3.6, so F/F0 = 0.28. That is why chloride must be removed or matched
+    in the standards before quinine is measured.
+- id: q3
+  question: >-
+    Calcium results in a phosphate-rich fertiliser extract by air-acetylene flame AAS come out 30 %
+    low compared with a reference method. What is the best fix?
+  options:
+    - Add a large excess of lanthanum to standards and samples as a releasing agent.
+    - Add a large excess of potassium as an ionisation suppressor.
+    - Switch on deuterium-lamp background correction.
+    - Use a hollow-cathode lamp of a different element with a nearby line.
+  correct: 0
+  explanation: >-
+    Phosphate binds calcium into a compound that does not atomise in the flame, a chemical
+    interference. Lanthanum binds the phosphate instead and frees the calcium. An ionisation
+    suppressor would fix a different problem.
+- id: q4
+  question: >-
+    Why does flame atomic emission work well for sodium but poorly for zinc, while flame AAS works
+    for both?
+  options:
+    - Zinc atoms are ionised completely in a flame, so none are left to emit or absorb.
+    - Zinc has no ground-state absorption line in the ultraviolet.
+    - Sodium lamps are brighter than zinc lamps, so sodium emission is easier to see.
+    - Far fewer zinc atoms are excited at flame temperature, but absorption uses the ground state.
+  correct: 3
+  explanation: >-
+    The Boltzmann factor depends on the line energy: at 2500 K about 2 in 10 000 sodium atoms are
+    excited (589 nm) but only about 6 in a trillion zinc atoms (214 nm). Absorption uses the ground
+    state, which holds almost all atoms of both.
+- id: q5
+  question: >-
+    A lab must measure lead at 2 micrograms per litre in 20 drinking-water samples. Which technique
+    fits?
+  options:
+    - Flame AAS, because it is fast and precise.
+    - Flame emission, because lead is easy to excite.
+    - Graphite-furnace AAS or ICP-MS, because they reach the microgram-per-litre range.
+    - UV-Vis of the untreated water, because lead ions absorb strongly in the visible.
+  correct: 2
+  explanation: >-
+    Flame AAS needs milligrams per litre of lead for a useful absorbance. A graphite furnace
+    concentrates the atoms up to a thousandfold and ICP-MS counts ions, so both reach micrograms per
+    litre.

@@ -1,0 +1,26 @@
+# simulated: HPLC-UV 273 nm, caffeine standards; drink diluted 1 + 9 (true drink 306 mg/L, label 320 mg/L)
+type,c_mg_per_L,peak_area
+blank,0,1.13
+blank,0,1.52
+blank,0,1.05
+blank,0,1.08
+blank,0,1.37
+blank,0,1.45
+blank,0,-0.12
+blank,0,1.29
+blank,0,1.25
+blank,0,1.06
+standard,2,44.25
+standard,5,108.77
+standard,10,213.36
+standard,20,425.80
+standard,30,637.00
+standard,40,861.25
+standard,50,1074.96
+drink_1to10,,655.88
+drink_1to10,,658.91
+drink_1to10,,654.43
+spike_recovery,0,657.40
+spike_recovery,5,764.45
+spike_recovery,10,867.44
+spike_recovery,15,974.49

@@ -1,0 +1,17 @@
+# simulated: citrus-oil run, 30 m columns, He, 60 C then 3 K/min; X and Y placed at NIST WebBook indices
+column,peak,t_min
+DB-5,C9,8.2
+DB-5,C10,10.95
+DB-5,C11,13.6
+DB-5,C12,16.12
+DB-5,peak_X,11.767
+DB-5,peak_Y,13.545
+DB-Wax,C10,4.1
+DB-Wax,C11,6.05
+DB-Wax,C12,8.3
+DB-Wax,C13,10.7
+DB-Wax,C14,13.1
+DB-Wax,C15,15.45
+DB-Wax,C16,17.7
+DB-Wax,peak_X,8.205
+DB-Wax,peak_Y,16.621

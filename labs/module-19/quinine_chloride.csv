@@ -1,0 +1,10 @@
+# simulated: quinine 10 mg/L, excitation 350 nm, emission 450 nm, chloride added as NaCl
+chloride_mM,fluorescence
+0,992.9
+2,788.9
+4,659.1
+6,562.8
+8,488.1
+10,438.0
+15,339.2
+20,276.3
