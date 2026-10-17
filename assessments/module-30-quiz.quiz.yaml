@@ -1,0 +1,118 @@
+- id: q1
+  question: >-
+    You plan an FTIR measurement of HCl gas and want B0 to better than 0.1 %. The H35Cl/H37Cl doublets are about
+    2.1 cm-1 apart and the lines are 0.2 cm-1 wide at 80 mbar. Which settings do you choose?
+  options:
+    - 4 cm-1 resolution and 800 mbar, so the lines are strong and the noise is low.
+    - 0.5 cm-1 resolution or better at about 80 mbar, so each doublet is resolved.
+    - 2 cm-1 resolution at 80 mbar, since that equals the doublet spacing.
+    - 0.1 cm-1 resolution at 800 mbar, because high resolution cancels pressure broadening.
+  correct: 1
+  explanation: >-
+    The doublets must be resolved, which needs a resolution well below 2.1 cm-1 and lines narrower than the
+    spacing. At 800 mbar pressure broadening would merge them whatever the resolution.
+- id: q2
+  question: >-
+    A classmate's Boltzmann plot of HCl line heights, ln(I / |m| nu) against the lower-level energy, splits into
+    two parallel lines, one for the P branch and one for the R branch. What is the most likely cause?
+  options:
+    - The gas was not in thermal equilibrium, so the two branches have different temperatures.
+    - The H37Cl lines were included, which always makes the P branch look stronger.
+    - The P lines were numbered with |m| one too large, so their energies are shifted.
+    - The detector saturates on the R branch, which is always the stronger branch.
+  correct: 2
+  explanation: >-
+    A numbering error shifts every P line to the wrong lower level, so the P points move sideways as a group
+    and form a separate parallel line. The fit residuals would also jump across the band centre.
+- id: q3
+  question: >-
+    From the HCl fundamental and first overtone you get omega_e = 2990 and omega_e x_e = 52 cm-1. A report
+    states "D0 of HCl = 5.15 eV, measured by IR spectroscopy". How should you correct it?
+  options:
+    - Call it a Morse-model estimate; thermochemistry gives about 4.43 eV, because two levels cannot show where the well flattens.
+    - Subtract the zero-point energy again, because the overtone centre already includes it.
+    - Replace it with D_e = 5.35 eV, because IR measures the well depth, not D0.
+    - Keep it, because the overtone fixes the anharmonicity and therefore the dissociation energy exactly.
+  correct: 0
+  explanation: >-
+    D_e = omega_e^2 / 4 omega_e x_e is an extrapolation from the bottom of the well. For HCl it overestimates D0 by
+    about 16 %; the number should be labelled as a model value.
+- id: q4
+  question: >-
+    An unknown radical in a frozen solution gives 7 lines with intensities near 1 : 6 : 15 : 20 : 15 : 6 : 1,
+    0.39 mT apart, at g = 2.0026. Which interpretation fits best?
+  options:
+    - Three equivalent deuterons, because 2nI + 1 = 7 for n = 3 and I = 1.
+    - Six equivalent protons, each coupled with a = 0.39 mT, giving binomial intensities for n = 6.
+    - One nitrogen-14 nucleus and two protons, giving 3 x 2 = 6 lines plus a central line.
+    - A transition-metal ion, because seven lines can only come from a nuclear spin of 7/2.
+  correct: 1
+  explanation: >-
+    1 : 6 : 15 : 20 : 15 : 6 : 1 is the binomial row for six spin-1/2 nuclei. Three deuterons would give
+    1 : 3 : 6 : 7 : 6 : 3 : 1, and g = 2.0026 points to an organic radical, as in the benzene anion with a = Q rho.
+- id: q5
+  question: >-
+    You record a radical at 9.5 GHz and at 35 GHz. At 9.5 GHz two lines are 1.0 mT apart; at 35 GHz they are
+    3.7 mT apart. What do you conclude?
+  options:
+    - It is one radical with a hyperfine coupling that grows with field.
+    - The 35 GHz spectrum is overmodulated, which spreads the lines apart.
+    - It is a hydrogen-atom doublet whose Breit-Rabi shift grows with frequency.
+    - There are two species with different g factors, because the splitting scales with frequency.
+  correct: 3
+  explanation: >-
+    A g difference gives a field separation proportional to the frequency (3.7 / 1.0 is close to 35 / 9.5).
+    A hyperfine splitting stays fixed in mT, and the Breit-Rabi correction gets smaller at higher field.
+- id: q6
+  question: >-
+    At X band a student fits two hydrogen-atom lines with B = B0 - a mI and finds g = 2.0137. A colleague
+    says hydrogen must have g near 2.0023. Who is right, and why?
+  options:
+    - The student, because a 1s electron in a matrix can have a large g shift.
+    - The colleague, because with a = 50.7 mT the second-order term lowers both lines by about 1.9 mT.
+    - The student, because first-order theory is exact for a single spin-1/2 nucleus.
+    - The colleague, because the derivative lineshape moves each centre by half the line width.
+  correct: 1
+  explanation: >-
+    The first-order rule assumes a much smaller than B0. For hydrogen a/B0 is 0.15 and the Breit-Rabi
+    shift a^2 / 4B0 of 1.9 mT moves the midpoint, which inflates g if ignored.
+- id: q7
+  question: >-
+    You measure the fundamental of tubes of five lengths and plot L against 1/(4 f1). The slope gives
+    c = 346 m/s and the intercept is -0.004 m for a tube of inner radius 2.0 cm (expected about -0.012 m).
+    The air is at 23 C. What is the most useful next check?
+  options:
+    - Accept the result, because the intercept does not affect the slope.
+    - Replace the intercept by the theoretical -0.012 m and recompute c from each tube.
+    - Check how the lengths were measured, since a constant offset in L moves the intercept but not c.
+    - Repeat with a narrower tube, because the intercept should vanish for a wide tube.
+  correct: 2
+  explanation: >-
+    The slope is still valid, but an intercept far from -0.61 r usually means every L was measured from a
+    shifted reference, such as the outside of the cap. Finding it confirms the method; forcing the theory
+    value into the data hides it.
+- id: q8
+  question: >-
+    Your result is c = 345.3 +/- 1.1 m/s at 23.0 +/- 0.5 C and 50 % RH. Which statement about gamma is correct?
+  options:
+    - gamma = 1.395 +/- 0.009, enough to exclude a vibrating diatomic (1.29) by more than ten standard deviations.
+    - gamma = 1.395 +/- 0.004, because the relative uncertainty of gamma equals that of c.
+    - gamma = 1.402 +/- 0.009, because humidity raises the molar mass of air.
+    - gamma = 1.395 +/- 0.009, which cannot distinguish rotation from vibration at this precision.
+  correct: 0
+  explanation: >-
+    gamma = M c^2 / RT with the moist-air M of 28.81 g/mol. The c term counts twice (0.64 %) plus 0.17 % from T,
+    so sigma is about 0.009; 1.29 lies 12 sigma away. Humidity lowers M, it does not raise it.
+- id: q9
+  question: >-
+    A colleague fits l and alpha of the box model to the 2,2' cyanines, then also fits them to cryptocyanine and
+    beta-carotene "to get a universal model", reporting a mean residual of 40 nm. What is wrong with this approach?
+  options:
+    - Nothing, because more data always give a more reliable parameter set.
+    - Beta-carotene must be left out only because it was measured in hexane, not methanol.
+    - The residual should be computed in wavenumbers, which would make the fit acceptable.
+    - It mixes three physics cases; each family needs its own calibration.
+  correct: 3
+  explanation: >-
+    The 4,4' dye has a different effective box and the polyene has bond alternation, so one parameter set
+    describes none of them well. Keep the 2,2' fit, use the 4,4' dye as a test, and treat the polyene with V0.

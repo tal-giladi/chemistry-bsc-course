@@ -3,3 +3,5 @@
 - titration / gravimetry (M10): "aged electrode" option, pH and potential choices, reagent blank.
 - oscillators `co2` (14.4): carbon-mass switch 12/13 u, bond-interaction constant settable to zero.
 - oscillators `coupled-three` (14.3): adjustable middle mass.
+- ir-esr `hcl` (30.1): resolution, pressure, centrifugal-distortion toggle, overtone region.
+- quantum-box `dye` (30.4): polyene bond-alternation switch.

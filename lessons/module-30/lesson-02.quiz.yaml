@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A radical gives four lines with heights close to 1 : 3 : 3 : 1, 2.3 mT apart, at 9.45 GHz. You repeat the
+    measurement at 35 GHz. What do you expect to see?
+  options:
+    - Four lines about 8.5 mT apart, because all splittings scale with the frequency.
+    - Four lines still 2.3 mT apart, centred near 1.25 T instead of 0.34 T.
+    - Eight lines, because the higher field resolves the three protons separately.
+    - Two lines, because the inner pair merges with the outer pair at high field.
+  correct: 1
+  explanation: >-
+    The centre field follows h nu = g mu_B B and moves with the frequency, but a hyperfine coupling is a fixed
+    local field from the nuclei, so the spacing in mT stays the same. That is how hyperfine and g effects are told apart.
+- id: q2
+  question: >-
+    You replace CH3 by CD3 (deuterium has I = 1 and a nuclear g factor 0.1535 times that of the proton). Which
+    spectrum do you predict?
+  options:
+    - "Four lines 1 : 3 : 3 : 1, spaced 0.35 mT."
+    - "Seven lines 1 : 2 : 3 : 4 : 3 : 2 : 1, spaced 2.30 mT."
+    - "Four lines 1 : 3 : 3 : 1, spaced 2.30 mT, because the spin density is unchanged."
+    - "Seven lines 1 : 3 : 6 : 7 : 6 : 3 : 1, spaced about 0.35 mT."
+  correct: 3
+  explanation: >-
+    Three spin-1 nuclei give 2nI + 1 = 7 lines with intensities from three convolutions of 1 1 1. The spin density
+    is the same, but the coupling scales with the nuclear moment: 2.30 x 0.1535 = 0.35 mT.
+- id: q3
+  question: >-
+    In the planar methyl radical the unpaired electron is in a carbon 2p orbital with a node in the molecular
+    plane, yet the protons give a 2.3 mT coupling. Why?
+  options:
+    - The unpaired electron spin polarises the C-H bonding pairs, leaving net spin density at each proton.
+    - The radical is pyramidal on the ESR time scale, which mixes s character into the orbital.
+    - The coupling is a through-space dipolar interaction, which does not need density at the nucleus.
+    - The protons couple to the carbon-13 nucleus, which then couples to the electron.
+  correct: 0
+  explanation: >-
+    Spin polarisation of the sigma bonds puts a small negative spin density on each proton, giving a contact
+    coupling. Dipolar couplings average to zero in a tumbling radical, and methyl is planar.
+- id: q4
+  question: >-
+    A student takes the midpoint of the two hydrogen-atom lines at 9.45 GHz (309.8 and 360.8 mT) as the resonance
+    field and reports g = 2.0137. What went wrong?
+  options:
+    - Hydrogen atoms trapped in a solid have a large g shift from the matrix, so the value may be right.
+    - The microwave frequency must have been measured wrongly by about 0.6 %.
+    - The second-order Breit-Rabi term shifts both lines down by about a^2/(4 B0), so the midpoint is not B0.
+    - The derivative lineshape moves the apparent centre of each line by half the peak-to-peak width.
+  correct: 2
+  explanation: >-
+    With a = 50.7 mT, a squared over 4 B0 is 1.9 mT, which lowers the midpoint and inflates g. The exact
+    Breit-Rabi analysis gives g = 2.0023, close to the free-electron value expected for a 1s electron.

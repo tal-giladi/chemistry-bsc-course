@@ -1,0 +1,62 @@
+- id: q1
+  question: >-
+    A 30.0 cm tube closed at one end, 4 cm wide, has its fundamental at 277 Hz. A student reports
+    c = 4 L f = 332 m/s for room air at 23 C. What is the main reason the value is low?
+  options:
+    - The phone microphone samples too slowly to resolve a 277 Hz peak accurately.
+    - The open end behaves as if the tube were about 12 mm longer, which 4 L f leaves out.
+    - Room air at 23 C is humid, and water vapour lowers the speed of sound.
+    - The fundamental of a closed tube is at c / 2L, so the formula is wrong by a factor of two.
+  correct: 1
+  explanation: >-
+    The pressure node sits about 0.61 r beyond the rim, so the effective length is L + e. Leaving out 12 mm on a
+    300 mm tube makes c about 4 % low. Humidity would make c slightly higher, not lower.
+- id: q2
+  question: >-
+    You plot tube length L against n / (4 f) for five lengths and three modes. What do the slope and intercept give?
+  options:
+    - The slope is the speed of sound and the intercept is minus the end correction.
+    - The slope is the end correction and the intercept is the speed of sound.
+    - The slope is the wavelength of the fundamental and the intercept is the tube radius.
+    - The slope is c squared and the intercept is gamma R T / M.
+  correct: 0
+  explanation: >-
+    Rearranging f = n c / 4(L + e) gives L = c (n / 4f) - e, a straight line with slope c and intercept -e.
+    The end correction never has to be calculated; the fitted e checks the method.
+- id: q3
+  question: >-
+    Your speed of sound has a relative standard uncertainty of 0.5 %, and the temperature is known to 0.3 %.
+    What is the relative uncertainty of gamma, ignoring humidity?
+  options:
+    - About 0.6 %, the two contributions added in quadrature.
+    - About 0.8 %, the two contributions added directly.
+    - About 0.5 %, because the speed dominates the budget.
+    - About 1.0 %, because the speed enters gamma squared.
+  correct: 3
+  explanation: >-
+    gamma = M c^2 / (R T), so the speed contributes 2 x 0.5 = 1.0 % and the temperature 0.3 %. In quadrature
+    the total is about 1.04 %, so the doubled speed term sets the result.
+- id: q4
+  question: >-
+    On a humid summer day a learner uses the molar mass of dry air and gets gamma = 1.418. What should they conclude?
+  options:
+    - Air molecules are partly monatomic in summer, which raises gamma above 1.40.
+    - The end correction was overestimated, which inflates the fitted speed.
+    - Water vapour lowered the real molar mass, so using the dry value made gamma about 1 % too high.
+    - Vibration of N2 starts to be excited at 30 C, which raises gamma.
+  correct: 2
+  explanation: >-
+    gamma is proportional to M. Humid air at 30 C and 80 % RH has M about 1.3 % below dry air, so the dry value
+    inflates gamma by that much. Excited vibration would lower gamma, not raise it.
+- id: q5
+  question: >-
+    The spectrum of your tube shows strong peaks at 170, 340 and 510 Hz. What does the 340 Hz peak tell you?
+  options:
+    - The tube is behaving as a closed tube with a strong second harmonic.
+    - The closed end leaks or the phone sits in the column, so the tube acts partly open.
+    - The audio FFT has aliased the 510 Hz peak to a lower frequency.
+    - The air in the tube is warmer than the room, which adds even harmonics.
+  correct: 1
+  explanation: >-
+    A tube closed at one end supports only odd harmonics (1, 3, 5). An even harmonic means the boundary at the
+    closed end is not working; seal it and move the microphone just outside the rim.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A cyanine has p = 5 carbons on the path between its nitrogens. How many pi electrons does Kuhn's model put
+    in the box, and which levels are the HOMO and LUMO?
+  options:
+    - 8 electrons, HOMO n = 4 and LUMO n = 5.
+    - 5 electrons, HOMO n = 3 and LUMO n = 4.
+    - 10 electrons, HOMO n = 5 and LUMO n = 6.
+    - 6 electrons, HOMO n = 3 and LUMO n = 4.
+  correct: 0
+  explanation: >-
+    N = p + 3 = 8: one electron per chain carbon and three from the two nitrogens. Two electrons per level fill
+    n = 1 to 4, so the first absorption is n = 4 to n = 5.
+- id: q2
+  question: >-
+    You fit both the bond length and the end extension to three dyes and get residuals under 6 nm, with a
+    correlation of -0.99 between the two parameters. What is the fairest conclusion?
+  options:
+    - The model is confirmed, because the residuals are smaller than the spread between literature values.
+    - The bond length is now known to 2 %, so it can be compared with X-ray C-C distances.
+    - The fit says little by itself; the model must be tested on a dye that was not used in the fit.
+    - The end extension is meaningless and should be set to zero to remove the correlation.
+  correct: 2
+  explanation: >-
+    Two strongly correlated parameters and three points leave one degree of freedom, so a good fit is expected.
+    Only a prediction for data outside the fit, like the 4,4' dye, tests the model.
+- id: q3
+  question: >-
+    Beta-carotene has 22 pi electrons. A box of 22 bonds of 0.139 nm predicts 1340 nm, but it absorbs at 451 nm.
+    What is the main reason?
+  options:
+    - The two methyl groups at each end shorten the box by several bonds.
+    - Hexane shifts the band strongly to the blue compared with the gas phase.
+    - The HOMO-LUMO transition is forbidden, so the band at 451 nm is a higher transition.
+    - Its bonds alternate between single and double, which adds a gap of about 2 eV that a flat box lacks.
+  correct: 3
+  explanation: >-
+    A polyene has no second equal resonance structure, so its bonds alternate and the electrons feel a periodic
+    potential. Kuhn's term V0(1 - 1/N), with V0 near 1.9 eV, accounts for the difference.
+- id: q4
+  question: >-
+    The 2,2' fit predicts 795 nm for cryptocyanine (the 4,4' carbocyanine, path count p = 9), which absorbs at
+    708 nm. Which change to the analysis is the most defensible?
+  options:
+    - Replace the 708 nm value, because a published maximum that disagrees by 12 % must be a typo.
+    - Treat the 4,4' family as needing its own calibration, since ring paths do not add box length one-to-one.
+    - Refit all four dyes together and report the smaller average residual as the model error.
+    - Lower the bond length until the 4,4' dye fits, and keep it for the 2,2' dyes as well.
+  correct: 1
+  explanation: >-
+    The parameters describe the 2,2' family; the electrons of the 4,4' dye spread over the quinoline differently, so
+    the path count overestimates its box. Changing data or refitting until everything agrees hides what the test showed.

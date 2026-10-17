@@ -1,0 +1,13 @@
+# Published absorption maxima (lambda_max, nm) of conjugated dyes, checked 2026-10-17. NOT generated.
+# p = number of carbon atoms on the conjugated path between the two nitrogens (Kuhn's count);
+# pi_electrons = p + 3 for the cyanines (each carbon gives one, the two nitrogens three between them).
+# Values for the same dye differ by 2-6 nm between suppliers and between methanol and ethanol.
+# Sources: TCI product D4486 (521-526 nm, MeOH); Sigma-Aldrich product 166510 (main band 602-608 nm, EtOH)
+# and Laidlaw 1970 (610 nm); Laidlaw 1970 as quoted in the Delta State University lab handout (705 nm);
+# TCI product C0426 (708 nm, MeOH); OMLC PhotochemCAD beta-carotene (451 nm, hexane; Zechmeister).
+dye,family,p,pi_electrons,lambda_nm,solvent,source
+"1,1'-diethyl-2,2'-cyanine iodide",22-cyanine,3,6,523,methanol,TCI D4486
+"1,1'-diethyl-2,2'-carbocyanine iodide (pinacyanol)",22-cyanine,5,8,605,methanol/ethanol,Sigma-Aldrich 166510; Laidlaw 1970
+"1,1'-diethyl-2,2'-dicarbocyanine iodide",22-cyanine,7,10,705,methanol,Laidlaw 1970 via Delta State handout
+"1,1'-diethyl-4,4'-carbocyanine iodide (cryptocyanine)",44-cyanine,9,12,708,methanol,TCI C0426
+beta-carotene,polyene,22,22,451,hexane,OMLC PhotochemCAD (Zechmeister)
