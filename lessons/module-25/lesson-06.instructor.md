@@ -1,0 +1,9 @@
+# Instructor notes — 25.6 Cyclic voltammetry in practice (module practical)
+
+- Objective: the learner prepares a CV cell with reasons, diagnoses a couple from a scan-rate study (diffusion versus adsorption, kinetics versus iR), computes k⁰ by Nicholson's method within its valid range, and in the practical writes a four-instrument QC dossier with U and decisions.
+- Likely confusion: ψ grows when k⁰ grows but falls when v grows; why D must come from elsewhere; the Nicholson return-peak correction (read from zero current); the "pass/fail/inconclusive" rule with an interval.
+- Misconception: "a large ΔEp means a slow couple". It can equally be iR drop or a fouled electrode; the concentration test and the test couple separate the causes.
+- Analogy: iR drop is a sagging garden hose: the more water you push, the more pressure you lose along the way; electron-transfer kinetics is the nozzle, which does not care how long the hose is.
+- Expected hands-on result: log–log slope 0.465; apparent RS D 6.0 × 10⁻⁶ cm²/s; ΔEp 84, 98, 113, 131, 161, 190 mV; E½ 0.216–0.219 V; ratio 1.01–1.03; k⁰ 0.0041 ± 0.0002 cm/s from ΔEp ≤ 150 mV (true 0.004); the fastest scans give 0.0034 and 0.0030. Practical: tartrazine 24.5 ± 0.2 mg/L (27.4 uncorrected), pass; quinine 54.9 external, 62.8 ± 1.0 standard addition, slope ratio 0.87, pass against 83 mg/L; GC-MS as in 25.4; vitamin C 113 ± 5 mg/L (94 %), pass. True: 24.0, 62.0, 110 mg/L.
+- Assessment of the report: one section per analyte, the risk named for each, the matrix evidence (baseline, slope ratio, MS + RI), U with k = 2, explicit decision rule, and a limitations paragraph (natural flavour unprovable by GC-MS; vitamin C stability).
+- Extension: rerun `make_data.py` with k0 = 0.0005 and check that only the slowest scans remain in the valid window; add a 200 Ω iR term to the simulation in `make_data.py` and redo the concentration test numerically.

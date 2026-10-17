@@ -42,7 +42,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M22
 - [x] M23
 - [x] M24
-- [ ] M25
+- [x] M25
 - [ ] M26
 - [ ] M27
 - [ ] M28
@@ -78,7 +78,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 
 ## Now working
 - agent: M26
-- agent: M25
+- agent: M27
 
 ## Decisions
 - 2026-10-16 Tal: whole degree in one course; non-chemistry subjects as short bridge modules.
@@ -116,3 +116,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M22 done; M24 spawned.
 - M23 done; M25 spawned.
 - M24 done; M26 spawned.
+- M25 done; M27 spawned.

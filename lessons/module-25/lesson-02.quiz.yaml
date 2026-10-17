@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    A student measures undiluted tonic water in a fluorimeter and gets a reading lower than that of a
+    1 + 9 dilution. What explains this?
+  options:
+    - The detector saturates at high concentration, so it reports a lower number than it should.
+    - Quinine photobleaches faster when concentrated, so the strong sample fades during the reading.
+    - The sample absorbs most of the 350 nm light near the cell wall, so the viewed centre is barely excited.
+    - Concentrated quinine shifts its emission to longer wavelengths, outside the 450 nm setting.
+  correct: 2
+  explanation: >-
+    Tonic absorbs about 1.2 per cm at 350 nm, so the excitation light is used up in the first few
+    millimetres (inner filter effect). Dilute until the signal scales with the dilution, at least 1 + 99.
+- id: q2
+  question: >-
+    Quinine fluorescence in a 1/8 tonic dilution falls to one fifth when 0.2 g of salt is dissolved in
+    100 mL (34 mmol/L chloride). What Stern-Volmer constant does this give?
+  options:
+    - About 118 L/mol, from (5 - 1) / 0.034.
+    - About 147 L/mol, from 5 / 0.034.
+    - About 24 L/mol, from (1 - 0.2) / 0.034.
+    - About 0.68 L/mol, from 0.034 x 20 / 1.
+  correct: 0
+  explanation: >-
+    F0/F = 1 + K[Cl-], so K = (F0/F - 1)/[Cl-] = 4/0.034 = 118 L/mol, close to the 130 L/mol usually
+    reported for quinine and chloride.
+- id: q3
+  question: >-
+    For a cloudy lemon drink, external calibration gives 55 mg/L quinine but standard addition on the
+    same dilution gives 62 mg/L, with a 95 % interval of 2 mg/L. What should the analyst report and why?
+  options:
+    - The mean of the two methods, 58.5 mg/L, since both are valid calibrations of the same sample.
+    - The external result, because standard addition extrapolates and is therefore less accurate.
+    - Neither value, because two methods that disagree show that the fluorimeter is out of order.
+    - The standard-addition result, because the matrix lowers the slope and only that method corrects it.
+  correct: 3
+  explanation: >-
+    A matrix that absorbs excitation light or quenches scales the signal down for analyte and added
+    standard alike, so standard addition cancels it; the external standards in clean acid do not. The
+    disagreement itself is the evidence of a matrix effect.
+- id: q4
+  question: >-
+    Why are quinine standards and samples made up in 0.05 M sulfuric acid rather than 0.05 M
+    hydrochloric acid?
+  options:
+    - Sulfuric acid is stronger, so it protonates quinine fully while hydrochloric acid does not.
+    - Chloride ions quench quinine fluorescence, while sulfate does not.
+    - Hydrochloric acid absorbs strongly at 350 nm and blocks the excitation light.
+    - Sulfuric acid is less volatile, so the concentration of the standards stays constant.
+  correct: 1
+  explanation: >-
+    Both acids protonate quinine at 0.05 M, but chloride is a strong collisional quencher (K about 130
+    L/mol); 0.05 M chloride would cut the signal to about one seventh.

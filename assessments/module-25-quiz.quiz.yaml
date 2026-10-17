@@ -1,0 +1,129 @@
+- id: q1
+  question: >-
+    A phone spectrometer reads a blue-dye series straight up to A = 0.6, then flattens; the stock reads
+    1.13 where the line predicts 1.20. The blank shows no clipped pixels. Your sample of a sports drink
+    reads 1.05 straight from the bottle. What do you do?
+  options:
+    - Read 1.05 on the line, since the error at that absorbance is only about 5 %.
+    - Fit a straight line through all points, including the stock, and read the sample on it.
+    - Dilute the drink so it reads near 0.3-0.6, measure again and multiply by the dilution factor.
+    - Raise the exposure so that the strongest solutions become brighter and the curve straightens.
+  correct: 2
+  explanation: >-
+    Above about 0.6-0.8 stray light and the wide bandwidth bend a phone calibration, so a reading there
+    is biased low. Diluting into the straight range is the cheap, correct fix (Lessons 19.1 and 25.1).
+- id: q2
+  question: >-
+    You must measure Brilliant Blue and tartrazine in a green drink with a benchtop spectrometer. Which
+    pair of wavelengths gives the most reliable two-component result?
+  options:
+    - 630 nm and 426 nm, where each dye has its maximum and the other absorbs little.
+    - 500 nm and 550 nm, where both dyes absorb weakly and stray light is lowest.
+    - 630 nm only, then subtract a fixed fraction for the yellow dye.
+    - 426 nm and 450 nm, both near the tartrazine maximum, to measure it twice.
+  correct: 0
+  explanation: >-
+    The 2 x 2 system is well conditioned when each wavelength is dominated by a different absorber.
+    At 500/550 nm the two spectra are small and similar, so tiny absorbance errors become large
+    concentration errors.
+- id: q3
+  question: >-
+    A tonic diluted 1 + 99 in 0.05 M sulfuric acid gives the same quinine result by external calibration
+    and by standard addition. The same tonic diluted only 1 + 4 reads 40 % low by external calibration.
+    What is the most likely cause?
+  options:
+    - Quinine degrades in concentrated tonic, so less of it survives to be measured.
+    - Sulfuric acid quenches quinine more strongly at high quinine concentrations.
+    - The fluorimeter's lamp intensity falls when bright samples are measured.
+    - The less diluted sample absorbs much of the excitation light (inner filter effect).
+  correct: 3
+  explanation: >-
+    Tonic absorbs about 1.2 per cm at 350 nm; at 1 + 4 the absorbance is still about 0.25, far above the
+    0.01 limit, so the centre of the cell is barely excited. At 1 + 99 the sample is in the linear range
+    and both calibrations agree.
+- id: q4
+  question: >-
+    Flame AAS of calcium in a phosphate-rich extract gives 31 mg/L. With 0.5 % lanthanum in all solutions
+    it gives 38 mg/L. A spike of 1.0 mg/L into the diluted extract (with La) is recovered at 99 %. What do
+    you report?
+  options:
+    - 31 mg/L, because lanthanum adds absorbance at 422.7 nm and inflates the second result.
+    - 38 mg/L, because lanthanum releases calcium from phosphate and the spike confirms the method.
+    - 34.5 mg/L, the mean, with half the difference as the uncertainty.
+    - Neither, because two results that differ by 20 % mean the instrument is out of calibration.
+  correct: 1
+  explanation: >-
+    Phosphate holds calcium in a compound that does not atomise; lanthanum in excess binds the phosphate
+    instead. A good spike recovery inside the calibrated range is the evidence that the La method is
+    accurate for this matrix.
+- id: q5
+  question: >-
+    A GC-MS peak at retention index 1240 on a 5 % phenyl column matches geranial with MF 889 and neral
+    with MF 884. NIST indices on that phase are about 1270 for geranial and 1241 for neral. What is
+    the identity?
+  options:
+    - Geranial, because the higher match factor wins when both scores are above 800.
+    - Neral, because the retention index agrees with neral and is 30 units away from geranial.
+    - Citral, unresolved, because MS cannot distinguish E and Z isomers.
+    - Not identified, because the two match factors are too close to choose.
+  correct: 1
+  explanation: >-
+    Neral and geranial give nearly identical spectra, so a 5-point MF difference is noise. The retention
+    index is 1 unit from neral and 30 from geranial, which decides it: neral, identified by MS + RI.
+- id: q6
+  question: >-
+    In an HPLC method for aspirin (pKa 3.5) and salicylic acid (pKa 3.0) on C18, the analyst chooses pH
+    3.5 because the separation looks best there. What is the main risk?
+  options:
+    - Aspirin hydrolyses to salicylic acid much faster at pH 3.5 than at pH 2.5.
+    - The C18 phase dissolves at pH 3.5, so the column wears out quickly.
+    - UV detection at 230 nm stops working for ionised carboxylic acids.
+    - Small pH errors change retention strongly near the pKa, so the method is not robust.
+  correct: 3
+  explanation: >-
+    At pH = pKa a 0.1 pH error changes the neutral fraction, and so k, by about 11 %, and peaks can swap
+    order. At pH 2.5 the same error changes aspirin's k by about 2 %; robust methods stay 1.5-2 units
+    away from every pKa.
+- id: q7
+  question: >-
+    Scouting runs at 20 % and 40 % acetonitrile give S = 3.3 for paracetamol and S = 4.3 for caffeine, and
+    the two compounds coelute near 38 %. A colleague proposes 45 % acetonitrile to shorten the run, and
+    the peaks are separated there. What should you check before accepting it?
+  options:
+    - That peaks are identified by standards at 45 %, because the elution order is reversed there.
+    - That the pump pressure is lower, since higher acetonitrile always raises pressure.
+    - That the column is replaced, because acetonitrile above 40 % damages C18 phases.
+    - That the detection wavelength is changed, because UV spectra shift with acetonitrile.
+  correct: 0
+  explanation: >-
+    With different S values the log k lines cross near 38 %; above the crossing caffeine elutes before
+    paracetamol. Identifying peaks by order from the old conditions would swap the two results.
+- id: q8
+  question: >-
+    A CV of a new compound gives peak separations of 64, 66, 70 and 78 mV from 25 to 400 mV/s at 2 mM.
+    At 1 mM they are 62, 63, 65 and 69 mV. The current ratio is 1.0 throughout. What is the best
+    interpretation?
+  options:
+    - A slow electron transfer, because the separation grows with scan rate.
+    - A follow-up chemical reaction, because the separation depends on concentration.
+    - A nearly reversible couple whose extra separation comes mostly from uncompensated resistance.
+    - An adsorbed compound, because adsorbed species show concentration-dependent separations.
+  correct: 2
+  explanation: >-
+    The extra separation shrinks when the concentration (and so the current) is halved, which is the
+    signature of iR drop. The small remaining growth may be kinetic; iR compensation or more
+    supporting electrolyte would show how much.
+- id: q9
+  question: >-
+    A drink's vitamin C is 113 +/- 5 mg/L (U, k = 2). The specification accepts 80-150 % of the declared
+    120 mg/L. A second batch gives 99 +/- 5 mg/L. What are the decisions?
+  options:
+    - Both fail, because both results are below the declared 120 mg/L.
+    - First batch pass; second inconclusive, because 94-104 mg/L straddles the 96 mg/L lower limit.
+    - Both pass, because both central values are above 96 mg/L.
+    - First batch pass; second fail, because 99 mg/L is less than the declared value minus 20 mg/L.
+  correct: 1
+  explanation: >-
+    The limits are 96-180 mg/L. 108-118 mg/L lies wholly inside, so pass. 94-104 mg/L crosses the lower
+    limit, so the result is inconclusive: more replicates or a more precise method are needed before
+    deciding.

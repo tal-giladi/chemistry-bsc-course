@@ -1,0 +1,23 @@
+# simulated: flame AAS, Ca 422.7 nm, air-acetylene, 0.5 nm slit; standards and samples in 0.1 % La (as LaCl3) and 1 % HNO3
+# mineral water true Ca 48.0 mg/L, diluted 1 + 9; without La the sulfate/phosphate matrix suppresses the signal by 18 %
+# spike: diluted water + 2.0 mg/L Ca; check standard 5.0 mg/L read at start, middle and end of the run
+type,c_mg_per_L,absorbance
+standard_La,0,-0.0028
+standard_La,1,0.0418
+standard_La,2,0.0788
+standard_La,4,0.1582
+standard_La,6,0.2387
+standard_La,8,0.3057
+standard_La,10,0.3752
+water_1to10_noLa,,0.1577
+water_1to10_noLa,,0.1592
+water_1to10_noLa,,0.1578
+water_1to10_La,,0.1907
+water_1to10_La,,0.1906
+water_1to10_La,,0.1907
+water_1to10_La_spike2,2.0,0.2636
+water_1to10_La_spike2,2.0,0.2622
+water_1to10_La_spike2,2.0,0.2627
+check_start,5.0,0.1964
+check_middle,5.0,0.1961
+check_end,5.0,0.1946

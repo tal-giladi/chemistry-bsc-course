@@ -1,0 +1,9 @@
+# simulated: n-alkane ladder on a 30 m x 0.25 mm x 0.25 um 5 % phenyl column, He 1 mL/min, 60 C then 3 K/min
+alkane,t_min
+C8,3.4
+C9,5.6
+C10,8.7
+C11,12.3
+C12,16.05
+C13,19.8
+C14,23.45

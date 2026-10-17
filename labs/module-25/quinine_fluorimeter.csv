@@ -1,0 +1,18 @@
+# simulated: fluorimeter, excitation 350 nm, emission 450 nm, 1 cm cell, 0.05 M H2SO4, 25 C; true tonic quinine 72.0 mg/L
+# external_std: quinine (from quinine sulfate) standards; tonic_1to200: tonic diluted 1 + 199, read 3 times
+# std_addition: 5.00 mL of tonic diluted 1 + 99, plus standard, made up to 10.00 mL; blank (3.0) already subtracted
+type,quinine_added_or_std_mg_per_L,fluorescence
+external_std,0,3.0
+external_std,0.1,103.1
+external_std,0.2,203.5
+external_std,0.3,300.8
+external_std,0.4,398.9
+external_std,0.5,499.9
+tonic_1to200,,362.0
+tonic_1to200,,363.6
+tonic_1to200,,360.9
+std_addition,0,359.8
+std_addition,0.1,456.3
+std_addition,0.2,555.2
+std_addition,0.3,652.1
+std_addition,0.4,753.9

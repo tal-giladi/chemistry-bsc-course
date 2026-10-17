@@ -1,0 +1,56 @@
+- id: q1
+  question: >-
+    A method for aspirin (pKa 3.5) uses a mobile phase buffered at pH 3.5. A colleague's buffer comes
+    out at pH 3.6. Roughly how much does aspirin's retention factor change, if only the neutral acid is
+    retained?
+  options:
+    - About 1 %, because 0.1 pH unit is within normal buffer tolerance.
+    - About 11 % lower, because at pH = pKa the neutral fraction changes fastest.
+    - About 26 % higher, because the extra 0.1 pH unit protonates more of the acid.
+    - About 50 % lower, because at pH 3.6 the acid is mostly ionised.
+  correct: 1
+  explanation: >-
+    The neutral fraction goes from 0.500 at pH 3.5 to 1/(1 + 10^0.1) = 0.443 at 3.6, an 11 % drop in k.
+    At pH 2.5 the same error would change k by only about 2 %, which is why robust methods sit well
+    below the pKa.
+- id: q2
+  question: >-
+    Scouting runs give log k = 0.44 at 20 % acetonitrile and -0.42 at 40 % for caffeine. What retention
+    factor do you predict at 30 %?
+  options:
+    - k of about 0.12, from averaging the two log k values and dividing by 10.
+    - k of about 1.6, from averaging the two retention factors.
+    - k of about 0.01, from extrapolating S to the pure organic solvent.
+    - k of about 1.0, from the straight line in log k against the fraction of organic solvent.
+  correct: 3
+  explanation: >-
+    The linear-solvent-strength model is linear in log k, so at 30 % log k is the mean of 0.44 and -0.42,
+    0.01, and k = 1.0. Averaging k itself (2.75 and 0.38) overestimates it, because k is exponential in
+    the solvent fraction.
+- id: q3
+  question: >-
+    Paracetamol and caffeine are resolved at 20 % acetonitrile, merge at about 38 % and are resolved
+    again, in reverse order, at 45 %. What causes this?
+  options:
+    - Their S values differ, so their log k lines cross as the solvent fraction changes.
+    - Caffeine is protonated at high acetonitrile and leaves the column faster.
+    - The column loses efficiency at high organic content, so the peaks broaden into each other.
+    - Paracetamol degrades in acetonitrile, so its peak moves during the run.
+  correct: 0
+  explanation: >-
+    Caffeine has a larger S (4.3) than paracetamol (3.3), so its retention falls faster with more
+    organic solvent; the two lines cross near 38 %, where alpha = 1. Never identify these peaks by
+    elution order alone.
+- id: q4
+  question: >-
+    Six replicate injections on a column used for 400 runs give critical-pair Rs 3.2, area RSD 0.6 % and
+    a salicylic-acid tailing factor of 2.36 (limit 2.0). What should the analyst do?
+  options:
+    - Run the samples, because resolution and precision are well inside their limits.
+    - Widen the integration window so that the tailing peak area is captured, then continue.
+    - Stop, investigate and restore the column (or replace it), then repeat the system-suitability test.
+    - Lower the acetonitrile to increase retention, which also reduces tailing.
+  correct: 2
+  explanation: >-
+    A failed system-suitability criterion invalidates the sequence. Tailing of an acid on an aged silica
+    column usually means exposed silanols or a blocked frit; fix the cause, pass the SST, then run.

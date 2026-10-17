@@ -1,0 +1,50 @@
+# simulated: six replicate injections of the system-suitability mix at 25 % acetonitrile, same column when new and after 400 injections
+column_state,injection,compound,t_R_min,area,plates,tailing
+new_column,1,paracetamol,2.261,1521.3,10084,1.13
+new_column,1,caffeine,2.682,978.8,9886,1.13
+new_column,1,aspirin,8.084,2210.5,10101,1.13
+new_column,1,salicylic acid,11.015,338.5,10128,1.29
+new_column,2,paracetamol,2.265,1518.9,10015,1.11
+new_column,2,caffeine,2.676,974.9,9957,1.09
+new_column,2,aspirin,8.071,2206.2,9874,1.11
+new_column,2,salicylic acid,10.998,339.4,10191,1.26
+new_column,3,paracetamol,2.262,1522.4,10107,1.11
+new_column,3,caffeine,2.676,983.6,9688,1.11
+new_column,3,aspirin,8.072,2215.9,10017,1.04
+new_column,3,salicylic acid,11.006,340.1,10097,1.25
+new_column,4,paracetamol,2.257,1531.2,9736,1.07
+new_column,4,caffeine,2.681,987.3,9793,1.05
+new_column,4,aspirin,8.098,2208.6,9797,1.07
+new_column,4,salicylic acid,10.947,342.3,10131,1.20
+new_column,5,paracetamol,2.257,1522.4,10050,1.09
+new_column,5,caffeine,2.681,974.7,9900,1.12
+new_column,5,aspirin,8.076,2208.5,9461,1.07
+new_column,5,salicylic acid,11.016,338.5,9826,1.22
+new_column,6,paracetamol,2.250,1524.5,9727,1.12
+new_column,6,caffeine,2.680,982.5,9172,1.12
+new_column,6,aspirin,8.078,2196.7,9910,1.14
+new_column,6,salicylic acid,11.012,341.9,9976,1.27
+after_400_injections,1,paracetamol,2.259,1514.4,5407,1.14
+after_400_injections,1,caffeine,2.676,985.6,5534,1.09
+after_400_injections,1,aspirin,8.088,2213.2,5495,1.12
+after_400_injections,1,salicylic acid,11.013,341.5,5477,2.37
+after_400_injections,2,paracetamol,2.264,1507.9,5523,1.06
+after_400_injections,2,caffeine,2.678,976.0,5594,1.13
+after_400_injections,2,aspirin,8.070,2213.2,5461,1.11
+after_400_injections,2,salicylic acid,11.000,340.8,5399,2.37
+after_400_injections,3,paracetamol,2.255,1531.1,5217,1.12
+after_400_injections,3,caffeine,2.680,980.6,5606,1.12
+after_400_injections,3,aspirin,8.087,2209.3,5542,1.07
+after_400_injections,3,salicylic acid,10.999,340.5,5404,2.37
+after_400_injections,4,paracetamol,2.256,1507.1,5364,1.02
+after_400_injections,4,caffeine,2.684,977.4,5595,1.14
+after_400_injections,4,aspirin,8.078,2201.2,5547,1.10
+after_400_injections,4,salicylic acid,10.980,340.1,5409,2.36
+after_400_injections,5,paracetamol,2.255,1511.4,5425,1.11
+after_400_injections,5,caffeine,2.677,985.6,5278,1.11
+after_400_injections,5,aspirin,8.106,2209.9,5724,1.05
+after_400_injections,5,salicylic acid,11.006,341.5,5492,2.28
+after_400_injections,6,paracetamol,2.254,1521.6,5667,1.08
+after_400_injections,6,caffeine,2.674,980.0,5585,1.15
+after_400_injections,6,aspirin,8.076,2213.3,5570,1.06
+after_400_injections,6,salicylic acid,10.996,341.3,5567,2.40

@@ -1,0 +1,31 @@
+# simulated: a cloudy bitter-lemon soft drink. Recipe/label: tartrazine 25 mg/L, quinine 'not more than 83 mg/L' (target 65), vitamin C 120 mg/L
+# uv_std / uv_drink_1to5: x = tartrazine mg/L, signal = A(426 nm), signal2 = A(700 nm) baseline, 1 cm
+# fl_std: x = quinine mg/L; fl_std_addition: 5.00 mL of drink diluted 1 + 49, plus x mg/L quinine, made to 10.00 mL
+# cv_std_addition: drink diluted 1 + 9 in acetate buffer pH 4.0; x = ascorbic acid added in the cell (mg/L); signal = oxidation peak current (uA, baseline-corrected)
+# true values: tartrazine 24.0, quinine 62.0, vitamin C 110 mg/L; the drink matrix absorbs 12 % of the excitation light
+type,x,signal,signal2
+uv_std,0,-0.0018,-0.0004
+uv_std,2,0.1044,0.0002
+uv_std,4,0.2126,-0.0003
+uv_std,6,0.3174,-0.0001
+uv_std,8,0.4228,0.0006
+uv_std,10,0.5300,-0.0002
+uv_drink_1to5,,0.2889,0.0309
+uv_drink_1to5,,0.2884,0.0308
+uv_drink_1to5,,0.2912,0.0293
+fl_std,0,0.0,
+fl_std,0.1,100.5,
+fl_std,0.2,201.0,
+fl_std,0.3,298.8,
+fl_std,0.4,399.5,
+fl_std,0.5,499.3,
+fl_std_addition,0,548.3,
+fl_std_addition,0.2,720.6,
+fl_std_addition,0.4,896.8,
+fl_std_addition,0.6,1074.9,
+fl_std_addition,0.8,1243.5,
+cv_std_addition,0,9.362,
+cv_std_addition,2,11.142,
+cv_std_addition,4,12.881,
+cv_std_addition,6,14.440,
+cv_std_addition,8,16.081,

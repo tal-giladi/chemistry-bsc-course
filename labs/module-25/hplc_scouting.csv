@@ -1,0 +1,11 @@
+# simulated: C18 150 x 4.6 mm, 5 um, 1.0 mL/min, 25 mM phosphate pH 2.5 / acetonitrile, 30 C, UV 230 nm; t0 = 1.00 min (uracil)
+# true linear-solvent-strength parameters log kw, S: paracetamol 0.90, 3.2; caffeine 1.30, 4.3; aspirin 2.10, 5.0; salicylic acid 2.30, 5.2
+compound,phi_MeCN,t_R_min
+paracetamol,0.2,2.829
+caffeine,0.2,3.747
+aspirin,0.2,13.622
+salicylic acid,0.2,19.185
+paracetamol,0.4,1.408
+caffeine,0.4,1.380
+aspirin,0.4,2.258
+salicylic acid,0.4,2.661

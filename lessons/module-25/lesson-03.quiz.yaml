@@ -1,0 +1,55 @@
+- id: q1
+  question: >-
+    Calcium in a phosphate-rich fertiliser extract reads 25 % lower by air-acetylene AAS than by ICP-OES.
+    The analyst adds lanthanum to the samples but not to the standards. What happens?
+  options:
+    - The result becomes correct, because lanthanum is needed only where phosphate is present.
+    - The result is still unreliable, because standards and samples no longer share the same matrix.
+    - The result gets worse, because lanthanum absorbs at 422.7 nm and adds to the calcium signal.
+    - Nothing changes, because lanthanum acts only in a nitrous oxide-acetylene flame.
+  correct: 1
+  explanation: >-
+    The releasing agent changes how efficiently calcium atomises and can change the flame and
+    nebulisation, so standards and samples must contain the same excess of lanthanum. Otherwise the
+    calibration slope does not describe the samples.
+- id: q2
+  question: >-
+    A water sample diluted 1 + 9 reads 4.80 mg/L Ca. The same dilution spiked with 3.0 mg/L Ca reads
+    7.35 mg/L, and the top standard is 6 mg/L. What is the best conclusion?
+  options:
+    - Recovery is 85 %, which proves a matrix interference that only standard addition can fix.
+    - Recovery is 245 %, so the spike was added twice and the run must be repeated.
+    - Recovery is 100 %, because the spiked result is above the unspiked one by roughly the spike.
+    - Recovery is 85 %, but the spiked solution is outside the calibrated range, so repeat with a smaller spike.
+  correct: 3
+  explanation: >-
+    (7.35 - 4.80)/3.0 = 85 %. At 7.8 mg/L the true value lies above the top standard, where the
+    calibration bends, so the low recovery may be a calibration artefact. Spike within the range first.
+- id: q3
+  question: >-
+    In a hot nitrous oxide-acetylene flame, the sodium signal of a standard rises by 30 % when 2000 mg/L
+    potassium is added to it. Which interference does this reveal?
+  options:
+    - Ionisation of sodium, which the easily ionised potassium suppresses by supplying electrons.
+    - A chemical interference, in which potassium releases sodium from a refractory compound.
+    - A spectral overlap between the potassium line at 766 nm and the sodium line at 589 nm.
+    - A physical interference, because potassium makes the solution more viscous.
+  correct: 0
+  explanation: >-
+    In a hot flame part of the sodium is ionised and no longer absorbs. Excess potassium ionises even
+    more easily, raises the electron concentration and pushes sodium back to neutral atoms, so the
+    signal rises. That is why an ionisation suppressor goes into every solution.
+- id: q4
+  question: >-
+    Your phone spectrometer shows sharp lines from a fluorescent lamp, a smooth spectrum from a white LED
+    and a sharp yellow line when salt falls into a gas flame. What do these observations show together?
+  options:
+    - Lines come from hot solids, bands from atoms and the smooth spectrum from molecules.
+    - All three are continua; the lines only look sharp because the slit is narrow.
+    - Free atoms give sharp lines; the LED's solid phosphor gives a broad spectrum.
+    - Sharp lines appear only with mercury; sodium's yellow comes from the flame itself.
+  correct: 2
+  explanation: >-
+    Mercury atoms in the lamp and sodium atoms in the flame have few sharp levels and give lines; the
+    LED's phosphor is a solid and gives a broad band. Sharp atomic lines are the basis of the
+    selectivity of AAS and atomic emission.

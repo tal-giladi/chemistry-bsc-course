@@ -1,0 +1,56 @@
+- id: q1
+  question: >-
+    A couple's peak separation grows from 75 mV at 50 mV/s to 130 mV at 1 V/s. You halve the
+    concentration and the separations become 68 mV and 98 mV. What is the main cause of the growth?
+  options:
+    - Slow electron transfer, because peak separation always grows with scan rate for a slow couple.
+    - Adsorption of the analyte, because adsorbed species give peaks that move apart with scan rate.
+    - A follow-up chemical reaction, because it consumes the product before the return sweep.
+    - Uncompensated resistance, because the extra separation shrinks when the current is halved.
+  correct: 3
+  explanation: >-
+    An iR shift is proportional to the current, so halving the concentration halves it; a kinetic
+    separation does not depend on concentration. Move the reference closer, add electrolyte or use iR
+    compensation, and the remaining separation is the kinetic part.
+- id: q2
+  question: >-
+    At 0.10 V/s a one-electron couple shows a peak separation of 105 mV (psi about 0.5). With
+    D = 7.0e-6 cm2/s and F/RT = 38.92 per volt, what is k0?
+  options:
+    - About 0.05 cm/s, from 0.5 x sqrt(D) with D in cm2/s.
+    - About 0.0046 cm/s, from 0.5 x sqrt(pi D F v / RT).
+    - About 0.0093 cm/s, from sqrt(pi D F v / RT) without psi.
+    - About 0.00002 cm/s, from 0.5 x pi D F v / RT without the square root.
+  correct: 1
+  explanation: >-
+    sqrt(pi x 7.0e-6 x 38.92 x 0.10) = 9.25e-3 cm/s, and k0 = psi times that = 4.6e-3 cm/s, a
+    quasi-reversible couple.
+- id: q3
+  question: >-
+    Peak currents of a compound rise in direct proportion to the scan rate, and the oxidation and
+    reduction peaks are symmetric and almost at the same potential. What do you conclude?
+  options:
+    - The compound is adsorbed on the electrode surface rather than diffusing from solution.
+    - The compound diffuses freely and its electron transfer is very fast.
+    - The solution resistance is very high, which makes the peaks symmetric.
+    - The compound decomposes after reduction, so the return peak is missing.
+  correct: 0
+  explanation: >-
+    For a surface-confined species the charge is fixed, so the current scales with v and the peaks are
+    mirror images near zero separation. Diffusing species give i_p proportional to the square root of v
+    and diffusion-shaped tails.
+- id: q4
+  question: >-
+    In the drink dossier, quinine reads 54.9 mg/L by external calibration and 62.8 +/- 1.0 mg/L by
+    standard addition, with the slope in the drink 0.87 times the slope in clean acid. Which statement
+    is correct?
+  options:
+    - Report 54.9 mg/L, because external calibration has the smaller uncertainty.
+    - Report 58.9 mg/L, the mean, because the true value lies between the two methods.
+    - Report 62.8 mg/L, because the matrix lowers the slope and only standard addition corrects for it.
+    - Report neither, because the two methods should agree within their uncertainties for a valid run.
+  correct: 2
+  explanation: >-
+    The lower slope in the drink is direct evidence of a multiplicative matrix effect (here, absorption
+    of the excitation light by the cloudy matrix). Standard addition cancels it; the slope ratio goes
+    into the report as the evidence.

@@ -1,0 +1,8 @@
+# Instructor notes — 25.1 Spectrophotometry of mixtures and a phone spectrometer
+
+- Objective: the learner solves a two-component mixture at two wavelengths and by full-spectrum least squares, predicts diffraction angles from a DVD with the grating equation, calibrates pixels with Hg lines, and builds and checks a phone spectrometer on a food-dye series.
+- Likely confusion: absorptivity (per mg/L) versus molar absorptivity; why the "cross" absorptivity matters even when it is small; that the pseudo-absorbance from a 5 cm cup is still a valid calibration scale.
+- Misconception: "each dye is measured at its own peak, so the other dye does not matter". Additivity means every absorber contributes everywhere it absorbs.
+- Analogy: the mixture equations are like working out the price of apples and pears from two shopping receipts with different amounts of each.
+- Expected hands-on result: example data — lamp lines at pixels 28, 87, 290, 348, 407, residuals under 0.3 nm, dispersion 0.52 nm/pixel; blue maximum 630 nm, yellow 424 nm; A = 0.0039 + 1.195 f (f ≤ 0.5), stock 5.9 % low; CLS blue 0.353, yellow 0.597 (true 0.35, 0.60); two-wavelength 0.352, 0.590. Real home builds: lines within 1–3 nm, blue peak 620–635 nm, linear to A ≈ 0.6–0.8. Worked example: 4.50 and 9.15 mg/L; 22.5 and 45.8 mg/L in the drink.
+- Extension: add a red dye (Allura Red, about 504 nm) and solve three components; compute the condition number of the 2 × 2 matrix for wavelength pairs and show why 500/550 nm is a poor choice. With 8-bit JPEGs the two-wavelength answer degrades more than the CLS one (try the photo round trip).

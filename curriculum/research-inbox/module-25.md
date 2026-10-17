@@ -1,0 +1,27 @@
+# Research log — Module 25
+
+| source | url | date accessed | claim supported | lesson(s) |
+|---|---|---|---|---|
+| FAO/WHO JECFA Brilliant Blue FCF monograph | https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/additive-059-m1.pdf | 2026-10-17 | specific absorptivity 164 L g⁻¹ cm⁻¹ at 629 nm (0.04 M ammonium acetate); URL responds | 25.1 |
+| Regulation (EU) No 231/2012 (EUR-Lex) | https://eur-lex.europa.eu/eli/reg/2012/231/oj | 2026-10-17 | tartrazine E1%1cm 530 at about 426 nm in water; URL responds (202) | 25.1, 25.6 |
+| NIST Handbook of Basic Atomic Spectroscopic Data, Hg | https://physics.nist.gov/PhysRefData/Handbook/Tables/mercurytable2.htm | 2026-10-17 | Hg lines 4046.5, 4358.3, 5460.7, 5790.6 Å present in table | 25.1, 25.3 |
+| NIST Handbook, Na and K | https://physics.nist.gov/PhysRefData/Handbook/Tables/sodiumtable2.htm | 2026-10-17 | Na D lines 5889.9/5895.9 Å; K 7698.9 Å (potassiumtable2) | 25.3 |
+| ECMA-267 3rd edition (DVD-ROM) | https://www.ecma-international.org/wp-content/uploads/ECMA-267_3rd_edition_april_2001.pdf | 2026-10-17 | DVD standard; 0.74 µm track pitch (also stated in patents and Public Lab FAQ found by search; Public Lab pages returned 404 to scripted access, not cited) | 25.1 |
+| OpenStax University Physics 3, 4.4 | https://openstax.org/books/university-physics-volume-3/pages/4-4-diffraction-gratings | 2026-10-17 | grating equation; URL responds | 25.1 |
+| Harvey Analytical Chemistry 2.1, 10.3, 10.4, 10.6, 10.7, 11.4, 12.4, 12.5 (LibreTexts) | https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey) | 2026-10-17 | instrument design, interferences, fluorescence, GC, HPLC, voltammetry; all seven section URLs respond 200 | 25.1–25.6 |
+| eCFR 21 CFR 172.575 | https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-172/subpart-F/section-172.575 | 2026-10-17 | quinine ≤ 83 ppm in carbonated beverages; label declaration | 25.2, 25.6 |
+| PhotochemCAD (OMLC) quinine sulfate | https://omlc.org/spectra/PhotochemCAD/html/081.html | 2026-10-17 | ε 5700 L mol⁻¹ cm⁻¹ at 347.5 nm; Φ 0.546 in 0.5 M H₂SO₄ (Eaton 1988) | 25.2 |
+| Wikipedia "Quantum yield" / 2009 absolute re-evaluation (doi 10.1039/B912178A) | https://en.wikipedia.org/wiki/Quantum_yield | 2026-10-17 | Φ ≈ 0.60 for dilute quinine in 1 N H₂SO₄; temperature dependence; perchloric acid recommended | 25.2 (note only) |
+| PubChem Quinine CID 3034034 | https://pubchem.ncbi.nlm.nih.gov/compound/3034034 | 2026-10-17 | GHS H302, H315, H317 (99.5 % of notifications) | 25.2 |
+| University of Victoria OHSE UV light guidelines | https://www.uvic.ca/ohse/_assets/docs/radiation-safety-folder/uv-light-guidelines.pdf | 2026-10-17 | UV eye effects (photokeratitis, cataract), no warning symptoms | 25.2 |
+| Analytical Communications 1999, a900331b | https://pubs.rsc.org/en/content/articlelanding/1999/ac/a900331b | 2026-10-17 | phosphate suppresses Ca absorbance; La restores it | 25.3 |
+| US CSB methanol demonstration bulletin | https://www.csb.gov/csb-releases-key-lessons-for-preventing-incidents-from-flammable-chemicals-in-educational-demonstrations-in-wake-of-several-serious-methanol-accidents-that-injured-children-and-adults/ | 2026-10-17 | injuries from methanol flame/rainbow demonstrations | 25.3 |
+| NIST Chemistry WebBook mass spectra (JCAMP) | https://webbook.nist.gov/cgi/cbook.cgi?JCAMP=C138863&Index=0&Type=Mass | 2026-10-17 | EI spectra downloaded for C80568, C127913, C123353, C99876, C138863, C99854, C78706, C98555, C106263, C141275; all exist; collection copyrighted (not redistributed) | 25.4, 25.6 |
+| NIST WebBook gas-chromatography pages (Mask=2000) | https://webbook.nist.gov/cgi/cbook.cgi?ID=C106263&Mask=2000 | 2026-10-17 | DB-5-type ramp RI medians: α-pinene 937, β-pinene 979, myrcene 991, p-cymene 1026, limonene 1031, γ-terpinene 1061, linalool 1099, α-terpineol 1190, neral 1241, geranial 1270 | 25.4 |
+| Stein & Scott 1994, JASMS 5, 859 | https://doi.org/10.1016/1044-0305(94)87009-8 | 2026-10-17 | dot-product search best; square-root intensity and mass weighting (DOI confirmed via Springer/NIST listing; doi.org blocks scripts with 403) | 25.4 |
+| PubChem aspirin, salicylic acid, acetaminophen, caffeine (CIDs 2244, 338, 1983, 2519) | https://pubchem.ncbi.nlm.nih.gov/compound/2244 | 2026-10-17 | pKa 3.5, 2.97, 9.38, 0.7 (cation); log Kow 1.19, 2.26, 0.46, −0.07 | 25.5 |
+| EMA ICH Q2(R2) page | https://www.ema.europa.eu/en/ich-q2r2-validation-analytical-procedures-scientific-guideline | 2026-10-17 | Q2(R2) adopted (ICH step 4 1 Nov 2023), effective 14 June 2024; aligned with Q14 | 25.5 |
+| Phenomenex, What is USP Chapter 621 | https://www.phenomenex.com/resources/blog/what-is-usp-chapter-621 | 2026-10-17 | SST parameters and allowed adjustments (secondary summary; typical limits labelled as typical) | 25.5 |
+| Nicholson 1965, Anal. Chem. 37, 1351 | https://doi.org/10.1021/ac60230a016 | 2026-10-17 | ψ working curve; return-peak ratio correction (from the literature; doi.org 403 to scripts) | 25.6 |
+| Lavagnini, Antiochia, Magno 2004, Electroanalysis 16, 505 | https://doi.org/10.1002/elan.200302851 | 2026-10-17 | empirical ψ(ΔEp) equation; paper and DOI confirmed by search; coefficients −0.6288, 0.0021, 0.017 as widely quoted (rounded forms −0.629/0.002 in later papers); checked numerically against Nicholson's table: within ~5 % up to ~150 mV | 25.6 |
+| NIST CODATA 2022 | https://physics.nist.gov/cuu/Constants/ | 2026-10-17 | F = 96485.33212 C/mol, R = 8.314462618 J mol⁻¹ K⁻¹ | 25.6 |
