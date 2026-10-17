@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    For an unknown C4H8O2 you have only the NIST mass spectrum and gas-phase IR so far. What should
+    you have written down before you open SDBS?
+  options:
+    - The single structure you think is most likely, so you can confirm it quickly.
+    - Every structure that fits the formula, DBE, fragments and IR, with your favourite marked.
+    - Nothing yet, because NMR is needed before any structure can be proposed.
+    - The SDBS number of the compound, because SDBS can be searched by number.
+  correct: 1
+  explanation: >-
+    Phase 1 ends with a full candidate list. Writing one structure invites confirmation bias, and
+    you cannot know the SDBS number of an unknown without already knowing what it is.
+- id: q2
+  question: >-
+    The NIST gas-phase IR of an unknown acid shows a sharp O-H band near 3580 cm-1 and a C=O near
+    1780 cm-1. Your table says acids have a broad O-H at 2500-3300 and C=O near 1710. What follows?
+  options:
+    - The compound cannot be an acid, because the bands are in the wrong places.
+    - The NIST spectrum must be mislabelled and should be ignored.
+    - The compound is an anhydride, because only anhydrides absorb near 1780.
+    - It can still be an acid; gas-phase acids are monomers without hydrogen bonds.
+  correct: 3
+  explanation: >-
+    Tables describe liquids and solids, where acids form hydrogen-bonded dimers. In the gas the
+    free O-H is sharp near 3580 and the free C=O is near 1780. Check the SDBS liquid spectrum.
+- id: q3
+  question: >-
+    You search SDBS for a compound name from the project and get no hits. What is the best next
+    step?
+  options:
+    - Search by CAS number instead, since every SDBS record has one.
+    - Conclude that SDBS has no spectra for the compound and skip it.
+    - Try a wildcard such as %name, a synonym, or a search by molecular formula.
+    - Download the whole database and search it offline with a script.
+  correct: 2
+  explanation: >-
+    SDBS matches names exactly except for the % wildcard and has no CAS search. Synonyms and formula
+    searches usually find the record. Automated downloading is forbidden by its terms.
+- id: q4
+  question: >-
+    The checker says your answer to an unknown has the right formula but the wrong structure. Where
+    should you look first?
+  options:
+    - The NMR evidence, because isomers share formula, DBE and often IR bands.
+    - The molecular ion, because the formula must be wrong after all.
+    - The nitrogen rule, because isomers differ in their number of N atoms.
+    - The fingerprint region of the IR, because only it can separate isomers.
+  correct: 0
+  explanation: >-
+    Isomers have the same formula, so MS mass and DBE cannot separate them. 13C line counts and 1H
+    splitting and shifts usually can.

@@ -1,0 +1,15 @@
+# Candidate isomers for lesson 17.5 (C5H10O2 esters and acids). Structures written by hand as SMILES; no spectral data. Semicolons replace commas inside names.
+formula,name,smiles
+C5H10O2,methyl butanoate,CCCC(=O)OC
+C5H10O2,methyl 2-methylpropanoate,CC(C)C(=O)OC
+C5H10O2,ethyl propanoate,CCC(=O)OCC
+C5H10O2,propyl acetate,CCCOC(C)=O
+C5H10O2,isopropyl acetate,CC(C)OC(C)=O
+C5H10O2,butyl formate,CCCCOC=O
+C5H10O2,isobutyl formate,CC(C)COC=O
+C5H10O2,sec-butyl formate,CCC(C)OC=O
+C5H10O2,tert-butyl formate,CC(C)(C)OC=O
+C5H10O2,pentanoic acid,CCCCC(=O)O
+C5H10O2,2-methylbutanoic acid,CCC(C)C(=O)O
+C5H10O2,3-methylbutanoic acid,CC(C)CC(=O)O
+C5H10O2,2;2-dimethylpropanoic acid,CC(C)(C)C(=O)O

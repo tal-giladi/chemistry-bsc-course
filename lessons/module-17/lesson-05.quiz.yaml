@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    An unknown C9H10O shows aromatic 1H signals for five protons, an ethyl group (2H quartet near
+    3.0 ppm, 3H triplet near 1.2 ppm) and a 13C line at 200 ppm. What does the DBE tell you?
+  options:
+    - DBE 4, so the ring uses all the unsaturation and the 200 line is an impurity.
+    - DBE 5, so a benzene ring (4) plus one C=O (1) accounts for everything.
+    - DBE 6, so there must be a second ring or a triple bond somewhere.
+    - DBE 3, so the compound cannot contain a benzene ring.
+  correct: 1
+  explanation: >-
+    (2 x 9 + 2 - 10) / 2 = 5. A benzene ring counts 4 and the ketone C=O at 200 ppm counts 1, which
+    fits propiophenone, C6H5COCH2CH3.
+- id: q2
+  question: >-
+    Two candidates for an unknown are methyl 4-methylbenzoate and 4'-methoxyacetophenone (both
+    C9H10O2). Which single observation separates them most reliably?
+  options:
+    - The two 2H doublets in the aromatic region of the 1H spectrum.
+    - Two 3H singlets in the 1H spectrum between 2 and 4 ppm.
+    - The molecular ion at m/z 150 in the mass spectrum.
+    - The carbonyl line in the 13C spectrum, near 197 or near 167 ppm.
+  correct: 3
+  explanation: >-
+    Both are para-disubstituted, both show two methyl singlets and both weigh 150. A ketone C=O is
+    above 190 ppm and an ester C=O near 167, so the 13C carbonyl decides.
+- id: q3
+  question: >-
+    After MS and IR you know an unknown is a C5H10O2 ester. 13C shows five lines and 1H shows
+    four signals with exactly one singlet, at 3.67 ppm (3H). What is the best answer?
+  options:
+    - Propyl acetate, because it has five carbons and one CH3 singlet.
+    - Ethyl propanoate, because its OCH2 quartet often looks like a singlet.
+    - Methyl butanoate, because a 3H singlet at 3.7 ppm is an OCH3 on the ester oxygen.
+    - Isopropyl acetate, because its OCH is too far downfield to count as a signal.
+  correct: 2
+  explanation: >-
+    Propyl acetate also has one singlet, but its CH3C=O singlet is near 2.0 ppm. A 3H singlet near
+    3.7 is OCH3. Isopropyl acetate has only four carbon lines, and ethyl propanoate has no singlet.
+- id: q4
+  question: >-
+    Your proposed structure explains every 1H and 13C signal, but the IR spectrum also shows a broad
+    band near 3400 cm-1 that your structure cannot explain. What should you do?
+  options:
+    - Decide whether it is water in the sample or a sign of a wrong structure, then check again.
+    - Ignore it, because NMR evidence always outweighs IR evidence.
+    - Change the structure to an alcohol, because broad bands at 3400 are always O-H groups.
+    - Report the structure, because the fingerprint region decides identity anyway.
+  correct: 0
+  explanation: >-
+    An unexplained signal means either an impurity (water is common in IR samples) or a wrong
+    answer. Check, for example for an OH in the 1H spectrum, before you decide.

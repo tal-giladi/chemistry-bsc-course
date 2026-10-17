@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A C6H4Cl2 sample shows exactly two lines in its 13C NMR spectrum. Which isomer is it?
+  options:
+    - 1,2-dichlorobenzene, because adjacent chlorines make the ring symmetric.
+    - 1,3-dichlorobenzene, because meta substitution leaves two kinds of carbon.
+    - Any of the three, because aromatic carbons all appear at the same shift.
+    - 1,4-dichlorobenzene, because its symmetry leaves only C-Cl and C-H carbons.
+  correct: 3
+  explanation: >-
+    Para substitution makes the two C-Cl carbons equivalent and all four C-H carbons equivalent: two
+    lines. The ortho isomer gives three lines and the meta isomer four.
+- id: q2
+  question: >-
+    A line at 32 ppm appears in the broadband 13C spectrum, points down in DEPT-135 and is absent in
+    DEPT-90. What kind of carbon is it?
+  options:
+    - A CH2 group, because only CH2 carbons point down in DEPT-135.
+    - A CH3 group, because methyl carbons appear below 35 ppm.
+    - A CH group, because DEPT-90 hides CH carbons.
+    - A quaternary carbon, because it is missing from DEPT-90.
+  correct: 0
+  explanation: >-
+    In DEPT-135 CH2 carbons are negative and CH and CH3 positive. DEPT-90 shows only CH. A
+    quaternary carbon would be absent from both DEPT spectra, not negative.
+- id: q3
+  question: >-
+    You need to prove that the OCH2 group of an ester is attached through oxygen to the C=O carbon.
+    Which 2D experiment shows this directly?
+  options:
+    - COSY, because the OCH2 protons couple to the carbonyl group.
+    - HSQC, because it links each proton to the carbon it is bonded to.
+    - HMBC, because it shows protons and carbons three bonds apart, across the oxygen.
+    - DEPT-135, because the OCH2 carbon points down.
+  correct: 2
+  explanation: >-
+    H-C-O-C=O is a three-bond path from the OCH2 protons to the carbonyl carbon, which is exactly
+    what HMBC detects. COSY needs H-C-C-H and HSQC only shows one-bond C-H pairs.
+- id: q4
+  question: >-
+    In a 13C spectrum the line at 208 ppm is much smaller than the line at 30 ppm. What is the best
+    conclusion?
+  options:
+    - The 208 ppm line is an impurity, because a real carbonyl line is always the tallest.
+    - A ketone C=O; carbons without H give small lines, so heights do not count carbons.
+    - There are several carbons at 30 ppm and only a fraction of one carbon at 208 ppm.
+    - The 208 ppm line is an ester C=O, which is always weaker than a ketone C=O.
+  correct: 1
+  explanation: >-
+    Carbons without H relax slowly and get no Overhauser boost, so C=O lines are small. Above 200
+    ppm means ketone or aldehyde; esters appear near 170.

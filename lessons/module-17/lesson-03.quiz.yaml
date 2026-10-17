@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    A compound C3H7Br shows two 1H NMR signals: a 6H doublet at 1.7 ppm and a 1H septet at 4.3 ppm.
+    Which structure fits?
+  options:
+    - 1-bromopropane, because a CH2 next to Br gives a septet.
+    - 2-bromopropane, because the CH has six equivalent neighbours and each CH3 has one.
+    - >-
+        1-bromopropane, because three carbons always give a 6:1 ratio.
+    - Bromocyclopropane, because a ring makes all CH2 protons equivalent.
+  correct: 1
+  explanation: >-
+    Six equivalent CH3 protons split the CH into a septet, and the single CH splits the 6H into a
+    doublet: the isopropyl pattern. 1-Bromopropane would show three signals (t, sextet, t).
+- id: q2
+  question: >-
+    On a 400 MHz instrument two coupled signals are 0.10 ppm apart and J is 7 Hz. What should you
+    expect?
+  options:
+    - Clean first-order multiplets, because 400 MHz is always enough.
+    - No splitting at all, because the signals are closer than J.
+    - Second-order distortion, because 40 Hz divided by 7 Hz is well below 10.
+    - Singlets, because protons with similar shifts are chemically equivalent.
+  correct: 2
+  explanation: >-
+    0.10 ppm at 400 MHz is 40 Hz, and 40/7 is about 6, below the rule-of-thumb ratio of 10. Expect
+    roofing and extra lines. Similar shift does not mean equivalent.
+- id: q3
+  question: >-
+    A compound C4H8O2 with no OH or NH shows three 1H signals whose integrals the software prints as
+    0.67, 1.00 and 1.00. How many protons does each signal represent?
+  options:
+    - >-
+        2, 3 and 3, because the ratio 2:3:3 adds up to the 8 hydrogens of the formula.
+    - 1, 1 and 1, because the software has normalised each signal to one proton.
+    - 0.67, 1 and 1, because integrals give the number of protons directly.
+    - 4, 6 and 6, because the integrals must be doubled to reach whole numbers.
+  correct: 0
+  explanation: >-
+    Integrals are ratios. 0.67 : 1 : 1 is 2 : 3 : 3, which adds up to 8, the H count of C4H8O2.
+    Doubling gives 16, more hydrogens than the formula has.
+- id: q4
+  question: >-
+    In ethanol, why is the OH signal usually a broad singlet, even though the OH is next to a CH2?
+  options:
+    - Oxygen has no spin, so it blocks all coupling across it.
+    - The CH2 protons are equivalent to the OH proton, and equivalent protons do not split.
+    - The OH proton is far downfield, where coupling constants are always zero.
+    - The OH proton exchanges quickly between molecules, which averages out the coupling.
+  correct: 3
+  explanation: >-
+    Fast exchange (catalysed by traces of acid or water) means each OH proton sees many different
+    CH2 neighbours over the measurement time, so the splitting averages to zero and the line
+    broadens.

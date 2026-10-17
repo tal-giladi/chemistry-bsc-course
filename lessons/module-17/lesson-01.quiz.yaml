@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    An EI spectrum shows its highest significant peaks at m/z 156 and 158, of almost equal height,
+    and a base peak at m/z 77. What does the pair at 156/158 tell you?
+  options:
+    - The sample is a 1:1 mixture of two compounds that differ by two hydrogens.
+    - The molecule contains one chlorine atom, since chlorine gives an M+2 peak.
+    - The molecule contains one bromine atom, since 79Br and 81Br are almost equally common.
+    - The molecule contains two carbons more than expected, since each 13C adds one unit.
+  correct: 2
+  explanation: >-
+    A pair 2 u apart in about 1:1 is the signature of one Br. Chlorine gives 3:1, and 13C gives an
+    M+1 peak of about 1.1 % per carbon, never an M+2 of equal height. 156 - 79 = 77 is C6H5+.
+- id: q2
+  question: >-
+    A compound containing only C, H, N and O shows its molecular ion at m/z 87. What can you
+    conclude before doing any other analysis?
+  options:
+    - It contains an even number of nitrogen atoms, possibly zero.
+    - It contains an odd number of nitrogen atoms.
+    - It must contain an oxygen atom, because O is the only element with an even mass.
+    - The peak cannot be a molecular ion, because molecular ions always have even mass.
+  correct: 1
+  explanation: >-
+    By the nitrogen rule an odd nominal mass means an odd number of N atoms. Molecular ions of
+    N-free compounds are even, but amines and amides with one N are odd.
+- id: q3
+  question: >-
+    HRMS gives M+. at m/z 100.0883. Which formula fits within 5 ppm (ion mass = neutral exact mass
+    minus 0.00055 u)?
+  options:
+    - C5H8O2, exact mass 100.05243
+    - C5H12N2, exact mass 100.10005
+    - C7H16, exact mass 100.12520
+    - C6H12O, exact mass 100.08882
+  correct: 3
+  explanation: >-
+    C6H12O gives an ion mass of 100.08827 and an error of +0.3 ppm. The others are off by hundreds
+    of ppm, even though all four have nominal mass 100.
+- id: q4
+  question: >-
+    The EI spectrum of a ketone C6H12O has a base peak at m/z 43 and a strong peak at m/z 58, but
+    only a small peak at m/z 71. Which ketone is it most likely to be?
+  options:
+    - 2-hexanone, a methyl ketone with gamma hydrogens for a McLafferty rearrangement.
+    - 3-hexanone, because ethyl and propyl acylium ions give 43 and 58.
+    - Cyclohexanone, because a ring ketone loses CO to give m/z 58.
+    - 3,3-dimethyl-2-butanone, because it has no gamma hydrogens at all.
+  correct: 0
+  explanation: >-
+    58 is the McLafferty ion of a methyl ketone with a gamma hydrogen: 100 - 42 (propene).
+    3-hexanone would show strong 57 and 71 acylium ions; cyclohexanone is C6H10O, not C6H12O.

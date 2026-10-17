@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" font-family="Arial, Helvetica, sans-serif" font-size="13">
+  <title>The four regions of an infrared spectrum, from 4000 to 400 per centimetre</title>
+  <desc>A wavenumber axis from 4000 cm-1 on the left to 400 cm-1 on the right, divided into four regions: X-H stretches from 4000 to 2500 (O-H, N-H, C-H), triple bonds and cumulated bonds from 2500 to 2000 (C triple N, C triple C), double bonds from 2000 to 1500 (C=O, C=C, C=N), and the fingerprint region below 1500.</desc>
+  <rect x="0" y="0" width="760" height="250" fill="#ffffff"/>
+  <!-- axis: x = 40 + (4000 - v) * 680 / 3600 -->
+  <rect x="40" y="60" width="283" height="70" fill="#dbeafe" stroke="#1e3a8a"/>
+  <rect x="323" y="60" width="94" height="70" fill="#dcfce7" stroke="#14532d"/>
+  <rect x="417" y="60" width="95" height="70" fill="#fee2e2" stroke="#7f1d1d"/>
+  <rect x="512" y="60" width="208" height="70" fill="#f3f4f6" stroke="#374151"/>
+  <text x="181" y="85" text-anchor="middle" font-weight="bold">X–H stretches</text>
+  <text x="181" y="103" text-anchor="middle">O–H 3200–3650 · N–H 3300–3500</text>
+  <text x="181" y="120" text-anchor="middle">C–H: above 3000 sp²/sp, below 3000 sp³</text>
+  <text x="370" y="85" text-anchor="middle" font-weight="bold">Triple</text>
+  <text x="370" y="103" text-anchor="middle">C≡N 2250</text>
+  <text x="370" y="120" text-anchor="middle">C≡C 2100–2260</text>
+  <text x="464" y="85" text-anchor="middle" font-weight="bold">Double</text>
+  <text x="464" y="103" text-anchor="middle">C=O 1650–1820</text>
+  <text x="464" y="120" text-anchor="middle">C=C 1600–1680</text>
+  <text x="616" y="85" text-anchor="middle" font-weight="bold">Fingerprint</text>
+  <text x="616" y="103" text-anchor="middle">C–O 1000–1300, C–X, bends</text>
+  <text x="616" y="120" text-anchor="middle">unique to each molecule</text>
+  <line x1="40" y1="150" x2="720" y2="150" stroke="#000" stroke-width="1.5"/>
+  <g text-anchor="middle">
+    <line x1="40" y1="150" x2="40" y2="158" stroke="#000"/><text x="40" y="174">4000</text>
+    <line x1="229" y1="150" x2="229" y2="158" stroke="#000"/><text x="229" y="174">3000</text>
+    <line x1="323" y1="150" x2="323" y2="158" stroke="#000"/><text x="323" y="174">2500</text>
+    <line x1="417" y1="150" x2="417" y2="158" stroke="#000"/><text x="417" y="174">2000</text>
+    <line x1="512" y1="150" x2="512" y2="158" stroke="#000"/><text x="512" y="174">1500</text>
+    <line x1="606" y1="150" x2="606" y2="158" stroke="#000"/><text x="606" y="174">1000</text>
+    <line x1="720" y1="150" x2="720" y2="158" stroke="#000"/><text x="720" y="174">400</text>
+  </g>
+  <text x="380" y="200" text-anchor="middle">wavenumber / cm⁻¹ (higher energy on the left, as IR spectra are drawn)</text>
+  <text x="380" y="35" text-anchor="middle" font-size="16" font-weight="bold">Where IR bands appear</text>
+  <line x1="229" y1="55" x2="229" y2="135" stroke="#1e3a8a" stroke-dasharray="4 3"/>
+</svg>

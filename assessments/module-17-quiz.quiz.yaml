@@ -1,0 +1,134 @@
+- id: q1
+  question: >-
+    A GC-MS run of a solvent shows M+. at m/z 120 with a small peak at 121 (about 10 % of 120) and a
+    base peak at 105. The 1H spectrum has five aromatic H, a 1H septet and a 6H doublet. What is the
+    compound?
+  options:
+    - Propylbenzene, because loss of an ethyl group gives m/z 105.
+    - Isopropylbenzene, because loss of CH3 gives a stabilised benzylic cation at 105.
+    - Acetophenone, because 105 is the benzoyl cation C6H5CO+.
+    - 1,3,5-Trimethylbenzene, because three methyls give strong methyl losses.
+  correct: 1
+  explanation: >-
+    M+1 of 10 % means about 9 carbons (C9H12, M 120). The septet and 6H doublet are an isopropyl
+    group; losing CH3 gives the benzylic cation at 105. Acetophenone weighs 120 too but has a CH3
+    singlet and a C=O.
+- id: q2
+  question: >-
+    An unknown shows M+. at m/z 135 and 137 in a 3:1 ratio. A colleague proposes C8H10NCl. Is that
+    consistent with the mass spectrum?
+  options:
+    - No, because an odd molecular ion rules out chlorine.
+    - No, because a 3:1 pair 2 u apart means bromine, not chlorine.
+    - Yes, because the 3:1 pair means one Cl and the odd mass means an odd number of N.
+    - Yes, but only if the compound also contains sulfur, which adds the M+2 peak.
+  correct: 2
+  explanation: >-
+    35Cl and 37Cl give M and M+2 in about 3:1. An odd nominal mass needs an odd number of nitrogens;
+    one N fits. Bromine would give 1:1.
+- id: q3
+  question: >-
+    You oxidised 1-propanol (virtually) and must decide whether the product is propanal or propanoic
+    acid. The IR shows a strong band at 1725 cm-1, two weak bands near 2720 and 2820 cm-1, and no
+    broad band from 2500 to 3300 cm-1. What is the product?
+  options:
+    - Propanal, because the C=O comes with the aldehyde C-H pair and there is no acid O-H.
+    - Propanoic acid, because a carboxylic acid C=O lies between 1700 and 1730.
+    - Unreacted 1-propanol, because 2720 and 2820 are O-H overtones.
+    - Propyl propanoate, because esters absorb near 1725 cm-1.
+  correct: 0
+  explanation: >-
+    The weak pair near 2720/2820 is the aldehyde C-H stretch. An acid would show the very broad O-H
+    under the C-H bands, and an alcohol a broad O-H near 3300 with no C=O.
+- id: q4
+  question: >-
+    A compound C4H10O shows a broad IR band at 3350 cm-1. Its 13C spectrum has two lines, and DEPT
+    shows that one of them is a quaternary carbon. Which isomer is it?
+  options:
+    - 1-Butanol, because primary alcohols give the broadest O-H bands.
+    - Diethyl ether, because its symmetry gives two 13C lines.
+    - 2-Butanol, because its CH-O carbon appears in DEPT.
+    - 2-Methyl-2-propanol, because three equivalent CH3 and one C-O carbon give two lines.
+  correct: 3
+  explanation: >-
+    Two lines and a quaternary carbon fit (CH3)3COH only. Diethyl ether also gives two lines but has
+    no O-H and no quaternary carbon; 1-butanol and 2-butanol give four lines.
+- id: q5
+  question: >-
+    On a 60 MHz instrument a spectrum shows two coupled multiplets 0.15 ppm apart with J = 7 Hz;
+    the lines lean towards each other and the n+1 counts look wrong. What is the most useful thing
+    to do?
+  options:
+    - Re-record the spectrum with more scans, so the extra lines average out.
+    - Record it at 400 MHz, where the separation in Hz grows and J stays the same.
+    - Assume the two signals are equivalent protons and integrate them together.
+    - Switch to a 13C spectrum, because carbon spectra show the same splittings.
+  correct: 1
+  explanation: >-
+    At 60 MHz the shift difference is 9 Hz, about J, so the spectrum is second order. At 400 MHz it is
+    60 Hz (ratio about 9), much closer to first order. More scans do not change the pattern.
+- id: q6
+  question: >-
+    An unknown C8H8O2 shows a 1H spectrum with two 2H doublets (7.9 and 7.3 ppm), a 3H singlet at
+    2.4 ppm and a broad 1H signal at 12.5 ppm. The 13C carbonyl is at 172 ppm. Which structure fits?
+  options:
+    - Methyl benzoate, because an OCH3 singlet appears near 2.4 ppm.
+    - 4-Methoxybenzaldehyde, because aldehyde protons are broad near 12.5 ppm.
+    - 4-Methylbenzoic acid, because the para pattern, ring CH3 and COOH all fit.
+    - Phenylacetic acid, because its CH2 next to C=O gives a 3H singlet.
+  correct: 2
+  explanation: >-
+    Two 2H doublets mean a para-disubstituted ring; 2.4 ppm is CH3 on a ring; 12.5 broad and C=O at
+    172 are a COOH. An OCH3 would be near 3.9 and an aldehyde H near 10 with C=O above 190.
+- id: q7
+  question: >-
+    Two candidate esters, propyl acetate and methyl butanoate, both fit an unknown's MS, IR, 13C line
+    count and 1H integrals. Which HMBC observation decides?
+  options:
+    - The OCH2 protons near 4.0 ppm correlate with the C=O carbon, so the OCH2 is on the ester oxygen.
+    - The CH3 triplet correlates with a CH2 carbon, which proves a propyl chain.
+    - The C=O carbon shows no HSQC peak, which proves it is a quaternary carbon.
+    - The OCH2 protons couple to a CH2 in COSY, which proves an ethyl group is present.
+  correct: 0
+  explanation: >-
+    A three-bond H-C-O-C=O correlation from an OCH2 at 4.0 proves propyl acetate. Methyl butanoate
+    would instead show its OCH3 singlet (3.7) correlating with the C=O. The other observations fit both.
+- id: q8
+  question: >-
+    A hydrocarbon C6H10 shows a weak IR band near 3020 cm-1, nothing near 3300 cm-1, and a weak band
+    near 1650 cm-1. Its only alkene 1H signal is 2H near 5.7 ppm, and it has three 13C lines. What is it?
+  options:
+    - 1-Hexyne, because C6H10 has two degrees of unsaturation.
+    - 1,5-Hexadiene, because two C=C bonds account for the DBE of 2.
+    - Cyclohexane, because a ring with three kinds of carbon gives three lines.
+    - Cyclohexene, because a ring plus one C=C fits DBE 2 and its symmetry gives three lines.
+  correct: 3
+  explanation: >-
+    DBE 2. A terminal alkyne would show a sharp band near 3300, and 1,5-hexadiene would add a 4H =CH2
+    signal near 5.0 ppm. Cyclohexane is C6H12. A ring plus one C=C, with its mirror symmetry, fits.
+- id: q9
+  question: >-
+    An unknown C5H10O ketone gives a base peak at m/z 57 and a strong peak at 29. Its 1H spectrum has
+    only a 4H quartet and a 6H triplet. Which ketone is it?
+  options:
+    - 2-Pentanone, because its McLafferty ion appears at m/z 57.
+    - 3-Methyl-2-butanone, because loss of an isopropyl group gives m/z 57.
+    - 3-Pentanone, because both sides are ethyl groups and alpha-cleavage gives C2H5CO+ at 57.
+    - Cyclopentanone, because ring ketones give strong m/z 57 fragments.
+  correct: 2
+  explanation: >-
+    Two equivalent ethyl groups give one quartet and one triplet; alpha-cleavage gives C2H5CO+ (57)
+    and C2H5+ (29). 2-Pentanone would show a CH3CO singlet and base peak 43; cyclopentanone is C5H8O.
+- id: q10
+  question: >-
+    You want the 1H and 13C spectra of 50 compounds from SDBS for a study group. What is the right
+    way to use SDBS?
+  options:
+    - Write a script that downloads every spectrum automatically and share the files.
+    - Search each compound by hand, view and assign its spectra, and cite SDBS with the access date.
+    - Search SDBS by CAS number, which is the fastest key for each compound.
+    - Copy the peak lists into a shared spreadsheet, since the data itself is not copyrighted.
+  correct: 1
+  explanation: >-
+    SDBS is free to use but forbids automated collection and asks users to cite it. It has no CAS
+    search, so you search by name or formula, and you should not redistribute its data.
