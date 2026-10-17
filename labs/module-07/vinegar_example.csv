@@ -1,0 +1,15 @@
+# Simulated with make_data.py (seed 7): 50.0 mL vinegar labelled 5 %, true 5.0 % w/v acetic acid,
+# 88 % of the CO2 escapes, scale noise 0.05 g. Columns: baking soda added (g), mass lost after 15 min (g).
+m_bicarb_g,mass_loss_g
+0.5,0.23
+1.0,0.48
+1.5,0.68
+2.0,0.88
+2.5,1.13
+3.0,1.33
+3.5,1.62
+4.0,1.68
+4.5,1.59
+5.0,1.58
+5.5,1.64
+6.0,1.63

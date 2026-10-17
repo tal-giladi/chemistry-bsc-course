@@ -1,0 +1,49 @@
+- id: q1
+  question: >-
+    A salt of an unknown metal ion M²⁺ has the configuration [Ar] 3d⁵. Which metal is it?
+  options:
+    - Iron
+    - Chromium
+    - Vanadium
+    - Manganese
+  correct: 3
+  explanation: >-
+    Add back the two electrons as 4s: [Ar] 3d⁵ 4s², which has 25 electrons, so manganese. Iron would give
+    [Ar] 3d⁶ as Fe²⁺; chromium's 2+ ion is [Ar] 3d⁴.
+- id: q2
+  question: >-
+    Nitrogen's first ionisation energy (14.53 eV) is higher than oxygen's (13.62 eV), although oxygen has more protons.
+    What explains this?
+  options:
+    - Oxygen's outer electron is in a shell farther from the nucleus than nitrogen's.
+    - Oxygen's fourth 2p electron shares an orbital and is pushed out by the repulsion.
+    - Nitrogen's outer electron is in a 2s orbital, which is lower in energy than 2p.
+    - Nitrogen has more neutrons, which hold the electrons more tightly.
+  correct: 1
+  explanation: >-
+    Both outer electrons are in 2p in the same shell. Oxygen's fourth 2p electron must pair with another in one
+    orbital, and the repulsion between them makes it easier to remove.
+- id: q3
+  question: >-
+    An element has successive ionisation energies of 6.1, 11.9, 50.9 and 67.3 eV. Which ion does it most likely form
+    in its salts?
+  options:
+    - A 2+ ion, because the large jump comes after the second electron.
+    - A 1+ ion, because the first ratio 11.9 / 6.1 is close to 2.
+    - A 3+ ion, because the third value is the largest single number.
+    - A 4+ ion, because all four electrons can be removed with energy.
+  correct: 0
+  explanation: >-
+    The ratios are 2.0, 4.3 and 1.3. The big jump after the second electron means the third comes from the core,
+    so the element (calcium) forms M²⁺.
+- id: q4
+  question: >-
+    Which list puts the atoms in order of increasing size?
+  options:
+    - Cl, Na, K, Mg
+    - K, Na, Mg, Cl
+    - Na, Mg, Cl, K
+    - Cl, Mg, Na, K
+  correct: 3
+  explanation: >-
+    Across period 3, Z_eff rises and atoms shrink, so Cl < Mg < Na. Potassium adds a fourth shell and is the largest.

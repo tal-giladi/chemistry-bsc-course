@@ -1,0 +1,16 @@
+# Module 07 plan — Foundations of Chemistry A: Atoms, Bonds and Amounts
+
+Planning file, not imported. Written 2026-10-16/17. Technion: 01240117 Foundations of Chemistry A (lab part = S1). Depth: MIT OCW 5.111SC (Fall 2014), OpenStax Chemistry 2e.
+Simulations linked: `glassware` presets `weighing`, `dilution`, `parallax` (07.7); `gas-laws` presets `ideal`, `real` (07.6).
+Labs: `labs/module-07/` (numpy, matplotlib only; Python 3.14, pins in `labs/common/requirements.txt`).
+Module practical: lesson 07.7, a standard salt solution and a food-colour dilution series made at home, with a full uncertainty budget in Python and a lab report.
+
+| Lesson | Objectives (short) | Prerequisites | Hands-on | Sources to verify |
+|---|---|---|---|---|
+| 07.1 Atoms, isotopes and the mole | Read A, Z, N from a nuclide symbol; compute an atomic weight from isotope masses and abundances; convert mass, amount and number of particles; predict an M/M+2 isotope pattern | 01.2, 05.1 | `lesson01_isotopes.py`: atomic weights of Cl, Mg, Cu, Br from NIST data; Cl2 and CH2Br2 isotope patterns | NIST isotopic compositions; CIAAW 2024; CODATA N_A; OpenStax 2.3, 3.1 |
+| 07.2 Electron configuration and periodic trends | Write ground-state configurations to Kr incl. Cr/Cu; explain IE1 trends and the two dips with shielding and Zeff; find the core jump in successive IEs | 07.1, 04.3, 04.5 | `lesson02_ionisation.py`: plot IE1 for Z = 1–36 from NIST ASD, locate dips, find group from IE jumps | NIST ASD ionisation energies; OpenStax 6.4, 6.5 |
+| 07.3 Ionic and covalent bonding, Lewis structures | Classify bonds by electronegativity difference; draw Lewis structures with formal charges; pick the best resonance form; recognise octet exceptions | 07.2, 04.3 | Pencil set of 10 structures + check on PubChem 3D | OpenStax 7.1–7.5; PubChem |
+| 07.4 VSEPR, polarity and intermolecular forces | Predict electron-domain and molecular shapes; decide whether a molecule is polar; rank boiling points by IMF | 07.3, 04.3 | `lesson04_boiling.py`: boiling points of group 14–17 hydrides; anomaly size for H-bonding | OpenStax 7.6, 10.1; NIST WebBook (CH4, H2O, H2S, HF) |
+| 07.5 Stoichiometry and limiting reagents | Balance equations; find the limiting reagent and theoretical yield; percent yield; home vinegar–baking soda mass-loss series with a break-point fit | 07.1, 03.1, 01.5 | Home experiment + `lesson05_limiting.py` (two-line fit) | OpenStax 4.1, 4.3, 4.4; PubChem acetic acid, sodium bicarbonate |
+| 07.6 Gases: ideal and real | Use PV = nRT with consistent units; partial pressures; compute Z with van der Waals and compare with NIST data for CO2 at 320 K | 07.5, 02.5 | Simulation `gas-laws` (ideal, real) + `lesson06_real_gas.py` | CODATA R; LibreTexts vdW table; NIST WebBook fluid CO2 320 K; OpenStax 9.2, 9.3, 9.5, 9.6 |
+| 07.7 Lab: weighing, glassware and making solutions (practical) | Weigh by difference; choose glassware by tolerance; prepare a standard and a serial dilution; build an uncertainty budget | 07.5, 01.4, 01.5, 05.3 | Simulation `glassware` (weighing, dilution, parallax) + home salt standard and food-colour dilution series + `lesson07_solutions.py` + lab report | ASTM E288/E969/E287 tolerances (via vendor pages); Harvey 2.4, 2.5; OpenStax 3.3 |

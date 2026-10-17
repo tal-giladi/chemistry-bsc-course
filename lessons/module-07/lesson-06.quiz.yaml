@@ -1,0 +1,50 @@
+- id: q1
+  question: >-
+    A student calculates the pressure of 0.500 mol of gas in 10.0 L at 27 °C with
+    P = nRT/V and T = 27, and gets 0.112 bar. What should the answer be?
+  options:
+    - 0.112 bar, because the Celsius and kelvin scales have the same step size.
+    - 0.0112 bar, because the volume should be converted to cubic metres first.
+    - 12.5 bar, because R must be used in J/(mol K) with the volume in litres.
+    - 1.25 bar, because T must be 300.15 K, about eleven times larger.
+  correct: 3
+  explanation: >-
+    The gas law needs absolute temperature. P = 0.500 × 0.083145 × 300.15 / 10.0 = 1.25 bar. Only temperature
+    differences are the same in both scales, not temperatures themselves.
+- id: q2
+  question: >-
+    At 50 bar and 320 K the compressibility factor of CO₂ is 0.77. What does this tell you?
+  options:
+    - Attractions between CO₂ molecules dominate, so the gas occupies less volume than the ideal law predicts.
+    - The CO₂ molecules take up 23 % of the container, so the gas is harder to compress than an ideal gas.
+    - The gas is 77 % ideal, so 23 % of the CO₂ has condensed into liquid.
+    - The pressure gauge reads 23 % too low, because real gases hit the walls less often.
+  correct: 0
+  explanation: >-
+    Z = PVm/RT below 1 means the real molar volume is smaller than RT/P. Attractions pull molecules together;
+    molecular size alone would push Z above 1. At 320 K CO₂ is above its critical temperature and cannot condense.
+- id: q3
+  question: >-
+    A scuba tank is filled with a nitrogen–oxygen mixture that is 32 % O₂ by moles. A dive plan limits the oxygen
+    partial pressure to 1.4 bar. What is the greatest total pressure the diver may breathe it at?
+  options:
+    - 1.4 bar, because the total pressure must stay at the oxygen limit.
+    - 3.2 bar, because each 10 % of oxygen allows one more bar.
+    - 4.4 bar, because the total pressure is the oxygen limit divided by its mole fraction.
+    - 0.45 bar, because the oxygen limit is multiplied by its mole fraction.
+  correct: 2
+  explanation: >-
+    Dalton's law gives p(O₂) = x(O₂) P, so P = 1.4 / 0.32 = 4.4 bar, about 34 m of sea water.
+- id: q4
+  question: >-
+    In the van der Waals equation, helium has a = 0.0346 and water has a = 5.537 bar L² mol⁻². What is the best
+    explanation for the difference?
+  options:
+    - Water molecules are much larger than helium atoms, so they exclude more volume.
+    - Water is polar and hydrogen-bonds, so its molecules attract each other far more strongly.
+    - Helium moves faster at the same temperature, so it hits the walls with more force.
+    - Helium is a single atom, so it has no electrons that can create attractions.
+  correct: 1
+  explanation: >-
+    The constant a measures intermolecular attraction. Water's hydrogen bonds and dipole make it large; helium
+    has only very weak dispersion forces. Excluded volume is the job of b, not a.

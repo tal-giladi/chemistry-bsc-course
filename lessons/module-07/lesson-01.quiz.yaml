@@ -1,0 +1,50 @@
+- id: q1
+  question: >-
+    A mass spectrum of an unknown shows peaks at 112 and 114 with heights 100 and 33, and nothing at 116.
+    What is the most likely explanation?
+  options:
+    - The molecule contains two bromine atoms.
+    - The molecule contains one chlorine atom.
+    - The molecule contains two chlorine atoms.
+    - The molecule contains one bromine atom.
+  correct: 1
+  explanation: >-
+    One Cl gives M and M+2 in the ratio 0.7576 to 0.2424, about 100 to 32. Two Cl atoms would add an M+4 peak,
+    and bromine gives M and M+2 of nearly equal height.
+- id: q2
+  question: >-
+    Gallium has two isotopes, ⁶⁹Ga (68.926) and ⁷¹Ga (70.925), and an atomic weight of 69.723. Which isotope is more
+    abundant, and by roughly how much?
+  options:
+    - ⁷¹Ga, at about 60%, because the atomic weight is above 69.
+    - The two are equal, because the atomic weight is near the middle.
+    - ⁷¹Ga, at about 80%, because heavier isotopes are more stable.
+    - ⁶⁹Ga, at about 60%, because the atomic weight is closer to 68.926.
+  correct: 3
+  explanation: >-
+    Solve 68.926x + 70.925(1 − x) = 69.723, which gives x = 0.60 for ⁶⁹Ga. The midpoint is 69.926, and the atomic
+    weight lies below it, closer to the lighter isotope.
+- id: q3
+  question: >-
+    You weigh 9.0 g of water (M = 18.0 g/mol). How many hydrogen atoms does the sample contain?
+  options:
+    - 3.0 × 10²³
+    - 6.0 × 10²³
+    - 1.1 × 10²⁵
+    - 1.5 × 10²³
+  correct: 1
+  explanation: >-
+    9.0 g / 18.0 g/mol = 0.50 mol of H₂O, which is 3.0 × 10²³ molecules. Each molecule has two H atoms, so there are
+    6.0 × 10²³ H atoms. Stopping at the molecules gives 3.0 × 10²³.
+- id: q4
+  question: >-
+    Why does IUPAC give the atomic weight of chlorine as 35.45 and not with six digits, like the mass of ³⁵Cl?
+  options:
+    - Because ³⁵Cl is radioactive, so its mass slowly changes over time.
+    - Because the mass of a single isotope can only be measured to four digits.
+    - Because the isotope mix varies a little between natural sources.
+    - Because chlorine is a gas and gas masses are always rounded to two decimals.
+  correct: 2
+  explanation: >-
+    Isotope masses are known very precisely, but the abundances differ slightly from one source to another
+    (chlorine spans 35.446 to 35.457). The rounded value is right for any normal sample.

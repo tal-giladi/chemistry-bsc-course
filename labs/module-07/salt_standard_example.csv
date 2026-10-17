@@ -1,0 +1,9 @@
+# Example measurements for the Lesson 07.7 salt standard (illustrative values, not a real run).
+# Masses from a 0.1 g pocket scale; each mass is a difference of two readings, so u = 0.1/sqrt(6) = 0.041 g.
+# Purity: an assumption for non-iodised table salt (check your label); density: Engineering ToolBox table, 5 % NaCl at 20 C.
+quantity,value,u,unit
+m_salt,5.03,0.041,g
+m_solution,100.12,0.041,g
+purity,0.995,0.003,1
+density,1.034,0.0015,g/mL
+M_NaCl,58.44,0.001,g/mol

@@ -1,0 +1,49 @@
+- id: q1
+  question: >-
+    Two Lewis structures for the cyanate ion, OCN⁻, both satisfy every octet. In one, O carries −1 and the other atoms 0.
+    In the other, N carries −1 and the other atoms 0. Which is the better structure, and why?
+  options:
+    - The one with −1 on N, because nitrogen has fewer protons than oxygen.
+    - Both are equal, because the total formal charge is −1 in each.
+    - The one with −1 on O, because oxygen is the more electronegative atom.
+    - Neither, because cyanate must have a formal charge on carbon.
+  correct: 2
+  explanation: >-
+    When structures have equally small formal charges, the better one puts the negative charge on the more
+    electronegative atom. Oxygen (3.44) is more electronegative than nitrogen (3.04).
+- id: q2
+  question: >-
+    X-ray data show that all three C–O bonds in the carbonate ion have the same length. What does this tell you?
+  options:
+    - The ion is a resonance hybrid, with each bond between a single and a double bond.
+    - The double bond moves quickly between the three oxygens many times a second.
+    - All three bonds are double bonds, giving carbon twelve electrons.
+    - All three bonds are single bonds, because carbon has no lone pairs.
+  correct: 0
+  explanation: >-
+    No single Lewis structure has three equal bonds. The real ion is the average of three resonance structures, each
+    C–O with bond order 4/3; the electrons do not flip between structures.
+- id: q3
+  question: >-
+    Using Pauling electronegativities (K 0.82, Br 2.96, C 2.55, S 2.58, O 3.44, H 2.20), which bond is best described as
+    non-polar covalent?
+  options:
+    - K–Br
+    - O–H
+    - C–O
+    - C–S
+  correct: 3
+  explanation: >-
+    C–S has a difference of only 0.03. O–H (1.24) and C–O (0.89) are polar covalent, and K–Br (2.14) is ionic.
+- id: q4
+  question: >-
+    A student draws the ammonium ion, NH₄⁺, with four N–H bonds and one lone pair on nitrogen. What is wrong?
+  options:
+    - Nothing; nitrogen always keeps one lone pair in its compounds.
+    - The structure has 10 electrons, but NH₄⁺ has only 8.
+    - Hydrogen needs a lone pair as well as its bond to nitrogen.
+    - Nitrogen can form only three bonds, so one H must be an ion.
+  correct: 1
+  explanation: >-
+    Valence electrons: 5 + 4 − 1 = 8, exactly four bonding pairs. The lone pair of NH₃ became the fourth N–H bond
+    when H⁺ was added.

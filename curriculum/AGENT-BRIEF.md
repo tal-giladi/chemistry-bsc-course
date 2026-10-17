@@ -33,7 +33,8 @@ Verify constants (CODATA via NIST), safety data (PubChem/GHS), regulations, soft
 - Do not touch other modules' files, `_sidebar.md`, `glossary.md`, `README.md`, `BUILD_PROGRESS.md`, `templates/`, `labs/common/`, `simulations/` or `scripts/`. Template needs → `curriculum/template-inbox/<name>.md`.
 
 ## Checkpointing (sessions may crash)
-Write lessons one at a time, fully (md + quiz + instructor) before the next. After each lesson append `lesson-MM done` to `curriculum/status/module-NN.log`. On start, read that log and skip lessons already done (never rewrite a finished lesson).
+Write lessons one at a time, fully (md + quiz + instructor) before the next. After each lesson append `lesson-MM done` to `curriculum/status/module-NN.log`. On start, read that log and skip lessons already done (never rewrite a finished lesson). A lesson file that exists but is not in the log is partial: read it and complete it (or rewrite it).
+Write each lesson in two or three tool calls (e.g. Write the first sections, then append the rest), never one giant write — very long single writes stall the session.
 
 ## Finish
 Run `py scripts/check.py NN` from the repo root and fix every ERROR except missing-simulation links; fix quiz warnings. Append `module done` to the status log. Report back in under 120 words: files created, check result, simulation presets linked, anything open.

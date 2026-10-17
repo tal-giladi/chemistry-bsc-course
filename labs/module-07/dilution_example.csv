@@ -1,0 +1,8 @@
+# Example serial dilution of food colouring for Lesson 07.7 (illustrative values, not a real run).
+# Each step: aliquot of the previous solution and water, both weighed by difference on a 0.1 g scale (u = 0.041 g).
+step,m_aliquot_g,m_water_g
+1,10.1,10.0
+2,9.9,10.1
+3,10.0,10.0
+4,10.2,9.9
+5,10.0,10.1

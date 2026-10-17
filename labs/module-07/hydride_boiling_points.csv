@@ -1,0 +1,18 @@
+# Normal boiling points (1 atm) of main-group hydrides, degrees Celsius.
+# Source: PubChem compound pages, "Boiling Point" section (values as listed there; CID given per row), retrieved 2026-10-17.
+# SnH4 and H2Te have no boiling point in PubChem and are left out.
+formula,group,period,bp_C,pubchem_cid
+CH4,14,2,-161.5,297
+SiH4,14,3,-112,23953
+GeH4,14,4,-88.5,23984
+NH3,15,2,-33.35,222
+PH3,15,3,-87.75,24404
+AsH3,15,4,-62.5,23969
+SbH3,15,5,-17,9359
+H2O,16,2,99.974,962
+H2S,16,3,-60.33,402
+H2Se,16,4,-41.3,533
+HF,17,2,19.51,14917
+HCl,17,3,-85.05,313
+HBr,17,4,-66.38,260
+HI,17,5,-35.38,24841

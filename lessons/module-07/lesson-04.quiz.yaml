@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    Sulfur dioxide, SO₂, has two S–O bonds and one lone pair on sulfur. What shape does VSEPR predict, and is
+    the molecule polar?
+  options:
+    - Linear like CO₂, so the two bond dipoles cancel and it is non-polar.
+    - Bent, with an angle a little under 120°, so the bond dipoles do not cancel and it is polar.
+    - Trigonal planar, because it has three domains, so it is non-polar by symmetry.
+    - Bent, with an angle near 104.5° like water, but non-polar because S and O are similar.
+  correct: 1
+  explanation: >-
+    Two bonds plus one lone pair are three domains, so the electron-domain geometry is trigonal planar and the
+    atoms form a bent shape. The bent shape leaves a net dipole (about 1.6 D).
+- id: q2
+  question: >-
+    Carbon tetrachloride, CCl₄, has four polar C–Cl bonds, yet its dipole moment is zero. Chloroform, CHCl₃, has
+    a dipole moment of about 1 D. What explains the difference?
+  options:
+    - The C–Cl bonds in CCl₄ are non-polar because carbon shares its electrons equally with chlorine.
+    - Chloroform has a lone pair on carbon that creates the dipole moment.
+    - In the perfect tetrahedron of CCl₄ the four bond dipoles cancel; replacing one Cl by H breaks that symmetry.
+    - CCl₄ is linear, so its dipoles cancel, while CHCl₃ is tetrahedral.
+  correct: 2
+  explanation: >-
+    Polarity is the vector sum of bond dipoles. Four equal dipoles at tetrahedral angles add to zero; with one
+    C–H in place of a C–Cl they no longer balance.
+- id: q3
+  question: >-
+    Ethanol (CH₃CH₂OH, 46 g/mol) boils at 78 °C, while dimethyl ether (CH₃OCH₃, same formula) boils at −24 °C.
+    What is the main reason?
+  options:
+    - Ethanol has H bonded to O, so its molecules form hydrogen bonds with each other; the ether has no O–H.
+    - Ethanol has more electrons than dimethyl ether, so its dispersion forces are stronger.
+    - Dimethyl ether is non-polar, so it has only dispersion forces.
+    - Boiling ethanol must break its O–H bonds, which costs more energy than breaking C–O bonds.
+  correct: 0
+  explanation: >-
+    The two have the same formula and the same number of electrons. Only ethanol has an O–H hydrogen that can
+    hydrogen-bond to a neighbour's lone pair. The ether is polar but cannot donate a hydrogen bond.
+- id: q4
+  question: >-
+    A student ranks boiling points by polarity only and predicts that HCl (polar, 18 electrons) boils higher than
+    I₂ (non-polar, 106 electrons). Iodine is in fact a solid that boils at 184 °C. What did the student miss?
+  options:
+    - I₂ forms hydrogen bonds through its lone pairs, which HCl cannot do.
+    - I₂ molecules are held by covalent bonds between molecules, which are stronger than any IMF.
+    - HCl breaks apart into ions in the gas, so it has no intermolecular forces at all.
+    - Dispersion grows with the number of electrons, and for I₂ it outweighs HCl's dipole–dipole forces.
+  correct: 3
+  explanation: >-
+    Large, polarisable electron clouds give strong dispersion forces. When molecules differ greatly in size,
+    dispersion can beat dipole–dipole attraction; polarity decides only between molecules of similar size.
+- id: q5
+  question: >-
+    Xenon tetrafluoride, XeF₄, has four Xe–F bonds and two lone pairs on xenon. Where do the lone pairs go, and
+    what is the shape?
+  options:
+    - Next to each other at 90°, giving a seesaw shape.
+    - On opposite sides of xenon, giving a square planar shape.
+    - In the equatorial plane, giving a T shape with one F missing.
+    - On the same side of the molecule, giving a square pyramidal shape.
+  correct: 1
+  explanation: >-
+    Six domains form an octahedron. The two lone pairs, which repel most, sit 180° apart, leaving the four F atoms
+    in a square plane around Xe. The molecule is non-polar.

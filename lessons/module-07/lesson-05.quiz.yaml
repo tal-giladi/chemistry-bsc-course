@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    For the reaction N₂ + 3 H₂ → 2 NH₃ you have 2.0 mol of N₂ and 4.5 mol of H₂. Which reagent is limiting,
+    and how much NH₃ can form?
+  options:
+    - N₂ is limiting, because there is less of it, so 4.0 mol of NH₃ can form.
+    - H₂ is limiting, because 4.5/3 = 1.5 is smaller than 2.0/1, so 3.0 mol of NH₃ can form.
+    - H₂ is limiting, because 4.5/3 = 1.5 is smaller than 2.0/1, so 1.5 mol of NH₃ can form.
+    - Neither is limiting, because 2.0 + 4.5 mol is more than the 4 mol the equation needs.
+  correct: 1
+  explanation: >-
+    Divide each amount by its coefficient: N₂ 2.0, H₂ 1.5, so H₂ runs out first. 4.5 mol H₂ × (2 NH₃ / 3 H₂)
+    = 3.0 mol NH₃. Comparing raw moles points to N₂ and is wrong.
+- id: q2
+  question: >-
+    A student reports a percent yield of 112 % for a product they filtered and weighed straight away. What is the
+    most likely explanation?
+  options:
+    - The reaction made more product than the limiting reagent allows, because the excess reagent also reacted.
+    - The student used the wrong molar mass for the limiting reagent, which always raises the yield.
+    - The product is still wet with solvent or contains impurities, so it weighs more than pure product would.
+    - Yields above 100 % are normal when one reagent is in large excess.
+  correct: 2
+  explanation: >-
+    The limiting reagent caps the amount of product, so more than 100 % is impossible for pure, dry product.
+    Dry to constant mass and check purity before trusting the yield.
+- id: q3
+  question: >-
+    In the vinegar experiment, about 12 % of the CO₂ stays dissolved in every cup. How does this affect the
+    acid concentration you get from the break point and from the plateau?
+  options:
+    - Both are about 12 % too low, because every mass loss is 12 % too small.
+    - The break point is 12 % too low, but the plateau is unaffected because the acid is in excess there.
+    - Neither is affected, because dissolved CO₂ still counts as reacted acid.
+    - The plateau is about 12 % too low, but the break point barely moves because it marks when the acid runs out.
+  correct: 3
+  explanation: >-
+    The same fraction is lost from every point, which lowers both lines but not where they meet. The plateau
+    height itself is used directly, so it carries the full 12 % error.
+- id: q4
+  question: >-
+    You need to neutralise 25.0 mL of 0.200 mol/L HCl with sodium carbonate, Na₂CO₃ (105.99 g/mol):
+    Na₂CO₃ + 2 HCl → 2 NaCl + H₂O + CO₂. What mass of Na₂CO₃ do you need?
+  options:
+    - 0.265 g, because 5.00 mmol of HCl needs 2.50 mmol of Na₂CO₃.
+    - 0.530 g, because 5.00 mmol of HCl needs 5.00 mmol of Na₂CO₃.
+    - 265 g, because 0.200 × 25.0 = 5.00 mol of HCl.
+    - 1.06 g, because 5.00 mmol of HCl needs 10.0 mmol of Na₂CO₃.
+  correct: 0
+  explanation: >-
+    n(HCl) = 0.200 mol/L × 0.0250 L = 5.00 mmol. The ratio is 1 Na₂CO₃ per 2 HCl, so 2.50 mmol × 105.99 g/mol
+    = 0.265 g. Forgetting mL → L gives a thousandfold error.
