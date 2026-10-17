@@ -1,0 +1,63 @@
+- id: q1
+  question: >-
+    Two bottles are both 0.10 M: one hydrochloric acid, one acetic acid (Ka = 1.8e-5). What are their
+    approximate pH values?
+  options:
+    - HCl pH 1.0 and acetic acid pH 2.9, because acetic acid ionises only partly.
+    - Both pH 1.0, because they have the same concentration.
+    - HCl pH 1.0 and acetic acid pH 4.7, because the pH of a weak acid equals its pKa.
+    - HCl pH 2.9 and acetic acid pH 1.0, because acetic acid has more hydrogen atoms.
+  correct: 0
+  explanation: >-
+    HCl is strong, so [H3O+] = 0.10 M and pH = 1.0. For acetic acid x = sqrt(1.8e-5 x 0.10) = 1.3e-3 M,
+    pH 2.9. pH = pKa only for a buffer with equal acid and base.
+- id: q2
+  question: >-
+    You dilute 5 % vinegar ten times with water. What happens to the pH and to the fraction of acetic
+    acid that is ionised?
+  options:
+    - The pH rises by 1.0 and the fraction ionised stays the same.
+    - The pH rises by about 0.5 and the fraction ionised increases.
+    - The pH stays the same, because Ka does not change on dilution.
+    - The pH falls by about 0.5, because more molecules ionise.
+  correct: 1
+  explanation: >-
+    [H3O+] is about sqrt(Ka c), so a tenfold dilution lowers it by sqrt(10) = 3.2, a rise of 0.5 pH units
+    (2.41 to 2.92). The fraction ionised, about sqrt(Ka/c), grows from 0.46 % to 1.5 %.
+- id: q3
+  question: >-
+    A cup holds 4.0 mmol acetic acid and 2.0 mmol sodium acetate (pKa 4.74). What is the pH, and how does
+    it respond to a few drops of extra acid?
+  options:
+    - pH 4.74, and it falls sharply with extra acid because there is too little acetate.
+    - pH 5.04, and it barely changes because the buffer absorbs the added acid.
+    - pH 2.4, as for plain vinegar, because acetate does not affect the pH.
+    - pH 4.44, and it barely changes because the acetate takes up the added protons.
+  correct: 3
+  explanation: >-
+    pH = 4.74 + log10(2.0/4.0) = 4.74 - 0.30 = 4.44. With both forms present in similar amounts, added
+    H3O+ is converted to acetic acid by the acetate, so the pH moves very little.
+- id: q4
+  question: >-
+    In red-cabbage indicator, a test liquid turns blue-green. A friend says the liquid must have a pH of
+    exactly 9. What is the best reply?
+  options:
+    - Right, because each cabbage colour corresponds to one exact pH value.
+    - Wrong, because blue-green means the liquid is acidic.
+    - It is basic, roughly pH 8-11; cabbage brackets the pH to about one unit, not exactly.
+    - It cannot be read, because cabbage only works for acids.
+  correct: 2
+  explanation: >-
+    Anthocyanins change colour over ranges of about pKa plus or minus 1, and the shade depends on the
+    extract. Cabbage tells you basic, around 8-11; a pH meter is needed for a precise value.
+- id: q5
+  question: >-
+    A solution at 25 C has [OH-] = 1.0e-3 M. What is its pH?
+  options:
+    - 3.00
+    - 11.00
+    - 7.00
+    - 14.00
+  correct: 1
+  explanation: >-
+    pOH = -log10(1.0e-3) = 3.00, and pH = 14.00 - 3.00 = 11.00. Reporting 3.00 confuses pOH with pH.

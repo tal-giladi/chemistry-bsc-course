@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    You dissolve a salt in 100 g of water in a foam cup and the temperature rises from 21.0 C to
+    24.0 C. What is the sign of q for the dissolving salt, and is the process exothermic?
+  options:
+    - q is positive and the process is endothermic, because the water gained heat.
+    - q is negative and the process is exothermic, because the salt gave heat to the water.
+    - q is positive and the process is exothermic, because the temperature went up.
+    - q is zero, because the cup is insulated and no heat leaves it.
+  correct: 1
+  explanation: >-
+    The water (surroundings) gained about 100 x 4.184 x 3.0 = 1.26 kJ, so the system lost that heat:
+    q < 0, exothermic. The insulation keeps the heat in the cup; it does not stop it moving from salt to water.
+- id: q2
+  question: >-
+    Using Delta_f H values CO2(g) -393.5, H2O(l) -285.8 and C3H8(g) -103.8 kJ/mol, what is
+    Delta_r H for C3H8 + 5 O2 -> 3 CO2 + 4 H2O(l)?
+  options:
+    - About -575.5 kJ/mol, from ignoring the coefficients 3 and 4.
+    - About -2427.6 kJ/mol, from adding the propane value instead of subtracting it.
+    - About +2220 kJ/mol, from subtracting products from reactants.
+    - About -2220 kJ/mol, from products minus reactants with the coefficients.
+  correct: 3
+  explanation: >-
+    [3(-393.5) + 4(-285.8)] - [-103.8] = -2323.7 + 103.8 = -2219.9 kJ/mol. Coefficients multiply
+    each value, O2 is zero, and products minus reactants gives the right sign for a combustion.
+- id: q3
+  question: >-
+    Per gram, methane releases 55.5 kJ and ethanol 29.7 kJ when burnt to CO2 and liquid water, even
+    though ethanol releases more per mole. What is the best explanation?
+  options:
+    - Ethanol already contains oxygen and has a larger molar mass, so each gram holds less fuel to oxidise.
+    - Ethanol is a liquid, and liquids always release less heat than gases per gram.
+    - Methane forms more CO2 per mole than ethanol does, so it releases more heat.
+    - The table values for ethanol include evaporation of the water, which lowers them.
+  correct: 0
+  explanation: >-
+    Per mole ethanol gives -1367 kJ, but it weighs 46 g/mol and is partly oxidised already (one O atom).
+    Methane is 16 g/mol of pure C and H. Ethanol actually forms 2 CO2 per mole, methane only 1.
+- id: q4
+  question: >-
+    You know C + O2 -> CO2 (-393.5 kJ) and CO + 1/2 O2 -> CO2 (-283.0 kJ). What is Delta H for
+    C + 1/2 O2 -> CO, and which law did you use?
+  options:
+    - -676.5 kJ, by adding the two steps, from the first law.
+    - +110.5 kJ, by subtracting the first step from the second, from Hess's law.
+    - -110.5 kJ, by subtracting the second step from the first, from Hess's law.
+    - -283.0 kJ, because CO formation equals CO combustion, from the state-function rule.
+  correct: 2
+  explanation: >-
+    Write the first step and the reverse of the second: C + O2 -> CO2 then CO2 -> CO + 1/2 O2 (+283.0).
+    Adding gives C + 1/2 O2 -> CO with -393.5 + 283.0 = -110.5 kJ. That is Hess's law.
+- id: q5
+  question: >-
+    Dissolving NaHCO3 has Delta H = +19.6 kJ/mol. You dissolve 0.10 mol in about 200 g of water.
+    About what temperature change do you expect (c = 4.18 J/(g K), cup ignored)?
+  options:
+    - A rise of about 2.3 K.
+    - A drop of about 0.023 K.
+    - A drop of about 4.7 K.
+    - A drop of about 2.3 K.
+  correct: 3
+  explanation: >-
+    The system absorbs 0.10 x 19 600 = 1960 J from the water, so Delta T = -1960 / (200 x 4.18) = -2.3 K.
+    Endothermic means the water cools; forgetting the kJ to J conversion gives the 0.023 K answer.

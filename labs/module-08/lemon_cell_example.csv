@@ -1,0 +1,25 @@
+electrolyte,R_ohm,V_V
+lemon,100,0.045
+lemon,220,0.104
+lemon,470,0.195
+lemon,1000,0.328
+lemon,2200,0.512
+lemon,4700,0.673
+lemon,10000,0.778
+lemon,open,0.931
+vinegar,100,0.035
+vinegar,220,0.072
+vinegar,470,0.140
+vinegar,1000,0.252
+vinegar,2200,0.415
+vinegar,4700,0.592
+vinegar,10000,0.714
+vinegar,open,0.888
+salt water,100,0.079
+salt water,220,0.160
+salt water,470,0.264
+salt water,1000,0.417
+salt water,2200,0.551
+salt water,4700,0.648
+salt water,10000,0.718
+salt water,open,0.782

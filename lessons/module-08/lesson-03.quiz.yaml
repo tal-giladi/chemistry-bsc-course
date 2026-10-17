@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    For CO + H2O <=> CO2 + H2 at 1000 K, K = 0.91. A reactor holds CO and H2O at 2 bar each, CO2 at
+    1 bar and H2 at 1 bar. What happens next?
+  options:
+    - Nothing, because the mixture already contains all four gases.
+    - The reaction runs backward, because Q is larger than K.
+    - The reaction runs forward, because Q = 0.25 is smaller than K.
+    - The reaction runs backward, because K is smaller than 1.
+  correct: 2
+  explanation: >-
+    Q = (1 x 1)/(2 x 2) = 0.25 < 0.91, so there is too little product and the reaction runs forward
+    until Q reaches K. K below 1 alone says nothing about direction; you must compare Q with K.
+- id: q2
+  question: >-
+    You solve an ICE table for a weak equilibrium with the small-x shortcut and get x = 0.012 mol/L,
+    where x was dropped next to an initial 0.10 mol/L. What should you do?
+  options:
+    - Accept it, because any x below 0.1 mol/L is small enough.
+    - Accept it, because the shortcut is exact when K is below 1.
+    - Reject the whole ICE table and measure the composition instead.
+    - Solve exactly or numerically, because x is 12 % of 0.10, above the 5 % limit.
+  correct: 3
+  explanation: >-
+    The check compares x with the number it was dropped from: 0.012/0.10 = 12 %, so the error is too
+    large. The quadratic formula or a root finder gives the right answer from the same ICE table.
+- id: q3
+  question: >-
+    N2O4 <=> 2 NO2 is endothermic. A sealed flask of the mixture is moved from an ice bath into hot
+    water. What happens to K and to the colour (NO2 is brown, N2O4 colourless)?
+  options:
+    - K increases and the gas turns darker brown.
+    - K stays the same, but the gas turns darker because the pressure rises.
+    - K decreases and the gas turns paler.
+    - K stays the same and the colour does not change, because the flask is sealed.
+  correct: 0
+  explanation: >-
+    Only temperature changes K. Heating favours the endothermic direction, so K rises (about 0.04 at
+    0 C to about 28 at 100 C) and more brown NO2 forms. Sealing the flask does not stop the shift.
+- id: q4
+  question: >-
+    Which change raises the equilibrium conversion of CO in the water-gas shift
+    CO + H2O <=> CO2 + H2 (exothermic, 2 moles of gas on each side)?
+  options:
+    - Doubling the total pressure by compressing the gas.
+    - Feeding more steam per mole of CO.
+    - Adding a better catalyst to the reactor.
+    - Raising the reactor temperature by 200 K.
+  correct: 1
+  explanation: >-
+    More steam lowers Q, so the reaction runs further forward (49 % to 74 % for 1:1 to 1:3 at 1000 K).
+    Pressure cancels with equal gas moles, a catalyst does not change K, and heating lowers K here.
+- id: q5
+  question: >-
+    A reaction has K = 2.0 at 300 K and K = 8.0 at 350 K. What does the van 't Hoff equation say about
+    its Delta H standard?
+  options:
+    - It is negative, about -24 kJ/mol, because K changes with temperature.
+    - It is zero, because K is greater than 1 at both temperatures.
+    - It is positive, about +24 kJ/mol, because K rises on heating.
+    - It is positive, about +2.4 kJ/mol, from ln 4 divided by the temperature change.
+  correct: 2
+  explanation: >-
+    ln(8/2) = -(Delta H/R)(1/350 - 1/300), so Delta H = 8.314 x 1.386 / 4.76e-4 = 24 kJ/mol. K rising
+    with temperature always means an endothermic reaction.

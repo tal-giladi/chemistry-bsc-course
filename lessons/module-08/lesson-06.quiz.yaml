@@ -1,0 +1,64 @@
+- id: q1
+  question: >-
+    You build a cell from Ag+/Ag (E = +0.80 V) and Zn2+/Zn (E = -0.76 V). A classmate writes
+    E cell = 2 x 0.80 - (-0.76) = 2.36 V, because two Ag+ are needed per Zn. What is the right value?
+  options:
+    - 2.36 V, because the silver half-reaction is doubled.
+    - 0.04 V, because the two potentials nearly cancel.
+    - 1.56 V, because potentials are not multiplied by coefficients.
+    - 0.84 V, from the cathode potential plus the anode potential.
+  correct: 2
+  explanation: >-
+    E is energy per charge, so doubling the half-reaction does not change it. E cell = E cathode - E anode
+    = 0.80 - (-0.76) = 1.56 V. Silver is reduced (cathode), zinc oxidised (anode).
+- id: q2
+  question: >-
+    A Daniell cell (E standard = 1.10 V, n = 2) is run until [Zn2+] = 1.0 M and [Cu2+] = 0.0010 M.
+    About what voltage does it give at 25 C?
+  options:
+    - About 1.19 V, because the ratio adds 89 mV.
+    - About 0.92 V, because each factor of 10 removes 59 mV.
+    - About 1.10 V, because the voltage does not depend on concentration.
+    - About 1.01 V, because Q = 1000 removes 3 x 29.6 mV.
+  correct: 3
+  explanation: >-
+    Q = [Zn2+]/[Cu2+] = 1000, log Q = 3, so E = 1.10 - (0.05916/2) x 3 = 1.10 - 0.089 = 1.01 V. With n = 2,
+    each factor of 10 costs 29.6 mV, not 59 mV.
+- id: q3
+  question: >-
+    A zinc nail and a copper wire in a lemon read 0.93 V. Which statement best explains the voltage?
+  options:
+    - Zinc is oxidised and H+ from the acid is reduced on the copper, with Nernst corrections for the lemon.
+    - Zinc is oxidised and Cu2+ from the lemon is reduced, giving the Daniell value minus losses.
+    - Copper is oxidised and zinc ions are reduced, because copper is the positive terminal.
+    - The voltage comes from the juice's acidity alone, so any two nails of the same metal would work.
+  correct: 0
+  explanation: >-
+    A lemon has no Cu2+. The cell reaction is Zn + 2 H+ -> Zn2+ + H2 (E standard 0.76 V); low [Zn2+] and
+    H2 and pH about 2-3 raise it to about 0.9 V. Two identical electrodes would give almost nothing.
+- id: q4
+  question: >-
+    A cell reaction has E standard = +0.10 V with n = 1 at 25 C. What can you say about Delta G standard
+    and K?
+  options:
+    - Delta G standard is +9.6 kJ/mol and K is about 0.02.
+    - Delta G standard is -9.6 kJ/mol and K is about 49.
+    - Delta G standard is -96 kJ/mol and K is about 10^17.
+    - Delta G standard is -0.10 kJ/mol and K is about 1.
+  correct: 1
+  explanation: >-
+    Delta G = -nFE = -1 x 96 485 x 0.10 = -9.6 kJ/mol; K = exp(9650/2479) = exp(3.9) = 49. A positive E
+    always means negative Delta G and K above 1.
+- id: q5
+  question: >-
+    Your lemon cell reads 0.92 V open-circuit but only 0.05 V across a 100 ohm resistor. What does that
+    tell you?
+  options:
+    - The multimeter is faulty, because a cell's voltage cannot change with the load.
+    - The cell has gone flat, because the reaction reached equilibrium in a second.
+    - The resistor is reducing the zinc, which lowers the cell potential.
+    - The cell has an internal resistance of roughly 2 kilohm, so most of the voltage is lost inside it.
+  correct: 3
+  explanation: >-
+    V = E R/(R + r): 0.05 = 0.92 x 100/(100 + r) gives r of about 1.7 kilohm. Remove the load and the
+    voltage returns, so the cell is not flat. Use open-circuit readings for E.

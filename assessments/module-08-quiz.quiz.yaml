@@ -1,0 +1,134 @@
+- id: q1
+  question: >-
+    A camping-stove maker must choose between ethanol (-1367 kJ/mol, 46 g/mol) and propane
+    (-2220 kJ/mol, 44 g/mol) for a stove whose weight matters. Which fuel gives more heat per gram, and
+    roughly how much?
+  options:
+    - Ethanol, about 50 kJ/g, because it releases more energy per mole of oxygen used.
+    - Propane, about 50 kJ/g, against about 30 kJ/g for ethanol.
+    - They are about equal, because their molar masses are nearly the same.
+    - Ethanol, about 30 kJ/g, against about 20 kJ/g for propane.
+  correct: 1
+  explanation: >-
+    2220/44.1 = 50.3 kJ/g and 1367/46.1 = 29.7 kJ/g. The molar masses are similar, but propane releases
+    far more per mole, partly because ethanol already contains an oxygen atom.
+- id: q2
+  question: >-
+    A pharmacist wants a cold pack and has two salts. Salt A dissolves with Delta H = +26 kJ/mol and
+    Delta S = +110 J/(mol K); salt B with Delta H = +40 kJ/mol and Delta S = +80 J/(mol K). Which will
+    actually dissolve and cool the pack at 25 C?
+  options:
+    - Salt B, because its larger Delta H means more cooling.
+    - Both, because every endothermic dissolving is driven by entropy.
+    - Salt A, because its Delta G is about -7 kJ/mol while B's is about +16 kJ/mol.
+    - Neither, because an endothermic process cannot be spontaneous.
+  correct: 2
+  explanation: >-
+    A: 26 - 298 x 0.110 = -6.8 kJ/mol, spontaneous. B: 40 - 298 x 0.080 = +16 kJ/mol, so it barely
+    dissolves under standard conditions. A large Delta H only helps if the entropy term can pay for it.
+- id: q3
+  question: >-
+    An engineer can either double the pressure or add excess steam to the water-gas shift
+    CO + H2O <=> CO2 + H2, which has 2 moles of gas on each side. To convert more CO, which should she
+    choose?
+  options:
+    - Add excess steam, because it lowers Q and pushes the reaction forward; pressure has no effect.
+    - Double the pressure, because compressing a gas mixture always favours the products.
+    - Either, because both raise K by the same factor.
+    - Neither, because only a catalyst can raise the conversion.
+  correct: 0
+  explanation: >-
+    With equal gas moles, pressure cancels from Q. Excess steam makes Q smaller than K, so more CO reacts.
+    Neither changes K; a catalyst only makes equilibrium arrive sooner.
+- id: q4
+  question: >-
+    A food lab measures the pH of a sauce at 3.0 and of a second batch at 4.0. A technician says the
+    second batch has 25 % less H3O+. What is the right comparison?
+  options:
+    - The second batch has 25 % less H3O+, because the pH rose by a quarter.
+    - The second batch has 1 mol/L less H3O+, because the pH rose by one unit.
+    - The second batch has more H3O+, because a higher pH means a higher concentration.
+    - The second batch has one tenth of the H3O+, because each pH unit is a factor of ten.
+  correct: 3
+  explanation: >-
+    pH is -log10[H3O+], so pH 3 is 1e-3 M and pH 4 is 1e-4 M: ten times less. The scale is logarithmic,
+    not linear, and a higher pH means less H3O+.
+- id: q5
+  question: >-
+    A cosmetics chemist needs a buffer at pH 5.0 and has acetic acid (pKa 4.74) and sodium acetate.
+    What ratio of acetate to acetic acid should she use?
+  options:
+    - 1 : 1, because a buffer always has equal amounts of acid and base.
+    - About 1.8 : 1, from 10 to the power (5.0 - 4.74).
+    - About 0.55 : 1, from 10 to the power (4.74 - 5.0).
+    - About 26 : 1, from (5.0 - 4.74) x 100.
+  correct: 1
+  explanation: >-
+    Henderson-Hasselbalch: 5.0 = 4.74 + log10([A-]/[HA]), so the ratio is 10^0.26 = 1.8. A pH above the
+    pKa needs more base than acid.
+- id: q6
+  question: >-
+    A breathalyser runs 2 Cr2O7^2- + 3 C2H5OH + 16 H+ -> 4 Cr3+ + 3 CH3COOH + 11 H2O. A student checks
+    that the atoms and charge balance, then labels dichromate the reducing agent. What is correct?
+  options:
+    - Dichromate is the reducing agent, because it loses oxygen atoms.
+    - Ethanol is the oxidising agent, because it gains an oxygen atom.
+    - Dichromate is the oxidising agent, because Cr goes from +6 to +3 and is reduced.
+    - Neither, because no oxidation numbers change in this reaction.
+  correct: 2
+  explanation: >-
+    Cr is +6 in dichromate and +3 in Cr3+: it gains electrons, so dichromate is reduced and is the
+    oxidising agent. Ethanol is oxidised to acetic acid and is the reducing agent.
+- id: q7
+  question: >-
+    A boat has steel (iron) fittings next to a zinc block. With E(Zn2+/Zn) = -0.76 V and
+    E(Fe2+/Fe) = -0.45 V, what happens in sea water, and why do boat builders add the zinc?
+  options:
+    - Zinc is oxidised and protects the iron, because zinc has the more negative reduction potential.
+    - Iron is oxidised faster, because the zinc pulls electrons away from it.
+    - Nothing happens, because both metals have negative reduction potentials.
+    - Zinc is reduced and plated onto the iron, which seals it from the water.
+  correct: 0
+  explanation: >-
+    In the Zn-Fe cell, E cell = -0.45 - (-0.76) = +0.31 V with zinc as the anode. Zinc corrodes instead of
+    the iron: a sacrificial anode, the same reason nails are galvanised.
+- id: q8
+  question: >-
+    A pH electrode follows the Nernst equation with 59 mV per pH unit at 25 C, and its voltage rises as
+    the pH falls. It reads 177 mV more positive in a sample than in a pH 7.00 buffer. What is the pH?
+  options:
+    - pH 10.0, because the voltage rose by three units.
+    - pH 6.82, because 177 mV is 0.177 pH units.
+    - pH 4.0, because 177/59 = 3 pH units below 7.
+    - pH 1.77, because the voltage gives the pH directly.
+  correct: 2
+  explanation: >-
+    177 mV / 59 mV per unit = 3.0 units; a more positive reading means more acidic, so pH = 7.00 - 3.0 =
+    4.0. The Nernst slope turns a concentration ratio into a voltage.
+- id: q9
+  question: >-
+    Your coffee-cup run gives Delta_sol H(NaHCO3) = +17.4 +/- 0.7 kJ/mol; the value from formation
+    enthalpies is +19.6 kJ/mol. What is the most reasonable conclusion?
+  options:
+    - The measurement is wrong, because it misses the table value by more than its uncertainty.
+    - The measurement is good; the table is for infinite dilution, the cup run is near 0.6 mol/kg.
+    - The cup must have released heat, so its heat capacity should be subtracted, not added.
+    - Hess's law does not apply to dissolving, so the table value cannot be compared.
+  correct: 1
+  explanation: >-
+    The heat of solution depends on the final concentration; tables give the infinite-dilution limit.
+    A real 5 g in 100 g solution absorbs a little less, so 16-19 kJ/mol is consistent.
+- id: q10
+  question: >-
+    Titrating vinegar with baking-soda solution, the cabbage turns blue, then drifts back to purple
+    after 20 seconds. What should you do?
+  options:
+    - Record the end point at the first blue, because any colour change marks equivalence.
+    - Add a large excess of titrant so that the colour cannot drift back.
+    - Discard the trial, because a drifting colour means the indicator has decomposed.
+    - Swirl to release dissolved CO2, then add drops until blue-green lasts 30 s.
+  correct: 3
+  explanation: >-
+    The reaction makes CO2, a weak acid that keeps the solution slightly acidic while it is dissolved.
+    Swirling drives it out (Le Chatelier); the true end point is a colour that lasts. A large excess adds
+    a systematic error.

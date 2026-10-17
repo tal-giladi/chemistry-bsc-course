@@ -1,0 +1,66 @@
+- id: q1
+  question: >-
+    In the calibration, 50.0 g of water at 45.0 C is mixed with 100.0 g at 21.0 C in a foam cup, and the
+    extrapolated final temperature is 28.5 C. Without the cup, the final temperature would be 29.0 C.
+    What does this tell you?
+  options:
+    - The cup absorbed some of the heat, so it has a heat capacity that must be included.
+    - The thermometer reads 0.5 C low and should be recalibrated before the next run.
+    - The hot water was not hot enough, so the experiment must be repeated at 60 C.
+    - Heat was created by mixing, which raised the temperature less than expected.
+  correct: 0
+  explanation: >-
+    Ideal mixing gives (50 x 45 + 100 x 21)/150 = 29.0 C. The lower result means the cup took up heat.
+    Solving the heat balance gives C_cal of about 46 J/K, which is then used for the dissolution run.
+- id: q2
+  question: >-
+    During the baking-soda run the lowest reading is 20.1 C, but the line through the later readings,
+    extrapolated back to the mixing time, gives 20.3 C. Which value should you use and why?
+  options:
+    - 20.1 C, because the lowest reading is the true final temperature.
+    - The average, 20.2 C, because the two methods are equally valid.
+    - 20.3 C, because extrapolation corrects for heat leaking in while the salt dissolved.
+    - Neither, because a temperature drift means the experiment failed.
+  correct: 2
+  explanation: >-
+    The cup gains heat from the room during slow dissolving and afterwards. Extrapolating the before and
+    after lines to the mixing time removes that leak; a single extreme reading includes it by chance.
+- id: q3
+  question: >-
+    A learner forgets the cup and computes Delta_sol H from 100 g of water alone, getting 15.7 kJ/mol
+    instead of 17.4 kJ/mol. What kind of error is this, and in which direction?
+  options:
+    - A random error, which averaging three repeats would remove.
+    - A systematic error that makes the result too low, because the cup's heat is left out.
+    - A systematic error that makes the result too high, because water's c is overestimated.
+    - No error at all, because foam cups do not absorb heat.
+  correct: 1
+  explanation: >-
+    The dissolving salt took heat from the cup too, so ignoring it undercounts q in every run. Repeating
+    does not help; only including C_cal does.
+- id: q4
+  question: >-
+    Three titrations of 5 g vinegar with baking-soda solution give 4.96, 5.00 and 5.07 % acetic acid. The
+    end point always needs a little excess bicarbonate. Which statement is best?
+  options:
+    - The true value is certainly between 4.87 and 5.15 %, the 95 % confidence interval.
+    - The SD of 0.05 % is the total uncertainty, so the label value of 5 % is confirmed exactly.
+    - The results are too scattered to use, so the titration must be redone with a burette.
+    - The mean is 5.01 % with SD 0.05 %, but the end-point excess biases all three slightly high.
+  correct: 3
+  explanation: >-
+    The SD and confidence interval describe random scatter only. A systematic excess at the end point
+    shifts every trial the same way, so it must be discussed or corrected separately.
+- id: q5
+  question: >-
+    Why does the red-cabbage colour stay pink for most of the vinegar titration and then change quickly
+    near the end?
+  options:
+    - Because the titration is a redox reaction, and the indicator changes only when all electrons are used.
+    - Because half-neutralised vinegar is an acetic acid/acetate buffer near pH 4.7 that resists change.
+    - Because baking soda is a strong base, so the pH jumps only at pH 7.
+    - Because CO2 bubbles carry the indicator out of the solution until the end.
+  correct: 1
+  explanation: >-
+    No oxidation numbers change; it is acid-base. With acid and conjugate base both present, the pH stays
+    near the pKa. When the acid runs out, a drop of bicarbonate lifts the pH to about 8 and cabbage turns blue-green.

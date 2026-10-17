@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A reaction has Delta H = -92 kJ/mol and Delta S = -198 J/(mol K). A student writes
+    Delta G = -92 - 298 x (-198) = +58 900 kJ/mol and concludes it is not spontaneous at 25 C.
+    What went wrong, and what is the right conclusion?
+  options:
+    - Nothing; a positive Delta G means the reaction cannot run at 25 C.
+    - Delta S was not divided by 1000; Delta G is about -33 kJ/mol, so it is spontaneous.
+    - The temperature should be 25, not 298; Delta G is then about +5 kJ/mol.
+    - The sign of Delta S should be flipped; Delta G is then about -151 kJ/mol.
+  correct: 1
+  explanation: >-
+    Delta S is in J, Delta H in kJ. -92 - 298 x (-0.198) = -92 + 59 = -33 kJ/mol, negative, so the
+    reaction is spontaneous at 298 K. T must be in kelvin.
+- id: q2
+  question: >-
+    Ice melting has Delta H = +6.01 kJ/mol and Delta S = +22.0 J/(mol K). Which statement describes
+    what these numbers predict?
+  options:
+    - Melting is spontaneous at all temperatures, because Delta S is positive.
+    - Melting is never spontaneous, because it absorbs heat.
+    - Melting is spontaneous only below about 273 K, where T Delta S is small.
+    - Melting is spontaneous only above about 273 K, where T Delta S outweighs Delta H.
+  correct: 3
+  explanation: >-
+    With both signs positive, Delta G = Delta H - T Delta S turns negative only when T is above
+    Delta H / Delta S = 6010 / 22.0 = 273 K. Absorbing heat alone does not forbid a process.
+- id: q3
+  question: >-
+    At 298 K a reaction has Delta G standard = +11.4 kJ/mol (RT = 2.479 kJ/mol). Roughly what is K,
+    and what does the equilibrium mixture look like?
+  options:
+    - K is about 0.01, so the mixture is mostly reactants with a little product.
+    - K is about 100, so the mixture is mostly products.
+    - K is about 0.99, so reactants and products are present in equal amounts.
+    - K is zero, so no product forms at all.
+  correct: 0
+  explanation: >-
+    K = exp(-11.4/2.479) = exp(-4.6) = 0.010. Every 5.7 kJ/mol is a factor of 10, so +11.4 kJ/mol is
+    two factors of 10 below 1. A positive Delta G standard means a small K, not zero product.
+- id: q4
+  question: >-
+    Ammonia synthesis has K of about 5 x 10^5 at 298 K but about 3 x 10^-4 at 700 K. Industry still
+    runs it at 700-800 K. Why?
+  options:
+    - At high temperature Delta S becomes positive, so the reaction becomes more favoured.
+    - At room temperature Delta G is positive, so heating is needed to make it spontaneous.
+    - At room temperature the reaction is far too slow; heat gives a usable rate at the cost of a lower K.
+    - At high temperature the catalyst raises K back to its room-temperature value.
+  correct: 2
+  explanation: >-
+    Delta G standard is negative at 298 K, so thermodynamics favours cold, but the rate is negligible.
+    A catalyst speeds the reaction without changing K; high pressure then pushes the yield back up.
+- id: q5
+  question: >-
+    Which change would you expect to have the largest positive Delta S?
+  options:
+    - Liquid water freezing to ice at 0 C.
+    - Solid calcium carbonate decomposing to solid CaO and CO2 gas.
+    - Two moles of hydrogen gas and one of oxygen forming liquid water.
+    - Sugar crystals forming as syrup cools in a jar.
+  correct: 1
+  explanation: >-
+    Making a mole of gas from a solid raises entropy a lot. Freezing, crystallising and turning three
+    moles of gas into liquid all lower it.

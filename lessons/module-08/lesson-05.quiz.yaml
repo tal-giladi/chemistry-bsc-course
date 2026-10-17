@@ -1,0 +1,64 @@
+- id: q1
+  question: >-
+    In 2 Al + Fe2O3 -> Al2O3 + 2 Fe (the thermite reaction), which statement is correct?
+  options:
+    - Iron is oxidised from +3 to 0, so Fe2O3 is the reducing agent.
+    - Oxygen is reduced from 0 to -2, so it is the oxidising agent.
+    - Aluminium is reduced from 0 to +3, so it is the oxidising agent.
+    - Aluminium is oxidised from 0 to +3, so it is the reducing agent.
+  correct: 3
+  explanation: >-
+    Al goes 0 -> +3 (loses electrons, oxidised, so it is the reducing agent); Fe goes +3 -> 0 (reduced),
+    so Fe2O3 is the oxidising agent. Oxygen stays at -2 throughout.
+- id: q2
+  question: >-
+    A student balances MnO4- + Fe2+ + H+ -> Mn2+ + Fe3+ + H2O as MnO4- + Fe2+ + 8 H+ -> Mn2+ + Fe3+ + 4 H2O.
+    Every atom balances. What is wrong?
+  options:
+    - Nothing; if the atoms balance, the equation is correct.
+    - The charge does not balance (+9 left, +5 right); Fe needs a coefficient of 5 on both sides.
+    - The oxygen should be balanced with O2, not with water.
+    - The H+ should be replaced with OH-, because permanganate reactions are basic.
+  correct: 1
+  explanation: >-
+    Mn gains 5 electrons (+7 to +2), and each Fe2+ gives only 1, so five Fe2+ are needed. Then the charge
+    is +17 on both sides. Atoms and charge must both balance.
+- id: q3
+  question: >-
+    You standardise povidone-iodine: 1.00 mL needs 7.0 mL of a 1.00 mg/mL vitamin C solution. The same
+    1.00 mL of iodine needs 20.0 mL of juice. What is the vitamin C content of the juice?
+  options:
+    - About 35 mg per 100 mL.
+    - About 70 mg per 100 mL.
+    - About 2.9 mg per 100 mL.
+    - About 140 mg per 100 mL.
+  correct: 0
+  explanation: >-
+    1.00 mL of iodine reacts with 7.0 mg vitamin C. In the juice that is in 20.0 mL, so 0.35 mg/mL, or
+    35 mg per 100 mL. The 1 : 1 ratio of ascorbic acid to I2 means no extra factor is needed.
+- id: q4
+  question: >-
+    You set up the composition matrix for H2 + O2 -> H2O + H2O2 and the null space has two dimensions.
+    What does that mean?
+  options:
+    - The matrix was built wrongly, because every real equation has a one-dimensional null space.
+    - The equation cannot be balanced at all, so the reaction is impossible.
+    - Two independent reactions are mixed, so the ratio of H2O to H2O2 is not fixed by balancing.
+    - There are exactly two correct sets of coefficients, and you pick the smaller one.
+  correct: 2
+  explanation: >-
+    Any combination of 2 H2 + O2 -> 2 H2O and H2 + O2 -> H2O2 is balanced, so there is a whole plane of
+    solutions. Which ratio forms is decided by the chemistry (conditions, catalyst), not by algebra.
+- id: q5
+  question: >-
+    You balance MnO4- -> MnO2 in basic solution. After balancing as in acid you have
+    MnO4- + 4 H+ + 3 e- -> MnO2 + 2 H2O. What is the next step?
+  options:
+    - Delete the 4 H+, because there is no H+ in a basic solution.
+    - Add 4 OH- to both sides, combine 4 H+ + 4 OH- into 4 H2O, and cancel water.
+    - Replace 4 H+ with 4 OH- on the left side only.
+    - Add 4 OH- to the right side only, to balance the charge.
+  correct: 1
+  explanation: >-
+    Adding the same OH- to both sides keeps it balanced. The left gets 4 H2O, two cancel with the right,
+    giving MnO4- + 2 H2O + 3 e- -> MnO2 + 4 OH-.
