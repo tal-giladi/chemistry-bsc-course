@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A new liquid has static εr = 2.10 and refractive index n = 1.444 at 20 °C. What do you conclude about its
+    molecules?
+  options:
+    - They are strongly polar, because εr is larger than one.
+    - They are polar but hydrogen-bonded, so their dipoles cancel in the liquid.
+    - The data are inconsistent, because εr must always be much larger than n.
+    - They are essentially non-polar, because εr is close to n² (2.09).
+  correct: 3
+  explanation: >-
+    When εr ≈ n², only electron clouds respond, at both low and optical frequencies, so P ≈ R and there is no
+    orientation contribution. Every material has εr > 1; what matters is the comparison with n².
+- id: q2
+  question: >-
+    You measure the molar polarisation of a gas at several temperatures and plot it against 1/T. The line
+    is flat. What does that tell you?
+  options:
+    - The molecule has a large dipole that is fully aligned at all these temperatures.
+    - The molecule has no permanent dipole; its polarisation is all distortion.
+    - The pressure was not held constant, so the orientation term cancelled.
+    - The molecule's polarisability is zero, so only the dipole term remains.
+  correct: 1
+  explanation: >-
+    In P = A + B/T the slope B is proportional to μ², so a zero slope means μ = 0. The intercept A, the
+    distortion polarisation, is then the whole of P.
+- id: q3
+  question: >-
+    A student puts εr = 80.4, M = 18.0 g/mol and ρ = 0.998 g/cm³ for liquid water into the Debye equation and
+    gets μ = 0.8 D, less than half the gas value. What went wrong?
+  options:
+    - The density should be in kg/m³, which would raise the result by a factor of a thousand.
+    - Water's dipole really shrinks in the liquid because hydrogen bonds pull charge back.
+    - Debye assumes uncorrelated molecules, which fails for a polar, hydrogen-bonded liquid.
+    - The static permittivity must be replaced by n², because only electrons respond.
+  correct: 2
+  explanation: >-
+    Clausius–Mossotti and Debye use the Lorentz local field, valid for gases and non-polar liquids. In polar
+    liquids the reaction field and dipole correlation dominate; Onsager or Kirkwood treatments, or gas-phase
+    measurements, are needed.
+- id: q4
+  question: >-
+    For HCl gas, P = 7.6 + 6700/T (cm³/mol). What fraction of the molar polarisation comes from orientation at 298 K?
+  options:
+    - About 75 %, because 6700/298 = 22.5 cm³/mol against 7.6.
+    - About 25 %, because the distortion term 7.6 is larger at room temperature.
+    - About 99 %, because 6700 is nearly a thousand times larger than 7.6.
+    - About 50 %, because both terms are always equal at room temperature.
+  correct: 0
+  explanation: >-
+    The orientation term at 298 K is B/T = 22.5 cm³/mol and the total is 30.1, so 22.5/30.1 ≈ 75 %. Comparing
+    B with A directly forgets to divide by T.

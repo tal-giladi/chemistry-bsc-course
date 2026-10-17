@@ -1,0 +1,119 @@
+- id: q1
+  question: >-
+    A computational chemist models a protein pocket with an implicit solvent and wants the field of a buried
+    charged residue far outside the protein. The residue's charge is spread over a roughly spherical group.
+    What can she use for the field outside?
+  options:
+    - A point charge at the group's centre, by Gauss's law and spherical symmetry.
+    - Nothing simple, because a spread-out charge has no definite field outside it.
+    - The field of a dipole, because spreading a charge always turns it into a dipole.
+    - The field of a point charge, but only if the group is smaller than 1 Å across.
+  correct: 0
+  explanation: >-
+    For a spherically symmetric charge, Gauss's law gives E = Q/(4πε₀r²) everywhere outside it, exactly as
+    for a point charge at the centre, whatever its size.
+- id: q2
+  question: >-
+    A solvent supplier lists acetonitrile with εr = 36 and n = 1.344. A student uses n² = εr to argue the
+    supplier's εr must be a typo. How do you answer?
+  options:
+    - The student is right, since Maxwell's relation holds for every non-magnetic liquid.
+    - The supplier quoted εr at a different temperature, which explains a factor of twenty.
+    - Maxwell's relation needs both at one frequency; the static value includes dipole turning.
+    - Acetonitrile is magnetic, so its permeability makes n smaller than √εr.
+  correct: 2
+  explanation: >-
+    n² ≈ 1.81 reflects only the electronic response at optical frequency. Acetonitrile has a 3.9 D dipole, whose
+    turning raises the static permittivity far above n², as for water and methanol.
+- id: q3
+  question: >-
+    A force-field paper lists the dipole of the acetate ion as 4.2 D "for the optimised geometry". A
+    reviewer objects. What is the strongest objection?
+  options:
+    - Acetate has a mirror plane, so its dipole must be zero by symmetry.
+    - The debye is not an SI unit and should be replaced by C m.
+    - Dipoles of anions are always negative and cannot be quoted as positive numbers.
+    - An ion's dipole depends on the origin, which the paper did not specify.
+  correct: 3
+  explanation: >-
+    For a charged species μ′ = μ − Qa, so the number changes with the origin. A mirror plane does not force the
+    dipole to zero (it can lie in the plane), and the debye is standard in chemistry.
+- id: q4
+  question: >-
+    Two point-charge models of N₂ both reproduce the measured quadrupole of −4.65 × 10⁻⁴⁰ C m². Model A puts
+    charges on the atoms and at the centre; model B uses five charges along the axis. What can you say?
+  options:
+    - Model B is better because more charges always give a more accurate molecule.
+    - Both give the same far-field potential to order 1/r³, but may differ close to the molecule.
+    - They give identical potentials everywhere, since the quadrupole fixes the charge distribution.
+    - Neither can be right, because N₂ is non-polar and has no electrostatic potential.
+  correct: 1
+  explanation: >-
+    With zero charge and dipole, the quadrupole sets the leading 1/r³ term, so far away the models agree. Higher
+    moments and the close-range potential differ, and only comparison with other data can choose between them.
+- id: q5
+  question: >-
+    Methane gas at 20 °C and 1 atm has εr − 1 = 9.4 × 10⁻⁴. A colleague computes α′ = 3.0 × 10⁻²⁴ m³. What
+    went wrong, and what is the right order of magnitude?
+  options:
+    - Nothing; methane's polarisability volume really is about 3.0 × 10⁻²⁴ m³.
+    - The pressure was taken in bar instead of atm; α′ is about 1.5 × 10⁻²⁶ m³.
+    - The colleague used εr instead of εr − 1; α′ is about 1.5 × 10⁻²⁷ m³.
+    - N was taken per cm³ instead of per m³; α′ is about 3 × 10⁻³⁰ m³ (3 Å³).
+  correct: 3
+  explanation: >-
+    α′ = 3(εr − 1)/((εr + 2)4πN) with N = 2.50 × 10²⁵ m⁻³ gives 3.0 × 10⁻³⁰ m³ ≈ 3.0 Å³. Using N per cm³ (2.5 × 10¹⁹)
+    makes the answer a million times too large. CCCBDB lists 2.45 Å³ for the electronic part.
+- id: q6
+  question: >-
+    You measure the molar polarisation of a vapour at four temperatures. A plot against 1/T gives slope
+    6.7 × 10³ cm³ K/mol and intercept 7.5 cm³/mol. A labmate wants to quote μ from the intercept. What do you do?
+  options:
+    - >-
+      Use the slope, μ = √(9ε₀k_B B/N_A) ≈ 1.05 D; the intercept is the distortion polarisation.
+    - Use the intercept, because the dipole term is the temperature-independent part.
+    - Use the slope, but multiply by T, since μ² must be in J.
+    - Average slope and intercept, because each contains half of the information about μ.
+  correct: 0
+  explanation: >-
+    In P = A + B/T, B = N_Aμ²/(9ε₀k_B), so the slope gives μ (here about 1.05 D, as for HCl). The intercept A is
+    the electronic plus atomic polarisation.
+- id: q7
+  question: >-
+    Applying the Debye equation to pure liquid methanol gives μ = 1.2 D; Onsager's equation gives 3.0 D; the
+    gas value is 1.67 D. Which reading of these numbers is correct?
+  options:
+    - The gas value is wrong, because only the liquid gives the true molecular dipole moment.
+    - Debye ignores the reaction field and undershoots; Onsager overshoots as H-bonded dipoles correlate.
+    - Onsager is exact for every liquid, so methanol's dipole really is 3.0 D in all phases.
+    - Both equations fail only because the density was used in place of the molar volume.
+  correct: 1
+  explanation: >-
+    Clausius–Mossotti/Debye assumes uncorrelated molecules with a Lorentz local field. Onsager adds the reaction
+    field but not correlation; hydrogen-bonded chains line up dipoles, so Kirkwood's g factor is needed.
+- id: q8
+  question: >-
+    A process engineer asks why liquid ammonia (bp 240 K) is so much harder to boil than methane (bp 112 K),
+    though both have similar polarisabilities (2.1 and 2.4 Å³). What does an r⁻⁶ analysis say?
+  options:
+    - Methane's London term is much larger, so the whole difference must come from molar mass.
+    - Both are dominated by dispersion, and ammonia's higher ionisation energy explains the gap.
+    - Ammonia's lone pair cancels its bond dipoles, so the gap comes from hydrogen bonds alone.
+    - Ammonia's Keesom term (μ = 1.48 D) exceeds its London term; methane has no dipole at all.
+  correct: 3
+  explanation: >-
+    With μ = 1.48 D, ammonia's Keesom coefficient (about 77 × 10⁻⁷⁹ J m⁶ at 298 K) exceeds its London term (54);
+    methane has only London (91). At contact the orientation energy (and the H-bond) adds even more.
+- id: q9
+  question: >-
+    In solid CO₂ the molecules sit in a T-shaped arrangement rather than side by side. Using the module's
+    point-charge results, which explanation is best?
+  options:
+    - The T arrangement maximises dispersion, which is the only force acting between non-polar molecules.
+    - CO₂ has a hidden dipole along its axis, which lines up head to tail in the T.
+    - The negative quadrupole puts negative O ends against the positive carbon belt only in the T.
+    - The T arrangement is forced by the cubic crystal lattice and has nothing to do with the molecule.
+  correct: 2
+  explanation: >-
+    CO₂'s quadrupole is −14.3 × 10⁻⁴⁰ C m²: δ− ends, δ+ belt. EPM2 charges give +1.6 and +1.7 kJ/mol for end-to-end
+    and side-by-side pairs, but −3.3 kJ/mol for the T, where O meets C.

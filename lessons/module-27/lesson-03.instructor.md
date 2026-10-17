@@ -1,0 +1,9 @@
+# Instructor notes — 27.3 Polarisability and dielectrics
+
+- Objective: the learner turns gas dielectric constants into α′ (Clausius–Mossotti), classifies liquids by P_m against R_m, extracts μ and A from a Debye plot, and explains why simple theory fails for polar liquids.
+- Likely confusion: α versus α′ and the 4πε₀ factor; CGS versus SI forms of the Debye equation; molar polarisation versus polarisation P (dipole per volume) — same letter, different quantity (say so explicitly).
+- Misconception: "the dielectric constant measures the dipole moment directly". It measures a mix of distortion and orientation, and in liquids also correlation; only the temperature dependence of a dilute gas separates μ cleanly.
+- Analogy: a crowd in a wind — everyone leans a little (distortion, fast, temperature-independent), and people carrying umbrellas (dipoles) also turn to face it, but the hotter and more restless the crowd, the less they stay turned (μ²/3kT).
+- Expected hands-on result: Part 1 α′ (Å³) He 0.207, H₂ 0.807, O₂ 1.572, Ar 1.644, N₂ 1.742 (within 2.5 % of CCCBDB), air 1.705, CO₂ 2.930 (+17 %, infrared part). Part 2 P/R (cm³/mol): cyclohexane 27.50/27.75, CCl₄ 28.19/26.44, benzene 26.67/26.26, chlorobenzene 62.17/31.15, methanol 37.08/8.24, nitrobenzene 94.15/32.89, water 17.39/3.71; naive μ 1.22, 1.18, 1.72, 0.81 D; Onsager 1.46, 3.00, 4.16, 3.11 D. Part 3 μ = 1.053 ± 0.003 D, A = 7.46 ± 0.11 cm³/mol, 75 % orientation at 298 K. Pencil: 786 ppm; A = 4.8 cm³/mol, μ = 1.32 D; atomic polarisation.
+- Point to make explicitly: hcl_debye_points.csv is reconstructed from the published fit (A, μ) with noise; the analysis is real, the points are not Zahn's readings.
+- Extension: the Guggenheim–Smith method for dipole moments from dilute solutions in benzene (the classic undergraduate lab), using εr and n of a few dilute solutions.

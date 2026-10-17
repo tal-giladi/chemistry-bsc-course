@@ -1,0 +1,15 @@
+# Pure liquids at 20 C: static relative permittivity, refractive index (sodium D line) and density.
+# eps_r: A. A. Maryott and E. R. Smith, Table of Dielectric Constants of Pure Liquids, NBS Circular 514 (1951),
+#   section A "Standard liquids", 20 C column, https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular514.pdf (US government work).
+# n_D and density: PubChem compound pages (HSDB records), "Refractive Index" and "Density" sections, 20 C values;
+#   water density from the NIST Chemistry WebBook fluid properties (IAPWS-95), 998.207 kg/m3 at 20 C and 1 atm.
+# Gas-phase dipole moments (debye): NIST CCCBDB experimental dipoles, https://cccbdb.nist.gov/diplistx.asp
+# All retrieved 2026-10-17. M from standard atomic weights.
+name,formula,M_g_mol,rho_g_cm3,eps_r,n_D,mu_gas_D,pubchem_cid
+cyclohexane,C6H12,84.16,0.7781,2.023,1.42662,0.0,8078
+carbon tetrachloride,CCl4,153.82,1.5940,2.238,1.4601,0.0,5943
+benzene,C6H6,78.11,0.8765,2.2811,1.5011,0.0,241
+chlorobenzene,C6H5Cl,112.56,1.1058,5.708,1.5241,1.78,7964
+methanol,CH3OH,32.04,0.7914,33.62,1.3292,1.672,887
+nitrobenzene,C6H5NO2,123.11,1.2037,35.74,1.5562,4.22,7416
+water,H2O,18.015,0.99821,80.37,1.3330,1.857,962

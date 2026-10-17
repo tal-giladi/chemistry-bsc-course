@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A colleague reports the dipole moment of the ammonium ion NH₄⁺ as 3.1 D from a calculation. What is
+    the main problem with this number?
+  options:
+    - Tetrahedral symmetry forces the dipole of any species to be exactly zero about every origin.
+    - The debye unit is defined only for neutral molecules, so the value must be given in C m.
+    - Ions have no dipole moment, because the net charge always dominates the potential.
+    - For a charged species the dipole depends on the chosen origin, which was not stated.
+  correct: 3
+  explanation: >-
+    Shifting the origin by a changes μ by −Qa, so an ion's dipole is meaningless without its origin. About the
+    nitrogen (the centre of symmetry) NH₄⁺ has μ = 0; about another point it does not.
+- id: q2
+  question: >-
+    A point-charge model of CO₂ puts −0.33 e on each O at ±1.16 Å and +0.66 e on C. What is its quadrupole
+    moment Θzz?
+  options:
+    - About −14 × 10⁻⁴⁰ C m², negative because the ends carry negative charge.
+    - About +14 × 10⁻⁴⁰ C m², positive because the central carbon is positive.
+    - About −7 × 10⁻⁴⁰ C m², from −q d² without the factor of two.
+    - Zero, because CO₂ has a centre of inversion and no dipole moment.
+  correct: 0
+  explanation: >-
+    Θzz = −2qd² = −2 × 0.33 × 1.602 × 10⁻¹⁹ × (1.16 × 10⁻¹⁰)² ≈ −14 × 10⁻⁴⁰ C m². Inversion symmetry removes
+    the dipole, not the quadrupole; negative ends and a positive middle give a negative Θ.
+- id: q3
+  question: >-
+    You are choosing a sorbent to separate CO₂ from N₂ in flue gas. Neither gas has a dipole. Which
+    molecular property best explains why cation-rich zeolites prefer CO₂?
+  options:
+    - CO₂ has a much larger permanent dipole when it bends, so it binds to cations as a polar molecule.
+    - CO₂'s quadrupole is about three times larger than N₂'s, so it interacts more strongly with cation fields.
+    - N₂ has a positive quadrupole that is repelled by cations, while CO₂ has none at all.
+    - CO₂ is heavier, so it moves more slowly through the pores and is held by friction.
+  correct: 1
+  explanation: >-
+    The measured quadrupoles are −14.3 and −4.65 × 10⁻⁴⁰ C m². The interaction of a quadrupole with the field
+    gradient around a cation scales with Θ, so CO₂ binds roughly three times more strongly through this term.
+- id: q4
+  question: >-
+    TIP3P water has a dipole of 2.35 D, while the isolated molecule's measured dipole is 1.86 D. Why do
+    simulation groups accept this?
+  options:
+    - The 1.86 D value is from 1950s dielectric data and is known to be too low by about 25 %.
+    - The extra dipole is needed only to reproduce the molecule's quadrupole moment correctly.
+    - Its fixed charges must also carry the polarisation a molecule gains from liquid neighbours.
+    - Dipole moments depend on the origin, and 2.35 D is simply the value about the oxygen atom.
+  correct: 2
+  explanation: >-
+    In liquid water every molecule is polarised by the field of its neighbours. A model without explicit
+    polarisability builds that average extra dipole into its charges. Water is neutral, so its dipole does not depend on the origin.

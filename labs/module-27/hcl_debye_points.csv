@@ -1,0 +1,11 @@
+# HCl gas at 1 atm: (eps - 1) in parts per million. RECONSTRUCTED from the Debye fit of Zahn (1924) as listed in
+# NBS Circular 537 (A = 7.63 cm3/mol, mu = 1.050 D), with 0.4 % noise. Not the original data. See make_data.py.
+T_K,eps_minus_1_ppm
+201,7476.9
+240,5458.3
+273,4314.2
+313,3383.4
+363,2628.8
+423,2023.0
+500,1529.3
+589,1181.0

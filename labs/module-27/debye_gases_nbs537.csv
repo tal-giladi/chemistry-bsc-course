@@ -1,0 +1,14 @@
+# Debye-equation fits P = A + B/T for polar gases, from dielectric constant measured at several temperatures,
+# and the dipole moment that follows (B = N_A mu^2 / (9 eps0 k_B) in SI). A is in cm3/mol, mu in debye.
+# Source: NBS Circular 537 (1953), table of dipole moments, "temperature-variation procedure" entries,
+# https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular537.pdf (US government work), retrieved 2026-10-17.
+# mu_stark_D: modern gas-phase value from NIST CCCBDB experimental dipoles (Stark effect / molecular beam),
+# https://cccbdb.nist.gov/diplistx.asp, retrieved 2026-10-17.
+gas,mu_D,A_cm3_mol,T_min_K,T_max_K,original_reference,mu_stark_D
+HCl,1.050,7.63,201,589,Zahn 1924,1.093
+HBr,0.80,9.1,218,599,Zahn 1924,0.827
+HI,0.42,13.5,245,346,Zahn 1924,0.448
+NH3,1.469,5.3,274,457,Zahn 1926,1.476
+SO2,1.633,10.6,266,444,Zahn 1926,1.633
+H2S,0.92,9.96,197,542,Zahn 1928,0.977
+H2O,1.853,3.8,298,376,Birnbaum 1952,1.857

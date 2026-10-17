@@ -1,0 +1,18 @@
+# Molecular properties for London, Keesom and Debye estimates of the r^-6 attraction, and normal boiling points.
+# mu_D: NIST CCCBDB experimental dipole moments, https://cccbdb.nist.gov/diplistx.asp
+# alpha_A3: NIST CCCBDB experimental mean polarisability volumes, https://cccbdb.nist.gov/pollistx.asp
+# IE_eV: NIST Chemistry WebBook, ion energetics, "IE (evaluated)", e.g. https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=20
+# bp_K: hydrides and CH4 from PubChem "Boiling Point" (same values as labs/module-07/hydride_boiling_points.csv, converted to K);
+#   Ar, Kr, Xe, N2 and CCl4 from NIST Chemistry WebBook phase-change data (Tboil). All retrieved 2026-10-17.
+molecule,mu_D,alpha_A3,IE_eV,bp_K
+Ar,0,1.664,15.759,87.28
+Kr,0,2.498,13.99961,119.78
+Xe,0,4.005,12.12987,165.02
+N2,0,1.710,15.581,77.34
+CH4,0,2.448,12.61,111.65
+CCl4,0,10.002,11.47,349.8
+HCl,1.093,2.515,12.744,188.10
+HBr,0.827,3.616,11.68,206.77
+HI,0.448,5.453,10.386,237.77
+NH3,1.476,2.103,10.070,239.80
+H2O,1.857,1.501,12.621,373.12

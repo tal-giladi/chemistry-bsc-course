@@ -1,0 +1,14 @@
+# Dielectric constants of reference gases at 20 C and 1 atm (101.325 kPa), recommended values.
+# Source: A. A. Maryott and F. Buckley, Table of Dielectric Constants and Electric Dipole Moments of Substances in the
+# Gaseous State, NBS Circular 537 (1953), section 2.2, https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular537.pdf
+# (US government work). Mean polarisability volumes alpha' (static, experimental) from NIST CCCBDB Release 22,
+# https://cccbdb.nist.gov/pollistx.asp (Olney et al., Chem. Phys. 223, 59 (1997)). Both retrieved 2026-10-17.
+# Air is dry and CO2-free and has no single polarisability. CO2 includes a small infrared (vibrational) part.
+gas,eps_minus_1_ppm,alpha_A3_cccbdb
+He,65.0,0.208
+H2,253.8,0.787
+O2,494.7,1.562
+Ar,517.2,1.664
+air,536.4,
+N2,548.0,1.710
+CO2,922,2.507

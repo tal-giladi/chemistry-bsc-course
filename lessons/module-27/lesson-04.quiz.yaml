@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    HCl (μ = 1.09 D, α′ = 2.5 Å³) boils at 188 K and HI (μ = 0.45 D, α′ = 5.5 Å³) at 238 K. Which explanation
+    fits the numbers?
+  options:
+    - HI forms hydrogen bonds, while HCl cannot because chlorine is too electronegative.
+    - The Keesom term is larger for HI because heavier molecules tumble more slowly.
+    - London dispersion, scaling as α′², dominates both and is about four times larger for HI.
+    - HI's dipole is larger in the liquid because iodine is easily polarised by its neighbours.
+  correct: 2
+  explanation: >-
+    London's C₆ ∝ Iα′² is about 97 × 10⁻⁷⁹ J m⁶ for HCl and 371 × 10⁻⁷⁹ for HI, and is 77 % and 99 % of
+    the r⁻⁶ attraction. The smaller dipole of HI matters much less than its doubled polarisability.
+- id: q2
+  question: >-
+    Two polar molecules in a gas attract on average with an energy proportional to 1/r⁶, although a fixed
+    dipole pair interacts as 1/r³. Why?
+  options:
+    - Tumbling cancels most orientations; Boltzmann weighting leaves a term in U², which goes as r⁻⁶.
+    - Each dipole induces a second dipole in its partner, and the induced term always dominates the permanent one.
+    - The 1/r³ form applies only in a vacuum, while gas molecules are screened by the gas permittivity.
+    - At gas distances the dipoles behave as quadrupoles, whose interaction goes as 1/r⁶.
+  correct: 0
+  explanation: >-
+    Averaging e^(−U/kT) over orientations when |U| ≪ kT gives ⟨U⟩ ≈ −⟨U²⟩/kT. Since U ∝ r⁻³, its square gives
+    the r⁻⁶ Keesom law, with a 1/T dependence.
+- id: q3
+  question: >-
+    A point-dipole calculation gives −13 kJ/mol for a water dimer at R(O···O) = 2.75 Å, while summing TIP3P
+    point charges gives −33 kJ/mol of Coulomb energy. Which statement is right?
+  options:
+    - The dipole result is more reliable because it uses the measured gas-phase dipole moment.
+    - Both are wrong because hydrogen bonds are covalent and have no electrostatic part.
+    - The two must agree, so the charge model contains an arithmetic error.
+    - At contact the expansion converges poorly, so the charge sum is the better model.
+  correct: 3
+  explanation: >-
+    The point-dipole formula assumes the molecules are far apart compared with their size. At 2.75 Å the H atom
+    sits close to the acceptor O, and only a charge-by-charge sum captures that local interaction.
+- id: q4
+  question: >-
+    You raise the temperature of a polar gas from 300 K to 400 K. What happens to the three r⁻⁶ coefficients
+    of a molecule pair?
+  options:
+    - All three fall by 300/400, because all intermolecular forces weaken on heating.
+    - Keesom falls by 300/400; Debye and London stay the same.
+    - London falls by 300/400 because electron fluctuations slow down; the others are unchanged.
+    - Keesom rises by 400/300, because faster molecules collide with more energy.
+  correct: 1
+  explanation: >-
+    Only the Keesom term comes from thermal averaging over orientations, so it scales as 1/T. Induction and
+    dispersion do not depend on orientation averaging and are temperature-independent in this model.
