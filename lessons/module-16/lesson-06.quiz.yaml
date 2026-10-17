@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    An enzyme needs a side chain that can both donate and accept a proton at pH 7.4 with little energy
+    cost. Which group fits best?
+  options:
+    - The amino group of lysine, pKaH about 10.5, because it is a strong base.
+    - The imidazole of histidine, pKaH about 7, because it is roughly a quarter protonated at pH 7.4.
+    - The amide of asparagine, because amides are good bases.
+    - The phenyl ring of phenylalanine, because aromatic rings accept protons easily.
+  correct: 1
+  explanation: >-
+    A group whose pKaH is near the pH is present in both forms, so it can shuttle protons. Lysine is
+    over 99.9 % protonated; amides and phenyl rings are not basic at all.
+- id: q2
+  question: >-
+    You need N-ethylcyclohexylamine. Which route gives it cleanly?
+  options:
+    - Cyclohexylamine plus excess bromoethane, because SN2 is fast for primary halides.
+    - Cyclohexanol plus ethylamine with heat, because OH is replaced by the amine.
+    - Cyclohexanone plus ethylamine, then NaBH3CN (reductive amination).
+    - Cyclohexanone plus ethylamine, then LiAlH4 reduction of the ketone first.
+  correct: 2
+  explanation: >-
+    The ketone and primary amine form an imine, which NaBH3CN reduces to the secondary amine. Direct
+    alkylation over-alkylates, and OH is not a leaving group without activation.
+- id: q3
+  question: >-
+    A freshly made solution of pure beta-D-glucopyranose has a specific rotation of +18.7. What happens
+    over the next few hours at room temperature?
+  options:
+    - Nothing, because the beta anomer is the more stable one.
+    - It rises to about +52.6 as some beta converts to alpha through the open-chain aldehyde.
+    - It falls to about -52.6 as glucose converts to its enantiomer.
+    - It rises to +112.2 as all the beta converts to the alpha anomer.
+  correct: 1
+  explanation: >-
+    Mutarotation reaches the same 37 : 63 alpha : beta equilibrium from either side. Beta is more stable,
+    but not so much that alpha disappears; the anomers are diastereomers, not enantiomers.
+- id: q4
+  question: >-
+    Why is pyridine (pKaH 5.25) a much stronger base than pyrrole (pKaH 0.4), although both are aromatic
+    nitrogen rings?
+  options:
+    - Pyridine has one more carbon atom to donate electron density to its nitrogen.
+    - Pyrrole's nitrogen is sp3, which holds the lone pair more tightly.
+    - Protonated pyridine becomes antiaromatic, which pulls the equilibrium towards it.
+    - Pyridine's lone pair is outside the pi system; pyrrole's is part of the aromatic sextet.
+  correct: 3
+  explanation: >-
+    Protonating pyridine keeps all six pi electrons. Protonating pyrrole's nitrogen would remove two pi
+    electrons and destroy aromaticity, so pyrrole is hardly basic at all.

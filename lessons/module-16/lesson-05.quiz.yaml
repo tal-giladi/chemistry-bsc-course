@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    Cycloheptatrienyl bromide (C7H7Br) dissolves in water as ions and behaves like a salt, unlike most
+    alkyl bromides. What explains this?
+  options:
+    - The C-Br bond is unusually short and polar in a seven-membered ring.
+    - Water adds to the double bonds and releases bromide.
+    - The cation formed, C7H7+, is aromatic with 6 pi electrons, so ionisation is favourable.
+    - The cation formed has 8 pi electrons, which fills the bonding orbitals.
+  correct: 2
+  explanation: >-
+    The tropylium ion is planar, fully conjugated, with three C=C bonds and one empty p orbital: 6 pi
+    electrons, 4n + 2 with n = 1. Aromatic stabilisation drives the loss of bromide.
+- id: q2
+  question: >-
+    You need 1-(3-bromophenyl)ethanone from benzene using Br2/FeBr3 and CH3COCl/AlCl3. Which order works?
+  options:
+    - Bromination first, because bromine directs the acetyl group to the meta position.
+    - Acylation first, because the acetyl group directs meta and Friedel-Crafts must come before it.
+    - Either order, because both groups direct meta.
+    - Neither order, because Friedel-Crafts never works on substituted benzenes.
+  correct: 1
+  explanation: >-
+    The acetyl group is a meta director, so it must be on the ring before bromination. Bromine directs
+    ortho/para, so bromination first would give the para ketone.
+- id: q3
+  question: >-
+    A student treats benzene with 1-chloropropane and AlCl3, expecting propylbenzene. What is the main
+    product, and what should she do instead?
+  options:
+    - Propylbenzene, as expected; Friedel-Crafts alkylation does not rearrange.
+    - Chlorobenzene; she should use FeCl3 instead of AlCl3.
+    - No reaction; benzene needs a nitro group to react.
+    - Isopropylbenzene; she should acylate with propanoyl chloride and then reduce the ketone.
+  correct: 3
+  explanation: >-
+    The primary carbocation-like complex rearranges by a hydride shift to the secondary cation. Acylium
+    ions do not rearrange, and the ketone can be reduced to CH2 afterwards.
+- id: q4
+  question: >-
+    Why does nitration of anisole (methoxybenzene) give mainly the ortho and para products, and faster
+    than benzene?
+  options:
+    - The oxygen lone pair stabilises the sigma-complex when the positive charge sits on the ring carbon bearing OCH3.
+    - The OCH3 group withdraws electrons by induction, which favours attack at ortho and para.
+    - The methyl group of OCH3 blocks the meta positions sterically.
+    - Anisole is protonated by sulfuric acid, which makes it a meta director that reacts quickly.
+  correct: 0
+  explanation: >-
+    Ortho or para attack places the cation on the carbon attached to O, where the lone pair can donate
+    by resonance to give an extra (oxonium) resonance form. This lowers the energy of the slow step.

@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    You disconnect 3-methyl-3-hexanol at the carbinol carbon. Which reagent pair is a valid forward
+    reaction for one of the disconnections?
+  options:
+    - Propylmagnesium bromide and butanone, then aqueous acid.
+    - Propyl bromide and the enolate of butanone, then aqueous acid.
+    - 3-Hexanone and methyl bromide with NaBH4.
+    - Propanal and 2-bromobutane with sodium ethoxide.
+  correct: 0
+  explanation: >-
+    The carbinol carbon carries methyl, ethyl and propyl. Breaking C-propyl gives the synthons
+    propyl(-) and the cation of butanone, whose reagents are PrMgBr and butanone. The enolate option
+    makes a C-C bond at the alpha carbon, not at the carbinol carbon.
+- id: q2
+  question: >-
+    A plan for 1-(3-nitrophenyl)ethanol starts by nitrating benzene, then acylating with acetyl chloride
+    and AlCl3, then reducing with NaBH4. Where does it fail?
+  options:
+    - At the reduction, because NaBH4 also reduces the nitro group.
+    - At the nitration, because benzene cannot be nitrated without a catalyst.
+    - At the Friedel-Crafts step, because nitrobenzene is too deactivated to react.
+    - Nowhere; the order of aromatic substitutions does not matter here.
+  correct: 2
+  explanation: >-
+    Friedel-Crafts acylation fails on rings with a meta-directing group such as NO2. Acylate first;
+    the acetyl group then directs the nitration meta, which is the position wanted. NaBH4 leaves NO2 alone.
+- id: q3
+  question: >-
+    Route A makes a target in seven steps in one line. Route B makes two fragments in three steps each and
+    joins them in an eighth step. Each step gives 80 %. Which statement is right?
+  options:
+    - Route A gives more material, because it has fewer steps in total.
+    - Both give the same yield, because every step gives 80 %.
+    - Route A gives more, because joining two fragments always gives a low yield.
+    - Route B gives more, because its longest linear sequence is four steps, about 41 % against 21 %.
+  correct: 3
+  explanation: >-
+    Overall yield follows the longest linear sequence: 0.8^4 = 0.41 for B and 0.8^7 = 0.21 for A, even
+    though B has more steps in total.
+- id: q4
+  question: >-
+    You need to add CH3MgBr to the ketone of 4-hydroxy-4-phenylbutan-2-one, which also carries a free
+    OH group. What is the standard fix?
+  options:
+    - Use a large excess of CH3MgBr so that some survives the OH.
+    - Protect the OH (for example as a silyl ether), do the Grignard step, then remove the protecting group.
+    - Oxidise the OH to a ketone first, because ketones do not react with Grignard reagents.
+    - Run the reaction in water, which stops the Grignard reagent reacting with OH.
+  correct: 1
+  explanation: >-
+    The OH protonates the Grignard reagent at once. Excess reagent wastes material and gives a messy
+    alkoxide; protection is the clean answer. Oxidising would create a second ketone that also reacts,
+    and water destroys Grignard reagents.

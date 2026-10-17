@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    You need N-benzylacetamide and have benzylamine plus four acetyl sources on the shelf. Which choice
+    acetylates the amine fastest at room temperature?
+  options:
+    - Ethyl acetate, because ethoxide is a strong nucleophile.
+    - Acetyl chloride, because chloride is the weakest base and so the best leaving group.
+    - N,N-dimethylacetamide, because amides exchange easily with other amines.
+    - Acetic acid, because the acid protonates the amine and activates it.
+  correct: 1
+  explanation: >-
+    Rank by leaving-group basicity: Cl- (HCl pKa about -7) leaves far more easily than acetate,
+    ethoxide or an amide anion. Acetic acid mainly forms an ammonium salt with the amine at room
+    temperature.
+- id: q2
+  question: >-
+    A Fischer esterification of 1.0 mol acid with 1.0 mol alcohol (K = 4) gives 67 % ester. Which change
+    raises the yield the most?
+  options:
+    - Doubling the amount of sulfuric acid catalyst.
+    - Running the reaction for twice as long.
+    - Removing water as it forms with a Dean-Stark trap.
+    - Adding 5 mol of water so the catalyst dissolves better.
+  correct: 2
+  explanation: >-
+    A catalyst and a longer time only help reach equilibrium faster; they do not move it. Removing a
+    product pulls the equilibrium towards the ester (Le Chatelier). Adding water pushes it back, to
+    about 33 %.
+- id: q3
+  question: >-
+    Methyl 4-nitrobenzoate and methyl 4-methoxybenzoate are saponified under identical conditions.
+    Which hydrolyses faster?
+  options:
+    - The methoxy ester, because the electron-donating OCH3 makes the oxygen a better leaving group.
+    - Both at the same rate, because the leaving group (methoxide) is the same.
+    - Neither, because aromatic esters are not saponified.
+    - The nitro ester, because NO2 withdraws electron density and makes the carbonyl carbon more electrophilic.
+  correct: 3
+  explanation: >-
+    The rate-limiting step is hydroxide adding to the carbonyl carbon. An electron-withdrawing group
+    makes that carbon more positive and stabilises the negatively charged tetrahedral intermediate. The
+    same effect lowers the pKa of 4-nitrobenzoic acid (3.41) below benzoic acid (4.19).
+- id: q4
+  question: >-
+    Aspirin has pKa 3.49. Roughly what fraction is in the neutral COOH form in the stomach at pH 1.5?
+  options:
+    - About 99 %, because the pH is two units below the pKa.
+    - About 50 %, because aspirin is a weak acid.
+    - About 1 %, because the pH is two units below the pKa.
+    - About 76 %, because aspirin is a stronger acid than acetic acid.
+  correct: 0
+  explanation: >-
+    [A-]/[HA] = 10^(1.5 - 3.49) = 0.010, so about 1 % is ionised and 99 % is neutral. The 76 % figure is
+    the ionised fraction at pH 4.0.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    You need 3-phenylpropanal from 3-phenyl-1-propanol for a fragrance trial. A colleague offers the
+    Jones reagent (CrO3 in aqueous sulfuric acid) because it is on the shelf. What do you expect?
+  options:
+    - The aldehyde, because a primary alcohol always stops at the aldehyde.
+    - No reaction, because primary alcohols need a stronger oxidant than Jones.
+    - The ketone, because Jones oxidises the carbon next to the ring.
+    - Mostly 3-phenylpropanoic acid, because the aldehyde hydrates in water and oxidises again.
+  correct: 3
+  explanation: >-
+    In water the aldehyde adds water to form a hydrate, which still has an H on the carbinol carbon
+    and is oxidised to the acid. A dry, mild oxidant such as Dess-Martin or Swern stops at the aldehyde.
+- id: q2
+  question: >-
+    Which carbon has the highest oxidation level: the carbonyl carbon of acetone, the carbinol carbon
+    of 2-propanol, the carbon of chloromethane, or the nitrile carbon of acetonitrile (CH3C#N)?
+  options:
+    - The carbonyl carbon of acetone, because it has a C=O double bond.
+    - The nitrile carbon, because it has three bonds to N and no H.
+    - The carbinol carbon, because it carries both an O and an H.
+    - The chloromethane carbon, because Cl is the most electronegative.
+  correct: 1
+  explanation: >-
+    Count +1 per bond to O, N or halogen and -1 per H. The nitrile carbon has three bonds to N and no
+    H: +3, the same level as a carboxylic acid, which is why nitriles hydrolyse to acids without any
+    oxidant. Acetone is +2, the 2-propanol carbinol carbon 0, chloromethane -2.
+- id: q3
+  question: >-
+    To make tert-butyl methyl ether by the Williamson synthesis, which pair of reagents should you use?
+  options:
+    - Sodium methoxide and tert-butyl bromide, because methoxide is the better nucleophile.
+    - Methanol and tert-butyl bromide with no base, because the reaction is SN2.
+    - Potassium tert-butoxide and iodomethane, because SN2 needs the unhindered methyl halide.
+    - Potassium tert-butoxide and tert-butyl bromide, because like reacts with like.
+  correct: 2
+  explanation: >-
+    The Williamson synthesis is SN2 at the halide carbon, so the halide must be methyl or primary.
+    Methoxide with a tertiary halide gives mostly E2 elimination (2-methylpropene).
+- id: q4
+  question: >-
+    2-Methyloxirane (propylene oxide) is opened with sodium ethoxide in ethanol. Where does ethoxide
+    attack, and why?
+  options:
+    - At the CH2 carbon, because a strong nucleophile reacts by SN2 at the less hindered carbon.
+    - At the CH carbon, because the more substituted carbon carries more positive charge.
+    - At the oxygen, because ethoxide first protonates the epoxide.
+    - At both carbons equally, because the ring strain is the same at each.
+  correct: 0
+  explanation: >-
+    Under basic conditions there is no protonated epoxide and no partial carbocation; the reaction is
+    a plain SN2, so sterics decide. Under acid, attack shifts to the more substituted carbon.

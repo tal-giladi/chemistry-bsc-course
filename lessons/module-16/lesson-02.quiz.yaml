@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A molecule contains both an aldehyde and a ketone. You add one equivalent of NaBH4 at 0 C. Which
+    group is reduced first, and why?
+  options:
+    - The ketone, because its two alkyl groups make the carbonyl carbon more positive.
+    - The aldehyde, because it is less hindered and less stabilised by alkyl donation.
+    - Both equally, because NaBH4 cannot tell one C=O from another.
+    - Neither, because NaBH4 only reduces esters and acids.
+  correct: 1
+  explanation: >-
+    Aldehydes are more electrophilic and less crowded than ketones, the same reason formaldehyde is
+    99.9 % hydrated and acetone 0.1 %. With a limited amount of a mild hydride the aldehyde reacts first.
+- id: q2
+  question: >-
+    A student plans to turn 4-bromobutan-1-ol into its Grignard reagent with magnesium in dry ether and
+    then add acetone. What happens?
+  options:
+    - The Grignard forms and adds to acetone to give a diol in good yield.
+    - The Grignard forms but adds to its own OH group to give an ether.
+    - The Grignard is protonated by the OH as soon as it forms, so no C-C bond is made.
+    - Acetone is reduced to 2-propanol by the magnesium.
+  correct: 2
+  explanation: >-
+    Grignard reagents are bases with a conjugate acid pKa near 50; an alcohol (pKa 16) protonates them
+    instantly. Protect the OH first (for example as a silyl ether) or choose another route.
+- id: q3
+  question: >-
+    Which reagent pair gives an enamine rather than an imine with cyclohexanone (acid catalyst, water
+    removed)?
+  options:
+    - Cyclohexanone with methylamine, because it has one methyl group on N.
+    - Cyclohexanone with ammonia, because ammonia has three H on N.
+    - Cyclohexanone with aniline, because aryl amines are less basic.
+    - Cyclohexanone with pyrrolidine, because a secondary amine has only one H on N.
+  correct: 3
+  explanation: >-
+    After the carbinolamine loses water, a secondary amine has no N-H left to lose, so a C-H proton next
+    to the iminium carbon is removed instead, giving C=C-NR2. Primary amines and ammonia give imines.
+- id: q4
+  question: >-
+    You must add a methyl Grignard to the ester group of a keto ester without touching the ketone. What
+    is the standard plan?
+  options:
+    - Protect the ketone as an ethylene glycol acetal, add the Grignard, then remove the acetal with aqueous acid.
+    - Reduce the ketone with NaBH4 first, add the Grignard, then oxidise back with Jones reagent.
+    - Use a large excess of Grignard so the ester reacts before the ketone does.
+    - Add the Grignard at high temperature, where esters react faster than ketones.
+  correct: 0
+  explanation: >-
+    Acetals survive bases, hydrides and Grignard reagents, and esters do not form acetals, so only the
+    ketone is protected. The reduce-then-reoxidise idea fails because the new OH would destroy the Grignard.

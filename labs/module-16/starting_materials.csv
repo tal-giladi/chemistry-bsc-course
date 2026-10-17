@@ -1,0 +1,43 @@
+# Starting-material catalogue for the Module 16 route checker (lesson 16.7).
+# A teaching list of cheap, common building blocks (roughly: anything a supplier sells by the kilogram).
+# SMILES from PubChem (pubchem.ncbi.nlm.nih.gov), accessed 2026-10-17; cid = PubChem compound id.
+name,cid,smiles
+benzene,241,c1ccccc1
+toluene,1140,Cc1ccccc1
+phenol,996,Oc1ccccc1
+anisole,7519,COc1ccccc1
+bromobenzene,7961,Brc1ccccc1
+chlorobenzene,7964,Clc1ccccc1
+benzaldehyde,240,O=Cc1ccccc1
+benzoic acid,243,OC(=O)c1ccccc1
+salicylic acid,338,OC(=O)c1ccccc1O
+benzyl bromide,7498,BrCc1ccccc1
+formaldehyde,712,C=O
+acetaldehyde,177,CC=O
+acetone,180,CC(C)=O
+butanone,6569,CCC(C)=O
+cyclohexanone,7967,O=C1CCCCC1
+acetic acid,176,CC(=O)O
+acetyl chloride,6367,CC(=O)Cl
+acetic anhydride,7918,CC(=O)OC(C)=O
+propanoyl chloride,62324,CCC(=O)Cl
+ethyl acetate,8857,CCOC(C)=O
+diethyl malonate,7761,CCOC(=O)CC(=O)OCC
+ethyl acetoacetate,8868,CCOC(=O)CC(C)=O
+methanol,887,CO
+ethanol,702,CCO
+1-propanol,1031,CCCO
+2-propanol,3776,CC(C)O
+1-butanol,263,CCCCO
+3-methyl-1-butanol,31260,CC(C)CCO
+bromomethane,6323,CBr
+iodomethane,6328,CI
+bromoethane,6332,CCBr
+1-bromopropane,7840,CCCBr
+2-bromopropane,6358,CC(C)Br
+1-bromobutane,8002,CCCCBr
+ethylene oxide,6354,C1CO1
+ammonia,222,N
+methylamine,6329,CN
+dimethylamine,674,CNC
+carbon dioxide,280,O=C=O

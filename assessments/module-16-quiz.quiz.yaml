@@ -1,0 +1,131 @@
+- id: q1
+  question: >-
+    A perfumer needs octanal from 1-octanol and must not over-oxidise it. The lab has the Jones reagent,
+    hot KMnO4, Dess-Martin periodinane in dry dichloromethane, and NaBH4. Which should she use?
+  options:
+    - The Jones reagent, because it is the strongest and finishes fastest.
+    - Dess-Martin periodinane, because without water no hydrate forms to oxidise further.
+    - Hot KMnO4, because permanganate stops at the aldehyde for primary alcohols.
+    - NaBH4, because it oxidises primary alcohols selectively to aldehydes.
+  correct: 1
+  explanation: >-
+    Aqueous oxidants turn the aldehyde into its hydrate, which oxidises on to octanoic acid. A dry, mild
+    oxidant stops at the aldehyde. NaBH4 is a reducing agent.
+- id: q2
+  question: >-
+    A molecule contains a ketone and a methyl ester. You want the alcohol from the ketone with the ester
+    untouched. Which reagent fits?
+  options:
+    - LiAlH4 in ether, then water, because it is the standard carbonyl reducer.
+    - CH3MgBr, then acid, because Grignard reagents prefer ketones to esters.
+    - NaBH4 in methanol, because it reduces ketones but not esters.
+    - H2 over Pd/C, because under mild conditions it reduces every C=O bond.
+  correct: 2
+  explanation: >-
+    NaBH4 is chemoselective for aldehydes and ketones. LiAlH4 reduces the ester too; a Grignard reagent
+    adds a carbon instead of reducing; mild H2/Pd reduces C=C, not ketones or esters.
+- id: q3
+  question: >-
+    A process chemist runs a Fischer esterification (K about 4) with equal amounts of acid and alcohol
+    and gets 66 % ester. Management wants about 90 % with the same catalyst. Which plan works?
+  options:
+    - Use three equivalents of the alcohol, or remove water as it forms.
+    - Double the reaction time, because the reaction has not finished.
+    - Double the sulfuric acid, because more catalyst shifts the equilibrium.
+    - Add water at the start, because it dissolves the catalyst better.
+  correct: 0
+  explanation: >-
+    At equilibrium only Le Chatelier helps: three equivalents of alcohol give about 90 %, and removing
+    water pulls it further. Time and catalyst only reach equilibrium faster; added water lowers the yield.
+- id: q4
+  question: >-
+    To methylate butanone on its CH3 side (making 3-pentanone) rather than on its CH2 side, which
+    conditions do you use before adding CH3I?
+  options:
+    - Sodium ethoxide in ethanol at reflux, which gives the more stable enolate.
+    - Aqueous NaOH at room temperature, because the CH3 side is more acidic.
+    - A trace of acid, because the less substituted enol forms first and reacts.
+    - LDA in THF at -78 C, which removes the less hindered CH3 proton quickly and completely.
+  correct: 3
+  explanation: >-
+    LDA at low temperature forms the kinetic, less substituted enolate irreversibly. NaOEt forms only a
+    little enolate and lets it equilibrate to the more substituted side; NaOH and acid give side reactions.
+- id: q5
+  question: >-
+    Benzaldehyde (in excess) and acetaldehyde are stirred with NaOH and then heated. Which main
+    condensation product forms, and why?
+  options:
+    - Cinnamaldehyde, because only acetaldehyde can form an enolate and benzaldehyde accepts it.
+    - 2-Butenal, because acetaldehyde reacts only with itself under these conditions.
+    - Acetophenone, because the enolate attacks the ring of benzaldehyde.
+    - No product, because benzaldehyde has no alpha-H and stops the reaction.
+  correct: 0
+  explanation: >-
+    Benzaldehyde has no alpha-H, so it can only act as the acceptor. With benzaldehyde in excess,
+    acetaldehyde's enolate adds mainly to it, and dehydration gives the conjugated 3-phenylprop-2-enal.
+    Some acetaldehyde self-aldol still competes.
+- id: q6
+  question: >-
+    You need 1-chloro-3-nitrobenzene from benzene using Cl2/FeCl3 and HNO3/H2SO4. Which order works?
+  options:
+    - Chlorinate first, because Cl directs the nitro group to the meta position.
+    - Either order, because both groups are deactivating.
+    - Nitrate first, because NO2 directs meta and the chlorine then goes meta.
+    - Neither order, because a deactivated ring cannot be chlorinated at all.
+  correct: 2
+  explanation: >-
+    Chlorine deactivates but directs ortho/para, so chlorinating first gives 2- and 4-chloronitrobenzene.
+    NO2 directs meta. A nitro-substituted ring is slow but still halogenates with a Lewis acid.
+- id: q7
+  question: >-
+    A drug candidate has a tertiary alkylamine (pKaH about 10) and a pyridine ring (pKaH about 5). At
+    blood pH 7.4, what is its main charge state?
+  options:
+    - Neutral, because aromatic nitrogens and amines stay unprotonated in blood.
+    - Doubly charged, because both nitrogens carry lone pairs.
+    - Neutral, because amines are protonated only below pH 4.
+    - Singly charged on the alkylamine, with the pyridine mostly neutral.
+  correct: 3
+  explanation: >-
+    Henderson-Hasselbalch: the alkylamine is over 99 % protonated (pH 2.6 units below its pKaH); the
+    pyridine is under 1 % protonated (pH 2.4 units above). One positive charge in total.
+- id: q8
+  question: >-
+    Methyl alpha-D-glucopyranoside is dissolved in neutral water and its optical rotation is followed
+    for three hours. What do you expect?
+  options:
+    - No change, because the anomeric carbon is an acetal and the ring cannot open.
+    - The rotation drifts to the glucose value of +52.6, as in mutarotation.
+    - The rotation drifts to zero, because the glucoside racemises.
+    - The rotation falls steadily, because the glucoside hydrolyses in neutral water.
+  correct: 0
+  explanation: >-
+    Mutarotation needs the free hemiacetal to open to the aldehyde. A glycoside is an acetal, stable in
+    neutral water, so its rotation stays constant. Acid is needed to hydrolyse it.
+- id: q9
+  question: >-
+    A route to 2-methyl-1-phenylpropan-2-ol uses benzylmagnesium bromide and acetone. A colleague
+    suggests CH3MgBr with phenylacetone (1-phenylpropan-2-one) instead. Which statement is correct?
+  options:
+    - Only the first works, because phenylacetone has no reactive carbonyl group.
+    - Both are valid disconnections at the carbinol carbon; choose by cost and availability.
+    - Neither works, because tertiary alcohols cannot be made with Grignard reagents.
+    - Only the second works, because benzylic halides cannot form Grignard reagents.
+  correct: 1
+  explanation: >-
+    The carbinol carbon carries two methyls and a benzyl group. Breaking C-benzyl gives PhCH2MgBr +
+    acetone; breaking C-methyl gives CH3MgBr + phenylacetone. Both are correct on paper.
+- id: q10
+  question: >-
+    Two plans reach the same target with about 80 % per step. Plan A has 6 steps in one line. Plan B makes
+    two fragments in 4 steps each and joins them in a ninth step. Which delivers more target per mole of
+    the first starting material?
+  options:
+    - Plan A, because 6 steps in total is fewer than 9 steps in total.
+    - Neither, because both plans use 80 % steps and so give the same yield.
+    - Plan B, because its longest linear sequence is 5 steps (33 %) against 6 steps (26 %).
+    - Plan A, because joining two fragments always loses half the material.
+  correct: 2
+  explanation: >-
+    Overall yield follows the longest linear sequence, not the total step count: 0.8^5 = 0.33 for B and
+    0.8^6 = 0.26 for A. Convergent routes win even with more steps in total.

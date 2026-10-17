@@ -1,0 +1,5 @@
+# Route to 2-heptanone, CCCCCC(C)=O, by the acetoacetic ester synthesis (lesson 16.4).
+# One step per line:  step; reaction; reactant SMILES joined by '.'; product SMILES
+# Reaction names and reagents:  py lesson07_practical.py --list
+# Starting materials: starting_materials.csv (anything else must be made in an earlier line).
+# A finished example of the format: route_EX.txt (paracetamol from phenol, lesson 16.7 worked example).

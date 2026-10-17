@@ -1,0 +1,5 @@
+# Worked example from lesson 16.7: paracetamol, N-(4-hydroxyphenyl)acetamide, from phenol.
+# One step per line:  step; reaction; reactant SMILES joined by '.'; product SMILES
+1; nitration; Oc1ccccc1; Oc1ccc([N+](=O)[O-])cc1
+2; nitro_reduction; Oc1ccc([N+](=O)[O-])cc1; Nc1ccc(O)cc1
+3; acylation; Nc1ccc(O)cc1.CC(=O)OC(C)=O; CC(=O)Nc1ccc(O)cc1

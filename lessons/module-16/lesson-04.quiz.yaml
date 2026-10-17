@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A student mixes propanal and butanal with aqueous NaOH and hopes for one crossed aldol product.
+    What should she expect?
+  options:
+    - One product, because the larger aldehyde is always the donor.
+    - About four aldol products, because each aldehyde can act as both donor and acceptor.
+    - No reaction, because NaOH is too weak to form any enolate.
+    - Two products, because self-aldol reactions do not happen when a second aldehyde is present.
+  correct: 1
+  explanation: >-
+    Both aldehydes have alpha-H and both are good acceptors, so two self-aldols and two crossed aldols
+    form. NaOH makes only a trace of enolate, but that is all an aldol needs. Use a non-enolisable
+    partner or a preformed LDA enolate for one product.
+- id: q2
+  question: >-
+    You want to put a methyl group on the CH2 side of 2-methylcyclohexanone, not on the carbon that
+    already has a methyl. Which conditions do you choose before adding CH3I?
+  options:
+    - NaOEt in ethanol at reflux, because heat favours the less substituted side.
+    - Aqueous NaOH at room temperature, because water stabilises the less substituted enolate.
+    - LDA in THF at -78 C, which removes the more accessible CH2 proton fastest and irreversibly.
+    - Catalytic acid, because the enol forms on the less substituted side.
+  correct: 2
+  explanation: >-
+    LDA at low temperature gives the kinetic enolate, on the less hindered CH2 side, and does not let it
+    equilibrate. Equilibrating conditions favour the more substituted, thermodynamic enolate.
+- id: q3
+  question: >-
+    Which target is made most directly by the malonic ester synthesis using 1-bromopropane?
+  options:
+    - Pentanoic acid, CH3CH2CH2CH2COOH.
+    - 2-Hexanone, CH3COCH2CH2CH2CH3.
+    - Butanoic acid, CH3CH2CH2COOH.
+    - Pentan-2-ol, CH3CH(OH)CH2CH2CH3.
+  correct: 0
+  explanation: >-
+    Malonic ester synthesis converts R-X into R-CH2-COOH: propyl + CH2COOH = pentanoic acid. 2-Hexanone
+    would come from the acetoacetic ester synthesis with the same halide (R-CH2-CO-CH3).
+- id: q4
+  question: >-
+    Why does the Claisen condensation of ethyl acetate with sodium ethoxide go to completion, although
+    the C-C bond-forming step itself is unfavourable?
+  options:
+    - Because ethoxide is consumed by the Williamson reaction with the ester.
+    - Because the beta-keto ester product precipitates from ethanol as a neutral solid.
+    - Because ethanol evaporates and shifts the equilibrium.
+    - Because ethoxide deprotonates the product's CH2 (pKa about 11), pulling the equilibrium over.
+  correct: 3
+  explanation: >-
+    The product beta-keto ester is far more acidic than ethanol (pKa 16), so its deprotonation has
+    K of about 10^5 and drains the equilibrium. Acid work-up afterwards gives the neutral product.
