@@ -1,0 +1,8 @@
+# Instructor notes — 26.3 Oxygen transport: haemoglobin and myoglobin
+
+- Objective: the learner writes one-site and Hill binding curves, builds a Hill plot of the real standard human blood curve and reads $n$ and $P_{50}$, explains cooperativity with T/R (MWC) and the iron trigger of 26.2, and predicts and calculates the effects of pH, CO₂, 2,3-BPG, temperature and CO.
+- Likely confusion: $n_H$ versus number of sites; the curving ends of the Hill plot (not experimental error); mmHg versus kPa; fractional saturation versus O₂ content.
+- Misconception: "the Bohr effect helps haemoglobin pick up O₂ in the lungs" — its main use is release at low pH. Second: "myoglobin is a worse haemoglobin" — it has a different job (storage and diffusion inside muscle at very low PO₂).
+- Analogy: a four-seat car that only leaves the car park when most seats are taken and only empties once a few passengers get out; T is the parked car, R the moving one.
+- Expected hands-on result: Part A slope 2.32 between 6 and 150 mmHg; slope 1 for pure T; fever right, stored blood left, CO left. Part B $n$ = 2.63, $P_{50}$ = 26.6 mmHg (20–80 % line); local slopes 1.00/1.82/2.61/3.03/1.88/1.00 at 1/10/26/50/100/500 mmHg; released 23 %/65 % (Hb) vs 3 %/8 % (Mb-like); $P_{50}$ 33.2 (pH 7.20), 21.3 (pH 7.60). Part C: 97 % → about 92 mmHg. Worked example 1: $n$ = 2.67, $P_{50}$ = 26.0; worked example 2: S at 20 mmHg 0.32 → 0.21.
+- Extension: fit the MWC equation with four sites to the standard curve (parameters L, K_R, c); notice how poorly L is determined by smoothed data and discuss why Imai's stepwise Adair constants needed very precise measurements.

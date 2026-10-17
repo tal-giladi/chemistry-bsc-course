@@ -1,0 +1,133 @@
+- id: q1
+  question: >-
+    A marine microbe lives in seawater at pH 8.1. Its genome encodes enzymes to make a catecholate
+    siderophore. Which reasoning best explains why it spends energy on this?
+  options:
+    - Seawater contains almost no iron atoms, so the microbe must collect every one it meets.
+    - Fe2+ is the stable form in oxygenated water and must be oxidised by the siderophore before uptake.
+    - Free Fe3+ is near 1e-21 M at that pH, so only a very strong Fe(III) chelator can collect enough.
+    - The siderophore protects the cell from too much dissolved iron, which is toxic in seawater.
+  correct: 2
+  explanation: >-
+    With Ksp about 1e-39 and [OH-] about 1.3e-6 M, free Fe3+ is far too low to take up directly.
+    Catecholate siderophores bind Fe(III) with formation constants up to about 1e49 and pull it from solids.
+- id: q2
+  question: >-
+    A structural biologist finds a metal site with two cysteine S and two histidine N in a tetrahedron,
+    in a protein that binds DNA and does no chemistry. Which metal is most likely?
+  options:
+    - Zn2+, a borderline, redox-inert ion that suits N and S donors and a structural role.
+    - Ca2+, because DNA-binding proteins need a hard ion to bind phosphate.
+    - Fe3+, because tetrahedral sulfur sites always hold iron.
+    - Mg2+, because it is the most abundant divalent ion in the cell.
+  correct: 0
+  explanation: >-
+    Cys2His2 is the classic zinc finger. Zn2+ is borderline (likes N and S), d10 with no geometric
+    preference, and never changes oxidation state, which suits a purely structural site.
+- id: q3
+  question: >-
+    A model haem complex with a strongly donating axial ligand is five-coordinate Fe(II), diamagnetic,
+    and its iron lies in the porphyrin plane instead of about 0.35 Angstrom above it. What explains the
+    position of the iron?
+  options:
+    - The axial ligand pulls the iron towards itself and out of the ring.
+    - The iron is low-spin d6, with empty eg orbitals, so it is small enough for the ring hole.
+    - The iron has been oxidised to high-spin Fe(III), which is smaller and fits the hole.
+    - The porphyrin is protonated, which pulls any iron into the plane.
+  correct: 1
+  explanation: >-
+    Out-of-plane iron is a consequence of high spin: two eg electrons make the ion too large. A
+    diamagnetic d6 iron is low spin and fits. High-spin Fe(III) would be paramagnetic.
+- id: q4
+  question: >-
+    Resonance Raman spectroscopy of an oxygen-binding protein shows an O-O stretch at 844 cm-1, against
+    about 1105 cm-1 in oxy-haemoglobin and 1556 cm-1 in free O2. What does the bound oxygen look like?
+  options:
+    - Neutral O2 with an unchanged double bond, held only by van der Waals contacts.
+    - Superoxide, like oxy-haemoglobin, since any value below free O2 means superoxo.
+    - An O-O triple bond, because a lower frequency means a stronger bond.
+    - Peroxide with bond order about 1, a weaker bond than the superoxo of haemoglobin.
+  correct: 3
+  explanation: >-
+    Stretching frequency falls as bond order falls. About 1105 cm-1 is superoxo (order 1.5); about 844
+    cm-1 is peroxo (order 1), as in oxyhaemerythrin, where two electrons have moved to O2.
+- id: q5
+  question: >-
+    A blood substitute made of cross-linked haemoglobin has P50 = 12 mmHg and Hill coefficient 1.1.
+    Arterial PO2 is 100 mmHg and tissue 40 mmHg. Compared with normal blood, how will it perform?
+  options:
+    - Better, because higher affinity means it carries more O2 to the tissues.
+    - The same, because the capacity per gram of haemoglobin is unchanged.
+    - Worse, because it stays mostly saturated at 40 mmHg and releases little O2.
+    - Worse, because a Hill coefficient near 1 means it cannot bind O2 in the lungs.
+  correct: 2
+  explanation: >-
+    With P50 12 mmHg and almost no cooperativity it is about 91 % saturated at 100 mmHg and about 79 % at
+    40 mmHg, releasing about 12 % of its O2 against 23 % for blood. Loading in the lungs is not the problem.
+- id: q6
+  question: >-
+    You fit the Hill equation to a 51-point standard O2 curve and get n = 2.65 +/- 0.03, with residuals
+    that form a smooth wave: negative below 15 mmHg, positive near P50, negative near 70 mmHg. What
+    should you conclude?
+  options:
+    - The data are noisy, and more points would make the wave disappear.
+    - The fit is excellent, because the uncertainty in n is only 1 %.
+    - The data are wrong at low pressure and those points should be removed.
+    - The Hill model is too simple: the real Hill slope varies, so the misfit is systematic.
+  correct: 3
+  explanation: >-
+    A structured residual pattern means the model is wrong, not the data. Real haemoglobin has a Hill
+    slope near 1 at both ends and near 3 in the middle; one n cannot follow that, and the small error bar
+    is only fit statistics on smoothed data.
+- id: q7
+  question: >-
+    Stored blood loses most of its 2,3-bisphosphoglycerate within a couple of weeks. Right after a large
+    transfusion of such blood, what happens to O2 delivery?
+  options:
+    - It falls, because the curve shifts left and the haemoglobin holds its O2 more tightly.
+    - It rises, because without 2,3-BPG the curve shifts right and releases more O2.
+    - It is unchanged, because 2,3-BPG affects only fetal haemoglobin.
+    - It falls, because 2,3-BPG is needed for O2 to bind in the lungs.
+  correct: 0
+  explanation: >-
+    2,3-BPG binds and stabilises the low-affinity T state. Without it P50 drops and the blood releases
+    less O2 at tissue PO2 until the red cells rebuild their 2,3-BPG.
+- id: q8
+  question: >-
+    Using E(NAD+/NADH) = -0.32 V and E(1/2 O2/H2O) = +0.816 V at pH 7, what is the standard Gibbs
+    energy for oxidising one NADH by O2?
+  options:
+    - About -110 kJ/mol, from -F times 1.136 V with one electron.
+    - About -219 kJ/mol, from -2F times 1.136 V.
+    - About -438 kJ/mol, from -4F times 1.136 V, since O2 takes four electrons.
+    - About -299 kJ/mol, from -2F times (0.32 + 1.229) V.
+  correct: 1
+  explanation: >-
+    NADH gives two electrons, so dG = -2 x 96485 x 1.136 = -219 kJ/mol. Four electrons is per O2 (two
+    NADH); 1.229 V is the O2 potential at pH 0, not at pH 7.
+- id: q9
+  question: >-
+    A designed protein moves an electron from a Ru complex to a copper site 12 Angstrom away. Raising
+    the driving force from 0.7 eV to 1.5 eV makes the transfer slower. Lambda is about 0.7 eV. Why?
+  options:
+    - The extra driving force heats the protein and unfolds the copper site.
+    - The larger driving force lengthens the tunnelling path through the protein.
+    - The reaction has entered the Marcus inverted region, where the barrier grows again.
+    - Copper cannot accept electrons with more than 1 eV of energy.
+  correct: 2
+  explanation: >-
+    The Marcus barrier (dG + lambda)^2/(4 lambda) is zero at -dG = 0.7 eV and grows again beyond it.
+    The distance is unchanged, so only the activation factor changed.
+- id: q10
+  question: >-
+    During hard exercise a person's O2 uptake rises from 0.25 to 2.5 L/min. Which statement about the
+    respiratory chain is most accurate?
+  options:
+    - The electron current to cytochrome c oxidase rises about tenfold, to roughly 700 A.
+    - The current stays near 70 A, because each O2 still takes four electrons.
+    - The current falls, because acidosis lowers the potential of O2.
+    - The current rises fourfold, because only one O atom per O2 is reduced at high rates.
+  correct: 0
+  explanation: >-
+    The current is 4F times the moles of O2 reduced per second. Ten times more O2 means about ten times
+    more current: 72 A at rest becomes about 720 A, and the heat output rises with it.

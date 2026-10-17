@@ -1,0 +1,21 @@
+# Module 26 plan — Bio-inorganic Chemistry
+
+Technion: 01240210 Bio-inorganic Chemistry (2.5 points; plan.md 3.1: bonding in transition-metal complexes, their magnetic and optical properties, metals in respiration and enzymes). Depth: an introductory bio-inorganic course (Bertini, Gray, Lippard and Valentine level, LibreTexts edition), built on the coordination chemistry of Module 18.
+Builds on: 06.1 (membranes, compartments), 06.2 (proteins, PDB, Mol*), 06.4 (ATP, metabolism), 08.6 (reduction potentials, Nernst), 12.3 (tunnelling), 13.6 (K, activity), 05.3 (curve_fit and uncertainty), 18.3 (coordination number, geometry, chelate effect), 18.4 (crystal and ligand field, CFSE, high/low spin, Jahn–Teller), 18.5 (colour, d–d and charge-transfer bands, magnetism), 22.5 (catalysis, Michaelis–Menten). Forward: 29 (biochemistry and enzymology), 31 (computational lab), 32 (electrochemistry).
+Simulations: none for this module (outline §5 lists "—").
+Hands-on: Python labs in `labs/module-26/` (numpy, scipy, matplotlib), helper `bio26.py`, trimmed PDB files in `data/` (CC0), `fetch_pdb.py` for more structures, pencil sets with answers in `<details>`, one kitchen experiment (26.1 iron from fortified cereal with a magnet), one optional pulse-oximeter reading (26.3).
+Real data:
+- `hb_standard_curve.csv` — standard human blood O2 dissociation curve, 37 °C, pH 7.40, 51 points 1–500 mmHg: Severinghaus (1979) Table 1, author's revised PDF (2007), interpolated from the Roughton–Severinghaus (1973) measurements.
+- Myoglobin P50 2.39 Torr, n = 1, 37 °C, pH 7.0 (Schenkman et al. 1997, PubMed abstract).
+- PDB 1A6M, 2DN1, 2DN2, 3KS3, 1CLL, 1PLC (RCSB API checked 2026-10-17), trimmed to 10 Å around metals.
+- Gray & Winkler (2005) tunnelling timetable; Jakubowski E°' table; Bertini Table 1.4 (Fe potentials), Table 4.6 (O2/CO affinities).
+Module practical: 26.4 Part B — fit the standard O2 curve with the Hill equation (all points and 20–80 %), residuals against the Severinghaus equation, K_T and K_R from the Hill-plot ends and the cooperativity free energy, O2 delivery with and without cooperativity and with the Bohr shift, then the O2 flow as an electron current and power of the respiratory chain; lab-report template.
+
+| Lesson | Objectives (short) | Prerequisites | Hands-on | Sources to verify |
+|---|---|---|---|---|
+| 26.1 Metals in biology: why these elements | bulk vs trace metals and their jobs; availability (Fe(OH)3 Ksp, free Fe3+ 1e-18 M at pH 7) and siderophores; HSAB and Irving–Williams to match metals to sites; read donor sets in PDB structures | 18.3, 06.2, 13.6 | Python donor sets in 1A6M, 3KS3, 1CLL, 1PLC + free Fe3+; kitchen cereal iron with magnet; pencil | Bertini ch. 1 (Ksp, body iron), OpenLearn enterobactin 1e49, RCSB entries, RSC cereal experiment |
+| 26.2 Bonding in transition-metal complexes revisited | haem as a strong-field macrocycle; deoxy HS Fe(II) out of plane vs oxy LS in plane; Fe–O2 bonding (Pauling vs Weiss, superoxo character); CO vs O2 discrimination; blue copper and the entatic idea | 26.1, 18.4, 18.5 | Python spin states + Fe out-of-plane in 2DN2/2DN1/1A6M; pencil box diagrams | Park et al. 2006 (RCSB), Bertini ch. 4 Table 4.6, Shannon radii |
+| 26.3 Oxygen transport: haemoglobin and myoglobin | binding curve for one site; Hill equation and plot; cooperativity (T/R, MWC idea); Bohr, CO2, 2,3-BPG, CO; why cooperativity delivers more O2 | 26.2, 06.2, 05.3 | Python Hill plot of standard curve, Mb comparison, Bohr shift; optional SpO2 reading; pencil | Severinghaus 1979/2007, Schenkman 1997, LibreTexts (Jakubowski & Flatt 5.3) |
+| 26.4 Metalloenzymes, electron transfer and respiration (module practical) | Lewis-acid catalysis (CA II Zn–OH); redox enzymes; Marcus theory (distance, driving force, λ); respiratory chain and cytochrome c oxidase energetics | 26.3, 22.5, 08.6, 06.4, 12.3 | Part A Marcus and chain energetics; Part B module practical | Gray & Winkler 2005, Jakubowski E°' table, Bertini ch. 2 and 6, OpenStax Bio 7.4 |
+
+Safety: no lab reagents. 26.1: strong (neodymium) magnets pinch skin and are dangerous if swallowed — keep them and the bag away from children; do not eat the cereal slurry. 26.3: pulse oximeter reading at rest only, no breath-holding, not a medical test.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A sample of deoxy-myoglobin is oxidised to met-myoglobin with water as the sixth ligand. How does
+    its spin-only magnetic moment change?
+  options:
+    - It falls from 4.90 to 1.73 BM, because Fe(III) is always low spin in a porphyrin.
+    - It rises from 4.90 to 5.92 BM, because high-spin d5 has five unpaired electrons.
+    - It stays at 4.90 BM, because oxidation does not change the number of unpaired electrons.
+    - It falls to zero, because adding a sixth ligand forces all electrons to pair.
+  correct: 1
+  explanation: >-
+    Deoxy Fe(II) is high-spin d6 with four unpaired electrons (4.90 BM). Water is a weak-field ligand,
+    so met Fe(III) stays high spin, d5 with five unpaired electrons and sqrt(35) = 5.92 BM.
+- id: q2
+  question: >-
+    In deoxy-haemoglobin the iron sits about 0.35 Angstrom out of the porphyrin plane; in oxy-haemoglobin
+    it lies in the plane. What is the main cause of the difference?
+  options:
+    - O2 is a heavier ligand and pulls the iron towards the distal side.
+    - The proximal histidine is protonated in deoxy-Hb and pushes the iron away.
+    - High-spin Fe(II) has two eg electrons that make it too large for the ring hole.
+    - The porphyrin ring is reduced in deoxy-Hb and its hole becomes smaller.
+  correct: 2
+  explanation: >-
+    The eg orbitals point at the ligands, so occupying them lengthens the bonds. High-spin Fe(II) is about
+    0.17 Angstrom larger than low-spin Fe(II) and cannot sit in the flat ring until O2 binding makes it low spin.
+- id: q3
+  question: >-
+    Oxy-myoglobin is diamagnetic and has an O-O stretch near 1105 cm-1, against about 1556 cm-1 in free
+    O2. Which description fits both facts best?
+  options:
+    - Fe(III) bound to superoxide, with the two unpaired spins strongly coupled so they cancel.
+    - Fe(II) bound to triplet O2, with the O2 spins hidden by the protein.
+    - Fe(IV) bound to peroxide, with no unpaired electrons on either partner.
+    - Fe(II) bound to singlet O2 with an unchanged O=O double bond.
+  correct: 0
+  explanation: >-
+    A stretch near 1105 cm-1 means a bond order of about 1.5, the superoxo value. Low-spin Fe(III) and
+    superoxide each have one unpaired electron, and strong antiferromagnetic coupling makes the unit diamagnetic.
+- id: q4
+  question: >-
+    A simple imidazole-haem binds CO 500 times more strongly than O2 (M = 500); myoglobin has M = 28.
+    Replacing the distal histidine by glycine raises M to about 1300. What does this tell you?
+  options:
+    - The distal histidine binds CO directly and blocks it from the iron.
+    - The glycine mutant is unfolded, so it behaves like a bare haem.
+    - CO binding requires a hydrogen bond, which glycine cannot give.
+    - The distal histidine stabilises bound O2 by a hydrogen bond, which CO does not gain.
+  correct: 3
+  explanation: >-
+    Bound O2 carries partial negative charge (superoxo character) and accepts a hydrogen bond from the
+    distal N-H; CO is nearly neutral. Removing the histidine loses that extra O2 stabilisation, so M rises.

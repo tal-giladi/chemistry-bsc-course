@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A Hill plot of a purified haemoglobin variant is a straight line of slope 1.0 over the whole
+    pressure range, with P50 = 8 mmHg. What can you conclude?
+  options:
+    - The variant has lost cooperativity; its four sites bind independently with one affinity.
+    - The variant binds only one O2 per tetramer, because the slope equals the number of sites.
+    - The variant is fully cooperative, because a straight Hill plot means all-or-none binding.
+    - The variant is locked in the T state, because a slope of 1 always means low affinity.
+  correct: 0
+  explanation: >-
+    Slope 1 everywhere means no cooperativity. The Hill coefficient is not the number of sites, and a
+    P50 of 8 mmHg is a much higher affinity than T-state haemoglobin.
+- id: q2
+  question: >-
+    Blood reaches working muscle at PO2 20 mmHg. Haemoglobin has n = 2.6 and P50 = 27 mmHg; a
+    hypothetical one-site carrier has the same P50. Starting from 100 mmHg, which releases more O2?
+  options:
+    - The one-site carrier, because its curve is steeper at low pressure.
+    - Both release the same amount, because they share the same P50.
+    - Haemoglobin, about 65 % of its O2 against about 36 % for the one-site carrier.
+    - Haemoglobin, but only because it carries four O2 per molecule instead of one.
+  correct: 2
+  explanation: >-
+    The sigmoid curve is near saturation at 100 mmHg and drops steeply below 40 mmHg, so haemoglobin
+    unloads most of its O2. Per site, the one-site hyperbola changes far less between 100 and 20 mmHg.
+- id: q3
+  question: >-
+    A runner's leg muscle reaches pH 7.20 and 41 C during a sprint. How does this change O2 delivery
+    from blood arriving at the muscle?
+  options:
+    - Delivery falls, because acid and heat damage the haem and block O2 binding.
+    - Delivery rises, because acid and heat lower haemoglobin's affinity and shift the curve right.
+    - Delivery is unchanged, because the Bohr effect acts only in the lungs.
+    - Delivery rises, because acid raises haemoglobin's affinity so it carries more O2 to the muscle.
+  correct: 1
+  explanation: >-
+    H+ binds T-state haemoglobin and stabilises it (Bohr effect), and warming also lowers affinity. P50
+    rises (about 33 mmHg at pH 7.20), so more O2 is released at the same PO2.
+- id: q4
+  question: >-
+    A patient with mild carbon monoxide poisoning has 20 % of haem sites bound to CO. Why is O2
+    delivery hit harder than a 20 % loss of capacity would suggest?
+  options:
+    - CO also oxidises the iron to Fe(III), so the remaining sites cannot bind O2 at all.
+    - CO lowers the pH of blood and causes a strong Bohr shift to the right.
+    - CO destroys 2,3-BPG, so the red cells lose all their O2 in the lungs.
+    - CO pushes the tetramers towards R, so the remaining O2 is held more tightly and released less.
+  correct: 3
+  explanation: >-
+    Bound CO favours the high-affinity R structure, shifting the curve of the remaining sites to the
+    left. Less O2 binds and the O2 that is bound is harder to unload in the tissues.
+- id: q5
+  question: >-
+    From two points of a saturation curve, 20 % at 15 mmHg and 80 % at 40 mmHg, what Hill coefficient
+    do you get?
+  options:
+    - About 1.4, from the ratio of the two pressures, 40/15 = 2.7, divided by 2.
+    - About 2.8, from (log 4 - log 0.25) divided by log(40/15).
+    - About 4.0, the number of sites, since the curve is sigmoid.
+    - About 0.6, from log(40/15) divided by (log 4 - log 0.25).
+  correct: 1
+  explanation: >-
+    log10(0.8/0.2) = 0.602 and log10(0.2/0.8) = -0.602, a difference of 1.204; log10(40/15) = 0.426.
+    The slope is 1.204/0.426 = 2.8. Inverting the ratio gives the 0.6 slip.

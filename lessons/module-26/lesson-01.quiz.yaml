@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A soil bacterium lives at pH 8. Taking Ksp of Fe(OH)3 as 1e-39, what free Fe3+ concentration can it
+    expect, and what does that imply?
+  options:
+    - About 1e-21 M, so it must secrete a chelator such as a siderophore to obtain iron.
+    - About 1e-18 M, the same as at pH 7, because Ksp does not depend on pH.
+    - About 1e-6 M, enough for the cell to take up free ions through a channel.
+    - About 1e-15 M, because raising the pH by one unit raises free Fe3+ a thousandfold.
+  correct: 0
+  explanation: >-
+    [OH-] = 1e-6 M at pH 8, so [Fe3+] = 1e-39/(1e-6)^3 = 1e-21 M. Each pH unit lowers free Fe3+ a
+    thousandfold, which is why microbes rely on strong iron(III) chelators.
+- id: q2
+  question: >-
+    You are designing a protein site meant to hold Ca2+ and not Zn2+. Which donor set is the best
+    starting point?
+  options:
+    - Three histidine nitrogens and one water, in a tetrahedron.
+    - Two cysteine sulfurs and two histidine nitrogens.
+    - Six or seven oxygens from carboxylates, carbonyls and water.
+    - Four cysteine sulfurs arranged in a square plane.
+  correct: 2
+  explanation: >-
+    Ca2+ is a large hard ion that prefers many oxygen donors and coordination numbers of 6 to 8, as in
+    calmodulin. Histidine and cysteine sets suit borderline and soft ions such as Zn2+ and Cu+.
+- id: q3
+  question: >-
+    A zinc enzyme loses activity when micromolar Cu2+ is added to the buffer. What is the most likely
+    explanation?
+  options:
+    - Cu2+ oxidises the Zn2+ ion to Zn3+, which no longer binds water.
+    - Cu2+ forms more stable complexes than Zn2+, so it displaces zinc from the site.
+    - Cu2+ precipitates the substrate, so the enzyme has nothing to work on.
+    - Cu2+ is softer than Zn2+, so it cannot bind the site and blocks the entrance instead.
+  correct: 1
+  explanation: >-
+    The Irving-Williams series peaks at Cu2+, so copper outcompetes zinc for most ligand sets. Zinc has
+    no accessible +3 state, and cells keep free copper near zero for exactly this reason.
+- id: q4
+  question: >-
+    In a crystal structure you find a Cu ion with two histidine N at 1.9-2.1 Angstrom, a cysteine S at
+    2.07 Angstrom and a methionine S at 2.82 Angstrom. How should you describe the site?
+  options:
+    - CN 3 with an N2S set, because only bonds shorter than 2.5 Angstrom count for any donor.
+    - CN 5, because a backbone carbonyl must complete a square pyramid.
+    - CN 2 with an N2 set, because sulfur donors never bind copper in proteins.
+    - CN 4 with an N2S2 set, counting the long but real Cu-S(Met) bond.
+  correct: 3
+  explanation: >-
+    Sulfur is larger than N or O, so Cu-S bonds near 2.8-2.9 Angstrom still count. Plastocyanin's copper
+    is a distorted N2S2 tetrahedron, the classic blue-copper site.

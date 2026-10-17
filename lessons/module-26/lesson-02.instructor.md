@@ -1,0 +1,8 @@
+# Instructor notes — 26.2 Bonding in transition-metal complexes revisited
+
+- Objective: the learner applies d-electron counting, spin states and ionic radii (18.4, 18.5) to haem iron: predicts moments for deoxy, oxy and met forms, explains the out-of-plane iron and its movement on O₂ binding from real structures, weighs Pauling versus Weiss with the O–O stretch, and explains CO/O₂ discrimination and the entatic blue-copper site.
+- Likely confusion: formal oxidation state of iron in oxy-Hb (Fe(II) in Pauling, Fe(III) in Weiss; the truth is in between); "diamagnetic" Fe(III)–superoxide; His F8 numbering (α87, β92, Mb93).
+- Misconception: "the red colour of blood is a d–d band" (Part C shows $\varepsilon \sim 10^5$ per haem). Second: "CO binds haem 200 times better because of the protein" — the protein actually reduces the CO preference relative to free haem.
+- Analogy: the high-spin iron is a ball slightly too big for the hole in a ring; when it becomes low spin it shrinks and drops into the hole, pulling the string (proximal histidine) tied below it.
+- Expected hands-on result: moments 4.90, 0, 5.92, 1.73 BM. Deoxy-Hb (2DN2) out-of-plane +0.39/+0.35/+0.31/+0.32 Å (mean +0.34); oxy-Hb (2DN1) +0.05/−0.03; oxy-Mb (1A6M) +0.02. Fe–O 1.78–1.82 Å, Fe–O–O 123–126°, Fe–N(His) 2.16–2.21 → 2.06–2.07 Å. OMLC: oxy 414/542/576 nm, deoxy 432/556 nm, Soret ≈ 5.2–5.5 × 10⁵ per tetramer. Worked examples: h ≈ 0.84 Å naive estimate vs 0.34 Å measured; ΔΔG = 7.1 kJ/mol.
+- Extension: download 2DN3 (carbonmonoxy-Hb, same paper; check the entry) and compare Fe–C–O (near linear) with Fe–O–O; or compute the doming of the porphyrin (mean displacement of the 20 ring carbons) in deoxy vs oxy.
