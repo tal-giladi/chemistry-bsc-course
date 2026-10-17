@@ -1,0 +1,8 @@
+/* glassware: page-specific styles (shared ones are in ../common/sim.css) */
+fieldset { border: 0; padding: 0; margin: 6px 0; }
+legend { padding: 0; margin-bottom: 2px; }
+.balance { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 6px 0 8px; }
+#w-actions button { flex: 1 1 150px; justify-content: center; text-align: center; }
+#p-view { height: 420px; }
+.hit { color: var(--good); }
+.miss { color: var(--bad); font-weight: 600; }

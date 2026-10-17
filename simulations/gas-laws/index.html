@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gas laws</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="gas-laws.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Gas laws</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="ideal" aria-controls="tab-ideal" id="tabbtn-ideal">Ideal gas</button>
+    <button type="button" data-tab="real" aria-controls="tab-real" id="tabbtn-real">Real gas (van der Waals)</button>
+    <button type="button" data-tab="kinetic" aria-controls="tab-kinetic" id="tabbtn-kinetic">Kinetic theory in a box</button>
+    <button type="button" data-tab="clement" aria-controls="tab-clement" id="tabbtn-clement">Clément–Desormes bench</button>
+  </div>
+
+  <!-- ===================== IDEAL ===================== -->
+  <section id="tab-ideal" aria-labelledby="tabbtn-ideal">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Gas in a cylinder</h2>
+          <div class="field"><label for="i-n">Amount n / mol</label><input type="number" id="i-n" min="0.001" max="5" step="0.001" value="0.100"></div>
+          <div class="field"><label for="i-T">Temperature T / K</label><input type="number" id="i-T" min="50" max="2000" step="0.01" value="298.15"></div>
+          <div class="field">
+            <label for="i-V">Volume V / L</label>
+            <output id="i-V-out" for="i-V">2.000</output>
+            <input type="range" id="i-V" min="0.5" max="10" step="0.05" value="2">
+          </div>
+          <div class="row"><span class="readout" id="i-p" aria-live="polite">—</span><span class="small muted">gauge, absolute pressure</span></div>
+          <div class="row">
+            <button type="button" class="primary" id="i-rec">Record reading</button>
+            <button type="button" id="i-clear">Clear table</button>
+          </div>
+          <canvas id="i-cyl" class="plot short" aria-label="Cylinder with a piston; the dots stand for molecules"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Compress or expand: work</h2>
+          <p class="small">Start: the n, T and V above. Choose the final volume and how you push.</p>
+          <div class="field"><label for="w-V2">Final volume V₂ / L</label><input type="number" id="w-V2" min="0.1" max="50" step="0.01" value="1.00"></div>
+          <div class="field"><label for="w-gas">Gas</label><select id="w-gas"><option value="1.4">air (diatomic, γ = 1.40, Cv = 5R/2)</option><option value="1.6667">argon (monatomic, γ = 5/3, Cv = 3R/2)</option></select></div>
+          <div class="row">
+            <button type="button" id="w-rev">Slowly (reversible, isothermal)</button>
+            <button type="button" id="w-one">Suddenly (one step, p<sub>ext</sub> = final p)</button>
+            <button type="button" id="w-adi">Fast and insulated (reversible adiabatic)</button>
+          </div>
+          <div class="kv" id="w-out"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Your readings: p against 1/V</h2>
+          <canvas id="i-plot" class="plot" aria-label="Pressure against reciprocal volume for the recorded readings with the fitted line"></canvas>
+          <div class="kv" id="i-fit"></div>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="i-table"><thead><tr><th>#</th><th>n / mol</th><th>T / K</th><th>V / L</th><th>1/V / L⁻¹</th><th>p / kPa</th></tr></thead><tbody></tbody></table>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>p–V diagram of the last process</h2>
+          <canvas id="w-plot" class="plot" aria-label="Pressure against volume showing the path and the work area"></canvas>
+          <p class="small muted">The work done on the gas is minus the area under the path of p<sub>ext</sub> against V (IUPAC sign: w &gt; 0 when the gas is compressed).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REAL ===================== -->
+  <section id="tab-real" aria-labelledby="tabbtn-real" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Gas and temperature</h2>
+          <div class="field"><label for="r-gas">Gas</label><select id="r-gas"></select></div>
+          <div class="field"><label for="r-T">Temperature T / K</label><input type="number" id="r-T" min="20" max="1500" step="1" value="320"></div>
+          <div class="field"><label for="r-pmax">Highest pressure / bar</label><input type="number" id="r-pmax" min="10" max="1000" step="10" value="150"></div>
+          <div class="row">
+            <button type="button" class="primary" id="r-addZ">Add Z–p curve</button>
+            <button type="button" id="r-addIso">Add p–V isotherm</button>
+            <button type="button" id="r-clear">Clear plots</button>
+          </div>
+          <div class="kv small" id="r-consts"></div>
+        </div>
+        <div class="panel">
+          <h2>Probe one state</h2>
+          <div class="field">
+            <label for="r-p">Pressure / bar</label>
+            <output id="r-p-out" for="r-p">50</output>
+            <input type="range" id="r-p" min="1" max="150" step="1" value="50">
+          </div>
+          <div class="kv" id="r-probe"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Compression factor Z = pV<sub>m</sub>/RT</h2>
+          <canvas id="r-zplot" class="plot" aria-label="Compression factor against pressure"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Isotherms p against V<sub>m</sub></h2>
+          <canvas id="r-iso" class="plot tall" aria-label="Van der Waals isotherms with the Maxwell equal-area line below the critical temperature"></canvas>
+          <p class="small muted">Dashed: the van der Waals loop, which is not physical. Solid flat line: the Maxwell equal-area construction, the two-phase region. Its pressure is the model's vapour pressure.</p>
+          <div class="table-wrap"><table class="data" id="r-isotable"><thead><tr><th>T / K</th><th>Vapour pressure / bar</th><th>V<sub>m</sub> liquid / L mol⁻¹</th><th>V<sub>m</sub> gas / L mol⁻¹</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KINETIC ===================== -->
+  <section id="tab-kinetic" aria-labelledby="tabbtn-kinetic" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Hard spheres in a cubic box</h2>
+          <div class="field"><label for="k-gas">Gas</label><select id="k-gas"></select></div>
+          <div class="field"><label for="k-T">Wall temperature T / K</label><input type="number" id="k-T" min="20" max="3000" step="1" value="300"></div>
+          <div class="field"><label for="k-N">Number of atoms N</label><select id="k-N"><option>300</option><option selected>1000</option><option>2000</option><option>3000</option></select></div>
+          <div class="field"><label for="k-L">Box edge L / nm</label><select id="k-L"><option>15</option><option selected>20</option><option>30</option></select></div>
+          <div class="row"><label><input type="checkbox" id="k-thermal" checked> Walls at temperature T (thermal walls)</label></div>
+          <div class="field">
+            <label for="k-speed">Simulation speed</label>
+            <output id="k-speed-out" for="k-speed">40 steps/frame</output>
+            <input type="range" id="k-speed" min="1" max="120" step="1" value="40">
+          </div>
+          <div class="row">
+            <button type="button" class="primary" id="k-run">Pause</button>
+            <button type="button" id="k-reset">Restart (all atoms at one speed)</button>
+          </div>
+          <div class="row">
+            <button type="button" id="k-export">Export 3000 speeds (CSV)</button>
+          </div>
+          <div class="kv" id="k-out" aria-live="off"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>The box (x–y projection)</h2>
+          <canvas id="k-box" class="plot" aria-label="Atoms in the box, coloured by speed"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Speed distribution</h2>
+          <canvas id="k-hist" class="plot" aria-label="Histogram of atom speeds with the Maxwell-Boltzmann curve"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLEMENT ===================== -->
+  <section id="tab-clement" aria-labelledby="tabbtn-clement" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Bottle, tap and water manometer</h2>
+          <div class="field"><label for="c-gas">Gas in the bottle</label><select id="c-gas"><option value="1.401">dry air (γ = 1.401)</option><option value="1.667">argon (γ = 1.667)</option><option value="1.289">carbon dioxide (γ = 1.289)</option></select></div>
+          <div class="field"><label for="c-p0">Room pressure / kPa</label><input type="number" id="c-p0" min="90" max="105" step="0.1" value="101.3"></div>
+          <div class="field"><label for="c-topen">Tap opening time / s</label><input type="number" id="c-topen" min="0.05" max="20" step="0.05" value="1.0"></div>
+          <div class="row"><label><input type="checkbox" id="c-leak"> Leaky stopper</label></div>
+          <div class="row">
+            <button type="button" id="c-pump">Pump one stroke</button>
+            <button type="button" id="c-wait">Wait 30 s</button>
+            <button type="button" id="c-wait3">Wait 3 min</button>
+          </div>
+          <div class="row">
+            <button type="button" class="primary" id="c-h1">Read h₁</button>
+            <button type="button" class="primary" id="c-open">Open the tap</button>
+            <button type="button" class="primary" id="c-h2">Read h₂</button>
+          </div>
+          <div class="row">
+            <button type="button" id="c-auto">Run a full trial (correct waits)</button>
+            <button type="button" id="c-auto8">Run 8 trials</button>
+          </div>
+          <div class="kv small" id="c-state"></div>
+          <div class="log" id="c-log" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Manometer</h2>
+          <div class="cd-wrap">
+            <canvas id="c-mano" class="mano" aria-label="Water manometer showing the overpressure in centimetres of water"></canvas>
+            <canvas id="c-trace" class="plot" aria-label="Manometer height against time"></canvas>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Trials</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="c-table"><thead><tr><th>Trial</th><th>t<sub>open</sub> / s</th><th>h₁ / cm</th><th>h₂ / cm</th><th>γ ≈ h₁/(h₁−h₂)</th><th>γ (log form)</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="c-summary"></div>
+          <div class="row">
+            <button type="button" id="c-export">Export trial,h1_cm,h2_cm (CSV)</button>
+            <button type="button" id="c-clear">Clear trials</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <h2>Export</h2>
+    <div class="row">
+      <button type="button" id="x-ideal">Ideal-gas readings CSV</button>
+      <button type="button" id="x-real">Real-gas curves CSV</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li><b>Boyle's law:</b> fix n and T, set five volumes, record p each time, plot p against 1/V. The slope is nRT, so R = slope/(nT).</li>
+        <li><b>Real gas:</b> choose the gas and T, plot Z against p; below T<sub>c</sub> plot isotherms and read the flat two-phase pressure.</li>
+        <li><b>Kinetic box:</b> let the histogram settle, then read p, the rms speed and T = M⟨v²⟩/3R; export speeds for the Python analysis.</li>
+        <li><b>Clément–Desormes:</b> pump a little air in, wait until the manometer stops falling, read h₁; open the tap about 1 s; close it, wait until the manometer stops rising, read h₂; γ ≈ h₁/(h₁ − h₂).</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Plotting p against 1/V turns Boyle's hyperbola into a straight line through the origin, so a slope and its uncertainty come from a linear fit.</li>
+        <li>Z shows the departure from ideal: Z &lt; 1 when attractions dominate, Z &gt; 1 when the molecules' own volume does.</li>
+        <li>Waiting after pumping lets the compression heat leave; the short opening is an adiabatic expansion; waiting after closing lets the gas return to room temperature at constant volume.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Gas under pressure stores energy. Real Clément–Desormes setups use 10–20 cm of water (1–2 kPa), a plastic or taped vessel and eye protection. In this model the stopper pops above about 35 cm.</li>
+        <li>Mercury manometers are no longer used: mercury vapour is toxic. Water or oil is used instead.</li>
+        <li>Compressing gas fast heats it (a bicycle pump, a diesel engine); expanding it fast cools it. High-pressure CO₂ near its critical point (31 °C, 73.8 bar) needs rated equipment.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Tap open too long: heat leaks into the cold gas, h₂ is small and γ comes out low. Too short: the pressure has not reached room pressure and the gas surges; γ scatters both ways.</li>
+        <li>Reading h₁ or h₂ before the manometer settles; a leaky stopper (h falls while you wait).</li>
+        <li>In the box: reading T or p before the speed distribution has relaxed; a few thousand atoms fluctuate by 1–2 %.</li>
+        <li>Celsius instead of kelvin, g/mol instead of kg/mol in √(3RT/M).</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the readings and fit p = b·(1/V) in Python to get R with its uncertainty. Export 3000 speeds (column <span class="mono">speed_m_s</span>) and the trials (<span class="mono">trial,h1_cm,h2_cm</span>) for <span class="mono">lesson01_gases.py</span> (Module 23). Each γ trial has a reading uncertainty of about 0.05 cm per height, which becomes about 1 % in γ because h₁ − h₂ is a difference.</p>
+    </details>
+    <p class="small muted">Not trained here: handling a real pump, tap and manometer, or the feel of a seal that leaks.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Constants: R = 8.314462618 J mol⁻¹ K⁻¹ and k<sub>B</sub> = 1.380649 × 10⁻²³ J/K (CODATA 2022, exact). Van der Waals a and b from the CRC Handbook table quoted by Atkins. Hard-sphere diameters are typical kinetic (collision) diameters. The ideal-gas gauge has 0.2 % random noise. The Clément–Desormes model: damped flow through the tap, adiabatic change of the gas left in the bottle, and Newtonian heat exchange with the room (time constants tuned so that a 1 s opening loses about 1 % of the cooling and the closed bottle settles in 2–3 minutes).
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="gas-laws.js"></script>
+</body>
+</html>

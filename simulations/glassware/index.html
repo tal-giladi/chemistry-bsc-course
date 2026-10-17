@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glassware bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="glassware.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Glassware bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="weighing" aria-controls="tab-weighing" id="tabbtn-weighing">Weighing</button>
+    <button type="button" data-tab="dilution" aria-controls="tab-dilution" id="tabbtn-dilution">Dilution</button>
+    <button type="button" data-tab="parallax" aria-controls="tab-parallax" id="tabbtn-parallax">Reading a meniscus</button>
+  </div>
+
+  <!-- ===================== WEIGHING ===================== -->
+  <section id="tab-weighing" aria-labelledby="tabbtn-weighing">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Analytical balance (readability 0.1 mg)</h2>
+          <div class="balance" aria-live="polite">
+            <span class="readout" id="w-display">0.0000 g</span>
+            <span class="small muted" id="w-pan">Pan: empty</span>
+          </div>
+          <div class="kv small" id="w-clock"></div>
+          <fieldset class="row">
+            <legend class="small">Method for this run</legend>
+            <label><input type="radio" name="w-method" value="paper" checked> weighing paper (tare, add, tip in)</label>
+            <label><input type="radio" name="w-method" value="diff"> by difference from a weighing bottle</label>
+          </fieldset>
+          <div class="row"><button type="button" class="primary" id="w-new">Start a new run</button></div>
+          <h3>Actions</h3>
+          <div class="row" id="w-actions">
+            <button type="button" data-act="paper">Place weighing paper on pan</button>
+            <button type="button" data-act="bottle">Place weighing bottle on pan</button>
+            <button type="button" data-act="remove">Take item off pan</button>
+            <button type="button" data-act="tare">Tare (zero)</button>
+            <button type="button" data-act="scoop">Spatula: add a scoop to the paper</button>
+            <button type="button" data-act="pinch">Spatula: add a pinch</button>
+            <button type="button" data-act="unpinch">Spatula: take a pinch back</button>
+            <button type="button" data-act="tip">Tip paper into beaker</button>
+            <button type="button" data-act="tap">Tap solid from bottle into beaker</button>
+            <button type="button" data-act="taplittle">Tap gently (a little)</button>
+            <button type="button" data-act="record" class="primary">Record the reading</button>
+            <button type="button" data-act="wait">Wait 30 s</button>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" id="w-doors"> Draft-shield doors open</label>
+            <label><input type="checkbox" id="w-warm"> Weighing bottle still warm from the oven</label>
+          </div>
+          <div class="row">
+            <button type="button" id="w-finish">Finish run and compute the mass</button>
+            <button type="button" id="w-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="w-seed"></span></p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Notebook for this run</h2>
+          <div class="log" id="w-log" aria-live="polite"></div>
+          <div class="kv" id="w-runinfo"></div>
+        </div>
+        <div class="panel">
+          <h2>Results</h2>
+          <div class="table-wrap">
+            <table class="data" id="w-results">
+              <thead><tr><th>Run</th><th>Method</th><th>Reported mass / g</th><th>True mass in beaker / g</th><th>Error / mg</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="row"><button type="button" id="w-reveal">Reveal true masses</button></div>
+          <p class="small muted">u(Δm) from resolution alone = d/√6 = 0.04 mg for a difference of two readings with d = 0.1 mg.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DILUTION ===================== -->
+  <section id="tab-dilution" aria-labelledby="tabbtn-dilution" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Plan the dilution</h2>
+          <p class="small">Stock: NaCl standard, c = 0.10004 mol/L, u = 0.065 % (Lesson 07.7 worked example). Goal: <b>100.0 mL of a 1/50 dilution</b>.</p>
+          <div class="field">
+            <label for="d-class">Glassware class</label>
+            <select id="d-class"><option value="A">Class A</option><option value="B">Class B (twice the tolerance)</option></select>
+          </div>
+          <h3>Step 1</h3>
+          <div class="field"><label for="d-a1">Measure the aliquot with</label><select id="d-a1" class="wide"></select></div>
+          <div class="field" id="d-a1v-wrap"><label for="d-a1v">Aliquot volume / mL</label><input type="number" id="d-a1v" min="0.1" step="0.01" value="2.00"></div>
+          <div class="field"><label for="d-f1">Make up to volume in</label><select id="d-f1" class="wide"></select></div>
+          <div class="field" id="d-f1v-wrap"><label for="d-f1v">Fill to / mL</label><input type="number" id="d-f1v" min="1" step="0.1" value="100"></div>
+          <div class="row"><label><input type="checkbox" id="d-two"> Add a second step (serial dilution)</label></div>
+          <div id="d-step2" hidden>
+            <h3>Step 2 (aliquot taken from the step-1 solution)</h3>
+            <div class="field"><label for="d-a2">Measure the aliquot with</label><select id="d-a2" class="wide"></select></div>
+            <div class="field" id="d-a2v-wrap"><label for="d-a2v">Aliquot volume / mL</label><input type="number" id="d-a2v" min="0.1" step="0.01" value="20.00"></div>
+            <div class="field"><label for="d-f2">Make up to volume in</label><select id="d-f2" class="wide"></select></div>
+            <div class="field" id="d-f2v-wrap"><label for="d-f2v">Fill to / mL</label><input type="number" id="d-f2v" min="1" step="0.1" value="100"></div>
+          </div>
+          <h3>Technique</h3>
+          <div class="row"><label><input type="checkbox" id="m-rinse" checked> Rinse the pipette with the solution first</label></div>
+          <div class="row"><label><input type="checkbox" id="m-blow"> Blow out the last drop from the pipette</label></div>
+          <div class="row"><label><input type="checkbox" id="m-overshoot"> Overshoot the flask mark (water above the mark)</label></div>
+          <div class="row"><label><input type="checkbox" id="m-above"> Read the flask mark from above</label></div>
+          <div class="row"><label><input type="checkbox" id="m-mix" checked> Mix by inverting the flask 10–15 times</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="d-make">Make the dilution</button>
+            <button type="button" id="d-best">Suggest: 2 mL pipette → 100 mL flask</button>
+            <button type="button" id="d-cyl">Try: graduated cylinders</button>
+          </div>
+          <div class="row"><button type="button" id="d-rerun">Re-run (new glassware, new seed)</button></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Result and uncertainty budget</h2>
+          <div class="kv" id="d-result"></div>
+          <div class="table-wrap">
+            <table class="data" id="d-budget">
+              <thead><tr><th>Input</th><th>Volume / mL</th><th>Tolerance ± / mL</th><th>u = tol/√3 / mL</th><th>Relative u</th><th>Share</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <canvas class="plot short" id="d-plot" aria-label="Relative uncertainty of each attempt"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Attempts</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="d-attempts">
+              <thead><tr><th>#</th><th>Plan</th><th>Final mL</th><th>Factor</th><th>u(c)/c</th><th>c nominal / mol L⁻¹</th><th>True c</th><th>Error / u</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="row"><button type="button" id="d-reveal">Reveal true concentrations</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARALLAX ===================== -->
+  <section id="tab-parallax" aria-labelledby="tabbtn-parallax" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Your eye</h2>
+          <div class="field">
+            <label for="p-vessel">Vessel</label>
+            <select id="p-vessel"><option value="burette">50 mL burette (scale reads downward)</option><option value="cylinder">100 mL graduated cylinder (scale reads upward)</option></select>
+          </div>
+          <div class="field">
+            <label for="p-h">Eye height above the meniscus / cm</label>
+            <output id="p-h-out" for="p-h">0.0</output>
+            <input type="range" id="p-h" min="-4" max="4" step="0.5" value="0">
+          </div>
+          <div class="field">
+            <label for="p-D">Eye distance from the glass / cm</label>
+            <output id="p-D-out" for="p-D">30</output>
+            <input type="range" id="p-D" min="15" max="50" step="1" value="30">
+          </div>
+          <div class="row">
+            <label for="p-read">Your reading / mL</label>
+            <input type="number" id="p-read" step="0.01" inputmode="decimal">
+            <button type="button" class="primary" id="p-check">Record reading</button>
+          </div>
+          <div class="row">
+            <button type="button" id="p-new">New liquid level</button>
+            <label><input type="checkbox" id="p-geom"> Show the geometry numbers</label>
+          </div>
+          <div class="kv small" id="p-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Side view</h2>
+          <canvas id="p-side" class="plot short" aria-label="Side view of the eye, the sight line and the tube"></canvas>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>What you see (magnified)</h2>
+          <canvas id="p-view" class="plot tall" aria-label="Magnified view of the scale and meniscus as seen from the chosen eye position"></canvas>
+          <p class="small muted">Read the bottom of the meniscus against the scale, estimating to 0.01 mL on the burette (one tenth of the 0.1 mL division) and to 0.1 mL on the cylinder.</p>
+        </div>
+        <div class="panel">
+          <h2>Your readings</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="p-table">
+              <thead><tr><th>#</th><th>Vessel</th><th>Eye h / cm</th><th>D / cm</th><th>Your reading</th><th>True</th><th>Error / mL</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <h2>Export</h2>
+    <div class="row">
+      <button type="button" id="x-weigh">Weighing runs CSV</button>
+      <button type="button" id="x-dil">Dilution attempts CSV</button>
+      <button type="button" id="x-par">Meniscus readings CSV</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li><b>Weighing by difference:</b> close the doors, weigh the bottle with the solid (m<sub>1</sub>), lift it off, tap the solid into the beaker, weigh the bottle again (m<sub>2</sub>). The mass delivered is m<sub>1</sub> − m<sub>2</sub>.</li>
+        <li><b>Transfer pipette:</b> rinse it twice with a little of the solution, fill above the mark, wipe the outside, let the meniscus fall to the mark with your eye level with it, deliver with the tip touching the wall, wait a few seconds, and do not blow out the last drop (TD/"Ex" glassware is calibrated to leave it).</li>
+        <li><b>Volumetric flask:</b> add the aliquot, fill to about 1 cm below the mark, then dropwise until the bottom of the meniscus sits on the mark, stopper and invert 10–15 times.</li>
+        <li><b>Reading a meniscus:</b> eye level with the bottom of the curve; a dark card held behind the tube makes the edge sharp.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>The balance offset drifts. Both readings of a difference contain it, so it cancels, and anything left on paper is no longer counted as delivered.</li>
+        <li>Open doors let air currents push the pan; a warm object sets up a convection current that makes it seem lighter.</li>
+        <li>Rinsing the pipette with the solution stops the water film inside from diluting the aliquot.</li>
+        <li>Class A tolerances are limits; divide by √3 for a standard uncertainty. The smallest volume you measure usually dominates the budget.</li>
+        <li>Parallax is systematic for a habit: always reading from above gives the same sign of error every time, so it does not average out.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Never pipette by mouth; use a pipette filler. Even dilute salt solutions are a bad habit, and real labs pipette toxic and corrosive liquids.</li>
+        <li>Chipped glassware cuts: check tips and rims before use and discard damaged pieces in the glass bin, not the general waste.</li>
+        <li>Hot glassware looks like cold glassware. Let it cool in a desiccator before weighing (which also fixes the warm-object error).</li>
+        <li>Label every flask with its contents, concentration, date and your initials.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Solid left on the weighing paper is counted but not delivered: the result is high by up to a few mg.</li>
+        <li>Blowing out a TD pipette, or not rinsing it, gives a percent-level error that no budget formula will show.</li>
+        <li>Overshooting the mark cannot be undone: start again.</li>
+        <li>Measuring a 2 mL aliquot in a graduated cylinder gives an uncertainty of several percent.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the runs and attempts as CSV and recompute the budget in Python (Lesson 07.7, Part D): relative uncertainties add in quadrature, and the share of each term is (u<sub>i</sub>/x<sub>i</sub>)² divided by the total.</p>
+    </details>
+    <p class="small muted">Not trained here: the feel of a pipette filler, controlling a drop at the mark, or a balance's real settling behaviour.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Tolerances: Class A per ASTM E288 (flasks), E969 (transfer pipettes), E287 (burettes) and E1272 (graduated cylinders), as quoted by Harvey (Analytical Chemistry 2.1, 2.4) and supplier tables; Class B taken as twice Class A. Each piece of glassware gets a fixed hidden error inside its tolerance. Balance: offset with a slow linear drift, Gaussian noise (larger with the doors open) and a warm-object buoyancy error that decays with time.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="glassware.js"></script>
+</body>
+</html>

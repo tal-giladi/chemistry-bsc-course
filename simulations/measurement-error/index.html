@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measurement error</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="measurement-error.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Measurement error</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="repeat" aria-controls="tab-repeat" id="tabbtn-repeat">Repeat readings</button>
+    <button type="button" data-tab="bias" aria-controls="tab-bias" id="tabbtn-bias">Bias and calibration</button>
+    <button type="button" data-tab="propagation" aria-controls="tab-propagation" id="tabbtn-propagation">Propagation</button>
+  </div>
+
+  <!-- ===================== REPEAT ===================== -->
+  <section id="tab-repeat" aria-labelledby="tabbtn-repeat">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Instrument</h2>
+          <div class="field">
+            <label for="r-measurand">Measurand</label>
+            <select id="r-measurand"></select>
+          </div>
+          <div class="field">
+            <label for="r-noise">Random noise (relative to normal)</label>
+            <output id="r-noise-out" for="r-noise">1.0×</output>
+            <input type="range" id="r-noise" min="0.25" max="3" step="0.25" value="1">
+          </div>
+          <p class="small muted" id="r-instr-note"></p>
+          <div class="row">
+            <span class="readout" id="r-display" aria-live="polite">—</span>
+          </div>
+          <div class="row">
+            <button type="button" class="primary" id="r-take1">Take 1</button>
+            <button type="button" id="r-take5">Take 5</button>
+            <button type="button" id="r-take20">Take 20</button>
+          </div>
+          <div class="row">
+            <label for="r-n">Take</label>
+            <input type="number" id="r-n" min="1" max="2000" step="1" value="50">
+            <button type="button" id="r-taken">readings</button>
+          </div>
+          <div class="row">
+            <button type="button" id="r-clear">Clear readings</button>
+            <button type="button" id="r-reveal">Reveal true value</button>
+            <button type="button" id="r-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="r-seed"></span></p>
+        </div>
+        <div class="panel">
+          <h2>Statistics of your readings</h2>
+          <div class="kv" id="r-stats"></div>
+          <p class="small muted">u<sub>A</sub> = s/√n (Type A); u<sub>res</sub> = d/√12 for one displayed reading of resolution d (Type B). The 95 % interval is x̄ ± t·s/√n with n − 1 degrees of freedom.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Readings and running mean</h2>
+          <canvas class="plot" id="r-plot" aria-label="Readings against reading number with the running mean and its uncertainty band"></canvas>
+          <p class="small muted">Dots: single readings. Line: running mean x̄. Band: x̄ ± u<sub>A</sub>. The band narrows as 1/√n; the scatter of the dots (s) does not.</p>
+        </div>
+        <div class="panel">
+          <h2>Histogram</h2>
+          <canvas class="plot short" id="r-hist" aria-label="Histogram of the readings"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Sets and 95 % confidence intervals</h2>
+          <p class="small">Each set is a fresh group of n readings. Its 95 % confidence interval is x̄ ± t<sub>0.975, n−1</sub>·s/√n. Over many sets, about 95 % of the intervals should contain the true value.</p>
+          <div class="row">
+            <label for="ci-n">Readings per set</label>
+            <input type="number" id="ci-n" min="2" max="100" step="1" value="5">
+            <button type="button" class="primary" id="ci-one">Take one set</button>
+            <button type="button" id="ci-twenty">Take 20 sets</button>
+            <button type="button" id="ci-clear">Clear sets</button>
+          </div>
+          <canvas class="plot tall" id="ci-plot" aria-label="Confidence intervals of each set"></canvas>
+          <p id="ci-summary" aria-live="polite"></p>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="ci-table">
+              <thead><tr><th>Set</th><th>n</th><th>x̄</th><th>s</th><th>t</th><th>half-width</th><th>contains true?</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BIAS ===================== -->
+  <section id="tab-bias" aria-labelledby="tabbtn-bias" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Instrument and samples</h2>
+          <p class="small">Measurand: chloride in a tap-water sample, mg/L. Reference standard: a certified reference material (CRM) certified at <b>25.0 ± 0.3 mg/L</b> (expanded uncertainty, k = 2).</p>
+          <div class="row">
+            <label><input type="checkbox" id="b-biason" checked> Instrument bias switched on</label>
+          </div>
+          <fieldset class="row" id="b-target">
+            <legend class="small">Measure</legend>
+            <label><input type="radio" name="b-what" value="sample" checked> the unknown sample</label>
+            <label><input type="radio" name="b-what" value="crm"> the reference standard (CRM)</label>
+          </fieldset>
+          <div class="row"><span class="readout" id="b-display" aria-live="polite">—</span></div>
+          <div class="row">
+            <button type="button" class="primary" id="b-take1">Take 1</button>
+            <button type="button" id="b-take5">Take 5</button>
+            <button type="button" id="b-take20">Take 20</button>
+            <button type="button" id="b-take100">Take 100</button>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" id="b-correct"> Apply the calibration correction (divide by the recovery from the CRM)</label>
+          </div>
+          <div class="row">
+            <button type="button" id="b-clear">Clear readings</button>
+            <button type="button" id="b-reveal">Reveal true values</button>
+            <button type="button" id="b-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="b-seed"></span></p>
+        </div>
+        <div class="panel">
+          <h2>Bias from the reference standard</h2>
+          <div class="kv" id="b-stats"></div>
+          <p class="small muted">bias = x̄<sub>CRM</sub> − 25.0; u(bias) = √(s²/n + (U/k)²) with U/k = 0.15 mg/L; z = |bias|/u(bias). Recovery R = x̄<sub>CRM</sub>/25.0.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Running mean of the sample</h2>
+          <canvas class="plot" id="b-plot" aria-label="Running mean of the sample readings with the true value once revealed"></canvas>
+          <p class="small muted">More repeats make the band narrower, but a biased mean converges on the wrong value. Only the comparison with the reference standard shows the bias.</p>
+        </div>
+        <div class="panel">
+          <h2>Result for the sample</h2>
+          <div class="kv" id="b-result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROPAGATION ===================== -->
+  <section id="tab-propagation" aria-labelledby="tabbtn-propagation" hidden>
+    <div class="panel">
+      <h2>Model: standardising NaOH with potassium hydrogen phthalate (KHP)</h2>
+      <p class="mono">c<sub>NaOH</sub> = m<sub>KHP</sub> · P / (M<sub>KHP</sub> · V)</p>
+      <p class="small">Edit any value or standard uncertainty. "Rectangular" means the uncertainty comes from a ± limit a (tolerance, certificate, resolution) and u = a/√3. Press <b>Halve</b> to halve one input's uncertainty and see how much the result improves.</p>
+      <div class="table-wrap">
+        <table class="data" id="p-inputs">
+          <thead><tr><th>Input</th><th>Value</th><th>Unit</th><th>Standard uncertainty u</th><th>Distribution</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="row">
+        <button type="button" id="p-reset">Worked example (0.5106 g, 24.87 mL)</button>
+        <button type="button" id="p-small">Poor design (0.0511 g, 2.00 ± 0.30 mL)</button>
+      </div>
+    </div>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>First-order result</h2>
+          <div class="kv" id="p-first"></div>
+        </div>
+        <div class="panel">
+          <h2>Monte Carlo (JCGM 101)</h2>
+          <div class="field">
+            <label for="p-N">Number of draws</label>
+            <select id="p-N"><option value="10000">10 000</option><option value="100000" selected>100 000</option><option value="1000000">1 000 000</option></select>
+          </div>
+          <div class="row"><button type="button" class="primary" id="p-mc">Run Monte Carlo</button></div>
+          <div class="kv" id="p-mcout"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Uncertainty budget</h2>
+          <div class="table-wrap">
+            <table class="data" id="p-budget">
+              <thead><tr><th>Input</th><th>Relative u</th><th>Contribution to u(c)</th><th>Share of variance</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <canvas class="plot short" id="p-share" aria-label="Share of variance of each input"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Distribution of c from Monte Carlo</h2>
+          <canvas class="plot" id="p-hist" aria-label="Histogram of Monte Carlo results with the first-order normal curve"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Your trials</h2>
+          <p class="small muted">Every change you make is logged here, with the combined relative uncertainty.</p>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="p-trials">
+              <thead><tr><th>#</th><th>Change</th><th>c / mol L⁻¹</th><th>u(c)/c, first order</th><th>check √Σ(u<sub>i</sub>/x<sub>i</sub>)²</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <h2>Export</h2>
+    <p class="small">Download the readings you took (all tabs) as CSV. If the download is blocked, copy the text that appears.</p>
+    <div class="row">
+      <button type="button" id="export-readings">Readings CSV</button>
+      <button type="button" id="export-sets">Sets / intervals CSV</button>
+      <button type="button" id="export-budget">Budget and trials CSV</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Take a few readings of the same sample. Write each one down as it appears, with all digits shown.</li>
+        <li>Compute the mean x̄ and the standard deviation s. Then u<sub>A</sub> = s/√n is the standard uncertainty of the mean.</li>
+        <li>Add the Type B terms you know (resolution d/√12, a tolerance a/√3, a certificate U/k) in quadrature.</li>
+        <li>Measure a reference standard the same way. The difference from its certified value is the bias of your method.</li>
+        <li>Correct for the bias (or include it in the uncertainty), then report x̄ ± u with units and the number of readings.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Repeats reveal random error and averaging reduces it: u<sub>A</sub> falls as 1/√n, so 4× more readings halve it.</li>
+        <li>Repeats cannot reveal a systematic error: a biased instrument is wrong the same way every time.</li>
+        <li>A reference standard (CRM) is the only way to see bias. Its own uncertainty limits how well you can know the bias.</li>
+        <li>Propagation shows which input dominates. Improve that one; improving the others is wasted effort.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <p>Statistics has no hazards of its own, but a wrong uncertainty does: a drinking-water result reported as "below the limit" when its interval crosses the limit can hide a real problem. Report the uncertainty with every result, and never drop an inconvenient reading without a recorded reason (a blunder noted at the time, or a test such as Grubbs').</p>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Too few readings: with n = 3 the t-factor is 4.30, so the 95 % interval is very wide.</li>
+        <li>s = 0 when every reading shows the same digit: the scatter is hidden by the resolution. Use u<sub>res</sub> = d/√12.</li>
+        <li>Averaging away a bias: impossible. More readings make you more confident in the wrong number.</li>
+        <li>Treating a tolerance as a standard uncertainty: divide a ± limit by √3 first.</li>
+        <li>A small, poorly measured input (a 2 mL titre ± 0.3 mL): the first-order formula fails and the interval is asymmetric. Monte Carlo shows it.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the readings as CSV and repeat the calculations in Python (Module 5 and 9 lab folders): mean, s, s/√n, the t-based interval, the bias with its z-score, and the budget. Your numbers must match the ones shown here.</p>
+    </details>
+    <p class="small muted">Not trained here: handling a real balance, burette or meter. The noise and bias are generated by a stated model, not measured.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Model: readings = true value × (1 + proportional bias) + constant bias + normal noise, rounded to the display resolution. Student t from the regularised incomplete beta function. Monte Carlo per JCGM 101:2008; first order per JCGM 100:2008 (GUM). KHP M = 204.22 g/mol (PubChem CID 23676735).
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="measurement-error.js"></script>
+</body>
+</html>

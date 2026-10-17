@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calorimetry</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="calorimetry.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Calorimetry</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="calibration" aria-controls="tab-run" id="tabbtn-calibration">Cup calibration</button>
+    <button type="button" data-tab="dissolution" aria-controls="tab-run" id="tabbtn-dissolution">Dissolving a salt</button>
+    <button type="button" data-tab="neutralisation" aria-controls="tab-run" id="tabbtn-neutralisation">Neutralisation</button>
+    <button type="button" data-tab="bomb" aria-controls="tab-run" id="tabbtn-bomb">Bomb calorimeter</button>
+  </div>
+
+  <section id="tab-run">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2 id="setup-title">Set-up</h2>
+          <div id="setup"></div>
+          <h3>Timing and thermometer</h3>
+          <div class="field"><label for="t-mix" id="t-mix-label">Mix at / s</label><input type="number" id="t-mix" min="60" max="900" step="30" value="180"></div>
+          <div class="field"><label for="t-end">Run length / s</label><input type="number" id="t-end" min="300" max="2400" step="30" value="600"></div>
+          <div class="field"><label for="t-int">Read every / s</label><select id="t-int"><option value="15">15</option><option value="30" selected>30</option><option value="60">60</option></select></div>
+          <div class="field"><label for="t-res">Thermometer resolution / K</label><select id="t-res"><option value="0.1">0.1 (kitchen thermometer)</option><option value="0.01" selected>0.01 (lab probe)</option><option value="0.001">0.001 (bomb thermometer)</option></select></div>
+          <div class="row">
+            <button type="button" class="primary" id="run">Start the run</button>
+            <button type="button" id="skip">Skip to the end</button>
+            <button type="button" id="rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="seed"></span>. The clock runs 30× faster than real time.</p>
+          <div class="kv small" id="live" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Temperature against time</h2>
+          <canvas id="plot" class="plot tall" aria-label="Temperature readings against time with the fitted fore and after lines extrapolated to the mixing time"></canvas>
+          <div class="row">
+            <div class="field inline"><label for="a-skip">After-line starts this long after mixing / s</label><input type="number" id="a-skip" min="0" max="1200" step="30" value="120"></div>
+            <div class="field inline"><label for="a-to">Extrapolate both lines to</label><select id="a-to"><option value="mix">the moment of mixing / firing</option><option value="dick">the 63 % point of the rise (Dickinson)</option></select></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Analysis</h2>
+          <div class="kv" id="analysis"></div>
+          <h3>Result</h3>
+          <div class="kv" id="result"></div>
+        </div>
+        <div class="panel">
+          <h2>Your runs</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="runs"><thead><tr><th>#</th><th>Experiment</th><th>ΔT extrapolated / K</th><th>ΔT from extreme reading / K</th><th>Result</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row">
+            <button type="button" id="x-run">Readings of the last run (CSV)</button>
+            <button type="button" id="x-all">All runs summary (CSV)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Weigh the liquid into the dry calorimeter. Put the lid on, insert the thermometer and stirrer.</li>
+        <li>Read the temperature every 30 s for 3 minutes (the fore-period).</li>
+        <li>At a noted time, add the second liquid or the solid (or fire the bomb) and keep stirring.</li>
+        <li>Keep reading every 30 s for at least 5–7 more minutes (the after-period).</li>
+        <li>Fit a straight line to each period, extrapolate both to the moment of mixing, and take the gap as ΔT.</li>
+        <li>Calibrate first: hot and cold water give C<sub>cal</sub>; benzoic acid gives the bomb's constant. Then run the unknown the same way.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>The cup, lid and thermometer absorb heat too; calibration measures them as a heat capacity C<sub>cal</sub>.</li>
+        <li>No calorimeter is perfectly insulated. The fore- and after-lines measure the heat leak, and extrapolating to the mixing time corrects for it; the highest or lowest single reading does not.</li>
+        <li>Stirring makes the temperature uniform; a slow thermometer or a slowly dissolving solid makes the rise gradual, which the extrapolation also handles.</li>
+        <li>A bomb works at constant volume, so it measures ΔU; ΔH = ΔU + Δn<sub>gas</sub>RT.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Calibration water at about 45 °C is hand-hot, not boiling: scalds start quickly above 50 °C.</li>
+        <li>1 mol/L HCl and NaOH are corrosive to eyes: safety glasses, add one solution to the other slowly, and keep concentrations low. Neutralisation releases heat, and concentrated acids and bases can boil and spit.</li>
+        <li>Ammonium nitrate is an oxidiser (GHS H272): keep it away from fuels and heat; anhydrous CaCl₂ gets hot when it dissolves and irritates eyes.</li>
+        <li>A bomb holds about 30 bar of oxygen: only trained users, a checked vessel, never more than about 1 g of sample, and never oily or greasy fittings with oxygen.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Using the peak (or lowest) reading instead of the extrapolated ΔT: the heat leak during mixing is ignored.</li>
+        <li>Hot water cools by about 0.5 K while being poured: C<sub>cal</sub> comes out too large (switch the pour loss off to see the true value).</li>
+        <li>Starting the after-line too early, while the temperature is still changing: the extrapolation is biased.</li>
+        <li>A salt that dissolves slowly (anhydrous CaCl₂ forms lumps) spreads the heat over minutes; extrapolation still recovers most of it.</li>
+        <li>In the bomb: forgetting the fuse-wire energy, or using an uncorrected rise.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the readings of each run (time_s, T_C) and fit the two lines in Python (Module 8 and 23 lab folders). q = −(m c + m<sub>s</sub>c<sub>s</sub> + C<sub>cal</sub>) ΔT, ΔH = q/n. Propagate the uncertainty of each line at the mixing time into ΔT, then into ΔH.</p>
+    </details>
+    <p class="small muted">Not trained here: handling hot water, corrosive solutions or a pressurised bomb, and the feel of stirring evenly.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Data: Δ<sub>neut</sub>H(H⁺ + OH⁻) = −55.8 kJ/mol and Δ<sub>sol</sub>H(NaHCO₃) = +19.6 kJ/mol (OpenStax Chemistry 2e Appendix G, NBS tables); acetic acid Δ<sub>ion</sub>H = −0.41 kJ/mol and NH₄⁺ +52.2 kJ/mol (Goldberg, Kishore and Lennen, J. Phys. Chem. Ref. Data 31, 231, 2002); enthalpies of solution at infinite dilution for NH₄NO₃, CaCl₂, NaCl, KCl (CRC Handbook); benzoic acid 26.434 kJ/g (NIST SRM 39j); sucrose Δ<sub>c</sub>H = −5644 kJ/mol and naphthalene −5156.3 kJ/mol (NIST WebBook). Model: Newtonian heat exchange with the room or jacket, first-order mixing, dissolution and combustion, a thermometer with a 6–10 s lag, Gaussian noise and rounding to the chosen resolution.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="calorimetry.js"></script>
+</body>
+</html>

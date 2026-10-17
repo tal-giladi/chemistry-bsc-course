@@ -53,10 +53,10 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M33
 
 ## Simulations
-- [ ] measurement-error
-- [ ] glassware
-- [ ] gas-laws
-- [ ] calorimetry
+- [x] measurement-error
+- [x] glassware
+- [x] gas-laws
+- [x] calorimetry
 - [ ] titration
 - [ ] gravimetry
 - [ ] kinetics
@@ -123,3 +123,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M30 done; M32 spawned.
 - M32 done; M33 spawned.
 - M33 done.
+- sims batch 1 done (common, measurement-error, glassware, gas-laws, calorimetry). QA: fix 07.7 parallax wording (burette reads low from above). Batch 2 spawned.
