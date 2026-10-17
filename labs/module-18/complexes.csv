@@ -1,0 +1,22 @@
+# Ligand-field splittings (cm^-1) and free-ion pairing energies (cm^-1) for the lesson 18.4 spin-state model.
+# delta_cm1: from the lecture table "Factors affecting the magnitude of Delta" (University of Mustansiriyah, inorganic chemistry
+#   lecture, https://uomustansiriyah.edu.iq/media/lectures/6/6_2018_12_16!12_03_30_PM.pdf); retrieved 2026-10-17.
+#   [Ti(H2O)6]3+ from OpenStax Chemistry 2e 19.3 (absorption maximum 499 nm). Tetrahedral entry: delta is Delta_t.
+# P_free_cm1: free-ion mean pairing energies from LibreTexts, Spin Pairing Energy
+#   (https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Electronic_Structure_of_Atoms_and_Molecules/Electronic_Configurations/Spin_Pairing_Energy),
+#   retrieved 2026-10-17. Blank = not needed (d1-d3, d8-d10) or not listed (4d and 5d ions).
+# observed_spin: HS/LS as assigned in OpenStax 19.3 (iron complexes) and the standard texts; "-" where only one arrangement exists.
+complex,metal,ox,geometry,delta_cm1,P_free_cm1,observed_spin
+[Ti(H2O)6]3+,Ti,3,oct,20040,,-
+[CrF6]3-,Cr,3,oct,15060,,-
+[Cr(H2O)6]3+,Cr,3,oct,17400,,-
+[Cr(CN)6]3-,Cr,3,oct,26600,,-
+[CoF6]3-,Co,3,oct,13100,23625,HS
+[Co(H2O)6]3+,Co,3,oct,20760,23625,LS
+[Co(NH3)6]3+,Co,3,oct,22870,23625,LS
+[Rh(NH3)6]3+,Rh,3,oct,34100,,LS
+[Ir(NH3)6]3+,Ir,3,oct,41200,,LS
+[Co(NH3)6]2+,Co,2,oct,10200,20800,HS
+[Co(NH3)4]2+,Co,2,tet,5900,20800,-
+[Fe(CN)6]4-,Fe,2,oct,32200,19150,LS
+[Fe(CN)6]3-,Fe,3,oct,35000,29875,LS

@@ -1,0 +1,21 @@
+# Module 18 practical (lesson 18.5): nine "complex cards". Each card gives what a lab would measure.
+# lambda_nm: wavelength of the main visible absorption maximum (blank = not given on the card).
+#   [Ti(H2O)6]3+ 499 nm and the absorbed colours of [Fe(H2O)6]2+, [Fe(CN)6]4- and [Cu(NH3)4]2+: OpenStax Chemistry 2e 19.3.
+#   [Cr(H2O)6]3+ and [CrF6]3-: lowest d-d band = Delta_o (17 400 and 15 060 cm-1, see complexes.csv) converted to nm.
+#   MnO4- 525 nm: the maximum used in permanganate spectrophotometry (molar absorption coefficient about 2e3 to 3e3 L mol-1 cm-1).
+# intensity: very weak (molar absorption coefficient below about 1), weak (about 1-150), strong (about 1000 or more);
+#   ranges from LibreTexts, Selection Rules for Electronic Spectra of Transition Metal Complexes. Very weak for [Mn(H2O)6]2+ (about 0.1).
+# mu_BM: mid-point of the observed range for that ion and spin state in LibreTexts, Magnetic Moments of Transition Metals
+#   (Ti(III) 1.6-1.7, Cr(III) 3.7-3.9, Mn(II)/Fe(III) high spin 5.6-6.1 and low spin 1.8-2.1, Fe(II) high spin 5.1-5.7,
+#   Co(III)/Fe(II) low spin 0, Cu(II) 1.7-2.2). MnO4- (d0) is diamagnetic.
+# observed_colour: OpenStax 19.3 (Ti, Fe, Cu), MIT 5.111SC lecture 28 handout (ferricyanide red-orange), standard descriptions.
+card,formula,metal,ox,geometry,lambda_nm,absorbed_note,intensity,mu_BM,observed_colour
+1,[Ti(H2O)6]3+,Ti,3,oct,499,,weak,1.65,purple
+2,[Cr(H2O)6]3+,Cr,3,oct,575,,weak,3.8,violet
+3,[CrF6]3-,Cr,3,oct,664,,weak,3.8,green
+4,[Fe(H2O)6]2+,Fe,2,oct,,absorbs red,weak,5.4,pale blue-green
+5,[Fe(CN)6]4-,Fe,2,oct,,absorbs violet,weak,0.0,pale yellow
+6,[Fe(CN)6]3-,Fe,3,oct,,absorbs blue-violet,strong,1.95,red-orange
+7,[Mn(H2O)6]2+,Mn,2,oct,,very weak bands,very weak,5.85,very pale pink
+8,[MnO4]-,Mn,7,tet,525,,strong,0.0,intense purple
+9,[Cu(NH3)4]2+,Cu,2,sq,,absorbs orange and red,weak,1.95,deep blue

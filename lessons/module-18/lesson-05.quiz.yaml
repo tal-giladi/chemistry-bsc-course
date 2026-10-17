@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    An octahedral Cr(III) complex has its lowest absorption band at 664 nm. What are Delta_o and the
+    colour you expect to see?
+  options:
+    - 664 cm-1, and the solution looks red because it absorbs red.
+    - 15 060 cm-1, and the solution looks red because that is the colour of 664 nm light.
+    - 15 060 cm-1, and the solution looks green because red light is removed.
+    - 6 640 cm-1, and the solution looks blue because Cr(III) complexes are always blue.
+  correct: 2
+  explanation: >-
+    For d3 the lowest band equals Delta_o: 1e7 / 664 = 15 060 cm-1 (this is [CrF6]3-). Red is absorbed,
+    so the eye sees the complement, green.
+- id: q2
+  question: >-
+    A new iron(III) complex has a measured moment of 2.0 BM. What does that tell you?
+  options:
+    - Five unpaired electrons, high spin, because Fe(III) is always d5 high spin.
+    - One unpaired electron, so it is low-spin d5 with a strong-field ligand set.
+    - Two unpaired electrons, because the moment in BM equals the number of unpaired electrons.
+    - No unpaired electrons, because moments below 3 BM mean the sample is diamagnetic.
+  correct: 1
+  explanation: >-
+    The spin-only moments are 1.73 (n = 1), 2.83 (n = 2) and 5.92 (n = 5). 2.0 BM is closest to n = 1,
+    which for d5 means low spin t2g5. Small orbital contributions explain the slight excess.
+- id: q3
+  question: >-
+    Permanganate, MnO4-, is intensely purple although manganese(VII) has no d electrons. Where does the
+    colour come from?
+  options:
+    - An oxygen-to-manganese charge-transfer band, which is Laporte-allowed and therefore strong.
+    - A d-d transition of the few d electrons that remain on Mn(VII).
+    - A spin-forbidden d-d band made strong by the tetrahedral shape.
+    - Colloidal manganese dioxide that always forms in permanganate solutions.
+  correct: 0
+  explanation: >-
+    Mn(VII) is d0, so d-d transitions are impossible. Light moves an electron from an O lone pair into
+    an empty Mn d orbital (LMCT), an allowed transition with a molar absorption coefficient of about
+    2e3 L/(mol cm) at 525 nm.
+- id: q4
+  question: >-
+    A 0.1 M solution of [Mn(H2O)6]2+ looks almost colourless, while a 0.1 M solution of [Cr(H2O)6]3+ is
+    clearly violet. Why?
+  options:
+    - Mn2+ absorbs only in the infrared, because its Delta_o is very small.
+    - Mn2+ is d0, so it has no electrons to excite.
+    - The Cr3+ band is charge transfer, while the Mn2+ band is d-d.
+    - Every d-d band of high-spin d5 must flip a spin, so it is spin- and Laporte-forbidden.
+  correct: 3
+  explanation: >-
+    High-spin d5 has one electron in each d orbital; any excitation pairs two electrons and changes the
+    total spin. The bands have molar absorption coefficients near 0.1, against about 1-10 for the
+    spin-allowed d3 bands of Cr3+.
+- id: q5
+  question: >-
+    An unknown octahedral cobalt(II) complex has a moment of 4.6 BM. Which assignment is best?
+  options:
+    - Low-spin d7 with one unpaired electron, raised to 4.6 BM by the ligands.
+    - High-spin d7 with three unpaired electrons, plus an orbital contribution.
+    - High-spin d7 with four unpaired electrons, because 4.6 is close to 4.90.
+    - Low-spin d6, because cobalt(II) becomes cobalt(III) in solution.
+  correct: 1
+  explanation: >-
+    Co(II) is d7: 3 unpaired (high spin) or 1 (low spin). No d7 arrangement has 4 unpaired electrons.
+    Observed moments for high-spin octahedral Co(II) are 4.3-5.2 BM, above the 3.87 spin-only value.

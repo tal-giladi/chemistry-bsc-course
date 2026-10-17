@@ -1,0 +1,67 @@
+- id: q1
+  question: >-
+    A student builds the Born-Haber cycle for KCl and gets a lattice enthalpy of 839 kJ/mol instead of
+    717 kJ/mol. She used dfH(KCl, s) = -436.68, dfH(K, g) = +89.0, the full Cl-Cl bond enthalpy of
+    +242.6, IE(K) = 4.341 eV and EA(Cl) = 3.613 eV. What went wrong?
+  options:
+    - She should have used the second ionisation energy of potassium as well.
+    - The electron affinity must be added, not subtracted, because energy is released.
+    - The formation enthalpy of KCl should enter with a positive sign as written.
+    - She used the bond enthalpy of Cl2 where the atomisation enthalpy of one Cl atom (121.3) belongs.
+  correct: 3
+  explanation: >-
+    The cycle needs one Cl atom per KCl, so the step is half the Cl-Cl bond enthalpy, 121.3 kJ/mol.
+    Using 242.6 adds 121.3 too much: 717 + 121 = 838.
+- id: q2
+  question: >-
+    MgO and NaCl both have the rock-salt structure, with r0 = 2.106 and 2.820 angstrom. By roughly what
+    factor should the Born-Mayer lattice energy of MgO exceed that of NaCl?
+  options:
+    - About 5, because z+z- rises from 1 to 4 and 1/r0 rises by about a third.
+    - About 2, because each ion carries twice the charge.
+    - About 4, because only the charge product matters for a given structure.
+    - About 1.3, because only the smaller distance matters in the same structure.
+  correct: 0
+  explanation: >-
+    U is proportional to M z+z- / r0 times a repulsion factor: 4 x (2.820/2.106) = 5.4, slightly less
+    after the repulsion term. The cycle-based values (about 3800 and 787 kJ/mol) differ by about 4.8.
+- id: q3
+  question: >-
+    The Born-Mayer model gives 761 kJ/mol for NaCl (including 2RT), while the Born-Haber cycle gives
+    787 kJ/mol. What is the main reason for the 3 % gap?
+  options:
+    - The Born-Haber cycle double-counts the ionisation energy of sodium.
+    - The model treats the ions as point charges with simple repulsion and leaves out dispersion attraction.
+    - The Madelung constant of rock salt is only known to about 3 %.
+    - Lattice energies are always quoted at 0 K, so the cycle at 298 K is 26 kJ/mol too high.
+  correct: 1
+  explanation: >-
+    Dispersion (van der Waals) attraction between the ions' electron clouds adds to the lattice energy and
+    is missing from the purely ionic model. The energy-enthalpy difference is only 2RT = 5 kJ/mol, and
+    M is known to six digits.
+- id: q4
+  question: >-
+    A Kapustinskii estimate gives dfH of about -94 kJ/mol for solid MgCl (Mg+ Cl-). Why has nobody ever
+    isolated it?
+  options:
+    - Its formation enthalpy is negative, so it must be thermodynamically unstable.
+    - Magnesium cannot lose exactly one electron in any compound.
+    - 2 MgCl -> Mg + MgCl2 releases about 400 kJ/mol, so MgCl disproportionates.
+    - The radius ratio of Mg+ and Cl- is too small for any crystal structure.
+  correct: 2
+  explanation: >-
+    A compound must be stable against every rearrangement of its atoms, not only against the elements.
+    With dfH(MgCl2) near -590 kJ/mol, disproportionation is strongly downhill.
+- id: q5
+  question: >-
+    X-ray diffraction gives a = 4.03 angstrom for rock-salt LiF (M = 25.94 g/mol, 4 formula units per
+    cell). What density does this predict?
+  options:
+    - 0.66 g/cm3, because the cell holds one formula unit.
+    - 2.63 g/cm3, from 4 x 25.94 g/mol divided by N_A a^3.
+    - 1.32 g/cm3, because ions on faces count one half each.
+    - 5.27 g/cm3, because the rock-salt cell holds eight formula units.
+  correct: 1
+  explanation: >-
+    a^3 = 6.545e-23 cm3. rho = 4 x 25.94 / (6.022e23 x 6.545e-23) = 2.63 g/cm3. The rock-salt cell holds
+    4 cations and 4 anions once shared positions are counted.

@@ -1,0 +1,66 @@
+- id: q1
+  question: >-
+    A student writes Fe3+ as [Ar] 3d3 4s2, arguing that 4s filled before 3d so it should empty last.
+    Using Slater's rules for iron (3d electron Zeff 6.25, 4s electron Zeff 3.75), what is the better
+    configuration and why?
+  options:
+    - "[Ar] 3d3 4s2, because the order of removal is always the reverse of the order of filling."
+    - "[Ar] 3d4 4s1, because one 4s and two 3d electrons are removed to keep a half-filled shell."
+    - "[Ar] 3d5, because the 4s electrons feel far less nuclear charge and are removed first."
+    - "[Ar] 3d6, because iron(III) ions lose only their 4s electrons and one core electron."
+  correct: 2
+  explanation: >-
+    A 4s electron of iron feels a Zeff of about 3.75 and sits farther out; a 3d electron feels about 6.25.
+    Ionisation removes the loosely held 4s pair first, then one 3d electron, giving [Ar] 3d5.
+- id: q2
+  question: >-
+    Gallium sits one row below aluminium, yet its first ionisation energy (5.999 eV) is slightly higher
+    than aluminium's (5.986 eV). What is the best explanation?
+  options:
+    - The ten 3d electrons added before gallium shield its 4p electron poorly, so its Zeff is larger.
+    - Gallium's 4p electron is closer to the nucleus than aluminium's 3p electron.
+    - Gallium has a half-filled p subshell, which is extra stable.
+    - The measured values are within error, so there is no real effect to explain.
+  correct: 0
+  explanation: >-
+    Slater's rules give a Zeff of 5.00 for gallium's 4p electron against 3.50 for aluminium's 3p electron:
+    the d-block adds ten protons but shields only partly. The larger pull offsets the larger shell.
+- id: q3
+  question: >-
+    MgO is an ionic solid containing O2- ions, yet the reaction O-(g) + e- -> O2-(g) costs several hundred
+    kJ/mol. How can O2- be the stable form of oxygen in MgO?
+  options:
+    - The second electron affinity of oxygen is positive in the solid state, so the step releases energy there.
+    - The lattice energy released by packing Mg2+ and O2- ions pays for the endothermic second electron gain.
+    - Magnesium donates its electrons with no energy cost, so the cycle is downhill overall.
+    - MgO is really made of Mg+ and O- ions, and the O2- picture is only a bookkeeping device.
+  correct: 1
+  explanation: >-
+    Gas-phase O2- is unstable, but the doubly charged ions in the crystal attract strongly enough that the
+    lattice energy repays the cost. Lesson 18.2 puts numbers on this with a Born-Haber cycle.
+- id: q4
+  question: >-
+    A geochemist finds a solid oxide of an element that dissolves both in dilute hydrochloric acid and in
+    concentrated sodium hydroxide. Which oxide fits?
+  options:
+    - Na2O, because strongly basic oxides dissolve in every aqueous solution.
+    - SO3, because acidic oxides react with water whatever the pH.
+    - MgO, because magnesium sits in the middle of period 3.
+    - Al2O3, because aluminium's oxide is amphoteric and reacts with acids and strong bases.
+  correct: 3
+  explanation: >-
+    Reacting with both acid and base is the definition of amphoteric. Al2O3 gives Al3+ in acid and
+    [Al(OH)4]- in strong base. MgO is basic and dissolves only in acid; SO3 is acidic.
+- id: q5
+  question: >-
+    You blow through a straw into red-cabbage indicator and it turns a redder purple, while a glass with
+    milk of magnesia turns blue-green. What do the two results show?
+  options:
+    - Both liquids are basic, but breath is a weaker base than magnesium hydroxide.
+    - Breath contains a basic oxide (CO2) and milk of magnesia contains an acidic hydroxide.
+    - CO2 is an acidic non-metal oxide, and magnesium hydroxide comes from a basic metal oxide.
+    - The colour change in the breath glass is caused by warmth, not by any acid or base.
+  correct: 2
+  explanation: >-
+    CO2 dissolves to give carbonic acid, lowering the pH. Magnesium has a low electronegativity, so its
+    oxide and hydroxide release OH-, raising the pH to about 10.

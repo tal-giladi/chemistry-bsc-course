@@ -1,0 +1,132 @@
+- id: q1
+  question: >-
+    A battery researcher compares Li+ and Na+ hosts and needs to know which ion a transition metal in the
+    cathode will be after losing two electrons. For cobalt ([Ar] 3d7 4s2), what is Co2+?
+  options:
+    - "[Ar] 3d5 4s2, because the last electrons added (3d) are the first removed."
+    - "[Ar] 3d7, because the 4s electrons feel a much smaller Zeff and leave first."
+    - "[Ar] 3d6 4s1, because one electron is removed from each subshell."
+    - "[Ar] 3d9, because the 4s electrons drop into 3d when the ion forms."
+  correct: 1
+  explanation: >-
+    Slater's rules give a 4s electron a Zeff near 4 and a 3d electron near 7 in this region; the 4s pair
+    is removed first. Every 3d ion is [Ar] 3dn with n = group number minus charge (9 - 2 = 7).
+- id: q2
+  question: >-
+    A materials chemist proposes making CaCl (Ca+ Cl-) as a new low-valent salt. A Kapustinskii estimate
+    gives it a negative formation enthalpy. What is the decisive objection?
+  options:
+    - Kapustinskii estimates are always too large, so the true formation enthalpy must be positive.
+    - The radius ratio of Ca+ and Cl- does not allow any crystal structure.
+    - Calcium has no measurable first ionisation energy in the gas phase.
+    - 2 CaCl -> Ca + CaCl2 is strongly exothermic, so CaCl would disproportionate.
+  correct: 3
+  explanation: >-
+    The doubly charged Ca2+ gives CaCl2 a lattice enthalpy that more than repays the second ionisation
+    energy. As with MgCl in lesson 18.2, the compound must be stable against every rearrangement, not just
+    against the elements.
+- id: q3
+  question: >-
+    For KCl you have dfH(s) = -436.68, dfH(K, g) = +89.0, dfH(Cl, g) = +121.30 kJ/mol, IE(K) = 4.341 eV
+    and EA(Cl) = 3.613 eV. What is the lattice enthalpy (1 eV per atom = 96.485 kJ/mol)?
+  options:
+    - 1414 kJ/mol, from adding the electron affinity instead of subtracting it.
+    - 717 kJ/mol, from 436.68 + 89.0 + 121.30 + 418.8 - 348.6.
+    - -156 kJ/mol, from using the formation enthalpy of KCl with its negative sign.
+    - 838 kJ/mol, from using the Cl-Cl bond enthalpy instead of the atomisation enthalpy.
+  correct: 1
+  explanation: >-
+    The cycle: lattice enthalpy = -dfH(KCl) + atomisation of K and Cl + IE - EA = 436.68 + 89.0 + 121.30 +
+    418.8 - 348.6 = 717 kJ/mol. The Born-Mayer model gives 692 kJ/mol, about 3.5 % lower.
+- id: q4
+  question: >-
+    A soil sample contains a white oxide that dissolves in dilute acid and also in hot concentrated sodium
+    hydroxide. Its element sits near the metal/non-metal border in period 3. Which oxide is it most likely
+    to be?
+  options:
+    - Al2O3, an amphoteric oxide.
+    - Na2O, a strongly basic oxide.
+    - SO3, a strongly acidic oxide.
+    - MgO, a basic oxide.
+  correct: 0
+  explanation: >-
+    Dissolving in both acid and strong base is amphoteric behaviour, typical of aluminium (and Zn, Be).
+    MgO and Na2O dissolve only in acid; SO3 reacts with water and base, not acid.
+- id: q5
+  question: >-
+    A pharmacist asks why a new drug candidate, [Pt(NH3)2(Cl)(py)]+ (py = pyridine), might come as more
+    than one compound. Pt(II) is d8. How many isomers should she expect?
+  options:
+    - One, because four-coordinate complexes are tetrahedral and have no geometric isomers.
+    - Three, because every arrangement of four different ligands is distinct.
+    - Two, cis and trans (NH3 next to or opposite the other NH3) in a square plane.
+    - Four, because the square-planar complex also has a mirror-image pair.
+  correct: 2
+  explanation: >-
+    d8 Pt(II) is square planar. With two identical NH3, the only choice is whether they are cis or trans:
+    two isomers. A planar complex has its own plane as a mirror plane, so neither is chiral.
+- id: q6
+  question: >-
+    A chemist must remove trace Ni2+ from a solution. Ammonia and ethylenediamine (en) are both available
+    at the same nitrogen concentration. Which choice binds nickel more completely, and why?
+  options:
+    - Ammonia, because six separate ligands can surround the ion more tightly than three chelates.
+    - Either, because both form six Ni-N bonds of nearly equal strength.
+    - Ammonia, because it is a stronger base than ethylenediamine.
+    - Ethylenediamine, because chelation releases more free particles and is favoured by entropy.
+  correct: 3
+  explanation: >-
+    The formation constants are 4e8 (NH3) and 2e18 (en): the swap [Ni(NH3)6]2+ + 3 en -> [Ni(en)3]2+ +
+    6 NH3 has K = 5e9 because it turns 4 particles into 7. Similar bond strengths, very different entropy.
+- id: q7
+  question: >-
+    [CoF6]3- is paramagnetic with four unpaired electrons; [Co(NH3)6]3+ is diamagnetic. A student says
+    this contradicts crystal field theory because both are Co(III). What is the correct reasoning?
+  options:
+    - Fluoride oxidises cobalt to Co(IV) in [CoF6]3-, which changes the d count.
+    - Both are d6; F- gives Delta_o (13 100 cm-1) below the pairing energy, NH3 (22 870 cm-1) above it.
+    - The fluoride complex is tetrahedral, so it must be high spin.
+    - Ammonia is a pi donor that pushes the eg orbitals down, forcing all electrons to pair.
+  correct: 1
+  explanation: >-
+    With P in the complex about 0.8 x 23 625 = 18 900 cm-1, the weak-field fluoride complex is high spin
+    t2g4 eg2 and the ammine is low spin t2g6. F- is the weaker ligand because it is a pi donor.
+- id: q8
+  question: >-
+    A geologist finds a mineral whose colour comes from octahedral Cr3+. Its spectrum shows the lowest d-d
+    band at 556 nm. What are Delta_o and the expected colour?
+  options:
+    - 18 000 cm-1, and the mineral looks red-purple because green-yellow light is absorbed.
+    - 18 000 cm-1, and the mineral looks green because it absorbs at a green wavelength.
+    - 5 560 cm-1, and the mineral looks yellow because the band is near yellow.
+    - 1 800 cm-1, and the mineral looks colourless because d-d bands are forbidden.
+  correct: 0
+  explanation: >-
+    For d3 the lowest band is Delta_o: 1e7 / 556 = 17 990 cm-1. Absorbing green leaves red and blue,
+    so the eye sees red to red-purple, as in ruby.
+- id: q9
+  question: >-
+    A lab reports a new manganese complex as deep purple with a band near 530 nm whose molar absorption
+    coefficient is about 2500 L/(mol cm). Its magnetic moment is zero. What is the best interpretation?
+  options:
+    - Low-spin Mn(II) d5 with a spin-allowed d-d band made intense by pairing.
+    - High-spin Mn(II) whose spin-forbidden band is intense because the solution is concentrated.
+    - A d0 manganese(VII) species whose colour is an oxygen-to-metal charge-transfer band.
+    - A Mn(III) d4 complex with a Jahn-Teller distortion that strengthens the d-d band.
+  correct: 2
+  explanation: >-
+    Zero moment rules out d4 and d5 (they always have unpaired electrons), and an absorption coefficient
+    of thousands is far above any d-d band. Both point to a d0 permanganate-like species with LMCT.
+- id: q10
+  question: >-
+    An iron complex of unknown oxidation state has a moment of 5.9 BM and is very pale. Which assignment
+    fits best?
+  options:
+    - High-spin Fe(II), d6, with four unpaired electrons.
+    - Low-spin Fe(III), d5, with one unpaired electron.
+    - Low-spin Fe(II), d6, with orbital contributions raising the moment.
+    - High-spin Fe(III), d5, with five unpaired electrons and only spin-forbidden d-d bands.
+  correct: 3
+  explanation: >-
+    5.9 BM matches the spin-only 5.92 for five unpaired electrons, which only high-spin d5 gives. High-spin
+    d5 has no spin-allowed d-d transitions, so its colour is faint. High-spin Fe(II) would be 5.1-5.7 BM.

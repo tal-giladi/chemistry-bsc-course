@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" font-family="Arial, Helvetica, sans-serif" font-size="14">
+  <title>Crystal-field splitting of the five d orbitals</title>
+  <desc>Energy diagram. Centre: five degenerate d orbitals of the free ion, raised by the spherical average of the ligand field. Right: an octahedral field splits them into a lower t2g set of three (dxy, dxz, dyz) at minus 0.4 Delta-o and an upper eg set of two (dz2, dx2-y2) at plus 0.6 Delta-o. Left: a tetrahedral field gives the opposite order, a lower e set of two at minus 0.6 Delta-t and an upper t2 set of three at plus 0.4 Delta-t, with Delta-t about four ninths of Delta-o.</desc>
+  <rect x="0" y="0" width="720" height="360" fill="#ffffff"/>
+  <!-- energy axis -->
+  <line x1="30" y1="330" x2="30" y2="30" stroke="#333" stroke-width="1.5"/>
+  <polygon points="30,22 25,34 35,34" fill="#333"/>
+  <text x="40" y="34" fill="#333">energy</text>
+  <!-- centre: spherical field, five degenerate -->
+  <g stroke="#1f4e9c" stroke-width="3">
+    <line x1="290" y1="190" x2="310" y2="190"/><line x1="315" y1="190" x2="335" y2="190"/><line x1="340" y1="190" x2="360" y2="190"/><line x1="365" y1="190" x2="385" y2="190"/><line x1="390" y1="190" x2="410" y2="190"/>
+  </g>
+  <text x="350" y="215" text-anchor="middle" fill="#333">five d orbitals</text>
+  <text x="350" y="233" text-anchor="middle" fill="#333">(spherical average)</text>
+  <!-- octahedral, right -->
+  <g stroke="#b03a2e" stroke-width="3">
+    <line x1="545" y1="110" x2="575" y2="110"/><line x1="585" y1="110" x2="615" y2="110"/>
+    <line x1="525" y1="243" x2="555" y2="243"/><line x1="565" y1="243" x2="595" y2="243"/><line x1="605" y1="243" x2="635" y2="243"/>
+  </g>
+  <g stroke="#999" stroke-width="1" stroke-dasharray="4 3">
+    <line x1="412" y1="190" x2="520" y2="110"/><line x1="412" y1="190" x2="520" y2="243"/>
+    <line x1="500" y1="190" x2="650" y2="190"/>
+  </g>
+  <text x="580" y="78" text-anchor="middle" fill="#b03a2e">eg: dz², dx²−y²</text>
+  <text x="580" y="98" text-anchor="middle" fill="#b03a2e">+0.6 Δo</text>
+  <text x="580" y="267" text-anchor="middle" fill="#b03a2e">t2g: dxy, dxz, dyz</text>
+  <text x="580" y="285" text-anchor="middle" fill="#b03a2e">−0.4 Δo</text>
+  <line x1="690" y1="110" x2="690" y2="243" stroke="#333" stroke-width="1.2"/>
+  <polygon points="690,104 686,114 694,114" fill="#333"/><polygon points="690,249 686,239 694,239" fill="#333"/>
+  <text x="682" y="180" text-anchor="end" fill="#333">Δo</text>
+  <text x="580" y="320" text-anchor="middle" font-weight="bold" fill="#333">octahedral</text>
+  <!-- tetrahedral, left -->
+  <g stroke="#1e8449" stroke-width="3">
+    <line x1="80" y1="165" x2="110" y2="165"/><line x1="120" y1="165" x2="150" y2="165"/><line x1="160" y1="165" x2="190" y2="165"/>
+    <line x1="100" y1="227" x2="130" y2="227"/><line x1="140" y1="227" x2="170" y2="227"/>
+  </g>
+  <g stroke="#999" stroke-width="1" stroke-dasharray="4 3">
+    <line x1="288" y1="190" x2="195" y2="165"/><line x1="288" y1="190" x2="175" y2="227"/>
+  </g>
+  <text x="135" y="152" text-anchor="middle" fill="#1e8449">t2: +0.4 Δt</text>
+  <text x="135" y="250" text-anchor="middle" fill="#1e8449">e: −0.6 Δt</text>
+  <text x="135" y="270" text-anchor="middle" fill="#1e8449">Δt ≈ (4/9) Δo</text>
+  <text x="135" y="320" text-anchor="middle" font-weight="bold" fill="#333">tetrahedral</text>
+</svg>
