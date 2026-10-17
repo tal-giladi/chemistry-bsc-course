@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A pH electrode was calibrated badly and reads every pH 0.05 units too high. A weak-acid titration is
+    analysed with a Gran plot. What happens to the results?
+  options:
+    - Both the end-point volume and Ka are wrong by about 12 %.
+    - The end-point volume is still right, but Ka from the slope comes out wrong.
+    - The end-point volume is wrong, but Ka is right because the slope is unaffected.
+    - Neither is affected, because Gran plots cancel all electrode errors.
+  correct: 1
+  explanation: >-
+    A constant offset multiplies every value of V x 10^-pH by the same factor. The line keeps its
+    x-intercept (V_eq) but its slope, which is -Ka, is scaled. A drift that changes during the titration
+    would also move the intercept.
+- id: q2
+  question: >-
+    Fe2+ is titrated with Ce4+ in 1 M H2SO4 (formal potentials 0.68 V and 1.44 V vs SHE). The Pt electrode
+    is read against Ag/AgCl, which is +0.197 V vs SHE. What should the meter show at equivalence?
+  options:
+    - About 1.06 V, the average of the two formal potentials.
+    - About 1.26 V, because the potential at equivalence is set by cerium.
+    - About 0.86 V, the average of the two formal potentials minus the reference potential.
+    - About 0.68 V, because iron controls the potential until all of it is oxidised.
+  correct: 2
+  explanation: >-
+    E_eq = (0.68 + 1.44)/2 = 1.06 V vs SHE. Against Ag/AgCl you subtract 0.197 V, so the meter reads
+    about 0.86 V. Forgetting the reference scale is a common cause of wrong indicator choices.
+- id: q3
+  question: >-
+    In the same titration, the meter reads 0.485 V vs Ag/AgCl at exactly half the equivalence volume.
+    What does that tell you?
+  options:
+    - The formal potential of Fe3+/Fe2+ in this medium is about 0.68 V vs SHE.
+    - The cerium solution has decomposed, because the potential should be 1.06 V.
+    - Half of the cerium has been reduced, so E equals the cerium formal potential.
+    - The electrode is faulty, because the standard potential of Fe3+/Fe2+ is 0.771 V.
+  correct: 0
+  explanation: >-
+    At half-equivalence [Fe3+] = [Fe2+], so the log term vanishes and E = E0' of iron:
+    0.485 + 0.197 = 0.682 V vs SHE. It differs from 0.771 V because sulfate complexes the ions.
+- id: q4
+  question: >-
+    Why is phosphoric acid added before the periodate step in the manganese-in-steel method?
+  options:
+    - To oxidise Mn2+ to permanganate faster than periodate alone can.
+    - To dissolve the carbon in the steel, which would otherwise scatter light.
+    - To destroy nitrogen oxides left from the nitric acid dissolution.
+    - To bind Fe3+ in a colourless complex, so its yellow colour does not add to the absorbance.
+  correct: 3
+  explanation: >-
+    Steel is mostly iron, and Fe3+ is yellow. Phosphate complexes it and removes the colour. Nitrogen
+    oxides are destroyed separately with peroxydisulfate and boiling, and periodate does the oxidation.
+- id: q5
+  question: >-
+    Near the end point of a potentiometric titration, a student adds 0.5 mL steps. The first derivative
+    peaks between 19.5 and 20.0 mL. What is the best next step?
+  options:
+    - Report 19.75 mL, because the midpoint of the steepest step is the end point.
+    - Repeat the titration with 0.05-0.1 mL steps near 20 mL and use the second-derivative zero crossing.
+    - Report 20.0 mL, because the end point is always at the end of the steepest step.
+    - Fit a straight line through all the points and take the volume where pH equals 7.
+  correct: 1
+  explanation: >-
+    The derivative can only locate the end point to about the step size, here 0.5 mL or 2.5 %. Small steps
+    near the jump and interpolating the second derivative bring this down to a few hundredths of a mL.

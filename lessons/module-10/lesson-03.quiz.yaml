@@ -1,0 +1,64 @@
+- id: q1
+  question: >-
+    You titrate equal amounts of chloride, bromide and iodide with the same silver nitrate solution.
+    Which gives the sharpest end point, and why?
+  options:
+    - Chloride, because AgCl has the largest Ksp and so precipitates fastest.
+    - All three are the same, because the stoichiometry is 1 to 1 in every case.
+    - Bromide, because its Ksp lies between the other two and balances speed and solubility.
+    - Iodide, because AgI has the smallest Ksp, so pAg changes most across equivalence.
+  correct: 3
+  explanation: >-
+    Before equivalence [Ag+] = Ksp/[X-], so a smaller Ksp gives a higher pAg on the left of the jump,
+    while the excess-silver side is the same for all three. Iodide (8.3e-17) gives the largest jump.
+- id: q2
+  question: >-
+    A food lab must determine chloride in a pickle brine that is acidic (pH 3). Which method fits best?
+  options:
+    - Volhard, because it is run in nitric acid where Fe3+ stays in solution as the indicator.
+    - Mohr, because chromate works best in acid where it is fully protonated.
+    - Mohr, after adding extra chromate to make up for the acid.
+    - Fajans, because adsorption indicators do not depend on pH at all.
+  correct: 0
+  explanation: >-
+    In acid, chromate becomes HCrO4-, so the Mohr end point comes late. Volhard is designed for acidic
+    solution (Fe3+ would precipitate as Fe(OH)3 otherwise). Remember to remove the AgCl before the
+    thiocyanate back titration.
+- id: q3
+  question: >-
+    A technician runs a water-hardness EDTA titration at pH 8 instead of pH 10. Using alpha(Y4-) = 0.0056
+    at pH 8 and log Kf = 8.79 for MgY2-, what is the likely result?
+  options:
+    - A sharper end point, because more EDTA is in its protonated, more soluble forms.
+    - No difference, because the formation constant of MgY2- does not depend on pH.
+    - A poor, early end point, because log K' for Mg drops to about 6.5, too weak to titrate cleanly.
+    - A late end point, because Mg(OH)2 precipitates at pH 8 and must redissolve first.
+  correct: 2
+  explanation: >-
+    log K' = 8.79 + log 0.0056 = 6.5. Below about 8 the complex is not strong enough near equivalence,
+    so the colour change is gradual and comes early. At pH 10, log K' is about 8.4.
+- id: q4
+  question: >-
+    A 50.00 mL water sample needs 10.00 mL of 0.01000 M EDTA at pH 10. What is its hardness?
+  options:
+    - 80 mg/L as Ca, because hardness is reported as calcium.
+    - 200 mg/L as CaCO3.
+    - 20 mg/L as CaCO3, because the sample volume is five times the titrant volume.
+    - 100 mg/L as CaCO3, because 0.1 mmol of EDTA was used.
+  correct: 1
+  explanation: >-
+    0.01000 x 10.00 = 0.1000 mmol of Ca + Mg in 50.00 mL = 2.000 mmol/L. Times 100.09 mg/mmol CaCO3 gives
+    200 mg/L. Hardness includes magnesium and is reported as CaCO3.
+- id: q5
+  question: >-
+    In a Volhard chloride determination the AgCl is not filtered off before the KSCN back titration. How
+    does this affect the reported chloride?
+  options:
+    - It is too high, because AgCl adds its own silver to the back titration.
+    - It is too low, because SCN- slowly converts AgCl to the less soluble AgSCN and uses extra titrant.
+    - It is unaffected, because the AgCl is a solid and does not take part.
+    - It is too high, because the AgCl precipitate hides the red end-point colour.
+  correct: 1
+  explanation: >-
+    AgSCN (Ksp 1.1e-12) is less soluble than AgCl (1.8e-10), so thiocyanate pulls silver out of the AgCl.
+    More KSCN is used, the leftover silver looks larger, and chloride by difference comes out low.

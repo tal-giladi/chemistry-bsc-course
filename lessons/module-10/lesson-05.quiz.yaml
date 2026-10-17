@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    A fluoride electrode calibrated with standards from 0.5 to 10 mg/L gives a reading for a well-water
+    sample that the calibration line turns into 0.14 mg/L. What should the report say?
+  options:
+    - 0.14 mg/L, because the electrode responds to fluoride over the whole range.
+    - 0.28 mg/L, because the sample was diluted 1 to 1 with TISAB.
+    - Not detected, because any result below the lowest standard is zero.
+    - Below 0.5 mg/L, since the response flattens there and a straight line reads high.
+  correct: 3
+  explanation: >-
+    The calibration only holds over the range it was measured. Below it the response flattens and a
+    linear extrapolation overestimates the concentration. Report it as below the range, or recalibrate
+    with low-level standards.
+- id: q2
+  question: >-
+    Why must the fluoride standards be mixed with TISAB just like the samples?
+  options:
+    - So that standards and samples have the same ionic strength and pH, and the electrode responds the same way.
+    - Because TISAB contains a known amount of fluoride that is needed to reach the linear range.
+    - Because TISAB cleans the membrane and is only needed before the first measurement.
+    - Because TISAB raises the pH to 10, where fluoride is fully deprotonated.
+  correct: 0
+  explanation: >-
+    TISAB fixes the ionic strength (so activity follows concentration), buffers at pH 5-5.5 (no OH-
+    interference, little HF) and frees complexed fluoride. Treating standards differently would give
+    them a different response from the samples.
+- id: q3
+  question: >-
+    A calcium ISE has a slope of 29 mV per decade, while a fluoride ISE has 58 mV per decade. What does
+    this mean?
+  options:
+    - The calcium electrode is worn out and should be replaced, since a healthy ISE gives about 59 mV.
+    - The calcium electrode is twice as sensitive, because a smaller slope gives finer readings.
+    - Both are working: the Nernst slope is 59.16/z mV, and calcium has a charge of 2.
+    - The fluoride electrode is over-responding, because a negative ion should give a smaller slope.
+  correct: 2
+  explanation: >-
+    For a two-charge ion the slope at 25 C is 59.16/2 = 29.6 mV per decade. A calcium electrode is
+    therefore less sensitive in millivolts per decade, so the same 0.1 mV noise gives a larger error.
+- id: q4
+  question: >-
+    A sample's fluoride result by calibration line is 0.86 mg/L and by standard addition 0.84 mg/L. What
+    do you learn from the comparison?
+  options:
+    - Standard addition is always lower, so the true value is somewhere below 0.84 mg/L.
+    - The sample matrix does not noticeably change the electrode response, so the calibration line can be trusted.
+    - The electrode slope must be wrong, because the two methods should give exactly the same number.
+    - The sample contains aluminium, which standard addition removes.
+  correct: 1
+  explanation: >-
+    Standard addition measures in the sample's own matrix, so any matrix effect cancels. Agreement within
+    about 2 % shows the matrix is harmless here.
+- id: q5
+  question: >-
+    A bottled water lists Ca 75 mg/L and Mg 30 mg/L. How would you classify it with the USGS hardness classes?
+  options:
+    - Moderately hard, about 105 mg/L, by adding the calcium and magnesium.
+    - Soft, about 30 mg/L, because only magnesium counts.
+    - Very hard, about 310 mg/L as CaCO3.
+    - Hard, about 187 mg/L as CaCO3, from the calcium alone.
+  correct: 2
+  explanation: >-
+    Hardness = 2.497 x 75 + 4.118 x 30 = 187 + 124 = 311 mg/L as CaCO3, above the 180 mg/L limit for very
+    hard. Adding the raw masses ignores the conversion to CaCO3; leaving out magnesium undercounts.

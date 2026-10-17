@@ -1,0 +1,12 @@
+kind,label,c_mg_L,E_mV
+standard,std 0.1,0.10,10.5
+standard,std 0.2,0.20,-4.5
+standard,std 0.5,0.50,-26.0
+standard,std 1,1.00,-42.5
+standard,std 2,2.00,-60.2
+standard,std 5,5.00,-83.4
+standard,std 10,10.00,-100.6
+sample,A,,-39.1
+sample,B,,7.0
+addition_before,A,,-39.3
+addition_after,A,,-69.6

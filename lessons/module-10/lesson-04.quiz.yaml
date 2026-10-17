@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    You heat baking soda in an oven and weigh it every 15 minutes, taking it straight from the oven to
+    the scale. The masses keep creeping up between the last two weighings. What is the most likely cause?
+  options:
+    - The sodium carbonate is reacting with oxygen in the oven and gaining mass.
+    - The scale is drifting, so it should be recalibrated with a known mass before continuing.
+    - The sample is warm when weighed and takes up water as it cools, so cooling must be standardised.
+    - The baking soda was impure, and the impurity absorbs CO2 from the oven air.
+  correct: 2
+  explanation: >-
+    Warm objects read light because of rising air, and dry Na2CO3 picks up water vapour as it cools. Cool
+    to room temperature the same way every time, ideally in a closed container, before weighing.
+- id: q2
+  question: >-
+    A 9.99 g baking-soda sample loses 3.66 g on heating to constant mass. The theoretical loss for pure
+    NaHCO3 is 36.92 %. What is the apparent NaHCO3 content?
+  options:
+    - 99.2 %
+    - 36.6 %
+    - 63.4 %
+    - 100.8 %
+  correct: 0
+  explanation: >-
+    Loss = 3.66/9.99 = 36.64 %, and 36.64/36.92 = 99.2 %. 36.6 % is the loss itself and 63.4 % is the
+    residue fraction; neither is the purity.
+- id: q3
+  question: >-
+    An analyst precipitates sulfate as BaSO4 quickly from a cold, concentrated solution and filters it
+    right away. Which problem is she most likely to see?
+  options:
+    - A low result, because BaSO4 is very soluble in cold water.
+    - A high result from co-precipitated impurities, and losses of tiny crystals through the filter.
+    - No problem, because the gravimetric factor corrects for the crystal size.
+    - A low result, because cold solutions cannot reach constant mass.
+  correct: 1
+  explanation: >-
+    High supersaturation makes many tiny crystals that trap impurities and pass the filter. Slow addition
+    to a hot, dilute solution followed by digestion gives large, purer crystals.
+- id: q4
+  question: >-
+    In a coulometric titration, 10.00 mA flows for 482.5 s to generate OH- that neutralises an HCl
+    sample. How many moles of HCl were present, assuming 100 % current efficiency?
+  options:
+    - 2.50e-5 mol, because two electrons are needed per hydroxide ion.
+    - 4.825 mol, the charge in coulombs.
+    - 5.00e-2 mol, because the current is in milliamperes.
+    - 5.00e-5 mol, from Q = It divided by F.
+  correct: 3
+  explanation: >-
+    Q = 0.01000 A x 482.5 s = 4.825 C; 4.825/96485 = 5.00e-5 mol of electrons. Water reduction gives one
+    OH- per electron, so n = 1 and 5.00e-5 mol of HCl.
+- id: q5
+  question: >-
+    480 C passed through a copper solution should deposit 0.1581 g of copper, but the cathode gains
+    0.1572 g. What should you conclude?
+  options:
+    - The current efficiency was 99.5 %; some charge went to a side reaction such as hydrogen evolution.
+    - The copper was oxidised back into solution, so the result is 0.6 % too low and must be corrected.
+    - The Faraday constant is inaccurate at this level of precision.
+    - The cathode was weighed wet, so the mass is too high.
+  correct: 0
+  explanation: >-
+    0.1572/0.1581 = 99.5 %. In electrogravimetry you weigh the copper, so the mass is the result; the
+    missing charge matters only if you used coulometry to count the copper.

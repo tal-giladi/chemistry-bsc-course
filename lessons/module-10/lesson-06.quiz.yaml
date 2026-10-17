@@ -1,0 +1,64 @@
+- id: q1
+  question: >-
+    Five vinegar titrations average 4.990 % without a blank correction and 4.948 % after subtracting a
+    0.06 g indicator blank. Why is the corrected value better?
+  options:
+    - It is lower, and lower results are always closer to the truth in titrations.
+    - The blank removes the random scatter between the five trials.
+    - The blank measures the titrant the indicator needs to change colour, a systematic excess in every trial.
+    - The blank corrects for the density of vinegar, so the result is now in g per 100 mL.
+  correct: 2
+  explanation: >-
+    Every trial overshoots by the same amount the indicator needs, so the excess is systematic and does
+    not show in the SD. Titrating water plus indicator to the same colour measures it and lets you subtract it.
+- id: q2
+  question: >-
+    Your budget shows: baking-soda purity 0.29 %, repeatability 0.19 %, end point 0.19 %, scale terms below
+    0.1 %. Which single change would reduce the combined uncertainty most?
+  options:
+    - Buying a 0.001 g scale, because the scale is used for every mass.
+    - Pinning down the purity of the baking soda, for example with the oven test or a second standard.
+    - Doing ten trials instead of five, because repeatability is the only term that shrinks with n.
+    - Using a smaller syringe, because the end point is the largest term.
+  correct: 1
+  explanation: >-
+    Variances add, so the largest term dominates: 0.29 squared is about half of the total. Better scales
+    or more trials shrink terms that are already small.
+- id: q3
+  question: >-
+    The mean is 4.972 g/100 mL with s = 0.021 (n = 5) and an expanded uncertainty of 0.041. The label says
+    5.0. The t-test gives t = -2.98 (critical 2.78). What is the honest conclusion?
+  options:
+    - The repeats differ from 5.0, but 5.0 lies within the expanded uncertainty, so the label is not shown wrong.
+    - The vinegar is definitely below its label, because the t-test is significant at the 95 % level.
+    - The vinegar matches its label exactly, because 5.0 is inside the expanded uncertainty interval.
+    - Nothing can be concluded, because five trials are far too few for any kind of statistical test.
+  correct: 0
+  explanation: >-
+    The t-test uses only the random scatter. The expanded uncertainty also includes systematic terms such
+    as the purity of the baking soda, which could explain a 0.6 % difference. Both facts belong in the report.
+- id: q4
+  question: >-
+    Why does the CI shrink from 4.30 s/sqrt(3) to 2.78 s/sqrt(5) when you go from three to five trials?
+  options:
+    - Because the standard deviation always gets smaller when more trials are added.
+    - Because two extra trials remove the systematic error of the end point.
+    - Because the scale resolution is divided by the number of trials.
+    - Because both the t value falls with more degrees of freedom and sqrt(n) grows.
+  correct: 3
+  explanation: >-
+    For the same s, 4.30/sqrt(3) = 2.48 s and 2.78/sqrt(5) = 1.24 s: the interval halves. s itself does
+    not have to fall, and no number of repeats removes a systematic error.
+- id: q5
+  question: >-
+    One of your five trials is 0.3 % higher than the other four. You remember nothing unusual about it.
+    What should you do?
+  options:
+    - Discard it, because it is clearly an outlier and would increase the SD.
+    - Replace it with the mean of the other four, so that n stays at five.
+    - Keep it unless a Grubbs test or a recorded cause justifies removing it, and report what you did.
+    - Discard all five and start again, because one bad trial means the method failed.
+  correct: 2
+  explanation: >-
+    Removing data without evidence biases the result and understates the uncertainty. A gross error needs a
+    note in the notebook or a statistical test; otherwise the result stays in.
