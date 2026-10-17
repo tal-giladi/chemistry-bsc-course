@@ -1,0 +1,8 @@
+# Instructor notes — 29.2 Enzyme kinetics: Michaelis-Menten in depth
+
+- Objective: the learner checks the conditions behind Michaelis–Menten, interprets $k_\text{cat}$, $K_m$ and $k_\text{cat}/K_m$ with realistic magnitudes, fits the 1913 rates four ways, uses a Monte Carlo test to see why Lineweaver–Burk is imprecise, designs an assay and uses the integrated rate law.
+- Likely confusion: why the competing-substrate ratio depends only on $k_\text{cat}/K_m$ (both substrates share the same free enzyme); bias versus scatter in the Monte Carlo output; arbitrary units of the 1913 rates.
+- Misconception: "Lineweaver–Burk is biased" — in this test it is mainly imprecise, with an almost unbiased median. Second: "a bigger $k_\text{cat}$ means a better enzyme" (quiz q1). Third: "measure at saturating [S] to get $K_m$" (quiz q3).
+- Analogy: fitting a Lineweaver–Burk line is like judging a runner's speed from the one lap the stopwatch nearly missed — the shakiest timing gets the loudest vote.
+- Expected hands-on result: Part A 1913 nonlinear 3.91 ± 0.06 and 17.9 ± 1.0 mM; LB 3.95/18.4; Hanes 3.85/16.6; Eadie 3.91/17.9. Monte Carlo (seed 1) good design: nonlinear +0.2 % bias, ±12.0 %; LB −1.1 %, ±43.1 %; Hanes +1.8 %, ±14.1 %; Eadie −4.2 %, ±17.1 %. Poor design: about ±20 % for all. Part B 1, 4, 9 $K_m$ (99 % needs 99 $K_m$). Part C eight geometric concentrations spanning about 0.2–7.5 $K_m$; read about 2 min.
+- Extension: change the noise model in `monte_carlo()` to constant relative error (5 % of each rate) and see whether Lineweaver–Burk becomes acceptable (it improves a lot, because then all $1/v$ values have the same relative error); or fit the integrated equation to a simulated progress curve with `scipy.special.lambertw`.

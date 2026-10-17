@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<title>Stability curve of a small protein</title>
+<desc>Gibbs energy of unfolding against temperature for a model protein with Tm 64 C, dHm 378 kJ/mol and dCp 6.0 kJ/(mol K). The curve peaks near 7 C at about 33 kJ/mol and crosses zero at 64 C (heat denaturation) and near -47 C (cold denaturation).</desc>
+<rect width="640" height="380" fill="white"/>
+<line x1="70" x2="620" y1="320.0" y2="320.0" stroke="#ddd"/>
+<text x="62" y="324.0" text-anchor="end">-20</text>
+<line x1="70" x2="620" y1="271.7" y2="271.7" stroke="#ddd"/>
+<text x="62" y="275.7" text-anchor="end">-10</text>
+<line x1="70" x2="620" y1="223.3" y2="223.3" stroke="#ddd"/>
+<text x="62" y="227.3" text-anchor="end">0</text>
+<line x1="70" x2="620" y1="175.0" y2="175.0" stroke="#ddd"/>
+<text x="62" y="179.0" text-anchor="end">10</text>
+<line x1="70" x2="620" y1="126.7" y2="126.7" stroke="#ddd"/>
+<text x="62" y="130.7" text-anchor="end">20</text>
+<line x1="70" x2="620" y1="78.3" y2="78.3" stroke="#ddd"/>
+<text x="62" y="82.3" text-anchor="end">30</text>
+<line x1="70" x2="620" y1="30.0" y2="30.0" stroke="#ddd"/>
+<text x="62" y="34.0" text-anchor="end">40</text>
+<line x1="70.0" x2="70.0" y1="320" y2="325" stroke="black"/>
+<text x="70.0" y="340" text-anchor="middle">-60</text>
+<line x1="151.5" x2="151.5" y1="320" y2="325" stroke="black"/>
+<text x="151.5" y="340" text-anchor="middle">-40</text>
+<line x1="233.0" x2="233.0" y1="320" y2="325" stroke="black"/>
+<text x="233.0" y="340" text-anchor="middle">-20</text>
+<line x1="314.4" x2="314.4" y1="320" y2="325" stroke="black"/>
+<text x="314.4" y="340" text-anchor="middle">0</text>
+<line x1="395.9" x2="395.9" y1="320" y2="325" stroke="black"/>
+<text x="395.9" y="340" text-anchor="middle">20</text>
+<line x1="477.4" x2="477.4" y1="320" y2="325" stroke="black"/>
+<text x="477.4" y="340" text-anchor="middle">40</text>
+<line x1="558.9" x2="558.9" y1="320" y2="325" stroke="black"/>
+<text x="558.9" y="340" text-anchor="middle">60</text>
+<line x1="70" x2="620" y1="223.3" y2="223.3" stroke="black"/>
+<line x1="70" x2="70" y1="30" y2="320" stroke="black"/><line x1="70" x2="620" y1="320" y2="320" stroke="black"/>
+<polyline points="70.0,314.1 74.1,306.3 78.1,298.6 82.2,291.1 86.3,283.6 90.4,276.3 94.4,269.2 98.5,262.2 102.6,255.3 106.7,248.5 110.7,241.9 114.8,235.4 118.9,229.0 123.0,222.8 127.0,216.7 131.1,210.7 135.2,204.8 139.3,199.1 143.3,193.5 147.4,188.0 151.5,182.6 155.6,177.4 159.6,172.3 163.7,167.3 167.8,162.5 171.9,157.7 175.9,153.1 180.0,148.6 184.1,144.2 188.1,140.0 192.2,135.8 196.3,131.8 200.4,127.9 204.4,124.2 208.5,120.5 212.6,117.0 216.7,113.5 220.7,110.2 224.8,107.0 228.9,103.9 233.0,101.0 237.0,98.1 241.1,95.4 245.2,92.8 249.3,90.3 253.3,87.9 257.4,85.6 261.5,83.4 265.6,81.4 269.6,79.4 273.7,77.6 277.8,75.8 281.9,74.2 285.9,72.7 290.0,71.3 294.1,70.0 298.1,68.8 302.2,67.8 306.3,66.8 310.4,65.9 314.4,65.2 318.5,64.5 322.6,64.0 326.7,63.6 330.7,63.2 334.8,63.0 338.9,62.9 343.0,62.9 347.0,62.9 351.1,63.1 355.2,63.4 359.3,63.8 363.3,64.3 367.4,64.9 371.5,65.6 375.6,66.4 379.6,67.3 383.7,68.3 387.8,69.4 391.9,70.6 395.9,71.9 400.0,73.3 404.1,74.8 408.1,76.4 412.2,78.1 416.3,79.9 420.4,81.8 424.4,83.7 428.5,85.8 432.6,88.0 436.7,90.3 440.7,92.6 444.8,95.1 448.9,97.7 453.0,100.3 457.0,103.1 461.1,105.9 465.2,108.8 469.3,111.9 473.3,115.0 477.4,118.2 481.5,121.5 485.6,124.9 489.6,128.4 493.7,132.0 497.8,135.7 501.9,139.4 505.9,143.3 510.0,147.3 514.1,151.3 518.1,155.4 522.2,159.6 526.3,163.9 530.4,168.3 534.4,172.8 538.5,177.4 542.6,182.1 546.7,186.8 550.7,191.7 554.8,196.6 558.9,201.6 563.0,206.7 567.0,211.9 571.1,217.2 575.2,222.5 579.3,228.0 583.3,233.5 587.4,239.1 591.5,244.8 595.6,250.6 599.6,256.5 603.7,262.4 607.8,268.5 611.9,274.6 615.9,280.8 620.0,287.1" fill="none" stroke="#1f5fa8" stroke-width="2.5"/>
+<circle cx="341.7" cy="62.9" r="4" fill="#1f5fa8"/><text x="341.7" y="52.9" text-anchor="middle">maximum stability, about 7 °C</text>
+<circle cx="575.8" cy="223.3" r="4" fill="#c0392b"/><text x="569.8" y="243.3" text-anchor="end">Tm = 64 °C, heat denaturation</text>
+<circle cx="123.0" cy="223.3" r="4" fill="#c0392b"/><text x="131.0" y="243.3">cold denaturation, about −47 °C</text>
+<text x="471.2" y="100.8">37 °C: 24 kJ/mol</text><circle cx="465.2" cy="108.8" r="3" fill="black"/>
+<text x="345.0" y="362" text-anchor="middle">temperature / °C</text>
+<text transform="translate(18,175.0) rotate(-90)" text-anchor="middle">ΔG of unfolding / kJ mol⁻¹</text>
+<text x="616" y="291.0" text-anchor="end" fill="#555">below zero: unfolded state favoured</text>
+</svg>

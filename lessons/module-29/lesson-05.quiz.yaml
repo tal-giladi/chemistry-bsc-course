@@ -1,0 +1,64 @@
+- id: q1
+  question: >-
+    A pathway step A -> B + C has dG0' = +20 kJ/mol. In the cell, [A] = 1e-4 M and [B] = [C] = 1e-5 M
+    (RT = 2.58 kJ/mol at 37 °C). Which way does it run?
+  options:
+    - Backward, because dG0' is positive.
+    - Forward, because dG = 20 + 2.58 ln(1e-6) = -15.6 kJ/mol.
+    - It is at equilibrium, because the concentrations are all small.
+    - Forward, because dG = 20 + 2.58 ln(0.1) = +14 kJ/mol is less positive.
+  correct: 1
+  explanation: >-
+    Q = (1e-5)(1e-5)/1e-4 = 1e-6, and RT ln Q = -35.6 kJ/mol, so dG = -15.6 kJ/mol. With two products and
+    one substrate, dilution favours the forward direction; the standard value alone misleads.
+- id: q2
+  question: >-
+    In a red cell, hexokinase has dG = -32 kJ/mol and phosphoglucose isomerase dG = -1 kJ/mol. A drug halves
+    the activity of each enzyme separately. Which change most reduces glycolytic flux?
+  options:
+    - Halving phosphoglucose isomerase, because it has the smaller dG.
+    - Both equally, because flux passes through every enzyme.
+    - Halving hexokinase, because a far-from-equilibrium step sets the rate through its enzyme amount.
+    - Neither, because ATP levels control glycolysis independently of enzymes.
+  correct: 2
+  explanation: >-
+    A near-equilibrium enzyme has activity to spare; a small rise in its substrate restores its net flux.
+    A far-from-equilibrium step runs one way at a rate set by its active enzyme, so halving it bites.
+- id: q3
+  question: >-
+    Which description of the aldolase step of glycolysis is correct?
+  options:
+    - A retro-aldol cleavage in which an active-site lysine forms an imine with the ketone carbonyl.
+    - A dehydration in which Mg2+ removes water from a C2 alcohol.
+    - An oxidation in which NAD+ removes a hydride from an aldehyde.
+    - A phosphoryl transfer in which ATP gives a phosphate to a sugar alcohol.
+  correct: 0
+  explanation: >-
+    Aldolase splits fructose 1,6-bisphosphate into two trioses by a reverse aldol reaction; the lysine
+    Schiff base is an electron sink, a case of covalent catalysis. The other options are steps 9, 6 and 1.
+- id: q4
+  question: >-
+    You compute dG = +5 kJ/mol for triose phosphate isomerase in a red cell, yet the pathway clearly runs
+    forward. What is the best conclusion?
+  options:
+    - The red cell must be making DHAP from glyceraldehyde 3-phosphate.
+    - The step is near equilibrium, and +5 kJ/mol is within the uncertainty of the inputs.
+    - Triose phosphate isomerase must be coupled to ATP hydrolysis in the cell.
+    - The enzyme must be inhibited, which makes the computed dG positive.
+  correct: 1
+  explanation: >-
+    Standard values measured under other conditions and micromolar concentrations that are hard to
+    measure carry errors of a few kJ/mol. A slightly positive result marks a near-equilibrium step.
+- id: q5
+  question: >-
+    Two drug candidates each halve an enzyme's rate at the normal substrate level. One is competitive, one
+    uncompetitive. If substrate then rises tenfold in front of the inhibited step, what happens?
+  options:
+    - Both lose their effect equally, because the substrate outcompetes any inhibitor.
+    - The competitive inhibitor becomes stronger, because more substrate binds near it.
+    - Neither changes, because each was dosed to give half the rate.
+    - The competitive one loses much of its effect; the uncompetitive one becomes stronger.
+  correct: 3
+  explanation: >-
+    More substrate displaces a competitive inhibitor from free enzyme, but forms more ES for an
+    uncompetitive inhibitor to bind. In the practical, flux left went from 0.5 to 0.80 and 0.29.

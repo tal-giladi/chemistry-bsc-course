@@ -1,0 +1,21 @@
+# Steady-state concentrations in human red blood cells, mmol per litre of cells, from the model of
+# Protasov et al., Sci. Rep. 9, 1455 (2019), Tables 1 and 2 (each value lies in or near the measured range the
+# paper lists). Retrieved 2026-10-17 via Europe PMC (PMC6365525). Glucose is not in the tables: 5.0 mM is a
+# normal fasting blood value, used here because red cells take up glucose freely (an assumption, not a measurement).
+species,conc_mM,measured_range_mM
+glucose,5.0,assumed
+G6P,0.073,0.02-0.11
+F6P,0.024,0.006-0.016
+FBP,0.0075,0.002-0.03
+DHAP,0.032,0.0076-0.035
+GAP,0.014,0.0048-0.02
+BPG13,0.00072,0.000062-0.00043
+PG3,0.045,0.055-0.069
+PG2,0.011,0.0055-0.012
+PEP,0.0098,0.012-0.018
+pyruvate,0.07,0.047-0.95
+NAD,0.048,0.032-0.092
+NADH,0.002,0.001-0.054
+Pi,1.0,0.5-0.9
+ATP,1.47,1.07-1.8
+ADP,0.23,0.085-0.3

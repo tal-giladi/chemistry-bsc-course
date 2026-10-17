@@ -1,0 +1,14 @@
+# Standard biochemical Gibbs energies (pH 7, 1 M standard state for every other species, water omitted)
+# of the ten steps of glycolysis, from Jakubowski and Flatt, Fundamentals of Biochemistry, 13.1 Glycolysis
+# (Biology LibreTexts, retrieved 2026-10-17), rounded as printed there. Species separated by ';'.
+step,enzyme,substrates,products,dG0prime_kJ_per_mol
+1,hexokinase,glucose;ATP,G6P;ADP,-16.7
+2,phosphoglucose isomerase,G6P,F6P,1.7
+3,phosphofructokinase-1,F6P;ATP,FBP;ADP,-14.0
+4,aldolase,FBP,DHAP;GAP,24.0
+5,triose phosphate isomerase,DHAP,GAP,7.5
+6,glyceraldehyde-3-phosphate dehydrogenase,GAP;NAD;Pi,BPG13;NADH,6.1
+7,phosphoglycerate kinase,BPG13;ADP,PG3;ATP,-19.0
+8,phosphoglycerate mutase,PG3,PG2,4.6
+9,enolase,PG2,PEP,1.7
+10,pyruvate kinase,PEP;ADP,pyruvate;ATP,-31.0

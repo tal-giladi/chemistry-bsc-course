@@ -1,0 +1,133 @@
+- id: q1
+  question: >-
+    A therapeutic enzyme has dG of unfolding 14 kJ/mol at 37 °C (RT = 2.58 kJ/mol). A mutation adds
+    5.7 kJ/mol of stability. By roughly what factor does the unfolded fraction change?
+  options:
+    - It halves, because the stability rose by about 40 %.
+    - It falls about ninefold, because exp(5.7/2.58) is close to 9.
+    - It falls about a hundredfold, because each kJ/mol is a factor of ten.
+    - It falls about twofold, because 5.7/2.58 is close to 2.
+  correct: 1
+  explanation: >-
+    The unfolded fraction is nearly K_U = exp(-dG/RT), so it changes by exp(5.7/2.58) = 9. At 25 °C the
+    same 5.7 kJ/mol would be a factor of ten.
+- id: q2
+  question: >-
+    A thermal melt of a protein is analysed twice: once with sloping native and unfolded baselines and
+    once assuming flat baselines. The fits give different Tm and dHm. Which analysis should you trust, and
+    what check should come first?
+  options:
+    - The flat-baseline fit, after confirming the protein's mass by gel.
+    - Either, because baselines do not affect a two-state midpoint.
+    - The flat-baseline fit, because fewer parameters always give better estimates.
+    - The sloping-baseline fit, after checking that the melt is reversible on cooling.
+  correct: 3
+  explanation: >-
+    Signals of both states drift with temperature, and ignoring that shifts the midpoint and distorts
+    dHm. Any equilibrium two-state analysis also assumes the protein refolds; check that first.
+- id: q3
+  question: >-
+    An enzyme acts on two substrates in the same cell. For A, kcat = 200 s-1 and Km = 2 mM; for B,
+    kcat = 20 s-1 and Km = 0.02 mM. Both are at 0.05 mM. Which is turned over faster, and by about how
+    much?
+  options:
+    - A, about 10 times faster, because its turnover number is 10 times larger.
+    - Both at the same rate, because they share one active site.
+    - B, about 10 times faster, because its kcat/Km is 10 times larger.
+    - A, about 100 times faster, because its Km is 100 times larger.
+  correct: 2
+  explanation: >-
+    For competing substrates v_B/v_A = (kcat/Km)_B[B]/((kcat/Km)_A[A]) = (1e6)/(1e5) = 10 at equal
+    concentrations. kcat alone ignores how well each substrate competes for free enzyme.
+- id: q4
+  question: >-
+    A colleague's Lineweaver-Burk fit of eight noisy initial rates gives Km = 0.9 mM; a weighted nonlinear
+    fit of the same data gives 0.55 +/- 0.05 mM. The two lowest-[S] rates are the noisiest. What do you
+    report?
+  options:
+    - 0.55 +/- 0.05 mM, because 1/v gives the noisy low-[S] rates the greatest pull on the line.
+    - 0.9 mM, because straight-line fits are less sensitive to outliers.
+    - 0.72 mM, the mean of the two methods.
+    - Neither, because Km cannot be measured when rates are noisy.
+  correct: 0
+  explanation: >-
+    The error in 1/v scales as sigma/v squared, so the slowest rates dominate an unweighted line. The
+    direct fit with proper weights uses the data as measured; report it with its uncertainty.
+- id: q5
+  question: >-
+    With 1 uM inhibitor, apparent Vmax falls from 80 to 40 uM/min and apparent Km falls from 0.6 to
+    0.3 mM. Lineweaver-Burk lines are parallel. What are the type and the constant?
+  options:
+    - Noncompetitive with Ki = 1 uM, because Vmax halved.
+    - Uncompetitive with Ki' = 1 uM, from alpha' = 2.
+    - Competitive with Ki = 0.5 uM, because Km changed.
+    - Mixed with Ki = 2 uM, because both constants changed.
+  correct: 1
+  explanation: >-
+    Both constants divided by the same factor, with parallel lines, is uncompetitive. alpha' = 2 = 1 + [I]/Ki',
+    so Ki' = 1 uM.
+- id: q6
+  question: >-
+    A competitive inhibitor has IC50 = 300 nM in an assay run at [S] = 5 Km. A rival compound has
+    IC50 = 100 nM at [S] = Km. Which binds the enzyme more tightly?
+  options:
+    - The rival, because its IC50 is three times lower.
+    - The first compound, because its IC50 was measured at the higher [S].
+    - Neither; after correction both have Ki = 50 nM.
+    - The rival, because its Ki is 100 nM against 300 nM.
+  correct: 2
+  explanation: >-
+    Ki = IC50/(1 + [S]/Km): 300/6 = 50 nM and 100/2 = 50 nM. The two bind equally tightly; the difference in
+    IC50 comes only from the substrate concentrations of the assays.
+- id: q7
+  question: >-
+    An enzyme lowers the activation Gibbs energy of a reaction by 57 kJ/mol at 25 °C (RT = 2.48 kJ/mol).
+    About how many times faster is the catalysed reaction?
+  options:
+    - About 1e10 times, from exp(57/2.48).
+    - About 23 times, from 57/2.48.
+    - About 1e23 times, from 10 to the power 57/2.48.
+    - About 1e5 times, one factor of ten per 10 kJ/mol.
+  correct: 0
+  explanation: >-
+    k_cat/k_uncat = exp(ddG/RT) = exp(23) = 1e10. Using 10 to the power ddG/RT confuses ln with log10.
+- id: q8
+  question: >-
+    A protease shows a bell-shaped kcat/Km against pH with pKa values near 7 and 9. A mutant lacking the
+    active-site histidine is almost inactive at every pH. What is the best interpretation of the low-pH limb?
+  options:
+    - It reflects the substrate's carboxylate becoming protonated.
+    - It reflects a lysine on the protein surface losing its charge.
+    - It shows the enzyme unfolding below pH 7.
+    - It reflects the histidine, which must be neutral to act as a general base.
+  correct: 3
+  explanation: >-
+    The mutant links the pKa near 7 to the histidine: protonated, it cannot accept the serine proton. In
+    chymotrypsin the high-pH limb is the Ile16 amino group, not a second histidine.
+- id: q9
+  question: >-
+    A step of glycolysis has dG0' = +24 kJ/mol but, with red-cell concentrations, dG = -1 kJ/mol. A drug
+    that halves this enzyme's activity is proposed to stop glycolysis in a parasite. What do you predict?
+  options:
+    - Glycolysis stops, because the step is uphill under standard conditions.
+    - Glycolysis slows by half, because flux passes through every enzyme equally.
+    - Little change, because a near-equilibrium step restores its net flux with a small rise in substrate.
+    - Glycolysis speeds up, because less product inhibition occurs.
+  correct: 2
+  explanation: >-
+    Near equilibrium, the enzyme has spare capacity and the net flux is a small difference of large
+    forward and backward rates; a slight rise in its substrate compensates. Far-from-equilibrium steps are
+    better targets.
+- id: q10
+  question: >-
+    In the module practical, inhibitor X is competitive, Y uncompetitive and Z mixed, each dosed to halve
+    E1's rate at normal substrate. Substrate then builds up tenfold. Rank the flux left, from most to least.
+  options:
+    - Y, then Z, then X, because the uncompetitive inhibitor is weakest at high substrate.
+    - X, then Z, then Y, because substrate overcomes the competitive part and boosts the uncompetitive part.
+    - All three equal, because each was dosed to the same inhibition.
+    - Z, then X, then Y, because the mixed inhibitor binds two forms of the enzyme.
+  correct: 1
+  explanation: >-
+    Competitive inhibition is relieved by substrate (0.80 of flux left), mixed partly (0.68), and
+    uncompetitive inhibition gets stronger (0.29), since more substrate makes more ES for it to bind.

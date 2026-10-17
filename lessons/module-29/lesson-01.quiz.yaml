@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    A small protein has a Gibbs energy of unfolding of 17.1 kJ/mol at 25 °C (RT = 2.48 kJ/mol). About
+    what fraction of the molecules is unfolded at any moment?
+  options:
+    - About 1 in 7, because 17.1/2.48 is close to 7.
+    - About 1 in 1000, because K = exp(-17.1/2.48) is close to 1e-3.
+    - About 1 in 100, because each 5.7 kJ/mol is a factor of ten and 17.1 is two steps.
+    - About 1 in a million, because a positive dG means essentially no unfolding.
+  correct: 1
+  explanation: >-
+    K_U = exp(-dG/RT) = exp(-6.9) = 1.0e-3, so about one molecule in a thousand is unfolded. Each
+    5.7 kJ/mol is a factor of ten, and 17.1 kJ/mol is three such steps, not two.
+- id: q2
+  question: >-
+    A team measures Tm = 70 °C and dHm = 400 kJ/mol for an enzyme and estimates its stability at 25 °C
+    with dG = dHm(1 - T/Tm), ignoring dCp. How does this estimate compare with the true value if dCp is
+    about 6 kJ/(mol K)?
+  options:
+    - It is too low, because a positive dCp makes the protein more stable at low temperature.
+    - It is exactly right, because dCp only matters above Tm.
+    - It is too high, because the dCp term lowers the stability at temperatures away from Tm.
+    - It is too high, because dHm is always overestimated by calorimetry.
+  correct: 2
+  explanation: >-
+    The term -dCp[(Tm - T) + T ln(T/Tm)] is negative on both sides of Tm, so the stability curve bends
+    down. Leaving it out overestimates the stability at 25 °C by several kJ/mol.
+- id: q3
+  question: >-
+    Wild-type and mutant proteins both unfold in urea with m = 6.0 kJ/(mol M). The wild type has
+    Cm = 5.0 M and the mutant Cm = 4.2 M. What is the destabilisation caused by the mutation?
+  options:
+    - 4.8 kJ/mol, from m times the change in Cm.
+    - 0.8 kJ/mol, the change in Cm read directly as an energy.
+    - 25 kJ/mol, from m times the mutant Cm.
+    - 7.5 kJ/mol, from the ratio of the two Cm values times m.
+  correct: 0
+  explanation: >-
+    With a shared m value, ddG = m x dCm = 6.0 x 0.8 = 4.8 kJ/mol. 25 kJ/mol is the mutant's whole
+    stability in water, not the change.
+- id: q4
+  question: >-
+    You heat egg white at 1 K/min and find it turns opaque at 63 °C, although a DSC scan at 10 K/min lists
+    the first transition near 70 °C. What is the best explanation?
+  options:
+    - The thermometer must be wrong, because a protein's Tm is a fixed constant.
+    - Egg white contains a protein that is less stable at slow heating rates.
+    - The slow scan measures cold denaturation instead of heat denaturation.
+    - Egg-white unfolding is irreversible, so it depends on time as well as temperature.
+  correct: 3
+  explanation: >-
+    The egg proteins aggregate as they unfold and never refold, so the process is kinetic, not a two-state
+    equilibrium. The apparent transition then depends on how long the sample spends at each temperature.

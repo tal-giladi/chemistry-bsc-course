@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    With an inhibitor present, a kinase shows the same Vmax but its apparent Km rises from 0.10 to
+    0.40 mM at 30 nM inhibitor. What are the inhibition type and Ki?
+  options:
+    - Uncompetitive, Ki = 10 nM, because Km changed by a factor of four.
+    - Competitive, Ki = 10 nM, from alpha = 4 and Ki = [I]/(alpha - 1).
+    - Competitive, Ki = 7.5 nM, from [I] divided by the factor of four.
+    - Noncompetitive, Ki = 30 nM, because half the activity is lost.
+  correct: 1
+  explanation: >-
+    Unchanged Vmax with a larger Km is competitive. Km_app = alpha Km gives alpha = 4, and
+    alpha = 1 + [I]/Ki gives Ki = 30/3 = 10 nM.
+- id: q2
+  question: >-
+    A global fit of the mixed model gives Ki = 0.21 mM and a Ki' that grows without limit, with an AICc
+    2.5 above the competitive model. What should you conclude?
+  options:
+    - The inhibitor is mixed, because the mixed model can never fit worse.
+    - The data are unreliable, because a constant cannot be infinite.
+    - The inhibitor is competitive; nothing in the data shows binding to ES.
+    - The inhibitor is uncompetitive, because Ki' is the larger constant.
+  correct: 2
+  explanation: >-
+    An infinite Ki' means no ESI complex, which is the competitive model. The extra parameter buys no
+    better fit, so AICc rightly prefers the simpler model.
+- id: q3
+  question: >-
+    Lab A reports IC50 = 200 nM for a competitive inhibitor at [S] = 4 Km. Lab B reports IC50 = 60 nM
+    for the same compound at [S] = 0.5 Km. Are the results consistent?
+  options:
+    - Yes, both give Ki = 40 nM after the Cheng-Prusoff correction.
+    - No, the IC50 values differ by more than a factor of three.
+    - Yes, because IC50 does not depend on substrate for competitive inhibitors.
+    - No, Lab A's Ki is 50 nM and Lab B's is 120 nM.
+  correct: 0
+  explanation: >-
+    Ki = IC50/(1 + [S]/Km): 200/5 = 40 nM and 60/1.5 = 40 nM. The IC50 values differ only because the
+    assays used different substrate concentrations.
+- id: q4
+  question: >-
+    A drug inhibits an enzyme in the middle of a pathway. When the enzyme slows, its substrate builds up
+    tenfold in the cell. Which type of inhibitor keeps its effect best under these conditions?
+  options:
+    - A competitive inhibitor, because it binds the active site directly.
+    - A noncompetitive inhibitor, because it lowers Km.
+    - Any reversible inhibitor equally, because Ki does not depend on [S].
+    - An uncompetitive inhibitor, because it binds ES and more substrate makes more of its target.
+  correct: 3
+  explanation: >-
+    Substrate build-up overcomes a competitive inhibitor. An uncompetitive inhibitor binds only ES, so
+    inhibition relative to the uninhibited rate becomes stronger as [S] rises.
+- id: q5
+  question: >-
+    The first enzyme of a biosynthetic pathway is strongly inhibited by the pathway's final product, which
+    binds at a site far from the active site. What is this control called?
+  options:
+    - Product inhibition at the active site.
+    - Zymogen activation of the first enzyme.
+    - Feedback inhibition by an allosteric effector.
+    - Irreversible covalent inhibition.
+  correct: 2
+  explanation: >-
+    The end product acting on the first committed step through a separate regulatory site is allosteric
+    feedback inhibition, as CTP does to aspartate transcarbamoylase.

@@ -1,0 +1,8 @@
+# Instructor notes — 29.4 Enzyme mechanisms: catalytic strategies
+
+- Objective: the learner converts rate enhancements into $\Delta\Delta G^\ddagger$, explains catalysis as transition-state binding, names the five catalytic strategies in a mechanism, follows chymotrypsin step by step, measures the triad in PDB 4CHA and fits a bell-shaped pH-rate profile.
+- Likely confusion: covalent catalysis versus irreversible inhibition (the acyl-enzyme is hydrolysed, the aspirin acetyl-serine is not); which pKa a profile of $k_\text{cat}/K_m$ reports (free enzyme) versus $k_\text{cat}$ (ES); chymotrypsin numbering (chymotrypsinogen numbering, three chains A, B, C in 4CHA).
+- Misconception: "enzymes work by binding substrates tightly" (quiz q2). Second: "the falling limb of the profile is a second histidine". Third: "the pineapple acid stops the jelly".
+- Analogy: an enzyme is a mould shaped like the half-way pose of a gymnast's vault: the gymnast standing still fits only loosely, but the moment she reaches the half-way pose the mould grips her, and she is over before she knows it.
+- Expected hands-on result: Part A glasses 1, 3, 4 set, glass 2 liquid or soft. Part B Ser195 Oγ–His57 Nε2 2.82 Å, His57 Nδ1–Asp102 Oδ1 2.61 Å, Gly193 N–Ser195 N 4.37 Å, Ser195 Oγ–Gly193 N 5.38 Å; pKa 6.93 ± 0.03 and 8.85 ± 0.03, kmax 2.1 × 10⁵ M⁻¹ s⁻¹; active fraction 0.10/0.73/0.82 at pH 6.0/7.4/8.0; optimum 7.9. Generated with 6.9, 8.9, 2.0 × 10⁵.
+- Extension: fetch 1CHO (chymotrypsin with turkey ovomucoid third domain) and measure how close the inhibitor's scissile carbonyl sits to Ser195 Oγ and in the oxyanion hole; or repeat Part A with kiwi fruit (actinidin, another cysteine protease).

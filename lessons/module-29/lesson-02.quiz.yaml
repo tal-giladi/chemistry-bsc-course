@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    Enzyme P has kcat = 500 s-1 and Km = 5 mM for a substrate; enzyme Q has kcat = 50 s-1 and
+    Km = 0.05 mM. In a cell where the substrate is at 0.02 mM, which enzyme converts more substrate per
+    active site per second?
+  options:
+    - Enzyme P, because its turnover number is ten times larger.
+    - Both the same, because kcat/Km is the same for the two enzymes.
+    - Enzyme Q, because at 0.02 mM its specificity constant of 1e6 decides.
+    - Enzyme P, because a larger Km means the enzyme releases product faster.
+  correct: 2
+  explanation: >-
+    Far below Km the rate per site is about (kcat/Km)[S]. P has 1e5 and Q 1e6 per molar per second, so Q
+    is about ten times faster here (exactly 7 times once Q's partial saturation is counted).
+- id: q2
+  question: >-
+    A student fits the same initial rates two ways. Nonlinear least squares gives Km = 2.1 +/- 0.2 mM;
+    a Lineweaver-Burk line gives Km = 3.4 mM. The lowest [S] point has the largest relative error. Which
+    value should be reported, and why?
+  options:
+    - The Lineweaver-Burk value, because a straight line is the more robust fit.
+    - The average of both, because each method has its own systematic error.
+    - The Lineweaver-Burk value, because it uses all points with equal weight.
+    - The nonlinear value, because 1/v gives the noisy low-[S] point the most influence on the line.
+  correct: 3
+  explanation: >-
+    Taking 1/v magnifies the error of slow rates by 1/v squared, and ordinary regression then lets those
+    points control the slope. The direct fit of the hyperbola weights the data sensibly.
+- id: q3
+  question: >-
+    You expect Km near 1 mM and plan six concentrations. Which set gives the most precise Km?
+  options:
+    - 0.2, 0.4, 0.8, 1.6, 3.2 and 6.4 mM.
+    - 5, 6, 7, 8, 9 and 10 mM, so the enzyme is surely saturated.
+    - 0.01, 0.02, 0.03, 0.04, 0.05 and 0.06 mM, where the rate is most sensitive to [S].
+    - 1.0 mM six times, so the mean rate has the smallest error.
+  correct: 0
+  explanation: >-
+    Km is set by the bend of the curve, so the points must span it, from about 0.2 Km to 5 Km or more. All
+    high [S] gives only Vmax; all low [S] gives only Vmax/Km; one concentration cannot give two parameters.
+- id: q4
+  question: >-
+    An enzyme has Km = 2.0 mM and Vmax = 0.50 mM/min, with no product inhibition. Starting at
+    [S]0 = 2.0 mM, how long does it take to convert half the substrate?
+  options:
+    - 2.0 min, from half of [S]0 divided by Vmax.
+    - 4.8 min, from Vmax t = 1.0 + 2.0 ln 2.
+    - 2.8 min, from the first-order half-life ln 2 times Km/Vmax.
+    - 6.9 min, from Km ln 2 divided by half of Vmax.
+  correct: 1
+  explanation: >-
+    The integrated rate law gives Vmax t = ([S]0 - [S]) + Km ln([S]0/[S]) = 1.0 + 1.39 = 2.39 mM, so
+    t = 4.8 min. Both the pure zero-order and the pure first-order estimates leave out one of the two terms.
