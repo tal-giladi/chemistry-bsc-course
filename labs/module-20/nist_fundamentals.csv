@@ -1,0 +1,46 @@
+# Fundamental vibrations from the NIST Chemistry WebBook, 'Vibrational and/or electronic energy levels'
+# (T. Shimanouchi, Tables of Molecular Vibrational Frequencies Consolidated Volume I, NSRDS NBS-39, 1972),
+# https://webbook.nist.gov/cgi/cbook.cgi?ID=<CAS id>&Mask=800, retrieved 2026-10-17. US government work.
+# One row per fundamental (Fermi-resonance doublets merged). ir and raman: 'ia' = inactive by NIST's assignment,
+# a number = observed band (cm-1), blank = not reported. Species labels follow NIST's axis conventions
+# (H2O in the xz plane, so its antisymmetric stretch is b1; C2H4 with x along C=C and z perpendicular to the plane).
+molecule,point_group,cas_id,species,number,wavenumber_cm1,ir,raman
+H2O,C2v,C7732185,a1,1,3657,3656.65,3654
+H2O,C2v,C7732185,a1,2,1595,1594.59,
+H2O,C2v,C7732185,b1,3,3756,3755.79,
+NH3,C3v,C7664417,a1,1,3337,3336.2,
+NH3,C3v,C7664417,a1,2,950,932.5,
+NH3,C3v,C7664417,e,3,3444,3443.6,
+NH3,C3v,C7664417,e,4,1627,1626.1,
+CH4,Td,C74828,a1,1,2917,ia,2917.0
+CH4,Td,C74828,e,2,1534,ia,1533.6
+CH4,Td,C74828,f2,3,3019,3018.9,3019.5
+CH4,Td,C74828,f2,4,1306,1306.2,
+CCl4,Td,C56235,a1,1,459,ia,458.7
+CCl4,Td,C56235,e,2,217,ia,217.0
+CCl4,Td,C56235,f2,3,776,789,790.4
+CCl4,Td,C56235,f2,4,314,309.9,313.5
+C2H4,D2h,C74851,ag,1,3026,ia,3026.4
+C2H4,D2h,C74851,ag,2,1623,ia,1622.6
+C2H4,D2h,C74851,ag,3,1342,ia,1342.2
+C2H4,D2h,C74851,au,4,1023,ia,ia
+C2H4,D2h,C74851,b1g,5,3103,ia,3102.5
+C2H4,D2h,C74851,b1g,6,1236,ia,1236
+C2H4,D2h,C74851,b1u,7,949,949.3,ia
+C2H4,D2h,C74851,b2g,8,943,ia,943
+C2H4,D2h,C74851,b2u,9,3106,3105.5,ia
+C2H4,D2h,C74851,b2u,10,826,826.0,ia
+C2H4,D2h,C74851,b3u,11,2989,2988.66,ia
+C2H4,D2h,C74851,b3u,12,1444,1443.5,ia
+trans-C2H2Cl2,C2h,C156605,ag,1,3073,ia,3073
+trans-C2H2Cl2,C2h,C156605,ag,2,1578,ia,1578
+trans-C2H2Cl2,C2h,C156605,ag,3,1274,ia,1274
+trans-C2H2Cl2,C2h,C156605,ag,4,846,ia,846
+trans-C2H2Cl2,C2h,C156605,ag,5,350,ia,350
+trans-C2H2Cl2,C2h,C156605,au,6,900,899.8,ia
+trans-C2H2Cl2,C2h,C156605,au,7,227,227,ia
+trans-C2H2Cl2,C2h,C156605,bg,8,763,ia,763
+trans-C2H2Cl2,C2h,C156605,bu,9,3090,3090,ia
+trans-C2H2Cl2,C2h,C156605,bu,10,1200,1200,ia
+trans-C2H2Cl2,C2h,C156605,bu,11,828,828,ia
+trans-C2H2Cl2,C2h,C156605,bu,12,250,250,ia

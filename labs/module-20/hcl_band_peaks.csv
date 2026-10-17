@@ -1,0 +1,27 @@
+# Absorption maxima (transmittance minima) of the HCl fundamental band, read from the NIST Chemistry WebBook
+# gas-phase IR spectrum of hydrogen chloride: https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=80
+# (Coblentz Society No. 8758, Dow Chemical 1964, KBr foreprism, 4 cm-1 resolution, digitised by NIST; spectrum index 0).
+# Peaks found as local minima of the JCAMP-DX data with a three-point parabola, retrieved 2026-10-17.
+# Natural chlorine: the H35Cl/H37Cl doublets (about 2 cm-1 apart) are not resolved at this resolution.
+# The peaks are listed in order of wavenumber, unassigned: assigning them is the exercise.
+wavenumber_cm1,transmittance
+2655.1,0.868
+2679.4,0.776
+2703.7,0.669
+2729.9,0.564
+2754.2,0.535
+2778.5,0.336
+2801.0,0.264
+2819.7,0.213
+2845.9,0.272
+2866.4,0.357
+2905.7,0.389
+2926.3,0.282
+2946.9,0.262
+2963.7,0.265
+2978.6,0.317
+3000.3,0.522
+3016.1,0.572
+3031.0,0.679
+3046.0,0.751
+3059.1,0.838

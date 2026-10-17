@@ -1,0 +1,130 @@
+- id: q1
+  question: >-
+    An environmental agency wants to monitor N2O and N2 in a gas stream with one infrared analyser. What
+    is the problem with this plan?
+  options:
+    - N2O has no permanent dipole, so it is invisible in the infrared.
+    - Both gases absorb at the same wavenumber, so the analyser cannot tell them apart.
+    - N2 has no vibration that changes its dipole, so the IR analyser cannot see it; N2 needs Raman.
+    - The analyser must be cooled, because at room temperature both molecules sit in excited levels.
+  correct: 2
+  explanation: >-
+    A homonuclear diatomic stretch leaves the dipole at zero, so N2 has no IR band. Its polarisability does
+    change, so Raman (shift about 2330 cm-1) can measure it. N2O is linear but unsymmetrical and IR active.
+- id: q2
+  question: >-
+    Two neighbouring lines in the far-infrared spectrum of HF are at 82.2 and 123.1 cm-1, with nothing in
+    between. Taking the gap as the rigid-rotor spacing, what is the best estimate of B?
+  options:
+    - 40.9 cm-1, the gap between the two lines.
+    - 20.5 cm-1, half the gap, because lines are spaced by 2B.
+    - 10.2 cm-1, a quarter of the gap, because levels are spaced by 4B.
+    - 41.1 cm-1, the first line divided by two.
+  correct: 1
+  explanation: >-
+    Lines lie at 2B(J+1), so neighbouring lines are 2B apart and B = 40.9/2 = 20.5 cm-1. Then 82.2 = 2B(J+1)
+    gives J+1 = 2: these are the 2 <- 1 and 3 <- 2 lines. Halving the first line wrongly assumes it is 1 <- 0.
+- id: q3
+  question: >-
+    At 298 K a student expects the J = 0 level of CO (B = 1.92 cm-1) to be the most populated, since it is
+    the lowest. Which level is actually the most populated?
+  options:
+    - J = 7, because the 2J + 1 degeneracy outweighs the Boltzmann factor up to about J = 7.
+    - J = 0, because the Boltzmann factor is largest for the lowest level.
+    - J = 107, because kT/hc = 207 cm-1 is about 107 times B.
+    - J = 1, because only levels within one quantum of the ground state are filled.
+  correct: 0
+  explanation: >-
+    N_J is proportional to (2J+1) exp(-BJ(J+1)hc/kT). The maximum is at sqrt(kT/2hcB) - 1/2 = sqrt(207/3.84) - 0.5,
+    about 6.8, so J = 7.
+- id: q4
+  question: >-
+    In the HCl fundamental band you measure R(0) = 2906.3 and P(2) = 2843.7 cm-1. Which constant does
+    their difference give, and what is its value?
+  options:
+    - B1, because the two lines share the lower level; B1 = 62.6/6 = 10.43 cm-1.
+    - The band centre, which lies at their mean, 2875.0 cm-1.
+    - B0, because the two lines share the upper level J = 1; B0 = 62.6/6 = 10.43 cm-1.
+    - B0, from R(J-1) - P(J+1) = 2B0(J + 1/2); B0 = 62.6/3 = 20.9 cm-1.
+  correct: 2
+  explanation: >-
+    R(0) goes 0 -> 1 and P(2) goes 2 -> 1; both end in v = 1, J = 1, so the difference is F0(2) - F0(0) =
+    6B0 = 4B0(1 + 1/2) and B0 = 10.43 cm-1. The band centre is in the gap, not at the mean of these two lines.
+- id: q5
+  question: >-
+    A Raman spectrum of liquid CCl4 shows a strong Stokes line at a shift of 459 cm-1 and a weaker
+    anti-Stokes line at the same shift. You heat the sample. What happens to the anti-Stokes/Stokes ratio?
+  options:
+    - It stays the same, because both lines come from the same vibration.
+    - It falls, because heating broadens the lines and spreads the anti-Stokes intensity out.
+    - It becomes 1, because heating removes the population difference completely.
+    - It rises, because more molecules start in v = 1, where anti-Stokes scattering begins.
+  correct: 3
+  explanation: >-
+    Anti-Stokes scattering starts from the excited level, whose population grows as exp(-hc 459/kT). The
+    ratio (about 0.13 at room temperature) works as a contact-free thermometer.
+- id: q6
+  question: >-
+    The visible absorption band of Br2 shows a long progression peaking far above its 0-0 band. What does
+    this tell you about the excited state?
+  options:
+    - Its bond is much longer than in the ground state, so vertical transitions reach high v'.
+    - Its bond has the same length, so all vibrational bands have equal intensity.
+    - The transition is spin-forbidden, which always shifts the maximum to high v'.
+    - The excited state is not bound, so the molecule dissociates at the 0-0 band.
+  correct: 0
+  explanation: >-
+    By the Franck-Condon principle transitions are vertical. A much longer upper-state bond puts the vertical
+    line on the steep inner wall of the upper curve, high above v' = 0, as for I2 (r_e 2.67 to 3.02 A).
+- id: q7
+  question: >-
+    A fluorescent dye absorbs at 495 nm and emits at 520 nm. Exciting it at 350 nm, into a higher singlet
+    state, still gives emission at 520 nm. Which principle explains this?
+  options:
+    - The Franck-Condon principle, which forces emission to the same wavelength as absorption.
+    - Kasha's rule, because fast relaxation brings every excited molecule to S1, v = 0, before emission.
+    - The mirror-image rule, which makes all emission start from the highest excited state.
+    - Mutual exclusion, which forbids emission from any state that absorbs in the UV.
+  correct: 1
+  explanation: >-
+    Relaxation within the excited singlets takes picoseconds; fluorescence takes nanoseconds. So emission
+    comes from the lowest excited singlet whatever was excited, and lies to the red of absorption.
+- id: q8
+  question: >-
+    A new drug candidate has one C2 axis and no other symmetry element besides E. A colleague says it
+    cannot be chiral because it is symmetric. What do you answer?
+  options:
+    - She is right, because any proper axis makes a molecule superimposable on its mirror image.
+    - She is right only if the C2 axis passes through a carbon atom.
+    - She is wrong, because chirality needs only the absence of improper axes, and C2 is proper.
+    - She is wrong, because every molecule with fewer than three symmetry elements is chiral.
+  correct: 2
+  explanation: >-
+    A molecule is achiral only if it has some S_n (a mirror plane, a centre of inversion or another improper
+    axis). Proper rotations do not count, so C2 molecules such as H2O2 and cis-[Co(en)2Cl2]+ are chiral.
+- id: q9
+  question: >-
+    A chemist must decide between square-planar (D4h) and tetrahedral (Td) geometry for a compound MX4.
+    Its IR and Raman spectra show no band at the same position in both. What does this suggest?
+  options:
+    - Tetrahedral, because Td molecules have fewer IR bands than D4h molecules.
+    - It cannot be decided, because both geometries have nine vibrations.
+    - Tetrahedral, because only tetrahedral molecules obey mutual exclusion.
+    - Square planar, because D4h has a centre of inversion and so no coincident bands.
+  correct: 3
+  explanation: >-
+    In Td the two T2 modes are both IR and Raman active, so coincidences are expected. D4h is centrosymmetric:
+    its IR bands (A2u, Eu) and Raman bands (A1g, B1g, B2g) never coincide, as found for XeF4.
+- id: q10
+  question: >-
+    For SO2 (C2v) a student reduces Gamma_3N to 3A1 + A2 + 3B1 + 2B2 (with B1 like x and B2 like y). How
+    many fundamental bands should its IR spectrum show?
+  options:
+    - Nine, one for each Cartesian displacement.
+    - Three, because the vibrations are 2A1 + B1 and all of them are IR active.
+    - Two, because only the A1 vibrations change the dipole.
+    - Six, because A1, B1 and B2 all transform like x, y or z.
+  correct: 1
+  explanation: >-
+    Removing translations (A1 + B1 + B2) and rotations (A2 + B1 + B2) leaves 2A1 + B1, the 3N - 6 = 3
+    vibrations. A1 is like z and B1 like x, so all three are IR active.

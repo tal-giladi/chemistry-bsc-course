@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A student assigns BF3 to C3v because it has a C3 axis and three mirror planes containing it. What
+    did she miss?
+  options:
+    - The three C2 axes along the B-F bonds and the horizontal mirror plane, which make it D3h.
+    - The centre of inversion at boron, which makes it D3d.
+    - The four C3 axes of a tetrahedron, which make it Td.
+    - Nothing; BF3 is C3v like NH3, because both have three equal bonds.
+  correct: 0
+  explanation: >-
+    BF3 is planar. Each B-F bond is a C2 axis perpendicular to the C3, and the molecular plane is a
+    sigma-h, so it is D3h. NH3 is pyramidal and has neither, so it is C3v. BF3 has no centre of inversion.
+- id: q2
+  question: >-
+    A synthetic chemist proposes a molecule with no mirror plane and asks whether it must be chiral.
+    It has a centre of inversion and nothing else. What is the answer?
+  options:
+    - Yes, because a molecule without a mirror plane always has a non-superimposable mirror image.
+    - No, because the centre of inversion is the improper axis S2, which makes it identical to its mirror image.
+    - Yes, because only molecules with a mirror plane are achiral.
+    - It depends on whether the molecule has a stereocentre, which symmetry cannot tell.
+  correct: 1
+  explanation: >-
+    A molecule is chiral only if it has no improper axis of any order. S1 is a mirror plane and S2 is
+    inversion, so a Ci molecule is achiral even without a mirror plane.
+- id: q3
+  question: >-
+    Which of these molecules can have a permanent dipole moment, judging from symmetry alone:
+    trans-ClCH=CHCl (C2h), CHCl3 (C3v), CCl4 (Td) or XeF4 (D4h)?
+  options:
+    - trans-ClCH=CHCl, because its C-Cl bonds are polar.
+    - CCl4, because its four C-Cl bond dipoles point in different directions.
+    - CHCl3, because a C3v molecule can carry a dipole along its C3 axis.
+    - XeF4, because the lone pairs on xenon create a dipole.
+  correct: 2
+  explanation: >-
+    A dipole must lie on every symmetry element. Only C1, Cs, Cn and Cnv allow that. C2h has a centre of
+    inversion, Td has several C3 axes and D4h has perpendicular C2 axes, so their bond dipoles cancel.
+- id: q4
+  question: >-
+    Two conformers of ethane are rotated 60 degrees apart about the C-C bond. One is D3h and the
+    other D3d. Which element does the staggered conformer have that the eclipsed one lacks?
+  options:
+    - A C3 axis along the C-C bond.
+    - A horizontal mirror plane between the two carbon atoms.
+    - Three C2 axes perpendicular to the C-C bond.
+    - A centre of inversion at the midpoint of the C-C bond.
+  correct: 3
+  explanation: >-
+    Both conformers have the C3 axis and three perpendicular C2 axes. The eclipsed form has a sigma-h; the
+    staggered form loses it but gains three sigma-d planes, an S6 axis and a centre of inversion.

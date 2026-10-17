@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    In the reduction of Gamma_3N for CH4 (Td) you need the character for the class 6 sigma-d. Each
+    plane contains the carbon and two hydrogens. What is the character?
+  options:
+    - 1, because a reflection contributes 1 for the whole molecule.
+    - 18, because six planes each leave three atoms unmoved.
+    - 3, because three atoms stay in place and each contributes 1.
+    - 9, because three unmoved atoms each contribute 3 as under E.
+  correct: 2
+  explanation: >-
+    The character is unmoved atoms times the contribution per atom, here 3 x 1 = 3. The class size 6 enters
+    only in the reduction formula as g_k, not in the character itself.
+- id: q2
+  question: >-
+    A molecule's vibrations reduce to A1g + B1g + B2g + A2u + B2u + 2Eu in D4h, where z is A2u and (x, y)
+    is Eu, and the quadratics belong to A1g, B1g, B2g and Eg. How many IR bands do you expect?
+  options:
+    - Seven, one for each irrep in the list.
+    - Nine, one for each vibrational mode.
+    - Five, because all u modes are IR active.
+    - Three: A2u and the two Eu modes.
+  correct: 3
+  explanation: >-
+    Only irreps that transform like x, y or z are IR active: A2u and Eu. The two Eu sets give one band each,
+    so three bands. B2u is u but matches no coordinate, so it is silent.
+- id: q3
+  question: >-
+    A metal complex shows four IR bands and four Raman bands, and two of them coincide in position. Which
+    structure can you rule out?
+  options:
+    - Any structure with a centre of inversion, because mutual exclusion would forbid coincidences.
+    - Any tetrahedral structure, because Td molecules never show coincident bands.
+    - Any structure without a C3 axis, because only C3 molecules show both IR and Raman bands.
+    - Nothing, because coincident bands are always accidental overlaps.
+  correct: 0
+  explanation: >-
+    With a centre of inversion every mode is either g (Raman only) or u (IR only). Coincidences are
+    allowed in Td (the T2 modes are both IR and Raman active), so a centrosymmetric structure is the one excluded.
+- id: q4
+  question: >-
+    Your reduction of Gamma_3N for a five-atom molecule gives n(E) = 4/3. What has most likely gone wrong?
+  options:
+    - The molecule has a fractional number of E modes, which shows up as a broad band.
+    - You left out the class sizes g_k or miscounted the unmoved atoms for one class.
+    - You forgot to subtract the translations and rotations before reducing.
+    - The point group is too high, and you should use a lower one with whole numbers.
+  correct: 1
+  explanation: >-
+    The reduction formula always gives whole numbers when the characters are right. A fraction signals an
+    arithmetic slip, usually a missing g_k or a wrong unmoved-atom count; subtracting translations comes after.

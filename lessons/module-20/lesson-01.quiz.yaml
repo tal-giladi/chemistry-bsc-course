@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A student wants to measure the bond length of N2 and plans to record its pure rotational
+    (microwave) spectrum. What should you tell her?
+  options:
+    - The lines will be very weak because few N2 molecules are rotationally excited at 298 K.
+    - N2 has no permanent dipole, so it has no microwave spectrum; use rotational Raman instead.
+    - The lines will lie in the infrared, because N2 is a light molecule with a large B.
+    - Microwave works, but she must cool the gas so that only J = 0 is populated.
+  correct: 1
+  explanation: >-
+    The gross rule for pure rotation is a permanent dipole, which a homonuclear diatomic lacks.
+    Its polarisability is anisotropic, so rotational Raman (Delta J = 0, +2, -2) gives B and hence the bond length.
+- id: q2
+  question: >-
+    At 298 K, why is the HCl rotational level J = 1 more populated than J = 0, although it lies
+    21 cm-1 higher?
+  options:
+    - Because J = 0 is forbidden by the selection rules, so molecules cannot stay in it.
+    - Because the Boltzmann factor favours higher levels when the temperature is above 0 K.
+    - Because J = 1 has three states (2J + 1), which outweighs a Boltzmann factor of about 0.9.
+    - Because collisions pump molecules into J = 1 faster than they leave it.
+  correct: 2
+  explanation: >-
+    The ratio is (2J + 1) times exp(-dE hc/kT) = 3 x exp(-20.9/207) = 3 x 0.90 = 2.7. Degeneracy, not
+    a preference of the Boltzmann factor, makes J = 1 the more populated level.
+- id: q3
+  question: >-
+    An excited electronic state at 20 000 cm-1 empties by emitting light within nanoseconds, while an
+    excited rotational level at 4 cm-1 almost never emits spontaneously. What is the main reason?
+  options:
+    - Rotational transitions are forbidden, so their excited levels cannot emit at all.
+    - Electronic states have larger degeneracies, which speeds up their emission.
+    - Rotational levels lose energy only by stimulated emission, never by any other route.
+    - The spontaneous emission coefficient grows as the cube of the frequency.
+  correct: 3
+  explanation: >-
+    A/B = 8 pi h nu^3 / c^3, so at 5000 times the frequency spontaneous emission is about 10^11 times
+    more likely for the same transition dipole. Rotational levels relax mainly by collisions instead.
+- id: q4
+  question: >-
+    A gas-phase IR spectrum of HCl recorded at 4 cm-1 resolution shows lines about 4 cm-1 wide. The
+    Doppler width at 298 K is 0.006 cm-1. What sets the observed width?
+  options:
+    - The spectrometer resolution, which is far larger than the Doppler and natural widths.
+    - The Doppler effect, because HCl is a light molecule that moves fast.
+    - The natural width, because the v = 1 state of HCl has a short radiative lifetime.
+    - The isotope splitting of H35Cl and H37Cl, which always makes each line 4 cm-1 wide.
+  correct: 0
+  explanation: >-
+    The instrument cannot show anything narrower than its resolution. The Doppler width is about 700
+    times smaller and the natural width smaller still; the 35/37 doublet is only about 2 cm-1 apart.

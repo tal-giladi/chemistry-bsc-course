@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    In the gas-phase IR spectrum of HCl you find evenly spaced lines on both sides of 2886 cm-1 but
+    nothing at 2886 itself. A classmate says the sample must be faulty. What do you answer?
+  options:
+    - The 2886 line is hidden by atmospheric water, which absorbs at exactly that wavenumber.
+    - For HCl the Delta J = 0 transition is forbidden, so the band centre is a gap between P and R.
+    - The line at 2886 is the overtone, which is too weak to see in a short cell.
+    - The 2886 position belongs to H37Cl, which is only a quarter of the sample.
+  correct: 1
+  explanation: >-
+    A 1-Sigma diatomic has no angular momentum about its axis, so a one-photon transition must change
+    J by one. The missing Q branch leaves a gap of about 4B at the centre.
+- id: q2
+  question: >-
+    From an HCl band you read R(2) = 2944.9, P(2) = 2843.7 and P(4) = 2799.0 cm-1. Which pair of lines
+    gives B0, and what is it?
+  options:
+    - R(2) - P(2) = 101.2 cm-1, so B0 = 101.2/10 = 10.12 cm-1.
+    - R(2) - P(2) = 101.2 cm-1, so B0 = 101.2/4 = 25.3 cm-1.
+    - R(2) - P(4) = 145.9 cm-1, so B0 = 145.9/14 = 10.42 cm-1.
+    - R(2) - P(4) = 145.9 cm-1, so B0 = 145.9/12 = 12.16 cm-1.
+  correct: 2
+  explanation: >-
+    R(J-1) - P(J+1) = 4B0(J + 1/2) shares the upper level, so it measures the lower level. With J = 3,
+    4(3.5) = 14 and B0 = 10.42 cm-1. R(J) - P(J) shares the lower level and gives B1 (10.12 cm-1).
+- id: q3
+  question: >-
+    N2 has no IR spectrum, yet a Raman spectrometer shows a strong line at a shift of 2330 cm-1. Why?
+  options:
+    - The laser ionises N2, and the N2+ ion has a dipole that absorbs at 2330 cm-1.
+    - Collisions in the gas give N2 a temporary dipole, which makes the IR band appear in Raman.
+    - The Raman line is the rotational spectrum of N2, which falls at 2330 cm-1.
+    - Stretching N2 changes how easily its electron cloud is distorted, so its polarisability changes.
+  correct: 3
+  explanation: >-
+    Raman activity needs a change in polarisability, not in dipole. A longer N-N bond is easier to
+    distort, so the stretch modulates the induced dipole and gives a Stokes line shifted by 2330 cm-1.
+- id: q4
+  question: >-
+    A new linear triatomic molecule shows a band at 1240 cm-1 in both its IR and its Raman spectrum.
+    What can you conclude about its structure?
+  options:
+    - It has no centre of inversion, so it must be unsymmetrical, like N2O (N-N-O) rather than O-C-O.
+    - It is centrosymmetric, because only symmetric molecules have bands in both spectra.
+    - Nothing, because every vibration of a linear molecule is both IR and Raman active.
+    - It must be bent, because linear molecules have no Raman-active vibrations.
+  correct: 0
+  explanation: >-
+    In a centrosymmetric molecule no mode is both IR and Raman active (mutual exclusion). A coincident
+    band therefore rules out a centre of inversion; this is how N2O was shown to be N-N-O.

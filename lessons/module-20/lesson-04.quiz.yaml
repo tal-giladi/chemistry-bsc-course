@@ -1,0 +1,55 @@
+- id: q1
+  question: >-
+    In an excited state a diatomic molecule's bond is 0.36 A longer than in the ground state. Where do
+    you expect the strongest band of the absorption progression from v'' = 0?
+  options:
+    - At the 0-0 band, because v'' = 0 always overlaps best with v' = 0.
+    - At the convergence limit, because the molecule always dissociates on excitation.
+    - At a high v', where the vertical line from the ground-state well meets the steep inner wall.
+    - At the middle of the excited-state well, because transitions go to the minimum of the new curve.
+  correct: 2
+  explanation: >-
+    Transitions are vertical. With a much longer upper-state bond, the vertical line from r_e'' hits the
+    upper curve high on its inner wall, so the largest Franck-Condon factor is at large v' (v' near 32 for I2).
+- id: q2
+  question: >-
+    The B-X band of I2 is formally a triplet-singlet transition, yet iodine vapour is strongly coloured.
+    What makes the transition strong?
+  options:
+    - The g to u parity change, which overrides every spin rule.
+    - Spin-orbit coupling in the heavy iodine atoms, which mixes singlet and triplet character.
+    - The large Franck-Condon factors, which can make any forbidden transition strong.
+    - Collisions in the vapour, which flip the electron spin during absorption.
+  correct: 1
+  explanation: >-
+    Delta S = 0 holds only when spin and orbital motion are independent. In heavy atoms spin-orbit
+    coupling is large, the states have mixed spin, and the band gains intensity. Franck-Condon factors only share intensity out.
+- id: q3
+  question: >-
+    The I2 B-state progression converges at 20 043 cm-1 above X(v = 0), where the molecule falls apart
+    into I(2P3/2) + I(2P1/2). The excited atom lies 7603 cm-1 above the ground-state atom. What is D0 of
+    ground-state I2?
+  options:
+    - 20 043 cm-1, the convergence limit itself.
+    - 27 646 cm-1, the limit plus the atomic excitation energy.
+    - 4318 cm-1, the limit minus the 0-0 band at 15 725 cm-1.
+    - 12 440 cm-1, the limit minus the atomic excitation energy.
+  correct: 3
+  explanation: >-
+    The limit measures the energy to make one ground and one excited atom from X(v = 0). Removing the
+    7603 cm-1 of atomic excitation leaves the energy to make two ground-state atoms, D0'' = 12 440 cm-1.
+    The 4318 cm-1 is D0 of the B state.
+- id: q4
+  question: >-
+    A dye absorbs at 490 nm and emits at 520 nm with a lifetime of 4 ns. Exciting it at 400 nm into a
+    higher state gives the same 520 nm emission. Which statement explains both observations?
+  options:
+    - Fast relaxation to the lowest level of S1 before emission gives the Stokes shift and Kasha's rule.
+    - The emission is phosphorescence from T1, which always lies 30 nm below the absorption.
+    - The 400 nm light is converted to 490 nm light by the solvent before the dye absorbs it.
+    - The dye emits from whichever state is excited, but the solvent shifts all emission to 520 nm.
+  correct: 0
+  explanation: >-
+    Vibrational relaxation and internal conversion (picoseconds) bring every excited molecule to S1, v = 0
+    before it fluoresces (nanoseconds). Emission therefore starts from the same level (Kasha) and ends in
+    hot levels of S0, at lower energy than absorption (Stokes shift). A 4 ns lifetime is fluorescence, not phosphorescence.

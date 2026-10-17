@@ -1,0 +1,65 @@
+- id: q1
+  question: >-
+    The first three microwave lines of a diatomic molecule are at 20.8, 41.6 and 62.4 cm-1. What is
+    its rotational constant B?
+  options:
+    - 20.8 cm-1, because the first line sits at B.
+    - 41.6 cm-1, because B is the second line of the series.
+    - 10.4 cm-1, because the lines are spaced by 2B.
+    - 5.2 cm-1, because the levels are spaced by 4B.
+  correct: 2
+  explanation: >-
+    Lines lie at 2B(J+1), so the first is at 2B and the spacing is 2B. Here 2B = 20.8 cm-1 and
+    B = 10.4 cm-1, which is close to HCl.
+- id: q2
+  question: >-
+    You calculate the CO bond length from B0 measured in a microwave spectrum and get 1.1309 A; a
+    table gives 1.1283 A. What explains the difference?
+  options:
+    - The table is out of date; microwave values replace older equilibrium values.
+    - Your value is r0, averaged over the zero-point vibration; the table gives re at the minimum.
+    - Centrifugal distortion stretches the bond in every level, so microwave lengths are always long.
+    - The isotope 13C in natural carbon makes the average reduced mass larger.
+  correct: 1
+  explanation: >-
+    B0 = Be - alpha_e/2 is the constant of the vibrating molecule in v = 0, so it gives the averaged r0.
+    The equilibrium length re needs Be, which requires alpha_e from a vibrational band.
+- id: q3
+  question: >-
+    A plot of nu/(J+1) against (J+1)^2 for a series of rotational lines is a straight line with
+    intercept 3.8451 cm-1 and slope -2.45e-5 cm-1. What are B and D?
+  options:
+    - B = 1.9225 cm-1 and D = 6.1e-6 cm-1.
+    - B = 3.8451 cm-1 and D = 2.45e-5 cm-1.
+    - B = 1.9225 cm-1 and D = 1.2e-5 cm-1.
+    - B = 0.9613 cm-1 and D = 6.1e-6 cm-1.
+  correct: 0
+  explanation: >-
+    nu/(J+1) = 2B - 4D(J+1)^2, so the intercept is 2B (B = 1.9225 cm-1) and the slope is -4D
+    (D = 2.45e-5/4 = 6.1e-6 cm-1). These are the CO values.
+- id: q4
+  question: >-
+    A chemist hopes to measure the C-H bond length of methane, CH4, by microwave spectroscopy. What
+    is the problem?
+  options:
+    - Methane is too light, so its lines fall in the visible region instead of the microwave.
+    - Methane has four equal bonds, so its spectrum shows only one line that cannot be assigned.
+    - The C-H bond is too stiff, so centrifugal distortion hides the lines.
+    - Methane is a spherical top with no permanent dipole, so it has no pure rotational spectrum.
+  correct: 3
+  explanation: >-
+    The gross rule for pure rotation is a permanent dipole. Tetrahedral CH4 has none, so it shows no
+    microwave lines; its bond length comes from rotational structure in IR bands or from Raman.
+- id: q5
+  question: >-
+    Replacing 12C by 13C in CO lowers the first rotational line from 115.27 to 110.20 GHz. Why does
+    the line move while the chemistry stays the same?
+  options:
+    - The heavier nucleus shortens the bond, which lowers the moment of inertia.
+    - The potential and re are unchanged, but the larger reduced mass raises I and lowers B.
+    - 13C has a nuclear spin, which splits the line and moves its centre to lower frequency.
+    - The 13C bond is weaker, so the molecule rotates more slowly at the same temperature.
+  correct: 1
+  explanation: >-
+    Isotopes do not change the electrons, so the potential curve and re stay the same. B is
+    h/(8 pi^2 c mu r^2), so a 4.6 percent larger reduced mass lowers B and every line by about 4.4 percent.

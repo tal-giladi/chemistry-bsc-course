@@ -1,0 +1,8 @@
+# Instructor notes — 20.6 Character tables and predicting IR and Raman bands
+
+- Objective: the learner reads a character table, builds Γ3N from unmoved atoms, reduces it, removes translations and rotations, predicts IR/Raman/silent fundamentals and checks against NIST; then writes the module-practical report (HCl and CO from NIST, ten point groups, nine band counts).
+- Likely confusion: character of a class versus number of operations in it (g_k belongs in the reduction formula only); counting a degenerate E/T set as several bands; B1/B2 labels depending on the axis convention (NIST puts H₂O in xz, giving b1).
+- Misconception: "3N − 6 modes means 3N − 6 bands"; "u modes are always IR active" (B2u in D4h is silent); "allowed means strong".
+- Analogy: Γ3N is a chord; the reduction formula is the ear that hears which notes (irreps) are in it and how loudly.
+- Expected hands-on result: Part A NH₃ 2A1 + 2E (4 IR, 4 Raman); trans-ClCH=CHCl no coincidences. Practical Part 1: HCl ν₀ 2886.7, B₀ 10.323, B₁ 10.028, r₀ 1.2911, rₑ 1.2820 Å, k 481 N/m; CO ν₀ 2143.2, B₀ 1.92253, r₀ 1.13089, rₑ 1.12832 Å, k 1856 N/m; branch maxima B 1.926 cm⁻¹, T 299 K. Part 2 10/10. Part 3: H₂O 2A1+B1; NH₃ 2A1+2E; CH₄ and CCl₄ A1+E+2T2; C₂H₄ 3Ag+2B1g+B2g+Au+B1u+2B2u+2B3u; trans-C₂H₂Cl₂ 5Ag+Bg+2Au+4Bu (all "NIST agrees"); BF₃ A1′+2E′+A2″; XeF₄ A1g+B1g+B2g+A2u+B2u+2Eu; SF₆ A1g+Eg+T2g+2T1u+T2u. Grade the report on the discussion of data quality and on the XeF₄ structural argument.
+- Extension: add the D6h table to `spec20.TABLES` and reduce benzene (2A1g + A2g + 2B2g + E1g + 4E2g + A2u + 2B1u + 2B2u + 3E1u + 2E2u); compare with the NIST benzene table, which lists weak "forbidden" b1u/b2u bands seen in liquid and solution.

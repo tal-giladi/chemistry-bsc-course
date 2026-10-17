@@ -37,7 +37,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] M17
 - [x] M18
 - [x] M19
-- [ ] M20
+- [x] M20
 - [ ] M21
 - [ ] M22
 - [ ] M23
@@ -77,7 +77,8 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [ ] final QA: `py scripts/check.py` clean, `npm run check-course` 0 problems, git clean, TODO_FOR_TAL.md ready
 
 ## Now working
-- agent: M20
+- agent: M22
+- agent: M21
 
 ## Decisions
 - 2026-10-16 Tal: whole degree in one course; non-chemistry subjects as short bridge modules.
@@ -108,3 +109,6 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M18 done; M20 spawned.
 - PAUSED by Tal: no new agents after M19 + M20 finish. Resume from M21.
 - M19 done.
+- M20 agent hit session limit mid-module; resume it (SendMessage) or respawn after 15:10 Asia/Jerusalem.
+- Resumed by Tal; M20 agent resumed, M21 spawned.
+- M20 done; M22 spawned.

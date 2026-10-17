@@ -1,0 +1,8 @@
+# Instructor notes — 20.3 Vibrational spectra and Raman
+
+- Objective: the learner assigns P and R branches, fits the band with the running number $m$, gets $B_0$, $B_1$, $\alpha_e$, $r_e$ by combination differences, uses the branch-maximum separation for unresolved bands, explains Raman (Stokes, anti-Stokes, rotational Raman) and applies mutual exclusion.
+- Likely confusion: $J$ in P(J) and R(J) is the lower-level value; the first P line is P(1); which combination difference gives $B_0$ and which $B_1$ (shared upper level measures the lower level); Raman shift versus absolute wavenumber.
+- Misconception: "the strongest line is the band centre" (there is no line there); "Raman is weak IR" (different mechanism and different selection rule); "B is the R-branch spacing" (spacings change because $B_1 < B_0$).
+- Analogy: combination differences are like weighing a parcel by weighing yourself with and without it — the shared level cancels out.
+- Expected hands-on result: 10 P + 10 R lines; fit ν₀ 2886.7, B₀ 10.323, B₁ 10.028 cm⁻¹; combination differences B₀ 10.331, B₁ 10.054; αe 0.295, Be 10.471, re 1.2820 Å (NIST 1.274552), r₀ 1.2911 Å; k 481 N/m (516 from ωe); rms 1.36 cm⁻¹; H³⁷Cl shift 2.18 cm⁻¹; N₂ Raman 11.94, 19.90, 27.85, 35.81, 43.77 cm⁻¹; N₂ Q near 2329.9. The 1 % low B₀ comes from digitised 1964 chart data and unresolved isotope doublets — discuss it as a data-quality lesson. Simulation part depends on the ir-esr sim (not built yet).
+- Extension: use the NIST CO spectrum branch maxima to estimate the gas temperature if B₀ = 1.9225 cm⁻¹ is taken as known (≈ 290–300 K); or show from the HCl fit residuals that adding a $-4D m^3$ term is not justified at this resolution.

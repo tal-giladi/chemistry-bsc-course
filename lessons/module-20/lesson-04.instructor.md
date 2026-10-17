@@ -1,0 +1,8 @@
+# Instructor notes — 20.4 Electronic spectra and Franck-Condon
+
+- Objective: the learner reads diatomic term symbols and selection rules, predicts the shape of a vibronic progression from the bond-length change, computes Franck–Condon factors for I₂ from Morse curves, estimates $D_0$ by Birge–Sponer and by the convergence limit, and reasons on a Jablonski diagram.
+- Likely confusion: $T_e$ versus $\tilde\nu_{00}$ versus the band maximum; which state's $D_0$ the convergence limit gives (subtract the atomic excitation for the ground state); why $\Delta S = 0$ fails for I₂.
+- Misconception: "the strongest band is the 0–0 band" (only when the bond length barely changes); "the molecule moves to the minimum of the new curve during absorption" (transitions are vertical); "fluorescence and phosphorescence differ in colour" (they differ in spin and lifetime).
+- Analogy: a photograph taken with a very fast shutter — the nuclei are frozen in place while the electron jumps; they only start moving after the picture is taken.
+- Expected hands-on result: solver ΔG 213.27 and 124.17 cm⁻¹ (NIST agreement); strongest band v′ = 32 at 18 940 cm⁻¹ (528 nm), FC 0.032; 0–0 FC ≈ 1.8e-9; FC sum 0.918 over v′ = 0–69; populations 0.673/0.240/0.086; envelope maximum ≈ 19 090 cm⁻¹ (524 nm); Birge–Sponer 18 606 (X) and 5106 (B) cm⁻¹ against 12 440 and 4318. Highlighter: green glow under white light, a visible Stokes shift.
+- Extension: change $r_e$ of the B state in the script to 2.70 Å and watch the progression collapse towards the 0–0 band; or add $v'' = 3$ and estimate how much the hot bands shift the envelope at 400 K.
