@@ -1,0 +1,9 @@
+# Instructor notes — 32.3 Crystals, lattices and X-ray diffraction
+
+- Objective: the learner names planes with Miller indices, derives Bragg's law, uses fcc/bcc absences, indexes a real CdO pattern by the ratio method, recognises Kβ partners, and refines a with a zero shift against COD 9006671.
+- Likely confusion: θ versus 2θ; Miller indices of planes versus directions; why (222) is the "second order" of (111); fcc lattice versus fcc packing of one atom type (rock salt is fcc with a two-atom basis).
+- Misconception: "every extra peak is an impurity" (Kβ, Kα₂, tube lines, sample holder); "more decimal places from one peak mean a better a".
+- Analogy: a powder is a crowd holding mirrors at every angle; you only see a flash at the angles where some mirrors line up with your eye, and the angle tells you the mirror spacing.
+- Expected hands-on result (real data, Zenodo 18522088, CdO.xy): peaks 29.52, 31.54, 32.78, 34.23, 38.07, 49.29, 55.06, 65.68, 69.02, 81.77°; Kβ partners 29.52/34.23/49.29; N = 3, 4, 8, 11, 12, 16, multiplier 3; a = 4.6964 ± 0.0005 Å, z = −0.228°, rms 0.006°; median d√N without shift 4.7123 Å (+0.34 %); unassigned 31.54° (d 2.815 Å after shift; Cd (002) 2.809 Å is a plausible match; not proven). X-ray density 8.23 g/cm³. Pencil: NaCl 27.37/31.70°, KCl 24.48/28.34°; Fe 44.68/65.03/82.35°; Si a = 5.431 Å.
+- Data licence: CC BY 4.0; attribution and "changes made" are in the CSV header and get_zenodo_xrd.py. The record does not state the wavelength; the composite .asc header (same data set) records a Rigaku MiniFlex, Cu target, Kα 1.54059/1.54441 Å, filter none.
+- Extension: plot a per peak against the Nelson–Riley function and extrapolate; compare with the zero-shift fit. Or index `in2o3_xrd.csv` (bixbyite, Ia-3, a ≈ 10.12 Å), whose extra absences make the ratio method harder — this is done in 32.5.

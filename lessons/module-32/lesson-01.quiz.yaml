@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    Two cathode materials for hydrogen evolution both show a Tafel slope of 118 mV/dec. Material A has
+    i0 = 1e-4 A/cm2 and material B has i0 = 1e-6 A/cm2. At the same current density in the Tafel region,
+    how much less overpotential does A need?
+  options:
+    - About 59 mV, because each decade of i0 is worth 2.303RT/F.
+    - About 236 mV, because the two decades of i0 each cost one Tafel slope.
+    - About 118 mV, because the two materials differ by one Tafel slope.
+    - About 26 mV, because RT/F sets the scale of every electrode reaction.
+  correct: 1
+  explanation: >-
+    In the Tafel region the overpotential is b log10(i/i0). Two decades of difference in i0 move the line by
+    2 x 118 = 236 mV at any current.
+- id: q2
+  question: >-
+    A Tafel plot of a nickel cathode is straight up to 5 mA/cm2 and then curves upwards, so the apparent slope
+    rises from 118 to 150 mV/dec at 50 mA/cm2. Halving the electrolyte concentration makes the curvature start
+    at a lower current. What is the most likely cause?
+  options:
+    - A change of mechanism to a slower rate-determining step at high current.
+    - Depletion of protons at the surface, which is a mass-transport limit.
+    - Uncompensated solution resistance, which adds an iR term to the measured potential.
+    - Hydrogen bubbles that block part of the surface and lower the exchange current.
+  correct: 2
+  explanation: >-
+    Less electrolyte means higher solution resistance, so a larger iR loss at the same current; that is the
+    signature of iR drop. Correct the potential with a measured Ru before reading the slope.
+- id: q3
+  question: >-
+    You need the exchange current density of a slow electrode, i0 near 1e-8 A/cm2, and your potentiostat
+    noise is 0.1 microampere on a 1 cm2 electrode. Which method do you choose?
+  options:
+    - The slope of i against E within plus or minus 10 mV, because the linear region is exact for any i0.
+    - The open-circuit potential drift over one hour, because it is set by the exchange current.
+    - The peak current of a slow cyclic voltammogram, because it is proportional to i0.
+    - Extrapolate a Tafel line fitted between about 100 and 300 mV of overpotential back to zero.
+  correct: 3
+  explanation: >-
+    Within 10 mV the current would be only a few nanoamperes, far below the noise. Far from equilibrium the
+    current is large enough to measure, and the Tafel intercept gives i0.
+- id: q4
+  question: >-
+    Near equilibrium an electrode at 25 C shows a straight i-E line with slope 2.0 mA/V on a 1 cm2 electrode,
+    and the solution resistance is negligible. What is its exchange current density?
+  options:
+    - About 5.1e-5 A/cm2, from i0 = (RT/F) times the slope.
+    - About 7.8e-2 A/cm2, from i0 = slope divided by RT/F.
+    - About 2.0e-3 A/cm2, because the slope equals i0 directly.
+    - About 1.2e-4 A/cm2, from i0 = 2.303 (RT/F) times the slope.
+  correct: 0
+  explanation: >-
+    Near equilibrium i = i0 F eta / RT, so the slope is i0 F/RT and i0 = 0.02569 V x 2.0e-3 A/V = 5.1e-5 A/cm2.
+    The factor 2.303 belongs to log10 plots, not to the linear region.

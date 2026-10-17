@@ -1,0 +1,8 @@
+# Instructor notes — 32.1 Electrode kinetics and the Butler-Volmer equation
+
+- Objective: the learner derives Butler–Volmer from potential-dependent TST rate constants, reads i0 from micro-polarisation and from a Tafel intercept, corrects for Ru, and turns i0 and b into an overpotential at a target current.
+- Likely confusion: η versus E (and versus E applied); α versus αa/αc; why the Tafel line is extrapolated to η = 0 and not to E = 0 vs a reference.
+- Misconception: "a bigger Tafel slope means a faster catalyst". The opposite: a small slope means the current rises steeply with η. Also "i0 = 0 at equilibrium because no net current flows".
+- Analogy: equilibrium is a busy two-way bridge with equal traffic in each direction; i0 is the traffic per lane. The overpotential tilts the bridge so one direction wins exponentially.
+- Expected hands-on result (generated data, true Ni i0 8.0e-6, α 0.50/0.50; Cu 2.5e-7, 0.48/0.52; Ru 2.5 Ω): Ni micro-polarisation 7.65e-6, Tafel (iR-corrected, −0.30 < η < −0.10) b 118 mV/dec, αc 0.50, i0 7.87e-6; uncorrected to −0.45 V b 133, i0 1.19e-5; BV fit 7.99e-6, 0.50/0.50; η(10 mA/cm²) 366 mV. Cu micro-polarisation 3.62e-7 (noise-limited), Tafel b 114, αc 0.52, i0 2.57e-7; BV fit αa 0.27 (anodic branch below noise); η(10 mA/cm²) 525 mV (extrapolated). Sim part depends on voltammetry `butler-volmer` (not built yet). Pencil: αc 1.48; i0 5.1e-4 A/cm²; b 132 mV/dec at 60 °C.
+- Extension: add a limiting current of 20 mA/cm² to the data (1/i = 1/ik + 1/ilim) and show the Koutecký–Levich correction recovers the kinetic line; or compare Tafel slopes 120/40/30 mV/dec with the Volmer–Heyrovsky–Tafel steps in Shinagawa 2015.

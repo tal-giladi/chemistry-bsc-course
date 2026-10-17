@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A new cathode material has a molar mass of 100 g/mol and can reversibly exchange 0.8 lithium per formula
+    unit at an average 3.5 V against lithium. What is its theoretical specific energy, counting the cathode only?
+  options:
+    - About 0.75 Wh/kg, from 214 mAh/g times 3.5 V divided by 1000.
+    - About 214 Wh/kg, from 214 mAh/g with the voltage left out.
+    - About 750 Wh/kg, from 214 mAh/g times 3.5 V.
+    - About 940 Wh/kg, from 268 mAh/g times 3.5 V.
+  correct: 2
+  explanation: >-
+    Q = nF/(3.6 M) = 0.8 x 96485/(3.6 x 100) = 214 mAh/g, and energy = Q x V = 214 x 3.5 = 750 Wh/kg. Using a
+    full electron overstates Q, mAh/g times V is already Wh/kg, and leaving out the voltage gives a capacity, not an energy.
+- id: q2
+  question: >-
+    A hydrogen fuel cell gives 1.0 V at open circuit but only 0.65 V at its working current. A new membrane halves
+    the cell resistance and the voltage rises to 0.68 V. Where is most of the remaining loss?
+  options:
+    - In the membrane resistance, because it still dominates after being halved.
+    - In the activation overpotential, mostly of the slow oxygen reduction at the cathode.
+    - In mass transport of hydrogen to the anode, because hydrogen diffuses slowly.
+    - In the thermodynamic limit, because 1.229 V can never be reached at any current.
+  correct: 1
+  explanation: >-
+    Halving the resistance gained only 30 mV, so the iR loss was about 60 mV in total. Most of the gap is
+    activation overpotential, mainly at the oxygen cathode where the exchange current density is tiny.
+- id: q3
+  question: >-
+    A steel pipe probe shows a polarisation resistance that falls from 2000 to 500 ohm cm2 over a month, while
+    the Tafel slopes stay the same. What happened to the corrosion rate?
+  options:
+    - It rose about fourfold, because the corrosion current is B divided by Rp.
+    - It fell about fourfold, because a lower resistance means a more protective film.
+    - It is unchanged, because the corrosion potential did not move.
+    - It rose about sixteenfold, because the rate depends on the square of the current.
+  correct: 0
+  explanation: >-
+    Stern-Geary gives icorr = B/Rp with B fixed by the Tafel slopes, so a quarter of Rp means four times the
+    current and, by Faraday's law, four times the rate.
+- id: q4
+  question: >-
+    A steel bracket is bolted to a copper pipe in a damp basement and rusts quickly near the joint. Which change
+    protects the steel best without replacing either part?
+  options:
+    - Paint the copper pipe only, so that it cannot rust.
+    - Add more steel bolts to spread the corrosion over a larger area.
+    - Wrap the joint with copper tape to make the contact more uniform.
+    - Insulate the joint electrically, for example with a plastic washer and sleeve.
+  correct: 3
+  explanation: >-
+    Copper is a good cathode, so in contact it raises the corrosion current of the steel. Breaking the electrical
+    contact removes the galvanic couple; more copper would make it worse, and copper does not rust anyway.

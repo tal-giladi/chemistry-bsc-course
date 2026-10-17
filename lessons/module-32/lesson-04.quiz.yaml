@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A Hückel chain with beta = -2.0 eV is made longer, from 10 to 10,000 atoms. What happens to its band?
+  options:
+    - The width grows without limit, because each new atom pushes the top level higher.
+    - The width stays exactly 4 eV for any length, because it is set by the number of neighbours.
+    - The width shrinks towards zero, because the levels crowd together as N grows.
+    - The width approaches 8 eV while the spacing between levels shrinks towards zero.
+  correct: 3
+  explanation: >-
+    The levels lie between alpha + 2 beta and alpha - 2 beta, so the width tends to 4|beta| = 8 eV. More atoms add
+    more levels inside that window, so the spacing falls like 1/N; for short chains the width is a little smaller.
+- id: q2
+  question: >-
+    A solid has one valence electron per atom and one atom per unit cell, and its single band is wide. A second
+    solid has two different atoms per cell and one valence electron per atom. Which is more likely to be a metal?
+  options:
+    - The first, because its band is only half filled.
+    - The second, because two atoms per cell give two bands to conduct in.
+    - Both, because one electron per atom always gives a metal.
+    - Neither, because a wide band always leaves a gap at the top.
+  correct: 0
+  explanation: >-
+    With one atom per cell the band holds two electrons per atom, so one electron per atom half-fills it: a metal.
+    With two different atoms per cell the band splits and the lower band is exactly full, so a gap opens.
+- id: q3
+  question: >-
+    Silicon (n_i = 1e10 cm-3 at 300 K) is doped with 1e15 phosphorus atoms per cm3. What are the electron
+    and hole densities?
+  options:
+    - n = 1e10 and p = 1e15, because the donors create holes.
+    - n = 1e15 and p = 1e5, because n times p equals n_i squared.
+    - n = 1e15 and p = 1e10, because holes are set by the pure material.
+    - n = p = 1e15, because each donor makes an electron and a hole.
+  correct: 1
+  explanation: >-
+    Each phosphorus donor gives one free electron, so n = 1e15. The product n p = n_i^2 = 1e20 fixes p = 1e5,
+    far below its intrinsic value.
+- id: q4
+  question: >-
+    A company wants an efficient infrared LED near 870 nm. Silicon (1.12 eV, indirect) and GaAs (1.42 eV,
+    direct) are available. Which do they choose?
+  options:
+    - Silicon, because its smaller gap means more electrons in the conduction band to emit light.
+    - Silicon, because 1.12 eV corresponds to 870 nm.
+    - GaAs, because its direct gap lets electrons and holes recombine by emitting a photon without a phonon.
+    - GaAs, because a larger gap always gives brighter light at any wavelength.
+  correct: 2
+  explanation: >-
+    1239.84/1.42 = 873 nm, and the direct gap makes radiative recombination efficient. Silicon's 1.12 eV
+    corresponds to about 1100 nm, and its indirect gap makes light emission weak.

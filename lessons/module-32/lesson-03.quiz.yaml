@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A cubic powder pattern gives 1/d^2 ratios of 1 : 2 : 3 : 4 : 5 : 6 : 7 for its first seven lines. Which
+    lattice is it?
+  options:
+    - Simple cubic, because 1, 2, 3, 4, 5, 6 and 8 are allowed there and only 7 is forbidden.
+    - Face-centred cubic, because the first two lines are always in the ratio 3 to 4.
+    - Body-centred cubic, because doubling the ratios gives 2, 4, 6, 8, 10, 12, 14.
+    - Not cubic at all, because a ratio of 7 cannot come from any cubic lattice.
+  correct: 2
+  explanation: >-
+    A sum of three squares can never be 7, so the multiplier must be 2, which gives the bcc sequence 2, 4, 6, ...
+    14 (where 14 = 3^2 + 2^2 + 1^2 is allowed).
+- id: q2
+  question: >-
+    Your fitted lattice parameters, one per peak, fall steadily from 4.728 to 4.708 A as 2 theta rises from
+    33 to 82 degrees. What should you do?
+  options:
+    - Report the average of all peaks, because averaging removes random scatter.
+    - Report the value from the lowest-angle peak, because it is the strongest.
+    - Fit all peaks with a zero-shift term, or extrapolate a against a Nelson-Riley function.
+    - Discard the high-angle peaks, because their Kalpha2 splitting makes them unreliable.
+  correct: 2
+  explanation: >-
+    A steady trend with angle is a systematic error such as a zero or displacement shift. Averaging keeps the
+    bias; fitting the shift, or extrapolating to 90 degrees, removes it.
+- id: q3
+  question: >-
+    A pattern taken without a nickel filter shows a weak peak at 29.5 degrees and a strong one at 32.8 degrees
+    (Cu Kalpha). A colleague says the weak peak is an impurity. What is the quickest test?
+  options:
+    - Check whether sin(theta) of the weak peak equals sin(theta) of the strong one times 1.3922/1.5406.
+    - Check whether the weak peak is wider than the strong one, which would mean a different phase.
+    - Check whether the weak peak is exactly a quarter of the intensity of the strong one.
+    - Check whether the two peaks have Miller indices that add up to an even number.
+  correct: 0
+  explanation: >-
+    A Kbeta satellite has the same d as its parent but the shorter Cu Kbeta wavelength, so the sines are in the
+    ratio of the wavelengths. Here 29.5 and 32.8 degrees fit that ratio after a small zero shift.
+- id: q4
+  question: >-
+    KCl and NaCl both have the rock-salt structure, but in the KCl pattern the (111) peak is almost missing. Why?
+  options:
+    - KCl is body-centred cubic, so all reflections with an odd index sum are forbidden.
+    - K+ and Cl- have the same number of electrons, so their contributions to F(111) cancel.
+    - The KCl cell is larger, so (111) moves below the lowest angle that was scanned.
+    - Potassium absorbs Cu Kalpha strongly, which removes the low-angle peaks only.
+  correct: 1
+  explanation: >-
+    In rock salt F(111) = 4(f_cation - f_anion). K+ and Cl- both have 18 electrons, so the difference is almost
+    zero and the odd reflections nearly vanish; the lattice is still fcc.

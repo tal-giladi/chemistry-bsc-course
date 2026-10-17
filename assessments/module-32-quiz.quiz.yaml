@@ -1,0 +1,121 @@
+- id: q1
+  question: >-
+    You test a new nickel-molybdenum cathode for an electrolyser. Its iR-corrected Tafel plot gives a slope of
+    118 mV/dec and i0 = 5e-5 A/cm2; plain nickel gives 118 mV/dec and 8e-6 A/cm2. How much overpotential does
+    the new material save at 100 mA/cm2?
+  options:
+    - About 20 mV, because the saving is RT/F times log10 of the ratio of the exchange currents.
+    - About 94 mV, because the saving is b times log10 of the ratio of the exchange currents.
+    - About 216 mV, because the saving is b times ln of the ratio of the exchange currents.
+    - About 470 mV, because the saving is the full overpotential of nickel at that current.
+  correct: 1
+  explanation: >-
+    With the same slope, the two Tafel lines are parallel and offset by b log10(i0,new/i0,Ni) = 0.118 x
+    log10(6.25) = 0.094 V at every current in the Tafel region. Using ln instead of log10 overstates it 2.3-fold.
+- id: q2
+  question: >-
+    A polarisation curve of a fuel-cell catalyst gives an apparent Tafel slope that rises from 70 to 160 mV/dec
+    between 5 and 200 mA/cm2. A current-interrupt test shows 0.4 ohm cm2 of uncompensated resistance. What is
+    the most sensible next step?
+  options:
+    - Report two mechanisms, one at low and one at high current, because the slope changes.
+    - Report 160 mV/dec, because the high-current region is the one that matters in a fuel cell.
+    - Subtract i times 0.4 ohm cm2 from every potential and refit, then check for a mass-transport limit.
+    - Average the two slopes to 115 mV/dec, because the true value lies between them.
+  correct: 2
+  explanation: >-
+    At 200 mA/cm2 the iR loss is 80 mV, enough to bend the plot strongly. Correct for it first; if curvature
+    remains near the highest currents, look for a mass-transport limit before claiming a mechanism change.
+- id: q3
+  question: >-
+    A company claims a new cathode with a molar mass of 150 g/mol that exchanges 2 electrons per formula unit
+    and stores 600 mAh/g. What do you conclude?
+  options:
+    - The claim is plausible, because two-electron materials store twice as much as LiFePO4.
+    - The claim is plausible only at high voltage, because capacity grows with voltage.
+    - The claim is modest, because the theoretical capacity is 1286 mAh/g for two electrons.
+    - The claim exceeds the theoretical capacity of 357 mAh/g, so something is wrong.
+  correct: 3
+  explanation: >-
+    Q = nF/(3.6 M) = 2 x 96485/(3.6 x 150) = 357 mAh/g; leaving out the 3.6 gives coulombs per gram, not mAh/g. A measured capacity above the theoretical one points to
+    side reactions, a conductive additive counted as active material, or a measurement error.
+- id: q4
+  question: >-
+    A steel water tank shows a polarisation resistance of 1300 ohm cm2, with Tafel slopes of 60 and 120 mV/dec.
+    The design life needs a corrosion rate below 0.1 mm/y. Does it meet the requirement? (Iron: EW 27.92 g,
+    density 7.87 g/cm3.)
+  options:
+    - Yes; B = 17.4 mV gives about 13 microamperes per cm2 and 0.15 mm/y, which rounds to 0.1.
+    - Yes; B = 17.4 mV gives about 13 microamperes per cm2, which is 0.013 mm/y.
+    - No; B = 17.4 mV gives about 13 microamperes per cm2 and about 0.15 mm/y.
+    - No; B = 40 mV gives about 31 microamperes per cm2 and about 0.36 mm/y.
+  correct: 2
+  explanation: >-
+    B = 0.060 x 0.120/(2.303 x 0.180) = 0.0174 V; icorr = 0.0174/1300 = 1.34e-5 A/cm2; CR = 3.27e-3 x 13.4 x
+    27.92/7.87 = 0.155 mm/y, above the limit. Forgetting the 2.303 in B gives the 40 mV option.
+- id: q5
+  question: >-
+    A shipyard bolts aluminium fittings to a steel hull and plans zinc anodes as well. A colleague says the zinc
+    is unnecessary because aluminium is more active than steel. What is the best reply?
+  options:
+    - Agree, because aluminium will always protect the steel in seawater.
+    - Disagree; aluminium's oxide film can stop it acting as an anode, and the fittings would be sacrificed.
+    - Agree, because zinc and aluminium in contact would corrode each other faster.
+    - Disagree, because aluminium is always a cathode for steel in seawater.
+  correct: 1
+  explanation: >-
+    Aluminium is thermodynamically more active, but its passive film makes its protection unreliable, and using
+    structural fittings as anodes sacrifices the fittings. Dedicated zinc anodes are designed to be consumed.
+- id: q6
+  question: >-
+    A powder pattern (Cu Kalpha, no filter) has strong peaks whose 1/d^2 values are in the ratio
+    1 : 1.333 : 2.667 : 3.667 : 4, and two weak peaks a little below the first two strong ones. What is the most
+    likely description?
+  options:
+    - An fcc phase indexed 111, 200, 220, 311, 222, with Kbeta satellites of the two strongest lines.
+    - A bcc phase indexed 110, 200, 211, 220, 310, with an impurity phase giving the two weak peaks.
+    - A simple cubic phase indexed 100, 110, 111, 200, 210, with Kalpha2 lines giving the weak peaks.
+    - An fcc phase, with two weak lines from a second fcc phase with a slightly larger cell.
+  correct: 0
+  explanation: >-
+    Multiplying by 3 gives 3, 4, 8, 11, 12, the fcc sequence. Weak peaks just below strong ones, at the same d but
+    the shorter Kbeta wavelength, are the usual unfiltered-tube satellites; check the sine ratio before calling a phase.
+- id: q7
+  question: >-
+    Two students refine the same CdO pattern. One takes a from the strongest peak and gets 4.727 A; the other fits
+    all six peaks with a zero shift and gets 4.6964 A. The database value is 4.6963 A. Why do they differ?
+  options:
+    - The first student used Kalpha2, which is longer, so every d came out larger.
+    - The strongest peak has the best statistics, so 4.727 A is the true value of this sample.
+    - The second student overfitted by adding a parameter, which always moves a towards the database.
+    - A zero shift changes d most at low angles, so one low-angle peak carries a large bias.
+  correct: 3
+  explanation: >-
+    A constant angular error changes d most at low angles. Fitting all peaks with a zero-shift term removes that
+    bias; per-peak values that drift with angle are the sign that it was there.
+- id: q8
+  question: >-
+    A sensor must work up to 400 K with a doping of 1e15 per cm3. Ge has Eg = 0.66 eV and Si 1.12 eV, both with
+    sqrt(Nc Nv) near 1e19 per cm3 at 300 K. Which material do you choose and why?
+  options:
+    - Si, because at 400 K its intrinsic carrier density stays far below the doping while Ge's reaches it.
+    - Ge, because its smaller gap gives more carriers and therefore a stronger signal.
+    - Either, because n_i depends on Eg/kT and both gaps are much larger than kT.
+    - Si, because indirect-gap materials have no thermal carriers at all.
+  correct: 0
+  explanation: >-
+    n_i grows as exp(-Eg/2kT). At 400 K Ge reaches about 1e15 per cm3, swamping the doping, while Si stays near
+    5e12. Using Eg/kT (missing the 2) or ignoring the exponential gives the wrong comparison.
+- id: q9
+  question: >-
+    You have time for one more faculty-list elective and want to model spin qubits in molecules for your research
+    project. Which choice fits your goal best?
+  options:
+    - Symmetry and its Uses in Chemistry, because point groups are needed for every spin system.
+    - Structure Determination by Physical Methods, because it covers NMR, which also uses spins.
+    - Intro to Molecular Quantum Technology, which builds on the ESR lesson and covers coherence.
+    - Numerical Simulation in Chemical Physics, because it is the shortest and leaves time for research.
+  correct: 2
+  explanation: >-
+    The quantum-technology elective covers two-level systems, coherence and the Lindblad equation that describe
+    spin qubits, and builds on 30.2. The others touch spins only in passing or are chosen for the wrong reason.

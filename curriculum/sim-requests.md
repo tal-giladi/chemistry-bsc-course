@@ -5,3 +5,4 @@
 - oscillators `coupled-three` (14.3): adjustable middle mass.
 - ir-esr `hcl` (30.1): resolution, pressure, centrifugal-distortion toggle, overtone region.
 - quantum-box `dye` (30.4): polyene bond-alternation switch.
+- voltammetry `butler-volmer` (32.1): controls for i0, alpha, Ru, limiting current; log-scale plot.

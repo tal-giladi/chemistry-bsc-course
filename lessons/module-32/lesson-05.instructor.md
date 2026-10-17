@@ -1,0 +1,9 @@
+# Instructor notes — 32.5 Choosing your further electives
+
+- Objective: the learner completes the module practical (real CdO, In2O3 and composite XRD patterns plus generated corrosion data) and writes a plan for two more faculty-list electives with verified free resources.
+- Likely confusion: why the In2O3 ratio method needs a lattice check (multiplier 3 gives integers for the first lines but needs the forbidden N = 23 later); why the composite needs its own zero shift; why Scherrer sizes are lower limits.
+- Misconception: "every peak must be assigned before the report is finished"; "two matching lines prove a phase"; "a bigger elective is a better elective".
+- Analogy: phase identification is like matching fingerprints at a crime scene: the two suspects you expected leave many prints, but a strong unexplained print means someone else was there, even if you cannot yet say who.
+- Expected hands-on result: In2O3 multiplier 6, bcc, N 6…48, 76, 80; a = 10.1125 ± 0.0027 Å, z −0.175°, rms 0.024°, COD 2310009 10.117 Å (−0.04 %); Kβ 27.42°. Scherrer lower limits CdO 29–31 nm, In2O3 26–31 nm. Composite zero shift +0.11°, 29 peaks, 8 unassigned (31.13, 32.72, 51.91, 57.24, 58.30, 68.06, 76.90, 80.55). Spinel CdIn2O4 (COD 8104161, a 9.166 Å) matches 51.9 and 80.6 only; strong 32.72 unexplained; leave open. Inhibitor 250 → 21 µA/cm², 91.5 % (Tafel), 91.4 % (Stern–Geary), 2.90 → 0.25 mm/y.
+- Elective data: syllabi read 2026-10-17 from the SAP mirror (01270438 and 01270446 in courses_2024_201; 01270454 in courses_2023_201; 01270730 and 01270427 in courses_2025_200; 01270453 in courses_2025_201). MIT 5.04 Fall 2008 is no longer at its old ocw.mit.edu course URL (404 on 2026-10-17); the DSpace archive is linked instead.
+- Extension: load the composite pattern into Profex 5.7.3 with COD CIFs for CdO (9006671), In2O3 (2310009) and CdIn2O4 (8104161) and try a Rietveld phase quantification; or ask the data set's authors how they interpret the 32.7° peak.

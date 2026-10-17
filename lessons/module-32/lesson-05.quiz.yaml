@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    In a two-phase composite, 8 of 29 peaks match neither of the two expected oxides nor any Kbeta line, and
+    one candidate third phase explains two weak lines but not the strongest unexplained peak. What do you report?
+  options:
+    - The candidate phase is present, because two matching lines are enough for a minor phase.
+    - Only the two expected oxides, because unexplained peaks in a real pattern are usually noise.
+    - The unexplained peaks as instrument artefacts, because the zero shift differs from the pure samples.
+    - At least one further crystalline phase whose identity is still open, with a search-match as the next step.
+  correct: 3
+  explanation: >-
+    Eight real peaks, one of them strong, are evidence for more phases, but a candidate that misses the strongest
+    unexplained line is not proven. Report what is known and name the test that would decide.
+- id: q2
+  question: >-
+    A peak at 2 theta = 30.4 degrees (Cu Kalpha1) has a FWHM of 0.268 degrees and no instrument standard was
+    measured. What does the Scherrer equation with K = 0.9 tell you about the crystallites?
+  options:
+    - They are about 31 nm, an upper limit because strain also adds width.
+    - They are at least about 31 nm, because the instrument's own width is still included.
+    - They are about 3 nm, because the width must be used in degrees.
+    - They are exactly 31 nm, because the Scherrer equation needs no correction for a lab diffractometer.
+  correct: 1
+  explanation: >-
+    tau = 0.9 x 0.15406 nm / (0.004677 rad x cos 15.2 deg) = 31 nm. Part of the measured width comes from the
+    instrument (and possibly strain), so the true crystallites are at least this large.
+- id: q3
+  question: >-
+    An inhibitor lowers the corrosion current of steel in acid from 250 to 21 microamperes per cm2. What is its
+    inhibition efficiency, and what should be done before the plant adopts it?
+  options:
+    - About 92 percent; confirm with a longer weight-loss test that also shows film stability.
+    - About 8 percent; repeat the scan because the efficiency is the ratio of the two currents.
+    - About 92 percent; adopt it at once because two electrochemical methods agree.
+    - About 12 percent; the efficiency is the ratio of the two corrosion potentials.
+  correct: 0
+  explanation: >-
+    Efficiency = 1 - 21/250 = 0.916. Polarisation scans take minutes; a weight-loss test over a day or more checks
+    that the film lasts and that no pitting or hydrogen damage appears.
+- id: q4
+  question: >-
+    A learner who finished Modules 17 and 24 well and wants a career in synthesis has time for one more Technion
+    faculty-list elective. Which choice builds most directly on what they did?
+  options:
+    - Intro to Molecular Quantum Technology, because NMR spins are two-level systems.
+    - Numerical Simulation in Chemical Physics, because every chemist must write simulations.
+    - Structure Determination by Physical Methods, because it extends their spectra work to harder unknowns.
+    - Symmetry and its Uses in Chemistry, because it is worth the most points.
+  correct: 2
+  explanation: >-
+    Structure determination by NMR, MS, IR, UV and chiroptical methods is the daily tool of synthesis and builds
+    on Module 17 and the spectra of Module 24; points alone are a poor reason to choose.
