@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    A simulation box holds argon at 300 K. You raise the temperature to 1200 K and keep the same atoms
+    in the same box. What happens to the rms speed and to the pressure?
+  options:
+    - The rms speed doubles and the pressure rises by a factor of two.
+    - The rms speed rises fourfold and the pressure rises fourfold.
+    - The rms speed doubles and the pressure rises fourfold.
+    - The rms speed rises by a factor of 1.41 and the pressure doubles.
+  correct: 2
+  explanation: >-
+    The rms speed scales as the square root of T, so a fourfold rise in T doubles it. Pressure at fixed
+    volume and amount is proportional to T (it depends on m times the mean of v squared), so it rises fourfold.
+- id: q2
+  question: >-
+    A classmate measures gamma = 1.32 for dry air with the Clément–Desormes bottle, holding the tap open
+    for about five seconds each time. What is the most likely cause of the low value?
+  options:
+    - Heat flowed into the cold gas while the tap was open, so the expansion was not adiabatic.
+    - Air contains water vapour, whose extra vibrations always lower gamma below 1.35.
+    - The approximation h1/(h1 - h2) underestimates gamma by several per cent.
+    - The pump compressed the air adiabatically, which makes h1 too large in every trial.
+  correct: 0
+  explanation: >-
+    A long opening lets room heat warm the expanding gas, so it warms less after the tap closes, h2 is
+    small and gamma comes out low. The log approximation costs only about 0.2 %, and waiting after
+    pumping removes any compression heat.
+- id: q3
+  question: >-
+    You measure gamma = 1.66 for a gas at room temperature. What can you conclude about its molecules?
+  options:
+    - They are linear molecules with two rotations and no vibration excited.
+    - They are polyatomic molecules with several soft vibrations excited.
+    - They are diatomic molecules whose vibration is fully excited.
+    - They store energy only in translation, as single atoms do.
+  correct: 3
+  explanation: >-
+    Cv,m = R/(gamma - 1) = 1.5R, which is three degrees of freedom: translation only. That is a monatomic
+    gas such as helium or argon. Rotation would push Cv to 2.5R and gamma down to 1.40.
+- id: q4
+  question: >-
+    A student computes the rms speed of N2 at 298 K as 16 m/s. Which slip explains this number?
+  options:
+    - Using the mean speed formula instead of the rms formula.
+    - Entering the molar mass as 28.0 g/mol instead of 0.0280 kg/mol.
+    - Using the Boltzmann constant in place of the gas constant.
+    - Using the temperature in degrees Celsius instead of kelvin.
+  correct: 1
+  explanation: >-
+    With R in J/(mol K) the molar mass must be in kg/mol. Using 28.0 makes M 1000 times too big, and the
+    speed sqrt(1000) = 32 times too small: 515/32 = 16 m/s. The mean speed formula changes the result by only 8 %.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A lemon cell reads 0.93 V on a multimeter, but the voltage drops to 0.05 V when a small motor is
+    connected. What is the best explanation?
+  options:
+    - The lemon's acid is used up the moment current flows, so the EMF itself collapses.
+    - The multimeter adds its own voltage at open circuit, so 0.93 V was never real.
+    - The cell's internal resistance is far larger than the motor's, so most of the EMF is lost inside.
+    - The motor generates a back voltage that cancels the cell's EMF exactly.
+  correct: 2
+  explanation: >-
+    V = E R/(R + r). With r of a few kilohms and a motor of tens of ohms, almost all of the 0.93 V drops
+    across the internal resistance. The EMF is unchanged, which is why the voltage recovers at open circuit.
+- id: q2
+  question: >-
+    Four identical cells each have E = 0.9 V and r = 1.6 kOhm. You connect them in series. What are the
+    total EMF and internal resistance?
+  options:
+    - 3.6 V and 6.4 kOhm.
+    - 0.9 V and 0.4 kOhm.
+    - 3.6 V and 0.4 kOhm.
+    - 0.9 V and 6.4 kOhm.
+  correct: 0
+  explanation: >-
+    In series both the EMFs and the internal resistances add: 4 x 0.9 V and 4 x 1.6 kOhm. In parallel the
+    EMF would stay at 0.9 V and the resistance would fall to 0.4 kOhm.
+- id: q3
+  question: >-
+    Standards for a Cu2+ electrode cell give E rising by 29.4 mV for every tenfold increase in [Cu2+] at
+    25 C. What does the slope tell you?
+  options:
+    - One electron is transferred, because 29.4 mV is half of the 59 mV expected.
+    - The electrode is failing, because a healthy one gives 59 mV per decade for any ion.
+    - The temperature must be about 12 C, because the slope is half the usual value.
+    - Two electrons are transferred, close to the 29.6 mV per decade expected for n = 2.
+  correct: 3
+  explanation: >-
+    The Nernst slope is 2.303RT/(nF) = 59.16/n mV per decade at 25 C. For Cu2+, n = 2, so 29.58 mV is
+    expected and 29.4 mV is a healthy electrode. 59 mV per decade applies only to one-electron ions such as H+.
+- id: q4
+  question: >-
+    You want the most power from one salt-water cell with r = 430 Ohm and E = 0.78 V. Which load do you
+    choose, and roughly how much power does it receive?
+  options:
+    - 100 Ohm, because a small load draws the most current, giving about 0.9 mW.
+    - 430 Ohm, matching the internal resistance, giving about 0.35 mW.
+    - 10 kOhm, because a large load keeps the voltage near the EMF, giving about 0.6 mW.
+    - Any load, because the power depends only on the EMF, about 0.6 mW.
+  correct: 1
+  explanation: >-
+    P = E^2 R/(R + r)^2 peaks at R = r, where P = E^2/(4r) = 0.78^2/1720 = 0.35 mW. A small load wastes the
+    power inside the cell, and a large one draws too little current.

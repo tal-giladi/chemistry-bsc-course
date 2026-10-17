@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    With the same syringe tip, 20 drops of water weigh 1.00 g and 20 drops of a detergent solution weigh
+    0.46 g, both at 20 C. What is the surface tension of the solution?
+  options:
+    - About 33 mN/m, from 72.7 times 0.46.
+    - About 158 mN/m, from 72.7 divided by 0.46.
+    - About 39 mN/m, from 72.7 times 0.54.
+    - About 46 mN/m, from the drop mass in milligrams per drop.
+  correct: 0
+  explanation: >-
+    Drop mass is proportional to surface tension when the tip is the same, so gamma = 72.7 x 0.46/1.00 =
+    33 mN/m. Dividing turns the ratio upside down, and 0.54 is the fractional drop, not the ratio.
+- id: q2
+  question: >-
+    Above 2 mL of dish soap per litre the drop mass stops changing, although you keep adding soap. What is
+    happening in the solution?
+  options:
+    - The soap no longer dissolves, so the extra settles out unused.
+    - The surface is full and further surfactant forms micelles in the bulk.
+    - The drops have become too small for the scale to resolve any change.
+    - The water has become saturated with air, which stops the surface changing.
+  correct: 1
+  explanation: >-
+    This is the critical micelle concentration. Once the surface is covered, extra surfactant molecules
+    cluster tail-in into micelles instead of going to the surface, so gamma stays almost constant.
+- id: q3
+  question: >-
+    Below the break, gamma falls by 11 mN/m per unit of ln c at 298 K. The surfactant is anionic and no
+    salt was added. Which surface excess is right?
+  options:
+    - 4.4 micromol per square metre, using n = 1.
+    - 0.44 micromol per square metre, using log10 instead of ln.
+    - 8.9 micromol per square metre, using n = 2 in the numerator.
+    - 2.2 micromol per square metre, using n = 2 for the ion and its counter-ion.
+  correct: 3
+  explanation: >-
+    Gamma = -(1/(nRT)) dgamma/dln c = 0.011/(2 x 8.314 x 298) = 2.2e-6 mol/m^2. In pure water an ionic
+    surfactant adsorbs with its counter-ion, which doubles the denominator; n = 1 applies to non-ionic
+    surfactants or excess salt.
+- id: q4
+  question: >-
+    Your water drops weigh 49 mg at the start of the session and 44 mg at the end, after measuring all the
+    detergent solutions. What does this tell you, and what do you do?
+  options:
+    - The room cooled, raising water's surface tension, so the end value is the right one.
+    - The scale drifted, so you average the two water values and use the mean.
+    - Detergent stayed on the tip and lowered the final water value; rinse well and remeasure.
+    - Evaporation made the last drops lighter, so you correct every value by 10 %.
+  correct: 2
+  explanation: >-
+    A 10 % fall in the water reference after concentrated solutions is surfactant left in the syringe.
+    Rinse thoroughly with water until repeated water runs agree within about 2 %. Cooling would make the
+    drops slightly heavier, not lighter.

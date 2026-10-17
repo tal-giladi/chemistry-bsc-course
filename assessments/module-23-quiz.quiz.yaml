@@ -1,0 +1,122 @@
+- id: q1
+  question: >-
+    Three Clément–Desormes trials on air give gamma = 1.39, 1.41 and 1.40 with a 1 s tap opening. A fourth,
+    with the tap held open for 6 s, gives 1.29. How do you report the result?
+  options:
+    - Average all four, 1.37, because every trial is a valid measurement.
+    - Report 1.29, because the longest opening reached atmospheric pressure most completely.
+    - Report 1.40 from the 1 s trials and exclude the 6 s trial, giving its known cause.
+    - Report 1.40 with the 6 s trial as the uncertainty, giving 1.40 plus or minus 0.11.
+  correct: 2
+  explanation: >-
+    The long opening has a known physical bias: heat leaks in during the expansion, which always lowers
+    gamma. A trial with an identified procedural error is excluded and explained, not averaged in or turned
+    into an error bar.
+- id: q2
+  question: >-
+    In a coffee-cup run, citric acid and baking soda cool the solution from 21.4 C. The lowest reading is
+    18.6 C at 6 minutes, but the extrapolated after-line gives 18.9 C at the mixing time. Which Delta T do
+    you use?
+  options:
+    - -2.5 K, because extrapolating to the mixing time corrects for heat exchanged during the run.
+    - -2.8 K, because the lowest reading is the true final temperature of the reaction.
+    - -2.65 K, the mean of the two, because both readings have similar uncertainties.
+    - -2.8 K, because heat leaking in can only make the change look smaller, never larger.
+  correct: 0
+  explanation: >-
+    Extrapolating the before and after lines to the mixing time removes the effect of heat exchanged while
+    the reaction ran. Here the after-line drifts down (evaporation and slow dissolving), so the lowest reading
+    overstates the change.
+- id: q3
+  question: >-
+    For FeSCN2+ you make standards in 0.20 M Fe3+ and mixtures in 1.0e-3 M Fe3+, all in 0.5 M HNO3. A
+    classmate makes the mixtures in water instead of acid to save reagent. What happens to their K?
+  options:
+    - Nothing, because the acid takes no part in the complexation reaction.
+    - It becomes unreliable, because Fe3+ hydrolyses and the ionic strength no longer matches.
+    - It rises by exactly the acid's share of the ionic strength, which is easy to correct.
+    - It falls, because H+ normally competes with Fe3+ for the thiocyanate ions.
+  correct: 1
+  explanation: >-
+    Without acid Fe3+ forms brown FeOH2+, a second absorbing species, and the ionic strength changes, so the
+    activity coefficients differ from those of the standards. Both break the simple 1:1 analysis.
+- id: q4
+  question: >-
+    Dye-fading photos give pseudo-absorbances whose ln-plot flattens near A = 0.02 at late times. A fit of
+    ln A over all 15 minutes gives k' = 2.1e-3 per second. What do you do?
+  options:
+    - Accept 2.1e-3, because a fit over more points is always more reliable.
+    - Switch to a second-order analysis, because the ln-plot is not straight.
+    - Increase the bleach so that the reaction ends before the flattening appears.
+    - Fit A = A0 exp(-k't) + A_inf, which straightens the ln-plot and raises k'.
+  correct: 3
+  explanation: >-
+    A residual absorbance (reflections, a faintly coloured product) flattens the tail and biases k' low.
+    Fitting or subtracting the offset straightens the ln-plot. With bleach in excess the kinetics are
+    pseudo-first-order, so a second-order plot is the wrong model.
+- id: q5
+  question: >-
+    You plan the dye-fading experiment for the evening. Which plan keeps it safe and still gives a good
+    rate constant?
+  options:
+    - 2 mL bleach in 200 mL water by an open window, nothing else added, glasses and gloves on.
+    - 20 mL bleach in 200 mL water in a closed bathroom, so draughts do not cool the cup.
+    - 2 mL bleach in 200 mL water with a spoon of citric acid to speed up the fading.
+    - Undiluted bleach in a small cup with one drop of dye, so the fading is fast to film.
+  correct: 0
+  explanation: >-
+    Small, diluted amounts in moving air, with nothing but water and dye, are the rules. Acids release
+    chlorine; a closed small room lets fumes build up; undiluted bleach is corrosive and needlessly strong.
+- id: q6
+  question: >-
+    A vinegar cell reads 0.95 V open-circuit and 0.48 V across a 1.0 kOhm resistor. What are its internal
+    resistance and the largest power it can deliver?
+  options:
+    - About 2.0 kOhm and 0.11 mW.
+    - About 0.98 kOhm and 0.23 mW.
+    - About 0.98 kOhm and 0.45 mW.
+    - About 0.51 kOhm and 0.44 mW.
+  correct: 1
+  explanation: >-
+    I = 0.48/1000 = 0.48 mA, so r = (0.95 - 0.48)/0.48 mA = 0.98 kOhm. The maximum power, at R = r, is
+    E^2/(4r) = 0.9025/3920 = 0.23 mW.
+- id: q7
+  question: >-
+    A copper ion-selective electrode, calibrated at 25 C, gives 28.9 mV per decade of [Cu2+]. A colleague
+    says it should give 59 mV and is broken. Who is right?
+  options:
+    - The colleague, because every Nernstian electrode gives 59 mV per decade.
+    - Neither, because the slope depends on the reference electrode, not on the ion.
+    - The colleague, because 28.9 mV means only half the copper reaches the membrane.
+    - You are, because a two-electron ion gives 29.6 mV, so the electrode is at 98 %.
+  correct: 3
+  explanation: >-
+    The Nernst slope is 59.16/n mV per decade. Cu2+ has n = 2, so 29.58 mV is expected and 28.9 mV is a
+    healthy, slightly sub-Nernstian response. 59 mV applies to one-electron ions such as H+.
+- id: q8
+  question: >-
+    In the drop-weight experiment at 21 C you used 72.0 mN/m for water and found 31.5 mN/m for a 10 mL/L
+    detergent solution. What is the effect of that water value?
+  options:
+    - No effect, because the method is relative and the water value cancels out.
+    - Every gamma is about 0.8 % low; use 72.6 mN/m, the IAPWS value at 21 C.
+    - Every gamma is about 0.8 % high, because 72.0 mN/m is the value at 20 C.
+    - Only the water point is wrong; the detergent values are not affected at all.
+  correct: 1
+  explanation: >-
+    Each gamma is gamma_water times a drop-mass ratio, so the reference value scales every result. 72.0 mN/m
+    is water at about 25 C; at 21 C IAPWS gives 72.58, so all results are about 0.8 % low.
+- id: q9
+  question: >-
+    Two learners analyse the same detergent data. One takes the Gibbs slope over the whole falling curve,
+    the other over the three points just below the break. Whose area per molecule is closer to correct?
+  options:
+    - The whole-curve fit, because more points always reduce the error.
+    - Both, because the Gibbs isotherm holds equally at every concentration.
+    - The near-break fit, because the surface is nearly full there and the slope is steepest.
+    - The whole-curve fit, because points near the break are distorted by micelles.
+  correct: 2
+  explanation: >-
+    The curve is not linear in ln c: gentle at low concentration and steep near the CMC, where the surface
+    is close to saturation. A whole-curve slope is too shallow, which gives too small a surface excess and
+    too large an area per molecule.

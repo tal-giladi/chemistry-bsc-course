@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    You want the molar absorptivity of FeSCN2+ for a K measurement. Which set of standards do you make?
+  options:
+    - Equal concentrations of Fe3+ and SCN-, so the complex forms in a 1:1 ratio.
+    - A large excess of SCN- with small amounts of Fe3+, read against a water blank.
+    - Small amounts of SCN- in a large excess of Fe3+, all in the same acid as the samples.
+    - Small amounts of both ions in pure water, so no other species can absorb.
+  correct: 2
+  explanation: >-
+    A large excess of Fe3+ drives nearly all the thiocyanate into the complex, so the complex concentration is
+    known from the SCN- added. The acid stops Fe3+ hydrolysing and keeps the ionic strength the same as in the
+    mixtures. Equal concentrations leave much of both ions unreacted.
+- id: q2
+  question: >-
+    Your standards contain 0.050 M Fe3+ and K is about 140. You compute K from the mixtures without any
+    correction. What happens to your result?
+  options:
+    - K comes out too high, because the standards were only about 88 % complexed.
+    - K comes out too low, because the standards were only about 88 % complexed.
+    - K is unaffected, because the same error appears in the standards and the mixtures.
+    - K comes out too high, because Fe3+ in excess absorbs strongly at 447 nm.
+  correct: 0
+  explanation: >-
+    K times Fe0 is 7, so 7/8 = 88 % of the SCN- is complexed. The slope underestimates eps b, every mixture's
+    complex concentration is overestimated, and K comes out high. The error does not cancel because the
+    mixtures are not in excess.
+- id: q3
+  question: >-
+    K from five mixtures reads 118, 131, 142, 160 and 178 as the thiocyanate concentration rises. What is
+    the best conclusion?
+  options:
+    - Report the mean, 146, with its standard deviation as the uncertainty.
+    - The 1:1 model fails at high SCN-, probably because a second complex forms.
+    - The last two mixtures were read too late, so discard them and average the rest.
+    - The calibration slope is wrong, which makes K rise linearly with every reading.
+  correct: 1
+  explanation: >-
+    A steady trend is not random scatter: the model is missing something. Fe(SCN)2+ forms at high thiocyanate
+    and also absorbs, so the 1:1 analysis attributes too much colour to FeSCN2+. A wrong slope would shift all
+    K values, not create a steady rise.
+- id: q4
+  question: >-
+    A Job plot at a fixed total concentration has its absorbance maximum at an iron mole fraction of 0.33.
+    What does it suggest?
+  options:
+    - The complex is Fe2SCN, with two iron atoms per thiocyanate.
+    - The complex is 1:1, and the shift comes from hydrolysis of Fe3+.
+    - The total concentration was too low for the method to work.
+    - The main complex has two thiocyanates per iron, Fe(SCN)2+.
+  correct: 3
+  explanation: >-
+    The maximum falls at the mole fraction of the formula: x(Fe) = 1/(1 + 2) = 0.33 means one iron per two
+    ligands. A 1:1 complex peaks at 0.5, and Fe2L would peak at 0.67.

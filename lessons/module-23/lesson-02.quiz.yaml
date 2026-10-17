@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    One calorimeter run neutralises 1 M HNO3 with 1 M KOH, another 1 M HCl with 1 M NaOH, same volumes
+    and cup. How do the two enthalpies of neutralisation compare, and why?
+  options:
+    - Nitric acid gives more heat, because nitrate ions release energy when hydrated.
+    - They are the same, because the only reaction in both is H+ + OH- giving water.
+    - Hydrochloric acid gives more heat, because chloride is the smaller spectator ion.
+    - They differ by the enthalpies of solution of KNO3 and NaCl formed in the cup.
+  correct: 1
+  explanation: >-
+    Strong acids and bases are fully ionised, so the metal and anion are spectators that stay hydrated
+    before and after. The net reaction is H+ + OH- giving H2O in both cases, about -55.8 kJ/mol.
+- id: q2
+  question: >-
+    You dissolve 10 g of a white magnesium sulfate powder and the cup warms by 8 K, while a friend's run
+    with the same mass cools by 1 K. What is the most likely explanation?
+  options:
+    - Your thermometer was not calibrated, so one of the two readings has the wrong sign.
+    - Your water was colder, and dissolving is exothermic only below room temperature.
+    - Your friend used too little water, so the salt did not fully dissolve.
+    - Your powder was anhydrous MgSO4, while your friend used the heptahydrate (Epsom salt).
+  correct: 3
+  explanation: >-
+    Anhydrous MgSO4 releases a large hydration enthalpy (about -91 kJ/mol), while the heptahydrate's ions are
+    already hydrated and it dissolves endothermically (about +12 to +16 kJ/mol). Always check which form the label names.
+- id: q3
+  question: >-
+    In the citric acid and baking soda run the cup loses less mass than the full CO2 calculation predicts.
+    How does this affect the measured enthalpy per mole of NaHCO3, and how do you fix it?
+  options:
+    - The measured value is too small, because dissolved CO2 released heat; correct it with the mass loss.
+    - The measured value is too large, because dissolved CO2 absorbed heat; correct it with the mass loss.
+    - It has no effect, because the CO2 is formed whether it leaves the solution or not.
+    - The measured value is too small, because the reaction did not finish; add more citric acid and repeat.
+  correct: 0
+  explanation: >-
+    Dissolving CO2 is exothermic (about -20 kJ/mol), so the CO2 that stayed behind partly warmed the cup and
+    made the reaction look less endothermic. The mass loss gives the fraction that escaped, and the correction
+    adds back (1 - f) times 19.9 kJ/mol.
+- id: q4
+  question: >-
+    Table salt dissolving cools 100 g of water by 0.78 K, read on a 0.1 C thermometer. What is the best
+    way to cut the relative uncertainty of its enthalpy of solution?
+  options:
+    - Use 200 g of water so the salt dissolves faster and the curve is cleaner.
+    - Read the lowest temperature instead of extrapolating, which removes the fit uncertainty.
+    - Use twice the mass of salt in the same water, so the temperature change doubles.
+    - Leave out the cup heat capacity, which is uncertain by about 20 %.
+  correct: 2
+  explanation: >-
+    The main error is the display step relative to a small change. Doubling the salt doubles Delta T while the
+    reading error stays the same. More water halves Delta T, and dropping the cup constant adds a bias.

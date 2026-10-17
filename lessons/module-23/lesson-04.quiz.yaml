@@ -1,0 +1,55 @@
+- id: q1
+  question: >-
+    You add 2 drops of blue food colouring to 200 mL of water containing 2 mL of household bleach. Why
+    does the colour fade as a single exponential even though the reaction involves two reactants?
+  options:
+    - Hypochlorite is a catalyst here, so its concentration does not enter the rate law.
+    - Hypochlorite is in large excess, so its concentration hardly changes during the run.
+    - Every bleaching reaction is first order, because only the dye molecule breaks apart.
+    - The phone measures only the dye, so the hypochlorite term cancels out of the data.
+  correct: 1
+  explanation: >-
+    The bleach gives hundreds of times more hypochlorite than dye, so [OCl-] stays constant and the rate
+    is k' times [dye] with k' = k[OCl-]^n. That is the isolation method; with too little bleach the decay
+    would no longer be a single exponential.
+- id: q2
+  question: >-
+    Run A (2 mL bleach) gives k' = 2.4e-3 per second and run B (4 mL bleach, same temperature) gives
+    k' = 4.9e-3 per second. What is the order in hypochlorite and the half-life of run B?
+  options:
+    - Order 2, half-life about 2.4 minutes.
+    - Order 0.5, half-life about 3.4 minutes.
+    - Order 1, half-life about 4.8 minutes.
+    - Order 1, half-life about 2.4 minutes.
+  correct: 3
+  explanation: >-
+    n = ln(4.9/2.4)/ln 2 = 1.03, so first order in hypochlorite. Half-life = ln 2 / k' = 0.693/4.9e-3 =
+    141 s, about 2.4 minutes. 4.8 minutes is the half-life of run A.
+- id: q3
+  question: >-
+    A learner's ln(A) against time plot is straight for five minutes and then flattens out, and the
+    fitted k' looks too small. What is the most likely fix?
+  options:
+    - Fit A = A0 exp(-k't) + A_inf, because a small residual absorbance flattens the tail.
+    - Switch to a second-order plot of 1/A against time, because the curve is not straight.
+    - Use the green channel instead, because red saturates when the dye is pale.
+    - Add more dye halfway through to keep the absorbance in the linear range.
+  correct: 0
+  explanation: >-
+    Reflections and a faintly coloured product leave an offset that the cup never loses. Subtracting it
+    (or fitting it) restores a straight ln-plot and the correct k'. The red channel carries the signal for
+    a blue dye, and a second-order plot does not describe an isolated reaction.
+- id: q4
+  question: >-
+    The fading is slow, and someone suggests adding a splash of vinegar to the bleach, since acid makes
+    hypochlorite more reactive. What is the right response?
+  options:
+    - Add only a few drops of vinegar, so the pH changes slowly and safely.
+    - Use lemon juice instead, because it is a weaker acid than vinegar.
+    - Never add any acid; bleach with acid releases chlorine gas. Use more bleach or warmer water.
+    - Add the vinegar to the dye first and the bleach afterwards, so they never meet undiluted.
+  correct: 2
+  explanation: >-
+    Any acid (vinegar, lemon, citric acid, descalers) with bleach releases chlorine gas, whatever the
+    order of mixing. To speed the reaction up, use a little more bleach (staying under 10 mL) or water at
+    about 30 C, in moving air.
