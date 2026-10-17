@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    At 298 K the vibrational partition function of HCl is 1.0000009 and that of I2 is 1.56. What does
+    this tell you?
+  options:
+    - HCl vibrates faster, so it has more vibrational energy than I2 at the same temperature.
+    - Both molecules have about one vibrational state, because q is always close to 1 for vibrations.
+    - The values are not comparable, because q depends on the arbitrary zero of energy.
+    - HCl can reach essentially only v = 0, while I2 reaches roughly one and a half states' worth.
+  correct: 3
+  explanation: >-
+    With energies measured from v = 0, q counts thermally accessible states. HCl's 2885 cm-1 gap is 14 kT,
+    so only v = 0 counts; I2's 213 cm-1 gap is about kT, so excited levels add 0.56 to q.
+- id: q2
+  question: >-
+    The NIST-JANAF table shows the heat capacity of Cl(g) rising from 20.79 to 22.78 J/(mol K) near 600 K
+    and then falling again towards 20.79. What is the best explanation?
+  options:
+    - Cl atoms start to pair up into Cl2 around 600 K, which adds rotational and vibrational heat capacity.
+    - The excited 2P1/2 level fills up to its high-temperature limit, so it stops absorbing extra heat.
+    - Translational heat capacity rises with temperature until equipartition is reached.
+    - The table switches between two fitted temperature ranges, which creates an artificial bump.
+  correct: 1
+  explanation: >-
+    A two-level system stores heat only while its upper population is still rising. Once it nears its
+    limit (1/3 for Cl), Cv falls back to zero: the Schottky anomaly. The two-level model reproduces the
+    JANAF values exactly.
+- id: q3
+  question: >-
+    A student computes the entropy of one mole of argon gas using Q = q^N instead of Q = q^N / N!.
+    What goes wrong?
+  options:
+    - The entropy comes out too large and not extensive, because identical atoms are counted as distinguishable.
+    - The internal energy comes out too large, because N! appears in U = kT^2 d ln Q / dT.
+    - Nothing, because N! is a constant and cancels in all thermodynamic functions.
+    - The entropy comes out too small, because dividing by N! is what adds the mixing entropy.
+  correct: 0
+  explanation: >-
+    Swapping two identical gas atoms gives the same microstate, so q^N overcounts by N!. The N! does not
+    depend on T, so U and Cv are unaffected, but S = U/T + k ln Q is too large by k ln N!.
+- id: q4
+  question: >-
+    The harmonic-oscillator model gives Cp(N2) = 32.61 J/(mol K) at 1000 K; NIST gives 32.69, and the gap
+    grows to 0.26 at 2000 K. What is the most likely reason?
+  options:
+    - The NIST Shomate fit is inaccurate above 1000 K, so the harmonic model is the better value.
+    - N2 begins to dissociate at 1000 K, which adds a reaction heat capacity.
+    - Real vibrational levels get closer together at high v (anharmonicity), so more of them are reached.
+    - Rotational heat capacity of N2 is still rising towards R at 1000 K.
+  correct: 2
+  explanation: >-
+    The harmonic ladder spaces all levels by 2330 cm-1; real levels converge, so at high T more of them are
+    populated and Cv is slightly larger. Rotation is fully classical (R) far below 1000 K, and N2 barely
+    dissociates below 4000 K.

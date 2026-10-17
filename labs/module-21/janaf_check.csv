@@ -1,0 +1,27 @@
+# NIST-JANAF Thermochemical Tables (Chase 1998), online edition https://janaf.nist.gov/, retrieved 2026-10-17.
+# I(g): table I-001; I2(g): table I-027; Cl(g): table Cl-001. Standard pressure 1 bar.
+# Cp and S in J/(mol K); logKf = log10 of the formation constant. For I(g) above 457.67 K the reference
+# state is I2(g), so K(I2 = 2 I) = (10^logKf)^2. "nan" = not used here.
+species,T_K,Cp,S,logKf
+I(g),298.15,20.786,180.786,-12.294
+I(g),500,20.786,191.533,-5.245
+I(g),800,20.787,201.302,-2.258
+I(g),1000,20.795,205.942,-1.256
+I(g),1200,20.824,209.735,-0.584
+I(g),1500,20.936,214.392,0.090
+I2(g),298.15,36.887,260.685,-3.386
+I2(g),500,37.464,279.920,0
+I2(g),800,37.847,297.618,0
+I2(g),1000,38.081,306.087,0
+I2(g),1200,38.431,313.058,0
+I2(g),1500,39.507,321.734,0
+Cl(g),100,20.788,nan,nan
+Cl(g),200,21.079,nan,nan
+Cl(g),298.15,21.838,165.189,nan
+Cl(g),400,22.467,nan,nan
+Cl(g),500,22.744,nan,nan
+Cl(g),600,22.781,nan,nan
+Cl(g),800,22.549,nan,nan
+Cl(g),1000,22.233,nan,nan
+Cl(g),1500,21.652,nan,nan
+Cl(g),2000,21.341,nan,nan

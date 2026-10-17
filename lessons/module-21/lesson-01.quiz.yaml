@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    Two blocks of the same metal, one with 2000 and one with 1000 atoms, touch and share a fixed total
+    energy. At equilibrium, which statement follows from counting microstates?
+  options:
+    - Each block holds half of the energy, because equal sharing is the most probable split.
+    - The split makes d ln W / dU equal in both, so the larger block gets two thirds.
+    - The energy keeps moving to the larger block until the smaller block is empty.
+    - Any split is equally likely, because every microstate has the same probability.
+  correct: 1
+  explanation: >-
+    The most probable split maximises W_A W_B, which means equal d ln W / dU, that is equal temperature.
+    For identical oscillators that is equal energy per oscillator, so the larger block gets 2/3.
+    Equal probability applies to microstates, not to splits, which contain very different numbers of them.
+- id: q2
+  question: >-
+    I2 has its v = 1 level 213 cm-1 above v = 0, and kT/hc = 207 cm-1 at 298 K. A student says that at
+    room temperature practically all I2 molecules are in v = 0. What is the best reply?
+  options:
+    - Correct, because vibrational levels are only populated above about 1000 K.
+    - Wrong, because v = 1 has a larger degeneracy than v = 0, so it is the most populated level.
+    - Correct, because the Boltzmann factor for a gap bigger than kT is negligible.
+    - Wrong, because exp(-213/207) is about 0.36, so roughly a third of the molecules are excited.
+  correct: 3
+  explanation: >-
+    N1/N0 = exp(-213.27 x 1.4388 / 298.15) = 0.357. A gap close to kT gives a large excited population.
+    Vibrational levels of a diatomic all have g = 1, so degeneracy does not help here.
+- id: q3
+  question: >-
+    A chlorine atom has a 2P3/2 ground level (g = 4) and a 2P1/2 level (g = 2) 882 cm-1 higher. What
+    fraction of Cl atoms is in the upper level in the limit of very high temperature?
+  options:
+    - One third, because the Boltzmann factor tends to 1 and the upper level has 2 of the 6 states.
+    - One half, because at infinite temperature all levels are equally populated.
+    - Two thirds, because the upper level is higher in energy and so is favoured when hot.
+    - Zero, because 882 cm-1 is too large a gap to populate at any temperature.
+  correct: 0
+  explanation: >-
+    f = 2 exp(-x) / (4 + 2 exp(-x)); as x goes to 0 this tends to 2/6. States, not levels, become
+    equally populated at high temperature, so degeneracy sets the limit.
+- id: q4
+  question: >-
+    Which description of temperature matches the statistical definition 1/T = (dS/dU) at constant V and N?
+  options:
+    - Temperature is the average kinetic energy per molecule, so it can be defined for one molecule.
+    - Temperature is the total energy divided by the number of microstates.
+    - Temperature tells how much the entropy grows per unit of energy added; low T means a large gain.
+    - Temperature is the energy of the most populated level divided by k.
+  correct: 2
+  explanation: >-
+    A cold system gains much entropy per joule, a hot one little, so energy flowing from hot to cold
+    raises total W. The definition needs a system with many states; one molecule has an energy, not a T.

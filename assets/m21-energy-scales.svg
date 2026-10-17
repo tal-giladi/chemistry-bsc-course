@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>Level spacings of N2 compared with kT at 298 K on a logarithmic wavenumber scale</title>
+  <desc>A log scale from 0.01 to 100000 cm-1. Translation spacing is about 1e-15 cm-1 for a 1 cm box, far below the scale. Rotation (2B about 4 cm-1) lies below kT/hc = 207 cm-1, so many rotational levels are populated. Vibration (2330 cm-1) and the first electronic excitation (about 50000 cm-1) lie far above kT, so only the lowest level is populated.</desc>
+  <rect width="720" height="300" fill="#ffffff"/>
+  <!-- axis: x = 60 + (log10(E) + 2) * 85 ; log10 from -2 to 5 -> 60..655 -->
+  <line x1="60" y1="230" x2="655" y2="230" stroke="#333" stroke-width="1.5"/>
+  <g fill="#333" text-anchor="middle">
+    <line x1="60" y1="230" x2="60" y2="236" stroke="#333"/><text x="60" y="252">0.01</text>
+    <line x1="145" y1="230" x2="145" y2="236" stroke="#333"/><text x="145" y="252">0.1</text>
+    <line x1="230" y1="230" x2="230" y2="236" stroke="#333"/><text x="230" y="252">1</text>
+    <line x1="315" y1="230" x2="315" y2="236" stroke="#333"/><text x="315" y="252">10</text>
+    <line x1="400" y1="230" x2="400" y2="236" stroke="#333"/><text x="400" y="252">100</text>
+    <line x1="485" y1="230" x2="485" y2="236" stroke="#333"/><text x="485" y="252">1000</text>
+    <line x1="570" y1="230" x2="570" y2="236" stroke="#333"/><text x="570" y="252">10⁴</text>
+    <line x1="655" y1="230" x2="655" y2="236" stroke="#333"/><text x="655" y="252">10⁵</text>
+    <text x="360" y="280">first level spacing of N₂, cm⁻¹ (logarithmic scale)</text>
+  </g>
+  <!-- kT at 298 K: 207 cm-1 -> log10 = 2.316 -> x = 60 + 4.316*85 = 426.9 -->
+  <line x1="427" y1="40" x2="427" y2="230" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="433" y="52" fill="#c0392b">kT/hc = 207 cm⁻¹ at 298 K</text>
+  <!-- translation: off scale to the left -->
+  <path d="M 75 110 L 60 118 L 75 126 Z" fill="#2471a3"/>
+  <text x="82" y="122" fill="#2471a3">translation ≈ 10⁻¹⁵ cm⁻¹ in a 1 cm box (off scale)</text>
+  <!-- rotation 2B = 3.98 -> log 0.600 -> x = 281 -->
+  <rect x="276" y="150" width="10" height="80" fill="#27ae60"/>
+  <text x="281" y="142" text-anchor="middle" fill="#27ae60">rotation, 2B ≈ 4</text>
+  <!-- vibration 2330 -> log 3.367 -> x = 516 -->
+  <rect x="511" y="150" width="10" height="80" fill="#8e44ad"/>
+  <text x="516" y="142" text-anchor="middle" fill="#8e44ad">vibration, 2330</text>
+  <!-- electronic ~ 50000 -> log 4.70 -> x = 629 -->
+  <rect x="624" y="150" width="10" height="80" fill="#d35400"/>
+  <text x="629" y="96" text-anchor="middle" fill="#d35400">electronic</text>
+  <text x="629" y="112" text-anchor="middle" fill="#d35400">≈ 50 000</text>
+  <text x="200" y="200" text-anchor="middle" fill="#555">left of the line: many levels populated</text>
+  <text x="200" y="216" text-anchor="middle" fill="#555">(classical limit, high-T formulas work)</text>
+  <text x="540" y="70" text-anchor="middle" fill="#555">right of the line: only the lowest level</text>
+</svg>

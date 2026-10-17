@@ -1,0 +1,117 @@
+- id: q1
+  question: >-
+    An astronomer sees CO absorption lines from J = 0, 1 and 2 only, in a cold cloud. CO has B = 1.92 cm-1.
+    What is the most reasonable estimate of the gas temperature?
+  options:
+    - About 300 K, because rotational levels are always populated up to J of about 7.
+    - About 0.1 K, because only J = 0 would be populated above that.
+    - About 1000 K, because high J levels are depopulated by fast collisions.
+    - About 10 K, because then kT/hc is about 7 cm-1 and only the lowest few J are populated.
+  correct: 3
+  explanation: >-
+    Level J lies at B J(J+1): 3.8, 11.5 and 23 cm-1 for J = 1, 2, 3. At 10 K, kT/hc = 6.9 cm-1, so J = 3 and
+    above are weak. At 300 K the populations peak near J = 7.
+- id: q2
+  question: >-
+    Two copper blocks of different size touch inside an insulated box. Why does heat flow from the hotter
+    to the colder one, in statistical terms?
+  options:
+    - The hotter block has more energy, and energy spreads to equalise the amount per block.
+    - The colder block gains more entropy per joule than the hotter one loses, so total W rises.
+    - The hotter block's atoms move faster and push energy across the boundary.
+    - Microstates with equal temperatures have lower energy than the starting state.
+  correct: 1
+  explanation: >-
+    1/T = dS/dU. Moving dU from hot to cold changes the total entropy by dU (1/T_cold - 1/T_hot) > 0. The
+    final state has equal T, not equal energy, and the total energy is unchanged.
+- id: q3
+  question: >-
+    A research group reports that the heat capacity of a gas of free radicals shows a bump near 70 K that
+    disappears at higher temperature. Which feature of the radical most likely causes it?
+  options:
+    - A pair of electronic levels about 120 cm-1 apart, giving a Schottky anomaly.
+    - A soft vibration near 120 cm-1, whose heat capacity rises and then falls again.
+    - The onset of translational motion of the radicals at 70 K.
+    - Condensation of the radicals into a liquid at 70 K.
+  correct: 0
+  explanation: >-
+    A two-level system stores heat only while its upper level fills; the peak is near kT = 0.42 x gap, so
+    120 cm-1 gives about 70 K (NO is the classic case). A vibration's heat capacity rises to R and stays.
+- id: q4
+  question: >-
+    A computer program reports S standard of N2 at 298 K as 197.4 J/(mol K); the CODATA value is 191.6.
+    The translational term is 150.4. What is the most likely bug?
+  options:
+    - The vibrational partition function was evaluated with omega_e instead of the fundamental.
+    - The pressure was taken as 1 atm instead of 1 bar.
+    - The rotational term omits the symmetry number, adding R ln 2 = 5.8 J/(mol K).
+    - The electronic degeneracy of N2 was set to 3 instead of 1.
+  correct: 2
+  explanation: >-
+    The excess is 5.8 = R ln 2. Using omega_e changes S_vib by far less than 0.01, 1 atm instead of 1 bar
+    lowers S by 0.11, and g = 3 would add 9.1.
+- id: q5
+  question: >-
+    Bromine vapour (theta_vib = 465 K) and chlorine vapour (theta_vib = 805 K) are compared at 298 K. Which
+    statement about their vibrational heat capacity is right?
+  options:
+    - Both are zero, because vibrations only contribute above their theta_vib.
+    - Both equal R, because every vibration contributes R by equipartition at 298 K.
+    - Cl2 contributes more, because a stiffer bond stores more energy per quantum.
+    - Br2 contributes more, because its smaller theta_vib / T is closer to the classical limit.
+  correct: 3
+  explanation: >-
+    The Einstein function rises from 0 to R as T / theta_vib grows. At 298 K, x is 1.56 for Br2 and 2.70 for
+    Cl2, giving about 0.82 R and 0.56 R. Neither is zero or fully classical.
+- id: q6
+  question: >-
+    A student uses Q = q^N for one mole of argon and gets S of about 600 J/(mol K) instead of 154.8. What is
+    the right fix and why?
+  options:
+    - Use Q = q^N / N!, because identical gas atoms cannot be told apart.
+    - Use Q = q, because describing one atom is enough for an ideal gas.
+    - Divide q by the symmetry number of argon, which is about 4.
+    - Add the electronic degeneracy of argon, which lowers the entropy.
+  correct: 0
+  explanation: >-
+    q^N counts each microstate N! times. The error is k ln N! = R(ln N_A - 1), about 447 J/(mol K), the size
+    of the gap. Atoms have no rotational symmetry number, and degeneracy would raise S, not lower it.
+- id: q7
+  question: >-
+    For the dissociation Br2 = 2 Br you must choose the energy in the Boltzmann factor exp(-Delta E0 / RT),
+    with all partition functions counted from v = 0. Which value is correct?
+  options:
+    - De, the depth of the potential well, because it is the true bond energy.
+    - D0, the energy from the v = 0 level to the separated atoms.
+    - The standard reaction enthalpy at 298 K, because K is usually tabulated there.
+    - The vibrational wavenumber times the number of bound levels.
+  correct: 1
+  explanation: >-
+    Every partition function starts at its species' lowest level, so the energy step between those levels
+    is D0 = De - zero-point energy. Using Delta H(298) double counts thermal energy already inside the q's.
+- id: q8
+  question: >-
+    You compute K for X2 = 2 X at 1200 K and find it 2 % above the JANAF value. Your D0 comes from a paper
+    quoting plus or minus 0.5 %, and D0/RT is about 15. How should you report the result?
+  options:
+    - As a 2 % disagreement that shows the partition-function model fails above 1000 K.
+    - As agreement, but only because 2 % is below any experimental error in K.
+    - As agreement within uncertainty, since 0.5 % in D0 alone is about 8 % in K here.
+    - As a 2 % error that comes from neglecting translational motion of the atoms.
+  correct: 2
+  explanation: >-
+    K depends on exp(-D0/RT); 0.5 % of D0/RT = 15 is 0.075 in ln K, about 8 % in K. That uncertainty is
+    larger than the 2 % gap, so the model and table agree.
+- id: q9
+  question: >-
+    For H2 + I2 = 2 HI, the sum of stoichiometric numbers is zero. A student says that this makes K
+    independent of the molecular masses. Is that right?
+  options:
+    - Yes, because the translational partition functions cancel completely when the sum of nu is zero.
+    - Yes, because masses only enter through the N! factor, which cancels between the two sides.
+    - No, because K then depends on the total pressure, which depends on the masses.
+    - No, the kT/p° and N_A factors cancel, but the mass ratio to the power 3/2 remains.
+  correct: 3
+  explanation: >-
+    q_trans is proportional to m^(3/2). The pressure and N_A factors cancel when the sum of nu is zero, but
+    (m_HI^2 / m_H2 m_I2)^(3/2) does not. Rotational constants, vibrations and D0 values also enter.

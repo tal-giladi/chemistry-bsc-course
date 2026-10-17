@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    N2 and CO have almost the same mass and rotational constant, yet S standard of CO is 6.05 J/(mol K)
+    higher at 298 K. Where does most of the difference come from?
+  options:
+    - CO has a dipole moment, which adds electronic entropy.
+    - N2 has a symmetry number of 2 and CO of 1, which halves q_rot of N2 and costs it R ln 2.
+    - CO vibrates at a lower wavenumber, so its vibrational entropy is about 6 J/(mol K) larger.
+    - CO is slightly heavier, which raises its translational entropy by about 6 J/(mol K).
+  correct: 1
+  explanation: >-
+    R ln 2 = 5.76 J/(mol K); CO's slightly smaller B adds 0.29. Vibrational entropy is near zero for both
+    at 298 K, and the masses differ by 0.01 %, so translation changes by less than 0.01 J/(mol K).
+- id: q2
+  question: >-
+    A student calculates S standard of O2 at 298 K from its mass, B0 and vibrational wavenumber and gets
+    196.0 J/(mol K). The NIST value is 205.15. What did the student most likely forget?
+  options:
+    - The symmetry number, which would add R ln 2 = 5.8 J/(mol K).
+    - The vibrational entropy, which is large for O2 because of its weak bond.
+    - The low-lying a 1Delta_g state at 7918 cm-1, which is well populated at 298 K.
+    - The triplet degeneracy of the ground state, which adds R ln 3 = 9.1 J/(mol K).
+  correct: 3
+  explanation: >-
+    O2's X 3Sigma_g- ground state has g = 3, so q_el = 3 and S_el = R ln 3 = 9.13 J/(mol K), exactly the gap.
+    Forgetting sigma would make the result too high, not too low. The 7918 cm-1 state is 38 kT up and empty.
+- id: q3
+  question: >-
+    For which case is the high-temperature formula q_rot = T / (sigma theta_rot) least reliable?
+  options:
+    - H2 at 100 K, with theta_rot = 85 K.
+    - I2 at 298 K, with theta_rot = 0.054 K.
+    - HCl at 1000 K, with theta_rot = 15 K.
+    - N2 at 298 K, with theta_rot = 2.9 K.
+  correct: 0
+  explanation: >-
+    The formula needs T much larger than theta_rot; the first correction is theta_rot / 3T, about 28 % for
+    H2 at 100 K. At these temperatures H2 also needs nuclear-spin statistics. The other cases are within 2 %.
+- id: q4
+  question: >-
+    The thermal wavelength of N2 at 298 K is 19 pm, while molecules at 1 bar are about 3450 pm apart.
+    What does this comparison justify?
+  options:
+    - Treating N2 as a quantum gas that needs Bose-Einstein statistics at room temperature.
+    - Ignoring translational entropy, because the molecules are far apart.
+    - Using the classical integral for q_trans and Q = q^N / N!, because there are vastly more states than molecules.
+    - Using the thermal wavelength as the bond length in the rotational partition function.
+  correct: 2
+  explanation: >-
+    N Lambda^3 / V is about 1e-7, so each molecule has millions of translational states to itself; then the
+    simple N! correction is exact enough and the sum over states becomes an integral. Translation is the
+    largest term in S, not a negligible one.
