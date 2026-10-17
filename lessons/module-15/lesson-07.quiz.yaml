@@ -1,0 +1,66 @@
+- id: q1
+  question: >-
+    You need 2-methylpropan-1-ol, (CH3)2CHCH2OH, from 2-methylpropene. Which reagents give it as the
+    major product?
+  options:
+    - Water with sulfuric acid, because hydration puts OH on the carbon with more hydrogens.
+    - HBr, then sodium hydroxide, because the bromide is substituted by hydroxide at the same carbon.
+    - BH3 in THF, then H2O2 and NaOH, because boron adds to the less substituted carbon.
+    - Ozone, then zinc, because ozonolysis adds OH to the terminal CH2 of the alkene.
+  correct: 2
+  explanation: >-
+    Hydroboration-oxidation is anti-Markovnikov: OH ends on the less substituted carbon. Acid
+    hydration and HBr both go through the tertiary cation and put the group on the central carbon.
+- id: q2
+  question: >-
+    Cyclohexene reacts with Br2. A student draws cis-1,2-dibromocyclohexane. Why is that wrong?
+  options:
+    - Bromine adds only to one carbon, so the product is bromocyclohexane, not a dibromide.
+    - Br- opens the bromonium ion from the back, so the two Br atoms end up trans (anti addition).
+    - The intermediate is a free carbocation, so the product must be racemic cis and trans.
+    - Cyclohexene rearranges to methylcyclopentene first, so a different ring is formed.
+  correct: 1
+  explanation: >-
+    The pi bond attacks Br2 to give a cyclic bromonium ion. Bromide opens it by backside attack,
+    as in SN2, placing the two bromines on opposite faces: racemic trans-1,2-dibromocyclohexane.
+- id: q3
+  question: >-
+    A plan makes hex-2-yne by treating propyne with NaOH and then 1-bromopropane. Why does it fail,
+    and what is the fix?
+  options:
+    - 1-Bromopropane is too hindered for SN2; use 2-bromopropane, which reacts faster.
+    - Propyne is not acidic at all; add HBr first to make it reactive.
+    - The product would be an alkene, because hydroxide reduces the triple bond.
+    - Hydroxide is too weak a base (water 15.7 versus alkyne 25); use sodium amide instead.
+  correct: 3
+  explanation: >-
+    Deprotonation favours the weaker acid: water is far more acidic than propyne, so almost no
+    acetylide forms with hydroxide. Amide (NH3 pKa 35) deprotonates it completely; the acetylide then
+    does SN2 on the primary bromide. A secondary bromide would mostly eliminate.
+- id: q4
+  question: >-
+    Hydrogenation of 1-butene releases 126.5 kJ/mol and of (E)-2-butene 116.3 kJ/mol, both giving
+    butane. What does this tell you?
+  options:
+    - (E)-2-Butene is more stable by about 10 kJ/mol, because both reach the same product.
+    - 1-Butene is more stable, because it releases more energy when it reacts.
+    - The two values cannot be compared, because the alkenes have different numbers of hydrogens.
+    - (E)-2-Butene reacts faster, because less heat means a lower activation energy.
+  correct: 0
+  explanation: >-
+    Both isomers give the same butane, so the one that releases less heat started lower in
+    enthalpy. The more substituted, trans alkene is more stable, as Zaitsev's rule expects.
+    Enthalpy of reaction says nothing directly about rate.
+- id: q5
+  question: >-
+    The workbook checker says "right constitution, wrong or missing stereochemistry" for your
+    answer to 1-methylcyclohexene with BH3 then H2O2/NaOH. What should you recheck first?
+  options:
+    - Whether boron went to the more substituted carbon, since that changes only stereochemistry.
+    - Whether H and OH were added to the same face, which makes OH trans to the methyl group.
+    - Whether you included the boron atom, since the product of hydroboration keeps it.
+    - Whether a hydride shift happened, since rearrangements change only R and S labels.
+  correct: 1
+  explanation: >-
+    The atoms are right, so the regiochemistry is right. Hydroboration is syn: H on the methyl
+    carbon and B (then OH) on the neighbour, both from one face, so OH and CH3 are trans.

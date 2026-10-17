@@ -1,0 +1,13 @@
+# Module 15 mechanism workbook (lesson 15.7). Write the major organic product of each reaction as SMILES in the last column.
+# Do not use commas inside the reaction text. Leave a cell empty if you have not answered yet.
+id,reaction,smiles
+1,propene + HBr,
+2,2-methylpropene + H2O with H2SO4 catalyst,
+3,cyclohexene + Br2 in CH2Cl2,
+4,1-methylcyclohexene + BH3 in THF then H2O2 and NaOH,
+5,2-butyne + H2 with Lindlar catalyst,
+6,2-butyne + Na in liquid NH3,
+7,1-butyne + NaNH2 then CH3CH2Br,
+8,(R)-2-bromobutane + NaN3 in DMF,
+9,2-bromo-2-methylbutane + potassium tert-butoxide,
+10,2-methylcyclohexanol + H2SO4 with heat,

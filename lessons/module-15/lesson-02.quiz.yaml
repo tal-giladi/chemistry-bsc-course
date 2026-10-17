@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    Butane's gauche form is 3.8 kJ/mol above anti. A student computes exp(-3.8/2.48) = 0.22 and
+    reports 82 % anti at 298 K. What did the student miss?
+  options:
+    - The eclipsed forms, which hold a large share of the molecules at room temperature.
+    - The units, because 3.8 kJ/mol must be converted to J/mol only in the numerator.
+    - That there are two gauche forms, so the anti fraction is 1/(1 + 2 x 0.22), about 70 %.
+    - That gauche is lower than anti, so the ratio should be inverted to give 18 % anti.
+  correct: 2
+  explanation: >-
+    Gauche occurs at 60 and 300 degrees, so the degeneracy factor is 2. Eclipsed forms are energy
+    maxima, not populated conformations.
+- id: q2
+  question: >-
+    A medicinal chemist needs a ring substituent equatorial at least 99 % of the time at 310 K.
+    Methyl costs 7.6 kJ/mol when axial and tert-butyl 22.8 kJ/mol. Which statement is right?
+  options:
+    - Methyl is not enough, because 99 % needs about 11.8 kJ/mol; tert-butyl easily meets it.
+    - Methyl is enough, because any energy gap above RT gives more than 99 % equatorial.
+    - Neither works, because ring flips mix axial and equatorial forms equally over time.
+    - Both are enough, because 99 % needs only about 4.6 kJ/mol at body temperature.
+  correct: 0
+  explanation: >-
+    Delta E = RT ln 99 = 2.58 x 4.60 = 11.8 kJ/mol. Methyl gives about 95 %; tert-butyl gives
+    essentially 100 %. Ring flips set up an equilibrium, they do not equalise the populations.
+- id: q3
+  question: >-
+    In cis-1-tert-butyl-4-methylcyclohexane, which chair dominates?
+  options:
+    - The chair with both groups equatorial, because cis on carbons 1 and 4 allows it.
+    - Neither, because the two chairs are equal in energy when the groups are cis.
+    - The chair with tert-butyl axial, because the larger group prefers more space above the ring.
+    - The chair with tert-butyl equatorial and methyl axial, because that costs 15 kJ/mol less.
+  correct: 3
+  explanation: >-
+    Cis-1,4 forces one group axial in each chair. Putting tert-butyl axial costs 22.8 kJ/mol against
+    7.6 for methyl, so the tert-butyl-equatorial chair wins by about 15 kJ/mol (99.8 %).
+- id: q4
+  question: >-
+    Your MMFF94 calculation gives 5.7 kJ/mol for axial minus equatorial methylcyclohexane; the
+    measured value is 7.6 kJ/mol. What is the sound conclusion?
+  options:
+    - The measurement is wrong, because force fields are fitted to many molecules at once.
+    - The force field underestimates this gap by about 2 kJ/mol; check it before trusting it elsewhere.
+    - The calculation found a twist-boat instead of a chair, which always lowers the gap.
+    - The difference is the zero-point energy, so both numbers are equally correct.
+  correct: 1
+  explanation: >-
+    A force field is a fitted approximation. Here it predicts 91 % instead of 95 % equatorial. The
+    right habit is to compare a calculated number with experiment before using the model to predict.

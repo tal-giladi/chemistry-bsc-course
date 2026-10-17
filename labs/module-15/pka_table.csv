@@ -1,0 +1,21 @@
+# pKa values in water at 25 degC (approximate for the very weak and very strong acids, which cannot be measured in water directly).
+# Sources, accessed 2026-10-17: OpenStax Organic Chemistry (McMurry 2023) 2.8 Table 2.3 (HCl, HNO3, acetic acid, HCN, water, ethanol)
+# and 9.7 (ethyne, ammonia, ethene, methane); PubChem CID 996 (phenol 9.99), CID 180 (acetone 20), CID 222 (ammonia pKb 4.751 -> NH4+ 9.25);
+# OpenStax Chemistry 2e Appendix H (carbonic acid Ka1 4.3e-7 -> 6.37). H3O+ = -1.7 is the textbook convention.
+# Water is listed as 15.7, the convention in organic tables (it treats water as a solute at 55.5 M); see lesson 15.4.
+acid,conjugate_base,pKa
+HCl,Cl-,-7.0
+H3O+,H2O,-1.7
+HNO3,NO3-,-1.3
+acetic acid,acetate,4.76
+carbonic acid,hydrogen carbonate,6.37
+HCN,cyanide,9.31
+ammonium,ammonia,9.25
+phenol,phenoxide,9.99
+water,hydroxide,15.7
+ethanol,ethoxide,16.0
+acetone,acetone enolate,20
+ethyne,acetylide,25
+ammonia,amide,35
+ethene,vinyl anion,44
+methane,methyl anion,60

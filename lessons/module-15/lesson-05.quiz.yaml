@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    Doubling the azide concentration leaves the initial rate of a substitution on a tertiary
+    chloride unchanged. What does that tell you?
+  options:
+    - Azide is too weak a nucleophile to react, so the product must come from the solvent alone.
+    - The reaction is SN2, because tertiary substrates react in one concerted step.
+    - The reaction is SN1: the nucleophile enters after the rate-determining ionisation step.
+    - The azide has already been used up, so its concentration no longer matters.
+  correct: 2
+  explanation: >-
+    Zero order in nucleophile means it is not in the rate-determining step. The substrate ionises
+    to a carbocation first; azide captures it in a later, fast step.
+- id: q2
+  question: >-
+    You need (R)-2-azidobutane of high enantiomeric purity. Which starting material and conditions
+    should you use?
+  options:
+    - (S)-2-bromobutane with sodium azide in DMF, because SN2 inverts the stereocentre.
+    - (R)-2-bromobutane with sodium azide in DMF, because SN2 keeps the configuration.
+    - (S)-2-bromobutane in warm water with azide, because SN1 gives clean inversion.
+    - Racemic 2-bromobutane with excess azide, because the excess selects one enantiomer.
+  correct: 0
+  explanation: >-
+    SN2 with a strong nucleophile in a polar aprotic solvent inverts the carbon. Azide and bromide
+    hold the same priority rank here, so S gives R. SN1 in water would racemise.
+- id: q3
+  question: >-
+    A student warms 2-bromo-3-methylbutane in water and isolates mostly 2-methylbutan-2-ol, not
+    3-methylbutan-2-ol. What is the best explanation?
+  options:
+    - Water attacked the back of C2 by SN2, which moved the OH group to the next carbon.
+    - The starting material was mislabelled, because substitution never changes the carbon skeleton.
+    - The OH group migrated after the reaction, because alcohols equilibrate in hot water.
+    - A secondary carbocation formed and a hydride shift turned it into a tertiary one.
+  correct: 3
+  explanation: >-
+    SN1 conditions give a carbocation at C2. The H on C3 moves with its pair, giving the more
+    stable tertiary cation at C3, which water captures. Rearranged products signal a carbocation.
+- id: q4
+  question: >-
+    Ethanol does not react with sodium bromide, but it does give bromoethane in concentrated HBr.
+    Why?
+  options:
+    - HBr is a stronger nucleophile than bromide, so only HBr can attack the carbon.
+    - Acid protonates the OH, so the leaving group becomes water, a weak base, instead of hydroxide.
+    - Sodium ions block the oxygen of ethanol, so the reaction only works without sodium.
+    - Ethanol must first form a primary carbocation, and that needs strong acid to happen.
+  correct: 1
+  explanation: >-
+    Hydroxide (conjugate acid pKa 15.7) is a poor leaving group. Protonated, the group leaves as
+    H2O (conjugate acid pKa -1.7), and bromide displaces it by SN2 on the primary carbon.

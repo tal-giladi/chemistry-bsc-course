@@ -1,0 +1,8 @@
+# Standard enthalpy of formation of the gas at 298.15 K, from the NIST Chemistry WebBook (SRD 69), accessed 2026-10-17.
+# All four values: Prosen, Maron and Rossini, J. Res. NBS 46 (1951) 106-112, combustion calorimetry.
+# Pages: 1-butene C106989, cis-2-butene C590181, trans-2-butene C624646, 2-methylpropene C115117 (https://webbook.nist.gov/cgi/cbook.cgi?ID=<id>&Mask=1).
+name,smiles,dfH_kJ_mol,uncertainty_kJ_mol
+1-butene,C=CCC,-0.63,0.79
+(Z)-2-butene,C/C=C\C,-7.7,1.3
+(E)-2-butene,C/C=C/C,-10.8,1.0
+2-methylpropene,C=C(C)C,-17.9,1.1

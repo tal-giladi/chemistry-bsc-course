@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 240" width="680" height="240" font-family="Arial, Helvetica, sans-serif" font-size="22">
+<title>Curved arrows for the proton transfer from acetic acid to hydroxide</title>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+</marker>
+</defs>
+<rect width="680" height="240" fill="#ffffff"/>
+<!-- hydroxide -->
+<text x="40" y="130" fill="#111">H–</text>
+<text x="74" y="130" fill="#111">O</text>
+<text x="90" y="112" fill="#111" font-size="16">−</text>
+<circle cx="80" cy="146" r="2.5" fill="#111"/><circle cx="88" cy="146" r="2.5" fill="#111"/>
+<circle cx="100" cy="118" r="2.5" fill="#111"/><circle cx="100" cy="126" r="2.5" fill="#111"/>
+<circle cx="80" cy="102" r="2.5" fill="#111"/><circle cx="88" cy="102" r="2.5" fill="#111"/>
+<!-- acetic acid: H-O-C(=O)-CH3 drawn as H–O–C(=O)CH3 -->
+<text x="180" y="130" fill="#111">H</text>
+<line x1="198" y1="122" x2="226" y2="122" stroke="#111" stroke-width="2"/>
+<text x="230" y="130" fill="#111">O</text>
+<line x1="248" y1="122" x2="276" y2="122" stroke="#111" stroke-width="2"/>
+<text x="279" y="130" fill="#111">C</text>
+<line x1="286" y1="105" x2="286" y2="80" stroke="#111" stroke-width="2"/>
+<line x1="293" y1="105" x2="293" y2="80" stroke="#111" stroke-width="2"/>
+<text x="279" y="74" fill="#111">O</text>
+<line x1="297" y1="122" x2="325" y2="122" stroke="#111" stroke-width="2"/>
+<text x="328" y="130" fill="#111">CH<tspan font-size="15" dy="5">3</tspan></text>
+<!-- arrow 1: O lone pair of hydroxide to H -->
+<path d="M100,112 C120,70 170,70 186,106" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="118" y="62" fill="#c0392b" font-size="15">arrow 1</text>
+<!-- arrow 2: O-H bond to O -->
+<path d="M212,128 C215,170 236,170 239,140" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="196" y="190" fill="#c0392b" font-size="15">arrow 2</text>
+<!-- equilibrium arrow -->
+<line x1="400" y1="118" x2="450" y2="118" stroke="#111" stroke-width="2"/>
+<path d="M444,112 L452,118" stroke="#111" stroke-width="2"/>
+<line x1="400" y1="128" x2="450" y2="128" stroke="#111" stroke-width="2"/>
+<path d="M406,134 L398,128" stroke="#111" stroke-width="2"/>
+<!-- products -->
+<text x="470" y="130" fill="#111">H–O–H</text>
+<text x="560" y="130" fill="#111">+  CH<tspan font-size="15" dy="5">3</tspan><tspan dy="-5">CO</tspan><tspan font-size="15" dy="5">2</tspan><tspan font-size="16" dy="-17">−</tspan></text>
+<text x="40" y="210" fill="#555" font-size="14">Each arrow starts at an electron pair and ends where that pair goes.</text>
+<text x="40" y="226" fill="#555" font-size="14">Arrow 1 makes the new O–H bond; arrow 2 breaks the old O–H bond onto oxygen.</text>
+</svg>

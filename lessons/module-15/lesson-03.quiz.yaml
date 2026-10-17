@@ -1,0 +1,53 @@
+- id: q1
+  question: >-
+    A supplier sells (R)-limonene and writes on the label that it is therefore the (+) enantiomer.
+    How do you judge that statement?
+  options:
+    - Correct, because R compounds always rotate light clockwise.
+    - Wrong, because R compounds always rotate light anticlockwise.
+    - Correct only in ethanol, because the solvent decides which letter applies.
+    - Not supported by the letter, because R or S is a geometry and the sign must be measured.
+  correct: 3
+  explanation: >-
+    CIP labels describe the arrangement in space; the sign of rotation is an experimental property.
+    (R)-carvone is (-), while other R compounds are (+). (R)-limonene does happen to be (+), but
+    that is known from measurement, not from the letter.
+- id: q2
+  question: >-
+    You expect 4 stereoisomers for 2,3-dibromobutane from the 2^n rule, but a chiral column shows
+    only three. Why?
+  options:
+    - One of the four decomposes on the column because C-Br bonds are weak.
+    - The (2R,3S) form has an internal mirror plane, so it is one achiral meso compound.
+    - The two enantiomers co-elute, so the column counts them as one.
+    - Bromine atoms are too heavy to create a stereocentre, so one centre is not real.
+  correct: 1
+  explanation: >-
+    Both stereocentres carry the same set of groups, so (2R,3S) and (2S,3R) are the same molecule,
+    which is its own mirror image. That leaves the (R,R)/(S,S) pair plus one meso form.
+- id: q3
+  question: >-
+    A sample of (S)-carvone with pure [alpha] = +60.0 degrees gives an observed specific rotation of
+    +54.0 degrees. What is its composition?
+  options:
+    - 95 % S and 5 % R, because the enantiomeric excess is 90 %.
+    - 90 % S and 10 % R, because the rotation ratio equals the fraction of S.
+    - 54 % S and 46 % R, because the rotation is read directly as a percentage.
+    - 100 % S, because a racemate would give exactly zero and this is far from zero.
+  correct: 0
+  explanation: >-
+    ee = 54.0/60.0 = 90 %, which is x_S - x_R. With x_S + x_R = 1 this gives 95 % S and 5 % R.
+- id: q4
+  question: >-
+    Two SMILES are C[C@@H](O)CC and CC[C@H](C)O. A colleague says they are enantiomers because one
+    has @@ and the other @. What is the right way to decide?
+  options:
+    - Accept it, since @ and @@ always mean S and R regardless of how the string is written.
+    - Count the carbons, because enantiomers must have the carbons written in reverse order.
+    - Compare canonical SMILES, because @ and @@ depend on the order neighbours are written.
+    - Reject it, since two strings that differ in more than the @ symbol must be different compounds.
+  correct: 2
+  explanation: >-
+    @ and @@ describe the neighbour order in that particular string. Rewriting the atoms changes
+    the symbol without changing the molecule. Canonical SMILES (and the mirror test) settle it; here
+    they are in fact enantiomers.

@@ -1,0 +1,138 @@
+- id: q1
+  question: >-
+    A drug label lists an ingredient whose SMILES contains the fragment CC(=O)Oc1ccccc1. A
+    pharmacist asks whether the drug may degrade in a humid store. What do you answer?
+  options:
+    - No, because the fragment is an ether, and ethers are inert to water.
+    - No, because the benzene ring protects every group attached to it from water.
+    - Yes, because it is an aryl ester, which water slowly hydrolyses to a phenol and acetic acid.
+    - Yes, because it is a ketone, and ketones add water to form unstable alcohols.
+  correct: 2
+  explanation: >-
+    C(=O)-O-C is an ester; here the O is on the ring. Water hydrolyses esters, faster with acid or
+    base. This is how old aspirin turns to salicylic acid and acetic acid.
+- id: q2
+  question: >-
+    A ligand binds its receptor only when a cyclohexane substituent is axial. The axial chair is
+    7.6 kJ/mol above the equatorial one at 298 K (RT = 2.48 kJ/mol). Roughly what fraction of the
+    free ligand is in the binding shape?
+  options:
+    - About 5 %, because the equatorial-to-axial ratio is exp(7.6/2.48), about 21.
+    - About 50 %, because ring flips make both chairs equally populated.
+    - About 33 %, because there are three axial positions on each face of the ring.
+    - Below 0.01 %, because any axial group is too strained to be populated.
+  correct: 0
+  explanation: >-
+    K = exp(7.6/2.48) = 21, so the axial fraction is 1/22, about 5 %. Ring flips set up the
+    equilibrium; they do not equalise it. This is the methylcyclohexane case.
+- id: q3
+  question: >-
+    A synthesis gives 2,3-dibromobutane. A polarimeter reads exactly zero, and a chiral column shows
+    a single peak. Which product do you have?
+  options:
+    - A racemic mixture of (2R,3R) and (2S,3S), because racemates give zero rotation.
+    - The (2R,3R) enantiomer, because a single peak means one enantiomer.
+    - A 1:1 mixture of all four stereoisomers, which cancel each other's rotation.
+    - The meso (2R,3S) compound, which is achiral and gives one peak and no rotation.
+  correct: 3
+  explanation: >-
+    A racemate would show two peaks on a chiral column; a single enantiomer would rotate light. Only
+    the achiral meso form gives one peak and zero rotation. 2,3-Dibromobutane has three
+    stereoisomers, not four.
+- id: q4
+  question: >-
+    You want to make sodium phenoxide from phenol (pKa 9.99). Which base will deprotonate phenol
+    almost completely? (pKa of conjugate acids - carbonic acid 6.37, ammonium 9.25, water 15.7.)
+  options:
+    - Sodium hydrogen carbonate, because any base stronger than water deprotonates phenol.
+    - Sodium hydroxide, because log K = 15.7 - 9.99 = 5.7 for the proton transfer.
+    - Ammonia, because its conjugate acid is weaker than phenol by almost one unit.
+    - Sodium chloride, because chloride is the conjugate base of a strong acid.
+  correct: 1
+  explanation: >-
+    The equilibrium favours the weaker acid. With hydroxide, water (15.7) is the weaker acid, K =
+    10^5.7. Hydrogen carbonate gives K = 10^-3.6; ammonia gives K = 10^-0.7, an incomplete mixture.
+- id: q5
+  question: >-
+    A kinetics student runs (S)-2-bromooctane with sodium iodide in acetone. The rate doubles when
+    [I-] doubles. What stereochemistry does the product, 2-iodooctane, have at first?
+  options:
+    - Inverted, (R)-2-iodooctane, because a second-order rate means SN2 backside attack.
+    - Racemic, because iodide attacks the flat carbocation from both faces.
+    - Retained, (S)-2-iodooctane, because iodide replaces bromide in the same position.
+    - Racemic, because acetone is protic and favours SN1 on secondary carbons.
+  correct: 0
+  explanation: >-
+    First order in iodide means the nucleophile is in the rate-determining step: SN2, with
+    inversion. Iodide ranks first like bromide, so S becomes R. Acetone is polar aprotic. Over long
+    times the excess iodide racemises the product by repeated SN2.
+- id: q6
+  question: >-
+    A student wants cyclohexyl methyl ether and plans cyclohexyl bromide plus sodium methoxide.
+    Mostly cyclohexene forms. What would work better?
+  options:
+    - Use cyclohexyl bromide in methanol with heat, because SN1 then gives the ether cleanly.
+    - Use potassium tert-butoxide instead of methoxide, because it is a stronger nucleophile.
+    - Use sodium cyclohexoxide with methyl iodide, because SN2 on a methyl carbon cannot eliminate.
+    - Use more methoxide, because a higher concentration favours substitution over elimination.
+  correct: 2
+  explanation: >-
+    A secondary halide with a strong base gives E2. Reversing the roles puts the SN2 on a methyl
+    carbon, which has no beta-H and no hindrance. Heat and SN1 conditions give E1 alkene too; a
+    bulky base makes elimination worse.
+- id: q7
+  question: >-
+    trans-1-Bromo-2-methylcyclohexane with sodium ethoxide gives mainly 3-methylcyclohexene, not
+    the more substituted 1-methylcyclohexene. Why?
+  options:
+    - Ethoxide is a bulky base, so it always gives the Hofmann product.
+    - The reaction is E1, and E1 never follows Zaitsev's rule.
+    - 3-Methylcyclohexene is the more stable alkene, so Zaitsev's rule predicts it.
+    - E2 needs a trans-diaxial H; with Br axial, the C2 H is equatorial, so only the C6 H can leave.
+  correct: 3
+  explanation: >-
+    In the reactive chair Br and the methyl are both axial (trans, diaxial). The H on C2 is then
+    equatorial and cannot be anti-periplanar; only the axial H on C6 can, giving 3-methylcyclohexene.
+    Geometry overrides Zaitsev.
+- id: q8
+  question: >-
+    3-Methylbut-1-ene reacts with HCl. Besides 2-chloro-3-methylbutane, a large amount of
+    2-chloro-2-methylbutane forms. What does this show?
+  options:
+    - HCl adds anti-Markovnikov when the alkene is branched.
+    - A carbocation intermediate: the secondary cation rearranges by a hydride shift to a tertiary one.
+    - A bromonium-like chloronium ion opens at the more substituted carbon.
+    - The alkene isomerised to 2-methylbut-2-ene before HCl added, through an SN2 step.
+  correct: 1
+  explanation: >-
+    Markovnikov protonation gives a secondary cation at C2. The H on C3 shifts with its pair, giving
+    the tertiary cation at C3, which chloride captures. Rearranged products are evidence for a cation.
+- id: q9
+  question: >-
+    A pheromone needs a cis C=C in the middle of a chain. You have the internal alkyne. Which
+    reduction do you choose?
+  options:
+    - H2 with Pd on carbon in excess, because it adds both hydrogens to the same face.
+    - Sodium in liquid ammonia, because dissolving metals give the more stable alkene.
+    - H2 with Lindlar catalyst, because it adds H2 syn and stops at the alkene.
+    - BH3 then H2O2/NaOH, because hydroboration converts alkynes into cis alkenes.
+  correct: 2
+  explanation: >-
+    Lindlar's poisoned catalyst adds one H2 syn and stops: cis (Z) alkene. Na/NH3 gives the trans
+    alkene; ordinary Pd/C with excess H2 goes on to the alkane; hydroboration-oxidation of an alkyne
+    gives a carbonyl compound.
+- id: q10
+  question: >-
+    RDKit's MMFF94 force field gives 3.5 kJ/mol for gauche minus anti butane; the textbook value is
+    3.8 kJ/mol. For a new drug-like molecule it predicts a 2 kJ/mol preference for one conformer.
+    How should you treat that number?
+  options:
+    - As a useful estimate that is uncertain by a few kJ/mol, so the preference may not be real.
+    - As exact, because a force field that matches butane is validated for all molecules.
+    - As meaningless, because force fields cannot describe conformational energies at all.
+    - As a free energy, because force-field energies already include entropy and solvent.
+  correct: 0
+  explanation: >-
+    Force fields reproduce trends well but are fitted models; errors of 1-3 kJ/mol are common (the
+    module lab found 5.7 against 7.6 kJ/mol for methylcyclohexane). A 2 kJ/mol preference is within
+    that error. MMFF energies are gas-phase potential energies, not free energies.

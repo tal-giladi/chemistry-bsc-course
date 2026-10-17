@@ -1,0 +1,19 @@
+# SMILES from PubChem (pubchem.ncbi.nlm.nih.gov, PUG REST "SMILES" property), accessed 2026-10-17.
+name,cid,smiles
+ethane,6324,CC
+ethene,6325,C=C
+ethyne,6326,C#C
+ethanol,702,CCO
+acetic acid,176,CC(=O)O
+ethyl acetate,8857,CCOC(=O)C
+acetamide,178,CC(=O)N
+acetone,180,CC(=O)C
+acetaldehyde,177,CC=O
+diethyl ether,3283,CCOCC
+ethylamine,6341,CCN
+chloroethane,6337,CCCl
+acetonitrile,6342,CC#N
+benzene,241,C1=CC=CC=C1
+aspirin,2244,CC(=O)OC1=CC=CC=C1C(=O)O
+paracetamol,1983,CC(=O)NC1=CC=C(C=C1)O
+(R)-carvone,439570,CC1=CC[C@H](CC1=O)C(=C)C

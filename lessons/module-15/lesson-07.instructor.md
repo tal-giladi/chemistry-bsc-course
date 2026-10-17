@@ -1,0 +1,8 @@
+# Instructor notes — 15.7 Alkenes and alkynes (module practical)
+
+- Objective: the learner predicts regiochemistry and stereochemistry for HX addition, acid hydration, halogenation, hydroboration–oxidation and hydrogenation; uses alkyne acidity, acetylide alkylation and Lindlar versus Na/NH₃ to plan a cis or trans alkene; completes the ten-reaction mechanism workbook (module practical) with RDKit checking and 3D models.
+- Likely confusion: syn versus anti and cis versus trans (syn/anti describe how groups add; cis/trans describe the result); why hydroboration is "anti-Markovnikov" without any cation; why racemic products still have defined relative stereochemistry.
+- Misconception: "Markovnikov's rule is about hydrogens" (it is about the more stable cation); "a bromonium is just a carbocation with Br nearby".
+- Analogy: Markovnikov is water finding the deepest valley: the proton goes wherever it leaves the most stable cation behind.
+- Expected hands-on result: workbook 10/10 with the answers in the lesson's details block (also `py lesson07_practical_solution.py`). Common partial scores: reaction 4 drawn cis (syn missed), reaction 8 left as R (inversion missed), reaction 9 drawn Zaitsev (bulky base missed). Models: trans-1,2-dibromocyclohexane diequatorial and diaxial chairs both trans; trans-2-methylcyclohexanol diequatorial; 2-butene dihedrals 0° and 180°.
+- Extension: plan (E)-non-2-ene and (Z)-non-2-ene from propyne and a primary bromide, write each product as SMILES, and confirm the E/Z label with `lesson03_stereo_solution.py`; or design an eleventh workbook entry with its own hashed key using `lesson07_practical_solution.py --key`.

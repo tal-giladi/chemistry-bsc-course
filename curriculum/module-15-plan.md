@@ -1,0 +1,20 @@
+# Module 15 plan — Organic Chemistry 1: Structure and Reactions
+
+Technion: 01240708 Organic Chemistry 1 (extended). Depth: Yale CHEM 125a (McBride, Open Yale Courses, Fall 2008) for structure and bonding; MIT OCW 5.12 Organic Chemistry I (Spring 2005) for reactions; OpenStax Organic Chemistry (McMurry, 2023) chapters 1–11 as the reading text.
+Simulations: none (outline §5). The virtual bench (`organic-bench`, `sn2`) comes in Module 24.
+Hands-on: molecular models in MolView (web, free) or Avogadro 2.0.0 (free, BSD, released 2026-04-01), RDKit 2026.9.1 in Python (pinned in `labs/common/requirements.txt`), mechanism drills with worked answers in `<details>`. One kitchen activity (15.3: spearmint vs caraway, the carvone enantiomers).
+Data: `molecules.csv` (SMILES from PubChem with CIDs), `pka_table.csv` (OpenStax 2.8 / 9.7, PubChem), `butenes_nist.csv` (NIST WebBook ΔfH°gas, Prosen, Maron and Rossini 1951), generated kinetics runs (`make_data.py`, seeded models).
+Module practical: lesson 15.7 Part B, "the mechanism workbook": ten reactions from all seven lessons; the learner draws arrows on paper, writes product SMILES with stereochemistry, checks them with `lesson07_practical.py` (hashed answer key), builds two products in MolView/Avogadro and explains the outcome with the lesson 15.1–15.6 ideas.
+
+| Lesson | Objectives (short) | Prerequisites | Hands-on | Sources to verify |
+|---|---|---|---|---|
+| 15.1 Bonding, hybridisation and functional groups | assign sp³/sp²/sp from VSEPR domains; σ and π bonds; skeletal formulas and SMILES; name 12 functional groups | 07.3, 07.4, 12.6 | MolView/Avogadro: ethane, ethene, ethyne angles and lengths; `lesson01_groups.py` (RDKit hybridisation, σ/π count, SMARTS groups) | OpenStax 1.6–1.9, 3.1; RDKit docs; MolView; Avogadro |
+| 15.2 Conformations and strain | Newman projections; torsional and steric strain (ethane 12, butane gauche 3.8, eclipsed 19 kJ/mol); ring strain; chair, axial/equatorial, 7.6 kJ/mol → 95:5 | 15.1, 08.3 | Model rotation in Avogadro; `lesson02_conformers.py` (MMFF butane scan; methylcyclohexane conformers, Boltzmann ratio) | OpenStax 3.6, 3.7, 4.3, 4.5, 4.7 |
+| 15.3 Stereochemistry and chirality | find stereocentres; CIP R/S and E/Z; enantiomers, diastereomers, meso; optical rotation, ee | 15.2 | Kitchen: spearmint vs caraway; models of 2-butanol mirror pair; `lesson03_stereo.py` (CIP, mirror, meso) | OpenStax 5.1, 5.5, 5.7; IUPAC 2013 P-9; PubChem carvone CIDs 439570, 16724 |
+| 15.4 Curved arrows, acids and bases in organic chemistry | arrow rules; nucleophile/electrophile; K from ΔpKa; ARIO factors; Lewis acids | 15.1, 08.4, 07.3 | Arrow drills; `lesson04_pka.py` (K and direction of proton transfers) | OpenStax 2.8, 2.11, 6.5, 9.7; Reich/Williams pKa |
+| 15.5 Nucleophilic substitution: SN1 and SN2 | rate laws; inversion vs racemisation; substrate, nucleophile, leaving group, solvent; rearrangements | 15.3, 15.4, 03.3 | `lesson05_kinetics.py` (rate law from generated runs; RDKit inversion check); drills | OpenStax 11.2–11.5 |
+| 15.6 Elimination: E1 and E2 | E2 anti-periplanar; Zaitsev vs Hofmann; E1; SN/E decision map | 15.5, 15.2 | `lesson06_elimination.py` (enumerate products, rank with NIST ΔfH); chair drill for menthyl chloride | OpenStax 11.7, 11.8, 11.10, 11.12; NIST WebBook butenes |
+| 15.7 Alkenes and alkynes | alkene stability; HX (Markovnikov), hydration, X₂ anti, hydroboration, hydrogenation; alkyne acidity and reduction | 15.6, 15.4 | Module practical: mechanism workbook + checker + models | OpenStax 7.6, 7.8, 7.9, 8.2, 8.5, 8.6, 9.5, 9.7 |
+
+Links back: 07.3 (Lewis, formal charge, resonance), 07.4 (VSEPR, polarity, IMF), 08.3 (K and ΔG), 08.4 (pKa, conjugate pairs), 12.6 (MO, σ/π, LCAO), 03.3 (first-order rate laws), 05.x (Python). Forward: 16 (carbonyls, aromatics, synthesis), 17 (spectra), 24 (organic lab, `organic-bench`), 28 (structure and reactivity).
+Safety: no reagents. Kitchen activity uses spearmint and caraway as food. Virtual chemistry stays in the classic teaching set.

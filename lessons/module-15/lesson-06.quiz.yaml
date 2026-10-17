@@ -1,0 +1,56 @@
+- id: q1
+  question: >-
+    A student treats 2-bromo-2-methylpropane with sodium ethoxide to make tert-butyl ethyl ether
+    and collects a gas instead. What happened?
+  options:
+    - SN1 gave the ether, which then boiled off because ethers are volatile.
+    - E2: a tertiary carbon blocks backside attack, so the strong base removed a beta-H instead.
+    - SN2 gave the ether, but sodium ethoxide decomposed into ethene gas.
+    - The bromide was oxidised by air to bromine gas, which is what bubbled out.
+  correct: 1
+  explanation: >-
+    SN2 is impossible on a tertiary carbon, and ethoxide is a strong base, so E2 gives 2-methylpropene
+    (a gas). An ether of this kind is made the other way round, from tert-butoxide and a methyl or
+    primary halide.
+- id: q2
+  question: >-
+    NIST gives gas-phase enthalpies of formation of -0.6 kJ/mol for 1-butene and -10.8 kJ/mol for
+    trans-2-butene. 2-Bromobutane with ethoxide gives 19 % 1-butene, far more than equilibrium
+    would. Why?
+  options:
+    - The NIST values are for the gas, so they do not apply to any reaction in solution.
+    - 1-Butene is formed first and slowly turns into 2-butene, so the 19 % is a mistake.
+    - The product ratio reflects competing transition-state energies, not the product stabilities.
+    - 1-Butene is favoured by entropy, which outweighs a 10 kJ/mol enthalpy difference.
+  correct: 2
+  explanation: >-
+    E2 is under kinetic control. The more stable alkene's transition state is lower, so it is major,
+    but the gap between transition states is smaller than the 10 kJ/mol between products. Isomers
+    do not interconvert under these conditions.
+- id: q3
+  question: >-
+    You want 2-methyl-1-butene as the main product from 2-bromo-2-methylbutane. Which reagent do
+    you choose?
+  options:
+    - Potassium tert-butoxide, because a bulky base takes the more exposed CH3 hydrogens.
+    - Sodium ethoxide, because a small base always gives the less substituted alkene.
+    - Water at 50 degrees C, because E1 gives the less substituted alkene from tertiary halides.
+    - Sodium iodide in acetone, because iodide is a strong base that removes the outer hydrogens.
+  correct: 0
+  explanation: >-
+    Ethoxide gives mainly the Zaitsev product, 2-methyl-2-butene (70 %); E1 also gives Zaitsev.
+    A bulky base reaches the outer methyl hydrogens more easily and gives the Hofmann product.
+    Iodide is a weak base.
+- id: q4
+  question: >-
+    Menthyl chloride (Cl equatorial in the stable chair) eliminates HCl with ethoxide 200 times more
+    slowly than neomenthyl chloride (Cl axial). What explains it?
+  options:
+    - Equatorial chlorine is a poorer leaving group because it is held more tightly by the ring.
+    - Neomenthyl chloride reacts by E1, which is always faster than E2.
+    - The methyl and isopropyl groups block the base from reaching any hydrogen in menthyl chloride.
+    - E2 needs H and Cl trans-diaxial; menthyl chloride must first flip to a minor, strained chair.
+  correct: 3
+  explanation: >-
+    Anti-periplanar in a ring means trans-diaxial. Only a small fraction of menthyl chloride sits in
+    the all-axial chair at any moment, so it reacts slowly and gives the non-Zaitsev 2-menthene.

@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A model of acetonitrile, CH3-C≡N, shows the C-C-N angle as 180 degrees. What hybridisation
+    explains that for the nitrile carbon?
+  options:
+    - sp3, because the carbon makes four bonds in total counting the triple bond as three.
+    - sp, because the carbon has two electron domains, the CH3 group and the triple bond.
+    - sp2, because the triple bond leaves the carbon one unused p orbital.
+    - sp3d, because a triple bond needs an extra orbital beyond the 2s and 2p set.
+  correct: 1
+  explanation: >-
+    A multiple bond is one electron domain. The nitrile carbon has two domains (C and N), so it is
+    sp and linear, with two unused p orbitals that form the two pi bonds.
+- id: q2
+  question: >-
+    Ethene's C=C bond (728 kJ/mol) is much less than twice ethane's C-C bond (377 kJ/mol). What
+    does that tell you about alkenes?
+  options:
+    - The second bond is a sigma bond pointing away from the first, so it is weaker.
+    - The double bond is longer than the single bond, so it holds the atoms less tightly.
+    - Alkenes are less stable than alkanes because carbon cannot make more than one bond to one atom.
+    - The pi bond is weaker than the sigma bond, so it is the part that reagents attack.
+  correct: 3
+  explanation: >-
+    The pi part contributes only about 350 kJ/mol. Its side-on overlap is weaker and its electrons
+    lie off the bond axis, which is why alkenes react where alkanes do not. C=C is shorter, not longer.
+- id: q3
+  question: >-
+    A colleague's script flags paracetamol, CC(=O)Nc1ccc(O)cc1, as containing a basic amine. What
+    is wrong with that label?
+  options:
+    - The N is part of an amide; its lone pair is shared with the C=O, so it is not basic.
+    - The N is aromatic, so it can only act as an acid in water.
+    - Paracetamol has no nitrogen at all; the N in the SMILES is the phenol oxygen.
+    - Amines must carry two hydrogens on nitrogen, and this N carries only one.
+  correct: 0
+  explanation: >-
+    N attached to C=O is an amide. Resonance delocalises the lone pair into the carbonyl, which
+    flattens the N and removes its basicity. A good SMARTS pattern excludes N-C=O from amines.
+- id: q4
+  question: >-
+    You read a structure with the fragment C(=O)-O-C. Someone calls it an ether because it has
+    C-O-C. What is it, and why does the difference matter?
+  options:
+    - A ketone, because the C=O is between two carbons, so it reacts like acetone.
+    - An ether, because C-O-C is enough, so it is unreactive like diethyl ether.
+    - An ester, because the O is on a carbonyl carbon, so water can hydrolyse it.
+    - An aldehyde, because the C=O carbon carries an oxygen, so it is easily oxidised.
+  correct: 2
+  explanation: >-
+    The full pattern decides: C(=O)-O-C is an ester. Esters are hydrolysed by water, faster with acid
+    or base, which is why old aspirin smells of acetic acid. Ethers have no C=O and are inert.

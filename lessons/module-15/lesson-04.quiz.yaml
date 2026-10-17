@@ -1,0 +1,52 @@
+- id: q1
+  question: >-
+    A synthesis plan uses sodium hydroxide in water to turn ethyne (pKa 25) into its acetylide.
+    Water has pKa 15.7 in the same table. Will the step work?
+  options:
+    - Yes, because hydroxide is a strong base and removes any proton faster than water can return it.
+    - No, because log K = 15.7 - 25 = -9.3, so almost no acetylide forms; use a base such as amide.
+    - Yes, because ethyne's sp carbon makes it more acidic than water.
+    - No, because hydroxide reacts with the triple bond instead of the hydrogen.
+  correct: 1
+  explanation: >-
+    The equilibrium favours the weaker acid. Water (15.7) is a far stronger acid than ethyne (25), so
+    the reaction lies left by about 10^9. Amide, whose conjugate acid NH3 has pKa 35, gives K = 10^10.
+- id: q2
+  question: >-
+    A student draws an arrow starting at H+ and ending on the oxygen of water to show H3O+ forming.
+    What is wrong?
+  options:
+    - Nothing, because the proton moves towards the oxygen during the reaction.
+    - The arrow should be fishhook-shaped, because a proton carries only one electron.
+    - The arrow should end on the hydrogen of water, because protons attack hydrogens.
+    - Arrows show electron pairs, so it must start at a lone pair on O and point to the H+.
+  correct: 3
+  explanation: >-
+    Curved arrows track electrons, not atoms. H+ has no electrons; the new O-H bond comes from an
+    oxygen lone pair, so the arrow runs from that lone pair to the proton.
+- id: q3
+  question: >-
+    Why is acetic acid (pKa 4.76) about 10^11 times stronger than ethanol (pKa 16.0), although both
+    lose an O-H proton?
+  options:
+    - Acetate spreads its negative charge over two oxygens by resonance; ethoxide has it on one.
+    - Acetic acid has an sp hybridised oxygen, which holds its electrons closer to the nucleus.
+    - Ethanol is a larger molecule, so its O-H bond is shielded from the base by the carbon chain.
+    - Acetic acid has more hydrogens, so it can give up a proton more often per molecule.
+  correct: 0
+  explanation: >-
+    Acid strength follows conjugate-base stability. Resonance delocalises acetate's charge over two
+    oxygens (with an inductive pull from the C=O); ethoxide's charge stays on one oxygen.
+- id: q4
+  question: >-
+    To pull benzoic acid (pKa 4.20) but not phenol (pKa 9.99) out of an organic solution, which
+    aqueous base do you choose? (Carbonic acid pKa 6.37, water 15.7.)
+  options:
+    - Sodium hydroxide, because a stronger base gives a cleaner separation of both acids.
+    - Plain water, because benzoic acid is already more acidic than phenol and dissolves alone.
+    - Sodium hydrogen carbonate, because K is about 150 for benzoic acid and 0.0002 for phenol.
+    - Ammonium chloride, because the ammonium ion deprotonates carboxylic acids selectively.
+  correct: 2
+  explanation: >-
+    log K = 6.37 - 4.20 = 2.2 for benzoic acid but 6.37 - 9.99 = -3.6 for phenol. Hydroxide would
+    deprotonate both; ammonium is an acid, not a base.
