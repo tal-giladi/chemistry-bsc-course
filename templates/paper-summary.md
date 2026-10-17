@@ -1,4 +1,4 @@
-# Paper summary (suggested template; from labs/module-11/paper_summary_worksheet.md, lesson 11.1)
+# Paper summary
 
 Copy this file for each paper you read. Fill it in from your notes, not by copying the paper.
 
