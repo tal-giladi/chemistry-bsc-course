@@ -1,0 +1,51 @@
+- id: q1
+  question: >-
+    Which sentence best opens the results section of a vinegar titration report?
+  options:
+    - The titrations were carried out carefully and the results were very close to the label value.
+    - The acetic acid content was 4.948 ± 0.026 % w/w (mean ± 95 % CI, n = 5; Table 1).
+    - Table 1 shows the masses of titrant used in each of the five titrations of the vinegar.
+    - The acetic acid content was found to be 4.9483 %, which proves the label is correct.
+  correct: 1
+  explanation: >-
+    The first sentence should state the result: value, uncertainty, unit, the meaning of the "±", n and the
+    evidence. "Very close" has no number, a table description is not a result, and 4.9483 % has too many digits and overclaims.
+- id: q2
+  question: >-
+    Three learners each did five titrations. You plan a bar chart of their means with the y-axis starting at
+    4.85 % to "make the differences visible". What is the better choice?
+  options:
+    - Keep the bars but add a 3D effect, so the differences stand out more.
+    - Keep the cut axis but add a note in the caption that it does not start at zero.
+    - Plot every titration as a point with each mean and its confidence interval; a dot plot may zoom in.
+    - Plot the means as bars from zero and hide the error bars, since they make the chart cluttered.
+  correct: 2
+  explanation: >-
+    A bar's length encodes its value, so a cut axis exaggerates differences. With five points per group,
+    showing every point (with the mean and interval) reveals outliers and spread, and a dot plot can zoom without distorting.
+- id: q3
+  question: >-
+    A figure shows a map of absorbance over a sample plate in the "jet" rainbow colour map. A reviewer asks you
+    to change it. Why?
+  options:
+    - Rainbow maps create apparent bands that are not in the data and are hard to read for colour-blind readers.
+    - Rainbow maps cannot be printed by journals, which only accept greyscale figures.
+    - Rainbow maps use too few colours to show small differences in absorbance.
+    - Rainbow maps are no longer available in current versions of plotting software.
+  correct: 0
+  explanation: >-
+    Jet is not perceptually uniform: some colour steps look much bigger than others, creating false features,
+    and red–green contrasts exclude many readers. Perceptually uniform maps such as viridis or cividis avoid both.
+- id: q4
+  question: >-
+    Your blank-corrected result, 4.97 ± 0.04 g/100 mL (k = 2), contains the label value of 5.0 g/100 mL. How do
+    you phrase the conclusion?
+  options:
+    - The measurement proves that the vinegar contains exactly 5.0 g of acetic acid per 100 mL.
+    - The measurement shows that the label is wrong, since 4.97 is lower than 5.0.
+    - The measurement may possibly suggest that the label could perhaps be roughly correct.
+    - The result is consistent with the label value within its expanded uncertainty.
+  correct: 3
+  explanation: >-
+    Hedging should match the evidence. A difference inside the stated uncertainty means "consistent with";
+    a measurement never proves an exact value, and piling up hedges hides a clear result.

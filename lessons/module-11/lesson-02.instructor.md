@@ -1,0 +1,9 @@
+# Instructor notes — 11.2 Finding and judging sources and data
+
+- **Objective:** place sources on the ladder; resolve DOIs and check retraction/correction status with Crossref; trace a constant to the primary measurement and choose what to cite; judge journals (Think. Check. Submit., DOAJ) and papers by evidence.
+- **Likely confusion:** "evaluated" versus "aggregated" data. NIST WebBook lists the original measurements and sometimes a review value; PubChem collects values from depositors and is only as good as each cited source. Also the sign convention: heat released (positive) versus enthalpy change (negative).
+- **Misconception:** "a correction means the paper is wrong" and "a famous journal means it is right". The Ioannidis correction is a missing pair of brackets; the Arnold retraction was in *Science*.
+- **Analogy:** a value is a rumour passed along a line of people. The further from the person who saw it, the more likely a digit or a condition was lost. Tracing goes back up the line.
+- **Expected hands-on result:** Part A (2026-10-17): NIST acetic acid ΔcH°(l) −875.16 ± 0.34 (Steele 1997), −874.2 ± 0.2 (Lebedeva 1964), −874.5 ± 0.4 (Evans and Skinner 1959), −872.4 (1935); PubChem 874.2 (CRC 94th); Wikipedia range −875.50 to −874.82 plus −876.1. Part B: `CORRECTED 2, NOT-FOUND 1, OK 2, RETRACTED 1` (Ioannidis 2022 correction, FAIR 2019 addendum, Arnold 2020 retraction). Part C: only the peer-reviewed paper supports a narrowed claim.
+- **Extension:** run `doi_check.py` on the full reference list of a review article; or search the Retraction Watch data for retractions in analytical chemistry and classify the reasons (error, irreproducibility, misconduct).
+- **Scope:** online values change. The ethanol PubChem value (1336.8 kJ/mol) is treated as a likely copying slip; the lesson does not claim what the printed handbook says. Live API output (citation counts, new notices) may differ from the cache.

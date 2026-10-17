@@ -1,0 +1,7 @@
+# DOIs for lesson 11.2, one per line; text after # is ignored.
+10.3390/bios13060639           # tartrazine paper from lesson 11.1
+10.1021/acsomega.5c06279       # Allura Red paper from lesson 11.1
+10.1126/science.aaw9068        # enzymatic lactam synthesis, Science 2019
+10.1371/journal.pmed.0020124   # Ioannidis 2005
+10.1038/sdata.2016.18          # FAIR principles 2016
+10.1021/acs.jchemed.9b99999    # cited in a chatbot answer about vinegar titration

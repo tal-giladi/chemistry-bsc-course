@@ -1,0 +1,54 @@
+- id: q1
+  question: >-
+    Your supervisor sends you 30 papers on phone-based colour tests and asks which three are most relevant
+    to measuring dyes in sweets. How do you start?
+  options:
+    - Read each paper fully from the start, so that no important detail is missed.
+    - Read only the conclusions, since that is where the authors say what they found.
+    - Do a timed first pass of each (title, abstract, headings, figures, conclusion) and rank them.
+    - Pick the papers with the most citations, because those are the most reliable ones.
+  correct: 2
+  explanation: >-
+    A 5–10 minute first pass answers the five Cs and tells you whether a paper deserves more time. Reading
+    everything fully takes days; conclusions alone miss what was actually measured; citation counts measure
+    attention, not relevance.
+- id: q2
+  question: >-
+    A paper's abstract says its new method shows "excellent agreement" with HPLC. The comparison table
+    shows differences of +6 %, −10 %, +17 %, +8 % and +11 % on five samples. What do you write in your summary?
+  options:
+    - The method agrees excellently with HPLC, as the authors state.
+    - The method differs from HPLC by −10 % to +17 % on five samples.
+    - The method is wrong, because a difference of 17 % proves it cannot be used.
+    - The method agrees with HPLC on average, since the positive and negative errors cancel.
+  correct: 1
+  explanation: >-
+    Report what the data show, with numbers, and let the reader judge. "Excellent" is the authors' opinion;
+    one large difference does not make a method useless for screening; and errors of different size and sign
+    do not cancel into agreement.
+- id: q3
+  question: >-
+    A phone method has a limit of detection 70 times higher than UV–vis. The legal limit for the dye is
+    about 60 times higher than the largest amount found in any sample, and far above the phone's LOQ. What follows?
+  options:
+    - The phone method is fit for checking samples against the legal limit despite its lower sensitivity.
+    - The phone method is unusable, because a method must be at least as sensitive as the reference.
+    - The phone method cannot be judged until its LOD is lowered to the UV–vis value.
+    - The comparison is meaningless, because LODs from different instruments cannot be compared.
+  correct: 0
+  explanation: >-
+    Fitness for purpose asks whether a method answers the question asked. If the amounts that matter lie far
+    above its limits, a less sensitive but faster and cheaper method can be the better choice.
+- id: q4
+  question: >-
+    The Methods section of a paper states an acceptance range for spike recovery of 80–120 %. Table 2 shows
+    low-level recoveries of 77–79 %. The text calls all recoveries acceptable. What is the best response?
+  options:
+    - Ignore it, since a difference of 1–3 % from a criterion is within rounding.
+    - Reject the whole paper, because any result outside a stated criterion means it is invalid.
+    - Assume the criterion in the Methods is a typo, since the authors judged the results acceptable.
+    - Note that low-level recoveries miss the paper's own criterion and ask what causes the loss.
+  correct: 3
+  explanation: >-
+    Checking a paper against its own criteria is one of the cheapest critical-reading tools. A small miss is
+    not a reason to reject the paper, but it is a real limitation at low concentrations and should be named.

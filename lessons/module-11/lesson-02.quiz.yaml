@@ -1,0 +1,62 @@
+- id: q1
+  question: >-
+    For a report you need the standard enthalpy of combustion of liquid acetic acid. Which source should you cite?
+  options:
+    - The value in the Wikipedia data box, because it is the most widely read source.
+    - A calorimetric measurement with its uncertainty, found through the NIST Chemistry WebBook.
+    - The PubChem value, because PubChem is run by a government agency.
+    - The value a chatbot gives, if it also supplies a formatted reference.
+  correct: 1
+  explanation: >-
+    Cite as close to the measurement as you can, from a source that states the method, conditions and
+    uncertainty. Wikipedia and PubChem are maps to sources; a chatbot reference must be checked before it is used at all.
+- id: q2
+  question: >-
+    One source gives −1367.6 kJ/mol for the combustion of liquid ethanol and another gives −1236 kJ/mol.
+    What do you check first?
+  options:
+    - Which source is newer, since newer values replace older ones.
+    - Which value has more digits, since it is the more precise one.
+    - Whether the water formed is liquid in one and gas in the other.
+    - Whether one source made a sign error, since the two differ by about 10 %.
+  correct: 2
+  explanation: >-
+    The difference, about 132 kJ/mol, is three times the enthalpy of vaporisation of water (44.0 kJ/mol).
+    Check conditions and conventions before calling two values different.
+- id: q3
+  question: >-
+    A reference in a draft report, "J. Chem. Educ. 2019", has a DOI that Crossref does not recognise, and the
+    DOI has no typo. What is the right action?
+  options:
+    - Keep it, because Crossref does not cover every chemistry journal.
+    - Keep it but remove the DOI, since the year and journal are enough to cite it.
+    - Replace the DOI with one of a paper on a similar topic from the same journal.
+    - Treat the reference as possibly invented and remove it unless you can find and read the paper.
+  correct: 3
+  explanation: >-
+    Journal articles from major publishers are registered with Crossref. An unresolvable DOI with no typo is a
+    strong sign the reference does not exist; never cite a paper you have not found and read.
+- id: q4
+  question: >-
+    Crossref shows that a paper you want to cite has a correction notice. What should you do?
+  options:
+    - Read the correction to see whether it changes the result you want to use.
+    - Stop citing it, because a corrected paper is no longer reliable evidence.
+    - Cite it without comment, since corrections are only about formatting.
+    - Cite only the correction notice, since it replaces the original paper.
+  correct: 0
+  explanation: >-
+    Corrections range from a missing bracket to a changed result. Read the notice; a retraction, by contrast,
+    removes the paper as evidence.
+- id: q5
+  question: >-
+    Two independent calorimetric values are −875.16 ± 0.34 and −874.2 ± 0.2 kJ/mol. What does this tell you?
+  options:
+    - They agree, because both round to −875 kJ/mol.
+    - They differ by more than their combined uncertainty, so at least one uncertainty is too small.
+    - The newer value must be correct, because instruments improve over time.
+    - The older value must be correct, because it has the smaller uncertainty.
+  correct: 1
+  explanation: >-
+    The difference is 0.96 kJ/mol against a combined uncertainty of about 0.39 kJ/mol. Stated uncertainties can
+    be optimistic; this is why evaluated compilations compare all measurements before recommending a value.

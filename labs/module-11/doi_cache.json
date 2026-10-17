@@ -1,0 +1,95 @@
+{
+ "10.3390/bios13060639": {
+  "doi": "10.3390/bios13060639",
+  "found": true,
+  "title": "Using a Smartphone-Based Colorimetric Device with Molecularly Imprinted Polymer for the Quantification of Tartrazine in Soda Drinks",
+  "journal": "Biosensors",
+  "year": 2023,
+  "publisher": "MDPI AG",
+  "type": "journal-article",
+  "licences": [
+   "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "cited_by": 18,
+  "updates": []
+ },
+ "10.1021/acsomega.5c06279": {
+  "doi": "10.1021/acsomega.5c06279",
+  "found": true,
+  "title": "Development of a Fast, Low-Cost, and Green Method to Quantify Allura Red AC Dye in Candies through Digital Images Using a Smartphone",
+  "journal": "ACS Omega",
+  "year": 2025,
+  "publisher": "American Chemical Society (ACS)",
+  "type": "journal-article",
+  "licences": [
+   "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "cited_by": 3,
+  "updates": []
+ },
+ "10.1126/science.aaw9068": {
+  "doi": "10.1126/science.aaw9068",
+  "found": true,
+  "title": "Site-selective enzymatic C‒H amidation for synthesis of diverse lactams",
+  "journal": "Science",
+  "year": 2019,
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "type": "journal-article",
+  "licences": [],
+  "cited_by": 58,
+  "updates": [
+   {
+    "type": "retraction",
+    "notice": "10.1126/science.aba6100",
+    "date": "2020-01-02",
+    "source": "retraction-watch"
+   }
+  ]
+ },
+ "10.1371/journal.pmed.0020124": {
+  "doi": "10.1371/journal.pmed.0020124",
+  "found": true,
+  "title": "Why Most Published Research Findings Are False",
+  "journal": "PLoS Medicine",
+  "year": 2005,
+  "publisher": "Public Library of Science (PLoS)",
+  "type": "journal-article",
+  "licences": [
+   "http://creativecommons.org/licenses/by/4.0/"
+  ],
+  "cited_by": 8385,
+  "updates": [
+   {
+    "type": "correction",
+    "notice": "10.1371/journal.pmed.1004085",
+    "date": "2022-08-25",
+    "source": "publisher"
+   }
+  ]
+ },
+ "10.1038/sdata.2016.18": {
+  "doi": "10.1038/sdata.2016.18",
+  "found": true,
+  "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+  "journal": "Scientific Data",
+  "year": 2016,
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "licences": [
+   "https://creativecommons.org/licenses/by/4.0"
+  ],
+  "cited_by": 15713,
+  "updates": [
+   {
+    "type": "addendum",
+    "notice": "10.1038/s41597-019-0009-6",
+    "date": "2019-03-19",
+    "source": "publisher"
+   }
+  ]
+ },
+ "10.1021/acs.jchemed.9b99999": {
+  "doi": "10.1021/acs.jchemed.9b99999",
+  "found": false
+ }
+}
