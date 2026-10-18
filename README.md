@@ -19,3 +19,13 @@ Home experiments use kitchen and pharmacy materials only. Do not buy laboratory 
 ## Sources
 
 The course structure follows the official Technion catalog for 2025/2026 (Faculty of Chemistry chapter). The original plan, with every course number and credit value, is in [plan.md](plan.md). The content is written from open sources: MIT OpenCourseWare, LibreTexts, OpenStax, NIST, IUPAC and others, credited in each lesson.
+
+## Read it offline
+
+The course also runs as a small website with no internet connection. Download the repository (on GitHub: Code → Download ZIP) and unzip it, then from that folder run:
+
+```bash
+python -m http.server 8080
+```
+
+and open `http://localhost:8080` in your browser. Everything it needs is in the folder.

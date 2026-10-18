@@ -31,6 +31,8 @@
         if (/\.md$/.test(path)) return '[' + text + '](/' + abs + q + ')';
         if (/\.html$/.test(path)) return '[' + text + '](' + abs + q + ' \':ignore\')';
         var isDir = /\/$/.test(url) || !/\.[a-z0-9]+$/i.test(path);
+        // Offline (local server): open the file from the folder. Online (GitHub Pages): show it on GitHub.
+        if (!/github\.io$/.test(location.hostname)) return '[' + text + '](' + abs + (isDir && !/\/$/.test(abs) ? '/' : '') + q + ' \':ignore\')';
         return '[' + text + '](' + (isDir ? TREE : REPO) + abs + ' \':ignore\')';
       });
       md = md.replace(/KTXF(\d+)FXTK/g, function (_, i) { return fences[+i]; });
