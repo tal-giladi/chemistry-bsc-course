@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voltammetry bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="voltammetry.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Voltammetry bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="cv" aria-controls="tab-cv" id="tabbtn-cv">Cyclic voltammetry</button>
+    <button type="button" data-tab="bv" aria-controls="tab-bv" id="tabbtn-bv">Butler–Volmer and Tafel</button>
+  </div>
+
+  <!-- ===================== CYCLIC VOLTAMMETRY ===================== -->
+  <section id="tab-cv" aria-labelledby="tabbtn-cv" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>1. Prepare the cell</h2>
+          <div class="row"><label><input type="checkbox" id="c-polish" checked> Working electrode polished (0.05 µm alumina, rinsed)</label></div>
+          <div class="row"><label><input type="checkbox" id="c-ref" checked> Reference checked (Ag/AgCl, 3 M KCl, no bubble, frit wet)</label></div>
+          <div class="row"><label><input type="checkbox" id="c-elec" checked> Supporting electrolyte added (0.1–0.5 M KCl)</label></div>
+          <div class="row"><label><input type="checkbox" id="c-purge" checked> Purged with N₂ for 10 min, blanket kept over the solution</label></div>
+          <div class="row"><button type="button" id="c-blank">Run a blank (electrolyte only)</button></div>
+          <h2>2. The couple</h2>
+          <div class="field"><label for="c-couple">Solution</label>
+            <select id="c-couple">
+              <option value="fecn">2.0 mM K₃[Fe(CN)₆] in 0.1 M KCl, 3 mm Pt disc</option>
+              <option value="quasi">1.0 mM couple in 0.5 M KCl, 3 mm glassy carbon</option>
+              <option value="custom">custom (set everything below)</option>
+            </select></div>
+          <div class="field"><label for="c-species">Species</label>
+            <select id="c-species"><option value="diff">dissolved, reaches the electrode by diffusion</option><option value="ads">adsorbed on the electrode surface</option></select></div>
+          <div class="field"><label for="c-conc" id="c-conc-label">Concentration / mM</label><input type="number" id="c-conc" min="0.01" max="20" step="0.01"></div>
+          <div class="field" id="c-gamma-row" hidden><label for="c-gamma">Surface coverage Γ / 10⁻¹⁰ mol cm⁻²</label><input type="number" id="c-gamma" min="0.1" max="50" step="0.1" value="10"></div>
+          <div class="field" id="c-ks-row" hidden><label for="c-ks">Surface rate constant k<sub>s</sub> / s⁻¹</label><input type="number" id="c-ks" min="0.01" max="100000" step="any" value="1000"></div>
+          <div class="field"><label for="c-D">D / 10⁻⁶ cm² s⁻¹</label><input type="number" id="c-D" min="0.5" max="30" step="0.1"></div>
+          <div class="field"><label for="c-k0" id="c-k0-label">k⁰ / cm s⁻¹</label><output id="c-k0-out" for="c-k0"></output><input type="range" id="c-k0" min="-4" max="1" step="0.01"></div>
+          <div class="field"><label for="c-alpha">Transfer coefficient α</label><output id="c-alpha-out" for="c-alpha"></output><input type="range" id="c-alpha" min="0.3" max="0.7" step="0.01" value="0.5"></div>
+          <div class="field"><label for="c-n">Electrons n</label><select id="c-n"><option value="1">1</option><option value="2">2</option></select></div>
+          <div class="field"><label for="c-E0">E°′ / V vs Ag/AgCl</label><input type="number" id="c-E0" min="-1" max="1" step="0.001"></div>
+          <div class="field"><label for="c-diam">Disc diameter / mm</label><input type="number" id="c-diam" min="0.1" max="10" step="0.1" value="3.0"></div>
+          <h2>3. The scan</h2>
+          <div class="row">
+            <div class="field inline"><label for="c-Es">Start / V</label><input type="number" id="c-Es" min="-1.5" max="1.5" step="0.01"></div>
+            <div class="field inline"><label for="c-Ew">Switch / V</label><input type="number" id="c-Ew" min="-1.5" max="1.5" step="0.01"></div>
+          </div>
+          <div class="field"><label for="c-v">Scan rate / mV s⁻¹</label><input type="number" id="c-v" min="1" max="5000" step="1"></div>
+          <div class="field"><label for="c-Ru">Uncompensated resistance R<sub>u</sub> / Ω</label><input type="number" id="c-Ru" min="0" max="5000" step="10" value="0"></div>
+          <div class="field"><label for="c-Cdl">Double-layer capacitance / µF cm⁻²</label><input type="number" id="c-Cdl" min="0" max="200" step="1" value="20"></div>
+          <div class="row">
+            <button type="button" class="primary" id="c-run">Record CV</button>
+            <button type="button" id="c-series">Scan-rate series</button>
+            <button type="button" id="c-clear">Clear runs</button>
+          </div>
+          <div class="row"><button type="button" id="c-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Current noise 20 nA. IUPAC convention: oxidation current positive, potential rising to the right.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Cyclic voltammogram</h2>
+          <canvas id="c-plot" class="plot tall" aria-label="Current against potential for the recorded scans"></canvas>
+          <div class="kv" id="c-info"></div>
+          <div class="log" id="c-log" aria-live="polite"></div>
+        </div>
+        <div class="panel">
+          <h2>Peaks of each run</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="c-table"><thead><tr><th>v / mV s⁻¹</th><th>E<sub>pc</sub> / V</th><th>E<sub>pa</sub> / V</th><th>ΔE<sub>p</sub> / mV</th><th>E<sub>1/2</sub> / V</th><th>i<sub>pc</sub> / µA</th><th>i<sub>pa</sub>/i<sub>pc</sub></th><th>ψ</th><th>k⁰ / cm s⁻¹</th></tr></thead><tbody></tbody></table></div>
+          <p class="small muted">i<sub>pc</sub> is read from the charging baseline at the start; i<sub>pa</sub>/i<sub>pc</sub> uses Nicholson's correction. ψ from Lavagnini's equation (valid for ΔE<sub>p</sub> ≈ 63–150 mV), k⁰ = ψ√(πDnFv/RT) with the D you entered.</p>
+        </div>
+        <div class="panel">
+          <h2>Is it diffusion?</h2>
+          <div class="field"><label for="c-xaxis">Plot peak current against</label>
+            <select id="c-xaxis"><option value="sqrt">√v (diffusion: a straight line through 0)</option><option value="v">v (adsorbed: a straight line through 0)</option><option value="log">log v (slope 0.5 or 1)</option></select></div>
+          <canvas id="c-ipplot" class="plot short" aria-label="Peak current against scan rate"></canvas>
+          <div class="kv" id="c-fit"></div>
+        </div>
+        <div class="panel">
+          <h2>Concentrations near the electrode</h2>
+          <canvas id="c-prof" class="plot short" aria-label="Concentration of oxidised and reduced form against distance from the electrode at the cathodic peak and at the switching potential"></canvas>
+          <p class="small muted">At the cathodic peak the surface has run out of O and the depleted layer keeps growing: that is why the current passes a peak and decays.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUTLER-VOLMER ===================== -->
+  <section id="tab-bv" aria-labelledby="tabbtn-bv" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Electrode and reaction</h2>
+          <div class="field"><label for="b-mat">Start from</label>
+            <select id="b-mat">
+              <option value="custom">a one-electron couple (set i₀ and α)</option>
+              <option value="pt">H₂ evolution on Pt, 0.5 M H₂SO₄</option>
+              <option value="ni">H₂ evolution on Ni, 0.5 M H₂SO₄</option>
+              <option value="cu">H₂ evolution on Cu, 0.5 M H₂SO₄</option>
+              <option value="hg">H₂ evolution on Hg, 0.5 M H₂SO₄</option>
+            </select></div>
+          <div class="field"><label for="b-i0">log₁₀(i₀ / A cm⁻²)</label><output id="b-i0-out" for="b-i0"></output><input type="range" id="b-i0" min="-12" max="-1" step="0.01"></div>
+          <div class="field"><label for="b-alpha">Transfer coefficient α (α<sub>c</sub> = α, α<sub>a</sub> = 1 − α)</label><output id="b-alpha-out" for="b-alpha"></output><input type="range" id="b-alpha" min="0.1" max="0.9" step="0.01"></div>
+          <div class="row"><label><input type="checkbox" id="b-multi"> Multi-step reaction: set α<sub>a</sub> and α<sub>c</sub> separately</label></div>
+          <div class="row" id="b-multi-row" hidden>
+            <div class="field inline"><label for="b-aa">α<sub>a</sub></label><input type="number" id="b-aa" min="0.05" max="3" step="0.01" value="0.5"></div>
+            <div class="field inline"><label for="b-ac">α<sub>c</sub></label><input type="number" id="b-ac" min="0.05" max="3" step="0.01" value="0.5"></div>
+          </div>
+          <div class="field"><label for="b-T">Temperature / °C</label><input type="number" id="b-T" min="0" max="90" step="1" value="25"></div>
+          <div class="field"><label for="b-Ru">R<sub>u</sub> / Ω cm²</label><input type="number" id="b-Ru" min="0" max="50" step="0.1" value="0"></div>
+          <div class="row"><label><input type="checkbox" id="b-lim"> Mass-transport limit (both directions)</label></div>
+          <div class="field"><label for="b-ilim">i<sub>lim</sub> / mA cm⁻²</label><input type="number" id="b-ilim" min="0.1" max="1000" step="0.1" value="20"></div>
+          <h3>Sweep (slow, steady state)</h3>
+          <div class="row">
+            <div class="field inline"><label for="b-E1">from η / V</label><input type="number" id="b-E1" min="-1.5" max="1.5" step="0.01" value="0.20"></div>
+            <div class="field inline"><label for="b-E2">to η / V</label><input type="number" id="b-E2" min="-1.5" max="1.5" step="0.01" value="-0.40"></div>
+          </div>
+          <div class="row">
+            <button type="button" class="primary" id="b-run">Record polarisation curve</button>
+            <button type="button" id="b-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Points every 5 mV; noise 1 % plus 0.2 µA cm⁻². The x axis is the applied potential minus E<sub>eq</sub>; with R<sub>u</sub> &gt; 0 it is not the true overpotential.</p>
+        </div>
+        <div class="panel">
+          <h2>Fits</h2>
+          <div class="row"><label><input type="checkbox" id="b-ircorr"> Correct each point for iR with the R<sub>u</sub> above (η = E − iR<sub>u</sub>)</label></div>
+          <h3>Tafel line (cathodic)</h3>
+          <div class="row">
+            <div class="field inline"><label for="b-t1">from / V</label><input type="number" id="b-t1" step="0.01" value="-0.15"></div>
+            <div class="field inline"><label for="b-t2">to / V</label><input type="number" id="b-t2" step="0.01" value="-0.40"></div>
+          </div>
+          <h3>Tafel line (anodic)</h3>
+          <div class="row">
+            <div class="field inline"><label for="b-a1">from / V</label><input type="number" id="b-a1" step="0.01" value="0.10"></div>
+            <div class="field inline"><label for="b-a2">to / V</label><input type="number" id="b-a2" step="0.01" value="0.20"></div>
+          </div>
+          <div class="field"><label for="b-target">Overpotential needed for / mA cm⁻²</label><input type="number" id="b-target" min="0.001" max="1000" step="any" value="10"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Tafel plot</h2>
+          <canvas id="b-log" class="plot tall" aria-label="Logarithm of the current density against potential, with Tafel lines"></canvas>
+          <div class="kv" id="b-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Current density against potential</h2>
+          <canvas id="b-lin" class="plot short" aria-label="Current density against potential on a linear scale"></canvas>
+          <div class="kv" id="b-micro"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <button type="button" id="x-data">Data of this tab (CSV)</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Polish the working electrode, check the reference, add 0.1–0.5 M supporting electrolyte and purge with N₂ for 10 min.</li>
+        <li>Run a blank of the electrolyte alone: it shows the usable window and the charging background.</li>
+        <li>Start where nothing reacts and switch 150–200 mV past the peak, so the curve has time to decay.</li>
+        <li>Run a known couple first (ferricyanide): if its ΔE<sub>p</sub> is far above 60–70 mV, repolish.</li>
+        <li>Record a scan-rate series (20 mV/s to 1 V/s). Plot i<sub>p</sub> against √v and against v; read ΔE<sub>p</sub> and E<sub>1/2</sub> at each rate.</li>
+        <li>Change the concentration once: an iR shift changes with it, a kinetic separation does not.</li>
+        <li>For a polarisation curve, sweep slowly from the anodic to the cathodic side; fit Tafel lines more than about 100 mV from equilibrium and below the limiting current, after correcting for R<sub>u</sub>.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>A reference that carries no current keeps its potential; the potentiostat sets the working electrode against it and passes the current through the counter electrode.</li>
+        <li>Excess supporting electrolyte carries the current, so the analyte moves only by diffusion, and keeps R<sub>u</sub> low.</li>
+        <li>Dissolved O₂ (about 0.26 mM in air-saturated water) is reduced at negative potentials and adds its own large wave.</li>
+        <li>A fouled surface slows electron transfer: the peaks move apart and look like a slow couple.</li>
+        <li>i<sub>p</sub> ∝ √v means diffusion; i<sub>p</sub> ∝ v means the species sits on the surface; the charging current also grows as v, so fast scans lose the faradaic signal in the background.</li>
+        <li>Nicholson's ψ = k⁰/√(πDnFv/RT) links ΔE<sub>p</sub> to k⁰, but only between about 63 and 150 mV and only with an independent D.</li>
+        <li>Butler–Volmer: i = i₀[e<sup>α<sub>a</sub>fη</sup> − e<sup>−α<sub>c</sub>fη</sup>]; near η = 0 the electrode is a resistor R<sub>ct</sub> = RT/(Fi₀); far from it a Tafel line of slope 2.303RT/(αF).</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Potentials and currents in CV are harmless; the chemicals are not always. Potassium ferricyanide is low-hazard but must not meet strong acid (hydrogen cyanide can form).</li>
+        <li>Alumina polishing slurry is a fine dust when dry: keep it wet.</li>
+        <li>Perchlorate electrolytes for organic solvents are oxidisers and can explode when dry with organic material: never scrape dry residues.</li>
+        <li>Gas cylinders (N₂, Ar) are chained upright; hydrogen evolution experiments in sulfuric acid need goggles and a vented cell.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Oxygen left in the cell: an extra wave near −0.2 to −0.4 V that grows with every scan.</li>
+        <li>No supporting electrolyte or a blocked reference frit: large R<sub>u</sub>, peaks pulled apart, distorted shapes, drifting potentials.</li>
+        <li>An unpolished electrode read as a slow couple; R<sub>u</sub> read as slow kinetics (test: halve the concentration).</li>
+        <li>Measuring the return peak from zero current instead of from the decaying forward current.</li>
+        <li>Getting D from fast scans of a slow couple: Randles–Ševčík then underestimates it, and k⁰ from that D is wrong too.</li>
+        <li>Fitting a Tafel line too close to η = 0, into the iR-bent part, or into the mass-transport plateau: the slope comes out too large.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the data of a tab (CSV) and analyse them in Python as in the Module 19, 25 and 32 lab folders: peak table, i<sub>p</sub> against √v through the origin and D from the slope (Randles–Ševčík, i<sub>p</sub> = 2.69 × 10⁵ n<sup>3/2</sup>AD<sup>1/2</sup>Cv<sup>1/2</sup>), the log–log slope, ψ and k⁰ for each scan with ΔE<sub>p</sub> ≤ 150 mV, and for polarisation curves the iR correction, a linear fit of log|i| against η for b and log i₀, and the micro-polarisation slope for R<sub>ct</sub>. Uncertainties come from the scatter of the fit (the tables here give the standard error).</p>
+    </details>
+    <p class="small muted">Not trained here: polishing technique, assembling and filling a reference electrode, cabling a potentiostat, judging a real noisy baseline.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Constants: F, R from CODATA 2022 (F/RT = 38.92 V⁻¹ at 25 °C). Ferricyanide: 2.0 mM, D = 7.2 × 10⁻⁶ cm²/s, E°′ = 0.220 V vs Ag/AgCl as in the Lesson 19.5 data; k⁰ of the default "reversible" setting is 1 cm/s (the Lesson 19.5 Python data use 0.02 cm/s, quasi-reversible). The 1.0 mM couple: D = 7.0 × 10⁻⁶ cm²/s, k⁰ = 0.004 cm/s, α = 0.5, as in the Lesson 25.6 data (illustrative). O₂ about 0.26 mM in air-saturated water at 25 °C, D about 2.0 × 10⁻⁵ cm²/s (illustrative wave position). Lavagnini et al., Electroanalysis 16, 505 (2004) for ψ(ΔE<sub>p</sub>); Nicholson, Anal. Chem. 37, 1351 (1965) for the return-peak correction. Hydrogen evolution: i₀ about 10⁻³ (Pt), 8 × 10⁻⁶ (Ni), 2.6 × 10⁻⁷ (Cu), 10⁻¹² A/cm² (Hg), typical orders of magnitude (Trasatti 1972; Nørskov et al. 2005; Lesson 32.1). Model: explicit finite differences for planar diffusion with Butler–Volmer boundary kinetics, iR drop solved at every step; adsorbed species by Laviron's surface kinetics; steady-state Butler–Volmer with a mass-transport limit for the polarisation curves.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="voltammetry.js"></script>
+</body>
+</html>

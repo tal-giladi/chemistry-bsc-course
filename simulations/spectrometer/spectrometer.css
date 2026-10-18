@@ -1,0 +1,6 @@
+/* spectrometer: page-specific styles (shared ones are in ../common/sim.css) */
+.field.inline { flex: 1 1 120px; margin: 4px 0; }
+.field.inline input[type="number"] { width: 6.5em; }
+.hit { color: var(--good); }
+.miss { color: var(--bad); font-weight: 600; }
+[hidden] { display: none !important; }

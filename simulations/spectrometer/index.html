@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectrometer bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="spectrometer.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Spectrometer bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="uv" aria-controls="tab-uv" id="tabbtn-uv">UV-Vis and Beer–Lambert</button>
+    <button type="button" data-tab="mix" aria-controls="tab-mix" id="tabbtn-mix">Two-dye mixture</button>
+    <button type="button" data-tab="eq" aria-controls="tab-eq" id="tabbtn-eq">FeSCN²⁺ equilibrium</button>
+    <button type="button" data-tab="fl" aria-controls="tab-fl" id="tabbtn-fl">Fluorescence</button>
+    <button type="button" data-tab="aas" aria-controls="tab-aas" id="tabbtn-aas">Flame AAS</button>
+  </div>
+
+  <!-- ===================== UV-VIS ===================== -->
+  <section id="tab-uv" aria-labelledby="tabbtn-uv" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Instrument</h2>
+          <div class="field"><label for="u-lam">Wavelength / nm</label><input type="number" id="u-lam" min="200" max="800" step="1" value="630"></div>
+          <div class="field"><label for="u-bw">Slit bandwidth / nm</label><select id="u-bw"><option value="1">1</option><option value="2" selected>2</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></div>
+          <div class="field"><label for="u-stray">Stray light s / % of the incident light</label><output id="u-stray-out" for="u-stray"></output><input type="range" id="u-stray" min="0" max="2" step="0.05" value="0.4"></div>
+          <div class="field"><label for="u-cell">Cuvette (1.00 cm)</label><select id="u-cell"><option value="quartz">quartz (fused silica)</option><option value="glass">optical glass</option><option value="plastic">polystyrene (plastic)</option></select></div>
+          <div class="row"><button type="button" id="u-zero">Zero on the blank (water)</button></div>
+          <h2>Solution in the cell</h2>
+          <div class="field"><label for="u-sol">Solution</label><select id="u-sol"><option value="std">blue dye standard (Brilliant Blue FCF)</option><option value="drink">sports drink</option></select></div>
+          <div class="field" id="u-c-row"><label for="u-c">Standard / mg L⁻¹</label><input type="number" id="u-c" min="0" max="50" step="0.1" value="2"></div>
+          <div class="field" id="u-dil-row" hidden><label for="u-dil">Dilution of the drink</label><select id="u-dil"><option value="1">none (straight from the bottle)</option><option value="5">1 + 4</option><option value="10">1 + 9</option><option value="20" selected>1 + 19 (5.00 mL to 100.0 mL)</option><option value="50">1 + 49</option></select></div>
+          <div class="row">
+            <button type="button" class="primary" id="u-read">Read (3 readings)</button>
+            <button type="button" id="u-series">Read the standard series</button>
+            <button type="button" id="u-scan">Scan 250–750 nm</button>
+          </div>
+          <div class="field"><label for="u-max">Fit standards up to / mg L⁻¹</label><input type="number" id="u-max" min="0.5" max="50" step="0.5" value="6"></div>
+          <div class="row"><button type="button" id="u-clear">Clear readings</button><button type="button" id="u-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Transmittance noise s<sub>T</sub> = 0.002 of the light reaching the detector.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Readout</h2>
+          <div class="row"><span class="readout" id="u-readout" aria-live="polite">—</span><span class="muted small" id="u-readT"></span></div>
+          <canvas id="u-spec" class="plot short" aria-label="Absorbance spectrum of the solution in the cell"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Calibration</h2>
+          <canvas id="u-cal" class="plot" aria-label="Absorbance of the standards against concentration with the straight-line fit and the stray-light model"></canvas>
+          <canvas id="u-res" class="plot short" aria-label="Residuals of the straight-line fit"></canvas>
+          <div class="kv" id="u-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Readings</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="u-table"><thead><tr><th>Solution</th><th>λ / nm</th><th>A (mean of 3)</th><th>s</th><th>below the low-range line</th></tr></thead><tbody></tbody></table></div>
+        </div>
+        <div class="panel">
+          <h2>Where is the reading most precise?</h2>
+          <canvas id="u-err" class="plot short" aria-label="Relative concentration error against absorbance for a constant transmittance noise"></canvas>
+          <p class="small muted">s<sub>c</sub>/c = 0.4343 s<sub>T</sub> / (T |log₁₀ T|) with s<sub>T</sub> = 0.002: smallest at A = 0.434; your readings are marked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MIXTURE ===================== -->
+  <section id="tab-mix" aria-labelledby="tabbtn-mix" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Solution (1.00 cm quartz, blank water)</h2>
+          <div class="field"><label for="m-sol">Solution</label><select id="m-sol">
+            <option value="Y">tartrazine (E102) standard</option>
+            <option value="B">Brilliant Blue FCF (E133) standard</option>
+            <option value="G">green drink, diluted 1 + 4</option>
+            <option value="GC">cloudy green drink, diluted 1 + 4</option>
+            <option value="GR">green drink with an undeclared red dye, diluted 1 + 4</option>
+          </select></div>
+          <div class="field" id="m-c-row"><label for="m-c">Standard / mg L⁻¹</label><input type="number" id="m-c" min="0" max="40" step="0.5" value="4"></div>
+          <div class="row">
+            <div class="field inline"><label for="m-l1">λ₁ / nm</label><input type="number" id="m-l1" min="380" max="750" step="1" value="630"></div>
+            <div class="field inline"><label for="m-l2">λ₂ / nm</label><input type="number" id="m-l2" min="380" max="750" step="1" value="426"></div>
+          </div>
+          <div class="row">
+            <button type="button" class="primary" id="m-read">Read at λ₁ and λ₂</button>
+            <button type="button" id="m-rep">Five repeat readings</button>
+            <button type="button" id="m-scan">Record spectrum</button>
+          </div>
+          <div class="row"><button type="button" id="m-std">Read five standards of each dye</button></div>
+          <div class="row"><button type="button" id="m-clear">Clear</button><button type="button" id="m-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Absorbance noise 0.002; bandwidth 2 nm.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Spectra</h2>
+          <canvas id="m-spec" class="plot" aria-label="Recorded absorbance spectra and the full-spectrum fit"></canvas>
+          <div class="kv" id="m-cls"></div>
+        </div>
+        <div class="panel">
+          <h2>Absorptivities and the 2 × 2 solution</h2>
+          <div class="kv" id="m-info"></div>
+          <div class="table-wrap scroll-y"><table class="data" id="m-table"><thead><tr><th>Solution</th><th>A(λ₁)</th><th>A(λ₂)</th><th>c<sub>B</sub> / mg L⁻¹</th><th>c<sub>Y</sub> / mg L⁻¹</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EQUILIBRIUM ===================== -->
+  <section id="tab-eq" aria-labelledby="tabbtn-eq" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Make a solution (after mixing)</h2>
+          <div class="field"><label for="e-type">Kind</label><select id="e-type"><option value="standard">standard (Fe³⁺ in large excess)</option><option value="mix">mixture</option><option value="job">Job series point</option></select></div>
+          <div class="row">
+            <div class="field inline"><label for="e-fe">[Fe³⁺]₀ / M</label><input type="number" id="e-fe" min="0" max="0.5" step="any" value="0.200"></div>
+            <div class="field inline"><label for="e-scn">[SCN⁻]₀ / M</label><input type="number" id="e-scn" min="0" max="0.01" step="any" value="0.0001"></div>
+          </div>
+          <div class="row"><label><input type="checkbox" id="e-acid" checked> Fe³⁺ stock in 0.5 M HNO₃</label></div>
+          <div class="field"><label for="e-blank">Blank</label><select id="e-blank"><option value="match">0.5 M HNO₃ with the same Fe³⁺</option><option value="water">water</option></select></div>
+          <div class="field"><label for="e-time">Read after mixing / min</label><input type="number" id="e-time" min="1" max="240" step="1" value="5"></div>
+          <div class="field"><label for="e-lam">Wavelength / nm</label><input type="number" id="e-lam" min="380" max="600" step="1" value="447"></div>
+          <div class="row">
+            <button type="button" class="primary" id="e-read">Make and read</button>
+            <button type="button" id="e-scan">Scan 380–600 nm</button>
+          </div>
+          <h3>Whole series</h3>
+          <div class="row">
+            <button type="button" id="e-fstd">Six standards</button>
+            <button type="button" id="e-fmix">Five mixtures</button>
+            <button type="button" id="e-fjob">Job series</button>
+          </div>
+          <div class="row"><button type="button" id="e-clear">Clear</button><button type="button" id="e-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. 1.00 cm cell, 25 °C, noise 0.002. Solutions made without acid or with [SCN⁻]₀ above 1.0 × 10⁻³ M are exported as type <span class="mono">test</span>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Spectrum and calibration</h2>
+          <canvas id="e-spec" class="plot short" aria-label="Absorbance spectrum of the last solution"></canvas>
+          <div class="field"><label for="e-view">Show</label><select id="e-view"><option value="cal">standards: A against [SCN⁻]₀</option><option value="k">K of each mixture</option><option value="job">Job plot</option></select></div>
+          <canvas id="e-plot" class="plot" aria-label="Calibration line, K values or Job plot"></canvas>
+          <div class="kv" id="e-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Readings</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="e-table"><thead><tr><th>type</th><th>[Fe]₀ / M</th><th>[SCN]₀ / M</th><th>A</th><th>K naive</th><th>K corrected</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FLUORESCENCE ===================== -->
+  <section id="tab-fl" aria-labelledby="tabbtn-fl" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Fluorimeter (90° geometry, 1 cm cell)</h2>
+          <div class="row">
+            <div class="field inline"><label for="f-ex">Excitation / nm</label><input type="number" id="f-ex" min="220" max="420" step="1" value="350"></div>
+            <div class="field inline"><label for="f-em">Emission / nm</label><input type="number" id="f-em" min="300" max="650" step="1" value="450"></div>
+          </div>
+          <h2>Solution</h2>
+          <div class="field"><label for="f-sol">Solution</label><select id="f-sol">
+            <option value="blank">blank (acid only)</option>
+            <option value="std">quinine standard</option>
+            <option value="tonic">tonic water</option>
+            <option value="sa">standard-addition flask: 5.00 mL of tonic 1 + 99, plus quinine, to 10.00 mL</option>
+          </select></div>
+          <div class="field" id="f-c-row"><label for="f-c" id="f-c-label">Quinine / mg L⁻¹</label><input type="number" id="f-c" min="0" max="100" step="0.05" value="0.2"></div>
+          <div class="field" id="f-dil-row" hidden><label for="f-dil">Dilution of the tonic</label><select id="f-dil"><option value="1">none</option><option value="10">1 + 9</option><option value="100">1 + 99</option><option value="200" selected>1 + 199</option></select></div>
+          <div class="field"><label for="f-acid">Made up in</label><select id="f-acid"><option value="h2so4">0.05 M H₂SO₄</option><option value="hcl">0.05 M HCl</option></select></div>
+          <div class="row">
+            <button type="button" class="primary" id="f-read">Read (3 readings)</button>
+            <button type="button" id="f-exscan">Excitation spectrum</button>
+            <button type="button" id="f-emscan">Emission spectrum</button>
+          </div>
+          <div class="row">
+            <button type="button" id="f-cal">Five-point calibration</button>
+            <button type="button" id="f-sadd">Five-flask standard addition</button>
+          </div>
+          <div class="row"><button type="button" id="f-clear">Clear</button><button type="button" id="f-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Signal noise 0.4 % plus 0.3 units; blank about 3 units.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Spectra</h2>
+          <canvas id="f-spec" class="plot short" aria-label="Excitation and emission spectra"></canvas>
+          <div class="kv" id="f-specinfo"></div>
+        </div>
+        <div class="panel">
+          <h2>Calibration and standard addition</h2>
+          <canvas id="f-plot" class="plot" aria-label="Fluorescence against quinine concentration for the standards and the standard-addition flasks"></canvas>
+          <div class="kv" id="f-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Readings</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="f-table"><thead><tr><th>Solution</th><th>acid</th><th>ex/em</th><th>F (mean)</th><th>F × dilution</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AAS ===================== -->
+  <section id="tab-aas" aria-labelledby="tabbtn-aas" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>1. Lamp, wavelength, flame</h2>
+          <div class="field"><label for="a-el">Hollow-cathode lamp</label><select id="a-el"><option value="Ca">Ca, 422.7 nm, slit 0.5 nm</option><option value="Na">Na, 589.0 nm, slit 0.2 nm</option></select></div>
+          <div class="row"><span>Lamp on for <b class="mono" id="a-clock">0.0</b> min</span><button type="button" id="a-wait">Wait 1 min</button><button type="button" id="a-wait10">Wait 10 min</button></div>
+          <div class="field"><label for="a-flame">Flame</label><select id="a-flame"><option value="air">air–acetylene (about 2300 °C)</option><option value="n2o">nitrous oxide–acetylene (about 2700 °C)</option></select></div>
+          <div class="field"><label for="a-h">Burner height / mm</label><output id="a-h-out" for="a-h"></output><input type="range" id="a-h" min="1" max="16" step="0.5" value="4"></div>
+          <div class="row"><label><input type="checkbox" id="a-bg" checked> Background correction (deuterium lamp)</label></div>
+          <h2>2. Matrix modifiers</h2>
+          <div class="field"><label for="a-la">Lanthanum (0.1 % La as LaCl₃)</label><select id="a-la"><option value="all">in every solution, standards included</option><option value="samples">in the samples only</option><option value="none">none</option></select></div>
+          <div class="row"><label><input type="checkbox" id="a-k"> 2000 mg/L K⁺ in every solution (ionisation suppressor)</label></div>
+          <h2>3. Aspirate</h2>
+          <div class="field"><label for="a-sol">Solution</label><select id="a-sol">
+            <option value="blank">blank (1 % HNO₃ with the same modifiers)</option>
+            <option value="std">standard</option>
+            <option value="water">mineral water, diluted 1 + 9</option>
+            <option value="spike">mineral water 1 + 9, spiked with 2.0 mg/L Ca</option>
+            <option value="phos">4.0 mg/L Ca standard with 50 mg/L phosphate</option>
+            <option value="salt">salty brine sample, diluted 1 + 9</option>
+          </select></div>
+          <div class="field" id="a-c-row"><label for="a-c">Standard / mg L⁻¹</label><input type="number" id="a-c" min="0" max="20" step="0.5" value="4"></div>
+          <div class="row">
+            <button type="button" id="a-zero">Zero on the blank</button>
+            <button type="button" class="primary" id="a-read">Aspirate and read (3)</button>
+          </div>
+          <div class="row"><button type="button" id="a-series">Read standards 0–10 mg/L</button><button type="button" id="a-hscan">Burner-height profile</button></div>
+          <div class="field"><label for="a-max">Linear fit up to / mg L⁻¹</label><input type="number" id="a-max" min="1" max="20" step="1" value="6"></div>
+          <div class="row"><label><input type="checkbox" id="a-quad"> Quadratic calibration over all standards</label></div>
+          <div class="row"><button type="button" id="a-clear">Clear</button><button type="button" id="a-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Each reading takes 0.5 min; noise 0.0015.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Calibration</h2>
+          <canvas id="a-plot" class="plot" aria-label="Absorbance against calcium concentration with the calibration fit"></canvas>
+          <canvas id="a-res" class="plot short" aria-label="Residuals of the calibration"></canvas>
+          <div class="kv" id="a-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Readings against time</h2>
+          <canvas id="a-drift" class="plot short" aria-label="Every reading against time since the lamp was switched on"></canvas>
+          <div class="table-wrap scroll-y"><table class="data" id="a-table"><thead><tr><th>t / min</th><th>solution</th><th>conditions</th><th>A (mean)</th><th>s</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <button type="button" id="x-data">Data of this tab (CSV)</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Absorbance: choose λ<sub>max</sub>, a quartz cell below 300 nm, a slit narrow compared with the band; zero on a blank in the same cell; read standards from low to high; dilute samples into the range of the standards, ideally near A = 0.4.</li>
+        <li>Mixtures: record the pure spectra, pick two wavelengths where each dye absorbs strongly and the other weakly, calibrate both dyes at both wavelengths, then solve the 2 × 2 system or fit the whole spectrum.</li>
+        <li>Equilibrium constant: standards with a large excess of Fe³⁺ give εb; mixtures with comparable concentrations give K through an ICE table; correct εb for incomplete complexation and iterate; check the 1:1 model with a Job plot.</li>
+        <li>Fluorescence: excite at 350 nm, read at 450 nm at 90°, in sulfuric acid; dilute until the signal scales with the dilution; calibrate externally and by standard addition.</li>
+        <li>Flame AAS: warm the lamp, set wavelength and slit, light the flame, optimise the burner height, zero on the blank, standards low to high, samples, then check standards, a spike and a duplicate.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>A = −log₁₀T = εbc only for dilute solutions and monochromatic light; stray light s caps the reading at −log₁₀[s/(1 + s)] and bends the top of the calibration.</li>
+        <li>The relative error of c is smallest near A = 0.43; at low A two nearly equal signals are subtracted, at high A almost no light arrives.</li>
+        <li>Absorbances add, so n absorbers need n well-chosen wavelengths; a full-spectrum fit averages the noise of all of them, and its residuals reveal an absorber that is not in the model.</li>
+        <li>"Almost all" SCN⁻ complexed is not all: with K[Fe]₀ = 28 the standards are 96.6 % complexed, and K comes out several per cent high unless corrected.</li>
+        <li>Concentrated quinine absorbs its own excitation light before the centre of the cell (inner filter); chloride quenches it (Stern–Volmer, K<sub>SV</sub> ≈ 130 L/mol).</li>
+        <li>In the flame, phosphate and sulfate hold calcium in compounds that do not atomise; excess La releases it. In a hot flame, Na and Ca ionise; excess K suppresses that. A deuterium lamp removes broad background absorption.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Iron stock in nitric acid is corrosive: gloves and goggles. Potassium thiocyanate is harmful (H302, H312, H332) and very toxic to aquatic life (H400): collect all waste.</li>
+        <li>Quinine is harmful if swallowed and may cause skin allergy (H302, H317): gloves for the standards. Never look into a UV lamp or its reflection.</li>
+        <li>Acetylene can decompose explosively above about 1 bar gauge: keep the regulator low and the cylinder chained upright. The AAS burner sits under extraction (UV, metal vapours); the drain trap must be full to stop a flashback; nitrous oxide flames are lit and put out through air–acetylene.</li>
+        <li>Quartz cuvettes are expensive and fragile; handle them by the frosted sides.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Reading a sample above the top standard, or a plastic cell in the UV; forgetting to zero on the blank.</li>
+        <li>Reading each dye at its own peak and ignoring the other one; choosing wavelengths where the two spectra look alike.</li>
+        <li>Blanking the FeSCN²⁺ standards with water; Fe³⁺ without acid (hydrolysis to FeOH²⁺); too much SCN⁻ (Fe(SCN)₂⁺); reading long after mixing (the colour fades).</li>
+        <li>Undiluted tonic; HCl instead of H₂SO₄; trusting external calibration in a matrix that changes the slope.</li>
+        <li>Skipping the lamp warm-up (drift looks like a changing calibration); La in the samples only; spikes beyond the linear range; reading a salty sample without background correction.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the data of a tab (CSV) and analyse it in Python as in the Module 19, 23 and 25 lab folders: straight-line calibration with residuals and Harvey's s<sub>c</sub> (eq. 5.12), the stray-light model fitted over the whole range, the 2 × 2 system and classical least squares for mixtures, the ICE table with the iterated εb correction and a 95 % interval for K, Stern–Volmer and standard addition with the extrapolation uncertainty, and for AAS the linear range, LOD, spike recovery and check-standard drift.</p>
+    </details>
+    <p class="small muted">Not trained here: pipetting, handling cuvettes, lighting and tuning a real burner, aligning a phone spectrometer.</p>
+  </div>
+
+  <footer class="sim-footer">
+    Brilliant Blue FCF: 0.164 L mg⁻¹ cm⁻¹ at 629 nm (FAO/JECFA) and 0.006 at 426 nm; tartrazine 0.053 L mg⁻¹ cm⁻¹ at 426 nm (EU 231/2012), none at 630 nm (Lesson 25.1); band shapes illustrative Gaussians; Allura Red band at 504 nm illustrative. Stray-light equation and the photometric error curve from Harvey, Analytical Chemistry 2.1, 10.2–10.3. FeSCN²⁺: K = 140 and ε = 4600 L mol⁻¹ cm⁻¹ at 447 nm in 0.5 M HNO₃ (illustrative teaching-lab values, Lesson 23.3); Fe(SCN)₂⁺ K₂ = 20, FeOH²⁺ hydrolysis constant 10⁻²·² and the weak Fe³⁺ and FeOH²⁺ absorption at 447 nm illustrative; fading 0.05 %/min (illustrative). Quinine: ε ≈ 5700 L mol⁻¹ cm⁻¹ near 347 nm, emission near 450 nm (PhotochemCAD), M = 324.4 g/mol, chloride K<sub>SV</sub> = 130 L/mol, tonic 72 mg/L as in the Lesson 25.2 data; the 250 nm band is illustrative. Calcium by flame AAS: A = 0.0420c − 0.00045c² with La, the mineral water 48.0 mg/L read 18 % low without La, as in the Lesson 25.3 data; lamp warm-up, burner-height profiles, ionisation and background values illustrative. Model: Beer–Lambert with slit averaging and stray light; inner-filter correction for a 0.4–0.6 cm observation window; exact speciation for Fe³⁺/SCN⁻; seeded noise.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="spectrometer.js"></script>
+</body>
+</html>

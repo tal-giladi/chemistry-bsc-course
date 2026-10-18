@@ -64,9 +64,9 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] rlc
 - [x] quantum-box
 - [x] boltzmann
-- [ ] spectrometer
-- [ ] chromatography
-- [ ] voltammetry
+- [x] spectrometer
+- [x] chromatography
+- [x] voltammetry
 - [ ] nmr
 - [ ] organic-bench
 - [ ] ir-esr
@@ -126,3 +126,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - M31 done.
 - sims batch 2 done (titration, gravimetry, kinetics); batch 4 spawned.
 - sims batch 3 done (oscillators, rlc, quantum-box, boltzmann); batch 5 spawned.
+- sims batch 4 done (spectrometer, chromatography, voltammetry).

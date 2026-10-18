@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chromatography bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="chromatography.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Chromatography bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="gc" aria-controls="tab-gc" id="tabbtn-gc">Gas chromatography</button>
+    <button type="button" data-tab="hplc" aria-controls="tab-hplc" id="tabbtn-hplc">HPLC method</button>
+    <button type="button" data-tab="vd" aria-controls="tab-vd" id="tabbtn-vd">van Deemter</button>
+  </div>
+
+  <!-- ===================== GC ===================== -->
+  <section id="tab-gc" aria-labelledby="tabbtn-gc" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Sample and injection</h2>
+          <div class="field"><label for="g-sample">Vial</label>
+            <select id="g-sample">
+              <option value="mix">citrus test mix (8 terpenes, 1:100 in hexane)</option>
+              <option value="lemon">cold-pressed lemon oil (1:100 in hexane)</option>
+              <option value="ladder">n-alkane ladder C8–C18 (in hexane)</option>
+              <option value="blank">solvent blank (hexane)</option>
+            </select></div>
+          <div class="field"><label for="g-split">Injection (1 µL, injector 250 °C)</label>
+            <select id="g-split"><option value="20">split 1:20</option><option value="50" selected>split 1:50</option><option value="200">split 1:200</option><option value="1">splitless</option></select></div>
+          <h2>Column and carrier</h2>
+          <div class="field"><label for="g-phase">Stationary phase</label>
+            <select id="g-phase"><option value="db5">5 % phenyl polydimethylsiloxane (DB-5 type, non-polar)</option><option value="wax">polyethylene glycol (DB-Wax type, polar)</option></select></div>
+          <div class="field"><label for="g-len">Length (0.25 mm i.d., 0.25 µm film)</label>
+            <select id="g-len"><option value="15">15 m</option><option value="30" selected>30 m</option><option value="60">60 m</option></select></div>
+          <div class="field"><label for="g-gas">Carrier gas</label>
+            <select id="g-gas"><option value="N2">nitrogen</option><option value="He" selected>helium</option><option value="H2">hydrogen</option></select></div>
+          <div class="field"><label for="g-u">Average velocity u / cm s⁻¹ (constant flow)</label><input type="number" id="g-u" min="5" max="100" step="1" value="30"></div>
+          <div class="row"><button type="button" id="g-uopt">Set u to this gas's optimum</button></div>
+          <h2>Oven programme</h2>
+          <div class="row">
+            <div class="field inline"><label for="g-T0">Start / °C</label><input type="number" id="g-T0" min="30" max="300" step="1" value="60"></div>
+            <div class="field inline"><label for="g-hold">Hold / min</label><input type="number" id="g-hold" min="0" max="60" step="0.5" value="0"></div>
+          </div>
+          <div class="row">
+            <div class="field inline"><label for="g-rate">Ramp / K min⁻¹ (0 = isothermal)</label><input type="number" id="g-rate" min="0" max="40" step="0.5" value="3"></div>
+            <div class="field inline"><label for="g-Tmax">Final / °C</label><input type="number" id="g-Tmax" min="30" max="320" step="1" value="250"></div>
+          </div>
+          <h2>Detector</h2>
+          <div class="field"><label for="g-det">Detector</label>
+            <select id="g-det"><option value="fid">flame ionisation (FID)</option><option value="ms">mass spectrometer, scan m/z 35–350</option></select></div>
+          <div class="field" id="g-ms-row"><label for="g-delay">MS solvent delay / min</label><input type="number" id="g-delay" min="0" max="10" step="0.1" value="3.0"></div>
+          <div class="row" id="g-eic-row"><label><input type="checkbox" id="g-eic"> Overlay the extracted-ion chromatogram of m/z 119</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="g-run">Inject and run</button>
+            <button type="button" id="g-rerun">Re-run (new seed)</button>
+          </div>
+          <div class="row"><label><input type="checkbox" id="g-names" checked> Show compound names</label></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Runs stop at 120 min.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Chromatogram</h2>
+          <canvas id="g-plot" class="plot tall" aria-label="Detector signal against time"></canvas>
+          <div class="kv" id="g-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Peaks</h2>
+          <div class="table-wrap"><table class="data" id="g-table"><thead><tr><th>Peak</th><th>t<sub>R</sub> / min</th><th>w<sub>½</sub> / min</th><th>k at elution</th><th>area %</th><th>RI</th><th>R<sub>s</sub> to next</th></tr></thead><tbody></tbody></table></div>
+          <p class="small muted">R<sub>s</sub> = Δt/(2(σ<sub>A,back</sub> + σ<sub>B,front</sub>)), equal to 2Δt/(w<sub>A</sub> + w<sub>B</sub>) for symmetric peaks, from the model widths, so it is given even where the trace shows one merged peak. RI needs an alkane ladder run under exactly the same conditions (van den Dool–Kratz for a ramp, Kováts for isothermal).</p>
+        </div>
+        <div class="panel">
+          <h2>Run log</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="g-log"><thead><tr><th>Run</th><th>Vial</th><th>Conditions</th><th>Last peak / min</th><th>Worst pair</th><th>R<sub>s</sub></th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HPLC ===================== -->
+  <section id="tab-hplc" aria-labelledby="tabbtn-hplc" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Sample</h2>
+          <div class="field"><label for="h-sample">Vial</label>
+            <select id="h-sample"><option value="four">standard: paracetamol, caffeine, aspirin, salicylic acid</option><option value="pair">critical pair: paracetamol and caffeine</option></select></div>
+          <h2>Column</h2>
+          <div class="field"><label for="h-col">C18, 4.6 mm i.d.</label>
+            <select id="h-col"><option value="5">150 mm, 5 µm fully porous</option><option value="5L">300 mm, 5 µm fully porous</option><option value="27">150 mm, 2.7 µm core–shell</option></select></div>
+          <div class="field"><label for="h-age">Column state</label>
+            <select id="h-age"><option value="new">new</option><option value="old">after 400 injections</option></select></div>
+          <h2>Mobile phase</h2>
+          <div class="field"><label for="h-org">Organic solvent</label>
+            <select id="h-org"><option value="acn">acetonitrile</option><option value="meoh">methanol</option></select></div>
+          <div class="field"><label for="h-pH">Aqueous buffer pH (25 mM phosphate)</label><output id="h-pH-out" for="h-pH"></output><input type="range" id="h-pH" min="2.0" max="7.0" step="0.1" value="2.5"></div>
+          <div class="field"><label for="h-mode">Elution</label>
+            <select id="h-mode"><option value="iso">isocratic</option><option value="grad">linear gradient</option></select></div>
+          <div class="field" id="h-iso-row"><label for="h-phi">Organic / % v/v</label><output id="h-phi-out" for="h-phi"></output><input type="range" id="h-phi" min="5" max="80" step="1" value="25"></div>
+          <div class="row" id="h-grad-row" hidden>
+            <div class="field inline"><label for="h-g1">from / %</label><input type="number" id="h-g1" min="0" max="100" step="1" value="5"></div>
+            <div class="field inline"><label for="h-g2">to / %</label><input type="number" id="h-g2" min="0" max="100" step="1" value="60"></div>
+            <div class="field inline"><label for="h-gt">in / min</label><input type="number" id="h-gt" min="1" max="60" step="1" value="10"></div>
+          </div>
+          <div class="field"><label for="h-flow">Flow / mL min⁻¹ (pump limit 400 bar)</label><input type="number" id="h-flow" min="0.1" max="5" step="0.05" value="1.0"></div>
+          <div class="row">
+            <button type="button" class="primary" id="h-run">Inject and run</button>
+            <button type="button" id="h-sst">System suitability (6 injections)</button>
+          </div>
+          <div class="row"><button type="button" id="h-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. 30 °C, UV 230 nm, 10 µL injection. t₀ is marked by uracil.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Chromatogram</h2>
+          <canvas id="h-plot" class="plot tall" aria-label="UV absorbance at 230 nm against time"></canvas>
+          <div class="kv" id="h-info"></div>
+        </div>
+        <div class="panel">
+          <h2>Peaks</h2>
+          <div class="table-wrap"><table class="data" id="h-table"><thead><tr><th>Peak</th><th>t<sub>R</sub> / min</th><th>k</th><th>N (moments)</th><th>tailing (5 %)</th><th>area</th><th>R<sub>s</sub> to next</th></tr></thead><tbody></tbody></table></div>
+          <div class="kv" id="h-sstbox"></div>
+        </div>
+        <div class="panel">
+          <h2>Run log</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="h-log"><thead><tr><th>Run</th><th>Conditions</th><th>Run time / min</th><th>Critical pair</th><th>R<sub>s</sub></th><th>Pressure / bar</th></tr></thead><tbody></tbody></table></div>
+          <div class="kv" id="h-lss"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VAN DEEMTER ===================== -->
+  <section id="tab-vd" aria-labelledby="tabbtn-vd" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Column</h2>
+          <div class="field"><label for="v-col">Column</label>
+            <select id="v-col">
+              <option value="packed">packed GC column, 2 m, N₂ carrier</option>
+              <option value="cap">capillary GC column, 30 m × 0.25 mm, He carrier</option>
+              <option value="lc5">HPLC C18, 100 × 4.6 mm, 5 µm</option>
+              <option value="lc27">HPLC C18, 100 × 4.6 mm, 2.7 µm core–shell</option>
+            </select></div>
+          <div class="field"><label for="v-u" id="v-u-label">Velocity u</label><output id="v-u-out" for="v-u"></output><input type="range" id="v-u" min="0" max="1" step="0.001"></div>
+          <div class="row">
+            <button type="button" class="primary" id="v-meas">Measure H at this velocity</button>
+            <button type="button" id="v-series">Measure 12 velocities</button>
+            <button type="button" id="v-clear">Clear</button>
+          </div>
+          <div class="row"><button type="button" id="v-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono seed"></span>. Each H has about 2 % measurement scatter (widths read from real peaks).</p>
+          <div class="kv" id="v-now"></div>
+        </div>
+        <div class="panel">
+          <h2>Test peak at this velocity</h2>
+          <canvas id="v-peak" class="plot short" aria-label="A test peak with k = 3 at the chosen velocity"></canvas>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Plate height against velocity</h2>
+          <canvas id="v-plot" class="plot tall" aria-label="van Deemter plot: plate height against velocity, with the A, B/u and Cu terms"></canvas>
+          <div class="kv" id="v-fit"></div>
+        </div>
+        <div class="panel">
+          <h2>Measurements</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="v-table"><thead><tr><th>u</th><th>H</th><th>N</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel">
+    <div class="row">
+      <button type="button" id="x-data">Data of this tab (CSV)</button>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>Procedure</summary>
+      <ol>
+        <li>Pick the technique from the analytes: GC for volatile, heat-stable compounds; HPLC for the rest.</li>
+        <li>GC: inject a solvent blank first, then the sample with a split that keeps the column from overloading; start cool and ramp; with an MS keep the filament off during the solvent (solvent delay).</li>
+        <li>Run the n-alkane ladder under exactly the same conditions and convert retention times into retention indices; compare with database indices on two phases of different polarity.</li>
+        <li>HPLC: start from pKa, log P and UV; buffer at least 1.5–2 pH units from every pKa; run two scouting compositions, fit log k = log k<sub>w</sub> − Sφ and choose the composition from the worst pair.</li>
+        <li>Before a sequence, run the system-suitability test: critical-pair R<sub>s</sub>, tailing, area RSD of replicate injections and plates.</li>
+        <li>For a column, measure H at many velocities, fit H = A + B/u + Cu, and run at or a little above u<sub>opt</sub>, within the pressure limit.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Resolution R<sub>s</sub> = (√N/4)·((α − 1)/α)·(k/(1 + k)): selectivity α is the cheapest lever, plates the most expensive (R<sub>s</sub> grows only as √N), and k above about 10 buys little.</li>
+        <li>A temperature programme solves the general elution problem: early peaks stay apart at low temperature, late ones come out sharp as the oven heats.</li>
+        <li>Retention times move with flow, length and temperature; retention indices relative to the alkanes do not, so they can be compared with a database.</li>
+        <li>A weak acid is retained as the neutral molecule; near its pKa a 0.1 pH error moves k by about 11 %, two units away by 0.2 %.</li>
+        <li>Too much sample on a capillary column overloads the film: the peak broadens and fronts, and a small neighbour disappears under it.</li>
+        <li>The van Deemter terms: multiple paths (A, zero in an open tube), longitudinal diffusion (B/u) and mass transfer (Cu); u<sub>opt</sub> = √(B/C), H<sub>min</sub> = A + 2√(BC).</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <ul>
+        <li>Hexane is highly flammable and harms nerves with long exposure: dilute samples in a fume hood and cap the vials.</li>
+        <li>Hydrogen carrier gas is flammable: the GC needs a hydrogen sensor, leak checks and a revalidated method. The injector, oven and transfer line run at 250–300 °C.</li>
+        <li>Acetonitrile is flammable and toxic by inhalation and skin contact; prepare mobile phases in a hood.</li>
+        <li>HPLC pumps run at 100–400 bar: tighten fittings with the pump stopped and never look into a leaking fitting under pressure. Flush phosphate buffer out with water before going to high organic, or it crystallises.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Isothermal GC: too cold and the late peaks take hours, too hot and the early peaks crowd together at the void.</li>
+        <li>Identifying a peak from one retention time, or comparing an index from a ramped run with an isothermal or other-phase database value.</li>
+        <li>A small peak hidden under a big one (p-cymene under limonene): look for it with an extracted-ion chromatogram or on a polar column.</li>
+        <li>Solvent delay set shorter than the solvent peak: the filament burns in the hexane.</li>
+        <li>HPLC buffer near a pKa: retention drifts and peaks swap order; an aged column tails and loses plates and fails the SST.</li>
+        <li>Chasing the van Deemter optimum of a small-particle column past the pump's pressure limit.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the data of a tab (CSV) and analyse it in Python as in the Module 19 and 25 lab folders: k = (t<sub>R</sub> − t<sub>M</sub>)/t<sub>M</sub>, N = 5.545(t<sub>R</sub>/w<sub>½</sub>)², H = L/N, R<sub>s</sub> and the Purnell equation; the linear retention index I = 100[n + (t<sub>x</sub> − t<sub>n</sub>)/(t<sub>n+1</sub> − t<sub>n</sub>)]; log k against φ for k<sub>w</sub> and S, and a resolution map; a van Deemter fit with curve_fit and the uncertainties of u<sub>opt</sub> and H<sub>min</sub> from the covariance matrix.</p>
+    </details>
+    <p class="small muted">Not trained here: installing a column, cutting fused silica, leak checks, priming and degassing an HPLC, integrating real noisy baselines.</p>
+  </div>
+
+  <footer class="sim-footer">
+    GC retention: n-alkanes modelled by ln k = a + bn + (c + dn)/T fitted to the Lesson 25.4 ladder (DB-5 type, 30 m, 60 °C + 3 K/min: C8 3.40 … C14 23.45 min) and the Lesson 19.4 DB-Wax ladder; every other compound is placed at its retention index, so its isothermal Kováts index is exact. DB-5 indices: NIST Chemistry WebBook medians as in the Lesson 25.4 lab (α-pinene 937, β-pinene 979, myrcene 991, p-cymene 1026, limonene 1031, γ-terpinene 1061, linalool 1099, α-terpineol 1190, neral 1241, geranial 1270); DB-Wax limonene 1196 and linalool 1552 (Lesson 19.4); other wax values approximate literature values (illustrative). Lemon-oil composition as in the Lesson 25.4 simulated run. Carrier optima about 12 (N₂), 25 (He) and 40 cm/s (H₂) with the same H<sub>min</sub> (Golay; Lesson 19.4). HPLC: linear-solvent-strength parameters at pH 2.5 in acetonitrile from the Lesson 25.5 data (log k<sub>w</sub>, S: paracetamol 0.90, 3.2; caffeine 1.30, 4.3; aspirin 2.10, 5.0; salicylic acid 2.30, 5.2), pKa from PubChem (aspirin 3.5, salicylic acid 2.97); the anion is taken as retained 2 % as strongly as the neutral acid, and the methanol parameters are illustrative. Columns: N = 10 000 for 150 × 4.6 mm, 5 µm; van Deemter data of Lesson 19.3 (packed GC: A 0.35 mm, B 6.0 mm cm/s, C 0.040 mm s/cm) and Lesson 19.5 (HPLC 5 µm: 5.0, 8.0, 4.0; 2.7 µm core–shell: 2.5, 8.0, 1.2 in µm and mm/s), with 74 bar at 0.92 mL/min (5 µm) and 486 bar at 1.76 mL/min (core–shell) for 100 mm. Model: Gaussian peaks (exponentially tailed when the column tails), widths from the plate number at the elution k, overload broadening and fronting above about 0.03 µg per compound, seeded noise.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="chromatography.js"></script>
+</body>
+</html>
