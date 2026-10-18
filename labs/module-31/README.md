@@ -8,7 +8,7 @@ Real quantum-chemistry runs on your own laptop with three free programs: Avogadr
 |---|---|---|---|---|
 | Avogadro | 2.0.0 | 2026-04-01 | BSD-3-Clause, free | https://avogadro.cc/install/ (installers also on https://github.com/OpenChemistry/avogadrolibs/releases/tag/2.0.0) |
 | xtb | 6.7.1 | 2024-07-23 (still the latest release) | LGPL-3.0, free | https://github.com/grimme-lab/xtb/releases/tag/v6.7.1 |
-| ORCA | 6.1.1 | announced 2025-12-09 | free for academic and private use under the ORCA EULA (version June 2025); commercial use needs a FACCTs licence | https://orcaforum.kofo.mpg.de/ (free registration) |
+| ORCA | 6.1.1 | announced 2025-12-09 | free for academic and private use under the ORCA EULA (version June 2025); commercial use needs a FACCTs licence | https://www.faccts.de/customer (free registration; older builds on https://orcaforum.kofo.mpg.de/) |
 | Python and packages | 3.14 with `labs/common/requirements.txt` (numpy, scipy, matplotlib, RDKit 2026.9.1) | — | open source | https://www.python.org/downloads/ |
 
 Optional, not needed for the lessons: CREST 3.0.2 (2024-08-25, conformer search on top of xtb, LGPL-3.0, Linux builds only: https://github.com/crest-lab/crest/releases).
@@ -42,7 +42,7 @@ Allow about 45 minutes the first time. You need about 2 GB of disk (ORCA is the 
    ```
 
    Open a new terminal and check with `& $env:XTB --version`. You can also add `C:\chem\xtb-6.7.1\bin` to your PATH instead.
-3. ORCA: register on https://orcaforum.kofo.mpg.de/, confirm the e-mail, accept the EULA in the Downloads section and download the ORCA 6.1.1 Windows 64-bit installer (`.exe` inside a zip). Run it with the "Typical" setup (serial programs only, which is all this module needs). It installs to `C:\Orca_6.1.1` or similar and sets PATH and ORCADIR. Open a new terminal and run `orca` with no arguments: it should print a short usage message.
+3. ORCA: register on the FACCTs customer portal, https://www.faccts.de/customer (since late 2025 downloads are there; other builds are still on https://orcaforum.kofo.mpg.de/ after login), confirm the e-mail, accept the EULA in the Downloads section and download the ORCA 6.1.1 Windows 64-bit installer (`.exe` inside a zip). Run it with the "Typical" setup (serial programs only, which is all this module needs). It installs to `C:\Orca_6.1.1` or similar and sets PATH and ORCADIR. Open a new terminal and run `orca` with no arguments: it should print a short usage message.
 4. Python: follow the setup below.
 
 ### macOS (Apple silicon or Intel)
@@ -62,7 +62,7 @@ Allow about 45 minutes the first time. You need about 2 GB of disk (ORCA is the 
    brew install xtb
    ```
 
-3. ORCA: from the forum's Downloads section take the macOS installer for your processor (a `.run` file; the forum lists separate builds for ARM64 and x86-64). Then:
+3. ORCA: from the Downloads section (FACCTs portal or forum) take the macOS installer for your processor (a `.run` file; the forum lists separate builds for ARM64 and x86-64). Then:
 
    ```bash
    chmod a+x orca_6_1_1_*.run
@@ -84,7 +84,7 @@ Allow about 45 minutes the first time. You need about 2 GB of disk (ORCA is the 
    ```
 
    Put the `export` line in `~/.bashrc` to keep it.
-3. ORCA: the Linux `.run` installer from the forum (`chmod a+x`, run it; add `-- -p /your/path` to choose the folder). The installer adds ORCA to PATH.
+3. ORCA: the Linux `.run` installer from the FACCTs portal's Downloads section (`chmod a+x`, run it; add `-- -p /your/path` to choose the folder). The installer adds ORCA to PATH.
 
 ### All systems: thread and stack settings for xtb
 

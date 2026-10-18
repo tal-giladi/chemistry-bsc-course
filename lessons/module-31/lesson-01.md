@@ -179,5 +179,5 @@ How you know it worked: three real frequencies, a bend near 1600 cm⁻¹ and two
 - [xtb documentation, Setup](https://xtb-docs.readthedocs.io/en/latest/setup.html) — conda-forge installation, `ulimit -s unlimited`, `OMP_STACKSIZE`, `OMP_NUM_THREADS`.
 - [FACCTs, ORCA 6.1.1](https://www.faccts.de/orca-6-1-1/) — release announcement and download locations; ORCA is free for academic and personal use, commercial licences from FACCTs.
 - [ORCA 6.1 manual, Installation](https://www.faccts.de/docs/orca/6.1/manual/contents/quickstartguide/installation.html) — installers for Windows, Linux and macOS, PATH setup, the bundled xtb.
-- [ORCA Forum](https://orcaforum.kofo.mpg.de/) — registration, downloads and the EULA (version June 2025), which defines academic and private use, forbids redistribution and requires citing F. Neese, WIREs Comput. Mol. Sci. 15, e70019 (2025).
+- [FACCTs customer portal](https://www.faccts.de/customer) — registration and current downloads; the [ORCA Forum](https://orcaforum.kofo.mpg.de/) keeps other builds and the EULA (version June 2025), which defines academic and private use, forbids redistribution and requires citing F. Neese, WIREs Comput. Mol. Sci. 15, e70019 (2025).
 - [NIST CODATA constants](https://physics.nist.gov/cuu/Constants/) — hartree energy and Avogadro constant (2022 values).
