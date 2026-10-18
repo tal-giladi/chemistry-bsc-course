@@ -2,7 +2,7 @@
 
 - Suggested slug: `chemistry`
 - GitHub repo: `tal-giladi/chemistry-bsc-course` (public)
-- Free or paid: suggestion — paid (very large, degree-scale course). Tal decides.
+- Free or paid: paid (Tal, 2026-10-18).
 - Risk notice: This course includes optional home experiments with kitchen and pharmacy materials; follow each lesson's safety notes, never buy or use laboratory reagents, and never mix bleach with acids or ammonia. It is self-study and does not award a degree or train you to work safely at a real lab bench.
 - One-line summary: The Technion B.Sc. in Chemistry, course by course, as a hands-on self-study path with simulated labs, real data and safe home experiments.
 - Who it is for: adults who want a university-level understanding of chemistry at about 10–12 hours a week, starting from high-school maths and science.
