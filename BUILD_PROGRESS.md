@@ -129,4 +129,5 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - sims batch 4 done (spectrometer, chromatography, voltammetry).
 - QA: glossary (1003 terms) + research log merged; 25 unquoted quiz options fixed (dry run flagged); 07.7 burette parallax fixed. Dry run: only organic-bench links left.
 - sims batch 5 done (nmr, organic-bench, ir-esr). check.py 0 errors; Academy dry run 0 problems. QA open: correct option is the longest in 57% of 1063 questions; rebalancing by agents.
-- [ ] QA: quiz length bias — correct option longest in 57.1% (target <= 30%)
+- [ ] QA: quiz length rank balance — pass 1 done (correct longest 3%), pass 2 (scripts/quiz_rank.py, curriculum/QUIZ-RANK-BRIEF.md) running for even ranks
+- quiz-bias agents each split into sub-agents (9 total, disjoint module ranges) against the 2-agent rule; briefs now forbid sub-agents. Verify with quiz_bias.py + check.py when done.
