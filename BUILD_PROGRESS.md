@@ -131,3 +131,6 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - sims batch 5 done (nmr, organic-bench, ir-esr). check.py 0 errors; Academy dry run 0 problems. QA open: correct option is the longest in 57% of 1063 questions; rebalancing by agents.
 - [ ] QA: quiz length rank balance — pass 1 done (correct longest 3%), pass 2 (scripts/quiz_rank.py, curriculum/QUIZ-RANK-BRIEF.md) running for even ranks
 - quiz-bias agents each split into sub-agents (9 total, disjoint module ranges) against the 2-agent rule; briefs now forbid sub-agents. Verify with quiz_bias.py + check.py when done.
+- PAUSED (session tokens ending). State: all 33 modules + 17 simulations committed and pushed; glossary/research merged; check.py 0 errors; Academy dry run 0 problems (before quiz pass 2).
+  Running at pause: quiz rank pass 2 (two agents, modules 1-16 and 17-33), uncommitted edits in *.quiz.yaml, progress in curriculum/status/quiz-rank.log.
+  RESUME: respawn "Follow curriculum/QUIZ-RANK-BRIEF.md for modules 1 to 16 (range 1 16)" and the same for 17 33 (they skip logged files); then py scripts/quiz_rank.py, py scripts/check.py, npm run check-course (0 problems), commit + push, update TODO_FOR_TAL.md to "ready to import" with repo + commit.
