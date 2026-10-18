@@ -27,7 +27,7 @@
         if (/^(https?:|mailto:|#|\/$)/.test(url)) return all;
         var path = url.split('#')[0].split('?')[0];
         var abs = resolve(file, path), q = url.slice(path.length);
-        if (bang) return '![' + text + '](' + location.pathname.replace(/[^/]*$/, '') + abs + q + ')';
+        if (bang) return '![' + text + '](' + location.origin + location.pathname.replace(/[^/]*$/, '') + abs + q + ')';
         if (/\.md$/.test(path)) return '[' + text + '](/' + abs + q + ')';
         if (/\.html$/.test(path)) return '[' + text + '](' + abs + q + ' \':ignore\')';
         var isDir = /\/$/.test(url) || !/\.[a-z0-9]+$/i.test(path);
