@@ -54,10 +54,10 @@
   question: >-
     A solution at 25 C has [OH-] = 1.0e-3 M. What is its pH?
   options:
-    - 3.00
-    - 11.00
-    - 7.00
-    - 14.00
+    - "3.00"
+    - "11.00"
+    - "7.00"
+    - "14.00"
   correct: 1
   explanation: >-
     pOH = -log10(1.0e-3) = 3.00, and pH = 14.00 - 3.00 = 11.00. Reporting 3.00 confuses pOH with pH.

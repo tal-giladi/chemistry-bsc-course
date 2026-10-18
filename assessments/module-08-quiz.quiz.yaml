@@ -58,10 +58,10 @@
     A cosmetics chemist needs a buffer at pH 5.0 and has acetic acid (pKa 4.74) and sodium acetate.
     What ratio of acetate to acetic acid should she use?
   options:
-    - 1 : 1, because a buffer always has equal amounts of acid and base.
-    - About 1.8 : 1, from 10 to the power (5.0 - 4.74).
-    - About 0.55 : 1, from 10 to the power (4.74 - 5.0).
-    - About 26 : 1, from (5.0 - 4.74) x 100.
+    - "1 : 1, because a buffer always has equal amounts of acid and base."
+    - "About 1.8 : 1, from 10 to the power (5.0 - 4.74)."
+    - "About 0.55 : 1, from 10 to the power (4.74 - 5.0)."
+    - "About 26 : 1, from (5.0 - 4.74) x 100."
   correct: 1
   explanation: >-
     Henderson-Hasselbalch: 5.0 = 4.74 + log10([A-]/[HA]), so the ratio is 10^0.26 = 1.8. A pH above the

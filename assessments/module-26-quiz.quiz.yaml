@@ -73,7 +73,7 @@
     - The data are noisy, and more points would make the wave disappear.
     - The fit is excellent, because the uncertainty in n is only 1 %.
     - The data are wrong at low pressure and those points should be removed.
-    - The Hill model is too simple: the real Hill slope varies, so the misfit is systematic.
+    - "The Hill model is too simple: the real Hill slope varies, so the misfit is systematic."
   correct: 3
   explanation: >-
     A structured residual pattern means the model is wrong, not the data. Real haemoglobin has a Hill

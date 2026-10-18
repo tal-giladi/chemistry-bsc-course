@@ -43,7 +43,7 @@
     with it 0.78 mM/min, with half the RMS residual. What does this tell you?
   options:
     - Both models are equally good, because each fits the data with one parameter.
-    - Product inhibition is real: glucose and fructose slow the enzyme as they accumulate.
+    - "Product inhibition is real: glucose and fructose slow the enzyme as they accumulate."
     - The enzyme loses activity over time, which the inhibition term happens to mimic.
     - The initial rates were measured wrongly, because Vmax should not depend on the model.
   correct: 1

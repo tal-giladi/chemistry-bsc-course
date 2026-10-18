@@ -19,7 +19,7 @@
     - Seven, one for each irrep in the list.
     - Nine, one for each vibrational mode.
     - Five, because all u modes are IR active.
-    - Three: A2u and the two Eu modes.
+    - "Three: A2u and the two Eu modes."
   correct: 3
   explanation: >-
     Only irreps that transform like x, y or z are IR active: A2u and Eu. The two Eu sets give one band each,

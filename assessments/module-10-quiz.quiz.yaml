@@ -81,7 +81,7 @@
     In a gravimetric sulfate determination the BaSO4 is weighed straight from the oven while still warm,
     and the crucible was never heated to constant mass. Which result do you expect?
   options:
-    - Unreliable: it reads light while warm and may hold water; cool and weigh to constant mass.
+    - "Unreliable: it reads light while warm and may hold water; cool and weigh to constant mass."
     - A high result, because warm BaSO4 takes up extra sulfate from the oven air.
     - A correct result, because BaSO4 is insoluble and its mass cannot change at all.
     - A low result only, which the gravimetric factor corrects when you calculate.

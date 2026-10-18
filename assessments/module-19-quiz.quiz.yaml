@@ -36,7 +36,7 @@
     - An ionisation interference, which lanthanum suppresses by releasing electrons.
     - A spectral interference from phosphate absorbing at the calcium line.
     - A drifting hollow-cathode lamp, which lanthanum ions stabilise.
-    - A chemical interference: phosphate held calcium in a compound that does not atomise.
+    - "A chemical interference: phosphate held calcium in a compound that does not atomise."
   correct: 3
   explanation: >-
     Phosphate binds calcium into a refractory compound in the flame. Lanthanum binds the phosphate
@@ -77,7 +77,7 @@
     - The same optimum velocity, so the method can stay unchanged.
     - A lower optimum velocity, so the flow must be reduced to keep the plates.
     - No change in efficiency, but the FID will stop working without helium.
-    - A higher, flatter optimum: raise the velocity, check resolution and revalidate.
+    - "A higher, flatter optimum: raise the velocity, check resolution and revalidate."
   correct: 3
   explanation: >-
     Hydrogen diffuses faster, so its van Deemter curve is flatter and its optimum lies at higher

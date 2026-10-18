@@ -5,7 +5,7 @@
   options:
     - The basis is still too small; keep enlarging it until the error disappears.
     - The geometry did not converge, because a larger basis must always lengthen bonds.
-    - The error comes from the method: Hartree-Fock lacks electron correlation.
+    - "The error comes from the method: Hartree-Fock lacks electron correlation."
     - The experimental value is wrong, since a complete basis gives the exact answer.
   correct: 2
   explanation: >-

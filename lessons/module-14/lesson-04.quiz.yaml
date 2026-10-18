@@ -45,7 +45,7 @@
     - Three modes and three IR bands, one for each atom.
     - Three modes and two IR bands, because one stretch is symmetric.
     - Four modes and four IR bands, because every mode absorbs at its own frequency.
-    - Four modes but two IR positions: nu1 is inactive and the two bends coincide.
+    - "Four modes but two IR positions: nu1 is inactive and the two bends coincide."
   correct: 3
   explanation: >-
     3N - 5 = 4 for a linear molecule: nu1, two degenerate nu2 bends and nu3. nu1 does not absorb and

@@ -97,9 +97,9 @@
     protein, which is normally 120 residues long?
   options:
     - A silent change, because TGG and TGA differ only in their last base.
-    - A missense change: Trp30 becomes another amino acid, length stays 120.
-    - A frameshift: every residue after 30 changes, length stays about 120.
-    - A nonsense change: translation stops early, giving a 29-residue fragment.
+    - "A missense change: Trp30 becomes another amino acid, length stays 120."
+    - "A frameshift: every residue after 30 changes, length stays about 120."
+    - "A nonsense change: translation stops early, giving a 29-residue fragment."
   correct: 3
   explanation: >-
     TGA (UGA in mRNA) is a stop codon, so the ribosome stops after residue 29. A single substitution

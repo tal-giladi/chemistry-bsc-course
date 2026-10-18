@@ -62,8 +62,8 @@ def check_quiz(path, lo, hi):
         for k in ("id", "question", "options", "correct", "explanation"):
             if k not in q: err(path, f"{qid}: missing {k}")
         opts = q.get("options") or []
-        if len(opts) != 4 or len(set(map(str, opts))) != 4:
-            err(path, f"{qid}: needs 4 distinct options"); continue
+        if len(opts) != 4 or len(set(map(str, opts))) != 4 or not all(isinstance(o, str) and o.strip() for o in opts):
+            err(path, f"{qid}: needs 4 distinct non-empty string options (quote numbers and text with ': ')"); continue
         c = q.get("correct")
         if not isinstance(c, int) or not 0 <= c <= 3:
             err(path, f"{qid}: correct must be 0-3"); continue

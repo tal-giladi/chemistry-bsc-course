@@ -17,7 +17,7 @@
 | PubChem Ammonia CID 222 | https://pubchem.ncbi.nlm.nih.gov/compound/222 | 2026-10-17 | pKb 4.751 at 25 °C (NH₄⁺ pKa 9.25) | 15.4, lab |
 | PubChem Benzoic acid CID 243 | https://pubchem.ncbi.nlm.nih.gov/compound/243 | 2026-10-17 | pKa 4.20 | 15.4 |
 | PubChem Chloroacetic acid CID 300; Trifluoroacetic acid CID 6422 | https://pubchem.ncbi.nlm.nih.gov/compound/300 | 2026-10-17 | pKa 2.87; 0.3 | 15.4 |
-| PubChem carvone CIDs 439570 and 16724 | https://pubchem.ncbi.nlm.nih.gov/compound/439570 | 2026-10-17 | (5R)-carvone is (−), SMILES CC1=CC[C@H](CC1=O)C(=C)C; (5S)-carvone is (+) (CID 16724) | 15.3, lab |
+| PubChem carvone CIDs 439570 and 16724 | https://pubchem.ncbi.nlm.nih.gov/compound/439570 | 2026-10-17 | (5R)-carvone is (−), SMILES `CC1=CC[C@H](CC1=O)C(=C)C`; (5S)-carvone is (+) (CID 16724) | 15.3, lab |
 | PubChem PUG REST SMILES of 17 lab molecules | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6324,6325,6326/property/SMILES/CSV | 2026-10-17 | SMILES in molecules.csv | 15.1 lab |
 | IUPAC 2013 Blue Book P-9 | https://iupac.qmul.ac.uk/BlueBook/P9.html | 2026-10-17 | page exists; CIP rules, R/S, E/Z | 15.3 |
 | OpenStax OC 11.3 | https://openstax.org/books/organic-chemistry/pages/11-3-characteristics-of-the-sn2-reaction | 2026-10-17 | nucleophile relative rates with CH₃Br (H₂O 1 … CN⁻, HS⁻ 125 000); substrate order; 200 000× HMPA vs methanol for azide + 1-bromobutane | 15.5 |

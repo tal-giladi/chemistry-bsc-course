@@ -32,7 +32,7 @@
     - The sign of rho should be positive, because chloride leaves with a negative charge.
     - Nothing, because sigma_p is the correct scale for every para substituent.
     - Methoxy should slow the reaction, because oxygen is more electronegative than carbon.
-    - Sigma-plus (-0.78) applies, because the lone pair conjugates with the cation: about 3500 times.
+    - "Sigma-plus (-0.78) applies, because the lone pair conjugates with the cation: about 3500 times."
   correct: 3
   explanation: >-
     A cation next to the ring is stabilised directly by a para donor's lone pair, which sigma_p does not

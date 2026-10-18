@@ -74,7 +74,7 @@ A tolerance is a limit, not a standard uncertainty. If any value inside $\pm t$ 
 
 ### Reading a meniscus
 
-Water in a narrow tube forms a curved surface, the **meniscus**. For clear liquids you read the **bottom** of the curve. Your eye must be level with it: looking from above makes the volume seem larger, from below smaller. This **parallax error** is systematic for a given habit, so it does not average out.
+Water in a narrow tube forms a curved surface, the **meniscus**. For clear liquids you read the **bottom** of the curve. Your eye must be level with it. On a cylinder or flask, whose scale counts upwards, looking from above makes the volume seem larger and from below smaller. A burette's scale counts downwards, so there looking from above gives a reading that is too low. This **parallax error** is systematic for a given habit, so it does not average out.
 
 ### Making a standard solution
 
@@ -193,7 +193,7 @@ The salt mass dominates because 0.041 g is 0.8 % of 5 g but only 0.04 % of 100 g
 
 - **Weighing directly onto paper and tipping it in.** Whatever stays on the paper is lost but counted. Weigh by difference.
 - **Measuring a standard in a beaker or graduated cylinder.** Their tolerances are percent-level. Use a volumetric flask, or work by mass.
-- **Reading the meniscus from above.** The volume looks larger. Put your eye level with the mark every time.
+- **Reading the meniscus from above.** On a cylinder the volume looks larger; on a burette the reading comes out low. Put your eye level with the mark every time.
 - **Forgetting purity.** Table salt is not 100 % NaCl; iodised salt and anti-caking agents add a few tenths of a percent or more. Include purity in the budget.
 - **Treating a tolerance as a standard uncertainty.** Divide a ±$t$ tolerance by $\sqrt{3}$ first.
 

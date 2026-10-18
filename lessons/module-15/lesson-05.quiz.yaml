@@ -5,7 +5,7 @@
   options:
     - Azide is too weak a nucleophile to react, so the product must come from the solvent alone.
     - The reaction is SN2, because tertiary substrates react in one concerted step.
-    - The reaction is SN1: the nucleophile enters after the rate-determining ionisation step.
+    - "The reaction is SN1: the nucleophile enters after the rate-determining ionisation step."
     - The azide has already been used up, so its concentration no longer matters.
   correct: 2
   explanation: >-

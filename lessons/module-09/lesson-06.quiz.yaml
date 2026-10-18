@@ -2,7 +2,7 @@
   question: >-
     You need a buffer at pH 7.4 that will absorb acid from many samples. Which choice is best?
   options:
-    - Acetic acid and acetate (pKa 4.76) in a 1 : 437 ratio, because Henderson–Hasselbalch gives pH 7.4.
+    - "Acetic acid and acetate (pKa 4.76) in a 1 : 437 ratio, because Henderson–Hasselbalch gives pH 7.4."
     - Phosphate, H₂PO₄⁻ and HPO₄²⁻ (pKa 7.20), at a concentration sized for the acid the samples add.
     - Very dilute phosphate, because a lower concentration makes the pH more stable.
     - Ammonium and ammonia (pKa 9.24), because a higher pKa resists acid better.

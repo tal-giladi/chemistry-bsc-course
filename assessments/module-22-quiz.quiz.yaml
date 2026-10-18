@@ -19,8 +19,8 @@
   options:
     - The colleague, because orders follow the coefficients of the balanced equation.
     - Neither, because half-lives cannot reveal orders without an endpoint value.
-    - The data, which show first order: only that half-life ignores the starting concentration.
-    - The data, which show zero order: the rate does not change with concentration.
+    - "The data, which show first order: only that half-life ignores the starting concentration."
+    - "The data, which show zero order: the rate does not change with concentration."
   correct: 2
   explanation: >-
     t1/2 is proportional to [A]0^(1-n); a constant half-life means n = 1. Coefficients give orders only

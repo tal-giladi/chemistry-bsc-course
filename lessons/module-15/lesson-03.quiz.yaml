@@ -39,7 +39,7 @@
     ee = 54.0/60.0 = 90 %, which is x_S - x_R. With x_S + x_R = 1 this gives 95 % S and 5 % R.
 - id: q4
   question: >-
-    Two SMILES are C[C@@H](O)CC and CC[C@H](C)O. A colleague says they are enantiomers because one
+    Two SMILES are `C[C@@H](O)CC` and `CC[C@H](C)O`. A colleague says they are enantiomers because one
     has @@ and the other @. What is the right way to decide?
   options:
     - Accept it, since @ and @@ always mean S and R regardless of how the string is written.

@@ -72,7 +72,7 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [ ] ir-esr
 
 ## After modules
-- [ ] merge glossary-inbox → glossary.md; research-inbox → references/research-log.md; template-inbox → templates/
+- [x] merge glossary-inbox → glossary.md; research-inbox → references/research-log.md (scripts/merge_inboxes.py)
 - [x] projects/ briefs (written with M33)
 - [ ] final QA: `py scripts/check.py` clean, `npm run check-course` 0 problems, git clean, TODO_FOR_TAL.md ready
 
@@ -127,3 +127,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - sims batch 2 done (titration, gravimetry, kinetics); batch 4 spawned.
 - sims batch 3 done (oscillators, rlc, quantum-box, boltzmann); batch 5 spawned.
 - sims batch 4 done (spectrometer, chromatography, voltammetry).
+- QA: glossary (1003 terms) + research log merged; 25 unquoted quiz options fixed (dry run flagged); 07.7 burette parallax fixed. Dry run: only organic-bench links left.
