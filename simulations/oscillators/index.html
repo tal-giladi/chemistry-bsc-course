@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscillators</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="oscillators.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Oscillators</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="single" aria-controls="tab-single" id="tabbtn-single">Mass on a spring</button>
+    <button type="button" data-tab="damped" aria-controls="tab-damped" id="tabbtn-damped">Damped ringdown</button>
+    <button type="button" data-tab="coupled" aria-controls="tab-coupled" id="tabbtn-coupled">Three coupled masses</button>
+    <button type="button" data-tab="co2" aria-controls="tab-co2" id="tabbtn-co2">CO₂ normal modes</button>
+  </div>
+
+  <!-- ===================== SINGLE ===================== -->
+  <section id="tab-single" aria-labelledby="tabbtn-single">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Spring and load</h2>
+          <div class="field"><label for="s-m">Hanging mass m / kg (phone + bag + added)</label><input type="number" id="s-m" min="0.010" max="2" step="0.005" value="0.200"></div>
+          <div class="field">
+            <label for="s-k">Spring constant k / N m⁻¹</label>
+            <output id="s-k-out" for="s-k">20.0</output>
+            <input type="range" id="s-k" min="1" max="60" step="0.1" value="20">
+          </div>
+          <div class="field"><label for="s-ms">Mass of the spring itself m<sub>s</sub> / g</label><input type="number" id="s-ms" min="0" max="200" step="1" value="0"></div>
+          <div class="field"><label for="s-A">Pull down before release / cm</label><input type="number" id="s-A" min="0.5" max="10" step="0.5" value="2"></div>
+          <div class="row"><label><input type="checkbox" id="s-tension"> Spring wound with built-in tension (0.4 N before it stretches)</label></div>
+          <div class="kv small" id="s-theory" aria-live="polite"></div>
+          <div class="row">
+            <button type="button" class="primary" id="s-go">Release</button>
+            <button type="button" id="s-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="s-seed"></span>. Local g = 9.795 m s⁻² (Israel).</p>
+        </div>
+        <div class="panel">
+          <h2>Take a reading</h2>
+          <div class="row">
+            <button type="button" id="s-static">Static: read the spring length</button>
+          </div>
+          <div class="row">
+            <button type="button" id="s-time10">Dynamic: stopwatch, 10 periods</button>
+            <button type="button" id="s-phy">Dynamic: phyphox period</button>
+          </div>
+          <p class="small muted">Change the mass between readings (for example 0.150 to 0.350 kg) and take three readings at each mass.</p>
+          <div class="log" id="s-log" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>The spring</h2>
+          <div class="anim-row">
+            <canvas id="s-anim" class="spring-canvas" aria-label="Animation of a mass bouncing on a vertical spring"></canvas>
+            <canvas id="s-plot" class="plot short" aria-label="Displacement of the mass against time"></canvas>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Analysis: two ways to measure k</h2>
+          <div class="cols-2">
+            <canvas id="s-fitL" class="plot short" aria-label="Spring length against hanging mass with the fitted line"></canvas>
+            <canvas id="s-fitT" class="plot short" aria-label="Period squared against hanging mass with the fitted line"></canvas>
+          </div>
+          <div class="kv" id="s-analysis"></div>
+        </div>
+        <div class="panel">
+          <h2>Your readings</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="s-table"><thead><tr><th>#</th><th>Method</th><th>m / kg</th><th>Reading</th><th>Derived</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row">
+            <button type="button" id="s-x-static">Static readings (CSV)</button>
+            <button type="button" id="s-x-dyn">Dynamic readings (CSV)</button>
+            <button type="button" id="s-clear">Clear readings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure</summary>
+        <ol>
+          <li>Weigh the spring alone and write down m<sub>s</sub>. Weigh every load, including the bag and string.</li>
+          <li>Static method: hang 50–300 g in steps, read the spring length each time between the same two points, and fit length against mass. k = g / slope.</li>
+          <li>Dynamic method: hang the phone, pull down 2 cm, release, wait two or three bounces, then measure the period. Repeat three times at each mass.</li>
+          <li>Fit T² against m with a free intercept. k = 4π² / slope, and intercept / slope = m<sub>eff</sub> ≈ m<sub>s</sub>/3.</li>
+          <li>Compare the two values of k using their combined uncertainty u<sub>c</sub> = √(u₁² + u₂²).</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The two methods are independent: one uses gravity and a ruler, the other a clock and no g at all. Agreement tests the oscillator model itself.</li>
+          <li>Timing 10 periods divides your reaction-time error by 10; phyphox finds the period from the autocorrelation of the accelerometer signal and is better still.</li>
+          <li>The spring's own coils move too. A free intercept in the T² fit measures that extra mass instead of hiding it inside a wrong slope.</li>
+          <li>The period does not depend on the amplitude while Hooke's law holds, so the size of the pull does not matter, as long as it is small.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>The real risk at home is dropping the phone: a hook that cannot slip, the phone sealed in a zip bag and tied on, cushions underneath, pulls of 2–3 cm only.</li>
+          <li>Keep faces away from a stretched spring; it can slip off and snap back.</li>
+          <li>Nothing in this experiment uses mains power.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Leaving out the spring's mass: the dynamic k comes out a few percent low and seems to disagree with the static one. Set m<sub>s</sub> = 30 g to see it.</li>
+          <li>Forcing the T² line through the origin hides m<sub>eff</sub> inside the slope.</li>
+          <li>A spring wound with built-in tension does not stretch at all until a minimum load: the lowest static points sit on a flat line. Drop them.</li>
+          <li>Overstretching past the elastic limit: the spring stays longer and k changes. Try a 2 kg load on a soft spring.</li>
+          <li>Stopwatch timing of a single period is dominated by your reaction time; time ten.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the static readings (<span class="mono">mass_kg,length_m</span>) and the dynamic ones (<span class="mono">mass_kg,trial,period_s</span>), the formats of the Module 14 lab folder, and run <span class="mono">lesson01_spring.py</span> on them. The uncertainty in k from a period is twice the relative uncertainty in T, because k ∝ 1/T².</p>
+      </details>
+      <p class="small muted">Not trained here: hanging a phone safely, releasing without a sideways swing, and reading a tape measure against a moving coil.</p>
+    </div>
+  </section>
+
+  <!-- ===================== DAMPED ===================== -->
+  <section id="tab-damped" aria-labelledby="tabbtn-damped" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Oscillator</h2>
+          <div class="field"><label for="d-scn">Set-up</label>
+            <select id="d-scn">
+              <option value="book">Textbook spring (m 0.200 kg, k 20.0 N/m, b 0.40 kg/s)</option>
+              <option value="steel">Phone on a steel spring</option>
+              <option value="card">Phone with a cardboard disc</option>
+              <option value="band">Phone on elastic hair bands</option>
+              <option value="custom">Custom (keep my values)</option>
+            </select>
+          </div>
+          <div class="field"><label for="d-m">Mass m / kg</label><input type="number" id="d-m" min="0.01" max="5" step="0.005" value="0.200"></div>
+          <div class="field"><label for="d-k">Spring constant k / N m⁻¹</label><input type="number" id="d-k" min="0.1" max="500" step="0.1" value="20.0"></div>
+          <div class="field"><label for="d-b">Linear damping b / kg s⁻¹</label><input type="number" id="d-b" min="0" max="50" step="0.01" value="0.40"></div>
+          <div class="field"><label for="d-c2">Quadratic air drag c / kg m⁻¹</label><input type="number" id="d-c2" min="0" max="20" step="0.01" value="0"></div>
+          <div class="field"><label for="d-beta">Anharmonicity β / m⁻² (F = −kx(1 + βx²))</label><input type="number" id="d-beta" min="-200" max="200" step="1" value="0"></div>
+          <div class="field"><label for="d-A">Pull before release / cm</label><input type="number" id="d-A" min="0.2" max="15" step="0.1" value="3"></div>
+          <div class="field"><label for="d-noise">Accelerometer noise / m s⁻²</label><input type="number" id="d-noise" min="0" max="1" step="0.005" value="0.015"></div>
+          <div class="field"><label for="d-dur">Record for / s</label><input type="number" id="d-dur" min="5" max="120" step="5" value="20"></div>
+          <div class="kv small" id="d-theory" aria-live="polite"></div>
+          <div class="row">
+            <button type="button" class="primary" id="d-run">Record a ringdown</button>
+            <button type="button" id="d-play">Play it back</button>
+            <button type="button" id="d-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="d-seed"></span>. Sampling at 100 Hz, like a phone accelerometer.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Recording</h2>
+          <div class="row">
+            <div class="field inline"><label for="d-show">Show</label><select id="d-show"><option value="a">acceleration (what the phone measures)</option><option value="x">displacement (true)</option></select></div>
+            <canvas id="d-anim" class="spring-canvas small-spring" aria-label="Animation of the damped mass"></canvas>
+          </div>
+          <canvas id="d-plot" class="plot" aria-label="Recorded signal against time with the peaks marked"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Analysis</h2>
+          <div class="field inline"><label for="d-thr">Use peaks larger than this many noise SDs</label><input type="number" id="d-thr" min="0" max="50" step="1" value="10"></div>
+          <div class="cols-2">
+            <canvas id="d-peaks" class="plot short" aria-label="Natural log of the peak heights against time with the fitted line"></canvas>
+            <canvas id="d-freq" class="plot short" aria-label="Frequency in short windows against amplitude"></canvas>
+          </div>
+          <div class="kv" id="d-analysis"></div>
+          <div class="row">
+            <button type="button" id="d-x-rec">Recording (CSV, phyphox columns)</button>
+            <button type="button" id="d-x-peaks">Peaks (CSV)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure</summary>
+        <ol>
+          <li>Hang the phone on the spring, pull down about 3 cm, release gently and start recording "acceleration without g".</li>
+          <li>Let it ring for 20–60 s, stop, export the data as CSV.</li>
+          <li>Find the peak of each cycle and plot ln(peak) against time. The slope is −γ.</li>
+          <li>Fit the full damped cosine starting from the peak-method γ and the measured frequency.</li>
+          <li>Q = ω₀/2γ ≈ π/δ. Repeat with a cardboard disc (more drag) and with elastic bands (anharmonic).</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The envelope e<sup>−γt</sup> is first-order decay, so a semi-log plot of the peaks is a straight line if the damping is linear in velocity. A curved plot tells you the model is wrong.</li>
+          <li>The phone measures acceleration, but for light damping a ≈ −ω₀²x, so the acceleration decays with the same envelope.</li>
+          <li>Small peaks are pushed up by noise (the highest of several noisy samples is biased high), so they flatten the decay and make Q too high. The threshold drops them.</li>
+          <li>Windowed frequencies show anharmonicity: a softening oscillator (β &lt; 0) speeds up as it calms down.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>As for the spring: a hook that cannot slip, the phone in a zip bag tied on, cushions underneath, small pulls.</li>
+          <li>Elastic hair bands can snap: check them for cracks, never stretch past about twice their length, and wear safety glasses.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Using γ where 2γ is needed: the amplitude decays at γ, the energy at 2γ, and Q = ω₀/2γ.</li>
+          <li>Fitting peaks lost in the noise: set the threshold to 0 and watch Q rise.</li>
+          <li>Pulling too far with a card attached: quadratic air drag makes the start of the semi-log plot curve downwards.</li>
+          <li>Calling every frequency drift anharmonicity: check first that the phone is not twisting or swinging sideways.</li>
+          <li>Raising b past 2√(mk): the motion becomes critically damped, then overdamped, and there are no peaks to fit.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>The recording exports as <span class="mono">Time (s)</span> plus three acceleration columns, like phyphox; the spring axis is column 3, so <span class="mono">py lesson02_damping.py my_spring.csv 3</span> reads it. The peak table gives ln(peak) against t for your own straight-line fit; the slope's standard uncertainty gives u(γ) and so u(Q) = Q u(γ)/γ.</p>
+      </details>
+      <p class="small muted">Not trained here: releasing a phone without a jerk or a sideways swing, and spotting a twisting motion by eye.</p>
+    </div>
+  </section>
+
+  <!-- ===================== COUPLED ===================== -->
+  <section id="tab-coupled" aria-labelledby="tabbtn-coupled" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Chain</h2>
+          <div class="field"><label for="c-cfg">Set-up</label>
+            <select id="c-cfg">
+              <option value="walls">Three masses between two walls (four springs)</option>
+              <option value="free">Free chain (two springs, no walls)</option>
+              <option value="pend">Three pendulums joined by rubber bands</option>
+            </select>
+          </div>
+          <div class="field"><label for="c-m">Outer masses m₁ = m₃ / kg</label><input type="number" id="c-m" min="0.01" max="5" step="0.005" value="0.100"></div>
+          <div class="field"><label for="c-m2">Middle mass m₂ / kg</label><input type="number" id="c-m2" min="0.01" max="5" step="0.005" value="0.100"></div>
+          <div class="field" id="c-k-f"><label for="c-k">Spring constant k / N m⁻¹</label><input type="number" id="c-k" min="0.01" max="500" step="0.1" value="10.0"></div>
+          <div class="field" id="c-L-f"><label for="c-L">Pendulum length L / m</label><input type="number" id="c-L" min="0.1" max="3" step="0.005" value="0.500"></div>
+          <div class="field" id="c-kap-f"><label for="c-kap">Rubber band (effective) κ / N m⁻¹</label><input type="number" id="c-kap" min="0" max="10" step="0.01" value="0.24"></div>
+          <div class="field"><label for="c-start">Start the motion</label>
+            <select id="c-start">
+              <option value="1">in the shape of mode 1</option>
+              <option value="2">in the shape of mode 2</option>
+              <option value="3">in the shape of mode 3</option>
+              <option value="m1">pull mass 1 only</option>
+            </select>
+          </div>
+          <div class="row"><label><input type="checkbox" id="c-hand" checked> Release by hand (a few percent of the other modes mix in)</label></div>
+          <div class="row">
+            <button type="button" class="primary" id="c-go">Release</button>
+            <button type="button" id="c-time10">Stopwatch: 10 swings</button>
+            <button type="button" id="c-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="c-seed"></span>.</p>
+          <div class="log" id="c-log" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Motion</h2>
+          <canvas id="c-anim" class="chain-canvas" aria-label="Animation of three coupled masses"></canvas>
+          <canvas id="c-plot" class="plot" aria-label="Displacement of each mass against time"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Normal modes (K v = ω² M v)</h2>
+          <div class="table-wrap">
+            <table class="data" id="c-modes"><thead><tr><th>Mode</th><th>ω / rad s⁻¹</th><th>f / Hz</th><th>ω/√(k/m)</th><th>Shape (1, 2, 3)</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv small" id="c-extra"></div>
+        </div>
+        <div class="panel">
+          <h2>Your timings</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="c-table"><thead><tr><th>#</th><th>Mode</th><th>Trial</th><th>t₁₀ / s</th><th>ω² / s⁻²</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="c-analysis"></div>
+          <div class="row">
+            <button type="button" id="c-x">Timings (CSV)</button>
+            <button type="button" id="c-x-tr">Displacements (CSV)</button>
+            <button type="button" id="c-clear">Clear timings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure</summary>
+        <ol>
+          <li>Hang three equal pendulums (lengths equal within 2 mm) and join neighbours with rubber bands, slightly stretched.</li>
+          <li>Excite each mode by releasing all three bobs in its shape: (1, 1, 1), (1, 0, −1), (1, −2, 1).</li>
+          <li>Time 10 swings of each mode, three times.</li>
+          <li>Convert to ω² and fit ω² = g/L + cλ with λ = 0, 1, 3.</li>
+          <li>Finally release bob 1 alone and note when its swing has moved to the others.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>In a normal mode every mass moves at one frequency, so timing it is like timing a single pendulum. Any other start mixes modes and the timing has no single meaning.</li>
+          <li>Eigenvalues are ω², not ω; the shapes are the eigenvectors. With unequal masses you must solve K v = ω² M v, not K v = ω² v.</li>
+          <li>The middle mass is still in mode 2 by symmetry, so changing m₂ cannot change that mode's frequency.</li>
+          <li>Pulling one mass starts all modes at once; their frequencies differ, so they drift out of step and the swing wanders along the chain at the beat frequency.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>Light bobs (bags of rice, small plastic bottles), never glass; a broom handle taped down so it cannot roll; small swings, faces out of the path.</li>
+          <li>Rubber bands under tension can snap: wear safety glasses.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Releasing mode 3 slightly off its shape mixes in modes 1 and 2: the amplitude beats and the timing scatters. Untick "release by hand" to see a perfect release.</li>
+          <li>Forgetting M in the eigenproblem: with a heavy middle mass the frequencies come out wrong.</li>
+          <li>Treating the zero mode of the free chain as an error: it is the whole chain sliding, a translation.</li>
+          <li>Bands too slack or too high on the strings: the coupling c becomes tiny and modes 1 and 2 have almost the same period.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the timings as <span class="mono">mode,trial,t10_s</span> (the format of <span class="mono">coupled_pendulums_example.csv</span>) and run <span class="mono">lesson03_modes.py</span>. The fit here uses the same straight line ω² = ω₀² + cλ; g/L gives L to compare with your tape measure.</p>
+      </details>
+      <p class="small muted">Not trained here: tying equal pendulums, setting the band tension, and releasing three bobs at once.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CO2 ===================== -->
+  <section id="tab-co2" aria-labelledby="tabbtn-co2" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Molecule and force field</h2>
+          <div class="field"><label for="o-mC">Carbon isotope</label><select id="o-mC"><option value="12.0000">¹²C (12.0000 u)</option><option value="13.0034">¹³C (13.0034 u)</option></select></div>
+          <div class="field"><label for="o-mO">Oxygen isotope</label><select id="o-mO"><option value="15.9949">¹⁶O (15.9949 u)</option><option value="17.9992">¹⁸O (17.9992 u)</option></select></div>
+          <div class="field"><label for="o-k">Bond stretch constant k / N m⁻¹</label><input type="number" id="o-k" min="0" max="5000" step="1" value="1547"></div>
+          <div class="field"><label for="o-k12">Bond–bond interaction k₁₂ / N m⁻¹</label><input type="number" id="o-k12" min="-1000" max="1000" step="1" value="128"></div>
+          <div class="field"><label for="o-kd">Bending constant k<sub>δ</sub> / aJ rad⁻²</label><input type="number" id="o-kd" min="0" max="10" step="0.001" value="0.769"></div>
+          <div class="field"><label for="o-r">C=O bond length r / Å</label><input type="number" id="o-r" min="0.8" max="2" step="0.01" value="1.16"></div>
+          <div class="row">
+            <button type="button" id="o-fit1">One constant: fit k to ν₃, k₁₂ = 0</button>
+            <button type="button" id="o-fit2">Fit k and k₁₂ to ν₁ and ν₃</button>
+            <button type="button" id="o-k120">Set k₁₂ = 0</button>
+            <button type="button" id="o-def">Default constants</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Animate a mode</h2>
+          <div class="field"><label for="o-mode">Mode</label><select id="o-mode"><option value="1">ν₁ symmetric stretch</option><option value="2">ν₂ bend</option><option value="3">ν₃ antisymmetric stretch</option></select></div>
+          <div class="row"><button type="button" class="primary" id="o-go">Start</button><button type="button" id="o-rec">Record these wavenumbers</button></div>
+          <p class="small muted">Motion slowed down about 10¹⁴ times and amplitudes exaggerated about 30 times.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>The molecule</h2>
+          <canvas id="o-anim" class="co2-canvas" aria-label="Animation of the CO2 atoms in the chosen normal mode, with the dipole moment"></canvas>
+          <div class="table-wrap">
+            <table class="data" id="o-modes"><thead><tr><th>Mode</th><th>Model / cm⁻¹</th><th>Measured / cm⁻¹</th><th>Shape (O, C, O)</th><th>Dipole change</th><th>Seen in</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="o-extra"></div>
+        </div>
+        <div class="panel">
+          <h2>Predicted spectrum</h2>
+          <canvas id="o-spec" class="plot short" aria-label="Predicted IR and Raman lines with the measured positions"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Recorded predictions</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="o-table"><thead><tr><th>#</th><th>Molecule</th><th>k</th><th>k₁₂</th><th>k<sub>δ</sub></th><th>ν₁</th><th>ν₂</th><th>ν₃</th><th>ν₃/ν₁</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row"><button type="button" id="o-x">Predictions (CSV)</button><button type="button" id="o-clear">Clear</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure</summary>
+        <ol>
+          <li>Start with one force constant (k₁₂ = 0) fitted to ν₃ and see how badly ν₁ comes out.</li>
+          <li>Add the interaction constant k₁₂ and fit both stretches; fit k<sub>δ</sub> to the bend.</li>
+          <li>Keep the force constants and change only the masses (¹³C, ¹⁸O) to predict isotope shifts.</li>
+          <li>Decide from each mode shape whether the dipole moment changes, and so whether the band appears in the IR spectrum.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>With one constant, ν₃/ν₁ = √(1 + 2m<sub>O</sub>/m<sub>C</sub>) = 1.915 whatever k is; the measured ratio is 1.762. Only an extra constant can fix that.</li>
+          <li>The potential comes from the electrons and does not depend on the nuclear masses (Born–Oppenheimer), so the same k, k₁₂, k<sub>δ</sub> must describe every isotopologue.</li>
+          <li>The carbon stands still in ν₁, so ¹³C cannot move ν₁; ¹⁸O moves every mode.</li>
+          <li>With partial charges −q, +2q, −q the dipole change is the charge-weighted sum of the mode shape. Zero means IR inactive.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>Nothing here is hazardous; the real spectrum comes from the NIST WebBook. In a laboratory, CO₂ cylinders are high-pressure gas: chained, with a regulator, and CO₂ displaces air in closed rooms.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Using the reduced mass of one C=O bond for CO₂; the modes involve all three atoms.</li>
+          <li>Expecting three IR bands for three atoms: there are four vibrations, ν₁ is IR inactive and the two bends coincide.</li>
+          <li>Forgetting the bend's degeneracy in the zero-point energy.</li>
+          <li>Shifting ν₁ for ¹³C.</li>
+          <li>Comparing harmonic model values with fundamentals: real fundamentals sit a few percent below the harmonic values (CCCBDB harmonic 1351, 672, 2396 cm⁻¹).</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Record each model you try and export the table. In <span class="mono">lesson04_co2.py</span> you solve the same two equations: k + k₁₂ = m<sub>O</sub>ω₁² and k − k₁₂ = ω₃²/(1/m<sub>O</sub> + 2/m<sub>C</sub>).</p>
+      </details>
+      <p class="small muted">Not trained here: recording an IR spectrum (gas cell, background, resolution). The model is harmonic and ignores the Fermi resonance of ν₁ with 2ν₂.</p>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    Data: CO₂ fundamentals 1333 (unperturbed), 667 and 2349 cm⁻¹ (NIST CCCBDB); ¹³CO₂ ν₃ 2282.4 cm⁻¹ in CO₂ ice (SSHADE); atomic masses ¹²C 12.0000, ¹³C 13.0034, ¹⁶O 15.9949, ¹⁸O 17.9992 u (NIST); atomic mass constant and c from CODATA 2022; local gravity 9.795 m s⁻² as in lesson 14.1. Model: Hooke's-law springs with linear and quadratic damping and a cubic anharmonic term, integrated with fourth-order Runge–Kutta; normal modes from the mass-weighted force-constant matrix (Jacobi diagonalisation); stopwatch reaction noise about 0.08 s, phyphox period noise 0.003 s, Gaussian accelerometer noise.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="oscillators.js"></script>
+<script src="oscillators-modes.js"></script>
+</body>
+</html>

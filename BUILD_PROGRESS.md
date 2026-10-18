@@ -60,10 +60,10 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] titration
 - [x] gravimetry
 - [x] kinetics
-- [ ] oscillators
-- [ ] rlc
-- [ ] quantum-box
-- [ ] boltzmann
+- [x] oscillators
+- [x] rlc
+- [x] quantum-box
+- [x] boltzmann
 - [ ] spectrometer
 - [ ] chromatography
 - [ ] voltammetry
@@ -125,3 +125,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - sims batch 1 done (common, measurement-error, glassware, gas-laws, calorimetry). QA: fix 07.7 parallax wording (burette reads low from above). Batch 2 spawned.
 - M31 done.
 - sims batch 2 done (titration, gravimetry, kinetics); batch 4 spawned.
+- sims batch 3 done (oscillators, rlc, quantum-box, boltzmann); batch 5 spawned.

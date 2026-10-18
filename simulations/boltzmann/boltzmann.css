@@ -1,0 +1,3 @@
+/* boltzmann: page-specific styles (shared ones are in ../common/sim.css) */
+[hidden] { display: none !important; }
+#bm-Wtable-wrap { max-height: 200px; }

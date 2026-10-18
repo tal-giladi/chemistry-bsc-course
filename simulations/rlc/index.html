@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RLC circuits</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="rlc.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>RLC circuits</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="dc" aria-controls="tab-dc" id="tabbtn-dc">DC resistor network</button>
+    <button type="button" data-tab="resonance" aria-controls="tab-res" id="tabbtn-resonance">AC resonance and Q</button>
+  </div>
+
+  <!-- ===================== DC ===================== -->
+  <section id="tab-dc" aria-labelledby="tabbtn-dc">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Bench</h2>
+          <div class="field"><label for="dc-bat">Source</label>
+            <select id="dc-bat">
+              <option value="ideal">Lab supply set to exactly 3.00 V</option>
+              <option value="fresh">Two fresh AA alkaline cells</option>
+              <option value="tired">Two tired AA cells</option>
+            </select>
+          </div>
+          <div class="row"><label><input type="checkbox" id="dc-tol"> Real resistors (5 % tolerance: the true values are unknown until you measure them)</label></div>
+          <div class="field"><label for="dc-R1">R1 (nominal) / Ω</label><input type="number" id="dc-R1" min="1" max="1000000" step="1" value="220"></div>
+          <div class="field"><label for="dc-R2">R2 (nominal) / Ω</label><input type="number" id="dc-R2" min="1" max="1000000" step="1" value="470"></div>
+          <div class="field"><label for="dc-R3">R3 (nominal) / Ω</label><input type="number" id="dc-R3" min="1" max="1000000" step="1" value="330"></div>
+          <div class="field"><label for="dc-R4">R4 (nominal) / Ω</label><input type="number" id="dc-R4" min="1" max="1000000" step="1" value="1000"></div>
+          <div class="row"><label><input type="checkbox" id="dc-conn" checked> Battery connected</label></div>
+          <div class="row"><button type="button" id="dc-rerun">Re-run (new seed: new resistors and meter)</button></div>
+          <p class="small muted">Seed: <span class="mono" id="dc-seed"></span>.</p>
+        </div>
+        <div class="panel">
+          <h2>Multimeter (3½ digits)</h2>
+          <div class="field"><label for="dc-mode">Function</label>
+            <select id="dc-mode">
+              <option value="V">DC volts (10 MΩ input)</option>
+              <option value="ohm">Ω (resistance)</option>
+              <option value="mA">DC mA (current range, about 1 Ω inside)</option>
+            </select>
+          </div>
+          <div class="field"><label for="dc-red">Red probe on</label>
+            <select id="dc-red"><option value="P">battery + (top of R1)</option><option value="A" selected>node A</option><option value="B">node B</option><option value="N">battery −</option></select>
+          </div>
+          <div class="field"><label for="dc-black">Black probe on</label>
+            <select id="dc-black"><option value="P">battery + (top of R1)</option><option value="A">node A</option><option value="B">node B</option><option value="N" selected>battery −</option></select>
+          </div>
+          <div class="row"><span class="readout" id="dc-display" aria-live="polite">—</span><span class="small muted" id="dc-unit"></span></div>
+          <div class="row">
+            <button type="button" class="primary" id="dc-read">Read the meter</button>
+            <button type="button" id="dc-fuse" hidden>Replace the meter's fuse</button>
+          </div>
+          <div class="row">
+            <span class="small">Out of the board, Ω:</span>
+            <button type="button" id="dc-o1">R1</button><button type="button" id="dc-o2">R2</button><button type="button" id="dc-o3">R3</button><button type="button" id="dc-o4">R4</button>
+          </div>
+          <div class="log" id="dc-log" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Circuit</h2>
+          <canvas id="dc-circ" class="circ-canvas" aria-label="Circuit diagram of the ladder network with the probe positions"></canvas>
+          <p class="small muted">Two cells feed R1 to node A; R2 goes from A to the battery minus; R3 from A to node B; R4 from B to the battery minus.</p>
+        </div>
+        <div class="panel">
+          <h2>Predict before you read</h2>
+          <div class="kv" id="dc-pred"></div>
+        </div>
+        <div class="panel">
+          <h2>Your readings</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="dc-table"><thead><tr><th>#</th><th>Function</th><th>Red</th><th>Black</th><th>Battery</th><th>Reading</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="dc-check"></div>
+          <div class="row">
+            <button type="button" id="dc-x">Network file (CSV, quantity,value,note)</button>
+            <button type="button" id="dc-x-all">All readings (CSV)</button>
+            <button type="button" id="dc-clear">Clear readings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure</summary>
+        <ol>
+          <li>Measure each resistor alone on the Ω range, before it goes on the board.</li>
+          <li>Build the network with the battery disconnected and measure the resistance between the two points where the battery will connect: R1 + R2 ∥ (R3 + R4).</li>
+          <li>Connect the battery. Set DC volts, black probe on battery minus and leave it there.</li>
+          <li>Read the battery voltage at its terminals with the network connected, then V<sub>A</sub> and V<sub>B</sub>.</li>
+          <li>Check Kirchhoff's voltage law: the voltages across R1 and across R2 add up to V<sub>s</sub>.</li>
+          <li>Predict V<sub>A</sub> and V<sub>B</sub> from your measured resistances and V<sub>s</sub>, and compare.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>Resistors differ from their printed value by up to their tolerance (gold band, 5 %); predictions from measured values agree with readings to about 1 %.</li>
+          <li>An ohmmeter drives its own small current; any other current in the circuit spoils the reading, so resistance is measured unpowered.</li>
+          <li>A voltmeter goes across a component and has about 10 MΩ inside, so it barely disturbs the circuit. Compute currents from voltages with Ohm's law.</li>
+          <li>The battery voltage is read with the load connected because a cell's internal resistance makes it sag under load.</li>
+          <li>Writing the current law at nodes A and B gives two linear equations: a 2 × 2 matrix problem.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>AA or AAA alkaline cells in a holder only: never mains sockets, chargers, power banks, lithium-ion packs or coin cells (a swallowed coin cell burns through tissue).</li>
+          <li>Never join the battery terminals with a wire or with the meter on its current range: that is a short circuit; the wire gets hot and the cell can leak. Try it here with the mA function across the battery.</li>
+          <li>Every resistor here dissipates well under its 0.25 W rating, so nothing gets warm.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>A meter on the current range across a battery or a resistor shorts it (this one blows its fuse).</li>
+          <li>Measuring resistance in a powered circuit gives a meaningless number.</li>
+          <li>Swapped probes give a negative reading; the size is still right.</li>
+          <li>A tired battery reads fine with nothing connected and sags under load: compare the terminal voltage with the battery connected and disconnected.</li>
+          <li>Predicting from printed values instead of measured ones: differences up to 5 % are tolerance, not a broken law.</li>
+          <li>A very large resistor network: the 10 MΩ meter starts to load it. Set R4 to 2 MΩ and read V<sub>B</sub>.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>The network file has the format of <span class="mono">network_example.csv</span> (Module 4 lab folder): the battery voltage, the four measured resistances and V<sub>A</sub>, V<sub>B</sub>, from your latest matching readings. <span class="mono">lesson04_network.py</span> solves the node equations from them. A 3½-digit meter is good to about ±(0.5 % + 2 digits).</p>
+      </details>
+      <p class="small muted">Not trained here: plugging parts into the right breadboard rows, holding probes steady, and reading resistor colour bands.</p>
+    </div>
+  </section>
+
+  <!-- ===================== RESONANCE ===================== -->
+  <section id="tab-res" aria-labelledby="tabbtn-resonance" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Parts</h2>
+          <div class="field"><label for="rs-L">Inductor L (printed) / mH</label><input type="number" id="rs-L" min="0.01" max="1000" step="0.1" value="10"></div>
+          <div class="field"><label for="rs-C">Capacitor C (printed) / µF</label><input type="number" id="rs-C" min="0.001" max="100" step="0.01" value="1.0"></div>
+          <div class="field"><label for="rs-R">Resistor R / Ω</label><input type="number" id="rs-R" min="0.1" max="10000" step="0.1" value="10"></div>
+          <div class="field"><label for="rs-Rc">Coil wire resistance / Ω</label><input type="number" id="rs-Rc" min="0" max="500" step="0.1" value="28"></div>
+          <div class="row"><label><input type="checkbox" id="rs-real"> Real parts (L and C within their tolerance, coil losses grow at kHz)</label></div>
+          <div class="field"><label for="rs-fault">Breadboard</label>
+            <select id="rs-fault">
+              <option value="none">built correctly</option>
+              <option value="open">capacitor in the wrong row (open circuit)</option>
+              <option value="short">a jumper shorts the inductor</option>
+              <option value="c104">capacitor marked 104 (0.1 µF) instead of 105</option>
+            </select>
+          </div>
+          <div class="kv small" id="rs-theory"></div>
+          <div class="row"><button type="button" id="rs-rerun">Re-run (new seed: new parts and meter)</button></div>
+          <p class="small muted">Seed: <span class="mono" id="rs-seed"></span>.</p>
+        </div>
+        <div class="panel">
+          <h2>Phone tone and meter</h2>
+          <div class="row"><label><input type="checkbox" id="rs-plug" checked> Phone plugged in, sine tone running</label></div>
+          <div class="field"><label for="rs-vol">Phone volume / %</label><input type="number" id="rs-vol" min="0" max="100" step="1" value="33"></div>
+          <div class="field">
+            <label for="rs-fs">Tone frequency / Hz</label>
+            <output id="rs-f-out" for="rs-fs">1600</output>
+            <input type="range" id="rs-fs" min="2" max="4" step="0.002" value="3.204">
+          </div>
+          <div class="field"><label for="rs-f">… or type it / Hz</label><input type="number" id="rs-f" min="100" max="10000" step="1" value="1600"></div>
+          <div class="field"><label for="rs-range">AC range</label>
+            <select id="rs-range"><option value="200m">200 mV (fixed)</option><option value="2">2 V (fixed)</option><option value="auto">auto-range</option></select>
+          </div>
+          <div class="row"><span class="readout" id="rs-display" aria-live="polite">—</span><span class="small muted" id="rs-disp-what"></span></div>
+          <div class="row">
+            <button type="button" class="primary" id="rs-meas">Read V<sub>in</sub> and V<sub>R</sub> at this frequency</button>
+          </div>
+          <div class="row">
+            <button type="button" id="rs-list">Measure the lesson's 17 frequencies</button>
+            <button type="button" id="rs-ohmR">Ω: resistor</button>
+            <button type="button" id="rs-ohmL">Ω: coil</button>
+          </div>
+          <div class="log" id="rs-log" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Circuit</h2>
+          <canvas id="rs-circ" class="circ-canvas short" aria-label="Series RLC circuit driven by the phone, with the two meter positions"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Resonance curve H = V<sub>R</sub>/V<sub>in</sub></h2>
+          <div class="row">
+            <label><input type="checkbox" id="rs-true"> Show the model's true curve</label>
+            <label><input type="checkbox" id="rs-phase"> Show the phase (what an oscilloscope would add)</label>
+          </div>
+          <canvas id="rs-plot" class="plot tall" aria-label="Measured ratio against frequency on a log axis with the fitted curve and the half-power band"></canvas>
+          <canvas id="rs-phplot" class="plot short" aria-label="Phase of the current against frequency" hidden></canvas>
+          <div class="row"><button type="button" class="primary" id="rs-fit">Fit f₀, Q and A</button></div>
+          <div class="kv" id="rs-analysis"></div>
+        </div>
+        <div class="panel">
+          <h2>Your readings</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="rs-table"><thead><tr><th>#</th><th>f / Hz</th><th>V<sub>in</sub> / mV</th><th>V<sub>R</sub> / mV</th><th>Ranges</th><th>H</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row">
+            <button type="button" id="rs-x">Readings (CSV, f_Hz,Vin_mV,VR_mV)</button>
+            <button type="button" id="rs-undo">Delete the last row</button>
+            <button type="button" id="rs-clear">Clear readings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure</summary>
+        <ol>
+          <li>With nothing connected, measure the resistor and the coil on the ohmmeter.</li>
+          <li>Build tip → inductor → capacitor → resistor → sleeve, with the resistor at the sleeve (ground) end.</li>
+          <li>Turn the phone volume to about a third, start a single sine tone, then plug in.</li>
+          <li>On AC volts, adjust the volume so that V<sub>in</sub> stays under 200 mV at every frequency (check 300 Hz), and fix the meter on the 200 mV range.</li>
+          <li>At each frequency read V<sub>in</sub> and then V<sub>R</sub>. Put most points between 0.7 f₀ and 1.4 f₀.</li>
+          <li>Fit H = A/√(1 + Q²(f/f₀ − f₀/f)²); get R<sub>tot</sub> = R/A, L = QR<sub>tot</sub>/2πf₀, C = 1/(2πf₀QR<sub>tot</sub>).</li>
+          <li>Swap the 10 Ω resistor for 47 Ω, predict Q first, and check at a few frequencies.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The phone's output changes with frequency and load, and a cheap meter reads AC less accurately at high frequency. Both multiply V<sub>in</sub> and V<sub>R</sub> by the same factor on one range, so the ratio cancels them.</li>
+          <li>At f₀ = 1/(2π√(LC)) the reactances cancel and |Z| = R<sub>tot</sub>, so the current is largest; the half-power width is f₀/Q.</li>
+          <li>The circuit equation L q̈ + R q̇ + q/C = V is the driven spring: L is the mass, R the friction, 1/C the stiffness.</li>
+          <li>The ohmmeter's coil reading is a DC value; a coil loses a little more at kilohertz, so the fitted R<sub>tot</sub> comes out a few ohms higher.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>Battery or USB power only: a phone on its own battery, never a mains adapter, mains amplifier or speaker system.</li>
+          <li>No earphones while the tone runs, and volume down before plugging in: a full-volume tone can damage hearing.</li>
+          <li>Never join tip and sleeve directly; the series resistor protects the phone's output. Use a film or ceramic capacitor, not an electrolytic one.</li>
+          <li>Measure resistance only with the plug pulled out.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Letting the meter auto-range: V<sub>in</sub> and V<sub>R</sub> are read on different ranges with different frequency responses, and the ratio no longer cancels them.</li>
+          <li>Too much volume: the 200 mV range overloads ("1" on the left of the display) at low frequency.</li>
+          <li>Ignoring the coil's resistance: with only the 10 Ω resistor in R<sub>tot</sub> the predicted Q is 10, four times too high.</li>
+          <li>No peak at all: the capacitor is open (wrong row). V<sub>R</sub> almost equal to V<sub>in</sub> everywhere: something is shorted. A peak near 5 kHz: a 0.1 µF capacitor.</li>
+          <li>Readings jumpy above about 3 kHz: cheap meters are only specified for AC up to a few hundred hertz or 1 kHz.</li>
+          <li>A linear grid of frequencies wastes points far from the peak.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the readings as <span class="mono">f_Hz,Vin_mV,VR_mV</span> (the format of <span class="mono">rlc_example.csv</span>) and run <span class="mono">lesson06_rlc.py</span> with your ohmmeter values in <span class="mono">R_OHM</span> and <span class="mono">R_COIL_DC</span>. The fit here uses the same weights as the lab script: u(H) = H√2 × 0.5 % combined with one count (0.1 mV) on V<sub>R</sub>, and parameter uncertainties from the weighted covariance; χ² per degree of freedom near 1 means the 0.5 % was honest.</p>
+      </details>
+      <p class="small muted">Not trained here: breadboarding, soldering a 3.5 mm plug, and using an oscilloscope to see the phase swing from +90° to −90° across the resonance.</p>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    Model: DC network solved by nodal analysis with the meter as part of the circuit (10 MΩ voltmeter, about 1 Ω on the current range, fuse at 200 mA); 3½-digit display with ±(0.5 % + 2 digits)-sized errors. AC: series impedance Z = R + R<sub>coil</sub> + R<sub>core</sub>(f) + j(ωL − 1/ωC) driven by a phone output of about 10 Ω, a meter whose AC response falls off differently on each range, 0.5 % reading noise rising above 3 kHz. Cell data: fresh AA alkaline about 1.58 V and 0.15 Ω per cell (typical datasheet values). Constants: none beyond 2π.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="rlc.js"></script>
+</body>
+</html>

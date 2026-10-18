@@ -1,0 +1,5 @@
+/* rlc: page-specific styles (shared ones are in ../common/sim.css) */
+.circ-canvas { width: 100%; height: 230px; display: block; border-radius: 6px; }
+.circ-canvas.short { height: 170px; }
+.readout.ol { color: #ffb36b; }
+[hidden] { display: none !important; }

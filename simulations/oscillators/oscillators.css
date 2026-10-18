@@ -1,0 +1,9 @@
+/* oscillators: page-specific styles (shared ones are in ../common/sim.css) */
+.field.inline { flex: 1 1 220px; margin: 4px 0; }
+.anim-row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: stretch; }
+.spring-canvas { width: 120px; height: 220px; display: block; border-radius: 6px; }
+.spring-canvas.small-spring { width: 90px; height: 120px; flex: 0 0 90px; }
+.chain-canvas { width: 100%; height: 170px; display: block; border-radius: 6px; margin-bottom: 8px; }
+.co2-canvas { width: 100%; height: 190px; display: block; border-radius: 6px; margin-bottom: 8px; }
+@media (max-width: 420px) { .anim-row { grid-template-columns: 90px 1fr; } .spring-canvas { width: 90px; } }
+[hidden] { display: none !important; }

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boltzmann distribution</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="boltzmann.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Boltzmann distribution</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="two" aria-controls="tab-two" id="tabbtn-two">Two levels</button>
+    <button type="button" data-tab="ladder" aria-controls="tab-ladder" id="tabbtn-ladder">Energy ladder</button>
+    <button type="button" data-tab="rotor" aria-controls="tab-rotor" id="tabbtn-rotor">Rigid rotor</button>
+    <button type="button" data-tab="micro" aria-controls="tab-micro" id="tabbtn-micro">Microstates</button>
+  </div>
+
+  <!-- ===================== TWO LEVELS ===================== -->
+  <section id="tab-two" aria-labelledby="tabbtn-two">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Levels</h2>
+          <div class="field"><label for="b2-sys">System</label>
+            <select id="b2-sys">
+              <option value="Cl">Cl atom: ²P₃/₂ (g = 4) and ²P₁/₂ (g = 2) at 882.35 cm⁻¹</option>
+              <option value="I">I atom: ²P₃/₂ (g = 4) and ²P₁/₂ (g = 2) at 7602.98 cm⁻¹</option>
+              <option value="NO">NO: ²Π₁/₂ (g = 2) and ²Π₃/₂ (g = 2) about 120 cm⁻¹ higher</option>
+              <option value="custom">custom</option>
+            </select>
+          </div>
+          <div class="field"><label for="b2-eps">Gap ε / cm⁻¹</label><input type="number" id="b2-eps" min="0.01" max="100000" step="0.01" value="882.3515"></div>
+          <div class="field"><label for="b2-g0">Degeneracy of the lower level g₀</label><input type="number" id="b2-g0" min="1" max="20" step="1" value="4"></div>
+          <div class="field"><label for="b2-g1">Degeneracy of the upper level g₁</label><input type="number" id="b2-g1" min="1" max="20" step="1" value="2"></div>
+          <div class="field">
+            <label for="b2-T">Temperature T / K</label>
+            <output id="b2-T-out" for="b2-T">298</output>
+            <input type="range" id="b2-T" min="0" max="4.3" step="0.001" value="2.4744">
+          </div>
+          <div class="kv small" id="b2-out" aria-live="polite"></div>
+        </div>
+        <div class="panel">
+          <h2>Count molecules (a spectroscopist's measurement)</h2>
+          <div class="field"><label for="b2-N">Molecules counted per reading</label><input type="number" id="b2-N" min="10" max="1000000" step="10" value="1000"></div>
+          <div class="row">
+            <button type="button" class="primary" id="b2-count">Count at this temperature</button>
+            <button type="button" id="b2-rerun">Re-run (new seed)</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="b2-seed"></span>. Each reading counts N molecules drawn at random from the distribution, like reading two line intensities.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Populations</h2>
+          <div class="cols-2">
+            <canvas id="b2-bars" class="plot short" aria-label="Fraction of molecules in the lower and upper level"></canvas>
+            <canvas id="b2-curve" class="plot short" aria-label="Upper-level fraction and electronic heat capacity against temperature"></canvas>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Your counts</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="b2-table"><thead><tr><th>#</th><th>T / K</th><th>n₀</th><th>n₁</th><th>ln[(n₁/g₁)/(n₀/g₀)]</th></tr></thead><tbody></tbody></table>
+          </div>
+          <canvas id="b2-fit" class="plot short" aria-label="Log of the population ratio per state against inverse temperature with the fitted line"></canvas>
+          <div class="kv" id="b2-fitout"></div>
+          <div class="row"><button type="button" id="b2-x">Counts (CSV)</button><button type="button" id="b2-clear">Clear</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The rule</summary>
+        <ol>
+          <li>Each level i holds g<sub>i</sub> states; a molecule in a bath at T occupies it with probability p<sub>i</sub> = g<sub>i</sub>e<sup>−E<sub>i</sub>/k<sub>B</sub>T</sup>/q.</li>
+          <li>Ratios need no q: N₁/N₀ = (g₁/g₀)e<sup>−ε/k<sub>B</sub>T</sup>, with ε/k<sub>B</sub> = 1.438777 cm K × ε in cm⁻¹.</li>
+          <li>The mean energy, heat capacity and entropy follow from q; the two-level C<sub>V</sub> has a peak (the Schottky anomaly).</li>
+          <li>Measured the other way round: ln[(N₁/g₁)/(N₀/g₀)] against 1/T is a straight line of slope −ε/k<sub>B</sub>.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>Degeneracy can beat the exponential, so always count states, not levels.</li>
+          <li>Heating alone can only bring the upper level towards (g₁/g₀) times the lower one; more than that (a laser's population inversion) needs pumping.</li>
+          <li>Counting a finite number of molecules gives binomial scatter: ln(ratio) has variance about 1/n₀ + 1/n₁, so cold readings with few excited molecules are the noisiest.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous here. In a lab, populations at high temperature come from flames and furnaces (burns, gas hazards), and halogen atoms from corrosive, toxic Cl₂ and I₂.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Forgetting degeneracy: with g = 1 for both Cl levels you get the wrong limit, the wrong q and the wrong heat capacity.</li>
+          <li>Mixing units: ε/k<sub>B</sub>T must be dimensionless. With ε in J/mol use R, not k<sub>B</sub>.</li>
+          <li>Measuring from different zeros for different levels.</li>
+          <li>Giving one molecule a temperature: T belongs to the bath.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the counts (T_K, n_lower, n_upper) and fit ln[(n₁/g₁)/(n₀/g₀)] against 1/T. The slope's standard uncertainty from the fit gives u(ε). The fitted gap should agree with the gap you set within its uncertainty; more molecules per reading shrink the scatter as 1/√N.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== LADDER ===================== -->
+  <section id="tab-ladder" aria-labelledby="tabbtn-ladder" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Ladder</h2>
+          <div class="field"><label for="bl-sys">System</label>
+            <select id="bl-sys">
+              <option value="reduced">reduced units: spacing ε = 1, T in units of ε/k</option>
+              <option value="I2">I₂ vibration (213.27 cm⁻¹)</option>
+              <option value="N2">N₂ vibration (2329.92 cm⁻¹)</option>
+              <option value="HCl">HCl vibration (2885.3 cm⁻¹)</option>
+            </select>
+          </div>
+          <div class="row"><label><input type="checkbox" id="bl-anh"> Anharmonic levels up to D₀ (molecules only)</label></div>
+          <div class="row"><label><input type="checkbox" id="bl-two"> Compare with a two-level system of the same spacing</label></div>
+          <div class="field">
+            <label for="bl-T" id="bl-T-label">Temperature T / (ε/k<sub>B</sub>)</label>
+            <output id="bl-T-out" for="bl-T">1.00</output>
+            <input type="range" id="bl-T" min="-1.5" max="1.3" step="0.001" value="0">
+          </div>
+          <div class="kv small" id="bl-out" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Populations and heat capacity</h2>
+          <div class="cols-2">
+            <canvas id="bl-bars" class="plot short" aria-label="Fraction of molecules in each level of the ladder"></canvas>
+            <canvas id="bl-curve" class="plot short" aria-label="Heat capacity and partition function against temperature"></canvas>
+          </div>
+          <div class="row"><button type="button" id="bl-x">q, U, C_V and S against T (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The rule</summary>
+        <ol>
+          <li>Harmonic ladder from v = 0: q = 1/(1 − e<sup>−x</sup>), x = θ<sub>vib</sub>/T, θ<sub>vib</sub> = hcν̃/k<sub>B</sub>.</li>
+          <li>U − U(0) = Rθ<sub>vib</sub>/(e<sup>x</sup> − 1), C<sub>V</sub>/R = x²e<sup>x</sup>/(e<sup>x</sup> − 1)² (Einstein), S/R = x/(e<sup>x</sup> − 1) − ln(1 − e<sup>−x</sup>).</li>
+          <li>Anharmonic: sum G(v) − G(0) = ω<sub>e</sub>v − ω<sub>e</sub>x<sub>e</sub>v(v + 1) directly, up to the dissociation energy D₀.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>q counts the thermally accessible states: it starts at 1 and grows with T.</li>
+          <li>A ladder never saturates, so C<sub>V</sub> rises to R and stays there; a two-level system fills up and its C<sub>V</sub> falls back to zero.</li>
+          <li>Soft bonds (I₂) store heat at room temperature, stiff ones (N₂, HCl) do not.</li>
+          <li>Anharmonic levels crowd together and add a little heat capacity at high T: the 0.25 % gap of N₂ at 1000 K.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous here. I₂ vapour is toxic and corrosive; the heat capacities come from spectra, not from heating it.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Using ω<sub>e</sub> instead of the fundamental ω<sub>e</sub> − 2ω<sub>e</sub>x<sub>e</sub> with energies measured from v = 0.</li>
+          <li>Expecting a ladder to show a Schottky peak.</li>
+          <li>Mixing C<sub>V</sub> and C<sub>p</sub>: internal motions add the same amount to both.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export q, U − U(0), C<sub>V</sub>/R and S/R on a grid of temperatures and compare with <span class="mono">lesson02_partition.py</span>: I₂ gives q = 1.56 and C<sub>V,vib</sub> = 7.62 J mol⁻¹ K⁻¹ at 298.15 K; N₂ gives C<sub>V,vib</sub>/R = 0.4224 at 1000 K.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== ROTOR ===================== -->
+  <section id="tab-rotor" aria-labelledby="tabbtn-rotor" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Rotor</h2>
+          <div class="field"><label for="br-mol">Molecule (B₀ from NIST)</label>
+            <select id="br-mol">
+              <option value="HCl">HCl, B₀ = 10.4398 cm⁻¹, σ = 1</option>
+              <option value="N2">N₂, B₀ = 1.98958 cm⁻¹, σ = 2</option>
+              <option value="CO">CO, B₀ = 1.92253 cm⁻¹, σ = 1</option>
+              <option value="O2">O₂, B₀ = 1.42971 cm⁻¹, σ = 2</option>
+              <option value="I2">I₂, B₀ = 0.037315 cm⁻¹, σ = 2</option>
+              <option value="H2">H₂, B₀ = 59.322 cm⁻¹, σ = 2</option>
+            </select>
+          </div>
+          <div class="row"><label><input type="checkbox" id="br-ns"> Nuclear-spin statistics (homonuclear molecules)</label></div>
+          <div class="field">
+            <label for="br-T">Temperature T / K</label>
+            <output id="br-T-out" for="br-T">298</output>
+            <input type="range" id="br-T" min="0" max="3.3" step="0.001" value="2.4744">
+          </div>
+          <div class="kv small" id="br-out" aria-live="polite"></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Populations and the partition function</h2>
+          <canvas id="br-bars" class="plot short" aria-label="Fraction of molecules in each rotational level"></canvas>
+          <canvas id="br-q" class="plot" aria-label="Exact and high-temperature rotational partition function against temperature"></canvas>
+          <div class="row"><button type="button" id="br-x">q_rot against T (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The rule</summary>
+        <ol>
+          <li>Exact: q<sub>rot</sub> = (1/σ) Σ (2J + 1) e<sup>−θ<sub>rot</sub>J(J + 1)/T</sup>, θ<sub>rot</sub> = hcB/k<sub>B</sub>.</li>
+          <li>High temperature: q<sub>rot</sub> = T/(σθ<sub>rot</sub>); a better approximation is (T/σθ<sub>rot</sub>)(1 + θ<sub>rot</sub>/3T + θ<sub>rot</sub>²/15T²).</li>
+          <li>S<sub>rot</sub> = R(ln q + T d ln q/dT); in the high-temperature limit R(ln q + 1).</li>
+          <li>For a homonuclear molecule, nuclear-spin statistics weight even and odd J differently (N₂ 6 : 3, H₂ 1 : 3, ¹⁶O₂ only odd J); on average that is the 1/σ.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>Use B₀, because nearly every molecule is in v = 0.</li>
+          <li>The symmetry number lowers the rotational entropy by R ln σ (5.76 J mol⁻¹ K⁻¹ for σ = 2).</li>
+          <li>The high-temperature formula fails when T approaches θ<sub>rot</sub>: about 5 % for HCl at 100 K, and about 10 % for H₂ even at room temperature.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous here. Hydrogen is extremely flammable, CO toxic and HCl corrosive; the spectra behind B are measured in sealed cells.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Forgetting σ: +R ln σ in the entropy of N₂, O₂, I₂.</li>
+          <li>Applying T/σθ<sub>rot</sub> to H₂ or at low temperature.</li>
+          <li>Using B<sub>e</sub> instead of B₀.</li>
+          <li>Dividing by σ and also applying nuclear-spin weights: that counts the symmetry twice.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export q<sub>rot</sub> (exact and high-T) and S<sub>rot</sub> against T. With <span class="mono">lesson03_molecular_q.py</span>: HCl q<sub>rot</sub> = 20.19 (sum) against 19.85 (high-T) at 298 K; N₂ S<sub>rot</sub> = 41.18 J mol⁻¹ K⁻¹.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== MICROSTATES ===================== -->
+  <section id="tab-micro" aria-labelledby="tabbtn-micro" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Two Einstein solids in contact</h2>
+          <div class="field"><label for="bm-NA">Oscillators in solid A</label><input type="number" id="bm-NA" min="1" max="2000" step="1" value="3"></div>
+          <div class="field"><label for="bm-NB">Oscillators in solid B</label><input type="number" id="bm-NB" min="1" max="2000" step="1" value="3"></div>
+          <div class="field"><label for="bm-q">Quanta shared</label><input type="number" id="bm-q" min="0" max="2000" step="1" value="6"></div>
+          <div class="row"><button type="button" id="bm-big">300 + 200 oscillators, 100 quanta</button></div>
+          <div class="kv small" id="bm-out"></div>
+        </div>
+        <div class="panel">
+          <h2>The exchange game</h2>
+          <div class="field"><label for="bm-cups">Cups (oscillators), each starting with one coin</label><input type="number" id="bm-cups" min="2" max="2000" step="1" value="10"></div>
+          <div class="row">
+            <button type="button" class="primary" id="bm-play">20 snapshots</button>
+            <button type="button" id="bm-play1000">1000 snapshots</button>
+            <button type="button" id="bm-reset">Reset the cups</button>
+          </div>
+          <p class="small muted">Seed: <span class="mono" id="bm-seed"></span>. A move: pick a random non-empty cup, take a coin, drop it into a random cup. 20 moves to forget the start, then a snapshot every 5 moves.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Multiplicity of each split</h2>
+          <canvas id="bm-W" class="plot short" aria-label="Probability of each split of the quanta between the two solids"></canvas>
+          <div class="table-wrap scroll-y" id="bm-Wtable-wrap">
+            <table class="data" id="bm-Wtable"><thead><tr><th>q<sub>A</sub></th><th>W<sub>A</sub></th><th>W<sub>B</sub></th><th>W<sub>A</sub>W<sub>B</sub></th><th>Probability</th></tr></thead><tbody></tbody></table>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Coins per cup</h2>
+          <canvas id="bm-hist" class="plot short" aria-label="Tally of coins per cup with the exact and Boltzmann distributions"></canvas>
+          <div class="kv small" id="bm-hout"></div>
+          <div class="row"><button type="button" id="bm-x">Tally (CSV, n,count)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The rule</summary>
+        <ol>
+          <li>q identical quanta among N oscillators: W(N, q) = (q + N − 1)!/(q!(N − 1)!).</li>
+          <li>Every microstate of an isolated system is equally likely, so a split is as probable as its share of W<sub>A</sub>W<sub>B</sub>.</li>
+          <li>At the most probable split ∂ln W<sub>A</sub>/∂q<sub>A</sub> = ∂ln W<sub>B</sub>/∂q<sub>B</sub>: the two solids have the same temperature.</li>
+          <li>One cup among many is a molecule in a bath: its coins follow a Boltzmann (geometric) distribution.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>With 3 + 3 oscillators the even split has only 22 % of the microstates; with 300 + 200 almost all lie near the peak. For a mole no deviation is ever seen.</li>
+          <li>Nothing pushes the coins into the geometric shape; it simply has the most microstates.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>The kitchen version uses coins: a choking hazard, so keep it away from small children and pets.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Recording before the start is forgotten: the first snapshots still show one coin per cup.</li>
+          <li>Too few snapshots: the tally scatters by several percent; that scatter is the fluctuation that vanishes for 10²³ molecules.</li>
+          <li>Thinking the uneven split is forbidden: it is only rarer.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the tally as <span class="mono">n,count</span> and run <span class="mono">py lesson01_microstates.py my_cups.csv</span>. The ratio N(n + 1)/N(n) = e<sup>−ε/k<sub>B</sub>T</sup> gives the temperature of the bath in units of the quantum.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    Constants: CODATA 2022 (k<sub>B</sub>, h, c, R; hc/k<sub>B</sub> = 1.438777 cm K). Levels: Cl and I ²P₁/₂ at 882.3515 and 7602.9762 cm⁻¹ (NIST Atomic Spectra Database); NO ²Π₃/₂ about 120 cm⁻¹ (as in lesson 21.1); diatomic constants N₂, CO, HCl, O₂, I₂ from the NIST Chemistry WebBook (Huber and Herzberg) as in labs/module-21/stat21.py; H₂ B₀ = 59.322 cm⁻¹ (B<sub>e</sub> 60.853, α<sub>e</sub> 3.062, NIST). Dissociation energies D₀: I₂ 12 440.7 cm⁻¹ (NIST-JANAF), N₂ 9.759 eV, HCl 4.43 eV.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="boltzmann.js"></script>
+</body>
+</html>

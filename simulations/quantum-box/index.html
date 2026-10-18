@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quantum box</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="quantum-box.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Quantum box</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="box" aria-controls="tab-box" id="tabbtn-box">Particle in a box</button>
+    <button type="button" data-tab="tunnel" aria-controls="tab-tunnel" id="tabbtn-tunnel">Tunnelling</button>
+    <button type="button" data-tab="oscillator" aria-controls="tab-osc" id="tabbtn-oscillator">Vibrations</button>
+    <button type="button" data-tab="rotor" aria-controls="tab-rotor" id="tabbtn-rotor">Rotor and hydrogen</button>
+    <button type="button" data-tab="dye" aria-controls="tab-dye" id="tabbtn-dye">Dye series</button>
+  </div>
+
+  <!-- ===================== BOX ===================== -->
+  <section id="tab-box" aria-labelledby="tabbtn-box">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Box and particle</h2>
+          <div class="field">
+            <label for="qb-L">Box length L / nm</label>
+            <output id="qb-L-out" for="qb-L">1.00</output>
+            <input type="range" id="qb-L" min="0.2" max="3" step="0.01" value="1">
+          </div>
+          <div class="field"><label for="qb-mass">Particle</label>
+            <select id="qb-mass"><option value="1">electron</option><option value="206.7682827">muon (207 mₑ)</option><option value="1836.15267343">proton (1836 mₑ)</option></select>
+          </div>
+          <div class="field"><label for="qb-walls">Walls</label>
+            <select id="qb-walls"><option value="inf">infinitely high</option><option value="fin">finite height V₀</option></select>
+          </div>
+          <div class="field" id="qb-V0-f"><label for="qb-V0">Wall height V₀ / eV</label><input type="number" id="qb-V0" min="0.01" max="100" step="0.01" value="1.00"></div>
+          <div class="field"><label for="qb-N">Grid points inside the box</label><input type="number" id="qb-N" min="10" max="1500" step="1" value="200"></div>
+          <div class="field"><label for="qb-n">States to show</label><input type="number" id="qb-n" min="1" max="10" step="1" value="5"></div>
+          <div class="field"><label for="qb-show">Draw</label><select id="qb-show"><option value="psi">ψ (wavefunction)</option><option value="psi2">ψ² (probability density)</option></select></div>
+        </div>
+        <div class="panel">
+          <h2>Where is the particle?</h2>
+          <div class="field"><label for="qb-x1">Region from (fraction of L)</label><input type="number" id="qb-x1" min="0" max="1" step="0.01" value="0.333"></div>
+          <div class="field"><label for="qb-x2">to (fraction of L)</label><input type="number" id="qb-x2" min="0" max="1" step="0.01" value="0.667"></div>
+          <div class="row"><button type="button" id="qb-conv">Convergence test (error against grid spacing)</button></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Levels and wavefunctions</h2>
+          <canvas id="qb-plot" class="plot tall" aria-label="Potential, energy levels and wavefunctions"></canvas>
+          <div class="table-wrap">
+            <table class="data" id="qb-table"><thead><tr><th>n</th><th>E (numerical) / eV</th><th>E (exact, infinite walls) / eV</th><th>Relative error</th><th>Nodes</th><th>P(region)</th><th>P(inside the walls)</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="qb-extra"></div>
+          <div class="row"><button type="button" id="qb-x">Energies (CSV)</button><button type="button" id="qb-xpsi">Wavefunctions (CSV)</button></div>
+        </div>
+        <div class="panel" id="qb-conv-panel" hidden>
+          <h2>Convergence: error of E₁ against grid spacing</h2>
+          <canvas id="qb-cplot" class="plot short" aria-label="Log-log plot of the relative error of the ground-state energy against the number of grid points"></canvas>
+          <div class="kv small" id="qb-ctext"></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The method</summary>
+        <ol>
+          <li>Put ψ on a grid of points spaced Δx apart; the second derivative becomes (ψ<sub>i+1</sub> − 2ψ<sub>i</sub> + ψ<sub>i−1</sub>)/Δx².</li>
+          <li>The Schrödinger equation becomes a tridiagonal matrix H with 2t + V(x<sub>i</sub>) on the diagonal and −t beside it, t = ħ²/(2mΔx²).</li>
+          <li>The eigenvalues of H are the energies, the eigenvectors (divided by √Δx) the normalised wavefunctions. Points outside the grid are ψ = 0: an infinite wall.</li>
+          <li>Check against the exact E<sub>n</sub> = n²h²/(8mL²), then use the same solver where no formula exists.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>Quantisation is not put in by hand: only certain E give a ψ that fits the walls.</li>
+          <li>The central-difference error shrinks as Δx²: halve the spacing and the energy error drops about four times. Higher states curve more and need more points per half-wave.</li>
+          <li>A finite wall lets ψ leak in as e<sup>−κx</sup>; the levels drop below the infinite-box values and only a few states stay bound.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous: this is computation. The dyes that the box describes are lab reagents (see the Dye series tab).</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Too few grid points: set 25 and compare the error of n = 5 with that of n = 1.</li>
+          <li>A finite well on a grid that stops at the wall: the wavefunction is forced to zero there and the energies come out too high. The solver here extends the grid 1 nm into each wall.</li>
+          <li>Forgetting that there is no n = 0: the lowest energy is above the bottom of the box.</li>
+          <li>Reading ψ instead of ψ² as a probability.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the energy table and the wavefunctions and compare them with your own solver in <span class="mono">lesson02_box.py</span>: the first five energies should match 0.37603 n² eV (electron, 1.00 nm) to better than 10⁻³ with 200 points.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== TUNNEL ===================== -->
+  <section id="tab-tunnel" aria-labelledby="tabbtn-tunnel" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Set-up</h2>
+          <div class="field"><label for="qt-mode">System</label>
+            <select id="qt-mode"><option value="rect">rectangular barrier</option><option value="dw">double well (ammonia umbrella)</option></select>
+          </div>
+          <div id="qt-rect">
+            <div class="field"><label for="qt-E">Particle energy E / eV</label><input type="number" id="qt-E" min="0.001" max="50" step="0.01" value="1.00"></div>
+            <div class="field"><label for="qt-V0">Barrier height V₀ / eV</label><input type="number" id="qt-V0" min="0" max="50" step="0.01" value="2.00"></div>
+            <div class="field">
+              <label for="qt-d">Barrier width d / nm</label>
+              <output id="qt-d-out" for="qt-d">0.50</output>
+              <input type="range" id="qt-d" min="0.01" max="1.2" step="0.01" value="0.5">
+            </div>
+            <div class="field"><label for="qt-m">Particle</label>
+              <select id="qt-m"><option value="1">electron</option><option value="206.7682827">muon</option><option value="1836.15267343">proton</option><option value="3670.48296788">deuteron</option></select>
+            </div>
+            <div class="row"><button type="button" id="qt-rec">Record this case</button></div>
+          </div>
+          <div id="qt-dw" hidden>
+            <div class="field"><label for="qt-Vb">Barrier height V<sub>b</sub> / cm⁻¹</label><input type="number" id="qt-Vb" min="10" max="20000" step="10" value="2020"></div>
+            <div class="field"><label for="qt-a">Minima at ±a, a / Å</label><input type="number" id="qt-a" min="0.1" max="1.2" step="0.01" value="0.40"></div>
+            <div class="field"><label for="qt-mu">Effective mass</label>
+              <select id="qt-mu"><option value="2.487">NH₃ (2.487 u)</option><option value="4.22">ND₃ (4.22 u)</option><option value="1.007">a single H atom (1.007 u)</option></select>
+            </div>
+            <div class="row"><label><input type="checkbox" id="qt-loc"> Show the localised states (ψ₀ ± ψ₁)/√2</label></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2 id="qt-h1">Wavefunction</h2>
+          <canvas id="qt-plot" class="plot" aria-label="Potential and wavefunctions"></canvas>
+          <canvas id="qt-plot2" class="plot short" aria-label="Transmission against barrier width, or the probability of finding the molecule in the right-hand well against time"></canvas>
+          <div class="kv" id="qt-out"></div>
+        </div>
+        <div class="panel" id="qt-recpanel">
+          <h2>Recorded cases</h2>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="qt-table"><thead><tr><th>#</th><th>Particle</th><th>E / eV</th><th>V₀ / eV</th><th>d / nm</th><th>κ / nm⁻¹</th><th>T exact</th><th>T thick-barrier</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row"><button type="button" id="qt-x">Recorded cases (CSV)</button><button type="button" id="qt-clear">Clear</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The method</summary>
+        <ol>
+          <li>Inside a barrier higher than E the wave decays as e<sup>−κx</sup>, κ = √(2m(V₀ − E))/ħ, and |ψ|² as e<sup>−2κx</sup>: a straight line on the log plot.</li>
+          <li>Matching ψ and its slope at both edges gives T = [1 + V₀² sinh²(κd)/(4E(V₀ − E))]⁻¹; for κd ≫ 1, T ≈ 16(E/V₀)(1 − E/V₀)e<sup>−2κd</sup>.</li>
+          <li>For a double well, solve the same finite-difference matrix as in the box: the two lowest states are a symmetric and an antisymmetric pair, split by Δ.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The exponent grows with the width, with √m and with √(V₀ − E): doubling the mass is like making the barrier 41 % wider.</li>
+          <li>The antisymmetric state must pass through zero at the barrier, so it curves more and lies higher; a molecule started in one well flips at the frequency Δ/h.</li>
+          <li>Comparing H and D (or NH₃ and ND₃) separates tunnelling from zero-point effects: tunnelling makes the isotope ratio huge.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous here. Ammonia itself is toxic and corrosive (gas, and concentrated solutions); the umbrella model needs no sample.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Using V₀ instead of V₀ − E in κ.</li>
+          <li>Forgetting the factor 2 in e<sup>−2κd</sup>: answers off by orders of magnitude.</li>
+          <li>Using the thick-barrier formula when κd &lt; 1: compare the two columns at d = 0.1 nm.</li>
+          <li>Thinking the transmitted particle lost energy: E is the same on both sides; only the amplitude shrinks.</li>
+          <li>The double-well splitting depends exponentially on a and V<sub>b</sub>: change a from 0.40 to 0.38 Å and watch Δ.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Record T for several widths and plot ln T against d: the slope is −2κ. <span class="mono">lesson03_tunnel.py</span> gives 0.777, 0.169, 0.0235 and 1.42 × 10⁻⁴ for an electron with E = 1 eV, V₀ = 2 eV and d = 0.1, 0.3, 0.5, 1.0 nm.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== OSCILLATOR ===================== -->
+  <section id="tab-osc" aria-labelledby="tabbtn-oscillator" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Molecule</h2>
+          <div class="field"><label for="qo-mol">Diatomic</label>
+            <select id="qo-mol"><option value="HCl">H³⁵Cl</option><option value="DCl">D³⁵Cl</option><option value="H37">H³⁷Cl</option><option value="custom">custom</option></select>
+          </div>
+          <div class="field"><label for="qo-we">ω<sub>e</sub> / cm⁻¹</label><input type="number" id="qo-we" min="10" max="5000" step="0.0001" value="2990.9463"></div>
+          <div class="field"><label for="qo-wexe">ω<sub>e</sub>x<sub>e</sub> / cm⁻¹</label><input type="number" id="qo-wexe" min="0.01" max="500" step="0.0001" value="52.8186"></div>
+          <div class="field"><label for="qo-mu">Reduced mass μ / u</label><input type="number" id="qo-mu" min="0.1" max="200" step="0.000001" value="0.979593"></div>
+          <div class="field"><label for="qo-re">r<sub>e</sub> / Å</label><input type="number" id="qo-re" min="0.5" max="4" step="0.000001" value="1.274552"></div>
+          <div class="row"><label><input type="checkbox" id="qo-morse"> Anharmonic (Morse potential)</label></div>
+          <div class="field"><label for="qo-n">Levels to show</label><input type="number" id="qo-n" min="1" max="12" step="1" value="6"></div>
+          <div class="field"><label for="qo-show">Draw</label><select id="qo-show"><option value="psi">ψ</option><option value="psi2">ψ²</option></select></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Potential, levels and wavefunctions</h2>
+          <canvas id="qo-plot" class="plot tall" aria-label="Potential energy curve with the vibrational levels and wavefunctions"></canvas>
+          <div class="table-wrap">
+            <table class="data" id="qo-table"><thead><tr><th>v</th><th>E (numerical) / cm⁻¹</th><th>E (formula) / cm⁻¹</th><th>Gap to v − 1</th><th>Nodes</th><th>⟨r⟩ / Å</th><th>P(beyond turning points)</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="qo-extra"></div>
+          <div class="row"><button type="button" id="qo-x">Levels (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The method</summary>
+        <ol>
+          <li>Harmonic: V = ½kx² with k from ω<sub>e</sub>; levels (v + ½)ω<sub>e</sub>, equally spaced.</li>
+          <li>Morse: V = D<sub>e</sub>(1 − e<sup>−ax</sup>)² with D<sub>e</sub> = ω<sub>e</sub>²/(4ω<sub>e</sub>x<sub>e</sub>) and k = 2D<sub>e</sub>a²; levels ω<sub>e</sub>(v + ½) − ω<sub>e</sub>x<sub>e</sub>(v + ½)².</li>
+          <li>Both are solved numerically with the same finite-difference matrix as the box, in cm⁻¹ and Å with ħ²/(2u) = 16.858 cm⁻¹ Å².</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The fundamental is ω<sub>e</sub> − 2ω<sub>e</sub>x<sub>e</sub>, not ω<sub>e</sub>: compare the gap from v = 0 to 1 with ω<sub>e</sub>.</li>
+          <li>Isotopes keep the potential (Born–Oppenheimer): ω<sub>e</sub> ∝ μ<sup>−½</sup> and ω<sub>e</sub>x<sub>e</sub> ∝ μ<sup>−1</sup>. D³⁵Cl's zero-point energy is about 416 cm⁻¹ lower.</li>
+          <li>⟨r⟩ grows with v in the Morse well: that is why r₀ from B₀ is longer than r<sub>e</sub>.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous here. HCl gas is corrosive and toxic; in a real spectroscopy lab it lives in a sealed gas cell filled in a fume hood.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Putting v = 0 at the bottom of the well (forgetting the zero-point energy).</li>
+          <li>Predicting the overtone as twice the fundamental.</li>
+          <li>Scaling ω<sub>e</sub>x<sub>e</sub> by μ<sup>−½</sup> for an isotope.</li>
+          <li>Treating the Morse D<sub>e</sub> as the true dissociation energy: it overestimates HCl's D₀ (4.43 eV measured) by about 14 %.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the level table and compare with <span class="mono">lesson04_vib.py</span>: Morse levels 1482.3, 4367.5, 7147.2, 9821.2 cm⁻¹ for H³⁵Cl, fundamental 2885.3 and overtone 5664.9 cm⁻¹.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== ROTOR ===================== -->
+  <section id="tab-rotor" aria-labelledby="tabbtn-rotor" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Rigid rotor</h2>
+          <div class="field"><label for="qr-mol">Molecule</label>
+            <select id="qr-mol"><option value="HCl">H³⁵Cl (v = 0)</option><option value="CO">¹²C¹⁶O (v = 0)</option><option value="custom">custom</option></select>
+          </div>
+          <div class="field"><label for="qr-B">Rotational constant B / cm⁻¹</label><input type="number" id="qr-B" min="0.01" max="100" step="0.0001" value="10.4398"></div>
+          <div class="field"><label for="qr-D">Centrifugal distortion D / cm⁻¹</label><input type="number" id="qr-D" min="0" max="0.01" step="0.000001" value="0.000532"></div>
+          <div class="field"><label for="qr-mu">Reduced mass μ / u</label><input type="number" id="qr-mu" min="0.1" max="200" step="0.000001" value="0.979593"></div>
+          <div class="field">
+            <label for="qr-T">Temperature T / K</label>
+            <output id="qr-T-out" for="qr-T">298</output>
+            <input type="range" id="qr-T" min="5" max="1000" step="1" value="298">
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Hydrogen atom, radial equation</h2>
+          <div class="field"><label for="qh-l">Angular momentum ℓ</label><select id="qh-l"><option value="0">0 (s)</option><option value="1">1 (p)</option><option value="2">2 (d)</option></select></div>
+          <div class="field"><label for="qh-n">States to find</label><input type="number" id="qh-n" min="1" max="4" step="1" value="3"></div>
+          <div class="row"><label><input type="checkbox" id="qh-mu"> Use the reduced mass of the electron–proton pair</label></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Populations of the rotational levels</h2>
+          <canvas id="qr-plot" class="plot" aria-label="Fraction of molecules in each rotational level J"></canvas>
+          <div class="kv" id="qr-out"></div>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="qr-table"><thead><tr><th>J → J + 1</th><th>Line / cm⁻¹</th><th>Line / GHz</th><th>Fraction in J</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="row"><button type="button" id="qr-x">Levels and lines (CSV)</button></div>
+        </div>
+        <div class="panel">
+          <h2>Radial probability u² = r²R²</h2>
+          <canvas id="qh-plot" class="plot short" aria-label="Radial probability of the hydrogen states against distance in bohr"></canvas>
+          <div class="table-wrap">
+            <table class="data" id="qh-table"><thead><tr><th>Orbital</th><th>E / hartree</th><th>Exact −1/(2n²)</th><th>Radial nodes</th><th>⟨r⟩ / bohr</th><th>Most likely r / bohr</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv small" id="qh-out"></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The method</summary>
+        <ol>
+          <li>Levels F(J) = BJ(J + 1) − DJ²(J + 1)², each 2J + 1 times degenerate; lines at 2B(J + 1) − 4D(J + 1)³.</li>
+          <li>Populations N<sub>J</sub> ∝ (2J + 1) e<sup>−F(J)hc/k<sub>B</sub>T</sup>, normalised by their sum (the partition function).</li>
+          <li>Bond length from B: I = h/(8π²cB), r = √(I/μ).</li>
+          <li>Hydrogen: u = rR obeys −½u″ + [ℓ(ℓ + 1)/2r² − 1/r]u = Eu in atomic units, solved with the same matrix method.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The degeneracy grows with J and the Boltzmann factor shrinks, so the population peaks near J ≈ √(k<sub>B</sub>T/2hcB) − ½, not at J = 0.</li>
+          <li>The centrifugal barrier ℓ(ℓ + 1)/2r² keeps p and d electrons away from the nucleus: compare the 3s and 3d curves near r = 0.</li>
+          <li>In a pure 1/r potential 2s and 2p have the same energy; in many-electron atoms they do not.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>Nothing hazardous here. Far-infrared and microwave spectrometers use sealed gas cells; HCl and CO are toxic gases handled in a hood.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Leaving out 2J + 1: J = 0 would always be the most populated level.</li>
+          <li>Writing line positions as BJ(J + 1): those are level energies.</li>
+          <li>c in m/s instead of cm/s with B in cm⁻¹: r off by a factor of 10.</li>
+          <li>Allowing ℓ = n: there is no 1p or 2d.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the lines and populations; <span class="mono">lesson05_rotor_h.py</span> gives 20.88, 41.74, 62.58, 83.38, 104.13 cm⁻¹ for HCl and the peak at J = 3 at 298 K.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== DYE ===================== -->
+  <section id="tab-dye" aria-labelledby="tabbtn-dye" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Kuhn's box</h2>
+          <div class="field"><label for="qd-fam">Family</label>
+            <select id="qd-fam"><option value="cy">1,1′-diethyl-2,2′-cyanines (N = p + 3)</option><option value="po">polyenes (N = 2 × number of C=C)</option></select>
+          </div>
+          <div class="field">
+            <label for="qd-p" id="qd-p-label">Carbons on the path between the nitrogens, p</label>
+            <output id="qd-p-out" for="qd-p">3</output>
+            <input type="range" id="qd-p" min="1" max="15" step="2" value="3">
+          </div>
+          <div class="field"><label for="qd-l">Bond length ℓ / nm</label><input type="number" id="qd-l" min="0.08" max="0.2" step="0.0001" value="0.139"></div>
+          <div class="field"><label for="qd-a">End extension α (bonds)</label><input type="number" id="qd-a" min="-3" max="8" step="0.01" value="0"></div>
+          <div class="row"><label><input type="checkbox" id="qd-alt"> Bond alternation (polyene-like ripple)</label></div>
+          <div class="field" id="qd-V0-f"><label for="qd-V0">Alternation gap V₀ / eV</label><input type="number" id="qd-V0" min="0" max="5" step="0.01" value="1.91"></div>
+          <div class="row">
+            <button type="button" id="qd-cal">Calibrate α on p = 3 (523 nm)</button>
+            <button type="button" id="qd-fit">Fit ℓ and α to the three 2,2′ dyes</button>
+            <button type="button" id="qd-reset">ℓ = 0.139 nm, α = 0</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>π levels</h2>
+          <div class="dye-row">
+            <canvas id="qd-levels" class="levels-canvas" aria-label="Particle-in-a-box levels filled with the pi electrons, HOMO to LUMO jump marked"></canvas>
+            <div>
+              <div class="kv" id="qd-out"></div>
+              <div class="swatches"><div><span class="swatch" id="qd-sw1"></span><span class="small">absorbed</span></div><div><span class="swatch" id="qd-sw2"></span><span class="small">seen (complement)</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>The series</h2>
+          <canvas id="qd-plot" class="plot" aria-label="Predicted absorption wavelength against the number of pi electrons with measured values"></canvas>
+          <div class="table-wrap">
+            <table class="data" id="qd-table"><thead><tr><th>Dye</th><th>N</th><th>L / nm</th><th>λ model / nm</th><th>λ measured / nm</th><th>Model − measured / nm</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="qd-fitout"></div>
+          <div class="row"><button type="button" id="qd-x">Series (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>Procedure (the real experiment and the model)</summary>
+        <ol>
+          <li>Make a 10⁻⁴ mol/L stock of each dye in methanol and dilute to a peak absorbance of 0.3–1 in a 1 cm cell (about 5 × 10⁻⁶ mol/L).</li>
+          <li>Record against a methanol blank from 400 to 800 nm.</li>
+          <li>Take λ<sub>max</sub> at the top of the main band, not at the vibronic shoulder about 1200 cm⁻¹ to the blue.</li>
+          <li>Dilute twice more: if the band shape changes, aggregates are distorting it.</li>
+          <li>Model: N π electrons fill levels 1 … N/2; the HOMO → LUMO jump gives λ = 8m<sub>e</sub>cL²/(h(N + 1)) with L = (N + α)ℓ.</li>
+          <li>Calibrate on one dye, fit two parameters to three, then predict a dye you did not fit.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>A cyanine has two equal resonance structures, so its bonds are equalised and the π electrons see a flat box.</li>
+          <li>A polyene's bonds really alternate; the ripple opens a gap V₀(1 − 1/N) that does not close as the chain grows, so the colour converges.</li>
+          <li>Two parameters and three points leave one degree of freedom: a small residual is expected, and the strong ℓ–α correlation says the data cannot separate them. Only a blind prediction tests the model.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <ul>
+          <li>Cyanine dyes stain intensely and are treated as toxic irritants: gloves, small amounts.</li>
+          <li>Methanol is highly flammable and toxic by ingestion, skin contact and inhalation (GHS H225, H301 + H311 + H331, H370): fume hood, no flames, gloves.</li>
+          <li>Neither belongs in a kitchen; the home extension uses carrots, tomato paste and cooking oil only.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Counting the box from nitrogen to nitrogen only: Kuhn's box runs about one bond further at each end, more with big end groups.</li>
+          <li>Using N = number of double bonds instead of the number of π electrons.</li>
+          <li>Calling a two-parameter fit to three points a confirmation.</li>
+          <li>Reading λ<sub>max</sub> at a shoulder or at an aggregate band from a concentrated solution.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>The fit is least squares on ℓ and α with the parameter covariance scaled by the residual variance (one degree of freedom), as <span class="mono">curve_fit</span> does by default in <span class="mono">lesson04_dyes.py</span>. Export the series table for your report.</p>
+      </details>
+      <p class="small muted">Not trained here: weighing and diluting intensely coloured dyes, handling methanol, and recording a spectrum.</p>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    Constants: CODATA 2022 (h, c, e, mₑ = 9.1093837139 × 10⁻³¹ kg, u, proton/electron mass ratio 1836.15267343, deuteron 3670.48296788, muon 206.7682827). HCl constants (ω<sub>e</sub> 2990.9463, ω<sub>e</sub>x<sub>e</sub> 52.8186, B<sub>e</sub> 10.593416, α<sub>e</sub> 0.307181, D<sub>e</sub> 5.3194 × 10⁻⁴ cm⁻¹, r<sub>e</sub> 1.274552 Å) and CO constants: NIST Chemistry WebBook (Huber and Herzberg). Atomic masses: NIST. Ammonia inversion 23.79 GHz (NH₃) and 1.59 GHz (ND₃), measured. Dye maxima: TCI D4486 (523 nm), Sigma-Aldrich 166510 / Laidlaw 1970 (605 nm), Laidlaw 1970 (705 nm), TCI C0426 (708 nm), PhotochemCAD β-carotene (451 nm, hexane). Solver: finite differences, Sturm-sequence bisection and inverse iteration on the tridiagonal matrix.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="quantum-box.js"></script>
+<script src="quantum-box-tabs.js"></script>
+</body>
+</html>
