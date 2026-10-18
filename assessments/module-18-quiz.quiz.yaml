@@ -6,7 +6,8 @@
     - "[Ar] 3d5 4s2, because the last electrons added (3d) are the first removed."
     - "[Ar] 3d7, because the 4s electrons feel a smaller Zeff and leave first."
     - "[Ar] 3d6 4s1, because one electron is removed from each subshell."
-    - "[Ar] 3d9, because the 4s electrons drop into 3d when the ion forms."
+    - >-
+      [Ar] 3d9, because the 4s electrons drop into the 3d set when the ion forms.
   correct: 1
   explanation: >-
     Slater's rules give a 4s electron a Zeff near 4 and a 3d electron near 7 in this region; the 4s pair
@@ -16,10 +17,10 @@
     A materials chemist proposes making CaCl (Ca+ Cl-) as a new low-valent salt. A Kapustinskii estimate
     gives it a negative formation enthalpy. What is the decisive objection?
   options:
-    - Kapustinskii estimates are always too large, so the true formation enthalpy must be positive.
-    - The radius ratio of Ca+ and Cl- does not allow any crystal structure.
-    - Calcium has no measurable first ionisation energy in the gas phase.
-    - 2 CaCl -> Ca + CaCl2 is strongly exothermic, so CaCl would disproportionate.
+    - Kapustinskii estimates are always too large, so the true enthalpy must be positive.
+    - The radius ratio of Ca+ and Cl- does not allow any stable crystal structure.
+    - Calcium has no measurable first ionisation energy in the gas phase at all.
+    - 2 CaCl -> Ca + CaCl2 is strongly exothermic, so CaCl disproportionates.
   correct: 3
   explanation: >-
     The doubly charged Ca2+ gives CaCl2 a lattice enthalpy that more than repays the second ionisation
@@ -30,10 +31,10 @@
     For KCl you have dfH(s) = -436.68, dfH(K, g) = +89.0, dfH(Cl, g) = +121.30 kJ/mol, IE(K) = 4.341 eV
     and EA(Cl) = 3.613 eV. What is the lattice enthalpy (1 eV per atom = 96.485 kJ/mol)?
   options:
-    - 1414 kJ/mol, from adding the electron affinity instead of subtracting it.
-    - 717 kJ/mol, from 436.68 + 89.0 + 121.30 + 418.8 - 348.6.
-    - -156 kJ/mol, from using the formation enthalpy of KCl with its negative sign.
-    - 838 kJ/mol, from using the Cl-Cl bond enthalpy instead of the atomisation enthalpy.
+    - 1414 kJ/mol, from adding the electron affinity, not subtracting it.
+    - 717 kJ/mol, from 436.68 + 89.0 + 121.30 + 418.8 - 348.6 (all in kJ/mol).
+    - -156 kJ/mol, from using the KCl formation enthalpy with its sign.
+    - 838 kJ/mol, from using the Cl-Cl bond enthalpy, not atomisation.
   correct: 1
   explanation: >-
     The cycle: lattice enthalpy = -dfH(KCl) + atomisation of K and Cl + IE - EA = 436.68 + 89.0 + 121.30 +
@@ -46,7 +47,7 @@
   options:
     - Al2O3, an amphoteric oxide.
     - Na2O, a strongly basic oxide.
-    - SO3, a strongly acidic oxide.
+    - SO3, an acidic oxide.
     - MgO, a basic oxide.
   correct: 0
   explanation: >-
@@ -58,7 +59,7 @@
     than one compound. Pt(II) is d8. How many isomers should she expect?
   options:
     - One, because four-coordinate complexes are tetrahedral and have no geometric isomers.
-    - Three, because every arrangement of four different ligands is distinct.
+    - Three, because every arrangement of four different ligands is a distinct isomer.
     - Two, cis and trans (NH3 next to or opposite the other NH3) in a square plane.
     - Four, because the square-planar complex also has a mirror-image pair.
   correct: 2
@@ -70,10 +71,10 @@
     A chemist must remove trace Ni2+ from a solution. Ammonia and ethylenediamine (en) are both available
     at the same nitrogen concentration. Which choice binds nickel more completely, and why?
   options:
-    - Ammonia, because six separate ligands can surround the ion more tightly than three chelates.
-    - Either, because both form six Ni-N bonds of nearly equal strength.
-    - Ammonia, because it is a stronger base than ethylenediamine.
-    - Ethylenediamine, because chelation releases more free particles and is favoured by entropy.
+    - Ammonia, because six separate ligands surround the ion more tightly than chelates.
+    - Either, because both complexes form six Ni-N bonds of nearly equal strength.
+    - Ammonia, because each NH3 is a stronger base than an ethylenediamine N.
+    - Ethylenediamine, as chelation releases more free particles (entropy).
   correct: 3
   explanation: >-
     The formation constants are 4e8 (NH3) and 2e18 (en): the swap [Ni(NH3)6]2+ + 3 en -> [Ni(en)3]2+ +
@@ -86,7 +87,7 @@
     - Fluoride oxidises cobalt to Co(IV) in [CoF6]3-, which changes the d count.
     - Both are d6; F- gives Delta_o (13 100 cm-1) below the pairing energy, NH3 (22 870) above.
     - The fluoride complex is tetrahedral, so it must be high spin.
-    - Ammonia is a pi donor that pushes the eg orbitals down, forcing all six d electrons to pair.
+    - Ammonia is a pi donor that pushes eg down, forcing all six d electrons to pair.
   correct: 1
   explanation: >-
     With P in the complex about 0.8 x 23 625 = 18 900 cm-1, the weak-field fluoride complex is high spin
@@ -109,7 +110,7 @@
     A lab reports a new manganese complex as deep purple with a band near 530 nm whose molar absorption
     coefficient is about 2500 L/(mol cm). Its magnetic moment is zero. What is the best interpretation?
   options:
-    - Low-spin Mn(II) d5 with a spin-allowed d-d band made intense by pairing.
+    - Low-spin Mn(II) d5 with a spin-allowed d-d band made very intense by electron pairing.
     - High-spin Mn(II) whose spin-forbidden band is intense because the solution is concentrated.
     - A d0 manganese(VII) species whose colour is an oxygen-to-metal charge-transfer band.
     - A Mn(III) d4 complex with a Jahn-Teller distortion that strengthens the d-d band.
@@ -122,10 +123,10 @@
     An iron complex of unknown oxidation state has a moment of 5.9 BM and is very pale. Which assignment
     fits best?
   options:
-    - High-spin Fe(II), d6, with four unpaired electrons.
-    - Low-spin Fe(III), d5, with one unpaired electron.
+    - High-spin Fe(II), d6, with four unpaired electrons and a 4.9 BM moment.
+    - Low-spin Fe(III), d5, with one unpaired electron and a moment near 1.7 BM.
     - Low-spin Fe(II), d6, with large orbital contributions raising the moment to 5.9 BM.
-    - High-spin Fe(III), d5, with five unpaired electrons and spin-forbidden d-d bands.
+    - High-spin Fe(III), d5, five unpaired electrons (spin-only 5.9 BM).
   correct: 3
   explanation: >-
     5.9 BM matches the spin-only 5.92 for five unpaired electrons, which only high-spin d5 gives. High-spin

@@ -17,7 +17,7 @@
     A molecule has three conformers with relative energies 0, 1.0 and 1.0 kJ/mol; the two higher ones
     are mirror images of each other. Ignoring entropy, what fraction is in the lowest conformer at 298 K?
   options:
-    - About 60 %, counting the mirror-image pair as a single conformer.
+    - About 60 %, counting the mirror-image pair as one conformer.
     - About 50 %, because the energy differences are smaller than RT.
     - About 43 %, because the two mirror images together outweigh it.
     - About 33 %, because energies below RT give equal populations.
@@ -45,7 +45,7 @@
     same dihedral gives 18 kJ/mol. Which value should you compare with a measured rotation barrier?
   options:
     - The rigid value, because it measures the torsion term alone without other contributions.
-    - The relaxed value, because the real molecule adjusts its other angles and bonds as it rotates.
+    - The relaxed value, since the molecule adjusts its other angles and bonds as it rotates.
     - Their average, because the truth lies somewhere between an unrelaxed and a fully relaxed path.
     - Neither, because scans only give energies at fixed points and never barriers.
   correct: 1

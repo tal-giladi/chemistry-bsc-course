@@ -4,8 +4,8 @@
     c = 4 L f = 332 m/s for room air at 23 C. What is the main reason the value is low?
   options:
     - The phone microphone samples too slowly to resolve a 277 Hz peak accurately.
-    - The open end behaves as if the tube were about 12 mm longer, which 4 L f leaves out.
-    - Room air at 23 C is humid, and water vapour lowers the speed of sound.
+    - The open end acts about 12 mm beyond the tube, which 4 L f leaves out.
+    - Room air at 23 C is humid, and the water vapour lowers the speed of sound.
     - The fundamental of a closed tube is at c / 2L, so the formula is wrong by a factor of two.
   correct: 1
   explanation: >-
@@ -17,7 +17,7 @@
   options:
     - The slope is the speed of sound and the intercept is minus the end correction.
     - The slope is the end correction and the intercept is the speed of sound.
-    - The slope is the wavelength of the fundamental and the intercept is the tube radius.
+    - The slope is the fundamental's wavelength and the intercept the tube radius.
     - The slope is c squared and the intercept is gamma R T / M.
   correct: 0
   explanation: >-
@@ -52,9 +52,9 @@
   question: >-
     The spectrum of your tube shows strong peaks at 170, 340 and 510 Hz. What does the 340 Hz peak tell you?
   options:
-    - The tube is behaving as a closed tube with a strong second harmonic.
-    - The closed end leaks or the phone sits inside, so the tube acts partly open.
-    - The audio FFT has aliased the 510 Hz peak to a lower frequency.
+    - The tube is behaving as a closed tube with an unusually strong second harmonic.
+    - The end leaks or the phone sits inside, so the tube acts partly open.
+    - The audio FFT has aliased the 510 Hz peak down to a much lower frequency.
     - The air in the tube is warmer than the room, which adds even harmonics to the spectrum.
   correct: 1
   explanation: >-

@@ -3,7 +3,7 @@
     A bottle is labelled [Co(NH3)4(H2O)Cl]SO4. What are the oxidation state and d-electron count of cobalt?
   options:
     - Co(+2), d7, because sulfate balances a +2 complex and chloride is a counter-ion.
-    - Co(+1), d8, because ammonia and water each carry a partial negative charge.
+    - Co(+1), d8, as ammonia and water each carry a partial negative charge.
     - Co(+4), d5, because sulfate is -2 and each ligand removes one electron.
     - Co(+3), d6, because the complex is +2 and the only charged ligand is Cl-.
   correct: 3
@@ -29,9 +29,10 @@
     How many stereoisomers, counting enantiomers separately, does octahedral [Co(en)2Cl2]+ have?
   options:
     - Two, cis and trans, because a chelate ring like en can never create chirality.
-    - Three, as the trans form is achiral and the cis form is a mirror-image pair.
-    - Four, because each en ligand can be oriented in two ways.
-    - One, because the two en ligands force a single arrangement.
+    - >-
+      Three: the trans form is achiral, the cis form a mirror-image pair.
+    - Four, because each en ligand can be oriented in two ways around the metal.
+    - One, because the two en ligands force a single arrangement on the metal.
   correct: 1
   explanation: >-
     With the two Cl- trans, the complex has mirror planes. With them cis, the two en rings form a
@@ -44,7 +45,7 @@
     - Each Ni-N bond to en is about twice as strong as a Ni-N bond to NH3.
     - The en complex is square planar, which is more stable for Ni2+.
     - Swapping 6 NH3 for 3 en releases three extra particles, a large entropy gain.
-    - Ethylenediamine is a stronger acid than ammonia, so it donates electrons more easily.
+    - Ethylenediamine is a stronger acid than ammonia, so it donates more easily.
   correct: 2
   explanation: >-
     The chelate effect is mainly entropic: [Ni(NH3)6]2+ + 3 en -> [Ni(en)3]2+ + 6 NH3 goes from 4 to 7

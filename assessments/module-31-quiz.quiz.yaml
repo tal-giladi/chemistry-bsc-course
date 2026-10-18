@@ -19,9 +19,9 @@
     have one laptop afternoon. Which workflow fits?
   options:
     - Optimise the drawn structure with B3LYP/def2-TZVP and report it as the global minimum.
-    - Search with MMFF94, re-optimise the low-energy conformers with xtb, refine the best few with r2SCAN-3c.
+    - Search with MMFF94, re-optimise the best conformers with xtb, then refine with r2SCAN-3c.
     - Run a systematic search of all 3^7 conformers, each one fully optimised with B3LYP/def2-TZVP to be safe.
-    - Use UFF for everything, because it covers every element and is the fastest force field.
+    - Use UFF for everything, because it covers every element and is by far the fastest force field.
   correct: 1
   explanation: >-
     The funnel spends cheap methods on the many structures and expensive ones on the few that matter. One
@@ -48,7 +48,7 @@
     - HF lacks electron correlation; its basis-set limit still has bonds that are too short.
     - B3LYP is wrong because its bond is longer, and HF is closer to the true bond length.
     - Both errors are basis-set errors, so def2-QZVP will bring both methods to experiment.
-    - The experimental bond length is a fundamental, so it cannot be compared with either method.
+    - The experimental bond length is a fundamental, so neither method can be compared.
   correct: 0
   explanation: >-
     Enlarging the basis moved the HF bond further from experiment, which points to the method. Correlation,
@@ -76,7 +76,7 @@
     - The basis-set error, which a scale factor cannot touch.
     - Mode-to-mode differences in anharmonicity and method error that one factor cannot fit.
     - An error in the fitting formula, since a correct least-squares fit always reaches zero error.
-    - The experimental uncertainty of gas-phase IR bands, typically 30 cm-1.
+    - The experimental uncertainty of gas-phase IR band positions, typically 30 cm-1 or more.
   correct: 1
   explanation: >-
     A single factor removes the systematic part of the error. Modes are anharmonic to different degrees
@@ -87,10 +87,10 @@
     level. One carbon is 12 ppm away from the measured value; all the others are within 3 ppm. What is the
     most useful next step?
   options:
-    - Change the functional for that carbon only until it matches.
-    - Accept the structure, since an average error of a few ppm is normal for 13C.
+    - Change the functional for that one carbon only, and keep changing it until the shift matches.
+    - Accept the structure, since an average error of a few ppm is normal for 13C shifts.
     - Recalculate TMS with a larger basis, because the reference must always be better than the molecule.
-    - Check the conformers and the assignment near that carbon, then consider other candidate structures.
+    - Check conformers and the assignment near that carbon, then other candidates.
   correct: 3
   explanation: >-
     A few ppm is normal scatter; a single 12 ppm outlier with the rest fine usually means a wrong conformer,
@@ -101,7 +101,7 @@
     You start an OptTS job for an SN2 reaction from a guess taken from the highest point of a relaxed scan of
     the C-Nu distance. Which result proves you have the transition state you want?
   options:
-    - The optimiser converged and the energy is the highest of all the structures along the reaction path.
+    - The optimiser converged, and the energy is the highest of all structures on the path.
     - The structure has two imaginary frequencies, one for each bond that changes.
     - One imaginary mode that forms C-Nu and breaks C-X, confirmed by an IRC to both minima.
     - The energy of the structure equals the top of the relaxed scan within 1 kJ/mol.

@@ -6,7 +6,7 @@
   options:
     - The colour reagent is used up in both, so add more reagent and read again undiluted.
     - The darker sample has a different pH, so buffer both samples and read again undiluted.
-    - Stray light caps high readings, so dilute both into the linear range and read again.
+    - Stray light caps high readings; dilute both into the linear range and read again.
     - The detector is saturated by too much light, so narrow the slit and read again undiluted.
   correct: 2
   explanation: >-
@@ -20,7 +20,7 @@
     better and why?
   options:
     - Absorbance, because it is free from quenching and the proteins can be blanked out.
-    - Fluorescence, read against a dark background at a second, selective wavelength.
+    - Fluorescence, read against a dark background at a second, more selective wavelength.
     - Absorbance, because fluorescence is only linear above an absorbance of 0.1.
     - Fluorescence, because its signal does not depend on the concentration of the drug.
   correct: 1
@@ -60,9 +60,9 @@
     Two drug impurities overlap with Rs = 0.8 on an HPLC column (alpha = 1.03, k = 6). A colleague
     plans to connect three identical columns in series. What does the Purnell equation predict?
   options:
-    - Rs = 2.4, because resolution grows in proportion to column length.
+    - Rs = 2.4, because resolution grows in direct proportion to column length.
     - Rs = 0.8, because selectivity alone sets the resolution, not the length.
-    - Rs near 1.4 at three times the run time; changing selectivity is cheaper.
+    - Rs near 1.4 at triple the run time; changing selectivity is cheaper.
     - Rs near 0.5, because longer columns broaden peaks more than they separate them.
   correct: 2
   explanation: >-
@@ -75,7 +75,7 @@
     save cost and time. What should the analyst expect and do?
   options:
     - The same optimum velocity, so the method can stay unchanged.
-    - A lower optimum velocity, so the flow must be reduced to keep the plate count.
+    - A lower optimum velocity, so the flow must drop to keep the plate count.
     - No change in efficiency, but the FID will stop working without helium.
     - "A higher, flatter optimum: raise velocity, check resolution and revalidate."
   correct: 3
@@ -104,7 +104,7 @@
     the ratio of analyte to internal standard looks normal. What is the best interpretation?
   options:
     - The analyte concentration is 20 % too low and must be corrected upwards by 20 %.
-    - The internal standard was forgotten in that vial, so the result is invalid.
+    - The internal standard was forgotten in that one vial, so the result is invalid.
     - Less sample was injected; the ratio cancels that and the result can be used.
     - The FID flame has gone out, so all results of the day must be rejected.
   correct: 2
@@ -117,8 +117,8 @@
     A new organic redox molecule gives a CV with a cathodic peak but almost no anodic return peak at
     100 mV/s. At 5 V/s the return peak appears. What is happening?
   options:
-    - The molecule is adsorbed, so it reacts only at fast scan rates.
-    - The reduced product reacts chemically; fast scans return before it has time to react.
+    - The molecule is adsorbed on the electrode, so it reacts only at fast scan rates.
+    - The reduced product reacts; fast scans return before it has time to react.
     - The reference electrode is drifting, which hides the return peak at slow scan rates.
     - The supporting electrolyte is too concentrated and blocks the oxidation at slow scans.
   correct: 1
@@ -132,7 +132,7 @@
     only a few samples a week. Which electrochemical approach fits?
   options:
     - Cyclic voltammetry, because its peak current is proportional to concentration.
-    - Potentiometry with a cadmium ion-selective electrode, because it draws no current.
+    - Potentiometry with a cadmium ion-selective electrode, as it draws no current.
     - Coulometry, because counting the total charge needs no calibration at all.
     - Anodic stripping voltammetry, as the metal is preconcentrated on the electrode.
   correct: 3

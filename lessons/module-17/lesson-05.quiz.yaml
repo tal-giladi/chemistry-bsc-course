@@ -5,7 +5,7 @@
   options:
     - DBE 4, so the ring uses all the unsaturation and the 200 line is an impurity.
     - DBE 5, so a benzene ring (4) plus one C=O (1) accounts for everything.
-    - DBE 6, so there must be a second ring or a triple bond somewhere.
+    - DBE 6, so there must be a second ring or a triple bond somewhere in it.
     - DBE 3, so the compound cannot contain a benzene ring.
   correct: 1
   explanation: >-
@@ -17,9 +17,9 @@
     C9H10O2). Which single observation separates them most reliably?
   options:
     - The two 2H doublets in the aromatic region of the 1H spectrum near 7-8 ppm.
-    - Two 3H singlets in the 1H spectrum between 2 and 4 ppm.
-    - The molecular ion at m/z 150 in the mass spectrum.
-    - The carbonyl line in the 13C spectrum, near 197 or near 167 ppm.
+    - Two 3H singlets in the 1H spectrum, both lying between 2 and 4 ppm.
+    - The molecular ion at m/z 150 in the electron-impact mass spectrum.
+    - The carbonyl line in the 13C spectrum, near 197 or 167 ppm.
   correct: 3
   explanation: >-
     Both are para-disubstituted, both show two methyl singlets and both weigh 150. A ketone C=O is
@@ -30,9 +30,9 @@
     four signals with exactly one singlet, at 3.67 ppm (3H). What is the best answer?
   options:
     - Propyl acetate, because it has five carbons and one CH3 singlet.
-    - Ethyl propanoate, because its OCH2 quartet often looks like a singlet.
+    - Ethyl propanoate, as its OCH2 quartet often looks like a singlet.
     - Methyl butanoate, because a 3H singlet at 3.7 ppm is an ester OCH3.
-    - Isopropyl acetate, because its OCH is too far downfield to count as a signal.
+    - Isopropyl acetate, as its OCH is too far downfield to count.
   correct: 2
   explanation: >-
     Propyl acetate also has one singlet, but its CH3C=O singlet is near 2.0 ppm. A 3H singlet near
@@ -45,7 +45,7 @@
     - Decide whether it is water or a sign of a wrong structure, then recheck.
     - Ignore it, because NMR evidence always outweighs IR evidence.
     - Change the structure to an alcohol, because broad bands at 3400 are always O-H groups.
-    - Report the structure, because the fingerprint region decides identity anyway.
+    - Report the structure, as the fingerprint region decides identity.
   correct: 0
   explanation: >-
     An unexplained signal means either an impurity (water is common in IR samples) or a wrong

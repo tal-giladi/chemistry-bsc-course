@@ -4,7 +4,7 @@
     starting material, with the new group on a more substituted carbon. What most likely happened?
   options:
     - A radical chain formed, because radicals are the only intermediates that rearrange.
-    - A 1,2-shift turned the first carbocation into a more stable one before capture.
+    - A 1,2-shift turned the first carbocation into a more stable one.
     - An SN2 reaction inverted the carbon, which looks like a skeletal change.
     - A carbene inserted into a C-H bond, because acids generate carbenes from alcohols.
   correct: 1
@@ -17,7 +17,7 @@
     What does this say about the allyl radical?
   options:
     - It is 68 kJ/mol less stable than methyl, because its C-H bond breaks more easily.
-    - It is about as stable as a tertiary alkyl radical, because both are carbon radicals.
+    - It is about as stable as a tertiary alkyl radical, as both are carbon radicals.
     - It is 68 kJ/mol more stable than methyl, mostly from resonance over three carbons.
     - Its stability cannot be judged from bond enthalpies, only from rate constants.
   correct: 2
@@ -44,7 +44,7 @@
   options:
     - The carbene reacted as a singlet, adding both bonds in one step.
     - The carbene reacted as a triplet, because triplets are the ground state of CH2.
-    - The reaction went through a diradical that could not rotate in solution.
+    - The reaction went through a diradical that could not rotate.
     - The result says nothing about spin, because all cyclopropanations keep alkene geometry.
   correct: 0
   explanation: >-

@@ -3,10 +3,10 @@
     A pollutant reacts with OH with k = 2.0e-13 cm3 molecule-1 s-1. Taking a mean OH concentration of
     1.0e6 molecules cm-3, what is its atmospheric lifetime against OH?
   options:
-    - About 2 hours, because k times [OH] gives the lifetime directly in seconds.
-    - About 58 days, from tau = 1/(k [OH]) = 5.0e6 s.
-    - About 40 days, because the lifetime is ln 2 times the value 1/(k [OH]).
-    - It cannot be found, because the reaction is second order and has no lifetime.
+    - About 2 hours, as k [OH] gives the lifetime in seconds.
+    - About 58 days, from the lifetime tau = 1/(k [OH]) = 5.0e6 s.
+    - About 40 days, as the lifetime is ln 2 times 1/(k [OH]).
+    - It cannot be found, as the reaction is second order and has no lifetime.
   correct: 1
   explanation: >-
     OH is held at a low steady level, so the loss is pseudo-first-order with k' = k[OH] = 2.0e-7 s-1
@@ -20,7 +20,8 @@
     - The colleague, because orders always follow the coefficients of the balanced equation.
     - Neither, because half-lives cannot reveal orders without an endpoint value.
     - "The data, which show first order: only its half-life ignores the starting amount."
-    - "The data, which show zero order: the rate does not change with concentration."
+    - >-
+      The data, which show zero order: the rate does not change with concentration at all.
   correct: 2
   explanation: >-
     t1/2 is proportional to [A]0^(1-n); a constant half-life means n = 1. Coefficients give orders only
@@ -31,9 +32,9 @@
     measurements give K = [B]/[A] = 9 at the final temperature. What is kf?
   options:
     - 2.0e4 s-1, because kf alone equals 1/tau at equilibrium.
-    - 1.8e5 s-1, because kf is K/tau.
-    - 2.2e3 s-1, because kf is 1/(K tau), with K = 9.
-    - 1.8e4 s-1, since kf + kr = 1/tau and kf = 9 kr.
+    - 1.8e5 s-1, because kf is simply K divided by tau.
+    - 2.2e3 s-1, because kf is 1/(K tau), with K = 9 here.
+    - 1.8e4 s-1, as kf + kr = 1/tau and kf = 9 kr.
   correct: 3
   explanation: >-
     For A <=> B the system relaxes with kf + kr. With 1/tau = 2.0e4 s-1 and kf/kr = 9, kr = 2.0e3 s-1
@@ -46,7 +47,7 @@
   options:
     - A smaller k, because the early endpoint made late points plunge on the ln plot.
     - A larger k, because the true endpoint lies further from the data.
-    - The same k, because the endpoint only shifts the intercept of the ln plot, not its slope.
+    - The same k, because the endpoint only shifts the intercept of the ln plot.
     - A k that cannot be compared, because the true endpoint changes the order.
   correct: 0
   explanation: >-
@@ -71,7 +72,7 @@
     1 bar value, and it rises again when inert argon is added. What explains this?
   options:
     - Argon catalyses the reaction on the walls of the vessel.
-    - The activation energy rises at low pressure, so the rate constant falls.
+    - The activation energy rises as the pressure drops, so the rate constant falls sharply.
     - The reaction is in the Lindemann falloff region, where any collider energises it.
     - The reaction is really second order in the reactant, which falls with the pressure.
   correct: 2
@@ -83,7 +84,7 @@
     Rate constants at 280, 300 and 320 K give a straight Arrhenius line with Ea = 14 kJ/mol for a
     hydrogen-abstraction reaction. An engineer extrapolates it to 1500 K. What is the main risk?
   options:
-    - The rate at 1500 K is underestimated, because the local Ea rises with temperature.
+    - The rate at 1500 K is underestimated, as the local Ea rises with temperature.
     - The rate at 1500 K is overestimated, because Ea always falls at high temperature.
     - There is no risk, because three points on a straight line fix Ea at every temperature.
     - The units of k change at high temperature, so the extrapolation is meaningless.
@@ -96,10 +97,10 @@
     Two isomerisations have the same activation enthalpy. Reaction X has A = 1e16 s-1 and reaction Y has
     A = 1e11 s-1. Which statement fits?
   options:
-    - X has a tight transition state and Y a loose one, since a large A means more order.
-    - Both have the same entropy of activation, because their activation enthalpies are equal.
+    - X has a tight transition state and Y a loose one, as a large A means more order.
+    - Both have equal activation entropies, since their activation enthalpies match.
     - Y is the faster one, because a smaller A means fewer competing side reactions.
-    - X has a loose transition state with positive activation entropy; Y a tight one.
+    - X has a loose transition state with positive activation entropy, and Y a tight one.
   correct: 3
   explanation: >-
     A = e(kBT/h)exp(dS/R), with kBT/h near 6e12 s-1. A above about 1e13 s-1 means dS > 0 (bond fission,
@@ -112,7 +113,7 @@
     - 0.80 mM/min, set by kcat, because an enzyme is always saturated.
     - 0.40 mM/min, set by Km, because the rate is half of Vmax at any substrate level.
     - About 0.084 mM/min, set by Vmax/Km, because 2 mM is well below Km.
-    - About 6.8 mM/min, set by Km/Vmax, because low substrate frees the enzyme.
+    - About 6.8 mM/min, set by Km/Vmax, as low substrate frees enzyme.
   correct: 2
   explanation: >-
     v = Vmax[S]/(Km + [S]) = 0.80 x 2/19 = 0.084 mM/min. Far below Km the reaction is close to first
@@ -122,7 +123,7 @@
     A biochemist fits enzyme time courses with the plain Michaelis-Menten law. In every run the model
     runs ahead of the data at long times, even with the best Vmax. What should she test next?
   options:
-    - A larger enzyme concentration, because the fitted Vmax must be too small.
+    - A larger enzyme concentration, as the fitted Vmax must be too small.
     - Product inhibition, adding P/KP to the denominator with a measured KP.
     - A zero-order model, because long times always follow zero-order kinetics.
     - Reporting only the early points, because late points are always less reliable.

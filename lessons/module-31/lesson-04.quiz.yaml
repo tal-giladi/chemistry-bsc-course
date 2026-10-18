@@ -4,8 +4,8 @@
     band is at 1731 cm-1. What is the most reasonable reading?
   options:
     - The structure must be wrong, because a correct structure reproduces the band within 10 cm-1.
-    - The basis set is too small, since only basis errors make calculated frequencies too high.
-    - The calculation should be repeated with HF, which has smaller frequency errors than B3LYP.
+    - The basis set is too small, since only basis errors make frequencies too high.
+    - The calculation should be repeated with HF, which has smaller frequency errors.
     - This is the normal harmonic overestimate; scaled by about 0.965 it lands near 1732 cm-1.
   correct: 3
   explanation: >-
@@ -17,7 +17,7 @@
     calculation failed because no IR band is seen there. What do you answer?
   options:
     - The mode is the symmetric stretch, which does not change the dipole moment and is IR inactive.
-    - The mode is an artefact of the optimiser and should be removed from the frequency list.
+    - The mode is an artefact of the geometry optimiser and should be removed from the frequency list.
     - The intensity is zero because the basis set lacks diffuse functions for oxygen.
     - The mode is the bend, which only shows up in IR when the molecule is in the liquid or solid phase.
   correct: 0
@@ -30,7 +30,7 @@
     take the differences as shifts. Every carbon comes out about 4 ppm off in the same direction. Why?
   options:
     - The conformers were not Boltzmann-averaged, which shifts all carbons by the same amount.
-    - The reference and the molecule used different functionals, so the reference is offset.
+    - TMS and the molecule used different functionals, offsetting the reference.
     - pcSseg-1 is not designed for shieldings, so all values carry the same basis error.
     - The shifts are correct, because 4 ppm is the normal random scatter for 13C.
   correct: 1
@@ -43,7 +43,7 @@
     cm-1. A colleague proposes fitting a separate factor for every single mode to reach zero error. Why is
     that a bad idea?
   options:
-    - Because a scale factor must always be smaller than 1, and some modes would need one above 1.
+    - Because a scale factor must be below 1, and some modes would need one above 1.
     - Because the RMS error is already below the experimental uncertainty of gas-phase spectra.
     - Because per-mode factors fitted to the answer have no predictive value for a new molecule.
     - Because scaling only works for stretching modes and must not be applied to bends.

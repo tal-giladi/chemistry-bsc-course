@@ -32,7 +32,7 @@
     Paracetamol and caffeine are resolved at 20 % acetonitrile, merge at about 38 % and are resolved
     again, in reverse order, at 45 %. What causes this?
   options:
-    - Their S values differ, so their log k lines cross as the solvent fraction changes.
+    - Their S values differ, so the log k lines cross as solvent changes.
     - Caffeine is protonated at high acetonitrile and leaves the column faster.
     - The column loses efficiency at high organic content, so the peaks broaden into each other.
     - Paracetamol degrades in acetonitrile, so its peak moves during the run.
@@ -46,8 +46,8 @@
     Six replicate injections on a column used for 400 runs give critical-pair Rs 3.2, area RSD 0.6 % and
     a salicylic-acid tailing factor of 2.36 (limit 2.0). What should the analyst do?
   options:
-    - Run the samples, because resolution and precision are well inside their limits.
-    - Widen the integration window so that the tailing peak area is captured, then continue.
+    - Run the samples, as resolution and precision are inside their limits.
+    - Widen the integration window to capture the tailing area, then continue.
     - Stop, restore or replace the column, then repeat the system-suitability test.
     - Lower the acetonitrile to increase retention, which also reduces tailing.
   correct: 2

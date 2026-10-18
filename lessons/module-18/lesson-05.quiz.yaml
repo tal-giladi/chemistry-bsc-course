@@ -3,9 +3,9 @@
     An octahedral Cr(III) complex has its lowest absorption band at 664 nm. What are Delta_o and the
     colour you expect to see?
   options:
-    - 664 cm-1, and the solution looks red because it absorbs red.
+    - 664 cm-1, and the solution looks red because it absorbs red light strongly.
     - 15 060 cm-1, and the solution looks red because that is the colour of 664 nm light.
-    - 15 060 cm-1, and the solution looks green because red light is removed.
+    - 15 060 cm-1; the solution looks green because red light is removed.
     - 6 640 cm-1, and the solution looks blue because Cr(III) complexes are always blue.
   correct: 2
   explanation: >-
@@ -17,8 +17,8 @@
   options:
     - Five unpaired electrons, high spin, because Fe(III) is always d5 high spin.
     - One unpaired electron, so it is low-spin d5 with a strong-field ligand set.
-    - Two unpaired electrons, because the moment in BM equals the number of unpaired electrons.
-    - No unpaired electrons, because moments below 3 BM mean the sample is diamagnetic.
+    - Two unpaired electrons, because the moment in BM equals the unpaired count.
+    - No unpaired electrons, as moments below 3 BM mean a diamagnetic sample.
   correct: 1
   explanation: >-
     The spin-only moments are 1.73 (n = 1), 2.83 (n = 2) and 5.92 (n = 5). 2.0 BM is closest to n = 1,
@@ -43,9 +43,9 @@
     clearly violet. Why?
   options:
     - Mn2+ absorbs only in the infrared, because its Delta_o is very small for a 2+ metal ion.
-    - Mn2+ is d0, so it has no electrons to excite.
-    - The Cr3+ band is charge transfer, while the Mn2+ band is d-d.
-    - Each d-d band of high-spin d5 must flip a spin, so it is spin- and Laporte-forbidden.
+    - Mn2+ is d0, so it has no d electrons left to excite at all.
+    - The Cr3+ band is charge transfer in origin, while the much weaker Mn2+ band is d-d.
+    - Every d-d band of high-spin d5 flips a spin, so it is spin- and Laporte-forbidden.
   correct: 3
   explanation: >-
     High-spin d5 has one electron in each d orbital; any excitation pairs two electrons and changes the
@@ -58,7 +58,7 @@
     - Low-spin d7 with one unpaired electron, raised to 4.6 BM by the ligands.
     - High-spin d7 with three unpaired electrons, plus orbital contribution.
     - High-spin d7 with four unpaired electrons, because 4.6 is close to 4.90.
-    - Low-spin d6, because cobalt(II) becomes cobalt(III) in solution.
+    - Low-spin d6, because cobalt(II) becomes cobalt(III) in aqueous solution.
   correct: 1
   explanation: >-
     Co(II) is d7: 3 unpaired (high spin) or 1 (low spin). No d7 arrangement has 4 unpaired electrons.

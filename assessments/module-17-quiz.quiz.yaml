@@ -6,8 +6,8 @@
   options:
     - Propylbenzene, because loss of an ethyl group gives the tropylium-type ion at 105.
     - Isopropylbenzene, because loss of CH3 gives a benzylic cation at 105.
-    - Acetophenone, because 105 is the benzoyl cation C6H5CO+.
-    - 1,3,5-Trimethylbenzene, because three methyls give strong methyl losses.
+    - Acetophenone, because m/z 105 is the benzoyl cation C6H5CO+.
+    - 1,3,5-Trimethylbenzene, because three methyls give methyl losses.
   correct: 1
   explanation: >-
     M+1 of 10 % means about 9 carbons (C9H12, M 120). The septet and 6H doublet are an isopropyl
@@ -19,7 +19,7 @@
     consistent with the mass spectrum?
   options:
     - No, because an odd molecular ion rules out chlorine.
-    - No, because a 3:1 pair 2 u apart means bromine, not chlorine.
+    - No, because a 3:1 pair 2 u apart is the clear signature of bromine, not chlorine.
     - Yes, because the 3:1 pair means one Cl and the odd mass an odd number of N.
     - Yes, but only if the compound also contains sulfur, which adds the M+2 peak.
   correct: 2
@@ -32,10 +32,10 @@
     acid. The IR shows a strong band at 1725 cm-1, two weak bands near 2720 and 2820 cm-1, and no
     broad band from 2500 to 3300 cm-1. What is the product?
   options:
-    - Propanal, because the C=O comes with the aldehyde C-H pair and no acid O-H.
+    - Propanal, as the C=O pairs with aldehyde C-H bands and no acid O-H.
     - Propanoic acid, because a carboxylic acid C=O lies between 1700 and 1730 cm-1.
-    - Unreacted 1-propanol, because 2720 and 2820 are O-H overtones.
-    - Propyl propanoate, because esters absorb near 1725 cm-1.
+    - Unreacted 1-propanol, because the bands at 2720 and 2820 are O-H overtones.
+    - Propyl propanoate, because saturated esters absorb strongly near 1725 cm-1.
   correct: 0
   explanation: >-
     The weak pair near 2720/2820 is the aldehyde C-H stretch. An acid would show the very broad O-H
@@ -45,7 +45,7 @@
     A compound C4H10O shows a broad IR band at 3350 cm-1. Its 13C spectrum has two lines, and DEPT
     shows that one of them is a quaternary carbon. Which isomer is it?
   options:
-    - 1-Butanol, because primary alcohols give the broadest O-H bands and two 13C lines.
+    - 1-Butanol, because primary alcohols give broad O-H bands and two 13C lines.
     - Diethyl ether, because its symmetry gives two 13C lines and a quaternary C-O.
     - 2-Butanol, because its CH-O carbon appears in DEPT.
     - 2-Methyl-2-propanol, as three equivalent CH3 and one C-O carbon give two lines.
@@ -62,7 +62,7 @@
     - Re-record the spectrum with more scans, so the extra lines average out.
     - Record it at 400 MHz, where the Hz separation grows and J stays the same.
     - Assume the two signals are equivalent protons and integrate them together.
-    - Switch to a 13C spectrum, because carbon spectra show the same splittings.
+    - Switch to a 13C spectrum, since carbon spectra show the same splittings.
   correct: 1
   explanation: >-
     At 60 MHz the shift difference is 9 Hz, about J, so the spectrum is second order. At 400 MHz it is
@@ -75,7 +75,7 @@
     - Methyl benzoate, because an OCH3 singlet appears near 2.4 ppm.
     - 4-Methoxybenzaldehyde, because aldehyde protons are broad near 12.5 ppm.
     - 4-Methylbenzoic acid, as the para pattern, ring CH3 and COOH all fit.
-    - Phenylacetic acid, because its CH2 next to C=O gives a 3H singlet.
+    - Phenylacetic acid, because its CH2 next to the C=O gives a 3H singlet.
   correct: 2
   explanation: >-
     Two 2H doublets mean a para-disubstituted ring; 2.4 ppm is CH3 on a ring; 12.5 broad and C=O at
@@ -85,9 +85,9 @@
     Two candidate esters, propyl acetate and methyl butanoate, both fit an unknown's MS, IR, 13C line
     count and 1H integrals. Which HMBC observation decides?
   options:
-    - The OCH2 protons at 4.0 ppm correlate with the C=O, so OCH2 sits on the ester oxygen.
+    - The OCH2 signal at 4.0 ppm correlates with the C=O, so OCH2 is on the ester O.
     - The CH3 triplet correlates with a CH2 carbon, which proves the chain is a propyl chain.
-    - The C=O carbon shows no HSQC peak, which proves it is a quaternary carbon.
+    - The C=O carbon shows no HSQC peak, which proves that it is a quaternary carbon.
     - The OCH2 protons couple to a CH2 in COSY, which proves that an ethyl group is present.
   correct: 0
   explanation: >-
@@ -100,7 +100,7 @@
   options:
     - 1-Hexyne, because C6H10 has two degrees of unsaturation.
     - 1,5-Hexadiene, because two C=C bonds account for the DBE of 2.
-    - Cyclohexane, because a ring with three kinds of carbon gives three 13C lines and DBE 2.
+    - Cyclohexane, because a ring with three carbon types gives three lines and DBE 2.
     - Cyclohexene, as a ring plus one C=C fits DBE 2 and its symmetry gives three lines.
   correct: 3
   explanation: >-
@@ -124,7 +124,7 @@
     You want the 1H and 13C spectra of 50 compounds from SDBS for a study group. What is the right
     way to use SDBS?
   options:
-    - Write a script that downloads every spectrum automatically and share the files.
+    - Write a script that downloads every spectrum automatically and then share all the files.
     - Search each compound by hand, assign its spectra, and cite SDBS with the access date.
     - Search SDBS by CAS number, which is the fastest key for each compound.
     - Copy the peak lists into a shared spreadsheet, since the data itself is not copyrighted.

@@ -16,8 +16,8 @@
     You calculate the CO bond length from B0 measured in a microwave spectrum and get 1.1309 A; a
     table gives 1.1283 A. What explains the difference?
   options:
-    - The table is out of date; microwave values replace older equilibrium values.
-    - Your value is r0, averaged over the zero-point vibration; the table gives re at the minimum.
+    - The table is out of date; modern microwave values have replaced the older equilibrium values.
+    - Yours is r0, averaged over the zero-point vibration; the table gives re at the minimum.
     - Centrifugal distortion stretches the bond in every level, so microwave lengths are always long.
     - The isotope 13C in natural carbon makes the average reduced mass larger.
   correct: 1
@@ -42,8 +42,8 @@
     A chemist hopes to measure the C-H bond length of methane, CH4, by microwave spectroscopy. What
     is the problem?
   options:
-    - Methane is too light, so its lines fall in the visible region instead of the microwave.
-    - Methane has four equal bonds, so its spectrum shows only one line that cannot be assigned.
+    - Methane is too light, so its lines fall in the visible instead of the microwave.
+    - Methane has four equal bonds, so it shows only one line that cannot be assigned.
     - The C-H bond is too stiff, so centrifugal distortion hides the lines.
     - Methane is a spherical top with no permanent dipole, so no pure rotational spectrum.
   correct: 3
@@ -58,7 +58,7 @@
     - The heavier nucleus shortens the bond, which lowers the moment of inertia.
     - re and the potential are unchanged; the larger reduced mass raises I and lowers B.
     - 13C has a nuclear spin, which splits the line and moves its centre to lower frequency.
-    - The 13C bond is weaker, so the molecule rotates more slowly at the same temperature.
+    - The 13C bond is weaker, so the molecule rotates more slowly at the same T.
   correct: 1
   explanation: >-
     Isotopes do not change the electrons, so the potential curve and re stay the same. B is

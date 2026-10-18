@@ -5,7 +5,7 @@
     What can she use for the field outside?
   options:
     - A point charge at the group's centre, by Gauss's law and spherical symmetry.
-    - Nothing simple, because a spread-out charge has no definite field outside it.
+    - Nothing simple, as a spread-out charge has no definite outside field.
     - The field of a dipole, because spreading a charge always turns it into a dipole.
     - The field of a point charge, but only if the group is smaller than 1 Å across.
   correct: 0
@@ -19,8 +19,8 @@
   options:
     - The student is right, since Maxwell's relation holds for every non-magnetic liquid.
     - The supplier quoted εr at a different temperature, which explains a factor of twenty.
-    - Maxwell's relation needs one frequency for both; static εr includes dipole turning.
-    - Acetonitrile is magnetic, so its permeability makes n smaller than √εr.
+    - Maxwell needs one frequency for both; static εr includes dipole turning.
+    - Acetonitrile is magnetic, so its permeability makes n smaller than √εr here.
   correct: 2
   explanation: >-
     n² ≈ 1.81 reflects only the electronic response at optical frequency. Acetonitrile has a 3.9 D dipole, whose
@@ -32,7 +32,7 @@
   options:
     - Acetate has a mirror plane, so its dipole must be zero by symmetry.
     - The debye is not an SI unit and should be replaced by C m.
-    - Dipoles of anions are always negative and cannot be quoted as positive numbers.
+    - Dipoles of anions are always negative and cannot be quoted as positive.
     - An ion's dipole depends on the origin, which the paper did not specify.
   correct: 3
   explanation: >-
@@ -70,9 +70,9 @@
     6.7 × 10³ cm³ K/mol and intercept 7.5 cm³/mol. A labmate wants to quote μ from the intercept. What do you do?
   options:
     - >-
-      Use the slope, μ = √(9ε₀k_B B/N_A) ≈ 1.05 D; the intercept is distortion polarisation.
-    - Use the intercept, because the dipole term is the temperature-independent part.
-    - Use the slope, but multiply by T, since μ² must be in J.
+      Slope: μ = √(9ε₀k_B B/N_A) ≈ 1.05 D; the intercept is distortion polarisation.
+    - Use the intercept, because the dipole term is the temperature-independent part of P.
+    - Use the slope, but multiply it by T first, since μ² must come out in units of J.
     - Average slope and intercept, because each of them contains half of the information about μ.
   correct: 0
   explanation: >-
@@ -83,7 +83,7 @@
     Applying the Debye equation to pure liquid methanol gives μ = 1.2 D; Onsager's equation gives 3.0 D; the
     gas value is 1.67 D. Which reading of these numbers is correct?
   options:
-    - The gas value is wrong, because only the liquid gives the true molecular dipole moment of methanol.
+    - The gas value is wrong, because only the liquid gives methanol's true dipole moment.
     - Debye lacks the reaction field and undershoots; Onsager overshoots as H-bonded dipoles align.
     - Onsager is exact for every liquid, so methanol's dipole really is 3.0 D in all phases.
     - Both equations fail only because the density was used in place of the molar volume.

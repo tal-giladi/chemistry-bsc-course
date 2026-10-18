@@ -6,7 +6,7 @@
     - The candidate phase is present, because two matching lines are enough for a minor phase.
     - Only the two expected oxides, because unexplained peaks in a real pattern are usually noise.
     - The unexplained peaks as instrument artefacts, because the zero shift differs from that of the pure samples.
-    - At least one further crystalline phase of still unknown identity, with a search-match as the next step.
+    - At least one further phase of unknown identity; run a search-match next.
   correct: 3
   explanation: >-
     Eight real peaks, one of them strong, are evidence for more phases, but a candidate that misses the strongest
@@ -19,7 +19,7 @@
     - They are about 31 nm, an upper limit because strain also adds width.
     - They are at least about 31 nm, because the instrument's own width is still included.
     - They are about 3 nm, because the width must be used in degrees.
-    - They are exactly 31 nm, because the Scherrer equation needs no correction for a lab diffractometer.
+    - They are exactly 31 nm, as Scherrer needs no correction on a lab instrument.
   correct: 1
   explanation: >-
     tau = 0.9 x 0.15406 nm / (0.004677 rad x cos 15.2 deg) = 31 nm. Part of the measured width comes from the
@@ -42,7 +42,7 @@
     A learner who finished Modules 17 and 24 well and wants a career in synthesis has time for one more Technion
     faculty-list elective. Which choice builds most directly on what they did?
   options:
-    - Intro to Molecular Quantum Technology, because NMR spins are two-level systems.
+    - Intro to Molecular Quantum Technology, because NMR nuclear spins are two-level systems just like qubits.
     - Numerical Simulation in Chemical Physics, because every modern chemist must be able to write simulations.
     - Structure Determination by Physical Methods, because it extends their spectra work to harder unknowns.
     - Symmetry and its Uses in Chemistry, because it is worth the most points.

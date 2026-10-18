@@ -5,7 +5,7 @@
   options:
     - It halves, because the stability rose by about 40 %.
     - It falls about ninefold, because exp(5.7/2.58) is close to 9.
-    - It falls about a hundredfold, because each kJ/mol is a factor of ten.
+    - It falls a hundredfold, as each kJ/mol is a factor of ten.
     - It falls about twofold, because 5.7/2.58 is close to 2.
   correct: 1
   explanation: >-
@@ -34,7 +34,7 @@
     - A, about 10 times faster, because its turnover number is 10 times larger.
     - Both at the same rate, because they share one active site.
     - B, about 10 times faster, because its kcat/Km is 10 times larger.
-    - A, about 100 times faster, because its Km is 100 times larger.
+    - A, about 100 times faster, because its Km value is 100 times larger.
   correct: 2
   explanation: >-
     For competing substrates v_B/v_A = (kcat/Km)_B[B]/((kcat/Km)_A[A]) = (1e6)/(1e5) = 10 at equal
@@ -45,9 +45,9 @@
     fit of the same data gives 0.55 +/- 0.05 mM. The two lowest-[S] rates are the noisiest. What do you
     report?
   options:
-    - 0.55 +/- 0.05 mM, because 1/v gives the noisy low-[S] rates the most pull.
+    - 0.55 +/- 0.05 mM; 1/v gives the noisy low-[S] rates most pull.
     - 0.9 mM, because straight-line fits are less sensitive to outliers in the data.
-    - 0.72 mM, the mean of the two methods.
+    - 0.72 mM, the mean of the two methods, as each has a similar error.
     - Neither, because Km cannot be measured reliably when initial rates are noisy.
   correct: 0
   explanation: >-
@@ -59,7 +59,7 @@
     0.3 mM. Lineweaver-Burk lines are parallel. What are the type and the constant?
   options:
     - Noncompetitive with Ki = 1 uM, because Vmax halved.
-    - Uncompetitive with Ki' = 1 uM, from alpha' = 2.
+    - Uncompetitive with Ki' = 1 uM, since alpha' = 2 for Km and Vmax.
     - Competitive with Ki = 0.5 uM, because Km changed.
     - Mixed with Ki = 2 uM, because both constants changed.
   correct: 1
@@ -73,7 +73,7 @@
   options:
     - The rival, because its IC50 is three times lower.
     - The first compound, because its IC50 was measured at the higher [S].
-    - Neither; after correction both have Ki = 50 nM.
+    - Neither; after the Cheng-Prusoff correction both have Ki = 50 nM.
     - The rival, because its Ki is 100 nM against 300 nM.
   correct: 2
   explanation: >-
@@ -98,7 +98,7 @@
   options:
     - It reflects the substrate's carboxylate becoming protonated at low pH.
     - It reflects a lysine on the protein surface losing its positive charge.
-    - It shows the enzyme unfolding below pH 7.
+    - It shows the enzyme unfolding below pH 7, which destroys the active site.
     - It is the histidine, which must be neutral to act as a general base.
   correct: 3
   explanation: >-
@@ -109,10 +109,10 @@
     A step of glycolysis has dG0' = +24 kJ/mol but, with red-cell concentrations, dG = -1 kJ/mol. A drug
     that halves this enzyme's activity is proposed to stop glycolysis in a parasite. What do you predict?
   options:
-    - Glycolysis stops, because the step is uphill under standard conditions and cannot proceed.
-    - Glycolysis slows by half, because flux passes through every enzyme equally, step by step.
+    - Glycolysis stops, because the step is uphill under standard conditions.
+    - Glycolysis slows by half, because flux passes through every enzyme equally.
     - Little change, because a near-equilibrium step has spare capacity to restore its flux.
-    - Glycolysis speeds up, because less product inhibition occurs.
+    - Glycolysis speeds up, because less product inhibition occurs downstream.
   correct: 2
   explanation: >-
     Near equilibrium, the enzyme has spare capacity and the net flux is a small difference of large

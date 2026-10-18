@@ -3,10 +3,10 @@
     A stability study finds a drug degrades with Ea = 100 kJ/mol. A distributor proposes storing it at
     37 degrees C instead of 25 degrees C. Roughly how much faster will it degrade?
   options:
-    - About 1.5 times faster, because 12 K is a small change in absolute temperature.
+    - About 1.5 times faster, as 12 K is a small change in absolute T.
     - About 2.2 times faster, as for any reaction warmed by about 10 K.
-    - About 4.8 times faster, from exp[(Ea/R)(1/298 - 1/310)].
-    - About 12 times faster, because the rate rises in proportion to the temperature in degrees C.
+    - About 4.8 times faster, from exp[(Ea/R)(1/298 - 1/310)] with the given Ea.
+    - About 12 times faster, as the rate rises in proportion to the temperature in C.
   correct: 2
   explanation: >-
     exp[(100000/8.314)(1/298.15 - 1/310.15)] = e^1.56 = 4.8. The "doubling per 10 K" rule only holds
@@ -17,7 +17,7 @@
     but experiment gives 1.6e-12. What is the best interpretation?
   options:
     - Only collisions with the right geometry react, so the steric factor is about 0.005.
-    - The activation energy was measured wrongly, which lowers the apparent A.
+    - The activation energy was measured wrongly, which lowers the apparent A factor a lot.
     - Most collisions between OH and CH4 are too slow, because CH4 is heavy.
     - The experiment was done in the falloff region, so the measured A is pressure dependent.
   correct: 0
@@ -29,8 +29,8 @@
     An Eyring analysis of a gas-phase decomposition gives an entropy of activation of +36 J mol-1 K-1.
     What does this suggest about the transition state?
   options:
-    - It is tight and ordered, like two molecules locked together.
-    - It is loose, with a stretched bond and freer motion than the reactant.
+    - It is tight and ordered, like two molecules locked firmly together.
+    - It is loose, with a stretched bond and freer internal motion.
     - It has the same structure as the reactant, so the barrier is purely enthalpic.
     - It is a stable intermediate that could be isolated at low temperature.
   correct: 1
@@ -43,8 +43,8 @@
     this straight line to predict k at 1800 K. What goes wrong?
   options:
     - Nothing, because Ea is a property of the barrier and does not change with temperature.
-    - The prediction is too high, because tunnelling speeds the reaction up at high temperature.
-    - The prediction is wrong only because the units change from cm3 to L at high temperature.
+    - The prediction is too high, as tunnelling speeds the reaction when hot.
+    - The prediction is wrong only because the units change from cm3 to L.
     - The prediction is far too low, because the local Ea rises to about 34 kJ/mol when hot.
   correct: 3
   explanation: >-
@@ -58,7 +58,7 @@
     - 102.3 kJ/mol, because Ea and the activation enthalpy are the same quantity.
     - 99.8 kJ/mol, because the activation enthalpy is Ea minus RT.
     - 104.8 kJ/mol, because the activation enthalpy is Ea plus RT.
-    - 2.5 kJ/mol, because the activation enthalpy equals RT at 300 K.
+    - 2.5 kJ/mol, as the activation enthalpy equals RT at 300 K.
   correct: 1
   explanation: >-
     For a unimolecular reaction Ea = dH + RT, so dH = 102.3 - 8.314 x 300/1000 = 99.8 kJ/mol. The

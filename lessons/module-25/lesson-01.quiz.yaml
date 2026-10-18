@@ -7,7 +7,7 @@
     - About 9.7 mg/L, from 0.512 / 0.053, because the yellow dye dominates at 426 nm.
     - About 4.5 mg/L, because both dyes are read at 630 nm where the blue dye is measured.
     - About 9.2 mg/L, after subtracting the blue dye's share of the 426 nm absorbance.
-    - About 13.9 mg/L, from (0.512 + 0.738) / (0.053 + 0.037), summing both wavelengths.
+    - About 13.9 mg/L, from (0.512 + 0.738) / (0.053 + 0.037), both wavelengths.
   correct: 2
   explanation: >-
     At 630 nm only blue absorbs, so c_B = 0.738/0.164 = 4.50 mg/L. At 426 nm the blue dye contributes
@@ -20,7 +20,7 @@
   options:
     - The colours spread over a smaller angle, so the same range covers fewer pixels.
     - The colours are spread over a larger angle, so the spectrum no longer fits in the camera's view.
-    - The spectrum is unchanged, because the angle depends only on the wavelength of the light.
+    - The spectrum is unchanged, as the angle depends only on wavelength.
     - The rainbow disappears, because a CD has too few tracks per millimetre to diffract visible light.
   correct: 0
   explanation: >-
@@ -32,7 +32,7 @@
     0.5, 0.7 and 1.0 of the stock. The blank photo shows no clipped pixels. What is the best next step?
   options:
     - Fit all six points with a straight line, since more points always give a better slope.
-    - Fit the points up to 0.5, and dilute anything that reads above about 0.7 into that range.
+    - Fit the points up to 0.5, and dilute anything above about 0.7 into that range.
     - Retake the series at higher exposure, so that the strongest solutions become brighter.
     - Switch from the blue to the green channel, because blue dyes are best read in green light.
   correct: 1
@@ -45,8 +45,8 @@
     -9 and +4 nm. The dye peaks look sensible. What is the most likely cause?
   options:
     - The DVD piece is too small, so the lines are too faint to locate accurately.
-    - A quadratic calibration is too flexible; a straight line would fit these lines better.
-    - The camera's white balance shifted the colours, which moves every line by a few nanometres.
+    - A quadratic calibration is too flexible; a straight line would fit better.
+    - The camera's white balance shifted every line by a few nanometres.
     - A broad phosphor band was taken for a mercury line, so one assignment is wrong.
   correct: 3
   explanation: >-

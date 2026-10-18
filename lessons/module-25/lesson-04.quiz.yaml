@@ -5,7 +5,7 @@
   options:
     - alpha-pinene, because it has the higher match factor.
     - beta-pinene, because only its retention index matches the measured one.
-    - Both pinenes, because the two match factors differ by less than 10 points.
+    - Both pinenes, as the two match factors differ by under 10 points.
     - Neither, because a match factor below 960 cannot identify a terpene.
   correct: 1
   explanation: >-
@@ -16,9 +16,9 @@
     Why is a GC-MS run started with a solvent delay of a few minutes, during which the filament is off?
   options:
     - The column needs those minutes to reach the starting oven temperature before data are recorded.
-    - The solvent's ions would otherwise be added to every later spectrum as background.
+    - The solvent's ions would otherwise add to every later spectrum.
     - The huge solvent peak would overload the detector and wear out the filament.
-    - The mass analyser cannot scan below m/z 35 until the vacuum recovers from the injection.
+    - The mass analyser cannot scan below m/z 35 until the vacuum recovers.
   correct: 2
   explanation: >-
     The solvent is thousands of times more abundant than any analyte. Switching the source off while it
@@ -30,7 +30,7 @@
   options:
     - Accept limonene and ignore the extra ions, since an MF above 900 is an excellent match.
     - Report the peak as unidentified, because a good match must explain all of the ions.
-    - Re-tune the mass spectrometer, because the extra ions show a mass-calibration error.
+    - Re-tune the mass spectrometer, because the extra ions show a mass-calibration error here.
     - Search the residual and check an m/z 119 ion chromatogram for a co-eluting compound.
   correct: 3
   explanation: >-
@@ -41,7 +41,7 @@
     A small late peak at RI 1191 matches gamma-terpinene with MF 861, but gamma-terpinene (RI 1061)
     already appears earlier in the same run. What does this most likely mean?
   options:
-    - The true compound is not in the library, so the search returned the closest wrong one.
+    - The true compound is missing from the library, so a wrong one came closest.
     - Gamma-terpinene eluted twice because the column was overloaded by the large limonene peak.
     - The alkane ladder was run on a different day, so all retention indices are shifted by 130 units.
     - MF 861 is too low to say anything; only matches above 950 carry information.

@@ -6,7 +6,7 @@
     - The hours check; the learner should plan two years of daily observations instead of 180 hours.
     - The tools check; the learner should buy a commercial gas analyser to measure the pollutants.
     - The safety check; cabbage extract is hazardous and must be replaced by a lab indicator.
-    - The reference check; nothing independent gives the true pollution, so narrow the question.
+    - The reference check; nothing independent gives the true pollution, so narrow it.
   correct: 3
   explanation: >-
     Without an independent reference the colour change cannot be tied to pollution rather than light,
@@ -56,9 +56,9 @@
     with the same solution. B comes out 1.5 % lower. What can you claim?
   options:
     - Brand B is weaker than brand A, because the 1.5 % difference is clearly larger than the repeatability.
-    - Nothing about the brands yet, because the brand difference is mixed with the ageing of the titrant.
+    - Nothing about the brands yet; their difference is mixed with titrant ageing.
     - Brand A is stronger than its label, because it was measured with the fresher solution.
-    - The titrant lost 1.5 % of its strength between Sunday and Wednesday.
+    - The titrant itself lost 1.5 % of its strength between Sunday and Wednesday's runs.
   correct: 1
   explanation: >-
     Measuring each brand in a block confounds brand with day. A shuffled order with a standard titrated each
@@ -68,7 +68,7 @@
     A solubility model built on 800 compounds has an RMS error of 0.45 log units on those compounds and 0.81
     on 200 compounds it never saw. A friend says to report 0.45 because it uses more data. What do you report?
   options:
-    - 0.81 on the held-out compounds, as the error a new user should expect.
+    - 0.81 from the held-out compounds, as the error that a new user should expect.
     - 0.45, because the larger set gives the more precise estimate of the error.
     - 0.63, the average, because both sets contain real measured solubilities.
     - Both without comment, and let the reader choose the number that suits them.
@@ -93,7 +93,7 @@
   question: >-
     Which poster plan best passes the ten-second test at an A0 poster session?
   options:
-    - The full report text in three columns at 16 pt, so every detail is available to visitors.
+    - The full report text in three columns at 16 pt, so every detail is available to all visitors.
     - A title naming the topic, an introduction block at the top, and the results at the bottom right.
     - Six equally sized figures with no titles, so visitors can draw their own conclusions.
     - A title stating the result and a central figure titled with its conclusion, labels at 24 pt.
@@ -106,10 +106,10 @@
     A researcher you e-mailed answered your question and pointed out a Fermi resonance you had missed. How do you
     present the work afterwards?
   options:
-    - As your project, revised after the researcher's comments, naming them only with permission.
+    - As your own project, revised, naming the researcher only with permission.
     - As a project supervised by the researcher, since they corrected the analysis.
     - As a joint paper, adding the researcher as co-author without asking them, to give them full credit.
-    - Without mentioning the comment, since it came by private e-mail.
+    - Without mentioning the comment at all, since it only came by private e-mail.
   correct: 0
   explanation: >-
     State exactly what the reader did and ask before naming them. Supervision or co-authorship would claim

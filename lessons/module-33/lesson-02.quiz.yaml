@@ -29,7 +29,7 @@
     You fit an IR scale factor to 20 molecules and get an RMS error of 11.6 cm-1 on those molecules. On 10
     molecules you held out, the RMS is 14.3 cm-1. Which value goes into the report as the method's error?
   options:
-    - The 14.3 cm-1 held-out value, because the fitting set gives an optimistic estimate.
+    - The 14.3 cm-1 held-out value, as the fitting set is optimistic.
     - The 11.6 cm-1 value, because it uses twice as many molecules as the held-out set does.
     - The average of the two, 13.0 cm-1, because both sets are equally valid samples.
     - Neither, because an RMS error should only be reported for the scale factor itself.
@@ -41,7 +41,7 @@
   question: >-
     In week 9 you notice a mistyped value in a raw data file you downloaded. What is the right way to fix it?
   options:
-    - Correct the value in the raw file directly and note the date of the change in your notebook.
+    - Correct the value in the raw file directly and note the date in your notebook.
     - Delete the row from the raw file, since a mistyped point would bias the fit.
     - Leave it, because raw data must never be changed and errors average out.
     - Keep the raw file unchanged and correct the value in code, with the reason in a comment.

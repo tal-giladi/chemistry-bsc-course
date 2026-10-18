@@ -3,10 +3,10 @@
     A transition-state search ends at a geometry whose Hessian has two negative eigenvalues. A
     colleague wants to report it as the transition state of the reaction. What do you advise?
   options:
-    - Report it, because any stationary point with negative curvature is a transition state.
-    - Reject it as a minimum, because negative eigenvalues mean the energy is lowest there.
-    - Accept it only if the energy is lower than the reactants, which proves it is on the path.
-    - Keep searching, because a transition state has exactly one negative eigenvalue.
+    - Report it, as any stationary point with negative curvature is a transition state.
+    - Reject it as a minimum, as negative eigenvalues mean the energy is lowest.
+    - Accept it only if it lies below the reactants, which proves it is on the path.
+    - Keep searching, because a true transition state has exactly one negative eigenvalue.
   correct: 3
   explanation: >-
     A transition state is a first-order saddle point: one direction of negative curvature (one imaginary
@@ -44,7 +44,7 @@
     to its own product. The transition state from B is 2 kJ/mol lower in Gibbs energy than the one
     from A. What product ratio do you expect at 298 K?
   options:
-    - About 2.2 to 1 in favour of B's product, set by the two transition states.
+    - About 2.2 to 1 for B's product, set by the two transition states.
     - About 5 to 1 in favour of A's product, set by the conformer populations.
     - About 1 to 1, because fast interconversion averages the two pathways.
     - About 11 to 1 in favour of B's product, set by the ratio of the separate rate constants.

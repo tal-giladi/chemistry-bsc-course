@@ -4,7 +4,7 @@
     70 % at the same temperature and pressure. How should you judge the claim?
   options:
     - Plausible, because a lower barrier makes the forward reaction win at equilibrium.
-    - Plausible only for heterogeneous catalysts, which hold the product on their surface.
+    - Plausible only for heterogeneous catalysts, which hold the product on their own surface.
     - Impossible, because a catalyst speeds both directions equally and leaves K unchanged.
     - Plausible if the catalyst is used in large amounts, so that it takes part in the equilibrium.
   correct: 2
@@ -16,7 +16,7 @@
     An enzyme has Km = 2 mM. You double the substrate concentration from 40 mM to 80 mM. What happens
     to the initial rate?
   options:
-    - It barely changes, because the enzyme is already almost saturated.
+    - It barely changes, as the enzyme is almost saturated.
     - It doubles, because the reaction is first order in substrate.
     - It halves, because the extra substrate inhibits the enzyme.
     - It rises fourfold, because two substrate molecules bind each enzyme.
@@ -31,7 +31,7 @@
   options:
     - X, because its turnover number is ten times larger.
     - X, because a large Km means the enzyme releases product quickly.
-    - Both equally, because at low substrate the rate depends only on the enzyme concentration.
+    - Both equally, because at low substrate the rate depends only on [E].
     - Y, because its kcat/Km is ten times larger and controls the rate at low substrate.
   correct: 3
   explanation: >-

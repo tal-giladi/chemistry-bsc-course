@@ -3,7 +3,7 @@
     A sample reads A = 2.35 on a spectrophotometer whose calibration standards run from A = 0.05 to
     A = 0.95. The instrument has about 0.4 % stray light. What is the best next step?
   options:
-    - Extend the calibration line upwards, since Beer-Lambert is linear at every absorbance.
+    - Extend the calibration line upwards, since Beer-Lambert is always linear.
     - Report the value from the line and add a note that it is above the top standard.
     - Dilute by a known factor so it reads near 0.4-0.6, then measure and multiply back.
     - Switch to a 2 cm cell so the light passes through more of the sample.
@@ -19,7 +19,7 @@
     - Polystyrene, because it is disposable and avoids contamination between samples.
     - Quartz, because glass and ordinary plastics absorb strongly below 300 nm.
     - Glass, because it is more transparent than quartz in the ultraviolet.
-    - Any material, because the blank cancels the cell's own absorbance completely.
+    - Any material, because the blank cancels the cell's own absorbance.
   correct: 1
   explanation: >-
     Below about 300 nm glass and common plastics absorb so much that little light reaches the
@@ -31,7 +31,7 @@
     and positive in the middle, and the top standard is far below the line. What does this tell you?
   options:
     - The line is acceptable because R squared is above 0.98.
-    - The lowest standards were contaminated and should be remade.
+    - The lowest standards were contaminated and should be remade from fresh stock.
     - The detector has a constant offset that a simple blank subtraction will remove.
     - The response bends at high concentration, so the working range must shrink.
   correct: 3
@@ -44,9 +44,9 @@
     Your simple spectrophotometer has a constant transmittance noise of 0.2 %T. Which reading gives
     the smallest relative error in concentration?
   options:
-    - About A = 0.43, where error from constant transmittance noise is smallest.
+    - About A = 0.43, where constant transmittance noise matters least.
     - About A = 0.05, because the sample barely disturbs the light beam.
-    - About A = 2.0, because the absorbance signal is largest there.
+    - About A = 2.0, because the absorbance signal is at its largest there.
     - Any reading, because constant noise gives the same relative error everywhere.
   correct: 0
   explanation: >-

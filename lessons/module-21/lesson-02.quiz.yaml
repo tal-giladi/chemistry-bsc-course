@@ -3,7 +3,7 @@
     At 298 K the vibrational partition function of HCl is 1.0000009 and that of I2 is 1.56. What does
     this tell you?
   options:
-    - HCl vibrates faster, so it has more vibrational energy than I2 at the same temperature.
+    - HCl vibrates faster, so it stores more vibrational energy than I2 does at the same temperature.
     - Both molecules have about one vibrational state, because q is always close to 1 for vibrations.
     - The values are not comparable, because q depends on the arbitrary zero of energy.
     - HCl can reach essentially only v = 0, while I2 reaches roughly one and a half states' worth.
@@ -17,7 +17,7 @@
     and then falling again towards 20.79. What is the best explanation?
   options:
     - Cl atoms start to pair up into Cl2 around 600 K, which adds rotational and vibrational heat capacity.
-    - The excited 2P1/2 level fills up to its high-temperature limit, so it stops absorbing extra heat.
+    - The excited 2P1/2 level fills to its high-T limit, so it stops absorbing heat.
     - Translational heat capacity rises with temperature until equipartition is reached.
     - The table switches between two fitted temperature ranges, which creates an artificial bump.
   correct: 1
@@ -33,7 +33,7 @@
     - The entropy is too large and not extensive, as identical atoms are counted as distinguishable.
     - The internal energy comes out too large, because N! appears in U = kT^2 d ln Q / dT.
     - Nothing, because N! is a constant and cancels in all thermodynamic functions.
-    - The entropy comes out too small, because dividing by N! is exactly what adds the mixing entropy.
+    - The entropy comes out too small, because dividing by N! is what adds the mixing entropy.
   correct: 0
   explanation: >-
     Swapping two identical gas atoms gives the same microstate, so q^N overcounts by N!. The N! does not

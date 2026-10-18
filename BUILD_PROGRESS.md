@@ -134,3 +134,4 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - PAUSED (session tokens ending). State: all 33 modules + 17 simulations committed and pushed; glossary/research merged; check.py 0 errors; Academy dry run 0 problems (before quiz pass 2).
   Running at pause: quiz rank pass 2 (two agents, modules 1-16 and 17-33), uncommitted edits in *.quiz.yaml, progress in curriculum/status/quiz-rank.log.
   RESUME: respawn "Follow curriculum/QUIZ-RANK-BRIEF.md for modules 1 to 16 (range 1 16)" and the same for 17 33 (they skip logged files); then py scripts/quiz_rank.py, py scripts/check.py, npm run check-course (0 problems), commit + push, update TODO_FOR_TAL.md to "ready to import" with repo + commit.
+- quiz rank pass 2 done for 17-33 (25/25/25/24%).

@@ -6,7 +6,7 @@
     - Three C2 axes along the B-F bonds and a horizontal mirror plane, so D3h.
     - The centre of inversion at boron, which together with C3 makes it D3d.
     - The four C3 axes of a tetrahedron, which make it Td.
-    - Nothing; BF3 is C3v like NH3, because both have three equal bonds to the centre.
+    - Nothing; BF3 is C3v like NH3, as both have three equal bonds.
   correct: 0
   explanation: >-
     BF3 is planar. Each B-F bond is a C2 axis perpendicular to the C3, and the molecular plane is a
@@ -32,7 +32,7 @@
     - trans-ClCH=CHCl, because its C-Cl bonds are polar.
     - CCl4, because its four C-Cl bond dipoles point in different directions.
     - CHCl3, because a C3v molecule can carry a dipole along its C3 axis.
-    - XeF4, because the lone pairs on xenon create a dipole.
+    - XeF4, because the two lone pairs on the xenon atom create a molecular dipole.
   correct: 2
   explanation: >-
     A dipole must lie on every symmetry element. Only C1, Cs, Cn and Cnv allow that. C2h has a centre of
@@ -42,9 +42,9 @@
     Two conformers of ethane are rotated 60 degrees apart about the C-C bond. One is D3h and the
     other D3d. Which element does the staggered conformer have that the eclipsed one lacks?
   options:
-    - A C3 axis along the C-C bond.
+    - A C3 axis running along the C-C bond through both carbon atoms.
     - A horizontal mirror plane between the two carbon atoms.
-    - Three C2 axes perpendicular to the C-C bond.
+    - Three C2 axes perpendicular to the C-C bond, through its midpoint.
     - A centre of inversion at the midpoint of the C-C bond.
   correct: 3
   explanation: >-

@@ -18,7 +18,7 @@
   options:
     - Negative charge builds up at the benzylic carbon, so acceptors speed the reaction.
     - The reaction is insensitive to substituents, because rho is far from 1.
-    - Positive charge builds up near the ring, so donors speed the reaction strongly.
+    - Positive charge builds near the ring, so donors speed it strongly.
     - The mechanism must be radical, because ionic reactions always have positive rho.
   correct: 2
   explanation: >-
@@ -30,7 +30,7 @@
     more acidic than the line predicts. What is the best explanation?
   options:
     - The phenoxide charge delocalises onto the para nitro group, so sigma-minus applies.
-    - The nitro group is ortho to the OH group, so steric effects distort the measured value.
+    - The nitro group is ortho to the OH, so steric effects distort the value.
     - The measurement must be wrong, because a Hammett line fits every para substituent.
     - Nitro groups donate electrons by resonance, so sigma-plus applies instead.
   correct: 0
@@ -44,7 +44,7 @@
   options:
     - About 3 times faster, because rho times sigma is 1.09.
     - About 1.1 times faster, because the CF3 group is meta and acts only weakly.
-    - About 3 times slower, because CF3 donates by hyperconjugation.
+    - About 3 times slower, as CF3 donates by hyperconjugation.
     - About 12 times faster, because 10 to the power 1.09 is 12.
   correct: 3
   explanation: >-

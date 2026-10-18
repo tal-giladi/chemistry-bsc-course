@@ -3,9 +3,9 @@
     An environmental agency wants to monitor N2O and N2 in a gas stream with one infrared analyser. What
     is the problem with this plan?
   options:
-    - N2O has no permanent dipole, so it is invisible in the infrared.
+    - N2O has no permanent dipole, so all of its vibrations are invisible in the infrared.
     - Both gases absorb at the same wavenumber, so the analyser cannot tell them apart.
-    - N2 has no vibration that changes its dipole, so IR cannot see it; N2 needs Raman.
+    - N2 has no dipole-changing vibration, so IR cannot see it; N2 needs Raman.
     - The analyser must be cooled, because at room temperature both molecules sit in excited levels.
   correct: 2
   explanation: >-
@@ -18,7 +18,7 @@
   options:
     - 40.9 cm-1, the gap between the two lines.
     - 20.5 cm-1, half the gap, because lines are spaced by 2B.
-    - 10.2 cm-1, a quarter of the gap, because levels are spaced by 4B.
+    - 10.2 cm-1, a quarter of the gap, as levels are 4B apart.
     - 41.1 cm-1, the first line divided by two.
   correct: 1
   explanation: >-
@@ -45,7 +45,7 @@
     - B1, because the two lines share the same lower level J = 1; B1 = 62.6/6 = 10.43 cm-1.
     - The band centre, which lies at their mean, 2875.0 cm-1.
     - B0, because both lines share the upper level J = 1; B0 = 62.6/6 = 10.43 cm-1.
-    - B0, from R(J-1) - P(J+1) = 2B0(J + 1/2); B0 = 62.6/3 = 20.9 cm-1.
+    - B0, from R(J-1) - P(J+1) = 2B0(J + 1/2), which then gives B0 = 62.6/3 = 20.9 cm-1.
   correct: 2
   explanation: >-
     R(0) goes 0 -> 1 and P(2) goes 2 -> 1; both end in v = 1, J = 1, so the difference is F0(2) - F0(0) =
@@ -55,10 +55,10 @@
     A Raman spectrum of liquid CCl4 shows a strong Stokes line at a shift of 459 cm-1 and a weaker
     anti-Stokes line at the same shift. You heat the sample. What happens to the anti-Stokes/Stokes ratio?
   options:
-    - It stays the same, because both lines come from the same vibration.
+    - It stays the same, because both lines come from the same vibrational mode.
     - It falls, because heating broadens the lines and spreads the anti-Stokes intensity out.
     - It becomes 1, because heating removes the population difference completely.
-    - It rises, because more molecules start in v = 1, where anti-Stokes scattering begins.
+    - It rises, as more molecules start in v = 1, which anti-Stokes lines need.
   correct: 3
   explanation: >-
     Anti-Stokes scattering starts from the excited level, whose population grows as exp(-hc 459/kT). The
@@ -68,7 +68,7 @@
     The visible absorption band of Br2 shows a long progression peaking far above its 0-0 band. What does
     this tell you about the excited state?
   options:
-    - Its bond is much longer, so vertical transitions land on high v' levels.
+    - Its bond is much longer in the excited state, so vertical transitions land on high v'.
     - Its bond has the same length, so all vibrational bands have equal intensity.
     - The transition is spin-forbidden, which always shifts the maximum to high v'.
     - The excited state is not bound, so the molecule dissociates at the 0-0 band.
@@ -108,9 +108,9 @@
     Its IR and Raman spectra show no band at the same position in both. What does this suggest?
   options:
     - Tetrahedral, because Td molecules have fewer IR bands than D4h molecules.
-    - It cannot be decided, because both geometries have nine vibrations.
+    - It cannot be decided, because both geometries have nine normal vibrations.
     - Tetrahedral, because only tetrahedral molecules obey the rule of mutual exclusion.
-    - Square planar, because D4h has an inversion centre, so no bands coincide.
+    - Square planar, as D4h has an inversion centre, so no bands coincide.
   correct: 3
   explanation: >-
     In Td the two T2 modes are both IR and Raman active, so coincidences are expected. D4h is centrosymmetric:
@@ -120,8 +120,8 @@
     For SO2 (C2v) a student reduces Gamma_3N to 3A1 + A2 + 3B1 + 2B2 (with B1 like x and B2 like y). How
     many fundamental bands should its IR spectrum show?
   options:
-    - Nine, one for each Cartesian displacement.
-    - Three, because 2A1 + B1 are all IR active.
+    - Nine, one for each Cartesian displacement of the three atoms.
+    - Three, because 2A1 + B1 are all IR active, each changing the dipole.
     - Two, because only the A1 vibrations change the dipole.
     - Six, because A1, B1 and B2 all transform like x, y or z.
   correct: 1

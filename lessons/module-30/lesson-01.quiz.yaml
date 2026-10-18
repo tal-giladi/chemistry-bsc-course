@@ -3,7 +3,7 @@
     You record the HCl fundamental at 4 cm-1 resolution and every R and P line looks like a single slightly
     asymmetric peak. Your B0 comes out 1 % low. What change to the measurement fixes this most directly?
   options:
-    - Raise the pressure tenfold so that the weak high-J lines become stronger.
+    - Raise the pressure tenfold so the weak high-J lines grow.
     - Average four times as many scans to reduce the noise on each peak.
     - Record at 0.5 cm-1 or better so the H35Cl and H37Cl partners separate.
     - Heat the cell to 400 K so that more rotational levels are populated and measured.
@@ -18,7 +18,7 @@
   options:
     - Drop the lines with the largest residuals, because they are probably blended.
     - Add a cubic term, because centrifugal distortion adds -2(D' + D'') m^3.
-    - Fit the P and R branches separately, because they have different B values.
+    - Fit the P and R branches separately, as they have different B.
     - Switch to combination differences, because the polynomial fit is not valid at high J.
   correct: 1
   explanation: >-
@@ -32,7 +32,7 @@
   options:
     - The overtone centre is shifted by the isotope effect, which makes the fitted omega_e x_e too small.
     - The fundamental was measured at too low a pressure, so its centre is too high.
-    - Morse extrapolation from the lowest levels misses the flattening near dissociation.
+    - Morse extrapolation from low levels misses the flattening near dissociation.
     - Zero-point energy was subtracted twice, once in G(0) and once in the band centre.
   correct: 2
   explanation: >-
@@ -46,7 +46,7 @@
     - Some lines were put in the wrong isotopologue list or misnumbered in one fit.
     - The chlorine in that sample had an unusual isotope ratio.
     - The temperature of that sample was higher, which changes B0 slightly.
-    - Centrifugal distortion is larger for H37Cl, which lowers its B0 by about 0.3 %.
+    - Centrifugal distortion is larger for H37Cl, lowering its B0 by about 0.3 %.
   correct: 0
   explanation: >-
     B scales with 1/mu to high accuracy, so the ratio is fixed by the masses whatever the sample or temperature.

@@ -17,9 +17,9 @@
     for about five seconds each time. What is the most likely cause of the low value?
   options:
     - Heat flowed into the cold gas while the tap was open, so it was not adiabatic.
-    - Air contains water vapour, whose extra vibrations always lower gamma below 1.35.
+    - Air contains water vapour, whose vibrations always lower gamma below 1.35.
     - The approximation h1/(h1 - h2) underestimates gamma by several per cent.
-    - The pump compressed the air adiabatically, which makes h1 too large in every trial.
+    - The pump compressed the air adiabatically, making h1 too large in every trial.
   correct: 0
   explanation: >-
     A long opening lets room heat warm the expanding gas, so it warms less after the tap closes, h2 is
@@ -32,7 +32,7 @@
     - They are linear molecules with two rotations and no vibration excited.
     - They are polyatomic molecules with several soft vibrations excited.
     - They are diatomic molecules whose vibration is fully excited.
-    - They store energy only in translation, as single atoms do.
+    - They store energy only in translation, as single atoms like argon do.
   correct: 3
   explanation: >-
     Cv,m = R/(gamma - 1) = 1.5R, which is three degrees of freedom: translation only. That is a monatomic

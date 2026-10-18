@@ -3,8 +3,8 @@
     N2 and CO have almost the same mass and rotational constant, yet S standard of CO is 6.05 J/(mol K)
     higher at 298 K. Where does most of the difference come from?
   options:
-    - CO has a dipole moment, which adds electronic entropy.
-    - N2 has a symmetry number of 2 and CO of 1, which halves q_rot of N2 and costs it R ln 2.
+    - CO has a dipole moment, which adds electronic and orientational entropy to the gas.
+    - N2 has sigma = 2 and CO sigma = 1, which halves q_rot of N2 and costs R ln 2.
     - CO vibrates at a lower wavenumber, so its vibrational entropy is about 6 J/(mol K) larger.
     - CO is slightly heavier, which raises its translational entropy by about 6 J/(mol K).
   correct: 1
@@ -18,7 +18,7 @@
   options:
     - The symmetry number, which would add R ln 2 = 5.8 J/(mol K).
     - The vibrational entropy, which is large for O2 because of its weak bond.
-    - The low-lying a 1Delta_g state at 7918 cm-1, which is well populated at 298 K.
+    - The low-lying a 1Delta_g state at 7918 cm-1, well populated at 298 K.
     - The triplet degeneracy of the ground state, adding R ln 3 = 9.1 J/(mol K).
   correct: 3
   explanation: >-

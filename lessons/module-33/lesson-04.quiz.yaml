@@ -5,7 +5,8 @@
     - A long e-mail about your background with the full 16-page report attached and a request for general feedback.
     - The same short e-mail sent at once to twenty researchers, so that at least one of them replies.
     - A message asking whether they would supervise your future research, with the report to follow later.
-    - A short e-mail to an author you cited, with the result, one specific question and the time it takes.
+    - >-
+      A short e-mail to a cited author: the result, one specific question, the time it takes.
   correct: 3
   explanation: >-
     A specific question from someone who used their work is easy to answer in a few minutes. Mass mailing,
@@ -14,8 +15,8 @@
   question: >-
     A researcher read your abstract and answered one question by e-mail. How do you describe this in the report?
   options:
-    - Supervised by the researcher, since their comment changed one of the results.
-    - Read and commented on by the researcher, if they agree to be named.
+    - Supervised by the researcher, since their comment changed a result.
+    - Read and commented on by the researcher, but only if they agree to be named.
     - Approved by the researcher, as in the Technion research project course.
     - Nothing at all, because informal feedback should never be mentioned.
   correct: 1
@@ -42,7 +43,7 @@
   options:
     - Pin each package version and check the log for missing or misnamed sessions before sending.
     - Ignore both, because readers care about the result and not about package versions or logged hours.
-    - Add 9 hours to the analysis phase so the log reaches 180, then send the report.
+    - Add 9 hours to the analysis phase so that the log reaches 180, then send the report as it is.
     - Remove requirements.txt, since an unpinned list is worse than none at all.
   correct: 0
   explanation: >-

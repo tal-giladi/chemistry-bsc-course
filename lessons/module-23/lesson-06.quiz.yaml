@@ -3,10 +3,10 @@
     With the same syringe tip, 20 drops of water weigh 1.00 g and 20 drops of a detergent solution weigh
     0.46 g, both at 20 C. What is the surface tension of the solution?
   options:
-    - About 33 mN/m, from 72.7 times 0.46.
+    - About 33 mN/m, from 72.7 times the drop-mass ratio 0.46.
     - About 158 mN/m, from 72.7 divided by 0.46.
     - About 39 mN/m, from 72.7 times 0.54.
-    - About 46 mN/m, from the drop mass in milligrams per drop.
+    - About 46 mN/m, from the drop mass in mg per drop.
   correct: 0
   explanation: >-
     Drop mass is proportional to surface tension when the tip is the same, so gamma = 72.7 x 0.46/1.00 =
@@ -30,7 +30,7 @@
     salt was added. Which surface excess is right?
   options:
     - 4.4 micromol per square metre, using n = 1.
-    - 0.44 micromol per square metre, using log10 instead of ln.
+    - 0.44 micromol per square metre, using log10 instead of the natural log ln.
     - 8.9 micromol per square metre, using n = 2 in the numerator instead.
     - 2.2 micromol per square metre, using n = 2 for ion and counter-ion.
   correct: 3
@@ -45,7 +45,7 @@
   options:
     - The room cooled, raising water's surface tension, so the end value is the right one.
     - The scale drifted, so you average the two water values and use the mean.
-    - Detergent left on the tip lowered the final water value; rinse well and remeasure.
+    - Detergent on the tip lowered the last water value; rinse and remeasure.
     - Evaporation made the last drops lighter, so you correct every value by 10 %.
   correct: 2
   explanation: >-

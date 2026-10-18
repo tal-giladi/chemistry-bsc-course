@@ -4,7 +4,8 @@
     0.40 mM at 30 nM inhibitor. What are the inhibition type and Ki?
   options:
     - Uncompetitive, Ki = 10 nM, because Km changed by a factor of four.
-    - Competitive, Ki = 10 nM, from alpha = 4 and Ki = [I]/(alpha - 1).
+    - >-
+      Competitive, Ki = 10 nM, from alpha = 4: Ki = [I]/(alpha-1).
     - Competitive, Ki = 7.5 nM, from [I] divided by the factor of four.
     - Noncompetitive, Ki = 30 nM, because half the activity is lost.
   correct: 1
@@ -16,7 +17,7 @@
     A global fit of the mixed model gives Ki = 0.21 mM and a Ki' that grows without limit, with an AICc
     2.5 above the competitive model. What should you conclude?
   options:
-    - The inhibitor is mixed, because the mixed model can never fit the data worse.
+    - The inhibitor is mixed, as the mixed model never fits the data worse.
     - The data are unreliable, because a constant cannot be infinite.
     - The inhibitor is competitive; nothing in the data shows binding to ES.
     - The inhibitor is uncompetitive, because Ki' is the larger constant.
@@ -56,9 +57,9 @@
     binds at a site far from the active site. What is this control called?
   options:
     - Product inhibition at the active site of the first enzyme.
-    - Zymogen activation of the first enzyme.
+    - Zymogen activation of the first enzyme in the pathway.
     - Feedback inhibition by an allosteric effector.
-    - Irreversible covalent inhibition.
+    - Irreversible covalent inhibition of the first enzyme.
   correct: 2
   explanation: >-
     The end product acting on the first committed step through a separate regulatory site is allosteric

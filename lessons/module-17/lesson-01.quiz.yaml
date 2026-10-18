@@ -4,7 +4,7 @@
     and a base peak at m/z 77. What does the pair at 156/158 tell you?
   options:
     - The sample is a 1:1 mixture of two compounds that differ by two hydrogens.
-    - The molecule contains one chlorine atom, since chlorine gives an M+2 peak.
+    - The molecule contains one chlorine atom, since chlorine gives an M+2 peak too.
     - The molecule contains one bromine atom, since 79Br and 81Br are nearly 1:1.
     - The molecule contains two carbons more than expected, since each 13C adds one unit.
   correct: 2

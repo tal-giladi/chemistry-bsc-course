@@ -3,7 +3,7 @@
     A student wants to measure the bond length of N2 and plans to record its pure rotational
     (microwave) spectrum. What should you tell her?
   options:
-    - The lines will be very weak because few N2 molecules are rotationally excited at 298 K.
+    - The lines will be very weak, as few N2 molecules are rotationally excited at 298 K.
     - N2 has no permanent dipole, so no microwave spectrum; use rotational Raman instead.
     - The lines will lie in the infrared, because N2 is a light molecule with a large B.
     - Microwave works, but she must cool the gas so that only J = 0 is populated.
@@ -30,7 +30,7 @@
     excited rotational level at 4 cm-1 almost never emits spontaneously. What is the main reason?
   options:
     - Rotational transitions are forbidden, so their excited levels cannot emit at all.
-    - Electronic states have larger degeneracies, which speeds up their emission.
+    - Electronic states have larger degeneracies, speeding their emission.
     - Rotational levels lose energy only by stimulated emission, never by any other route.
     - The spontaneous emission coefficient grows as the cube of the frequency.
   correct: 3
@@ -42,8 +42,8 @@
     A gas-phase IR spectrum of HCl recorded at 4 cm-1 resolution shows lines about 4 cm-1 wide. The
     Doppler width at 298 K is 0.006 cm-1. What sets the observed width?
   options:
-    - The spectrometer resolution, which is far wider than the Doppler and natural widths.
-    - The Doppler effect, because HCl is a light molecule that moves fast.
+    - The spectrometer resolution, far wider than the Doppler and natural widths.
+    - The Doppler effect, because HCl is a light molecule that moves fast in the gas.
     - The natural width, because the v = 1 state of HCl has a very short radiative lifetime.
     - The isotope splitting of H35Cl and H37Cl, which always makes each line 4 cm-1 wide.
   correct: 0

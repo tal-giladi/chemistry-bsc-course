@@ -2,9 +2,9 @@
   question: >-
     A C6H4Cl2 sample shows exactly two lines in its 13C NMR spectrum. Which isomer is it?
   options:
-    - 1,2-dichlorobenzene, because adjacent chlorines make the ring symmetric.
+    - 1,2-dichlorobenzene, as adjacent chlorines make the ring symmetric.
     - 1,3-dichlorobenzene, because meta substitution leaves two kinds of carbon.
-    - Any of the three, because aromatic carbons all appear at the same shift.
+    - Any of the three, as aromatic carbons all appear at the same shift.
     - 1,4-dichlorobenzene, because symmetry leaves only C-Cl and C-H carbons.
   correct: 3
   explanation: >-
@@ -16,7 +16,7 @@
     DEPT-90. What kind of carbon is it?
   options:
     - A CH2 group, because only CH2 carbons point down in DEPT-135.
-    - A CH3 group, because methyl carbons appear below 35 ppm.
+    - A CH3 group, because methyl carbons appear below 35 ppm in 13C.
     - A CH group, because DEPT-90 hides CH carbons.
     - A quaternary carbon, because it is missing from the DEPT-90 spectrum.
   correct: 0
@@ -30,8 +30,8 @@
   options:
     - COSY, because the OCH2 protons couple through the oxygen to the carbonyl group.
     - HSQC, because it links each proton to the carbon it is directly bonded to.
-    - HMBC, because it links protons to carbons three bonds away, across the oxygen.
-    - DEPT-135, because the OCH2 carbon points down.
+    - HMBC, as it links protons to carbons three bonds away, across the O.
+    - DEPT-135, because the OCH2 carbon points down and so sits next to the oxygen.
   correct: 2
   explanation: >-
     H-C-O-C=O is a three-bond path from the OCH2 protons to the carbonyl carbon, which is exactly
@@ -41,7 +41,7 @@
     In a 13C spectrum the line at 208 ppm is much smaller than the line at 30 ppm. What is the best
     conclusion?
   options:
-    - The 208 ppm line is an impurity, because a real carbonyl line is always the tallest.
+    - The 208 ppm line is an impurity, as a real carbonyl line is always the tallest.
     - A ketone C=O; carbons without H give small lines, so heights do not count carbons.
     - There are several carbons at 30 ppm and only a fraction of one carbon at 208 ppm.
     - The 208 ppm line is an ester C=O, which is always weaker than a ketone C=O.

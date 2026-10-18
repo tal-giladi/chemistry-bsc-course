@@ -5,7 +5,7 @@
   options:
     - They are strongly polar, because εr is larger than one.
     - They are polar but hydrogen-bonded, so their dipoles cancel in the liquid.
-    - The data are inconsistent, because εr must always be much larger than n.
+    - The data are inconsistent, as εr must be much larger than n.
     - They are essentially non-polar, because εr is close to n² (2.09).
   correct: 3
   explanation: >-
@@ -19,7 +19,7 @@
     - The molecule has a large dipole that is fully aligned at all these temperatures.
     - The molecule has no permanent dipole; its polarisation is all distortion.
     - The pressure was not held constant, so the orientation term cancelled.
-    - The molecule's polarisability is zero, so only the dipole term remains.
+    - The molecule's polarisability is zero, so only the dipole term remains here.
   correct: 1
   explanation: >-
     In P = A + B/T the slope B is proportional to μ², so a zero slope means μ = 0. The intercept A, the
@@ -31,7 +31,7 @@
   options:
     - The density should be in kg/m³, which would raise the result by a factor of a thousand.
     - Water's dipole really shrinks in the liquid because hydrogen bonds pull charge back.
-    - Debye assumes uncorrelated molecules, which fails for a polar, hydrogen-bonded liquid.
+    - Debye assumes uncorrelated molecules, which fails for H-bonded polar liquids.
     - The static permittivity must be replaced by n², because only electrons respond.
   correct: 2
   explanation: >-
@@ -42,7 +42,7 @@
   question: >-
     For HCl gas, P = 7.6 + 6700/T (cm³/mol). What fraction of the molar polarisation comes from orientation at 298 K?
   options:
-    - About 75 %, because 6700/298 = 22.5 cm³/mol against 7.6.
+    - About 75 %, because 6700/298 = 22.5 cm³/mol against a distortion term of 7.6.
     - About 25 %, because the distortion term 7.6 is larger at room temperature.
     - About 99 %, because 6700 is nearly a thousand times larger than 7.6.
     - About 50 %, because both terms are always equal at room temperature.

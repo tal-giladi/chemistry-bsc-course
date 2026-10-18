@@ -3,10 +3,10 @@
     You plan an FTIR measurement of HCl gas and want B0 to better than 0.1 %. The H35Cl/H37Cl doublets are about
     2.1 cm-1 apart and the lines are 0.2 cm-1 wide at 80 mbar. Which settings do you choose?
   options:
-    - 4 cm-1 resolution and 800 mbar, so the lines are strong and the noise is low.
+    - 4 cm-1 resolution and 800 mbar, so lines are strong and noise is low.
     - 0.5 cm-1 resolution or better at about 80 mbar, so each doublet is resolved.
     - 2 cm-1 resolution at 80 mbar, since that equals the doublet spacing.
-    - 0.1 cm-1 resolution at 800 mbar, because high resolution cancels pressure broadening.
+    - 0.1 cm-1 resolution at 800 mbar, as resolution beats pressure broadening.
   correct: 1
   explanation: >-
     The doublets must be resolved, which needs a resolution well below 2.1 cm-1 and lines narrower than the
@@ -30,7 +30,7 @@
     states "D0 of HCl = 5.15 eV, measured by IR spectroscopy". How should you correct it?
   options:
     - Call it a Morse estimate; two levels cannot show where the well flattens (true D0 4.43 eV).
-    - Subtract the zero-point energy again, because the overtone centre already includes it.
+    - Subtract the zero-point energy once more, because the overtone band centre already includes it.
     - Replace it with D_e = 5.35 eV, because IR measures the well depth, not D0.
     - Keep it, because the overtone fixes the anharmonicity and therefore the dissociation energy exactly.
   correct: 0
@@ -42,8 +42,8 @@
     An unknown radical in a frozen solution gives 7 lines with intensities near 1 : 6 : 15 : 20 : 15 : 6 : 1,
     0.39 mT apart, at g = 2.0026. Which interpretation fits best?
   options:
-    - Three equivalent deuterons, because 2nI + 1 = 7 for n = 3 and I = 1.
-    - Six equivalent protons with a = 0.39 mT, giving binomial intensities for n = 6.
+    - Three equivalent deuterons, because 2nI + 1 = 7 lines for n = 3 and I = 1.
+    - Six equivalent protons, a = 0.39 mT, with binomial intensities for n = 6.
     - One nitrogen-14 nucleus and two protons, giving 3 x 2 = 6 lines plus a central line.
     - A transition-metal ion, because seven lines can only come from a nuclear spin of 7/2.
   correct: 1
@@ -55,7 +55,7 @@
     You record a radical at 9.5 GHz and at 35 GHz. At 9.5 GHz two lines are 1.0 mT apart; at 35 GHz they are
     3.7 mT apart. What do you conclude?
   options:
-    - It is one radical with a hyperfine coupling that grows with the applied magnetic field.
+    - It is one radical whose hyperfine coupling grows with the applied field.
     - The 35 GHz spectrum is overmodulated, which spreads the lines apart.
     - It is a hydrogen-atom doublet whose Breit-Rabi shift grows with frequency.
     - Two species with different g factors, because the splitting scales with frequency.
@@ -85,7 +85,7 @@
     - Accept the result, because the intercept does not affect the slope.
     - Replace the intercept by the theoretical -0.012 m and recompute c from each tube separately.
     - Check how the lengths were measured, since an offset in L moves the intercept but not c.
-    - Repeat with a narrower tube, because the intercept should vanish for a wide tube.
+    - Repeat the run with a narrower tube, because the intercept should vanish for a wide tube.
   correct: 2
   explanation: >-
     The slope is still valid, but an intercept far from -0.61 r usually means every L was measured from a
@@ -95,9 +95,9 @@
   question: >-
     Your result is c = 345.3 +/- 1.1 m/s at 23.0 +/- 0.5 C and 50 % RH. Which statement about gamma is correct?
   options:
-    - gamma = 1.395 +/- 0.009, which excludes a vibrating diatomic (1.29) by over ten sigma.
+    - gamma = 1.395 +/- 0.009, ruling out a vibrating diatomic (1.29) by over ten sigma.
     - gamma = 1.395 +/- 0.004, because the relative uncertainty of gamma equals that of c.
-    - gamma = 1.402 +/- 0.009, because humidity raises the molar mass of air.
+    - gamma = 1.402 +/- 0.009, because humidity in the room raises the molar mass of air.
     - gamma = 1.395 +/- 0.009, which cannot distinguish rotation from vibration at this precision.
   correct: 0
   explanation: >-
@@ -109,9 +109,9 @@
     beta-carotene "to get a universal model", reporting a mean residual of 40 nm. What is wrong with this approach?
   options:
     - Nothing, because more data always give a more reliable parameter set.
-    - Beta-carotene must be left out only because it was measured in hexane, not methanol.
-    - The residual should be computed in wavenumbers, which would make the fit acceptable.
-    - It mixes three physics cases; each family needs its own calibration.
+    - Beta-carotene must be left out only because it was measured in hexane.
+    - The residual should be computed in wavenumbers, making the fit acceptable.
+    - It mixes three physics cases; each family of dyes needs its own calibration.
   correct: 3
   explanation: >-
     The 4,4' dye has a different effective box and the polyene has bond alternation, so one parameter set

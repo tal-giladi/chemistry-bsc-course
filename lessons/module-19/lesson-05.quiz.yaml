@@ -6,7 +6,7 @@
     - The couple is quasi-reversible, because the separation is not exactly 57 mV.
     - The couple is reversible, because the separation is near 57 mV and does not change.
     - The product reacts away chemically, because the peaks are far apart.
-    - The species is adsorbed on the electrode, because the peak separation stays constant.
+    - The species is adsorbed on the electrode, as the separation stays constant.
   correct: 1
   explanation: >-
     A reversible one-electron couple shows about 57-59 mV at 25 C, independent of scan rate, with a
@@ -30,7 +30,7 @@
     the most likely cause and fix?
   options:
     - Dissolved oxygen being reduced; purge the solution with nitrogen or argon.
-    - The supporting electrolyte being reduced; use a lower KCl concentration.
+    - The supporting electrolyte being reduced; use a lower KCl concentration instead.
     - The reference electrode passing current; connect it to the counter lead instead.
     - Charging current; raise the scan rate so the wave disappears.
   correct: 0
@@ -42,9 +42,9 @@
     Using the Randles-Sevcik equation, what happens to the peak current if you double both the
     concentration and the electrode area at the same scan rate?
   options:
-    - It doubles, because only concentration enters the equation.
+    - It doubles, because only concentration enters the Randles-Sevcik equation.
     - It rises by the square root of 2, because area enters the equation as a square root.
-    - It rises four times, because current is proportional to area and concentration.
+    - It rises fourfold, as the current scales with area and concentration.
     - It stays the same, because the larger area dilutes the current density.
   correct: 2
   explanation: >-
@@ -57,7 +57,7 @@
   options:
     - Reject the column, because it cannot reach its optimum velocity.
     - Run it as fast as the pump allows, since the curve is flat near its minimum.
-    - Run it at the optimum anyway, because short pressure overloads do not harm a pump.
+    - Run at the optimum anyway, as short pressure overloads do not harm a pump.
     - Halve the flow, so the column runs at half the pressure limit for safety.
   correct: 1
   explanation: >-

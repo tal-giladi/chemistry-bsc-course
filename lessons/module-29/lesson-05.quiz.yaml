@@ -5,7 +5,7 @@
   options:
     - Backward, because dG0' is positive.
     - Forward, because dG = 20 + 2.58 ln(1e-6) = -15.6 kJ/mol.
-    - It is at equilibrium, because the concentrations are all small.
+    - It is at equilibrium, as all concentrations are small.
     - Forward, because dG = 20 + 2.58 ln(0.1) = +14 kJ/mol is less positive.
   correct: 1
   explanation: >-
@@ -17,7 +17,7 @@
     the activity of each enzyme separately. Which change most reduces glycolytic flux?
   options:
     - Halving phosphoglucose isomerase, because it has the smaller dG and so the least driving force.
-    - Both equally, because flux passes through every enzyme in the pathway in turn.
+    - Both equally, because the flux must pass through every enzyme in the pathway in turn.
     - Halving hexokinase, because a step far from equilibrium is set by its active enzyme.
     - Neither, because ATP levels control glycolysis independently of enzymes.
   correct: 2
@@ -28,7 +28,7 @@
   question: >-
     Which description of the aldolase step of glycolysis is correct?
   options:
-    - A retro-aldol cleavage where a lysine forms an imine with the ketone.
+    - A retro-aldol cleavage via a lysine imine with the ketone.
     - A dehydration in which Mg2+ removes water from a C2 alcohol.
     - An oxidation in which NAD+ removes a hydride from an aldehyde carbon.
     - A phosphoryl transfer in which ATP gives a phosphate to a sugar alcohol.
@@ -44,7 +44,7 @@
     - The red cell must be making DHAP from glyceraldehyde 3-phosphate.
     - The step is near equilibrium, and +5 kJ/mol is within the inputs' uncertainty.
     - Triose phosphate isomerase must be coupled to ATP hydrolysis in the cell.
-    - The enzyme must be inhibited in the red cell, which makes the computed dG positive.
+    - The enzyme must be inhibited in the red cell, making the computed dG positive.
   correct: 1
   explanation: >-
     Standard values measured under other conditions and micromolar concentrations that are hard to
@@ -54,7 +54,7 @@
     Two drug candidates each halve an enzyme's rate at the normal substrate level. One is competitive, one
     uncompetitive. If substrate then rises tenfold in front of the inhibited step, what happens?
   options:
-    - Both lose their effect equally, because the substrate outcompetes any inhibitor.
+    - Both lose their effect equally, as substrate outcompetes any inhibitor.
     - The competitive inhibitor becomes stronger, because more substrate binds near it.
     - Neither changes, because each was dosed to give half the rate.
     - The competitive one weakens markedly; the uncompetitive one becomes stronger.

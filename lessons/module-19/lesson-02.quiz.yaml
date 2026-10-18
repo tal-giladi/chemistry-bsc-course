@@ -20,7 +20,7 @@
   options:
     - About 98 %, because 0.020 mol/L is a small concentration.
     - About 72 %, because the signal falls in proportion to the chloride added.
-    - About 28 %, because F0/F = 1 + 130 x 0.020 = 3.6.
+    - About 28 %, because F0/F = 1 + 130 x 0.020 = 3.6, so F/F0 = 0.28.
     - About 3 %, because the signal falls exponentially with the quencher.
   correct: 2
   explanation: >-
@@ -31,9 +31,9 @@
     Calcium results in a phosphate-rich fertiliser extract by air-acetylene flame AAS come out 30 %
     low compared with a reference method. What is the best fix?
   options:
-    - Add excess lanthanum to standards and samples as a releasing agent.
+    - Add excess lanthanum to all solutions as a releasing agent.
     - Add a large excess of potassium as an ionisation suppressor.
-    - Switch on deuterium-lamp background correction.
+    - Switch on deuterium-lamp background correction for the measurement.
     - Use a hollow-cathode lamp of a different element with a nearby line.
   correct: 0
   explanation: >-
@@ -45,9 +45,9 @@
     Why does flame atomic emission work well for sodium but poorly for zinc, while flame AAS works
     for both?
   options:
-    - Zinc atoms are ionised completely in a flame, so none are left to emit or absorb.
+    - Zinc atoms are fully ionised in a flame, so none are left to emit or absorb.
     - Zinc has no ground-state absorption line in the ultraviolet.
-    - Sodium lamps are brighter than zinc lamps, so sodium emission is easier to see.
+    - Sodium lamps are brighter than zinc lamps, so sodium emission is easier.
     - Few zinc atoms are excited in a flame, but absorption uses the ground state.
   correct: 3
   explanation: >-

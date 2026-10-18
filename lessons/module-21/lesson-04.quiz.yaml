@@ -3,10 +3,10 @@
     A student computes K for I2 = 2 I at 1000 K from partition functions and gets 2.0e-4 instead of about
     3e-3. Which single slip explains a factor of about 16?
   options:
-    - Using De instead of D0 in the Boltzmann factor.
-    - Leaving out the symmetry number of I2.
+    - Using De instead of D0 in the Boltzmann factor for K.
+    - Leaving out the symmetry number of I2 in the rotation.
     - Leaving out the four-fold degeneracy of the I atom ground level.
-    - Using the harmonic instead of the anharmonic vibrational partition function.
+    - Using the harmonic instead of the anharmonic vibrational q.
   correct: 2
   explanation: >-
     q_el(I) = 4 enters squared, so forgetting it divides K by 16. Using De lowers K by only 14 %, the missing
@@ -15,7 +15,7 @@
   question: >-
     Why does I2 dissociation, with Delta_r E0 = +148.8 kJ/mol, reach K = 1 at about 1450 K?
   options:
-    - Above 1000 K the bond energy D0 falls, because the molecule is vibrationally excited.
+    - Above 1000 K the bond energy D0 falls, as the molecule is vibrationally hot.
     - Two atoms have far more accessible states, and the Boltzmann factor grows with T.
     - Collisions at high temperature supply the bond energy, so the reaction becomes exothermic.
     - The JANAF reference state changes at 1450 K, which sets K to 1 by definition.
@@ -40,8 +40,8 @@
     At 1000 K, K for I2 = 2 I is 3.1e-3. A lamp designer lowers the iodine pressure from 1 bar to 0.01 bar.
     What happens to the fraction of iodine present as atoms?
   options:
-    - It rises from about 3 % to 27 %, as the side with more gas moles gains at low P.
-    - It stays at 3 %, because K does not depend on pressure.
+    - It rises from about 3 % to 27 %, favouring more gas moles at low P.
+    - It stays at 3 %, because the equilibrium constant K does not depend on pressure.
     - It falls, because fewer collisions are available at low pressure to break the bond.
     - It rises to 100 %, because K is fixed while the pressure term goes to zero as P falls.
   correct: 0
@@ -53,8 +53,8 @@
     The spectroscopic K for I2 = 2 I is 1-3 % above the JANAF value from 500 to 1500 K. What is the most
     reasonable conclusion?
   options:
-    - The JANAF table must be wrong, because it disagrees with a calculation from first principles.
-    - Statistical thermodynamics only works for atoms, not for molecules with internal structure.
+    - The JANAF table must be wrong, as it disagrees with a first-principles calculation.
+    - Statistical thermodynamics only works for atoms, not for molecules.
     - The separable rigid-rotor model misses small effects such as rotation-vibration coupling.
     - The error comes from treating iodine vapour as an ideal gas at 1 bar.
   correct: 2

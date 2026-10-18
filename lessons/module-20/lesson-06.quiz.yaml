@@ -19,7 +19,7 @@
     - Seven, one for each irrep in the list.
     - Nine, one for each vibrational mode.
     - Five, because all u modes are IR active.
-    - "Three: A2u and the two Eu modes."
+    - Three, from A2u and the two Eu modes.
   correct: 3
   explanation: >-
     Only irreps that transform like x, y or z are IR active: A2u and Eu. The two Eu sets give one band each,
@@ -29,10 +29,10 @@
     A metal complex shows four IR bands and four Raman bands, and two of them coincide in position. Which
     structure can you rule out?
   options:
-    - Any structure with a centre of inversion, since mutual exclusion forbids coincidences.
+    - Any centrosymmetric structure, as mutual exclusion forbids coincidences.
     - Any tetrahedral structure, because Td molecules never show coincident bands.
     - Any structure without a C3 axis, because only C3 molecules show both IR and Raman bands.
-    - Nothing, because coincident bands are always accidental overlaps.
+    - Nothing, because coincident bands are always just accidental overlaps of lines.
   correct: 0
   explanation: >-
     With a centre of inversion every mode is either g (Raman only) or u (IR only). Coincidences are
@@ -41,7 +41,7 @@
   question: >-
     Your reduction of Gamma_3N for a five-atom molecule gives n(E) = 4/3. What has most likely gone wrong?
   options:
-    - The molecule has a fractional number of E modes, which shows up as a broad band.
+    - The molecule has a fractional number of E modes, seen as a broad band.
     - You left out the class sizes g_k or miscounted the unmoved atoms for one class.
     - You forgot to subtract the translations and rotations before reducing.
     - The point group is too high, and you should use a lower one with whole numbers.

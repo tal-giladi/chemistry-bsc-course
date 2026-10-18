@@ -3,9 +3,9 @@
     A liquid C4H8O2 shows a strong band at 1742 cm-1, two strong bands at 1240 and 1050 cm-1, and
     nothing above 3000 cm-1. Which class of compound is it?
   options:
-    - An ester, because the C=O is near 1740 and strong C-O bands are present.
-    - A ketone with an ether group, because 1742 is a normal ketone band.
-    - A carboxylic acid, because C4H8O2 has two oxygens and a C=O.
+    - An ester, as C=O is near 1740 and strong C-O bands are present.
+    - A ketone with an ether group, because 1742 is a normal ketone C=O band.
+    - A carboxylic acid, because C4H8O2 has two oxygens and a C=O group.
     - An aldehyde, because aldehyde C=O bands are the highest of the carbonyls.
   correct: 0
   explanation: >-
@@ -17,7 +17,8 @@
     3650 cm-1; SDBS shows a broad band centred near 3330 cm-1. What is the best explanation?
   options:
     - The NIST sample was wet, so its band is from water, not ethanol.
-    - The two databases use different units, one in wavenumbers and one in wavelength.
+    - >-
+      The two databases use different units: wavenumbers and wavelength.
     - SDBS used a deuterated sample, which moves the O-H band to lower wavenumber.
     - NIST measured the gas, with no O-H hydrogen bonding; SDBS measured the liquid.
   correct: 3
@@ -30,7 +31,7 @@
   options:
     - Deuterium makes a stronger bond, so the force constant is larger.
     - The reduced mass nearly doubles while the force constant stays the same.
-    - The C-D vibration does not change the dipole, so it shifts to a lower band.
+    - The C-D vibration does not change the dipole, so it shifts lower.
     - Deuterium makes a weaker bond, so the force constant is about half as large.
   correct: 1
   explanation: >-
@@ -42,7 +43,7 @@
     structural feature do these bands show?
   options:
     - A nitrile, since triple bonds absorbing near 2120 cm-1 must always contain nitrogen.
-    - An alcohol, because bands above 3200 are always O-H stretches.
+    - An alcohol, because bands above 3200 cm-1 are always O-H stretches of some kind.
     - A terminal alkyne, with a sharp C-H stretch and a weak C-C triple-bond stretch.
     - An alkene, because sp2 C-H stretches appear above 3000 cm-1.
   correct: 2

@@ -6,7 +6,7 @@
     - Hypochlorite is a catalyst here, so its concentration does not enter the rate law.
     - Hypochlorite is in large excess, so its concentration barely changes in the run.
     - Every bleaching reaction is first order, because only the dye molecule breaks apart.
-    - The phone measures only the dye, so the hypochlorite term cancels out of the data.
+    - The phone measures only the dye, so the hypochlorite term cancels.
   correct: 1
   explanation: >-
     The bleach gives hundreds of times more hypochlorite than dye, so [OCl-] stays constant and the rate
@@ -31,7 +31,7 @@
     fitted k' looks too small. What is the most likely fix?
   options:
     - Fit A = A0 exp(-k't) + A_inf, because a small residual absorbance flattens the tail.
-    - Switch to a second-order plot of 1/A against time, because the curve is not straight.
+    - Switch to a second-order plot of 1/A against time, as the curve is not straight.
     - Use the green channel instead, because red saturates when the dye is pale.
     - Add more dye halfway through to keep the absorbance in the linear range.
   correct: 0

@@ -5,7 +5,7 @@
   options:
     - About 0.75 Wh/kg, from 214 mAh/g times 3.5 V divided by 1000.
     - About 214 Wh/kg, from 214 mAh/g with the voltage left out.
-    - About 750 Wh/kg, from 214 mAh/g times 3.5 V.
+    - About 750 Wh/kg, from 214 mAh/g times 3.5 V (mAh/g x V = Wh/kg).
     - About 940 Wh/kg, from 268 mAh/g times 3.5 V.
   correct: 2
   explanation: >-
@@ -42,10 +42,10 @@
     A steel bracket is bolted to a copper pipe in a damp basement and rusts quickly near the joint. Which change
     protects the steel best without replacing either part?
   options:
-    - Paint the copper pipe only, so that it cannot rust.
-    - Add more steel bolts to spread the corrosion over a larger area.
+    - Paint the copper pipe only, so that the copper itself cannot rust away.
+    - Add more steel bolts to spread the corrosion over a larger total area.
     - Wrap the joint with copper tape to make the electrical contact between the metals more uniform.
-    - Insulate the joint electrically, for example with a plastic washer and sleeve.
+    - Insulate the joint electrically with a plastic washer and sleeve.
   correct: 3
   explanation: >-
     Copper is a good cathode, so in contact it raises the corrosion current of the steel. Breaking the electrical

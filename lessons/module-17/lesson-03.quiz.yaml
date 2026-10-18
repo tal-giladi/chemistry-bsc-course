@@ -7,7 +7,7 @@
     - 2-bromopropane, because the CH has six equivalent neighbours and each CH3 one.
     - >-
         1-bromopropane, because three carbons always give a 6:1 ratio.
-    - Bromocyclopropane, because a ring makes all of its CH2 protons magnetically equivalent.
+    - Bromocyclopropane, because a ring makes all its CH2 protons equivalent.
   correct: 1
   explanation: >-
     Six equivalent CH3 protons split the CH into a septet, and the single CH splits the 6H into a
@@ -30,8 +30,7 @@
     A compound C4H8O2 with no OH or NH shows three 1H signals whose integrals the software prints as
     0.67, 1.00 and 1.00. How many protons does each signal represent?
   options:
-    - >-
-        2, 3 and 3, because 2:3:3 adds up to the 8 hydrogens of the formula.
+    - 2, 3 and 3, because 2:3:3 adds up to the eight hydrogens of the formula.
     - 1, 1 and 1, because the software has normalised each signal to one proton.
     - 0.67, 1 and 1, because integrals give the number of protons directly.
     - 4, 6 and 6, because the integrals must be doubled to reach whole numbers.
@@ -43,10 +42,10 @@
   question: >-
     In ethanol, why is the OH signal usually a broad singlet, even though the OH is next to a CH2?
   options:
-    - Oxygen has no spin, so it blocks all coupling across it.
+    - Oxygen has no nuclear spin, so it blocks all coupling across it between protons.
     - The CH2 protons are equivalent to the OH proton, and equivalent protons do not split.
-    - The OH proton is far downfield, where coupling constants are always zero.
-    - The OH proton exchanges quickly between molecules, which averages out the coupling.
+    - The OH proton is far downfield, where coupling constants are always close to zero.
+    - The OH proton exchanges fast between molecules, so the coupling averages out.
   correct: 3
   explanation: >-
     Fast exchange (catalysed by traces of acid or water) means each OH proton sees many different

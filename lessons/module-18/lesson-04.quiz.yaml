@@ -3,7 +3,7 @@
     [Fe(H2O)6]2+ has four unpaired electrons and [Fe(CN)6]4- has none. Both contain Fe(II). What explains
     the difference?
   options:
-    - Cyanide oxidises iron to Fe(III), which has an even number of electrons.
+    - Cyanide oxidises the iron to Fe(III), which has an even number of d electrons to pair.
     - Cyanide is strong-field, so Delta_o beats the pairing energy and all six pair in t2g.
     - Water forms a tetrahedral complex, which is always high spin.
     - The cyanide complex is square planar, which forces every one of the d electrons to pair.
@@ -18,7 +18,7 @@
   options:
     - -2.0 Delta_o, because all five electrons occupy the lowered t2g set.
     - -1.2 Delta_o, because three electrons are in t2g as in Cr3+.
-    - Zero, because three electrons at -0.4 and two at +0.6 cancel.
+    - Zero, as three electrons at -0.4 and two at +0.6 cancel.
     - +0.6 Delta_o, because the two eg electrons raise the energy.
   correct: 2
   explanation: >-
@@ -28,9 +28,11 @@
   question: >-
     Which complex has the largest Delta_o: [Co(NH3)6]2+, [Co(NH3)6]3+, [CoF6]3- or [Ir(NH3)6]3+?
   options:
-    - "[Co(NH3)6]2+, because the lower charge lets the ligands come closer."
+    - >-
+      [Co(NH3)6]2+, as the lower charge lets ligands come closer.
     - "[CoF6]3-, because fluoride carries a full negative charge."
-    - "[Co(NH3)6]3+, because cobalt has the most d electrons of the four metals."
+    - >-
+      [Co(NH3)6]3+, as cobalt has the most d electrons of the four.
     - "[Ir(NH3)6]3+, because 5d orbitals overlap more with the ligands."
   correct: 3
   explanation: >-
@@ -57,7 +59,7 @@
     - Cu(II) is d10, so it prefers linear coordination and the two axial ligands drift away.
     - The axial ligands are always counter-ions that are not truly bonded.
     - The d9 ion has an unevenly filled eg set; elongation lowers its energy (Jahn-Teller).
-    - Cu(II) is always high spin, and high-spin complexes have longer axial bonds.
+    - Cu(II) complexes are always high spin, and high-spin complexes have longer axial bonds.
   correct: 2
   explanation: >-
     d9 is t2g6 eg3. Stretching along z lowers dz2, which holds two electrons, and raises dx2-y2, which

@@ -6,7 +6,7 @@
     - The C-H bond breaks in the rate-determining step, as in a concerted E2 reaction.
     - The reaction goes through a carbocation first, so it must be E1.
     - Only a secondary effect is present, because primary effects are below 2.
-    - The base must tunnel through the barrier, because any value above 2 means tunnelling.
+    - The base must tunnel, because any value above 2 means tunnelling.
   correct: 0
   explanation: >-
     A primary deuterium effect of about 2-7 means the labelled bond breaks in the slow step; 6.5 is close
@@ -29,7 +29,7 @@
     A cyclopropylcarbinyl radical clock (1.2e8 s-1 at 37 degrees C) is used with 0.20 M of a trap.
     Unrearranged and ring-opened products form in a 1 to 1 ratio. What is the trap's rate constant?
   options:
-    - 2.4e7 M-1 s-1, from the clock rate constant times the trap concentration.
+    - 2.4e7 M-1 s-1, from the clock rate constant multiplied by the trap concentration.
     - 1.2e8 M-1 s-1, because equal products mean equal rate constants.
     - 1.7e-9 M-1 s-1, from the trap concentration divided by the clock rate constant.
     - 6.0e8 M-1 s-1, from the clock rate constant divided by the trap concentration.
@@ -43,9 +43,9 @@
     sigma_p residuals bend, with the p-methoxy point 0.4 log units below the line. What do you report?
   options:
     - Sigma_p, because both R2 values are above 0.95 and it is the standard scale.
-    - Sigma_p+, as the residuals show direct conjugation of the para donor that sigma_p misses.
+    - Sigma_p+, as residuals show direct conjugation that sigma_p misses.
     - Neither, because an R2 below 0.99 means the Hammett equation does not apply to this series.
-    - Sigma_p, after deleting the methoxy point as an outlier.
+    - Sigma_p, after deleting the methoxy point as an outlier and refitting the line.
   correct: 1
   explanation: >-
     R2 barely separates the two scales; the systematic residual pattern does. A donor whose lone pair

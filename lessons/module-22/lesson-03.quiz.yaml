@@ -6,7 +6,7 @@
     - A single termolecular collision, whose barrier is lower at high temperature.
     - A rate-determining first step whose activation energy is very large.
     - A fast exothermic pre-equilibrium 2NO <=> N2O2 followed by a slower step with O2.
-    - A chain reaction in which heating destroys the chain carriers faster than it makes them.
+    - A chain reaction where heating destroys carriers faster than it makes them.
   correct: 2
   explanation: >-
     With a pre-equilibrium, k = K1 k2 and Ea = Ea,2 + dH1. The dimerisation is exothermic, so K1 falls
@@ -31,7 +31,7 @@
   options:
     - At low pressure, too few collisions energise N2O5, so activation limits the rate.
     - At low pressure, N2O5 condenses on the vessel walls and reacts on the surface instead.
-    - At low pressure, the products recombine faster and reverse the decomposition.
+    - At low pressure, the products recombine faster and then reverse the whole decomposition.
     - At low pressure, the activation energy of the bond fission rises.
   correct: 0
   explanation: >-
@@ -43,7 +43,7 @@
     about the mechanism?
   options:
     - Half of the Br2 molecules are too slow to collide, so only half react.
-    - Bromine atoms from a dissociation equilibrium Br2 <=> 2Br carry the reaction.
+    - Br atoms from the equilibrium Br2 <=> 2Br carry the reaction.
     - The reaction is elementary, with half a bromine molecule in the activated complex.
     - The product HBr reacts with half of the Br2 and regenerates hydrogen.
   correct: 1
@@ -58,7 +58,7 @@
     - The mechanism is proven, since the rate law is unique to it.
     - The mechanism is wrong unless every step is unimolecular.
     - The mechanism is consistent with the data but other mechanisms may fit too.
-    - The mechanism is correct only if the rate-determining step is the last step.
+    - The mechanism is correct only if the slow step is the last step.
   correct: 2
   explanation: >-
     Different mechanisms can give the same rate law. Independent evidence, such as detecting the

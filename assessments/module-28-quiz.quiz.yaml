@@ -5,8 +5,8 @@
     proposes storing it at 5 degrees C instead. Roughly what half-life should they expect?
   options:
     - About 2 hours, because 20 K is less than 7 % of the absolute temperature.
-    - About 2.6 hours, because rates halve for every 10 K of cooling.
-    - About 23 hours, because the Eyring rate constant falls about 17-fold.
+    - About 2.6 hours, because reaction rates halve for every 10 K of cooling.
+    - About 23 hours, as the Eyring rate constant falls about 17-fold.
     - About 5 days, because the rate depends on the square of the temperature change.
   correct: 2
   explanation: >-
@@ -18,10 +18,10 @@
     at +95 kJ/mol. A student says step 1 is rate-determining because it is the step that forms the
     intermediate. What is correct?
   options:
-    - Step 1, because its 70 kJ/mol barrier is larger than the 45 kJ/mol between intermediate and TS2.
+    - Step 1, because its 70 kJ/mol barrier exceeds the 45 kJ/mol from I to TS2.
     - Step 2, because TS2 is highest above the reactants, the lowest preceding state.
-    - Neither, because an uphill intermediate makes the reaction impossible at any temperature.
-    - Both equally, because the intermediate is in fast equilibrium with the reactants.
+    - Neither, because an uphill intermediate makes the reaction impossible.
+    - Both equally, as the intermediate is in fast equilibrium with reactants.
   correct: 1
   explanation: >-
     The rate-determining transition state is the one highest above the lowest state before it. TS2 at
@@ -44,7 +44,7 @@
     Why does bromine-atom abstraction distinguish secondary from primary C-H bonds far better than
     chlorine-atom abstraction?
   options:
-    - Bromine atoms are larger, so steric hindrance blocks the primary hydrogens.
+    - Bromine atoms are larger, so steric hindrance blocks attack at the primary hydrogens.
     - The H-Br bond is stronger than H-Cl, so bromine abstraction is more exothermic and selective.
     - Bromine reacts through a carbocation and chlorine through a radical.
     - Bromine abstraction is uphill, so its late transition state feels radical stability.
@@ -57,8 +57,9 @@
     A drug team needs a substituted phenol with pKa near 8.4. Phenol has pKa 9.99 and rho = 2.11.
     Which substitution pattern is the best first candidate (sigma_m of Cl 0.37, sigma_p of Cl 0.23)?
   options:
-    - "3,5-dichloro: two meta chlorines give sigma 0.74 and a predicted pKa near 8.4."
-    - 4-chloro, because sigma 0.23 lowers the pKa by exactly 0.23 units.
+    - >-
+      3,5-dichloro: two meta chlorines give sigma 0.74, so pKa is near 8.4.
+    - 4-chloro, because its sigma of 0.23 lowers the pKa by exactly 0.23 units.
     - 4-nitro, because sigma_p 0.78 gives a predicted pKa of about 8.3, close to the target.
     - 3-chloro, because meta substituents are always stronger than para ones.
   correct: 0
@@ -71,9 +72,9 @@
     curvature for para donors. Which description of the transition state fits best?
   options:
     - A benzylic cation forms, because any non-zero rho shows ionisation.
-    - The reaction is insensitive to electronic effects, so no charge develops at all.
+    - The reaction is insensitive to electronic effects, so no charge develops.
     - A modest negative charge builds near the ring, as in an SN2 attack by an anion.
-    - A large positive charge builds at the benzylic carbon and conjugates with para donors.
+    - A large positive charge forms at the benzylic carbon, conjugating with donors.
   correct: 2
   explanation: >-
     A small positive rho (benzyl chlorides with iodide give 0.79) means slight build-up of negative charge
@@ -97,7 +98,7 @@
     HBr and peroxides (a radical chain) gives an unrearranged product. What explains this?
   options:
     - Radicals are less stable than carbocations, so they react before they have time to rearrange.
-    - HBr is a stronger acid, so it protonates the alkene at the other carbon.
+    - HBr is a stronger acid here, so it protonates the alkene at the other end of the C=C bond.
     - Carbocations undergo 1,2-shifts to more stable cations; simple alkyl radicals do not.
     - Peroxides block 1,2-shifts by oxidising the group that would migrate.
   correct: 2
@@ -112,7 +113,7 @@
     - Go ahead, because any isotope effect above 1 slows metabolism substantially.
     - Go ahead, because the effect will grow to about 7 inside the body at 37 degrees C.
     - Drop it, because a value near 1 proves that no C-H bond is ever broken.
-    - Expect little gain, because C-H cleavage is not the rate-determining step here.
+    - Expect little gain, as C-H cleavage is not rate-determining here.
   correct: 3
   explanation: >-
     A value of 1.1 is at most a small secondary effect: another step (binding or electron transfer) limits
@@ -125,8 +126,8 @@
   options:
     - A radical formed, and the trap catches it at about 2e10 M-1 s-1.
     - No radical formed, because most of the product is unrearranged.
-    - A radical formed, and the trap rate constant is about 3e7 M-1 s-1.
-    - A carbocation formed, because only cations open three-membered rings.
+    - A radical formed, and the trap constant is about 3e7 M-1 s-1.
+    - A carbocation formed, as only cations open three-membered rings.
   correct: 0
   explanation: >-
     Any ring-opened product shows that a radical lived long enough to open. kT = (90/10) x 1.2e8 / 0.05 =

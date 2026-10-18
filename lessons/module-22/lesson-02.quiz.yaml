@@ -3,10 +3,10 @@
     A protein unfolds with a half-life of about 3 ms after it is mixed with a denaturant. Which method
     can measure this rate?
   options:
-    - Taking samples by hand and quenching them in ice before analysis.
-    - A stopped-flow instrument (dead time about 1 ms) with fluorescence detection.
+    - Taking samples by hand and quenching them in ice before each analysis.
+    - Stopped flow (dead time about 1 ms) with fluorescence detection.
     - A shock tube, which heats the sample to over 1000 K within a few microseconds.
-    - Reading the absorbance every 10 s in an ordinary spectrophotometer.
+    - Reading the absorbance every 10 s in an ordinary bench spectrophotometer.
   correct: 1
   explanation: >-
     The method's dead time must be well below the half-life. Stopped flow mixes in about a millisecond;
@@ -17,7 +17,7 @@
     half-lives, as the infinity value. How does this affect the rate constant from the ln plot?
   options:
     - It has no effect, because only the slope of the ln plot matters.
-    - It makes k too small, because the reaction looks as if it had barely started.
+    - It makes k too small, as the reaction looks barely started.
     - It makes k too large, because late points fall steeply toward ln 0.
     - It only adds scatter, which averages out in a least-squares fit.
   correct: 2

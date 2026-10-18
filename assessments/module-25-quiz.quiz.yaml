@@ -5,9 +5,9 @@
     reads 1.05 straight from the bottle. What do you do?
   options:
     - Read 1.05 on the line, since the error at that absorbance is only about 5 %.
-    - Fit a straight line through all points, including the stock, and read the sample on it.
+    - Fit one straight line through every point, stock included, and read the sample.
     - Dilute the drink into the 0.3-0.6 range, remeasure and multiply by the dilution.
-    - Raise the exposure so that the strongest solutions become brighter and the curve straightens.
+    - Raise the exposure so the strong solutions brighten and the curve straightens.
   correct: 2
   explanation: >-
     Above about 0.6-0.8 stray light and the wide bandwidth bend a phone calibration, so a reading there
@@ -20,7 +20,7 @@
     - 630 nm and 426 nm, the two maxima, where the other dye absorbs little.
     - 500 nm and 550 nm, where both dyes absorb weakly and stray light is lowest.
     - 630 nm only, then subtract a fixed fraction for the yellow dye.
-    - 426 nm and 450 nm, both near the tartrazine maximum, to measure it twice.
+    - 426 nm and 450 nm, both near the tartrazine peak, to measure it twice.
   correct: 0
   explanation: >-
     The 2 x 2 system is well conditioned when each wavelength is dominated by a different absorber.
@@ -48,8 +48,8 @@
     you report?
   options:
     - 31 mg/L, because lanthanum adds absorbance at 422.7 nm and inflates the second result.
-    - 38 mg/L, because lanthanum frees calcium from phosphate and the spike confirms it.
-    - 34.5 mg/L, the mean, with half the difference as the uncertainty.
+    - 38 mg/L, as lanthanum frees calcium from phosphate and the spike confirms it.
+    - 34.5 mg/L, the mean of both results, with half the difference as the uncertainty.
     - Neither, because two results that differ by 20 % mean the instrument is out of calibration.
   correct: 1
   explanation: >-
@@ -62,7 +62,7 @@
     with MF 884. NIST indices on that phase are about 1270 for geranial and 1241 for neral. What is
     the identity?
   options:
-    - Geranial, because the higher match factor wins when both scores are above 800.
+    - Geranial, because the higher match factor wins when both are above 800.
     - Neral, because the retention index fits neral and is 30 units from geranial.
     - Citral, unresolved, because MS cannot distinguish E and Z isomers.
     - Not identified, because the two match factors are too close to choose.
@@ -92,7 +92,7 @@
   options:
     - That peaks are identified by standards at 45 %, as the elution order reverses.
     - That the pump pressure is lower, since higher acetonitrile always raises pressure.
-    - That the column is replaced, because acetonitrile above 40 % damages C18 phases.
+    - That the column is replaced, as acetonitrile above 40 % damages C18.
     - That the detection wavelength is changed, because UV spectra shift with acetonitrile.
   correct: 0
   explanation: >-
@@ -104,9 +104,9 @@
     At 1 mM they are 62, 63, 65 and 69 mV. The current ratio is 1.0 throughout. What is the best
     interpretation?
   options:
-    - A slow electron transfer, because the separation grows with scan rate.
+    - A slow electron transfer, because the peak separation grows with the scan rate.
     - A follow-up chemical reaction, because the separation depends on concentration.
-    - A nearly reversible couple with extra separation mainly from uncompensated resistance.
+    - A nearly reversible couple whose extra separation is uncompensated resistance.
     - An adsorbed compound, because adsorbed species show concentration-dependent separations.
   correct: 2
   explanation: >-
@@ -121,7 +121,7 @@
     - Both fail, because both results are below the declared 120 mg/L.
     - First batch pass; second inconclusive, as 94-104 mg/L straddles the 96 mg/L limit.
     - Both pass, because both central values are above 96 mg/L.
-    - First batch pass; second fail, because 99 mg/L is less than the declared value minus 20 mg/L.
+    - First batch pass; second fail, as 99 mg/L is below 120 minus 20 mg/L.
   correct: 1
   explanation: >-
     The limits are 96-180 mg/L. 108-118 mg/L lies wholly inside, so pass. 94-104 mg/L crosses the lower

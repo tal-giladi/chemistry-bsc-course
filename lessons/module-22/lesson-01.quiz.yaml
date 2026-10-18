@@ -6,7 +6,7 @@
     - 4.0e-5 mol L-1 s-1, because v is the rate of whichever species you measure.
     - 2.0e-5 mol L-1 s-1, because N2O5 is consumed half as fast as NO2 forms.
     - 1.0e-5 mol L-1 s-1, because v is the NO2 rate over its coefficient 4.
-    - 1.6e-4 mol L-1 s-1, because v is the NO2 rate times its coefficient 4.
+    - 1.6e-4 mol L-1 s-1, as v is the NO2 rate times its coefficient 4.
   correct: 2
   explanation: >-
     v = (1/4) d[NO2]/dt = 1.0e-5 mol L-1 s-1. Dividing each species' rate by its coefficient gives one
@@ -17,7 +17,7 @@
     of NO is 2". When is that reasoning valid?
   options:
     - Always, because orders are the stoichiometric coefficients of the balanced equation.
-    - Only if the equation is an elementary step; otherwise the orders must be measured.
+    - Only if the equation is an elementary step; otherwise measure the orders.
     - Only in the gas phase, where molecules collide as written in the equation.
     - Only at equilibrium, where forward and reverse rates follow the coefficients.
   correct: 1
@@ -29,8 +29,8 @@
     A dye at 2e-5 M reacts with OH- at 0.050 M and decays exponentially with k' = 0.015 s-1. Repeating
     at 0.100 M OH- gives k' = 0.030 s-1. What do you conclude?
   options:
-    - The reaction is first order in OH- and k = 0.30 L mol-1 s-1.
-    - The reaction is zero order in OH-, because each run is a single exponential.
+    - The reaction is first order in OH-, and k = 0.30 L mol-1 s-1 from k'/[OH-].
+    - The reaction is zero order in OH-, as each run is a single exponential.
     - The reaction is second order in OH-, because k' changed when OH- changed.
     - The dye is second order, because k' doubled when the base doubled.
   correct: 0
@@ -45,7 +45,7 @@
     - 0.050 s-1, because the observed decay constant is the forward rate constant.
     - 0.0125 s-1, because kf is the observed constant divided by K.
     - 0.200 s-1, because kf is the observed constant multiplied by K.
-    - 0.040 s-1, because kf + kr = 0.050 s-1 and kf/kr = 4.
+    - 0.040 s-1, because kf + kr = 0.050 s-1 and kf/kr = K = 4, so kr = 0.010.
   correct: 3
   explanation: >-
     A reversible first-order reaction relaxes with kf + kr. With kf/kr = 4 and kf + kr = 0.050 s-1,
@@ -57,7 +57,7 @@
   options:
     - The reaction is first order everywhere, but the high-concentration runs were too short to show it.
     - Zero order in sucrose at high concentration, and close to first order at low concentration.
-    - The reaction is second order, because the rate stays high at high sucrose concentration.
+    - The reaction is second order overall, because the rate stays high at high sucrose concentration.
     - The order cannot be found, because the R^2 of every plot at 333 mM is above 0.99.
   correct: 1
   explanation: >-

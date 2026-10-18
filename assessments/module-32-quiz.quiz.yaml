@@ -6,7 +6,7 @@
   options:
     - About 20 mV, because the saving is RT/F times log10 of the ratio of the exchange currents.
     - About 94 mV, because the saving is b times log10 of the ratio of the exchange currents.
-    - About 216 mV, because the saving is b times ln of the ratio of the exchange currents.
+    - About 216 mV, because the saving is b times ln of the ratio of the two exchange currents.
     - About 470 mV, because the saving is the full overpotential of nickel at that current.
   correct: 1
   explanation: >-
@@ -20,8 +20,8 @@
   options:
     - Report two mechanisms, one at low and one at high current, because the slope changes.
     - Report 160 mV/dec, because the high-current region is the one that matters most in a working fuel cell.
-    - Subtract i times 0.4 ohm cm2 from every potential and refit, then check for a mass-transport limit.
-    - Average the two slopes to 115 mV/dec, because the true value lies between them.
+    - Subtract i times 0.4 ohm cm2 from each potential, refit, and check mass transport.
+    - Average the two slopes to 115 mV/dec, because the true Tafel value lies between them.
   correct: 2
   explanation: >-
     At 200 mA/cm2 the iR loss is 80 mV, enough to bend the plot strongly. Correct for it first; if curvature
@@ -31,10 +31,10 @@
     A company claims a new cathode with a molar mass of 150 g/mol that exchanges 2 electrons per formula unit
     and stores 600 mAh/g. What do you conclude?
   options:
-    - The claim is plausible, because two-electron materials store twice as much as LiFePO4.
+    - The claim is plausible, as two-electron materials store twice as much as LiFePO4.
     - The claim is plausible only at high voltage, because capacity grows with voltage.
-    - The claim is modest, because the theoretical capacity is 1286 mAh/g for two electrons.
-    - The claim exceeds the theoretical capacity of 357 mAh/g, so something is wrong.
+    - The claim is modest, as the theoretical capacity is 1286 mAh/g for two electrons.
+    - The claim exceeds the theoretical capacity of 357 mAh/g, so something must be wrong.
   correct: 3
   explanation: >-
     Q = nF/(3.6 M) = 2 x 96485/(3.6 x 150) = 357 mAh/g; leaving out the 3.6 gives coulombs per gram, not mAh/g. A measured capacity above the theoretical one points to
@@ -46,7 +46,7 @@
     density 7.87 g/cm3.)
   options:
     - Yes; B = 17.4 mV gives about 13 microamperes per cm2 and 0.15 mm/y, which rounds to 0.1.
-    - Yes; B = 17.4 mV gives about 13 microamperes per cm2, which is 0.013 mm/y.
+    - Yes; B = 17.4 mV gives about 13 microamperes per cm2, or 0.013 mm/y.
     - No; B = 17.4 mV gives about 13 microamperes per cm2 and about 0.15 mm/y.
     - No; B = 40 mV gives about 31 microamperes per cm2 and about 0.36 mm/y.
   correct: 2
@@ -61,7 +61,7 @@
     - Agree, because aluminium will always protect the steel in seawater.
     - Disagree; aluminium's oxide film may stop it acting as an anode, and the fittings would be lost.
     - Agree, because zinc and aluminium in contact would corrode each other faster and waste the anodes.
-    - Disagree, because aluminium is always a cathode for steel in seawater.
+    - Disagree, because aluminium is always a cathode for steel in seawater and would speed its corrosion.
   correct: 1
   explanation: >-
     Aluminium is thermodynamically more active, but its passive film makes its protection unreliable, and using
@@ -72,7 +72,7 @@
     1 : 1.333 : 2.667 : 3.667 : 4, and two weak peaks a little below the first two strong ones. What is the most
     likely description?
   options:
-    - An fcc phase indexed 111, 200, 220, 311, 222, with Kbeta satellites of the two strongest lines.
+    - An fcc phase indexed 111, 200, 220, 311, 222, with Kbeta lines of the two strongest.
     - A bcc phase indexed 110, 200, 211, 220, 310, with a minor impurity phase giving the two weak peaks.
     - A simple cubic phase indexed 100, 110, 111, 200, 210, with Kalpha2 lines giving the weak peaks.
     - An fcc phase, with two weak lines from a second fcc phase with a slightly larger cell.
@@ -86,8 +86,8 @@
     all six peaks with a zero shift and gets 4.6964 A. The database value is 4.6963 A. Why do they differ?
   options:
     - The first student used Kalpha2, which is longer, so every d came out larger.
-    - The strongest peak has the best statistics, so 4.727 A is the true value of this sample.
-    - The second student overfitted by adding a parameter, which always moves a towards the database.
+    - The strongest peak has the best statistics, so 4.727 A is the true value.
+    - The second student overfitted, as an extra parameter always moves a to the database.
     - A zero shift changes d most at low angles, so one low-angle peak carries a large bias.
   correct: 3
   explanation: >-
@@ -111,7 +111,7 @@
     You have time for one more faculty-list elective and want to model spin qubits in molecules for your research
     project. Which choice fits your goal best?
   options:
-    - Symmetry and its Uses in Chemistry, because point groups are needed for every spin system.
+    - Symmetry and its Uses in Chemistry, because point groups are needed for every single spin system.
     - Structure Determination by Physical Methods, because it covers NMR, which also uses spins.
     - Intro to Molecular Quantum Technology, which builds on the ESR lesson and covers coherence.
     - Numerical Simulation in Chemical Physics, because it is the shortest and leaves time for research.

@@ -4,7 +4,7 @@
     expect, and what does that imply?
   options:
     - About 1e-21 M, so it must secrete a chelator such as a siderophore.
-    - About 1e-18 M, the same as at pH 7, because Ksp does not depend on pH.
+    - About 1e-18 M, as at pH 7, because Ksp does not depend on pH.
     - About 1e-6 M, enough for the cell to take up free ions through a channel.
     - About 1e-15 M, because raising the pH by one unit raises free Fe3+ a thousandfold.
   correct: 0
@@ -16,10 +16,10 @@
     You are designing a protein site meant to hold Ca2+ and not Zn2+. Which donor set is the best
     starting point?
   options:
-    - Three histidine nitrogens and one water, in a tetrahedron.
+    - Three histidine nitrogens and one water, arranged in a tetrahedron.
     - Two cysteine sulfurs and two histidine nitrogens, in a tetrahedron.
     - Six or seven oxygens from carboxylates, carbonyls and water.
-    - Four cysteine sulfurs arranged in a square plane.
+    - Four cysteine sulfurs arranged in a square plane around the ion.
   correct: 2
   explanation: >-
     Ca2+ is a large hard ion that prefers many oxygen donors and coordination numbers of 6 to 8, as in
@@ -32,7 +32,7 @@
     - Cu2+ oxidises the Zn2+ ion to Zn3+, which no longer binds water.
     - Cu2+ forms more stable complexes than Zn2+, so it displaces zinc from the site.
     - Cu2+ precipitates the substrate, so the enzyme has nothing to work on.
-    - Cu2+ is softer than Zn2+, so it cannot bind the site and blocks the entrance instead.
+    - Cu2+ is softer than Zn2+, so it cannot bind the site and blocks the entrance.
   correct: 1
   explanation: >-
     The Irving-Williams series peaks at Cu2+, so copper outcompetes zinc for most ligand sets. Zinc has
@@ -44,7 +44,7 @@
   options:
     - CN 3 with an N2S set, because only bonds shorter than 2.5 Angstrom count for any donor.
     - CN 5, because a backbone carbonyl must complete a square pyramid.
-    - CN 2 with an N2 set, because sulfur donors never bind copper in proteins.
+    - CN 2 with an N2 set, as sulfur never binds copper in proteins.
     - CN 4 with an N2S2 set, counting the long but real Cu-S(Met) bond.
   correct: 3
   explanation: >-

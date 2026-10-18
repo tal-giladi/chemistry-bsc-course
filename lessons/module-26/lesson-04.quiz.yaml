@@ -19,7 +19,7 @@
     - The 1.8 eV reaction, because more driving force always lowers the barrier.
     - The 0.8 eV reaction, as the rate peaks when driving force equals lambda.
     - Both equally, because tunnelling rates depend only on distance.
-    - Neither can occur, because driving forces above lambda forbid transfer.
+    - Neither can occur, because driving forces above lambda forbid any transfer.
   correct: 1
   explanation: >-
     The Marcus barrier (dG + lambda)^2/(4 lambda) is zero at -dG = lambda. At 1.8 eV the reaction is in
@@ -42,10 +42,10 @@
     A resting person uses 250 mL of O2 (STPD, 22.4 L/mol) per minute. What electron current flows to O2
     at cytochrome c oxidase?
   options:
-    - About 72 A, from 4 F times 1.86e-4 mol O2 per second.
-    - About 18 A, from F times the moles of O2 per second, with one electron per O2.
-    - About 36 A, from 2 F times the moles of O2 per second, counting electrons per O atom.
-    - About 4300 A, from 4 F times the moles of O2 per minute instead of per second.
+    - About 72 A, from 4 F times 1.86e-4 mol O2 per second, four electrons per O2.
+    - About 18 A, from F times the O2 moles per second, one electron per O2.
+    - About 36 A, from 2 F times the O2 moles per second, per O atom.
+    - About 4300 A, from 4 F times the O2 moles per minute, not per second.
   correct: 0
   explanation: >-
     250 mL/min is 0.0112 mol/min or 1.86e-4 mol/s. Each O2 takes four electrons, so I = 4 x 96485 x

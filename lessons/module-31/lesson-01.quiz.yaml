@@ -3,9 +3,9 @@
     You optimise a molecule with GFN2-xTB and get a total energy of -13.53 Eh. A classmate optimises
     the same molecule with B3LYP/def2-SVP in ORCA and gets -193.1 Eh. What do you conclude?
   options:
-    - B3LYP is far more stable, so the molecule is better described by DFT than by the xtb method.
+    - B3LYP is far more stable, so the molecule is better described by DFT than by the xtb method here.
     - The two total energies use different references, so their difference means nothing chemically.
-    - One of the two runs must have the wrong charge, because the energies should agree within 1 Eh.
+    - One of the two runs must have the wrong charge, because the energies should agree to within 1 Eh.
     - The xtb run did not converge, since a converged energy for this molecule is near -193 Eh.
   correct: 1
   explanation: >-
@@ -18,9 +18,9 @@
     the optimisation did not converge after the maximum number of cycles. What should you do with the
     final energy?
   options:
-    - Use it, because normal termination means the program found the minimum.
+    - Use it, because normal termination means the program found the true minimum.
     - Use it, but add the remaining gradient times the step size as a correction.
-    - Do not use it yet; restart the optimisation from the last geometry until it converges.
+    - Do not use it yet; restart from the last geometry until it converges.
     - Do not use it; switch to a larger basis set, which always fixes such convergence problems.
   correct: 2
   explanation: >-
@@ -59,7 +59,7 @@
     -245 cm-1 and many positive ones. How do you read this?
   options:
     - The structure is a minimum; negative values only mean the mode is IR inactive.
-    - The structure is a minimum, but the zero-point energy will be slightly too low.
+    - The structure is still a minimum, but the zero-point energy will come out slightly too low.
     - The structure is a second-order saddle point, because negative values always come in pairs.
     - The structure is not a minimum; there is one direction in which the energy goes down.
   correct: 3

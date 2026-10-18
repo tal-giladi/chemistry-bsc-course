@@ -4,9 +4,9 @@
     chemistry?
   options:
     - Split-injection GC with an FID, because sugars burn well in the flame.
-    - Headspace GC, because the sugars evaporate from the warm juice.
+    - Headspace GC, because the sugars evaporate readily from the warm juice.
     - GC with an electron-capture detector, because sugars have many oxygen atoms.
-    - HPLC, because sugars are not volatile and decompose before they vaporise.
+    - HPLC, as sugars are not volatile and decompose before vaporising.
   correct: 3
   explanation: >-
     Sugars char rather than evaporate, so GC needs a derivatisation step first. HPLC separates them
@@ -16,7 +16,7 @@
     An unknown peak gives a retention index of 1100 on a DB-5 column and 1550 on a DB-Wax column.
     What does the large increase on the wax column suggest?
   options:
-    - The compound is a saturated hydrocarbon, which is strongly retained by polar phases.
+    - The compound is a saturated hydrocarbon, strongly retained by polar phases.
     - The compound can hydrogen-bond, like an alcohol, so the polar phase holds it back.
     - The wax column was run at a lower temperature, which always adds about 450 units.
     - The index cannot be compared between columns, so the difference means nothing.
@@ -43,7 +43,7 @@
     column of the same size at the same flow. Roughly what pressure do you expect?
   options:
     - About 90 bar, because the flow has not changed.
-    - About 180 bar, because pressure doubles when particle size halves.
+    - About 180 bar, because the pressure doubles every time the particle size is halved.
     - About 360 bar, since pressure scales with the inverse square of particle size.
     - About 45 bar, because smaller particles pack more tightly and resist flow less.
   correct: 2

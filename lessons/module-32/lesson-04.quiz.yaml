@@ -30,8 +30,8 @@
   options:
     - n = 1e10 and p = 1e15, because the donors create holes.
     - n = 1e15 and p = 1e5, because n times p equals n_i squared.
-    - n = 1e15 and p = 1e10, because holes are set by the pure material.
-    - n = p = 1e15, because each donor makes an electron and a hole.
+    - n = 1e15 and p = 1e10, as holes come from pure material.
+    - n = p = 1e15, as each donor makes an electron and a hole.
   correct: 1
   explanation: >-
     Each phosphorus donor gives one free electron, so n = 1e15. The product n p = n_i^2 = 1e20 fixes p = 1e5,

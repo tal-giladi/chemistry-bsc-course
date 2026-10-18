@@ -5,7 +5,7 @@
   options:
     - About 300 K, because rotational levels are always populated up to J of about 7.
     - About 0.1 K, because only J = 0 would be populated above that.
-    - About 1000 K, because the high J levels are rapidly depopulated by fast collisions.
+    - About 1000 K, because high J levels are rapidly depopulated by collisions.
     - About 10 K, where kT/hc is about 7 cm-1, so only the lowest few J are populated.
   correct: 3
   explanation: >-
@@ -31,7 +31,7 @@
   options:
     - A pair of electronic levels about 120 cm-1 apart, giving a Schottky anomaly.
     - A soft vibration near 120 cm-1, whose heat capacity rises and then falls again.
-    - The onset of translational motion of the radicals at 70 K.
+    - The onset of free translational motion of the radicals in the lattice at 70 K.
     - Condensation of the radicals into a liquid at 70 K.
   correct: 0
   explanation: >-
@@ -43,9 +43,9 @@
     The translational term is 150.4. What is the most likely bug?
   options:
     - The vibrational partition function was evaluated with omega_e instead of the fundamental.
-    - The pressure was taken as 1 atm instead of 1 bar.
-    - The rotational term omits the symmetry number, adding R ln 2 = 5.8 J/(mol K).
-    - The electronic degeneracy of N2 was set to 3 instead of 1.
+    - The pressure was taken as 1 atm instead of 1 bar in the translational term.
+    - The rotational term omits sigma = 2, adding R ln 2 = 5.8 J/(mol K).
+    - The electronic degeneracy of ground-state N2 was set to 3 instead of 1.
   correct: 2
   explanation: >-
     The excess is 5.8 = R ln 2. Using omega_e changes S_vib by far less than 0.01, 1 atm instead of 1 bar
@@ -56,7 +56,7 @@
     statement about their vibrational heat capacity is right?
   options:
     - Both are zero, because vibrations only contribute above their theta_vib.
-    - Both equal R, because every vibration contributes R by equipartition already at 298 K.
+    - Both equal R, because every vibration contributes R by equipartition at 298 K.
     - Cl2 contributes more, because a stiffer bond stores more energy per quantum.
     - Br2 contributes more, as its smaller theta_vib / T is nearer the classical limit.
   correct: 3
@@ -82,7 +82,7 @@
     with all partition functions counted from v = 0. Which value is correct?
   options:
     - De, the depth of the potential well, because it is the true bond energy.
-    - D0, the energy from the v = 0 level to the separated atoms.
+    - D0, the energy from the v = 0 level up to the separated atoms.
     - The standard reaction enthalpy at 298 K, because K is usually tabulated there.
     - The vibrational wavenumber times the number of bound levels.
   correct: 1
@@ -95,8 +95,8 @@
     quoting plus or minus 0.5 %, and D0/RT is about 15. How should you report the result?
   options:
     - As a 2 % disagreement that shows the partition-function model fails above 1000 K.
-    - As agreement, but only because 2 % is below any experimental error in K.
-    - As agreement within uncertainty, since 0.5 % in D0 alone is about 8 % in K here.
+    - As agreement, but only because 2 % is below any experimental error in K values.
+    - As agreement within error, since 0.5 % in D0 alone is about 8 % in K.
     - As a 2 % error that comes from neglecting translational motion of the atoms.
   correct: 2
   explanation: >-
@@ -107,8 +107,8 @@
     For H2 + I2 = 2 HI, the sum of stoichiometric numbers is zero. A student says that this makes K
     independent of the molecular masses. Is that right?
   options:
-    - Yes, because the translational partition functions cancel completely when the sum of nu is zero.
-    - Yes, because masses only enter through the N! factor, which cancels between the two sides.
+    - Yes, because translational partition functions cancel when the sum of nu is zero.
+    - Yes, because masses only enter through N!, which cancels between the two sides.
     - No, because K then depends on the total pressure, which depends on the masses.
     - No, the kT/p° and N_A factors cancel, but the mass ratio to the power 3/2 remains.
   correct: 3

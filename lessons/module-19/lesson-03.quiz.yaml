@@ -3,9 +3,9 @@
     You must extract a weak acid (pKa 4.8) from 100 mL of water into an organic solvent and have 60 mL
     of solvent. Which plan extracts the most?
   options:
-    - Adjust the water to pH 8, then extract once with all 60 mL.
+    - Adjust the water to pH 8, then extract once with all 60 mL of solvent.
     - Adjust the water to pH 8, then extract three times with 20 mL each.
-    - Adjust the water to pH 2.8, then extract once with all 60 mL.
+    - Adjust the water to pH 2.8, then extract once with all 60 mL of solvent.
     - Adjust the water to pH 2.8, then extract three times with 20 mL each.
   correct: 3
   explanation: >-
@@ -18,8 +18,8 @@
   options:
     - Double the column length, because doubling N doubles the resolution of the pair.
     - Tweak the mobile-phase composition to raise selectivity to about 1.06.
-    - Raise k to 20 by weakening the mobile phase a lot.
-    - Halve the flow rate, because slower flow always gives more plates.
+    - Raise k to 20 by weakening the mobile phase a lot, which adds retention.
+    - Halve the flow rate, because slower flow always gives more theoretical plates.
   correct: 1
   explanation: >-
     Resolution grows only with the square root of N, and k/(1+k) is already 0.8. Raising alpha from

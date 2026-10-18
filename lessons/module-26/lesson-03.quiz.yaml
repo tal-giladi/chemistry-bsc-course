@@ -4,8 +4,8 @@
     pressure range, with P50 = 8 mmHg. What can you conclude?
   options:
     - The variant has lost cooperativity; its four sites bind independently with one affinity.
-    - The variant binds only one O2 per tetramer, because the slope equals the number of sites.
-    - The variant is fully cooperative, because a straight Hill plot means all-or-none binding.
+    - The variant binds one O2 per tetramer, as the slope equals the number of sites.
+    - The variant is fully cooperative, as a straight Hill plot means all-or-none binding.
     - The variant is locked in the T state, because a slope of 1 always means low affinity.
   correct: 0
   explanation: >-
@@ -29,7 +29,7 @@
     A runner's leg muscle reaches pH 7.20 and 41 C during a sprint. How does this change O2 delivery
     from blood arriving at the muscle?
   options:
-    - Delivery falls, because acid and heat damage the haem and block O2 binding.
+    - Delivery falls, because the acid and the heat both damage the haem and so block any O2 binding.
     - Delivery rises, because acid and heat lower haemoglobin's affinity and shift the curve right.
     - Delivery is unchanged, because the Bohr effect acts only in the lungs.
     - Delivery rises, because acid raises haemoglobin's affinity so it carries more O2 to the muscle.
@@ -45,7 +45,7 @@
     - CO also oxidises the iron to Fe(III), so the remaining sites cannot bind O2 at all.
     - CO lowers the pH of blood and causes a strong Bohr shift to the right.
     - CO destroys 2,3-BPG, so the red cells lose all their O2 in the lungs.
-    - CO favours the R state, so the remaining O2 is held tighter and released less.
+    - CO favours the R state, so the remaining O2 is released less.
   correct: 3
   explanation: >-
     Bound CO favours the high-affinity R structure, shifting the curve of the remaining sites to the
@@ -56,7 +56,7 @@
     do you get?
   options:
     - About 1.4, from the ratio of the two pressures, 40/15 = 2.7, divided by 2.
-    - About 2.8, from (log 4 - log 0.25) divided by log(40/15).
+    - About 2.8, from (log 4 - log 0.25) divided by log(40/15), which is the Hill slope.
     - About 4.0, the number of sites, since the curve is sigmoid.
     - About 0.6, from log(40/15) divided by (log 4 - log 0.25).
   correct: 1

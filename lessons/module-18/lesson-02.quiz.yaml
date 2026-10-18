@@ -6,7 +6,7 @@
   options:
     - She should have used the second ionisation energy of potassium as well.
     - The electron affinity must be added, not subtracted, because energy is released.
-    - The formation enthalpy of KCl should enter the cycle with a positive sign as written.
+    - The formation enthalpy of KCl should enter the cycle with a positive sign.
     - She used the Cl2 bond enthalpy where the atomisation enthalpy of Cl (121.3) belongs.
   correct: 3
   explanation: >-
@@ -30,8 +30,8 @@
     The Born-Mayer model gives 761 kJ/mol for NaCl (including 2RT), while the Born-Haber cycle gives
     787 kJ/mol. What is the main reason for the 3 % gap?
   options:
-    - The Born-Haber cycle double-counts the ionisation energy of sodium.
-    - The model treats ions as point charges with simple repulsion and omits dispersion forces.
+    - The Born-Haber cycle double-counts the ionisation energy of sodium in the total.
+    - Ions are treated as point charges with simple repulsion; dispersion is omitted.
     - The Madelung constant of rock salt is only known to about 3 %.
     - Lattice energies are always quoted at 0 K, so the cycle value at 298 K is 26 kJ/mol too high.
   correct: 1
@@ -45,9 +45,10 @@
     isolated it?
   options:
     - Its formation enthalpy is negative, so it must be thermodynamically unstable.
-    - Magnesium cannot lose exactly one electron in any compound.
-    - 2 MgCl -> Mg + MgCl2 releases about 400 kJ/mol, so MgCl disproportionates.
-    - The radius ratio of Mg+ and Cl- is too small for any crystal structure.
+    - Magnesium cannot lose exactly one electron in any compound that it forms.
+    - >-
+      MgCl disproportionates: 2 MgCl -> Mg + MgCl2 releases about 400 kJ/mol.
+    - The radius ratio of Mg+ and Cl- is too small for any stable crystal structure.
   correct: 2
   explanation: >-
     A compound must be stable against every rearrangement of its atoms, not only against the elements.
@@ -58,9 +59,9 @@
     cell). What density does this predict?
   options:
     - 0.66 g/cm3, because the cell holds one formula unit.
-    - 2.63 g/cm3, from 4 x 25.94 g/mol divided by N_A a^3.
+    - 2.63 g/cm3, from 4 x 25.94 g/mol divided by N_A a^3 for the cell.
     - 1.32 g/cm3, because ions on faces count one half each.
-    - 5.27 g/cm3, because the rock-salt cell holds eight formula units.
+    - 5.27 g/cm3, as the rock-salt cell holds eight formula units.
   correct: 1
   explanation: >-
     a^3 = 6.545e-23 cm3. rho = 4 x 25.94 / (6.022e23 x 6.545e-23) = 2.63 g/cm3. The rock-salt cell holds

@@ -5,7 +5,7 @@
   options:
     - The 2886 line is hidden by atmospheric water, which absorbs at exactly that wavenumber.
     - For HCl the Delta J = 0 transition is forbidden, so the band centre is a gap.
-    - The line at 2886 is the overtone, which is too weak to see in a short cell.
+    - The line at 2886 is the overtone band, which is too weak to see in a short cell.
     - The 2886 position belongs to H37Cl, which is only a quarter of the sample.
   correct: 1
   explanation: >-
@@ -16,8 +16,8 @@
     From an HCl band you read R(2) = 2944.9, P(2) = 2843.7 and P(4) = 2799.0 cm-1. Which pair of lines
     gives B0, and what is it?
   options:
-    - R(2) - P(2) = 101.2 cm-1, so B0 = 101.2/10 = 10.12 cm-1.
-    - R(2) - P(2) = 101.2 cm-1, so B0 = 101.2/4 = 25.3 cm-1.
+    - R(2) - P(2) = 101.2 cm-1, so B0 = 101.2/10, about 10.12 cm-1.
+    - R(2) - P(2) = 101.2 cm-1, so B0 = 101.2/4, about 25.3 cm-1.
     - R(2) - P(4) = 145.9 cm-1, so B0 = 145.9/14 = 10.42 cm-1.
     - R(2) - P(4) = 145.9 cm-1, so B0 = 145.9/12, about 12.16 cm-1.
   correct: 2
@@ -28,8 +28,8 @@
   question: >-
     N2 has no IR spectrum, yet a Raman spectrometer shows a strong line at a shift of 2330 cm-1. Why?
   options:
-    - The laser ionises N2, and the resulting N2+ ion has a dipole that absorbs at 2330 cm-1.
-    - Collisions in the gas give N2 a temporary dipole, which makes the IR band appear in Raman.
+    - The laser ionises N2, and the N2+ ion has a dipole that absorbs at 2330 cm-1.
+    - Collisions give N2 a temporary dipole, which makes the IR band appear in Raman.
     - The Raman line is the rotational spectrum of N2, which falls at 2330 cm-1.
     - Stretching N2 changes how easily its electron cloud distorts, i.e. its polarisability.
   correct: 3

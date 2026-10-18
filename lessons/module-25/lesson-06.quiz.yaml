@@ -31,7 +31,7 @@
     reduction peaks are symmetric and almost at the same potential. What do you conclude?
   options:
     - The compound is adsorbed on the electrode rather than diffusing from solution.
-    - The compound diffuses freely from solution and its electron transfer is very fast.
+    - The compound diffuses freely from solution, with very fast electron transfer.
     - The solution resistance is very high, which makes the peaks symmetric.
     - The compound decomposes after reduction, so the return peak is missing.
   correct: 0
@@ -45,8 +45,8 @@
     standard addition, with the slope in the drink 0.87 times the slope in clean acid. Which statement
     is correct?
   options:
-    - Report 54.9 mg/L, because external calibration has the smaller uncertainty.
-    - Report 58.9 mg/L, the mean, because the true value lies between the two methods.
+    - Report 54.9 mg/L, as external calibration has the smaller uncertainty.
+    - Report 58.9 mg/L, the mean, as the truth lies between the two.
     - Report 62.8 mg/L, because only standard addition corrects for the matrix.
     - Report neither, because the two methods should agree within their uncertainties for a valid run.
   correct: 2

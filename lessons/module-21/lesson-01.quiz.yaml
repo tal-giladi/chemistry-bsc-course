@@ -19,7 +19,7 @@
   options:
     - Correct, because vibrational levels are only populated above about 1000 K.
     - Wrong, because v = 1 has a larger degeneracy than v = 0, so it is the most populated level.
-    - Correct, because the Boltzmann factor for a gap bigger than kT is negligible.
+    - Correct, because the Boltzmann factor for any gap bigger than kT is always quite negligible.
     - Wrong, because exp(-213/207) is about 0.36, so about a third of molecules are excited.
   correct: 3
   explanation: >-
@@ -30,9 +30,9 @@
     A chlorine atom has a 2P3/2 ground level (g = 4) and a 2P1/2 level (g = 2) 882 cm-1 higher. What
     fraction of Cl atoms is in the upper level in the limit of very high temperature?
   options:
-    - One third, as the Boltzmann factor tends to 1 and the upper level holds 2 of 6 states.
+    - One third, as the upper level holds 2 of the 6 states at high T.
     - One half, because at infinite temperature all levels are equally populated.
-    - Two thirds, because the upper level is higher in energy and so is favoured at high temperature.
+    - Two thirds, because the higher level is favoured at high temperature.
     - Zero, because 882 cm-1 is too large a gap to populate at any temperature.
   correct: 0
   explanation: >-
@@ -42,7 +42,7 @@
   question: >-
     Which description of temperature matches the statistical definition 1/T = (dS/dU) at constant V and N?
   options:
-    - Temperature is the average kinetic energy per molecule, so it can be defined for one molecule.
+    - Temperature is the mean kinetic energy per molecule, so one molecule has a T.
     - Temperature is the total energy divided by the number of microstates.
     - Temperature tells how much entropy grows per unit energy added; low T means a large gain.
     - Temperature is the energy of the most populated level divided by k.

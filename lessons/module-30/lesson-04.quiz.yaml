@@ -30,7 +30,7 @@
     What is the main reason?
   options:
     - The two methyl groups at each end shorten the box by several bonds.
-    - Hexane shifts the band strongly to the blue compared with the gas phase.
+    - Hexane shifts the band strongly to the blue compared with the free gas phase.
     - The HOMO-LUMO transition is forbidden, so the band at 451 nm is a higher transition.
     - Its bonds alternate, which adds a gap of about 2 eV that a flat box lacks.
   correct: 3
@@ -43,7 +43,7 @@
     708 nm. Which change to the analysis is the most defensible?
   options:
     - Replace the 708 nm value, because a published maximum that disagrees by 12 % must be a typo.
-    - Give the 4,4' family its own calibration, since ring paths do not add box length one-to-one.
+    - Give the 4,4' family its own calibration, since ring paths do not add simply.
     - Refit all four dyes together and report the smaller average residual as the model error instead.
     - Lower the bond length until the 4,4' dye fits, and keep it for the 2,2' dyes as well.
   correct: 1

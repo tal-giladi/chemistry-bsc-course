@@ -6,7 +6,8 @@
   options:
     - "[Ar] 3d3 4s2, because the order of removal is always the reverse of the order of filling."
     - "[Ar] 3d4 4s1, because one 4s and two 3d electrons are removed to keep a half-filled shell."
-    - "[Ar] 3d5, because the 4s electrons feel far less nuclear charge and are removed first."
+    - >-
+      [Ar] 3d5, because the 4s electrons feel less nuclear charge and leave first.
     - "[Ar] 3d6, because iron(III) ions lose only their 4s electrons and one core electron."
   correct: 2
   explanation: >-
@@ -20,7 +21,7 @@
     - Its ten 3d electrons shield poorly, so gallium's 4p electron feels a larger Zeff.
     - Gallium's 4p electron is closer to the nucleus than aluminium's 3p electron.
     - Gallium has a half-filled p subshell, which is extra stable.
-    - The measured values are within experimental error, so there is no real effect to explain.
+    - The measured values are within experimental error, so there is no real effect.
   correct: 0
   explanation: >-
     Slater's rules give a Zeff of 5.00 for gallium's 4p electron against 3.50 for aluminium's 3p electron:
@@ -44,7 +45,7 @@
     concentrated sodium hydroxide. Which oxide fits?
   options:
     - Na2O, because strongly basic oxides dissolve in every aqueous solution, acid or base.
-    - SO3, because acidic oxides react with water whatever the pH.
+    - SO3, because acidic oxides react with water and so dissolve whatever the pH is.
     - MgO, because magnesium sits in the middle of period 3.
     - Al2O3, because it is amphoteric and reacts with both acids and strong bases.
   correct: 3
@@ -58,7 +59,7 @@
   options:
     - Both liquids are basic, but breath is a weaker base than magnesium hydroxide.
     - Breath contains a basic oxide (CO2) and milk of magnesia contains an acidic hydroxide.
-    - CO2 is an acidic non-metal oxide; magnesium hydroxide comes from a basic metal oxide.
+    - CO2 is an acidic non-metal oxide; Mg(OH)2 comes from a basic metal oxide.
     - The colour change in the breath glass is caused by warmth, not by any acid or base.
   correct: 2
   explanation: >-

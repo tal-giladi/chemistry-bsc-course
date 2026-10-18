@@ -5,7 +5,8 @@
     - A study of calculated infrared spectra of carbonyl compounds with a semi-empirical method
     - GFN2-xTB overestimates carbonyl stretches by about 50 cm-1, most for amides
     - Calculated versus experimental IR frequencies, an investigation using xtb and NIST data
-    - Carbonyl stretching frequencies, theory, computation and comparison with experiment
+    - >-
+      Carbonyl stretching frequencies: theory and comparison with experiment
   correct: 1
   explanation: >-
     A title should state the central result. The other three name the topic and leave the reader to find
@@ -15,10 +16,10 @@
     Seven amides show a mean error of 78 plus or minus 9 cm-1 and fourteen ketones and aldehydes 41 plus or
     minus 7 cm-1 (95 % intervals). Which sentence matches the evidence?
   options:
-    - The method fails for all amides and should never be used for peptides.
+    - The method fails for all amides and should never be used for peptides at all.
     - The difference between the two classes lies within the uncertainty, so no class effect can be claimed.
-    - Amides and ketones behave the same once the scale factor is applied to both.
-    - In this set the error is larger for amides; seven molecules suggest a class effect worth testing.
+    - Amides and ketones behave the same once the scale factor is applied to both classes.
+    - Here amides err more; seven molecules suggest a class effect worth testing.
   correct: 3
   explanation: >-
     The intervals do not overlap, so the difference in this set is real, but seven molecules cannot prove
@@ -30,7 +31,7 @@
   options:
     - The labels print at 4.5 pt, unreadable at 50 cm; remake the figures at print size with larger labels.
     - The labels print at 9 pt because A4 is half of A0, which is readable, so nothing needs to change.
-    - The test print says nothing, because A4 and A0 have different aspect ratios, so print a full A0 proof.
+    - The test print says nothing, as A4 and A0 have different aspect ratios; print a full A0 proof.
     - The labels print at 18 pt because printers rescale fonts, so check the body text instead.
   correct: 0
   explanation: >-

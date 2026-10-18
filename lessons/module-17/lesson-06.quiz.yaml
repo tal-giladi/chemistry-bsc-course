@@ -4,9 +4,9 @@
     you have written down before you open SDBS?
   options:
     - The single structure you think is most likely, so that you can confirm it quickly.
-    - Every structure that fits the formula, DBE, fragments and IR, favourite marked.
-    - Nothing yet, because NMR is needed before any structure can be proposed.
-    - The SDBS number of the compound, because SDBS can be searched by number.
+    - All structures that fit formula, DBE, fragments and IR, favourite marked.
+    - Nothing yet, because NMR data are needed before any structure can be proposed.
+    - The SDBS number of the compound, because SDBS can be searched by that number.
   correct: 1
   explanation: >-
     Phase 1 ends with a full candidate list. Writing one structure invites confirmation bias, and
@@ -19,7 +19,7 @@
     - The compound cannot be an acid, because the bands are in the wrong places.
     - The NIST spectrum must be mislabelled and should be ignored.
     - The compound is an anhydride, because only anhydrides absorb near 1780.
-    - It can still be an acid; gas-phase acids are monomers with no H-bonds.
+    - It can still be an acid; gas-phase acids are monomers with no H-bonded dimers.
   correct: 3
   explanation: >-
     Tables describe liquids and solids, where acids form hydrogen-bonded dimers. In the gas the
@@ -44,7 +44,7 @@
   options:
     - The NMR evidence, since isomers share formula, DBE and often IR bands.
     - The molecular ion, because the formula must be wrong after all.
-    - The nitrogen rule, because isomers differ in their number of N atoms.
+    - The nitrogen rule, because isomers can differ in their number of N atoms.
     - The fingerprint region of the IR, because only it can separate isomers.
   correct: 0
   explanation: >-

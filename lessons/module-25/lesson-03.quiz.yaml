@@ -17,9 +17,9 @@
     A water sample diluted 1 + 9 reads 4.80 mg/L Ca. The same dilution spiked with 3.0 mg/L Ca reads
     7.35 mg/L, and the top standard is 6 mg/L. What is the best conclusion?
   options:
-    - Recovery is 85 %, which proves a matrix interference that only standard addition can fix.
+    - Recovery is 85 %, proving a matrix interference that only standard addition fixes.
     - Recovery is 245 %, so the spike was added twice and the run must be repeated.
-    - Recovery is 100 %, because the spiked result is above the unspiked one by roughly the spike.
+    - Recovery is 100 %, since the spiked result exceeds the unspiked by about the spike.
     - Recovery is 85 %, but the spiked solution exceeds the top standard; use a smaller spike.
   correct: 3
   explanation: >-
@@ -32,7 +32,7 @@
   options:
     - Ionisation of sodium, which easily ionised potassium suppresses with its electrons.
     - A chemical interference, in which potassium releases sodium from a refractory compound.
-    - A spectral overlap between the potassium line at 766 nm and the sodium line at 589 nm.
+    - A spectral overlap between the potassium line at 766 nm and sodium at 589 nm.
     - A physical interference, because potassium makes the solution more viscous.
   correct: 0
   explanation: >-

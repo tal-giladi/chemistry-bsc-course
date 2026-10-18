@@ -5,8 +5,8 @@
   options:
     - The top layer, because the organic layer always floats; no check is needed.
     - The bottom layer, since DCM is denser; added water drops join the top layer.
-    - The bottom layer, because the product is heavier than water; it will look cloudy.
-    - The top layer, because neutral compounds prefer the less dense phase; test its pH.
+    - The bottom layer, as the product is heavy; it will look cloudy.
+    - The top layer, as neutral compounds prefer the lighter phase; test its pH.
   correct: 1
   explanation: >-
     The denser liquid sinks, so the dichloromethane layer with the neutral product is at the bottom.
@@ -30,7 +30,7 @@
     You heat a reaction in ethanol under reflux and see the ring of condensing vapour rising out of
     the top of the condenser. What do you do?
   options:
-    - Turn the heat down so the reflux ring stays low in the condenser.
+    - Turn the heat down so that the reflux ring stays low in the condenser.
     - Close the top of the condenser with a stopper so that no vapour can escape.
     - Turn off the condenser water so the vapour stays hot and returns faster.
     - Add boiling chips now, because the liquid has started to superheat.
@@ -44,9 +44,9 @@
     After a brine wash you add anhydrous sodium sulfate to an ether solution. The first two spatulas
     clump into a sticky mass at the bottom and the solution is slightly cloudy. What next?
   options:
-    - Filter now, because clumping shows the agent has done its job.
+    - Filter now, because the clumping shows the drying agent has done its job.
     - Evaporate the ether, because the remaining water leaves with the solvent.
-    - Add more in portions until new crystals flow freely and the liquid is clear.
+    - Add more in portions until it swirls freely and the liquid is clear.
     - Add water to dissolve the clump, then repeat the drying with fresh sodium sulfate.
   correct: 2
   explanation: >-

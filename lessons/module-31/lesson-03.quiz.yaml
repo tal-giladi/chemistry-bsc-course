@@ -3,10 +3,10 @@
     Going from HF/def2-TZVP to HF with a much larger basis, the O-H bond of water stays about 0.015 A
     shorter than experiment. What does that tell you?
   options:
-    - The basis is still too small; keep enlarging it until the error disappears.
-    - The geometry did not converge, because a larger basis must always lengthen bonds.
+    - The basis is still too small; keep enlarging it until the error goes.
+    - The geometry did not converge, as a larger basis must lengthen bonds.
     - "The error comes from the method: Hartree-Fock lacks electron correlation."
-    - The experimental value is wrong, since a complete basis gives the exact answer.
+    - The experimental value is wrong, as a complete basis is exact.
   correct: 2
   explanation: >-
     As the basis grows, HF approaches its own limit, and that limit still has bonds that are too short
@@ -34,7 +34,7 @@
     - Displace the structure along that mode and re-optimise with tighter thresholds, then recheck.
     - Ignore it, because modes below 50 cm-1 never affect any computed property.
     - Report the structure as a transition state for methyl rotation and compute the barrier from it.
-    - Switch to a larger basis set and repeat the frequency calculation on the same geometry.
+    - Switch to a larger basis set and repeat the frequency calculation on exactly the same geometry.
   correct: 0
   explanation: >-
     A soft imaginary mode after a converged optimisation usually means the optimiser stopped on a flat
@@ -48,7 +48,7 @@
     - HF/def2-TZVP, the cheapest method that still has a triple-zeta basis.
     - B3LYP/def2-SVP, because double-zeta basis sets give the best balance for all properties.
     - CCSD(T)/def2-TZVP, because only coupled cluster gives trustworthy bond lengths.
-    - An xtb pre-optimisation followed by r2SCAN-3c, then a frequency check at that level.
+    - An xtb pre-optimisation, then r2SCAN-3c and a frequency check.
   correct: 3
   explanation: >-
     r2SCAN-3c gives hybrid-like geometries at GGA cost, and starting from an xtb structure saves

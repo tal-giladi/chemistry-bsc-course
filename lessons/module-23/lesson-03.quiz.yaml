@@ -17,7 +17,7 @@
     correction. What happens to your result?
   options:
     - K comes out too high, because the standards were only about 88 % complexed.
-    - K comes out too low, because the standards were only about 88 % complexed.
+    - K comes out too low, because the standards were only about 88 % complexed here.
     - K is unaffected, because the same error appears in the standards and the mixtures.
     - K comes out too high, because Fe3+ in excess absorbs strongly at 447 nm.
   correct: 0
@@ -31,7 +31,7 @@
     the best conclusion?
   options:
     - Report the mean, 146, with its standard deviation as the uncertainty.
-    - The 1:1 model fails at high SCN-, probably because a second complex forms.
+    - The 1:1 model fails at high SCN-, likely as a second complex forms.
     - The last two mixtures were read too late, so discard them and average the rest.
     - The calibration slope is wrong, which makes K rise linearly with every reading.
   correct: 1
@@ -47,7 +47,7 @@
     - The complex is Fe2SCN, with two iron atoms per thiocyanate.
     - The complex is 1:1, and the shift comes from hydrolysis of Fe3+.
     - The total concentration was too low for the method to work.
-    - The main complex has two thiocyanates per iron, Fe(SCN)2+.
+    - The main complex holds two thiocyanates per iron, as in Fe(SCN)2+.
   correct: 3
   explanation: >-
     The maximum falls at the mole fraction of the formula: x(Fe) = 1/(1 + 2) = 0.33 means one iron per two

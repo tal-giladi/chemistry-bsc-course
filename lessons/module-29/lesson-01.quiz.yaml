@@ -6,7 +6,7 @@
     - About 1 in 7, because 17.1/2.48 is close to 7.
     - About 1 in 1000, because K = exp(-17.1/2.48) is close to 1e-3.
     - About 1 in 100, because each 5.7 kJ/mol is a factor of ten and 17.1 is two steps.
-    - About 1 in a million, because a positive dG means essentially no unfolding.
+    - About 1 in a million, as a positive dG means no unfolding.
   correct: 1
   explanation: >-
     K_U = exp(-dG/RT) = exp(-6.9) = 1.0e-3, so about one molecule in a thousand is unfolded. Each
@@ -20,7 +20,7 @@
     - It is too low, because a positive dCp makes the protein more stable at low temperature.
     - It is exactly right, because dCp only matters above Tm.
     - It is too high, because the dCp term lowers the stability on both sides of Tm.
-    - It is too high, because dHm is always overestimated by calorimetry.
+    - It is too high, because calorimetry always overestimates dHm for such proteins.
   correct: 2
   explanation: >-
     The term -dCp[(Tm - T) + T ln(T/Tm)] is negative on both sides of Tm, so the stability curve bends
@@ -32,7 +32,7 @@
   options:
     - 4.8 kJ/mol, from m times the change in Cm.
     - 0.8 kJ/mol, the change in Cm read directly as an energy.
-    - 25 kJ/mol, from m times the mutant Cm.
+    - 25 kJ/mol, from m times the mutant Cm alone.
     - 7.5 kJ/mol, from the ratio of the two Cm values times m.
   correct: 0
   explanation: >-
@@ -44,7 +44,7 @@
     the first transition near 70 °C. What is the best explanation?
   options:
     - The thermometer must be wrong, because a protein's Tm is a fixed constant.
-    - Egg white contains a protein that is intrinsically less stable at slow heating rates.
+    - Egg white contains a protein that is less stable at slow heating rates.
     - The slow scan measures cold denaturation instead of heat denaturation.
     - Egg-white unfolding is irreversible, so it depends on time, not only temperature.
   correct: 3

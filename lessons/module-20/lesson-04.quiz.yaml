@@ -3,9 +3,9 @@
     In an excited state a diatomic molecule's bond is 0.36 A longer than in the ground state. Where do
     you expect the strongest band of the absorption progression from v'' = 0?
   options:
-    - At the 0-0 band, because v'' = 0 always overlaps best with v' = 0.
+    - At the 0-0 band, because v'' = 0 always overlaps best with the v' = 0 level.
     - At the convergence limit, because the molecule always dissociates on excitation.
-    - At a high v', where the vertical line from the ground-state well meets the steep inner wall.
+    - At high v', where a vertical line from v'' = 0 meets the steep inner wall.
     - At the middle of the excited-state well, because transitions go to the minimum of the new curve.
   correct: 2
   explanation: >-
@@ -18,7 +18,7 @@
   options:
     - The g to u parity change, which overrides every spin rule.
     - Spin-orbit coupling in the heavy iodine atoms, mixing singlet and triplet character.
-    - The large Franck-Condon factors, which can make any spin-forbidden transition strong.
+    - The large Franck-Condon factors, which make any spin-forbidden transition strong.
     - Collisions in the vapour, which flip the electron spin during absorption.
   correct: 1
   explanation: >-

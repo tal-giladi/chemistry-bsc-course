@@ -16,8 +16,8 @@
     Quinine fluorescence in a 1/8 tonic dilution falls to one fifth when 0.2 g of salt is dissolved in
     100 mL (34 mmol/L chloride). What Stern-Volmer constant does this give?
   options:
-    - About 118 L/mol, from (5 - 1) / 0.034.
-    - About 147 L/mol, from 5 / 0.034.
+    - About 118 L/mol, from (5 - 1)/0.034.
+    - About 147 L/mol, from 5 / 0.034 directly.
     - About 24 L/mol, from (1 - 0.2) / 0.034.
     - About 0.68 L/mol, from 0.034 x 20 / 1.
   correct: 0
@@ -29,9 +29,9 @@
     For a cloudy lemon drink, external calibration gives 55 mg/L quinine but standard addition on the
     same dilution gives 62 mg/L, with a 95 % interval of 2 mg/L. What should the analyst report and why?
   options:
-    - The mean of the two methods, 58.5 mg/L, since both are valid calibrations of the same sample.
-    - The external result, because standard addition extrapolates and is therefore less accurate.
-    - Neither value, because two methods that disagree show that the fluorimeter is out of order.
+    - The mean of both methods, 58.5 mg/L, as both are valid calibrations.
+    - The external result, as standard addition extrapolates and is less accurate.
+    - Neither value, as two disagreeing methods show the fluorimeter is faulty.
     - The standard-addition result, because only that method corrects for the matrix.
   correct: 3
   explanation: >-
@@ -44,9 +44,9 @@
     hydrochloric acid?
   options:
     - Sulfuric acid is stronger, so it protonates quinine fully while hydrochloric acid does not.
-    - Chloride ions quench quinine fluorescence, while sulfate does not.
+    - Chloride ions quench quinine fluorescence, while sulfate ions do not quench it.
     - Hydrochloric acid absorbs strongly at 350 nm and blocks the excitation light.
-    - Sulfuric acid is less volatile, so the concentration of the standards stays constant.
+    - Sulfuric acid is less volatile, so the standards stay constant.
   correct: 1
   explanation: >-
     Both acids protonate quinine at 0.05 M, but chloride is a strong collisional quencher (K about 130

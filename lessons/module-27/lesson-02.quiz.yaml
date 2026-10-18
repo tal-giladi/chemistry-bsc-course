@@ -3,8 +3,8 @@
     A colleague reports the dipole moment of the ammonium ion NH₄⁺ as 3.1 D from a calculation. What is
     the main problem with this number?
   options:
-    - Tetrahedral symmetry forces the dipole of any species to be exactly zero about every origin.
-    - The debye unit is defined only for neutral molecules, so the value must be given in C m.
+    - Tetrahedral symmetry makes the dipole of any species zero about every origin.
+    - The debye is defined only for neutral molecules, so the value must be in C m.
     - Ions have no dipole moment, because the net charge always dominates the potential.
     - For a charged species the dipole depends on the chosen origin, which was not stated.
   correct: 3
@@ -31,7 +31,7 @@
   options:
     - CO₂ has a much larger permanent dipole when it bends, so it binds to cations as a polar molecule.
     - CO₂'s quadrupole is about three times N₂'s, so it interacts more strongly with cation fields.
-    - N₂ has a positive quadrupole that is repelled by cations, while CO₂ has none at all.
+    - N₂ has a positive quadrupole that is repelled by the cations, while CO₂ has no quadrupole at all.
     - CO₂ is heavier, so it moves more slowly through the pores and is held by friction.
   correct: 1
   explanation: >-

@@ -16,7 +16,7 @@
     After oxidising benzoin, your product's ¹H NMR shows the aromatic region integrating to 10.0 H and a
     small singlet at 5.9 ppm integrating to 0.35 H. What do you conclude?
   options:
-    - The sample is pure benzil; the 5.9 ppm peak is the solvent.
+    - The sample is pure benzil, and the 5.9 ppm peak belongs to the NMR solvent.
     - The sample is 3.5 mol% benzoin, because the aromatic protons dilute the signal tenfold.
     - About 35 mol% benzoin remains; recrystallise or re-oxidise before step 3.
     - The sample is benzilic acid, whose OH appears at 5.9 ppm.
@@ -29,7 +29,7 @@
     Which single observation best shows that step 3 (benzil to benzilic acid) has happened?
   options:
     - The product is a bright yellow crystalline solid that melts near 95 °C.
-    - A one-proton singlet near 10 ppm appears in the ¹H NMR.
+    - A one-proton singlet near 10 ppm appears in the ¹H NMR spectrum.
     - A one-proton CH(OH) doublet appears near 5.9 ppm in the ¹H NMR.
     - A broad O–H at 2500–3300 cm⁻¹ and a C=O near 1715 cm⁻¹ appear.
   correct: 3

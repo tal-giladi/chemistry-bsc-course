@@ -4,9 +4,10 @@
     i0 = 1e-4 A/cm2 and material B has i0 = 1e-6 A/cm2. At the same current density in the Tafel region,
     how much less overpotential does A need?
   options:
-    - About 59 mV, because each decade of i0 is worth 2.303RT/F.
-    - About 236 mV, because the two decades of i0 each cost one Tafel slope.
-    - About 118 mV, because the two materials differ by one Tafel slope.
+    - About 59 mV, because each decade of i0 is worth 2.303RT/F at 298 K.
+    - >-
+      About 236 mV: two decades of i0, each costing one Tafel slope.
+    - About 118 mV, because the two materials differ by one full Tafel slope.
     - About 26 mV, because RT/F sets the scale of every electrode reaction at 298 K.
   correct: 1
   explanation: >-
@@ -21,7 +22,7 @@
     - A change of mechanism to a slower rate-determining step at high current.
     - Depletion of protons at the surface, which is a mass-transport limit.
     - Uncompensated solution resistance, which adds an iR term to the measured potential.
-    - Hydrogen bubbles that block part of the surface and so lower the apparent exchange current.
+    - Hydrogen bubbles that block part of the surface and lower the apparent i0.
   correct: 2
   explanation: >-
     Less electrolyte means higher solution resistance, so a larger iR loss at the same current; that is the

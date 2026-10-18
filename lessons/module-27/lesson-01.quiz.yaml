@@ -5,7 +5,7 @@
   options:
     - (+0.2 e - 1 e)/ε₀, because every nearby charge changes the field on the surface.
     - Zero, because the outside charges cancel the inside charge on average.
-    - +0.2 e/ε₀, since charges outside send in as many field lines as they send out.
+    - +0.2 e/ε₀, as outside charges send in as many field lines as out.
     - +0.2 e/ε₀ only if the outside ions are far away compared with 5 Å.
   correct: 2
   explanation: >-
@@ -16,7 +16,7 @@
     Water has a static relative permittivity of about 80 but a refractive index of 1.333. Why does
     n = √εr fail so badly for water?
   options:
-    - Water is magnetic, so its permeability differs strongly from one at optical frequencies.
+    - Water is magnetic, so its permeability differs from one at optical frequencies.
     - Molecular dipoles turn in a static field but cannot follow one oscillating at 10¹⁵ Hz.
     - The refractive index is measured at 20 °C and the permittivity at 25 °C.
     - Hydrogen bonds absorb visible light and lower the refractive index.
@@ -43,7 +43,7 @@
     liquid is strongly polar. What should she check first?
   options:
     - Whether the liquid's n² is also near 2.3; if so, it is non-polar.
-    - Whether the liquid conducts electricity, since only conductors raise the capacitance of a cell.
+    - Whether it conducts, as only conductors raise the capacitance.
     - Whether the reading is above 80 pF, the threshold for any polar solvent.
     - Whether the cell was calibrated in a vacuum rather than in air at 1 atm.
   correct: 0

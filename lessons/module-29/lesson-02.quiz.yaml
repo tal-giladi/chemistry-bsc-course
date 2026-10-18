@@ -5,7 +5,7 @@
     active site per second?
   options:
     - Enzyme P, because its turnover number is ten times larger.
-    - Both the same, because kcat/Km is the same for the two enzymes.
+    - Both react at the same rate, because kcat/Km is the same for the two enzymes.
     - Enzyme Q, because at 0.02 mM its specificity constant of 1e6 decides.
     - Enzyme P, because a larger Km means the enzyme releases product faster.
   correct: 2
@@ -21,7 +21,7 @@
     - The Lineweaver-Burk value, because a straight line is the more robust fit to rate data.
     - The average of both, because each method has its own systematic error.
     - The Lineweaver-Burk value, because it uses all points with equal weight.
-    - The nonlinear value, because 1/v gives the noisy low-[S] point the most weight.
+    - The nonlinear value, as 1/v gives noisy low-[S] points most weight.
   correct: 3
   explanation: >-
     Taking 1/v magnifies the error of slow rates by 1/v squared, and ordinary regression then lets those
@@ -30,9 +30,9 @@
   question: >-
     You expect Km near 1 mM and plan six concentrations. Which set gives the most precise Km?
   options:
-    - 0.2, 0.4, 0.8, 1.6, 3.2 and 6.4 mM.
+    - 0.2, 0.4, 0.8, 1.6, 3.2 and 6.4 mM, spread evenly on a log scale around Km.
     - 5, 6, 7, 8, 9 and 10 mM, so the enzyme is surely saturated.
-    - 0.01, 0.02, 0.03, 0.04, 0.05 and 0.06 mM, where the rate is most sensitive to [S].
+    - 0.01 to 0.06 mM in steps of 0.01, where the rate is most sensitive.
     - 1.0 mM six times, so the mean rate has the smallest error.
   correct: 0
   explanation: >-
@@ -44,8 +44,8 @@
     [S]0 = 2.0 mM, how long does it take to convert half the substrate?
   options:
     - 2.0 min, from half of [S]0 divided by Vmax.
-    - 4.8 min, from Vmax t = 1.0 + 2.0 ln 2.
-    - 2.8 min, from the first-order half-life ln 2 times Km/Vmax.
+    - 4.8 min, from the integrated rate law Vmax t = 1.0 + 2.0 ln 2.
+    - 2.8 min, from the first-order half-life ln 2 times Km/Vmax at low [S].
     - 6.9 min, from Km ln 2 divided by half of Vmax.
   correct: 1
   explanation: >-
