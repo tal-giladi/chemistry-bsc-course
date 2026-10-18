@@ -19,8 +19,8 @@
     actually dissolve and cool the pack at 25 C?
   options:
     - Salt B, because its larger Delta H means more cooling.
-    - Both, because every endothermic dissolving is driven by entropy.
-    - Salt A, because its Delta G is about -7 kJ/mol while B's is about +16 kJ/mol.
+    - Both, because every endothermic dissolving process is driven by entropy.
+    - Salt A, since its Delta G is about -7 kJ/mol and B's about +16 kJ/mol.
     - Neither, because an endothermic process cannot be spontaneous.
   correct: 2
   explanation: >-
@@ -32,7 +32,7 @@
     CO + H2O <=> CO2 + H2, which has 2 moles of gas on each side. To convert more CO, which should she
     choose?
   options:
-    - Add excess steam, because it lowers Q and pushes the reaction forward; pressure has no effect.
+    - Add excess steam, which lowers Q; pressure has no effect with equal gas moles.
     - Double the pressure, because compressing a gas mixture always favours the products.
     - Either, because both raise K by the same factor.
     - Neither, because only a catalyst can raise the conversion.
@@ -47,7 +47,7 @@
   options:
     - The second batch has 25 % less H3O+, because the pH rose by a quarter.
     - The second batch has 1 mol/L less H3O+, because the pH rose by one unit.
-    - The second batch has more H3O+, because a higher pH means a higher concentration.
+    - The second batch has more H3O+, because a higher pH always means a higher concentration.
     - The second batch has one tenth of the H3O+, because each pH unit is a factor of ten.
   correct: 3
   explanation: >-
@@ -71,9 +71,9 @@
     A breathalyser runs 2 Cr2O7^2- + 3 C2H5OH + 16 H+ -> 4 Cr3+ + 3 CH3COOH + 11 H2O. A student checks
     that the atoms and charge balance, then labels dichromate the reducing agent. What is correct?
   options:
-    - Dichromate is the reducing agent, because it loses oxygen atoms.
+    - Dichromate is the reducing agent, because it loses oxygen atoms to ethanol.
     - Ethanol is the oxidising agent, because it gains an oxygen atom.
-    - Dichromate is the oxidising agent, because Cr goes from +6 to +3 and is reduced.
+    - Dichromate is the oxidising agent; Cr goes from +6 to +3 and is reduced.
     - Neither, because no oxidation numbers change in this reaction.
   correct: 2
   explanation: >-
@@ -84,10 +84,10 @@
     A boat has steel (iron) fittings next to a zinc block. With E(Zn2+/Zn) = -0.76 V and
     E(Fe2+/Fe) = -0.45 V, what happens in sea water, and why do boat builders add the zinc?
   options:
-    - Zinc is oxidised and protects the iron, because zinc has the more negative reduction potential.
+    - Zinc is oxidised and protects the iron, as its reduction potential is more negative.
     - Iron is oxidised faster, because the zinc pulls electrons away from it.
     - Nothing happens, because both metals have negative reduction potentials.
-    - Zinc is reduced and plated onto the iron, which seals it from the water.
+    - Zinc is reduced and plated onto the iron, which seals the steel off from the sea water.
   correct: 0
   explanation: >-
     In the Zn-Fe cell, E cell = -0.45 - (-0.76) = +0.31 V with zinc as the anode. Zinc corrodes instead of
@@ -111,7 +111,7 @@
     enthalpies is +19.6 kJ/mol. What is the most reasonable conclusion?
   options:
     - The measurement is wrong, because it misses the table value by more than its uncertainty.
-    - The measurement is good; the table is for infinite dilution, the cup run is near 0.6 mol/kg.
+    - The result is good; the table is for infinite dilution, the cup run is near 0.6 mol/kg.
     - The cup must have released heat, so its heat capacity should be subtracted, not added.
     - Hess's law does not apply to dissolving, so the table value cannot be compared.
   correct: 1

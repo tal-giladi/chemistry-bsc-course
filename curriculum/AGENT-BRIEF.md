@@ -38,3 +38,5 @@ Keep temporary files in your own folder `scratchpad/mNN/` (another agent shares 
 
 ## Finish
 Run `py scripts/check.py NN` from the repo root and fix every ERROR except missing-simulation links; fix quiz warnings. Append `module done` to the status log. Report back in under 120 words: files created, check result, simulation presets linked, anything open.
+
+Never start sub-agents of your own: the course allows at most two writing agents at a time.

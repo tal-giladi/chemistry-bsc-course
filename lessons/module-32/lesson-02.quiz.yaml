@@ -19,7 +19,7 @@
     - In the membrane resistance, because it still dominates after being halved.
     - In the activation overpotential, mostly of the slow oxygen reduction at the cathode.
     - In mass transport of hydrogen to the anode, because hydrogen diffuses slowly.
-    - In the thermodynamic limit, because 1.229 V can never be reached at any current.
+    - In the thermodynamic limit, because 1.229 V can never be reached at any current density.
   correct: 1
   explanation: >-
     Halving the resistance gained only 30 mV, so the iR loss was about 60 mV in total. Most of the gap is
@@ -44,7 +44,7 @@
   options:
     - Paint the copper pipe only, so that it cannot rust.
     - Add more steel bolts to spread the corrosion over a larger area.
-    - Wrap the joint with copper tape to make the contact more uniform.
+    - Wrap the joint with copper tape to make the electrical contact between the metals more uniform.
     - Insulate the joint electrically, for example with a plastic washer and sleeve.
   correct: 3
   explanation: >-

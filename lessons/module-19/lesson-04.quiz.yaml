@@ -17,7 +17,7 @@
     What does the large increase on the wax column suggest?
   options:
     - The compound is a saturated hydrocarbon, which is strongly retained by polar phases.
-    - The compound can hydrogen-bond, for example an alcohol, so the polar phase holds it back.
+    - The compound can hydrogen-bond, like an alcohol, so the polar phase holds it back.
     - The wax column was run at a lower temperature, which always adds about 450 units.
     - The index cannot be compared between columns, so the difference means nothing.
   correct: 1
@@ -29,10 +29,10 @@
   question: >-
     Manual GC injections vary by about 10 % in volume. Which calibration keeps the results precise?
   options:
-    - Add the same amount of an internal standard to every vial and calibrate on the area ratio.
+    - Add a fixed amount of internal standard to each vial; calibrate on area ratio.
     - Inject each standard three times and use the largest area.
     - Use a single-point calibration with the most concentrated standard.
-    - Switch the FID for a TCD, which is less sensitive to injection volume.
+    - Switch the FID for a TCD, which is less sensitive to changes in injection volume.
   correct: 0
   explanation: >-
     A smaller injection lowers the analyte and internal-standard peaks by the same fraction, so their
@@ -44,7 +44,7 @@
   options:
     - About 90 bar, because the flow has not changed.
     - About 180 bar, because pressure doubles when particle size halves.
-    - About 360 bar, because pressure rises with the inverse square of particle size.
+    - About 360 bar, since pressure scales with the inverse square of particle size.
     - About 45 bar, because smaller particles pack more tightly and resist flow less.
   correct: 2
   explanation: >-

@@ -5,8 +5,8 @@
     excellent". What is the right response?
   options:
     - Report them, since an RSD of 0.3 % shows that any error is far below 3 %.
-    - Report them with a larger confidence interval to cover the 3 % difference.
-    - Do not report yet; a consistent 3 % shortfall is a systematic error that must be found or corrected.
+    - Report them with a larger confidence interval, widened enough to cover the 3 % difference.
+    - Do not report yet; a consistent 3 % shortfall is a systematic error to be found.
     - Average more replicates until the difference from the reference disappears.
   correct: 2
   explanation: >-
@@ -20,7 +20,7 @@
     - The tablet contains significantly less iron than claimed; the 95 % CI is 50.28 ± 0.32 mg.
     - There is no significant difference, since the CI 50.28 ± 0.72 mg is close to 52.0 mg.
     - There is no significant difference, since 52.0 − 50.28 is smaller than 2.776 × 0.26 × 5.
-    - The test cannot be done, because a label claim has no stated uncertainty.
+    - The test cannot be done, because a label claim has no stated uncertainty or degrees of freedom.
   correct: 0
   explanation: >-
     The CI is 50.28 ± 2.776 × 0.26/√5 = 50.28 ± 0.32 mg, and 52.0 lies far outside it (t_exp ≈ 14.8). Using s
@@ -83,9 +83,9 @@
     0.40 mg/L, while spikes in pure water are recovered fully. What is the best estimate, and the best method?
   options:
     - 0.82 mg/L; recovery problems affect only the spike, not the sample.
-    - About 1.0 mg/L, from 0.82/0.80, but confirm it by standard additions in the river water.
+    - About 1.0 mg/L, from 0.82/0.80; confirm it by standard additions.
     - About 0.66 mg/L, from 0.82 × 0.80, because the matrix adds signal.
-    - About 1.32 mg/L, from 0.82 + 0.50, because the spike shows what is missing.
+    - About 1.32 mg/L, from 0.82 + 0.50, because the spike shows what is missing from the sample.
   correct: 1
   explanation: >-
     An 80 % recovery means the matrix lowers the sensitivity, so the sample result is low by the same factor:
@@ -95,7 +95,7 @@
     You titrate 20.00 mL of a weak acid (pKa 6.0) with NaOH. The equivalence pH is about 9.5. Which indicator do you
     choose, and why?
   options:
-    - Methyl orange (3.4–4.4), because it changes sharply in acidic solution where the acid starts.
+    - Methyl orange (3.4–4.4), because it changes sharply in the acidic solution where the titration starts.
     - Bromothymol blue (6.0–7.6), because its range contains the pKa of the acid.
     - Phenolphthalein (8.3–10.0), because its range lies on the steep part around the equivalence pH.
     - Any of them, because all acid–base indicators change at the equivalence point.

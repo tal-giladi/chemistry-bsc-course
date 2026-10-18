@@ -4,7 +4,7 @@
     hot KMnO4, Dess-Martin periodinane in dry dichloromethane, and NaBH4. Which should she use?
   options:
     - The Jones reagent, because it is the strongest and finishes fastest.
-    - Dess-Martin periodinane, because without water no hydrate forms to oxidise further.
+    - Dess-Martin periodinane; without water no hydrate forms to oxidise further.
     - Hot KMnO4, because permanganate stops at the aldehyde for primary alcohols.
     - NaBH4, because it oxidises primary alcohols selectively to aldehydes.
   correct: 1
@@ -45,7 +45,7 @@
     - Sodium ethoxide in ethanol at reflux, which gives the more stable enolate.
     - Aqueous NaOH at room temperature, because the CH3 side is more acidic.
     - A trace of acid, because the less substituted enol forms first and reacts.
-    - LDA in THF at -78 C, which removes the less hindered CH3 proton quickly and completely.
+    - LDA in THF at -78 C, which quickly removes the less hindered CH3 proton.
   correct: 3
   explanation: >-
     LDA at low temperature forms the kinetic, less substituted enolate irreversibly. NaOEt forms only a
@@ -55,7 +55,7 @@
     Benzaldehyde (in excess) and acetaldehyde are stirred with NaOH and then heated. Which main
     condensation product forms, and why?
   options:
-    - Cinnamaldehyde, because only acetaldehyde can form an enolate and benzaldehyde accepts it.
+    - Cinnamaldehyde; only acetaldehyde can enolise, and benzaldehyde accepts it.
     - 2-Butenal, because acetaldehyde reacts only with itself under these conditions.
     - Acetophenone, because the enolate attacks the ring of benzaldehyde.
     - No product, because benzaldehyde has no alpha-H and stops the reaction.
@@ -108,7 +108,7 @@
     suggests CH3MgBr with phenylacetone (1-phenylpropan-2-one) instead. Which statement is correct?
   options:
     - Only the first works, because phenylacetone has no reactive carbonyl group.
-    - Both are valid disconnections at the carbinol carbon; choose by cost and availability.
+    - Both are valid disconnections at the carbinol carbon; pick by cost and supply.
     - Neither works, because tertiary alcohols cannot be made with Grignard reagents.
     - Only the second works, because benzylic halides cannot form Grignard reagents.
   correct: 1
@@ -123,7 +123,7 @@
   options:
     - Plan A, because 6 steps in total is fewer than 9 steps in total.
     - Neither, because both plans use 80 % steps and so give the same yield.
-    - Plan B, because its longest linear sequence is 5 steps (33 %) against 6 steps (26 %).
+    - Plan B, as its longest linear path is 5 steps (33 %) against 6 (26 %).
     - Plan A, because joining two fragments always loses half the material.
   correct: 2
   explanation: >-

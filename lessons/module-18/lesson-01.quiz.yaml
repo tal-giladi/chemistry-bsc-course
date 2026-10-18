@@ -17,10 +17,10 @@
     Gallium sits one row below aluminium, yet its first ionisation energy (5.999 eV) is slightly higher
     than aluminium's (5.986 eV). What is the best explanation?
   options:
-    - The ten 3d electrons added before gallium shield its 4p electron poorly, so its Zeff is larger.
+    - Its ten 3d electrons shield poorly, so gallium's 4p electron feels a larger Zeff.
     - Gallium's 4p electron is closer to the nucleus than aluminium's 3p electron.
     - Gallium has a half-filled p subshell, which is extra stable.
-    - The measured values are within error, so there is no real effect to explain.
+    - The measured values are within experimental error, so there is no real effect to explain.
   correct: 0
   explanation: >-
     Slater's rules give a Zeff of 5.00 for gallium's 4p electron against 3.50 for aluminium's 3p electron:
@@ -43,10 +43,10 @@
     A geochemist finds a solid oxide of an element that dissolves both in dilute hydrochloric acid and in
     concentrated sodium hydroxide. Which oxide fits?
   options:
-    - Na2O, because strongly basic oxides dissolve in every aqueous solution.
+    - Na2O, because strongly basic oxides dissolve in every aqueous solution, acid or base.
     - SO3, because acidic oxides react with water whatever the pH.
     - MgO, because magnesium sits in the middle of period 3.
-    - Al2O3, because aluminium's oxide is amphoteric and reacts with acids and strong bases.
+    - Al2O3, because it is amphoteric and reacts with both acids and strong bases.
   correct: 3
   explanation: >-
     Reacting with both acid and base is the definition of amphoteric. Al2O3 gives Al3+ in acid and
@@ -58,7 +58,7 @@
   options:
     - Both liquids are basic, but breath is a weaker base than magnesium hydroxide.
     - Breath contains a basic oxide (CO2) and milk of magnesia contains an acidic hydroxide.
-    - CO2 is an acidic non-metal oxide, and magnesium hydroxide comes from a basic metal oxide.
+    - CO2 is an acidic non-metal oxide; magnesium hydroxide comes from a basic metal oxide.
     - The colour change in the breath glass is caused by warmth, not by any acid or base.
   correct: 2
   explanation: >-

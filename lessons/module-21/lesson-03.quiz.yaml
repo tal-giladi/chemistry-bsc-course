@@ -19,7 +19,7 @@
     - The symmetry number, which would add R ln 2 = 5.8 J/(mol K).
     - The vibrational entropy, which is large for O2 because of its weak bond.
     - The low-lying a 1Delta_g state at 7918 cm-1, which is well populated at 298 K.
-    - The triplet degeneracy of the ground state, which adds R ln 3 = 9.1 J/(mol K).
+    - The triplet degeneracy of the ground state, adding R ln 3 = 9.1 J/(mol K).
   correct: 3
   explanation: >-
     O2's X 3Sigma_g- ground state has g = 3, so q_el = 3 and S_el = R ln 3 = 9.13 J/(mol K), exactly the gap.
@@ -41,9 +41,9 @@
     The thermal wavelength of N2 at 298 K is 19 pm, while molecules at 1 bar are about 3450 pm apart.
     What does this comparison justify?
   options:
-    - Treating N2 as a quantum gas that needs Bose-Einstein statistics at room temperature.
+    - Treating N2 as a quantum gas that needs Bose-Einstein statistics even at room temperature.
     - Ignoring translational entropy, because the molecules are far apart.
-    - Using the classical integral for q_trans and Q = q^N / N!, because there are vastly more states than molecules.
+    - Using classical q_trans and Q = q^N / N!, because states vastly outnumber molecules.
     - Using the thermal wavelength as the bond length in the rotational partition function.
   correct: 2
   explanation: >-

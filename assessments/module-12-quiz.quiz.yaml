@@ -47,7 +47,7 @@
     - About 95 %, because 0.05 nm is a tiny fraction of the gap.
     - About 37 %, because the current falls as exp(-2 kappa d) and 2 x 10 x 0.05 = 1.
     - About 13 %, because each 0.05 nm divides the current by eight.
-    - About 61 %, because the current falls as exp(-kappa d) and 10 x 0.05 = 0.5.
+    - About 61 %, because the tunnelling current falls as exp(-kappa d) and 10 x 0.05 = 0.5.
   correct: 1
   explanation: >-
     The current tracks the probability, which goes as exp(-2 kappa d). exp(-1) = 0.37. The factor of
@@ -70,10 +70,10 @@
     An N-H stretch at 3300 per cm moves to 2420 per cm after the sample is shaken with D2O. Is that
     consistent with N-D formation, given mu(NH) = 0.940 u and mu(ND) = 1.761 u?
   options:
-    - No, because doubling the hydrogen mass should halve the wavenumber to about 1650 per cm.
+    - No, because doubling the hydrogen mass should halve the wavenumber to about 1650 per cm instead.
     - No, because the force constant changes on deuteration, so no prediction is possible.
     - No, because a heavier atom should vibrate faster and move the band above 3300 per cm.
-    - Yes, because the predicted ratio is the square root of 0.940/1.761, about 0.73, giving 2410 per cm.
+    - Yes, the predicted ratio is the square root of 0.940/1.761, about 0.73, giving 2410 per cm.
   correct: 3
   explanation: >-
     The potential and force constant are unchanged; the wavenumber scales as the inverse square

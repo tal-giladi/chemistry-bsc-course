@@ -3,7 +3,7 @@
     A fluoride electrode calibrated with standards from 0.5 to 10 mg/L gives a reading for a well-water
     sample that the calibration line turns into 0.14 mg/L. What should the report say?
   options:
-    - 0.14 mg/L, because the electrode responds to fluoride over the whole range.
+    - 0.14 mg/L, because the electrode responds to fluoride linearly over the whole range.
     - 0.28 mg/L, because the sample was diluted 1 to 1 with TISAB.
     - Not detected, because any result below the lowest standard is zero.
     - Below 0.5 mg/L, since the response flattens there and a straight line reads high.
@@ -16,8 +16,8 @@
   question: >-
     Why must the fluoride standards be mixed with TISAB just like the samples?
   options:
-    - So that standards and samples have the same ionic strength and pH, and the electrode responds the same way.
-    - Because TISAB contains a known amount of fluoride that is needed to reach the linear range.
+    - So standards and samples share the same ionic strength and pH, and the electrode responds alike.
+    - Because TISAB contains a known amount of fluoride that is needed to reach the electrode's linear range.
     - Because TISAB cleans the membrane and is only needed before the first measurement.
     - Because TISAB raises the pH to 10, where fluoride is fully deprotonated.
   correct: 0
@@ -44,7 +44,7 @@
     do you learn from the comparison?
   options:
     - Standard addition is always lower, so the true value is somewhere below 0.84 mg/L.
-    - The sample matrix does not noticeably change the electrode response, so the calibration line can be trusted.
+    - The matrix barely changes the electrode response, so the calibration line can be trusted.
     - The electrode slope must be wrong, because the two methods should give exactly the same number.
     - The sample contains aluminium, which standard addition removes.
   correct: 1

@@ -4,8 +4,8 @@
     the scale. The masses keep creeping up between the last two weighings. What is the most likely cause?
   options:
     - The sodium carbonate is reacting with oxygen in the oven and gaining mass.
-    - The scale is drifting, so it should be recalibrated with a known mass before continuing.
-    - The sample is warm when weighed and takes up water as it cools, so cooling must be standardised.
+    - The scale is drifting upwards, so it should be recalibrated with a known mass before continuing.
+    - The sample is warm when weighed and takes up water as it cools; cooling must be standardised.
     - The baking soda was impure, and the impurity absorbs CO2 from the oven air.
   correct: 2
   explanation: >-
@@ -29,8 +29,8 @@
     An analyst precipitates sulfate as BaSO4 quickly from a cold, concentrated solution and filters it
     right away. Which problem is she most likely to see?
   options:
-    - A low result, because BaSO4 is very soluble in cold water.
-    - A high result from co-precipitated impurities, and losses of tiny crystals through the filter.
+    - A low result, because BaSO4 is very soluble in cold, concentrated sulfate solution.
+    - Co-precipitated impurities and fine crystals that pass through the filter.
     - No problem, because the gravimetric factor corrects for the crystal size.
     - A low result, because cold solutions cannot reach constant mass.
   correct: 1
@@ -55,7 +55,7 @@
     480 C passed through a copper solution should deposit 0.1581 g of copper, but the cathode gains
     0.1572 g. What should you conclude?
   options:
-    - The current efficiency was 99.5 %; some charge went to a side reaction such as hydrogen evolution.
+    - The current efficiency was 99.5 %; some charge went to a side reaction like hydrogen evolution.
     - The copper was oxidised back into solution, so the result is 0.6 % too low and must be corrected.
     - The Faraday constant is inaccurate at this level of precision.
     - The cathode was weighed wet, so the mass is too high.

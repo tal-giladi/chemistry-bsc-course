@@ -5,7 +5,7 @@
   options:
     - It oscillates many times, because the spring is stiff.
     - It is critically damped, because b is larger than k divided by m.
-    - It creeps to rest without oscillating, because b squared is larger than 4mk.
+    - It creeps to rest without oscillating, as b squared exceeds 4mk.
     - It oscillates once and stops, because Q is exactly 1.
   correct: 2
   explanation: >-
@@ -32,7 +32,7 @@
     - About 50, the number of swings in 70 s.
     - About 0.010, the damping rate in 1/s.
     - About 35, half the number of seconds.
-    - About 220, from omega0 / (2 gamma) with gamma = ln 2 / 70 s.
+    - About 220, from omega0 / (2 gamma).
   correct: 3
   explanation: >-
     gamma = ln 2 / 70 s = 0.0099 per second and omega0 = 2 pi / 1.4 s = 4.49 rad/s, so

@@ -15,8 +15,8 @@
     A mutant enzyme binds its substrate 100 times more tightly than the wild type, but binds the
     transition state no more tightly. What happens to kcat?
   options:
-    - kcat falls, because the deeper ES well raises the barrier from ES to the transition state.
-    - kcat rises 100-fold, because tighter binding always speeds catalysis.
+    - kcat falls, because the deeper ES well adds to the climb to the transition state.
+    - kcat rises 100-fold, because tighter binding always speeds catalysis by the same factor.
     - kcat is unchanged, because only Km depends on substrate binding.
     - kcat rises, because the substrate spends more time in the active site.
   correct: 0
@@ -30,7 +30,7 @@
     - It is the nucleophile that attacks the ester carbonyl.
     - It holds the oxyanion through its backbone N-H.
     - It binds the hydrophobic side chain in the specificity pocket.
-    - It is a general base that takes a proton from the attacking water.
+    - It is a general base that deprotonates the attacking water.
   correct: 3
   explanation: >-
     Water is the nucleophile in deacylation; His57 removes its proton as it attacks, then returns a
@@ -53,7 +53,7 @@
     Fresh pineapple stops gelatin from setting, but pineapple boiled for 5 minutes does not. What does this
     show most directly?
   options:
-    - The acid in fresh pineapple dissolves the gelatin network.
+    - The acid in fresh pineapple dissolves the gelatin network before it sets.
     - The activity comes from a heat-sensitive protein that boiling unfolds.
     - Boiling removes the sugar that blocks gelatin from setting.
     - Gelatin sets only in the presence of cooked fruit.

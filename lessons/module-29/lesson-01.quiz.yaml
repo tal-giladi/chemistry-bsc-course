@@ -19,7 +19,7 @@
   options:
     - It is too low, because a positive dCp makes the protein more stable at low temperature.
     - It is exactly right, because dCp only matters above Tm.
-    - It is too high, because the dCp term lowers the stability at temperatures away from Tm.
+    - It is too high, because the dCp term lowers the stability on both sides of Tm.
     - It is too high, because dHm is always overestimated by calorimetry.
   correct: 2
   explanation: >-
@@ -44,9 +44,9 @@
     the first transition near 70 °C. What is the best explanation?
   options:
     - The thermometer must be wrong, because a protein's Tm is a fixed constant.
-    - Egg white contains a protein that is less stable at slow heating rates.
+    - Egg white contains a protein that is intrinsically less stable at slow heating rates.
     - The slow scan measures cold denaturation instead of heat denaturation.
-    - Egg-white unfolding is irreversible, so it depends on time as well as temperature.
+    - Egg-white unfolding is irreversible, so it depends on time, not only temperature.
   correct: 3
   explanation: >-
     The egg proteins aggregate as they unfold and never refold, so the process is kinetic, not a two-state

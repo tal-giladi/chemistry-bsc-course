@@ -3,8 +3,8 @@
     For an unknown C4H8O2 you have only the NIST mass spectrum and gas-phase IR so far. What should
     you have written down before you open SDBS?
   options:
-    - The single structure you think is most likely, so you can confirm it quickly.
-    - Every structure that fits the formula, DBE, fragments and IR, with your favourite marked.
+    - The single structure you think is most likely, so that you can confirm it quickly.
+    - Every structure that fits the formula, DBE, fragments and IR, favourite marked.
     - Nothing yet, because NMR is needed before any structure can be proposed.
     - The SDBS number of the compound, because SDBS can be searched by number.
   correct: 1
@@ -19,7 +19,7 @@
     - The compound cannot be an acid, because the bands are in the wrong places.
     - The NIST spectrum must be mislabelled and should be ignored.
     - The compound is an anhydride, because only anhydrides absorb near 1780.
-    - It can still be an acid; gas-phase acids are monomers without hydrogen bonds.
+    - It can still be an acid; gas-phase acids are monomers with no H-bonds.
   correct: 3
   explanation: >-
     Tables describe liquids and solids, where acids form hydrogen-bonded dimers. In the gas the
@@ -31,8 +31,8 @@
   options:
     - Search by CAS number instead, since every SDBS record has one.
     - Conclude that SDBS has no spectra for the compound and skip it.
-    - Try a wildcard such as %name, a synonym, or a search by molecular formula.
-    - Download the whole database and search it offline with a script.
+    - Try a wildcard like %name, a synonym, or a molecular-formula search.
+    - Download the whole database and search it offline with your own script.
   correct: 2
   explanation: >-
     SDBS matches names exactly except for the % wildcard and has no CAS search. Synonyms and formula
@@ -42,7 +42,7 @@
     The checker says your answer to an unknown has the right formula but the wrong structure. Where
     should you look first?
   options:
-    - The NMR evidence, because isomers share formula, DBE and often IR bands.
+    - The NMR evidence, since isomers share formula, DBE and often IR bands.
     - The molecular ion, because the formula must be wrong after all.
     - The nitrogen rule, because isomers differ in their number of N atoms.
     - The fingerprint region of the IR, because only it can separate isomers.

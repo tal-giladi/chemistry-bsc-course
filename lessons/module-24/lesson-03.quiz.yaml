@@ -5,7 +5,7 @@
   options:
     - A (Rf 0.70) is the alcohol, because O–H groups dissolve better in ethyl acetate.
     - B (Rf 0.24) is the ketone, because C=O is the most polar bond and sticks hardest.
-    - A (Rf 0.70) is the ketone; B (Rf 0.24) is the alcohol, held back by its O–H on the silica.
+    - A (Rf 0.70) is the ketone; B (Rf 0.24) is the alcohol, held back by its O–H.
     - They cannot be told apart, because Rf depends only on molecular mass.
   correct: 2
   explanation: >-
@@ -19,7 +19,7 @@
     - Use pure hexane, so the compounds dissolve better and move further.
     - Load more sample, so the spots become large enough to move.
     - Run the plate longer, letting the solvent run off the top edge.
-    - Increase the share of ethyl acetate, because a more polar eluent moves compounds up.
+    - Increase the share of ethyl acetate to make the eluent more polar.
   correct: 3
   explanation: >-
     A more polar mobile phase competes better for the silica and moves everything up. Hexane would

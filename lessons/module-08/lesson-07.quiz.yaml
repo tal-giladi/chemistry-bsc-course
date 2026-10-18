@@ -5,7 +5,7 @@
     What does this tell you?
   options:
     - The cup absorbed some of the heat, so it has a heat capacity that must be included.
-    - The thermometer reads 0.5 C low and should be recalibrated before the next run.
+    - The thermometer reads 0.5 C low and should be recalibrated before the next calibration run.
     - The hot water was not hot enough, so the experiment must be repeated at 60 C.
     - Heat was created by mixing, which raised the temperature less than expected.
   correct: 0
@@ -17,10 +17,10 @@
     During the baking-soda run the lowest reading is 20.1 C, but the line through the later readings,
     extrapolated back to the mixing time, gives 20.3 C. Which value should you use and why?
   options:
-    - 20.1 C, because the lowest reading is the true final temperature.
+    - 20.1 C, because the lowest reading is always the true final temperature.
     - The average, 20.2 C, because the two methods are equally valid.
-    - 20.3 C, because extrapolation corrects for heat leaking in while the salt dissolved.
-    - Neither, because a temperature drift means the experiment failed.
+    - 20.3 C, as extrapolation corrects for heat leaking in during dissolving.
+    - Neither, because a temperature drift means the whole experiment has failed.
   correct: 2
   explanation: >-
     The cup gains heat from the room during slow dissolving and afterwards. Extrapolating the before and
@@ -46,7 +46,7 @@
     - The true value is certainly between 4.87 and 5.15 %, the 95 % confidence interval.
     - The SD of 0.05 % is the total uncertainty, so the label value of 5 % is confirmed exactly.
     - The results are too scattered to use, so the titration must be redone with a burette.
-    - The mean is 5.01 % with SD 0.05 %, but the end-point excess biases all three slightly high.
+    - The mean is 5.01 % with SD 0.05 %, but the end-point excess biases all three high.
   correct: 3
   explanation: >-
     The SD and confidence interval describe random scatter only. A systematic excess at the end point

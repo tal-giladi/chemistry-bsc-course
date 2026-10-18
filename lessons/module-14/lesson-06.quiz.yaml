@@ -43,7 +43,7 @@
     - Resistance is like the mass, and capacitance is like the friction.
     - Capacitance is like the mass, and inductance is like the stiffness.
     - Inductance is like the friction, and resistance is like the stiffness.
-    - Inductance is like the mass, and one over capacitance is like the stiffness.
+    - Inductance is like the mass, and 1/C is like the spring stiffness.
   correct: 3
   explanation: >-
     L q'' + R q' + q/C = V matches m x'' + b x' + k x = F: L plays mass, R friction and 1/C

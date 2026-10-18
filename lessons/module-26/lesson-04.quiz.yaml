@@ -5,7 +5,7 @@
   options:
     - Copper cannot bind water, so no hydroxide nucleophile would form at the site.
     - Copper is too large for the site and would fall out at once.
-    - Copper is redox-active and the site would no longer be a clean Lewis acid for CO2 hydration.
+    - Copper is redox-active, so the site would no longer be a clean Lewis acid.
     - Copper lowers the pKa of water too little to make any hydroxide at pH 7.
   correct: 2
   explanation: >-
@@ -17,7 +17,7 @@
     has a driving force of 0.8 eV, the other 1.8 eV. Which is faster?
   options:
     - The 1.8 eV reaction, because more driving force always lowers the barrier.
-    - The 0.8 eV reaction, because the rate peaks when the driving force equals lambda.
+    - The 0.8 eV reaction, as the rate peaks when driving force equals lambda.
     - Both equally, because tunnelling rates depend only on distance.
     - Neither can occur, because driving forces above lambda forbid transfer.
   correct: 1

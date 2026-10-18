@@ -6,7 +6,7 @@
     - Vinegar is corrosive and should only be handled with gloves and a face shield.
     - PubChem must be wrong, because vinegar is sold as food in every supermarket.
     - The classification applies to vinegar too, because the substance is the same.
-    - The data are for the pure acid; at 5% the hazard is much lower, so read the label.
+    - The data are for pure acid; at 5% the hazard is far lower, so read the label.
   correct: 3
   explanation: >-
     GHS data in PubChem describe the pure substance. Concentration changes the classification: dilute vinegar is

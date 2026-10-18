@@ -5,8 +5,8 @@
     correct?
   options:
     - Both need the same work, because the start and end states are the same.
-    - The slow push needs more work, because it takes much longer to do.
-    - The sudden push needs more work and gives out more heat; Delta U is zero for both.
+    - The slow push needs more work, because it pushes for much longer against the gas.
+    - The sudden push needs more work and releases more heat; Delta U = 0 for both.
     - The sudden push needs more work, so Delta U is larger for it.
   correct: 2
   explanation: >-

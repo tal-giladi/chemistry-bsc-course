@@ -4,7 +4,7 @@
     (microwave) spectrum. What should you tell her?
   options:
     - The lines will be very weak because few N2 molecules are rotationally excited at 298 K.
-    - N2 has no permanent dipole, so it has no microwave spectrum; use rotational Raman instead.
+    - N2 has no permanent dipole, so no microwave spectrum; use rotational Raman instead.
     - The lines will lie in the infrared, because N2 is a light molecule with a large B.
     - Microwave works, but she must cool the gas so that only J = 0 is populated.
   correct: 1
@@ -16,9 +16,9 @@
     At 298 K, why is the HCl rotational level J = 1 more populated than J = 0, although it lies
     21 cm-1 higher?
   options:
-    - Because J = 0 is forbidden by the selection rules, so molecules cannot stay in it.
+    - Because J = 0 is forbidden by the selection rules, so molecules cannot remain in that level.
     - Because the Boltzmann factor favours higher levels when the temperature is above 0 K.
-    - Because J = 1 has three states (2J + 1), which outweighs a Boltzmann factor of about 0.9.
+    - Because J = 1 has three states (2J + 1), outweighing a Boltzmann factor of about 0.9.
     - Because collisions pump molecules into J = 1 faster than they leave it.
   correct: 2
   explanation: >-
@@ -42,9 +42,9 @@
     A gas-phase IR spectrum of HCl recorded at 4 cm-1 resolution shows lines about 4 cm-1 wide. The
     Doppler width at 298 K is 0.006 cm-1. What sets the observed width?
   options:
-    - The spectrometer resolution, which is far larger than the Doppler and natural widths.
+    - The spectrometer resolution, which is far wider than the Doppler and natural widths.
     - The Doppler effect, because HCl is a light molecule that moves fast.
-    - The natural width, because the v = 1 state of HCl has a short radiative lifetime.
+    - The natural width, because the v = 1 state of HCl has a very short radiative lifetime.
     - The isotope splitting of H35Cl and H37Cl, which always makes each line 4 cm-1 wide.
   correct: 0
   explanation: >-

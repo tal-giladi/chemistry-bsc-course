@@ -5,7 +5,7 @@
   options:
     - The detector saturates at high concentration, so it reports a lower number than it should.
     - Quinine photobleaches faster when concentrated, so the strong sample fades during the reading.
-    - The sample absorbs most of the 350 nm light near the cell wall, so the viewed centre is barely excited.
+    - The sample absorbs the 350 nm light near the wall, so the viewed centre is barely excited.
     - Concentrated quinine shifts its emission to longer wavelengths, outside the 450 nm setting.
   correct: 2
   explanation: >-
@@ -32,7 +32,7 @@
     - The mean of the two methods, 58.5 mg/L, since both are valid calibrations of the same sample.
     - The external result, because standard addition extrapolates and is therefore less accurate.
     - Neither value, because two methods that disagree show that the fluorimeter is out of order.
-    - The standard-addition result, because the matrix lowers the slope and only that method corrects it.
+    - The standard-addition result, because only that method corrects for the matrix.
   correct: 3
   explanation: >-
     A matrix that absorbs excitation light or quenches scales the signal down for analyte and added

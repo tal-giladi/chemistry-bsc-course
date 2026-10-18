@@ -18,8 +18,8 @@
   options:
     - The product is not aspirin, because aspirin never reacts with iron(III).
     - The product is wet, because water turns iron(III) chloride violet.
-    - A trace of salicylic acid remains; the sensitive test sees it before the melting point does.
-    - The test is unreliable for esters, so the result can be ignored.
+    - A trace of salicylic acid remains, too little to affect the melting point.
+    - The test is unreliable for esters like aspirin, so the result can be safely ignored.
   correct: 2
   explanation: >-
     The violet complex forms with free phenol groups, and the test detects very small amounts. A sharp
@@ -29,9 +29,9 @@
     In a hurry, a student adds hot water quickly to the reaction mixture straight from the bath. What
     is the main risk?
   options:
-    - Violent reaction of the excess acetic anhydride with water, spattering hot acid.
-    - The aspirin dissolves completely and cannot be recovered.
-    - The phosphoric acid catalyst turns into a gas.
+    - Violent reaction of excess anhydride with water, spattering hot acid.
+    - The aspirin dissolves completely in the hot water and cannot be recovered.
+    - The phosphoric acid catalyst boils off as a gas and fills the fume hood.
     - The salicylic acid crystallises before it can react.
   correct: 0
   explanation: >-
@@ -41,7 +41,7 @@
   question: >-
     Which spectral change best proves that the phenol of salicylic acid became an acetyl ester?
   options:
-    - A broad O–H band from 2500 to 3300 cm⁻¹ appears in the IR.
+    - A broad O–H band from 2500 to 3300 cm⁻¹ newly appears in the IR spectrum.
     - The aromatic protons move from 7 ppm to 2 ppm in the ¹H NMR.
     - The molecular ion in the mass spectrum loses 42 mass units.
     - A new ester C=O near 1750 cm⁻¹ and a 3H singlet near 2.3 ppm appear.

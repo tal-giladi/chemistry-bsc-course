@@ -4,7 +4,7 @@
     The analyst adds lanthanum to the samples but not to the standards. What happens?
   options:
     - The result becomes correct, because lanthanum is needed only where phosphate is present.
-    - The result is still unreliable, because standards and samples no longer share the same matrix.
+    - Still unreliable, because standards and samples no longer share one matrix.
     - The result gets worse, because lanthanum absorbs at 422.7 nm and adds to the calcium signal.
     - Nothing changes, because lanthanum acts only in a nitrous oxide-acetylene flame.
   correct: 1
@@ -20,7 +20,7 @@
     - Recovery is 85 %, which proves a matrix interference that only standard addition can fix.
     - Recovery is 245 %, so the spike was added twice and the run must be repeated.
     - Recovery is 100 %, because the spiked result is above the unspiked one by roughly the spike.
-    - Recovery is 85 %, but the spiked solution is outside the calibrated range, so repeat with a smaller spike.
+    - Recovery is 85 %, but the spiked solution exceeds the top standard; use a smaller spike.
   correct: 3
   explanation: >-
     (7.35 - 4.80)/3.0 = 85 %. At 7.8 mg/L the true value lies above the top standard, where the
@@ -30,7 +30,7 @@
     In a hot nitrous oxide-acetylene flame, the sodium signal of a standard rises by 30 % when 2000 mg/L
     potassium is added to it. Which interference does this reveal?
   options:
-    - Ionisation of sodium, which the easily ionised potassium suppresses by supplying electrons.
+    - Ionisation of sodium, which easily ionised potassium suppresses with its electrons.
     - A chemical interference, in which potassium releases sodium from a refractory compound.
     - A spectral overlap between the potassium line at 766 nm and the sodium line at 589 nm.
     - A physical interference, because potassium makes the solution more viscous.

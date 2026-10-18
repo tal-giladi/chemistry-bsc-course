@@ -19,7 +19,7 @@
     - Nothing, because the proton moves towards the oxygen during the reaction.
     - The arrow should be fishhook-shaped, because a proton carries only one electron.
     - The arrow should end on the hydrogen of water, because protons attack hydrogens.
-    - Arrows show electron pairs, so it must start at a lone pair on O and point to the H+.
+    - Arrows show electron pairs, so it must start at a lone pair on O and end at H+.
   correct: 3
   explanation: >-
     Curved arrows track electrons, not atoms. H+ has no electrons; the new O-H bond comes from an
@@ -44,7 +44,7 @@
   options:
     - Sodium hydroxide, because a stronger base gives a cleaner separation of both acids.
     - Plain water, because benzoic acid is already more acidic than phenol and dissolves alone.
-    - Sodium hydrogen carbonate, because K is about 150 for benzoic acid and 0.0002 for phenol.
+    - Sodium hydrogen carbonate; K is about 150 for benzoic acid and 0.0002 for phenol.
     - Ammonium chloride, because the ammonium ion deprotonates carboxylic acids selectively.
   correct: 2
   explanation: >-

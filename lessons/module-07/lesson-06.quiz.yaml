@@ -15,7 +15,7 @@
   question: >-
     At 50 bar and 320 K the compressibility factor of CO₂ is 0.77. What does this tell you?
   options:
-    - Attractions between CO₂ molecules dominate, so the gas occupies less volume than the ideal law predicts.
+    - Attractions between the molecules dominate, so the gas occupies less volume than an ideal gas.
     - The CO₂ molecules take up 23 % of the container, so the gas is harder to compress than an ideal gas.
     - The gas is 77 % ideal, so 23 % of the CO₂ has condensed into liquid.
     - The pressure gauge reads 23 % too low, because real gases hit the walls less often.
@@ -30,7 +30,7 @@
   options:
     - 1.4 bar, because the total pressure must stay at the oxygen limit.
     - 3.2 bar, because each 10 % of oxygen allows one more bar.
-    - 4.4 bar, because the total pressure is the oxygen limit divided by its mole fraction.
+    - 4.4 bar, because the oxygen limit is divided by its mole fraction.
     - 0.45 bar, because the oxygen limit is multiplied by its mole fraction.
   correct: 2
   explanation: >-
@@ -41,7 +41,7 @@
     explanation for the difference?
   options:
     - Water molecules are much larger than helium atoms, so they exclude more volume.
-    - Water is polar and hydrogen-bonds, so its molecules attract each other far more strongly.
+    - Water is polar and hydrogen-bonds, so its molecules attract each other far more.
     - Helium moves faster at the same temperature, so it hits the walls with more force.
     - Helium is a single atom, so it has no electrons that can create attractions.
   correct: 1

@@ -17,7 +17,7 @@
     A molecule has three conformers with relative energies 0, 1.0 and 1.0 kJ/mol; the two higher ones
     are mirror images of each other. Ignoring entropy, what fraction is in the lowest conformer at 298 K?
   options:
-    - About 60 %, counting the mirror-image pair as one conformer.
+    - About 60 %, counting the mirror-image pair as a single conformer.
     - About 50 %, because the energy differences are smaller than RT.
     - About 43 %, because the two mirror images together outweigh it.
     - About 33 %, because energies below RT give equal populations.
@@ -31,7 +31,7 @@
     find 21, and with 200 starts 26. What do you conclude?
   options:
     - The search has not converged; keep increasing the starts or switch to a metadynamics search.
-    - The search has converged, since the number of new conformers per start is falling.
+    - The search has converged, since the number of new conformers found per extra start is falling.
     - The extra conformers are duplicates that the duplicate filter failed to remove.
     - The force field is unstable, because a proper search returns the same number every time.
   correct: 0
@@ -46,7 +46,7 @@
   options:
     - The rigid value, because it measures the torsion term alone without other contributions.
     - The relaxed value, because the real molecule adjusts its other angles and bonds as it rotates.
-    - Their average, because the truth lies between an unrelaxed and a fully relaxed path.
+    - Their average, because the truth lies somewhere between an unrelaxed and a fully relaxed path.
     - Neither, because scans only give energies at fixed points and never barriers.
   correct: 1
   explanation: >-

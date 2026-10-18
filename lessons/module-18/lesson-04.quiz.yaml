@@ -4,9 +4,9 @@
     the difference?
   options:
     - Cyanide oxidises iron to Fe(III), which has an even number of electrons.
-    - Cyanide is strong-field, so Delta_o exceeds the pairing energy and all six pair in t2g.
+    - Cyanide is strong-field, so Delta_o beats the pairing energy and all six pair in t2g.
     - Water forms a tetrahedral complex, which is always high spin.
-    - The cyanide complex is square planar, which forces every electron to pair.
+    - The cyanide complex is square planar, which forces every one of the d electrons to pair.
   correct: 1
   explanation: >-
     Fe(II) is d6. With water, Delta_o is below the pairing energy: high spin t2g4 eg2, 4 unpaired. CN- is
@@ -31,7 +31,7 @@
     - "[Co(NH3)6]2+, because the lower charge lets the ligands come closer."
     - "[CoF6]3-, because fluoride carries a full negative charge."
     - "[Co(NH3)6]3+, because cobalt has the most d electrons of the four metals."
-    - "[Ir(NH3)6]3+, because 5d orbitals overlap more strongly with the ligands."
+    - "[Ir(NH3)6]3+, because 5d orbitals overlap more with the ligands."
   correct: 3
   explanation: >-
     Delta grows down a group (Co 22 870, Rh 34 100, Ir 41 200 cm-1 with NH3) and with metal charge. F- is
@@ -54,9 +54,9 @@
     Almost every Cu(II) complex with six ligands has two trans bonds clearly longer than the other four.
     Why?
   options:
-    - Cu(II) is d10, so it prefers linear coordination and the axial ligands drift away.
+    - Cu(II) is d10, so it prefers linear coordination and the two axial ligands drift away.
     - The axial ligands are always counter-ions that are not truly bonded.
-    - The d9 ion has an unevenly filled eg set, and elongation lowers the energy (Jahn-Teller).
+    - The d9 ion has an unevenly filled eg set; elongation lowers its energy (Jahn-Teller).
     - Cu(II) is always high spin, and high-spin complexes have longer axial bonds.
   correct: 2
   explanation: >-

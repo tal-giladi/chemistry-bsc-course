@@ -29,7 +29,7 @@
     In the planar methyl radical the unpaired electron is in a carbon 2p orbital with a node in the molecular
     plane, yet the protons give a 2.3 mT coupling. Why?
   options:
-    - The unpaired electron spin polarises the C-H bonding pairs, leaving net spin density at each proton.
+    - The unpaired electron polarises the C-H bonding pairs, leaving spin density at each proton.
     - The radical is pyramidal on the ESR time scale, which mixes s character into the orbital.
     - The coupling is a through-space dipolar interaction, which does not need density at the nucleus.
     - The protons couple to the carbon-13 nucleus, which then couples to the electron.
@@ -44,7 +44,7 @@
   options:
     - Hydrogen atoms trapped in a solid have a large g shift from the matrix, so the value may be right.
     - The microwave frequency must have been measured wrongly by about 0.6 %.
-    - The second-order Breit-Rabi term shifts both lines down by about a^2/(4 B0), so the midpoint is not B0.
+    - The second-order Breit-Rabi term lowers both lines by a^2/(4 B0), so the midpoint is not B0.
     - The derivative lineshape moves the apparent centre of each line by half the peak-to-peak width.
   correct: 2
   explanation: >-

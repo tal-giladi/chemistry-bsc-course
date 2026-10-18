@@ -4,8 +4,8 @@
     base peak at 105. The 1H spectrum has five aromatic H, a 1H septet and a 6H doublet. What is the
     compound?
   options:
-    - Propylbenzene, because loss of an ethyl group gives m/z 105.
-    - Isopropylbenzene, because loss of CH3 gives a stabilised benzylic cation at 105.
+    - Propylbenzene, because loss of an ethyl group gives the tropylium-type ion at 105.
+    - Isopropylbenzene, because loss of CH3 gives a benzylic cation at 105.
     - Acetophenone, because 105 is the benzoyl cation C6H5CO+.
     - 1,3,5-Trimethylbenzene, because three methyls give strong methyl losses.
   correct: 1
@@ -20,7 +20,7 @@
   options:
     - No, because an odd molecular ion rules out chlorine.
     - No, because a 3:1 pair 2 u apart means bromine, not chlorine.
-    - Yes, because the 3:1 pair means one Cl and the odd mass means an odd number of N.
+    - Yes, because the 3:1 pair means one Cl and the odd mass an odd number of N.
     - Yes, but only if the compound also contains sulfur, which adds the M+2 peak.
   correct: 2
   explanation: >-
@@ -32,8 +32,8 @@
     acid. The IR shows a strong band at 1725 cm-1, two weak bands near 2720 and 2820 cm-1, and no
     broad band from 2500 to 3300 cm-1. What is the product?
   options:
-    - Propanal, because the C=O comes with the aldehyde C-H pair and there is no acid O-H.
-    - Propanoic acid, because a carboxylic acid C=O lies between 1700 and 1730.
+    - Propanal, because the C=O comes with the aldehyde C-H pair and no acid O-H.
+    - Propanoic acid, because a carboxylic acid C=O lies between 1700 and 1730 cm-1.
     - Unreacted 1-propanol, because 2720 and 2820 are O-H overtones.
     - Propyl propanoate, because esters absorb near 1725 cm-1.
   correct: 0
@@ -45,10 +45,10 @@
     A compound C4H10O shows a broad IR band at 3350 cm-1. Its 13C spectrum has two lines, and DEPT
     shows that one of them is a quaternary carbon. Which isomer is it?
   options:
-    - 1-Butanol, because primary alcohols give the broadest O-H bands.
-    - Diethyl ether, because its symmetry gives two 13C lines.
+    - 1-Butanol, because primary alcohols give the broadest O-H bands and two 13C lines.
+    - Diethyl ether, because its symmetry gives two 13C lines and a quaternary C-O.
     - 2-Butanol, because its CH-O carbon appears in DEPT.
-    - 2-Methyl-2-propanol, because three equivalent CH3 and one C-O carbon give two lines.
+    - 2-Methyl-2-propanol, as three equivalent CH3 and one C-O carbon give two lines.
   correct: 3
   explanation: >-
     Two lines and a quaternary carbon fit (CH3)3COH only. Diethyl ether also gives two lines but has
@@ -60,7 +60,7 @@
     to do?
   options:
     - Re-record the spectrum with more scans, so the extra lines average out.
-    - Record it at 400 MHz, where the separation in Hz grows and J stays the same.
+    - Record it at 400 MHz, where the Hz separation grows and J stays the same.
     - Assume the two signals are equivalent protons and integrate them together.
     - Switch to a 13C spectrum, because carbon spectra show the same splittings.
   correct: 1
@@ -74,7 +74,7 @@
   options:
     - Methyl benzoate, because an OCH3 singlet appears near 2.4 ppm.
     - 4-Methoxybenzaldehyde, because aldehyde protons are broad near 12.5 ppm.
-    - 4-Methylbenzoic acid, because the para pattern, ring CH3 and COOH all fit.
+    - 4-Methylbenzoic acid, as the para pattern, ring CH3 and COOH all fit.
     - Phenylacetic acid, because its CH2 next to C=O gives a 3H singlet.
   correct: 2
   explanation: >-
@@ -85,10 +85,10 @@
     Two candidate esters, propyl acetate and methyl butanoate, both fit an unknown's MS, IR, 13C line
     count and 1H integrals. Which HMBC observation decides?
   options:
-    - The OCH2 protons near 4.0 ppm correlate with the C=O carbon, so the OCH2 is on the ester oxygen.
-    - The CH3 triplet correlates with a CH2 carbon, which proves a propyl chain.
+    - The OCH2 protons at 4.0 ppm correlate with the C=O, so OCH2 sits on the ester oxygen.
+    - The CH3 triplet correlates with a CH2 carbon, which proves the chain is a propyl chain.
     - The C=O carbon shows no HSQC peak, which proves it is a quaternary carbon.
-    - The OCH2 protons couple to a CH2 in COSY, which proves an ethyl group is present.
+    - The OCH2 protons couple to a CH2 in COSY, which proves that an ethyl group is present.
   correct: 0
   explanation: >-
     A three-bond H-C-O-C=O correlation from an OCH2 at 4.0 proves propyl acetate. Methyl butanoate
@@ -100,8 +100,8 @@
   options:
     - 1-Hexyne, because C6H10 has two degrees of unsaturation.
     - 1,5-Hexadiene, because two C=C bonds account for the DBE of 2.
-    - Cyclohexane, because a ring with three kinds of carbon gives three lines.
-    - Cyclohexene, because a ring plus one C=C fits DBE 2 and its symmetry gives three lines.
+    - Cyclohexane, because a ring with three kinds of carbon gives three 13C lines and DBE 2.
+    - Cyclohexene, as a ring plus one C=C fits DBE 2 and its symmetry gives three lines.
   correct: 3
   explanation: >-
     DBE 2. A terminal alkyne would show a sharp band near 3300, and 1,5-hexadiene would add a 4H =CH2
@@ -112,8 +112,8 @@
     only a 4H quartet and a 6H triplet. Which ketone is it?
   options:
     - 2-Pentanone, because its McLafferty ion appears at m/z 57.
-    - 3-Methyl-2-butanone, because loss of an isopropyl group gives m/z 57.
-    - 3-Pentanone, because both sides are ethyl groups and alpha-cleavage gives C2H5CO+ at 57.
+    - 3-Methyl-2-butanone, because alpha loss of an isopropyl group gives m/z 57.
+    - 3-Pentanone, as both sides are ethyl and alpha-cleavage gives C2H5CO+.
     - Cyclopentanone, because ring ketones give strong m/z 57 fragments.
   correct: 2
   explanation: >-
@@ -125,7 +125,7 @@
     way to use SDBS?
   options:
     - Write a script that downloads every spectrum automatically and share the files.
-    - Search each compound by hand, view and assign its spectra, and cite SDBS with the access date.
+    - Search each compound by hand, assign its spectra, and cite SDBS with the access date.
     - Search SDBS by CAS number, which is the fastest key for each compound.
     - Copy the peak lists into a shared spreadsheet, since the data itself is not copyrighted.
   correct: 1

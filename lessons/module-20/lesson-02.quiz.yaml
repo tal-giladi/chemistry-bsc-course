@@ -45,7 +45,7 @@
     - Methane is too light, so its lines fall in the visible region instead of the microwave.
     - Methane has four equal bonds, so its spectrum shows only one line that cannot be assigned.
     - The C-H bond is too stiff, so centrifugal distortion hides the lines.
-    - Methane is a spherical top with no permanent dipole, so it has no pure rotational spectrum.
+    - Methane is a spherical top with no permanent dipole, so no pure rotational spectrum.
   correct: 3
   explanation: >-
     The gross rule for pure rotation is a permanent dipole. Tetrahedral CH4 has none, so it shows no
@@ -56,7 +56,7 @@
     the line move while the chemistry stays the same?
   options:
     - The heavier nucleus shortens the bond, which lowers the moment of inertia.
-    - The potential and re are unchanged, but the larger reduced mass raises I and lowers B.
+    - re and the potential are unchanged; the larger reduced mass raises I and lowers B.
     - 13C has a nuclear spin, which splits the line and moves its centre to lower frequency.
     - The 13C bond is weaker, so the molecule rotates more slowly at the same temperature.
   correct: 1

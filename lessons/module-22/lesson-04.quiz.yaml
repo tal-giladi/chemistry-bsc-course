@@ -19,7 +19,7 @@
     - Only collisions with the right geometry react, so the steric factor is about 0.005.
     - The activation energy was measured wrongly, which lowers the apparent A.
     - Most collisions between OH and CH4 are too slow, because CH4 is heavy.
-    - The experiment was done in the falloff region, so A is pressure dependent.
+    - The experiment was done in the falloff region, so the measured A is pressure dependent.
   correct: 0
   explanation: >-
     The ratio, about 1/200, is the steric factor P: OH must approach a C-H bond end-on. Transition-state
@@ -45,7 +45,7 @@
     - Nothing, because Ea is a property of the barrier and does not change with temperature.
     - The prediction is too high, because tunnelling speeds the reaction up at high temperature.
     - The prediction is wrong only because the units change from cm3 to L at high temperature.
-    - The prediction is far too low, because the local Ea rises to about 34 kJ/mol at high temperature.
+    - The prediction is far too low, because the local Ea rises to about 34 kJ/mol when hot.
   correct: 3
   explanation: >-
     The Arrhenius plot of OH + CH4 curves upwards: temperature-dependent prefactors raise the local Ea

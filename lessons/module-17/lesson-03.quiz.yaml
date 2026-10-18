@@ -4,10 +4,10 @@
     Which structure fits?
   options:
     - 1-bromopropane, because a CH2 next to Br gives a septet.
-    - 2-bromopropane, because the CH has six equivalent neighbours and each CH3 has one.
+    - 2-bromopropane, because the CH has six equivalent neighbours and each CH3 one.
     - >-
         1-bromopropane, because three carbons always give a 6:1 ratio.
-    - Bromocyclopropane, because a ring makes all CH2 protons equivalent.
+    - Bromocyclopropane, because a ring makes all of its CH2 protons magnetically equivalent.
   correct: 1
   explanation: >-
     Six equivalent CH3 protons split the CH into a septet, and the single CH splits the 6H into a
@@ -19,7 +19,7 @@
   options:
     - Clean first-order multiplets, because 400 MHz is always enough.
     - No splitting at all, because the signals are closer than J.
-    - Second-order distortion, because 40 Hz divided by 7 Hz is well below 10.
+    - Second-order distortion, because 40 Hz over 7 Hz is well below 10.
     - Singlets, because protons with similar shifts are chemically equivalent.
   correct: 2
   explanation: >-
@@ -31,7 +31,7 @@
     0.67, 1.00 and 1.00. How many protons does each signal represent?
   options:
     - >-
-        2, 3 and 3, because the ratio 2:3:3 adds up to the 8 hydrogens of the formula.
+        2, 3 and 3, because 2:3:3 adds up to the 8 hydrogens of the formula.
     - 1, 1 and 1, because the software has normalised each signal to one proton.
     - 0.67, 1 and 1, because integrals give the number of protons directly.
     - 4, 6 and 6, because the integrals must be doubled to reach whole numbers.

@@ -19,7 +19,7 @@
     - The mode is the symmetric stretch, which does not change the dipole moment and is IR inactive.
     - The mode is an artefact of the optimiser and should be removed from the frequency list.
     - The intensity is zero because the basis set lacks diffuse functions for oxygen.
-    - The mode is the bend, which only shows up in IR when the molecule is in the liquid phase.
+    - The mode is the bend, which only shows up in IR when the molecule is in the liquid or solid phase.
   correct: 0
   explanation: >-
     The symmetric stretch of a linear O=C=O keeps the dipole at zero, so its IR intensity is zero; it is
@@ -29,8 +29,8 @@
     You compute 13C shieldings for a molecule with B3LYP/pcSseg-1 and for TMS with PBE0/pcSseg-1, then
     take the differences as shifts. Every carbon comes out about 4 ppm off in the same direction. Why?
   options:
-    - The conformers were not averaged, which shifts all carbons by the same amount.
-    - The reference and the molecule were calculated at different levels, so the reference is offset.
+    - The conformers were not Boltzmann-averaged, which shifts all carbons by the same amount.
+    - The reference and the molecule used different functionals, so the reference is offset.
     - pcSseg-1 is not designed for shieldings, so all values carry the same basis error.
     - The shifts are correct, because 4 ppm is the normal random scatter for 13C.
   correct: 1

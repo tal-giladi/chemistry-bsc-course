@@ -28,7 +28,7 @@
     You measure product concentration during the first 2 % of a first-order reaction and it rises
     in a straight line with time. Why is a straight line expected here?
   options:
-    - Because 1 - exp(-kt) is about kt when kt is small, so conversion grows linearly at first.
+    - Because 1 - exp(-kt) is about kt when kt is small.
     - Because first-order reactions become zero-order once the product starts to form.
     - Because the rate constant k grows linearly with time at the start.
     - Because the logarithm of concentration is linear in time for all reactions.
@@ -42,8 +42,8 @@
     like a mass on a spring?
   options:
     - Because V(r) is exactly a parabola for every chemical bond.
-    - Because at the minimum V'(r_e) = 0, so the first non-constant Taylor term is quadratic in r - r_e.
-    - Because the first Taylor term V'(r_e)(r - r_e) is linear, like Hooke's law.
+    - Because V'(r_e) = 0 at the minimum, so the first non-constant term is quadratic.
+    - Because the first Taylor term V'(r_e)(r - r_e) is linear in the displacement, like Hooke's law.
     - Because the cubic term of the expansion cancels the quadratic one near r_e.
   correct: 1
   explanation: >-

@@ -3,7 +3,7 @@
     Three replicate results have a mean of 10.20 mg/L and s = 0.15 mg/L. What is the 95 % confidence
     interval of the mean?
   options:
-    - 10.20 ± 0.17 mg/L, using 1.96 × 0.15/√3.
+    - 10.20 ± 0.17 mg/L, using z = 1.96 × 0.15/√3.
     - 10.20 ± 0.37 mg/L, using 4.303 × 0.15/√3.
     - 10.20 ± 0.65 mg/L, using 4.303 × 0.15.
     - 10.20 ± 0.30 mg/L, using 2 × 0.15.
@@ -17,8 +17,8 @@
   options:
     - The method has been shown to be free of bias at the 95 % level.
     - There is a 21 % chance that the method is biased.
-    - The certified value must be wrong, because the test failed to find a difference.
-    - These data give no evidence of bias, but a small bias could still be hidden by the scatter.
+    - The certified value must be wrong, because the test failed to find the expected difference.
+    - These data show no evidence of bias, but a small bias could be hidden by the scatter.
   correct: 3
   explanation: >-
     A large p-value means the difference is within what scatter could explain. It does not prove there is no
@@ -28,8 +28,8 @@
     Two methods give s = 0.90 (n = 6) and s = 0.25 (n = 6). The critical F for 5 and 5 degrees of freedom
     is 7.15. How should you compare their means?
   options:
-    - Use Welch's t-test, because F = 13 shows the variances differ and must not be pooled.
-    - Use the pooled t-test, because both methods have the same number of results.
+    - Use Welch's t-test, because F = 13 shows the variances differ.
+    - Use the pooled t-test, because both methods have the same number of results, n = 6.
     - Use the pooled t-test, because F = 3.6 is below the critical value.
     - Use Grubbs' test on the less precise method until its s matches the other one.
   correct: 0

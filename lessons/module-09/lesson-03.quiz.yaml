@@ -30,7 +30,7 @@
     found as final reading minus initial reading. How does the offset affect the volume?
   options:
     - It cancels, because the same offset appears in both readings of the difference.
-    - It adds 0.04 mL × √2 to the uncertainty, because two readings are involved.
+    - It adds 0.04 mL × √2 to the uncertainty, because two separate readings are involved.
     - It adds 0.08 mL, because the offset is counted once in each reading.
     - It adds 0.04 mL/√3, because an offset is a rectangular Type B term.
   correct: 0
@@ -42,7 +42,7 @@
     In a budget, the end point gives 0.15 % and the burette tolerance 0.12 %, while the mass and purity give
     0.01 % each. Which statement is right?
   options:
-    - A balance with ten times better resolution would cut the combined value nearly in half.
+    - A balance with ten times better resolution would cut the combined uncertainty nearly in half.
     - Monte Carlo is needed, because the first-order rule fails whenever there are four inputs.
     - Improving the end-point detection gives the largest gain; the mass and purity barely matter.
     - The combined value is 0.29 %, so every input must be improved by the same factor.

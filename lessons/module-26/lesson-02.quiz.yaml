@@ -18,7 +18,7 @@
   options:
     - O2 is a heavier ligand and pulls the iron towards the distal side.
     - The proximal histidine is protonated in deoxy-Hb and pushes the iron away.
-    - High-spin Fe(II) has two eg electrons that make it too large for the ring hole.
+    - High-spin Fe(II) has two eg electrons, making it too large for the hole.
     - The porphyrin ring is reduced in deoxy-Hb and its hole becomes smaller.
   correct: 2
   explanation: >-
@@ -29,8 +29,8 @@
     Oxy-myoglobin is diamagnetic and has an O-O stretch near 1105 cm-1, against about 1556 cm-1 in free
     O2. Which description fits both facts best?
   options:
-    - Fe(III) bound to superoxide, with the two unpaired spins strongly coupled so they cancel.
-    - Fe(II) bound to triplet O2, with the O2 spins hidden by the protein.
+    - Fe(III) bound to superoxide, with the two unpaired spins coupled to cancel.
+    - Fe(II) bound to triplet O2, with the O2 spins hidden by the surrounding protein.
     - Fe(IV) bound to peroxide, with no unpaired electrons on either partner.
     - Fe(II) bound to singlet O2 with an unchanged O=O double bond.
   correct: 0
@@ -43,9 +43,9 @@
     Replacing the distal histidine by glycine raises M to about 1300. What does this tell you?
   options:
     - The distal histidine binds CO directly and blocks it from the iron.
-    - The glycine mutant is unfolded, so it behaves like a bare haem.
+    - The glycine mutant is unfolded, so its haem behaves like a bare imidazole-haem.
     - CO binding requires a hydrogen bond, which glycine cannot give.
-    - The distal histidine stabilises bound O2 by a hydrogen bond, which CO does not gain.
+    - The distal histidine hydrogen-bonds bound O2, a gain CO does not share.
   correct: 3
   explanation: >-
     Bound O2 carries partial negative charge (superoxo character) and accepts a hydrogen bond from the

@@ -4,7 +4,7 @@
     and collects a gas instead. What happened?
   options:
     - SN1 gave the ether, which then boiled off because ethers are volatile.
-    - "E2: a tertiary carbon blocks backside attack, so the strong base removed a beta-H instead."
+    - E2; the tertiary carbon blocks SN2, so ethoxide removes a beta-H instead.
     - SN2 gave the ether, but sodium ethoxide decomposed into ethene gas.
     - The bromide was oxidised by air to bromine gas, which is what bubbled out.
   correct: 1
@@ -20,7 +20,7 @@
   options:
     - The NIST values are for the gas, so they do not apply to any reaction in solution.
     - 1-Butene is formed first and slowly turns into 2-butene, so the 19 % is a mistake.
-    - The product ratio reflects competing transition-state energies, not the product stabilities.
+    - The ratio reflects competing transition-state energies, not product stabilities.
     - 1-Butene is favoured by entropy, which outweighs a 10 kJ/mol enthalpy difference.
   correct: 2
   explanation: >-

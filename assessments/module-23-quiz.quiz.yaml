@@ -18,7 +18,7 @@
     18.6 C at 6 minutes, but the extrapolated after-line gives 18.9 C at the mixing time. Which Delta T do
     you use?
   options:
-    - -2.5 K, because extrapolating to the mixing time corrects for heat exchanged during the run.
+    - "-2.5 K, as extrapolating to the mixing time corrects for heat exchanged in the run."
     - -2.8 K, because the lowest reading is the true final temperature of the reaction.
     - -2.65 K, the mean of the two, because both readings have similar uncertainties.
     - -2.8 K, because heat leaking in can only make the change look smaller, never larger.
@@ -33,7 +33,7 @@
     classmate makes the mixtures in water instead of acid to save reagent. What happens to their K?
   options:
     - Nothing, because the acid takes no part in the complexation reaction.
-    - It becomes unreliable, because Fe3+ hydrolyses and the ionic strength no longer matches.
+    - It becomes unreliable, as Fe3+ hydrolyses and the ionic strength no longer matches.
     - It rises by exactly the acid's share of the ionic strength, which is easy to correct.
     - It falls, because H+ normally competes with Fe3+ for the thiocyanate ions.
   correct: 1
@@ -59,8 +59,8 @@
     You plan the dye-fading experiment for the evening. Which plan keeps it safe and still gives a good
     rate constant?
   options:
-    - 2 mL bleach in 200 mL water by an open window, nothing else added, glasses and gloves on.
-    - 20 mL bleach in 200 mL water in a closed bathroom, so draughts do not cool the cup.
+    - 2 mL bleach in 200 mL water by an open window, nothing added, glasses and gloves on.
+    - 20 mL bleach in 200 mL water in a closed bathroom, so draughts do not cool the dye cup.
     - 2 mL bleach in 200 mL water with a spoon of citric acid to speed up the fading.
     - Undiluted bleach in a small cup with one drop of dye, so the fading is fast to film.
   correct: 0
@@ -88,7 +88,7 @@
     - The colleague, because every Nernstian electrode gives 59 mV per decade.
     - Neither, because the slope depends on the reference electrode, not on the ion.
     - The colleague, because 28.9 mV means only half the copper reaches the membrane.
-    - You are, because a two-electron ion gives 29.6 mV, so the electrode is at 98 %.
+    - "You are: a two-electron ion gives 29.6 mV, so the electrode is at 98 %."
   correct: 3
   explanation: >-
     The Nernst slope is 59.16/n mV per decade. Cu2+ has n = 2, so 29.58 mV is expected and 28.9 mV is a
@@ -113,8 +113,8 @@
   options:
     - The whole-curve fit, because more points always reduce the error.
     - Both, because the Gibbs isotherm holds equally at every concentration.
-    - The near-break fit, because the surface is nearly full there and the slope is steepest.
-    - The whole-curve fit, because points near the break are distorted by micelles.
+    - The near-break fit, as the surface is nearly full there and the slope is steepest.
+    - The whole-curve fit, because points near the break are distorted by forming micelles.
   correct: 2
   explanation: >-
     The curve is not linear in ln c: gentle at low concentration and steep near the CMC, where the surface

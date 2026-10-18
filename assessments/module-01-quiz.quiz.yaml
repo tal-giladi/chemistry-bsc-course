@@ -5,7 +5,7 @@
   options:
     - Reread all five lessons carefully, highlighting anything that seems new.
     - Read the key takeaways of each lesson three times in a row tonight.
-    - Spread the hours over several days and redo each lesson's problems without the answers.
+    - Spread it over several days and redo the problems without the answers.
     - Watch videos on each topic so you hear the ideas explained a different way.
   correct: 2
   explanation: >-
@@ -109,7 +109,7 @@
     including all the simulations. What is the honest way to describe yourself?
   options:
     - I have hands-on titration experience from the simulations and home labs.
-    - I understand titration and its error analysis, but have no supervised bench training.
+    - I understand titration and its errors, but lack supervised bench training.
     - I have equivalent experience, because the simulations replace the real lab.
     - I have no relevant knowledge, because the course did not use real balances.
   correct: 1

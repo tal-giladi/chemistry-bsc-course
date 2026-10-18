@@ -3,7 +3,7 @@
     You diagonalise a Hückel matrix with np.linalg.eigh and get x = [-1.618, -0.618, 0.618, 1.618]
     for butadiene. Which two values describe the occupied orbitals of the ground state?
   options:
-    - 1.618 and 0.618, because beta is negative so larger x means lower energy.
+    - 1.618 and 0.618, because beta is negative, so larger x is lower energy.
     - -1.618 and -0.618, because eigh lists the lowest energies first.
     - 0.618 and -0.618, because the frontier orbitals are always nearest zero.
     - -1.618 and 1.618, because the outer values are the bonding pair.
@@ -32,7 +32,7 @@
     - >-
       The eigenvalues of K are frequencies already, so you should not take the square root.
     - >-
-      K must be mass-weighted first, dividing each entry by the square root of the two masses.
+      K must be mass-weighted first, dividing each entry by sqrt(m_i m_j).
     - >-
       Force constants must be in kJ/mol, so K has to be converted before diagonalising it.
     - >-
@@ -49,7 +49,7 @@
     - Both are equally stabilised, since they have the same number of pi electrons.
     - Hexatriene is more stable, because a chain has more freedom than a ring.
     - The difference is meaningless, because beta has different values for rings.
-    - Closing the ring roughly doubles the stabilisation, the extra stability of aromatic benzene.
+    - The ring roughly doubles the stabilisation, showing benzene's aromaticity.
   correct: 3
   explanation: >-
     The ring adds one bond to the connection matrix, which raises the occupied x values. With beta

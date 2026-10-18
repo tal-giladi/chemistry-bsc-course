@@ -6,7 +6,7 @@
     - Both fall to one half.
     - Both fall to one quarter.
     - The force falls to one half and the energy to one quarter.
-    - The force falls to one quarter and the energy to one half.
+    - The force falls to one quarter, the energy to one half.
   correct: 3
   explanation: >-
     The force goes as 1/r squared and the energy as 1/r. Doubling r divides the force by 4 and the
@@ -44,7 +44,7 @@
   options:
     - The bond is fully ionic, because any dipole means charges of plus and minus e.
     - The bond is nonpolar, because 1.09 D is less than 6.1 D.
-    - The atoms carry partial charges of about 0.18 e, so the bond is polar covalent.
+    - The atoms carry partial charges near 0.18 e, so the bond is polar covalent.
     - The bond length must be wrong, because the two dipoles should be equal.
   correct: 2
   explanation: >-

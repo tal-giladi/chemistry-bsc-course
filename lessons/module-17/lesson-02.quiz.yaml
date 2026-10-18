@@ -19,7 +19,7 @@
     - The NIST sample was wet, so its band is from water, not ethanol.
     - The two databases use different units, one in wavenumbers and one in wavelength.
     - SDBS used a deuterated sample, which moves the O-H band to lower wavenumber.
-    - NIST measured the gas, where O-H is not hydrogen-bonded; SDBS measured the liquid.
+    - NIST measured the gas, with no O-H hydrogen bonding; SDBS measured the liquid.
   correct: 3
   explanation: >-
     In the gas, molecules are far apart and the free O-H gives a sharp band near 3650. In the
@@ -41,9 +41,9 @@
     A hydrocarbon C8H14 shows a strong narrow band at 3310 cm-1 and a weak band at 2120 cm-1. What
     structural feature do these bands show?
   options:
-    - A nitrile, since triple bonds near 2120 cm-1 must contain nitrogen.
+    - A nitrile, since triple bonds absorbing near 2120 cm-1 must always contain nitrogen.
     - An alcohol, because bands above 3200 are always O-H stretches.
-    - A terminal alkyne, with its sharp C-H stretch and a weak C-C triple-bond stretch.
+    - A terminal alkyne, with a sharp C-H stretch and a weak C-C triple-bond stretch.
     - An alkene, because sp2 C-H stretches appear above 3000 cm-1.
   correct: 2
   explanation: >-

@@ -17,9 +17,9 @@
     halves it and again finds the same half-life. A colleague says the reaction must be second order
     because the balanced equation has a coefficient of 2. Who is right?
   options:
-    - The colleague, because orders follow the coefficients of the balanced equation.
+    - The colleague, because orders always follow the coefficients of the balanced equation.
     - Neither, because half-lives cannot reveal orders without an endpoint value.
-    - "The data, which show first order: only that half-life ignores the starting concentration."
+    - "The data, which show first order: only its half-life ignores the starting amount."
     - "The data, which show zero order: the rate does not change with concentration."
   correct: 2
   explanation: >-
@@ -30,10 +30,10 @@
     A temperature-jump experiment on A <=> B gives a relaxation time of 50 microseconds. Independent
     measurements give K = [B]/[A] = 9 at the final temperature. What is kf?
   options:
-    - 2.0e4 s-1, because kf is 1/tau.
+    - 2.0e4 s-1, because kf alone equals 1/tau at equilibrium.
     - 1.8e5 s-1, because kf is K/tau.
-    - 2.2e3 s-1, because kf is 1/(K tau).
-    - 1.8e4 s-1, because kf + kr = 1/tau and kf = 9 kr.
+    - 2.2e3 s-1, because kf is 1/(K tau), with K = 9.
+    - 1.8e4 s-1, since kf + kr = 1/tau and kf = 9 kr.
   correct: 3
   explanation: >-
     For A <=> B the system relaxes with kf + kr. With 1/tau = 2.0e4 s-1 and kf/kr = 9, kr = 2.0e3 s-1
@@ -44,9 +44,9 @@
     reading at 1.5 half-lives. She reports k = 0.090 min-1. A reading after ten half-lives is higher.
     What do you expect when she redoes the fit with the true endpoint?
   options:
-    - A smaller k, because the early endpoint made the late points plunge on the ln plot.
+    - A smaller k, because the early endpoint made late points plunge on the ln plot.
     - A larger k, because the true endpoint lies further from the data.
-    - The same k, because the endpoint only shifts the intercept of the ln plot.
+    - The same k, because the endpoint only shifts the intercept of the ln plot, not its slope.
     - A k that cannot be compared, because the true endpoint changes the order.
   correct: 0
   explanation: >-
@@ -57,7 +57,7 @@
     A reaction 2A + B -> P + C has rate = k[A]^2[B]/[C], where C is formed in a fast first step. Which
     mechanism is most consistent with this rate law?
   options:
-    - A single termolecular collision of two A and one B, with C as a spectator.
+    - A single termolecular collision of two A and one B, with C only as a spectator.
     - A fast pre-equilibrium A + A <=> I + C, followed by a slow step I + B -> P.
     - A slow first step A + B -> I, followed by a fast step I + A -> P + C.
     - A chain reaction in which C is the chain carrier and B the initiator.

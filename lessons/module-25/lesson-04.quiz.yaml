@@ -4,7 +4,7 @@
     beta-pinene (MF 944). Library indices on that phase are 937 and 979. What do you report?
   options:
     - alpha-pinene, because it has the higher match factor.
-    - beta-pinene, because only its retention index agrees with the measured one.
+    - beta-pinene, because only its retention index matches the measured one.
     - Both pinenes, because the two match factors differ by less than 10 points.
     - Neither, because a match factor below 960 cannot identify a terpene.
   correct: 1
@@ -31,7 +31,7 @@
     - Accept limonene and ignore the extra ions, since an MF above 900 is an excellent match.
     - Report the peak as unidentified, because a good match must explain all of the ions.
     - Re-tune the mass spectrometer, because the extra ions show a mass-calibration error.
-    - Search the residual and check an extracted-ion chromatogram of m/z 119 for a co-eluting compound.
+    - Search the residual and check an m/z 119 ion chromatogram for a co-eluting compound.
   correct: 3
   explanation: >-
     Ions not explained by the best hit suggest a second compound under the peak. m/z 119 and 134 fit
@@ -41,7 +41,7 @@
     A small late peak at RI 1191 matches gamma-terpinene with MF 861, but gamma-terpinene (RI 1061)
     already appears earlier in the same run. What does this most likely mean?
   options:
-    - The true compound is missing from the library, so the search returned the closest wrong spectrum.
+    - The true compound is not in the library, so the search returned the closest wrong one.
     - Gamma-terpinene eluted twice because the column was overloaded by the large limonene peak.
     - The alkane ladder was run on a different day, so all retention indices are shifted by 130 units.
     - MF 861 is too low to say anything; only matches above 950 carry information.

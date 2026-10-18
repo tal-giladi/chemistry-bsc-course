@@ -29,7 +29,7 @@
     A metal complex shows four IR bands and four Raman bands, and two of them coincide in position. Which
     structure can you rule out?
   options:
-    - Any structure with a centre of inversion, because mutual exclusion would forbid coincidences.
+    - Any structure with a centre of inversion, since mutual exclusion forbids coincidences.
     - Any tetrahedral structure, because Td molecules never show coincident bands.
     - Any structure without a C3 axis, because only C3 molecules show both IR and Raman bands.
     - Nothing, because coincident bands are always accidental overlaps.

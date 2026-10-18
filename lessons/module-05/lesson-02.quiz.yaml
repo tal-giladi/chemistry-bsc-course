@@ -4,7 +4,7 @@
     the wavelength grid lam of shape (600,). You want the integrated absorbance of each spectrum.
     Which call gives it?
   options:
-    - np.trapezoid(A, lam, axis=0), which integrates down the columns.
+    - np.trapezoid(A, lam, axis=0), which integrates down the columns of the array.
     - np.sum(A) * (lam[1] - lam[0]), which uses the grid step once.
     - np.trapezoid(A, lam, axis=-1), which gives one integral per spectrum.
     - np.trapz(A, lam), which is the standard name in NumPy 2.5.
@@ -32,7 +32,7 @@
     Your Maxwell-Boltzmann code reports an area of 0.65 under the 500 K curve instead of 1.00.
     The formula is correct. What is the most likely cause?
   options:
-    - Floating-point rounding in np.exp, which loses accuracy above 300 K.
+    - Floating-point rounding in np.exp, which loses accuracy at temperatures above 300 K.
     - The speed grid ends too early, so part of the high-speed tail is cut off.
     - The trapezoid rule always underestimates areas by about a third.
     - The distribution is only normalised at 298.15 K, by definition.
@@ -47,7 +47,7 @@
   options:
     - Use a logarithmic y axis, because cooling data always look better that way.
     - Remove the legend, because two colours are enough to tell the curves apart.
-    - Increase the dpi to 300, because low resolution is why the plot is unclear.
+    - Increase the dpi to 300, because low resolution is the real reason the plot is unclear.
     - Plot data as points and the model as a line, and label the axis with its unit.
   correct: 3
   explanation: >-

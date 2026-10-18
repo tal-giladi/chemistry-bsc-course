@@ -4,7 +4,7 @@
     needs the activation energy for a reactor design. What value do you give?
   options:
     - About 27.9 kJ/mol.
-    - About 64.2 kJ/mol.
+    - About 64 kJ/mol.
     - About 7.7 kJ/mol.
     - About 0.85 kJ/mol.
   correct: 1
@@ -58,7 +58,7 @@
     Which estimate is most defensible?
   options:
     - 37 J/(mol K) times 400 K, about 14.8 kJ, because Cp at room temperature is the standard value.
-    - The average Cp, 44 J/(mol K), times 400 K, about 17.6 kJ, a one-interval trapezoid of the integral.
+    - The average Cp, 44 J/(mol K), times 400 K, about 17.6 kJ, a one-step trapezoid.
     - 51 J/(mol K) times 400 K, about 20.4 kJ, because the hotter end dominates the heat.
     - 51 minus 37, times 400 K, about 5.6 kJ, because only the change in Cp matters.
   correct: 1
@@ -98,7 +98,7 @@
   options:
     - About 2.2 kPa, because pressure rises by 1 % for a 10 K change.
     - About 22 kPa, because pressure is proportional to temperature in Celsius.
-    - About 7.5 kPa, from the partial derivative nR/V, which equals p/T, times 10 K.
+    - About 7.5 kPa, from the partial derivative nR/V = p/T, times 10 K.
     - About 0.75 kPa, from p/T times 1 K because only the change per kelvin counts.
   correct: 2
   explanation: >-
@@ -109,7 +109,7 @@
     You find a liquid's density from m = 10.00 g (plus or minus 0.01 g) and V = 10.0 mL (plus or
     minus 0.2 mL). Your budget allows one better instrument. Which do you buy?
   options:
-    - A more precise volume device, because the volume term is about 20 times the mass term.
+    - A more precise volume device, as the volume term is 20 times the mass term.
     - A more precise balance, because mass appears in the numerator of the density.
     - Neither, because the two inputs contribute equally to the uncertainty.
     - A more precise balance, because a 0.01 g error is larger than a 0.2 mL error.

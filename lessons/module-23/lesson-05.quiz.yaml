@@ -5,7 +5,7 @@
   options:
     - The lemon's acid is used up the moment current flows, so the EMF itself collapses.
     - The multimeter adds its own voltage at open circuit, so 0.93 V was never real.
-    - The cell's internal resistance is far larger than the motor's, so most of the EMF is lost inside.
+    - The cell's internal resistance dwarfs the motor's, so most EMF is lost inside it.
     - The motor generates a back voltage that cancels the cell's EMF exactly.
   correct: 2
   explanation: >-

@@ -30,7 +30,7 @@
     points, for a box whose exact E1 is 0.37603 eV. What do you expect with 100 points?
   options:
     - About 0.37600 eV, because the error drops about four times per halving of the spacing.
-    - About 0.37615 eV, because the numerical value will overshoot the exact one.
+    - About 0.37615 eV, because the numerical value will overshoot the exact one at fine grids.
     - About 0.37597 eV, because the error halves each time the spacing halves.
     - Exactly 0.37603 eV, because 100 points resolve the sine wave completely.
   correct: 0

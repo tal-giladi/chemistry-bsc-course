@@ -5,7 +5,7 @@
   options:
     - With sigma set to 0.001 for every point and absolute_sigma=True, as a safe default.
     - Without sigma and with the default absolute_sigma=False, so the scatter sets the uncertainty.
-    - With sigma equal to each absorbance and absolute_sigma=True, so bigger signals count less.
+    - With sigma equal to each absorbance and absolute_sigma=True, so the bigger signals count for less.
     - Without sigma, then divide the reported uncertainties by the square root of six.
   correct: 1
   explanation: >-
@@ -16,7 +16,7 @@
     A weighted fit with absolute_sigma=True of 25 kinetic points (3 parameters) gives a reduced
     chi-square of 4.8. What is the most reasonable conclusion?
   options:
-    - The fit is excellent, because a large chi-square means the model explains a lot.
+    - The fit is excellent, because a large chi-square means the model explains a lot of the data.
     - The parameter uncertainties are too large and can be divided by 4.8.
     - The model is wrong or the stated sigmas are too small; inspect the residual plot.
     - Nothing, because reduced chi-square is meaningful only for straight lines.

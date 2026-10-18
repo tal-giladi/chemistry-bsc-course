@@ -60,7 +60,7 @@
   options:
     - Treat slope and intercept as independent, because that gives the safest, largest uncertainty.
     - Use only the slope uncertainty, because the intercept is close to zero.
-    - Propagate with correlated_values from the fit covariance, or the textbook calibration formula.
+    - Propagate using correlated_values from the fit covariance, or the textbook formula.
     - Report the R squared of the line as the uncertainty of the concentration.
   correct: 2
   explanation: >-
@@ -98,7 +98,7 @@
     You open an instrument export with pd.read_csv(path, sep=";", skiprows=8). There is no error,
     and df["A"].max() returns '0,8752'. What does this tell you?
   options:
-    - The export is fine, because pandas shows decimal commas in the local style.
+    - The export is fine, because pandas shows decimal commas in the local regional style.
     - The column is text, because decimal commas need decimal=","; check df.dtypes.
     - The file has a hidden byte-order mark, so it needs encoding="utf-16".
     - The maximum is correct but the minimum will be wrong, so use np.max instead.

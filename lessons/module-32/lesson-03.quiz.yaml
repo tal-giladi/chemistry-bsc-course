@@ -19,7 +19,7 @@
     - Report the average of all peaks, because averaging removes random scatter.
     - Report the value from the lowest-angle peak, because it is the strongest.
     - Fit all peaks with a zero-shift term, or extrapolate a against a Nelson-Riley function.
-    - Discard the high-angle peaks, because their Kalpha2 splitting makes them unreliable.
+    - Discard the high-angle peaks, because their Kalpha2 splitting always makes them the least reliable.
   correct: 2
   explanation: >-
     A steady trend with angle is a systematic error such as a zero or displacement shift. Averaging keeps the
@@ -30,7 +30,7 @@
     (Cu Kalpha). A colleague says the weak peak is an impurity. What is the quickest test?
   options:
     - Check whether sin(theta) of the weak peak equals sin(theta) of the strong one times 1.3922/1.5406.
-    - Check whether the weak peak is wider than the strong one, which would mean a different phase.
+    - Check whether the weak peak is wider than the strong one, which would point to a different crystalline phase.
     - Check whether the weak peak is exactly a quarter of the intensity of the strong one.
     - Check whether the two peaks have Miller indices that add up to an even number.
   correct: 0
@@ -41,7 +41,7 @@
   question: >-
     KCl and NaCl both have the rock-salt structure, but in the KCl pattern the (111) peak is almost missing. Why?
   options:
-    - KCl is body-centred cubic, so all reflections with an odd index sum are forbidden.
+    - KCl is body-centred cubic, so all reflections with an odd sum of Miller indices are forbidden.
     - K+ and Cl- have the same number of electrons, so their contributions to F(111) cancel.
     - The KCl cell is larger, so (111) moves below the lowest angle that was scanned.
     - Potassium absorbs Cu Kalpha strongly, which removes the low-angle peaks only.

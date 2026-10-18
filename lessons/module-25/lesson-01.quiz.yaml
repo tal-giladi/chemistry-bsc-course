@@ -18,7 +18,7 @@
     You replace the DVD piece in your spectrometer with a piece of CD (track spacing 1.6 micrometres
     instead of 0.74). What changes in the photo of the first-order spectrum?
   options:
-    - The colours are spread over a much smaller angle, so the same wavelength range covers fewer pixels.
+    - The colours spread over a smaller angle, so the same range covers fewer pixels.
     - The colours are spread over a larger angle, so the spectrum no longer fits in the camera's view.
     - The spectrum is unchanged, because the angle depends only on the wavelength of the light.
     - The rainbow disappears, because a CD has too few tracks per millimetre to diffract visible light.
@@ -47,7 +47,7 @@
     - The DVD piece is too small, so the lines are too faint to locate accurately.
     - A quadratic calibration is too flexible; a straight line would fit these lines better.
     - The camera's white balance shifted the colours, which moves every line by a few nanometres.
-    - One of the peaks used is a broad phosphor band, not a mercury line, so the assignment is wrong.
+    - A broad phosphor band was taken for a mercury line, so one assignment is wrong.
   correct: 3
   explanation: >-
     A correct assignment of sharp mercury lines fits within about 1-2 nm. Residuals of 10-20 nm mean a

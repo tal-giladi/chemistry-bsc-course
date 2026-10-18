@@ -4,7 +4,7 @@
     does the colour fade as a single exponential even though the reaction involves two reactants?
   options:
     - Hypochlorite is a catalyst here, so its concentration does not enter the rate law.
-    - Hypochlorite is in large excess, so its concentration hardly changes during the run.
+    - Hypochlorite is in large excess, so its concentration barely changes in the run.
     - Every bleaching reaction is first order, because only the dye molecule breaks apart.
     - The phone measures only the dye, so the hypochlorite term cancels out of the data.
   correct: 1
@@ -46,7 +46,7 @@
   options:
     - Add only a few drops of vinegar, so the pH changes slowly and safely.
     - Use lemon juice instead, because it is a weaker acid than vinegar.
-    - Never add any acid; bleach with acid releases chlorine gas. Use more bleach or warmer water.
+    - Never add acid; bleach with acid releases chlorine gas. Use more bleach or warmer water.
     - Add the vinegar to the dye first and the bleach afterwards, so they never meet undiluted.
   correct: 2
   explanation: >-

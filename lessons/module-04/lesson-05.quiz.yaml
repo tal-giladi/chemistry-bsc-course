@@ -17,7 +17,7 @@
     What changes?
   options:
     - The number of electrons per second doubles; their maximum energy stays the same.
-    - The maximum energy of each electron doubles; their number stays the same.
+    - The maximum energy of each electron doubles; their number per second stays the same.
     - Both the number and the maximum energy of the electrons double.
     - Nothing changes, because the frequency is the same.
   correct: 0
@@ -29,8 +29,8 @@
     In the LED practical your four turn-on voltages give a straight line against 1/lambda with
     slope 1.10e-6 V m. What value of h do you report?
   options:
-    - 1.10e-6 J s, the slope itself.
-    - 5.88e-34 J s, from slope times e divided by c.
+    - 1.10e-6 J s, the slope itself, read directly.
+    - 5.88e-34 J s, from slope times e/c.
     - 3.30e2 J s, from slope times c.
     - 1.76e-25 J s, from slope times e.
   correct: 1
@@ -44,7 +44,7 @@
   options:
     - The photon carries 1715 kJ/mol, so it can break the C=O bond.
     - The photon carries about 2.5 kJ/mol, so most molecules are already vibrationally excited.
-    - The photon carries about 20.5 kJ/mol, about 8 RT, so most molecules start in the lowest vibrational level.
+    - The photon carries about 20.5 kJ/mol, about 8 RT, so most molecules start in v = 0.
     - The photon carries about 0.2 kJ/mol, so IR absorption is too weak to measure.
   correct: 2
   explanation: >-

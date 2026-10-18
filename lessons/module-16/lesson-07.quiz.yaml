@@ -19,7 +19,7 @@
   options:
     - At the reduction, because NaBH4 also reduces the nitro group.
     - At the nitration, because benzene cannot be nitrated without a catalyst.
-    - At the Friedel-Crafts step, because nitrobenzene is too deactivated to react.
+    - At the Friedel-Crafts step; nitrobenzene is too deactivated to react.
     - Nowhere; the order of aromatic substitutions does not matter here.
   correct: 2
   explanation: >-
@@ -33,7 +33,7 @@
     - Route A gives more material, because it has fewer steps in total.
     - Both give the same yield, because every step gives 80 %.
     - Route A gives more, because joining two fragments always gives a low yield.
-    - Route B gives more, because its longest linear sequence is four steps, about 41 % against 21 %.
+    - Route B gives more, as its longest line is 4 steps (41 %) against 7 (21 %).
   correct: 3
   explanation: >-
     Overall yield follows the longest linear sequence: 0.8^4 = 0.41 for B and 0.8^7 = 0.21 for A, even
@@ -44,7 +44,7 @@
     OH group. What is the standard fix?
   options:
     - Use a large excess of CH3MgBr so that some survives the OH.
-    - Protect the OH (for example as a silyl ether), do the Grignard step, then remove the protecting group.
+    - Protect the OH, for example as a silyl ether, do the Grignard, then deprotect.
     - Oxidise the OH to a ketone first, because ketones do not react with Grignard reagents.
     - Run the reaction in water, which stops the Grignard reagent reacting with OH.
   correct: 1

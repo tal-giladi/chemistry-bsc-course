@@ -7,7 +7,7 @@
     - Both, because ORCA is free of charge and the collaborator only reproduces published work.
     - Neither, because ORCA may only be installed on personal laptops and never on servers.
     - The group installation for academic research, but not passing the program to anyone else.
-    - Passing it on, provided the collaborator registers later and cites the 2025 ORCA paper.
+    - Passing it on, provided the collaborator registers later and cites the 2025 ORCA paper in print.
   correct: 2
   explanation: >-
     Academic research at a university is allowed, and duplication needed to use the software is fine.
@@ -19,8 +19,8 @@
     have one laptop afternoon. Which workflow fits?
   options:
     - Optimise the drawn structure with B3LYP/def2-TZVP and report it as the global minimum.
-    - Run a stochastic MMFF94 search, re-optimise the low-energy conformers with xtb, refine the best few with r2SCAN-3c.
-    - Run a systematic search of all 3^7 conformers, each optimised with B3LYP/def2-TZVP.
+    - Search with MMFF94, re-optimise the low-energy conformers with xtb, refine the best few with r2SCAN-3c.
+    - Run a systematic search of all 3^7 conformers, each one fully optimised with B3LYP/def2-TZVP to be safe.
     - Use UFF for everything, because it covers every element and is the fastest force field.
   correct: 1
   explanation: >-
@@ -61,7 +61,7 @@
     - Use the results, because the imaginary mode is simply left out of the thermochemistry.
     - Replace 41i by +41 cm-1 in the output and recompute the thermochemistry by hand.
     - Displace along the mode, re-optimise with tighter criteria and repeat the frequency calculation.
-    - Run the same frequency calculation in a larger basis, which removes small imaginary modes.
+    - Run the same frequency calculation in a larger basis, which removes small spurious imaginary modes.
   correct: 2
   explanation: >-
     The structure is a saddle point, so its frequency list and thermochemistry are wrong by one mode.
@@ -75,7 +75,7 @@
   options:
     - The basis-set error, which a scale factor cannot touch.
     - Mode-to-mode differences in anharmonicity and method error that one factor cannot fit.
-    - An error in the fitting formula, since a correct least-squares fit reaches zero.
+    - An error in the fitting formula, since a correct least-squares fit always reaches zero error.
     - The experimental uncertainty of gas-phase IR bands, typically 30 cm-1.
   correct: 1
   explanation: >-
@@ -89,7 +89,7 @@
   options:
     - Change the functional for that carbon only until it matches.
     - Accept the structure, since an average error of a few ppm is normal for 13C.
-    - Recalculate TMS with a larger basis, because the reference must be better than the molecule.
+    - Recalculate TMS with a larger basis, because the reference must always be better than the molecule.
     - Check the conformers and the assignment near that carbon, then consider other candidate structures.
   correct: 3
   explanation: >-
@@ -101,9 +101,9 @@
     You start an OptTS job for an SN2 reaction from a guess taken from the highest point of a relaxed scan of
     the C-Nu distance. Which result proves you have the transition state you want?
   options:
-    - The optimiser converged and the energy is the highest of all structures you computed.
+    - The optimiser converged and the energy is the highest of all the structures along the reaction path.
     - The structure has two imaginary frequencies, one for each bond that changes.
-    - One imaginary frequency whose motion forms C-Nu and breaks C-X, confirmed by an IRC to both minima.
+    - One imaginary mode that forms C-Nu and breaks C-X, confirmed by an IRC to both minima.
     - The energy of the structure equals the top of the relaxed scan within 1 kJ/mol.
   correct: 2
   explanation: >-
@@ -114,7 +114,7 @@
     CAM-B3LYP/def2-SVP TD-DFT puts the bright pi -> pi* state of a polyene 0.5 eV above the measured band
     maximum, and the error shrinks as the chain gets longer. What is the most reasonable reading?
   options:
-    - The calculation is wrong, because TD-DFT always reproduces UV maxima within 0.05 eV.
+    - The calculation is wrong, because TD-DFT always reproduces UV maxima within about 0.05 eV or better.
     - The molecule cannot be a polyene, since longer chains always show larger TD-DFT errors.
     - The oscillator strengths are missing, which moves every excitation energy upwards.
     - A systematic error of method, basis and band comparison; trust the trend more than the number.

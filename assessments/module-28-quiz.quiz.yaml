@@ -19,8 +19,8 @@
     intermediate. What is correct?
   options:
     - Step 1, because its 70 kJ/mol barrier is larger than the 45 kJ/mol between intermediate and TS2.
-    - Step 2, because TS2 is the highest point measured from the reactants, the lowest preceding state.
-    - Neither, because an uphill intermediate makes the reaction impossible.
+    - Step 2, because TS2 is highest above the reactants, the lowest preceding state.
+    - Neither, because an uphill intermediate makes the reaction impossible at any temperature.
     - Both equally, because the intermediate is in fast equilibrium with the reactants.
   correct: 1
   explanation: >-
@@ -45,9 +45,9 @@
     chlorine-atom abstraction?
   options:
     - Bromine atoms are larger, so steric hindrance blocks the primary hydrogens.
-    - The H-Br bond is stronger than H-Cl, so bromine abstraction is more exothermic.
+    - The H-Br bond is stronger than H-Cl, so bromine abstraction is more exothermic and selective.
     - Bromine reacts through a carbocation and chlorine through a radical.
-    - Abstraction by bromine is uphill, so its late transition state feels the radical stability.
+    - Bromine abstraction is uphill, so its late transition state feels radical stability.
   correct: 3
   explanation: >-
     H-Br (366 kJ/mol) is weaker than a secondary C-H bond (412.5), so the step is endothermic and, by Hammond,
@@ -57,9 +57,9 @@
     A drug team needs a substituted phenol with pKa near 8.4. Phenol has pKa 9.99 and rho = 2.11.
     Which substitution pattern is the best first candidate (sigma_m of Cl 0.37, sigma_p of Cl 0.23)?
   options:
-    - 3,5-dichloro, because two meta chlorines give sigma 0.74 and a predicted pKa near 8.4.
+    - "3,5-dichloro: two meta chlorines give sigma 0.74 and a predicted pKa near 8.4."
     - 4-chloro, because sigma 0.23 lowers the pKa by exactly 0.23 units.
-    - 4-nitro, because sigma_p 0.78 gives a predicted pKa of about 8.3.
+    - 4-nitro, because sigma_p 0.78 gives a predicted pKa of about 8.3, close to the target.
     - 3-chloro, because meta substituents are always stronger than para ones.
   correct: 0
   explanation: >-
@@ -83,8 +83,8 @@
     In SN1 solvolysis of cumyl chlorides (rho = -4.54), which prediction for the p-methoxy compound
     (sigma_p = -0.27, sigma_p+ = -0.78) matches experiment, and why?
   options:
-    - 17 times faster, because sigma_p already includes the full resonance of methoxy.
-    - 3500 times faster, because the lone pair conjugates directly with the benzylic cation.
+    - 17 times faster, because sigma_p already includes the full resonance effect of methoxy.
+    - 3500 times faster, as the lone pair conjugates directly with the benzylic cation.
     - 17 times slower, because methoxy withdraws electrons through the sigma bonds.
     - 3500 times slower, because both rho and sigma are negative numbers.
   correct: 1
@@ -96,9 +96,9 @@
     An alkene with HCl gives a product with a rearranged carbon skeleton, while the same alkene with
     HBr and peroxides (a radical chain) gives an unrearranged product. What explains this?
   options:
-    - Radicals are less stable than carbocations, so they react before they can rearrange.
+    - Radicals are less stable than carbocations, so they react before they have time to rearrange.
     - HBr is a stronger acid, so it protonates the alkene at the other carbon.
-    - Carbocations rearrange by 1,2-shifts to more stable cations; simple alkyl radicals do not.
+    - Carbocations undergo 1,2-shifts to more stable cations; simple alkyl radicals do not.
     - Peroxides block 1,2-shifts by oxidising the group that would migrate.
   correct: 2
   explanation: >-

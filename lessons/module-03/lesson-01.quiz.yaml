@@ -6,7 +6,7 @@
     - >-
       Dye Y must have degraded in the cuvette, so its true concentration really is close to zero.
     - >-
-      The two equations are nearly parallel, so small absorbance noise is hugely amplified in c_Y.
+      The two equations are nearly parallel, so small absorbance noise is amplified in c_Y.
     - >-
       Beer-Lambert does not apply to mixtures, so absorbances of the two dyes cannot be added.
     - >-
@@ -20,9 +20,9 @@
     You write the composition matrix for a reaction with 5 species and 3 elements. Its rank is 3.
     What does that tell you about balancing it?
   options:
-    - The reaction is balanced uniquely up to an overall scale factor.
+    - The reaction is balanced uniquely, up to one overall scale factor for all species.
     - The reaction cannot be balanced at all with these species.
-    - Two independent balanced reactions fit the species, so chemistry must decide.
+    - Two independent reactions fit the species, so chemistry must decide.
     - Exactly three of the coefficients must be zero.
   correct: 2
   explanation: >-

@@ -5,7 +5,7 @@
   options:
     - The sample is a 1:1 mixture of two compounds that differ by two hydrogens.
     - The molecule contains one chlorine atom, since chlorine gives an M+2 peak.
-    - The molecule contains one bromine atom, since 79Br and 81Br are almost equally common.
+    - The molecule contains one bromine atom, since 79Br and 81Br are nearly 1:1.
     - The molecule contains two carbons more than expected, since each 13C adds one unit.
   correct: 2
   explanation: >-
@@ -42,10 +42,10 @@
     The EI spectrum of a ketone C6H12O has a base peak at m/z 43 and a strong peak at m/z 58, but
     only a small peak at m/z 71. Which ketone is it most likely to be?
   options:
-    - 2-hexanone, a methyl ketone with gamma hydrogens for a McLafferty rearrangement.
+    - 2-hexanone, a methyl ketone with gamma hydrogens for McLafferty rearrangement.
     - 3-hexanone, because ethyl and propyl acylium ions give 43 and 58.
     - Cyclohexanone, because a ring ketone loses CO to give m/z 58.
-    - 3,3-dimethyl-2-butanone, because it has no gamma hydrogens at all.
+    - 3,3-dimethyl-2-butanone, because its tert-butyl group gives a strong m/z 58 peak.
   correct: 0
   explanation: >-
     58 is the McLafferty ion of a methyl ketone with a gamma hydrogen: 100 - 42 (propene).

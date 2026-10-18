@@ -19,7 +19,7 @@
     - Your thermometer was not calibrated, so one of the two readings has the wrong sign.
     - Your water was colder, and dissolving is exothermic only below room temperature.
     - Your friend used too little water, so the salt did not fully dissolve.
-    - Your powder was anhydrous MgSO4, while your friend used the heptahydrate (Epsom salt).
+    - Your powder was anhydrous MgSO4; your friend used the heptahydrate (Epsom salt).
   correct: 3
   explanation: >-
     Anhydrous MgSO4 releases a large hydration enthalpy (about -91 kJ/mol), while the heptahydrate's ions are

@@ -42,9 +42,9 @@
     In red-cabbage indicator, a test liquid turns blue-green. A friend says the liquid must have a pH of
     exactly 9. What is the best reply?
   options:
-    - Right, because each cabbage colour corresponds to one exact pH value.
+    - Right, because each cabbage colour corresponds to one exact, known pH value.
     - Wrong, because blue-green means the liquid is acidic.
-    - It is basic, roughly pH 8-11; cabbage brackets the pH to about one unit, not exactly.
+    - It is basic, roughly pH 8-11; cabbage only brackets pH to about a unit.
     - It cannot be read, because cabbage only works for acids.
   correct: 2
   explanation: >-

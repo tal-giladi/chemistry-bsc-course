@@ -4,7 +4,7 @@
     Which use of that time will help you most to remember the lesson next month?
   options:
     - Read the lesson a second time and highlight the key sentences.
-    - Copy the key takeaways neatly into your notebook while the page is open.
+    - Copy the key takeaways neatly into your notebook while the page is still open.
     - Close the page and do the hands-on problems without looking at the answers.
     - Watch a video on the same topic to see it explained a second way.
   correct: 2
@@ -19,7 +19,7 @@
     - They understand the experiments and data, but still need supervised bench training.
     - They are ready, because the simulations teach everything a real lab teaches.
     - They are ready for analytical labs, but not for organic synthesis labs.
-    - They need a degree certificate, but their practical skills are already complete.
+    - They need a degree certificate, but their practical bench skills are already complete.
   correct: 0
   explanation: >-
     Simulations teach procedure, reasoning, safety and data analysis, but not hand skills, reagent handling,
@@ -32,7 +32,7 @@
     - About 5.7 hours.
     - About 6.3 hours.
     - About 6.0 hours.
-    - About 5.3 hours.
+    - About 5.33 hours.
   correct: 1
   explanation: >-
     Each lesson is 20 + 60 + 10 = 90 minutes, so four lessons are 360 minutes. Adding the 20-minute module quiz
@@ -44,7 +44,7 @@
     - Review it again on Monday evening, then never again.
     - Review it every evening for the next seven days.
     - Review it once, the night before the module quiz.
-    - Review it on Wednesday, the following Monday and about a month later.
+    - Review it Wednesday, next Monday and a month later.
   correct: 3
   explanation: >-
     Distributed practice spreads reviews out with growing gaps, for example 2 days, 1 week and 1 month.

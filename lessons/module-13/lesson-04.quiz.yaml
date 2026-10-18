@@ -5,7 +5,7 @@
   options:
     - The measurement must be wrong, because a positive Delta G standard forbids any product.
     - A catalyst in the reactor has made Delta G standard negative.
-    - The mixture has Q so far below K that RT ln Q outweighs +20 kJ/mol, making Delta_r G negative.
+    - Q is so far below K that RT ln Q outweighs +20 kJ/mol, making Delta_r G negative.
     - At 600 K the sign of Delta G standard no longer matters, only the sign of Delta H.
   correct: 2
   explanation: >-

@@ -16,9 +16,9 @@
     In a red cell, hexokinase has dG = -32 kJ/mol and phosphoglucose isomerase dG = -1 kJ/mol. A drug halves
     the activity of each enzyme separately. Which change most reduces glycolytic flux?
   options:
-    - Halving phosphoglucose isomerase, because it has the smaller dG.
-    - Both equally, because flux passes through every enzyme.
-    - Halving hexokinase, because a far-from-equilibrium step sets the rate through its enzyme amount.
+    - Halving phosphoglucose isomerase, because it has the smaller dG and so the least driving force.
+    - Both equally, because flux passes through every enzyme in the pathway in turn.
+    - Halving hexokinase, because a step far from equilibrium is set by its active enzyme.
     - Neither, because ATP levels control glycolysis independently of enzymes.
   correct: 2
   explanation: >-
@@ -28,9 +28,9 @@
   question: >-
     Which description of the aldolase step of glycolysis is correct?
   options:
-    - A retro-aldol cleavage in which an active-site lysine forms an imine with the ketone carbonyl.
+    - A retro-aldol cleavage where a lysine forms an imine with the ketone.
     - A dehydration in which Mg2+ removes water from a C2 alcohol.
-    - An oxidation in which NAD+ removes a hydride from an aldehyde.
+    - An oxidation in which NAD+ removes a hydride from an aldehyde carbon.
     - A phosphoryl transfer in which ATP gives a phosphate to a sugar alcohol.
   correct: 0
   explanation: >-
@@ -42,9 +42,9 @@
     forward. What is the best conclusion?
   options:
     - The red cell must be making DHAP from glyceraldehyde 3-phosphate.
-    - The step is near equilibrium, and +5 kJ/mol is within the uncertainty of the inputs.
+    - The step is near equilibrium, and +5 kJ/mol is within the inputs' uncertainty.
     - Triose phosphate isomerase must be coupled to ATP hydrolysis in the cell.
-    - The enzyme must be inhibited, which makes the computed dG positive.
+    - The enzyme must be inhibited in the red cell, which makes the computed dG positive.
   correct: 1
   explanation: >-
     Standard values measured under other conditions and micromolar concentrations that are hard to
@@ -57,7 +57,7 @@
     - Both lose their effect equally, because the substrate outcompetes any inhibitor.
     - The competitive inhibitor becomes stronger, because more substrate binds near it.
     - Neither changes, because each was dosed to give half the rate.
-    - The competitive one loses much of its effect; the uncompetitive one becomes stronger.
+    - The competitive one weakens markedly; the uncompetitive one becomes stronger.
   correct: 3
   explanation: >-
     More substrate displaces a competitive inhibitor from free enzyme, but forms more ES for an

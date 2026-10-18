@@ -3,8 +3,8 @@
     You want the molar absorptivity of FeSCN2+ for a K measurement. Which set of standards do you make?
   options:
     - Equal concentrations of Fe3+ and SCN-, so the complex forms in a 1:1 ratio.
-    - A large excess of SCN- with small amounts of Fe3+, read against a water blank.
-    - Small amounts of SCN- in a large excess of Fe3+, all in the same acid as the samples.
+    - A large excess of SCN- with small amounts of Fe3+, read against a plain water blank.
+    - Small amounts of SCN- in a large excess of Fe3+, in the same acid as the samples.
     - Small amounts of both ions in pure water, so no other species can absorb.
   correct: 2
   explanation: >-

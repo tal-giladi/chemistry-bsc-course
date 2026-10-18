@@ -16,7 +16,7 @@
     Three equal pendulums are joined by equal rubber bands. You measure omega^2 = 20.0, 21.0 and
     23.0 per s^2 for the three modes. What does this say about the simple chain model?
   options:
-    - It works, because the shifts 1 and 3 show the predicted 0 to 1 to 3 pattern.
+    - It works; the shifts 1 and 3 match the predicted 0 to 1 to 3 pattern.
     - It fails, because the three omega^2 values should be equally spaced.
     - It works only if the pendulums are much longer than the bands are wide.
     - It fails, because the shifts 1.0 and 3.0 should be in the ratio 1 to 2.
@@ -43,7 +43,7 @@
     almost still and the others swing. Why?
   options:
     - Pendulum 1 lost its energy to air drag, and the others picked up a draft.
-    - The release started several normal modes, which drift out of step at their beat frequency.
+    - The release excited several normal modes, which drift out of step and beat.
     - The rubber bands store the energy for a while and then release it to the far end.
     - Pendulum 1 has a different natural frequency from the others, so it stops resonating.
   correct: 1

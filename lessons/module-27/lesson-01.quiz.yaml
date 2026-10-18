@@ -5,7 +5,7 @@
   options:
     - (+0.2 e - 1 e)/ε₀, because every nearby charge changes the field on the surface.
     - Zero, because the outside charges cancel the inside charge on average.
-    - +0.2 e/ε₀, because charges outside send in as many field lines as they send out.
+    - +0.2 e/ε₀, since charges outside send in as many field lines as they send out.
     - +0.2 e/ε₀ only if the outside ions are far away compared with 5 Å.
   correct: 2
   explanation: >-
@@ -17,7 +17,7 @@
     n = √εr fail so badly for water?
   options:
     - Water is magnetic, so its permeability differs strongly from one at optical frequencies.
-    - Molecular dipoles turn in a static field but cannot follow a field oscillating at 10¹⁵ Hz.
+    - Molecular dipoles turn in a static field but cannot follow one oscillating at 10¹⁵ Hz.
     - The refractive index is measured at 20 °C and the permittivity at 25 °C.
     - Hydrogen bonds absorb visible light and lower the refractive index.
   correct: 1
@@ -29,7 +29,7 @@
     In a microwave oven rated 2450 MHz, neighbouring melted spots on a plate of cheese are 6.2 cm apart.
     What speed of light does this give?
   options:
-    - 1.5 × 10⁸ m/s
+    - 1.52 × 10⁸ m/s
     - 3.0 × 10⁸ m/s
     - 6.1 × 10⁸ m/s
     - 1.5 × 10⁶ m/s
@@ -42,8 +42,8 @@
     An empty capacitor cell reads 20.0 pF. Filled with a liquid it reads 45.6 pF. A student concludes the
     liquid is strongly polar. What should she check first?
   options:
-    - Whether the liquid's square refractive index is also near 2.3; if so, it is non-polar.
-    - Whether the liquid conducts electricity, since only conductors raise capacitance.
+    - Whether the liquid's n² is also near 2.3; if so, it is non-polar.
+    - Whether the liquid conducts electricity, since only conductors raise the capacitance of a cell.
     - Whether the reading is above 80 pF, the threshold for any polar solvent.
     - Whether the cell was calibrated in a vacuum rather than in air at 1 atm.
   correct: 0

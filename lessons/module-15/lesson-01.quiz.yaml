@@ -29,7 +29,7 @@
     A colleague's script flags paracetamol, CC(=O)Nc1ccc(O)cc1, as containing a basic amine. What
     is wrong with that label?
   options:
-    - The N is part of an amide; its lone pair is shared with the C=O, so it is not basic.
+    - It is an amide N; its lone pair delocalises into C=O, so it is not basic.
     - The N is aromatic, so it can only act as an acid in water.
     - Paracetamol has no nitrogen at all; the N in the SMILES is the phenol oxygen.
     - Amines must carry two hydrogens on nitrogen, and this N carries only one.

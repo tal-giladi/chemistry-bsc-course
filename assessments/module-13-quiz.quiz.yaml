@@ -6,7 +6,7 @@
   options:
     - It needs exactly 5.7 kJ as well, because the start and end pressures are the same.
     - It needs less work, because there is no time for any heat to leak away from the gas.
-    - It needs more work, and the gas comes out hot, because the push is fast and adiabatic.
+    - It needs more work, and the gas comes out hot, since the fast push is adiabatic.
     - It needs no work at all, because no heat is exchanged with the surroundings.
   correct: 2
   explanation: >-
@@ -18,8 +18,8 @@
     C57H110O6 + 81.5 O2 -> 57 CO2 + 55 H2O(l). Should they convert Delta U to Delta H before
     publishing an enthalpy of combustion?
   options:
-    - Yes, Delta n_gas = 57 - 81.5 = -24.5 mol, so Delta H is about 61 kJ/mol more negative than Delta U.
-    - No, because a bomb calorimeter measures enthalpy directly.
+    - Yes, Delta n_gas = 57 - 81.5 = -24.5, so Delta H is about 61 kJ/mol more negative.
+    - No, because a sealed bomb calorimeter measures the enthalpy change directly.
     - Yes, Delta n_gas = 57 + 55 - 81.5 = +30.5 mol, so Delta H is less negative than Delta U.
     - No, because the correction RT is only 2.5 J/mol and negligible.
   correct: 0
@@ -34,8 +34,8 @@
   options:
     - None, because enthalpies of reaction do not depend on temperature at all.
     - About 40 J/mol, because Delta Cp is given in J/(mol K) and is small.
-    - About 400 kJ/mol, because the temperature rises by about 400 K.
-    - About 13-18 kJ/mol, because by Kirchhoff the reaction is more exothermic at 700 K.
+    - About 400 kJ/mol, because the temperature rises by about 400 K above the table.
+    - About 13-18 kJ/mol; by Kirchhoff the reaction is more exothermic at 700 K.
   correct: 3
   explanation: >-
     Delta H(700) = Delta H(298) + integral of Delta Cp dT. With -40 J/(mol K) over 400 K that is about
@@ -45,8 +45,8 @@
     A geothermal engineer proposes a plant using water at 120 C with cooling at 30 C, and promises 35 %
     efficiency. Should an investor believe it?
   options:
-    - Yes, because 35 % is below the 100 % allowed by the first law.
-    - No, because the Carnot limit is 1 - 303/393 = 23 %, so 35 % is impossible.
+    - Yes, because 35 % is well below the 100 % ceiling allowed by the first law.
+    - No, the Carnot limit is 1 - 303/393 = 23 %, so 35 % is impossible.
     - Yes, because the Carnot limit is 1 - 30/120 = 75 %.
     - No, because heat engines cannot work below 100 C.
   correct: 1
@@ -59,7 +59,7 @@
     that is then removed. The gases mix. What is the entropy change, and is the reverse possible?
   options:
     - Zero, because no heat flows and no work is done.
-    - Positive, -n R sum x ln x; unmixing by itself would lower total entropy and does not happen.
+    - Positive, -nR sum x ln x; spontaneous unmixing would lower total entropy.
     - Negative, because mixing makes the gas more uniform and therefore more ordered.
     - Positive, but the reverse also happens often because both have the same probability.
   correct: 1
@@ -99,7 +99,7 @@
   options:
     - It must be above the triple-point pressure, so that the ice melts gently first.
     - It must be exactly 1 atm, so that the ice stays solid throughout the drying.
-    - It must be below the vapour pressure of ice at -30 C, so ice turns straight to vapour.
+    - It must be below the vapour pressure of ice at -30 C, so the ice sublimes.
     - Any pressure works, because ice sublimes at every pressure when it is below 0 C.
   correct: 2
   explanation: >-
@@ -111,10 +111,10 @@
     A pH meter is used on acetic acid in seawater (ionic strength about 0.7). A student uses the
     textbook Ka = 1.8e-5 with concentrations and finds the measured pH lower than predicted. Why?
   options:
-    - The pH meter must be broken, because Ka is a true constant in every solution.
+    - The pH meter must be broken, because Ka is a true constant in every aqueous solution.
     - Salt reacts with acetic acid to form HCl, and the HCl lowers the pH.
     - Ions become more ideal at high ionic strength, so the acid dissociates less.
-    - Ka uses activities; ion activity coefficients below 1 raise the concentration ratio.
+    - Ka uses activities; activity coefficients below 1 raise the concentration ratio.
   correct: 3
   explanation: >-
     Ka = gamma^2 [H+][A-]/[HA]. With gamma below 1, the concentration ratio Kc = Ka/gamma^2 exceeds Ka,
@@ -124,7 +124,7 @@
     You measure a 0.50 mol/kg NaCl solution freezing 1.70 K below pure water. Kf of water is
     1.86 K kg/mol. What does this tell you?
   options:
-    - It is slightly non-ideal; phi = 1.70/1.86 = 0.91, so the ions act as fewer particles.
+    - It is slightly non-ideal; phi = 1.70/1.86 = 0.91, so ions act as fewer particles.
     - NaCl does not dissociate at all, so each formula unit counts as one particle.
     - The thermometer must be wrong, because the ideal law has to hold exactly for salt.
     - The water activity is lower than ideal, because the measured depression is smaller.

@@ -16,7 +16,7 @@
     A global fit of the mixed model gives Ki = 0.21 mM and a Ki' that grows without limit, with an AICc
     2.5 above the competitive model. What should you conclude?
   options:
-    - The inhibitor is mixed, because the mixed model can never fit worse.
+    - The inhibitor is mixed, because the mixed model can never fit the data worse.
     - The data are unreliable, because a constant cannot be infinite.
     - The inhibitor is competitive; nothing in the data shows binding to ES.
     - The inhibitor is uncompetitive, because Ki' is the larger constant.
@@ -42,10 +42,10 @@
     A drug inhibits an enzyme in the middle of a pathway. When the enzyme slows, its substrate builds up
     tenfold in the cell. Which type of inhibitor keeps its effect best under these conditions?
   options:
-    - A competitive inhibitor, because it binds the active site directly.
-    - A noncompetitive inhibitor, because it lowers Km.
+    - A competitive inhibitor, because it binds the active site directly and blocks the substrate.
+    - A noncompetitive inhibitor, because it lowers Km so that extra substrate binds even better.
     - Any reversible inhibitor equally, because Ki does not depend on [S].
-    - An uncompetitive inhibitor, because it binds ES and more substrate makes more of its target.
+    - An uncompetitive inhibitor, because it binds ES, and more substrate makes more ES.
   correct: 3
   explanation: >-
     Substrate build-up overcomes a competitive inhibitor. An uncompetitive inhibitor binds only ES, so
@@ -55,7 +55,7 @@
     The first enzyme of a biosynthetic pathway is strongly inhibited by the pathway's final product, which
     binds at a site far from the active site. What is this control called?
   options:
-    - Product inhibition at the active site.
+    - Product inhibition at the active site of the first enzyme.
     - Zymogen activation of the first enzyme.
     - Feedback inhibition by an allosteric effector.
     - Irreversible covalent inhibition.

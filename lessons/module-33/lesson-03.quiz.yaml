@@ -16,7 +16,7 @@
     minus 7 cm-1 (95 % intervals). Which sentence matches the evidence?
   options:
     - The method fails for all amides and should never be used for peptides.
-    - The difference between the classes is within the uncertainty and cannot be claimed.
+    - The difference between the two classes lies within the uncertainty, so no class effect can be claimed.
     - Amides and ketones behave the same once the scale factor is applied to both.
     - In this set the error is larger for amides; seven molecules suggest a class effect worth testing.
   correct: 3
@@ -28,7 +28,7 @@
     Your A0 poster uses 18 pt axis labels. You print it on one A4 sheet to check it. What do you expect, and
     what should you do?
   options:
-    - The labels print at 4.5 pt and are unreadable at 50 cm, so remake the figures at print size with larger labels.
+    - The labels print at 4.5 pt, unreadable at 50 cm; remake the figures at print size with larger labels.
     - The labels print at 9 pt because A4 is half of A0, which is readable, so nothing needs to change.
     - The test print says nothing, because A4 and A0 have different aspect ratios, so print a full A0 proof.
     - The labels print at 18 pt because printers rescale fonts, so check the body text instead.
@@ -41,7 +41,7 @@
     Which limitations section is most useful to an expert reader of a home research project?
   options:
     - None, because pointing out weaknesses makes the reader trust the result less.
-    - One sentence saying that more work is needed before any conclusions can be drawn.
+    - One sentence saying that more work is needed before any firm conclusions can be drawn from the data.
     - Named limits of the data, the method and the home setting, each with what would remove it.
     - A list of every problem met during the 180 hours, in the order they happened.
   correct: 2

@@ -4,9 +4,9 @@
     Jones reagent (CrO3 in aqueous sulfuric acid) because it is on the shelf. What do you expect?
   options:
     - The aldehyde, because a primary alcohol always stops at the aldehyde.
-    - No reaction, because primary alcohols need a stronger oxidant than Jones.
+    - No reaction, because primary alcohols need a stronger oxidant than the Jones reagent.
     - The ketone, because Jones oxidises the carbon next to the ring.
-    - Mostly 3-phenylpropanoic acid, because the aldehyde hydrates in water and oxidises again.
+    - Mostly 3-phenylpropanoic acid; the aldehyde hydrates in water and oxidises again.
   correct: 3
   explanation: >-
     In water the aldehyde adds water to form a hydrate, which still has an H on the carbinol carbon
@@ -31,7 +31,7 @@
   options:
     - Sodium methoxide and tert-butyl bromide, because methoxide is the better nucleophile.
     - Methanol and tert-butyl bromide with no base, because the reaction is SN2.
-    - Potassium tert-butoxide and iodomethane, because SN2 needs the unhindered methyl halide.
+    - Potassium tert-butoxide and iodomethane, because SN2 needs the methyl halide.
     - Potassium tert-butoxide and tert-butyl bromide, because like reacts with like.
   correct: 2
   explanation: >-
@@ -42,7 +42,7 @@
     2-Methyloxirane (propylene oxide) is opened with sodium ethoxide in ethanol. Where does ethoxide
     attack, and why?
   options:
-    - At the CH2 carbon, because a strong nucleophile reacts by SN2 at the less hindered carbon.
+    - At the CH2 carbon, because strong nucleophiles open epoxides by SN2 there.
     - At the CH carbon, because the more substituted carbon carries more positive charge.
     - At the oxygen, because ethoxide first protonates the epoxide.
     - At both carbons equally, because the ring strain is the same at each.

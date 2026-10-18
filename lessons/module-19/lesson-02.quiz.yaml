@@ -5,9 +5,9 @@
     most likely cause?
   options:
     - Photobleaching, because higher concentrations are destroyed faster by the lamp.
-    - The inner-filter effect, because the sample now absorbs enough light to shade the back of the cell.
+    - The inner-filter effect, as the sample now absorbs enough to shade the back of the cell.
     - A wrong emission wavelength, because the Stokes shift grows with concentration.
-    - Stray light, which bends fluorescence calibrations in the same way as absorbance ones.
+    - Stray light, which bends fluorescence calibrations in just the same way as absorbance ones.
   correct: 1
   explanation: >-
     Fluorescence is proportional to concentration only while the absorbance stays below about 0.01.
@@ -31,7 +31,7 @@
     Calcium results in a phosphate-rich fertiliser extract by air-acetylene flame AAS come out 30 %
     low compared with a reference method. What is the best fix?
   options:
-    - Add a large excess of lanthanum to standards and samples as a releasing agent.
+    - Add excess lanthanum to standards and samples as a releasing agent.
     - Add a large excess of potassium as an ionisation suppressor.
     - Switch on deuterium-lamp background correction.
     - Use a hollow-cathode lamp of a different element with a nearby line.
@@ -48,7 +48,7 @@
     - Zinc atoms are ionised completely in a flame, so none are left to emit or absorb.
     - Zinc has no ground-state absorption line in the ultraviolet.
     - Sodium lamps are brighter than zinc lamps, so sodium emission is easier to see.
-    - Far fewer zinc atoms are excited at flame temperature, but absorption uses the ground state.
+    - Few zinc atoms are excited in a flame, but absorption uses the ground state.
   correct: 3
   explanation: >-
     The Boltzmann factor depends on the line energy: at 2500 K about 2 in 10 000 sodium atoms are
@@ -61,7 +61,7 @@
   options:
     - Flame AAS, because it is fast and precise.
     - Flame emission, because lead is easy to excite.
-    - Graphite-furnace AAS or ICP-MS, because they reach the microgram-per-litre range.
+    - Graphite-furnace AAS or ICP-MS, because they reach microgram-per-litre levels.
     - UV-Vis of the untreated water, because lead ions absorb strongly in the visible.
   correct: 2
   explanation: >-

@@ -20,7 +20,7 @@
     - The flat-baseline fit, after confirming the protein's mass by gel.
     - Either, because baselines do not affect a two-state midpoint.
     - The flat-baseline fit, because fewer parameters always give better estimates.
-    - The sloping-baseline fit, after checking that the melt is reversible on cooling.
+    - The sloping-baseline fit, after checking the melt is reversible on cooling.
   correct: 3
   explanation: >-
     Signals of both states drift with temperature, and ignoring that shifts the midpoint and distorts
@@ -45,10 +45,10 @@
     fit of the same data gives 0.55 +/- 0.05 mM. The two lowest-[S] rates are the noisiest. What do you
     report?
   options:
-    - 0.55 +/- 0.05 mM, because 1/v gives the noisy low-[S] rates the greatest pull on the line.
-    - 0.9 mM, because straight-line fits are less sensitive to outliers.
+    - 0.55 +/- 0.05 mM, because 1/v gives the noisy low-[S] rates the most pull.
+    - 0.9 mM, because straight-line fits are less sensitive to outliers in the data.
     - 0.72 mM, the mean of the two methods.
-    - Neither, because Km cannot be measured when rates are noisy.
+    - Neither, because Km cannot be measured reliably when initial rates are noisy.
   correct: 0
   explanation: >-
     The error in 1/v scales as sigma/v squared, so the slowest rates dominate an unweighted line. The
@@ -96,10 +96,10 @@
     A protease shows a bell-shaped kcat/Km against pH with pKa values near 7 and 9. A mutant lacking the
     active-site histidine is almost inactive at every pH. What is the best interpretation of the low-pH limb?
   options:
-    - It reflects the substrate's carboxylate becoming protonated.
-    - It reflects a lysine on the protein surface losing its charge.
+    - It reflects the substrate's carboxylate becoming protonated at low pH.
+    - It reflects a lysine on the protein surface losing its positive charge.
     - It shows the enzyme unfolding below pH 7.
-    - It reflects the histidine, which must be neutral to act as a general base.
+    - It is the histidine, which must be neutral to act as a general base.
   correct: 3
   explanation: >-
     The mutant links the pKa near 7 to the histidine: protonated, it cannot accept the serine proton. In
@@ -109,9 +109,9 @@
     A step of glycolysis has dG0' = +24 kJ/mol but, with red-cell concentrations, dG = -1 kJ/mol. A drug
     that halves this enzyme's activity is proposed to stop glycolysis in a parasite. What do you predict?
   options:
-    - Glycolysis stops, because the step is uphill under standard conditions.
-    - Glycolysis slows by half, because flux passes through every enzyme equally.
-    - Little change, because a near-equilibrium step restores its net flux with a small rise in substrate.
+    - Glycolysis stops, because the step is uphill under standard conditions and cannot proceed.
+    - Glycolysis slows by half, because flux passes through every enzyme equally, step by step.
+    - Little change, because a near-equilibrium step has spare capacity to restore its flux.
     - Glycolysis speeds up, because less product inhibition occurs.
   correct: 2
   explanation: >-
@@ -123,8 +123,8 @@
     In the module practical, inhibitor X is competitive, Y uncompetitive and Z mixed, each dosed to halve
     E1's rate at normal substrate. Substrate then builds up tenfold. Rank the flux left, from most to least.
   options:
-    - Y, then Z, then X, because the uncompetitive inhibitor is weakest at high substrate.
-    - X, then Z, then Y, because substrate overcomes the competitive part and boosts the uncompetitive part.
+    - Y, then Z, then X, because the uncompetitive inhibitor is weakest at high substrate concentration.
+    - X, then Z, then Y, as substrate relieves competitive inhibition and strengthens uncompetitive.
     - All three equal, because each was dosed to the same inhibition.
     - Z, then X, then Y, because the mixed inhibitor binds two forms of the enzyme.
   correct: 1

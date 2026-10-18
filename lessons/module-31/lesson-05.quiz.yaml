@@ -5,7 +5,7 @@
   options:
     - Report it, because exactly one imaginary frequency is all a transition state needs.
     - Restart the TS search following the C-Cl stretch, for example with TS_Mode set to that bond.
-    - Run a minimisation from this structure, since a small imaginary value means it is a minimum.
+    - Run a minimisation from this structure, since a small imaginary value means it is really a minimum.
     - Lower the SCF convergence threshold, which removes spurious imaginary modes.
   correct: 1
   explanation: >-
@@ -33,7 +33,7 @@
     - It roughly doubles, because the barrier fell by about 15 %.
     - It rises about 10 times, because each 11.4 kJ/mol is a factor of 10.
     - It rises about 100 times, because each 5.7 kJ/mol is a factor of 10 at 298 K.
-    - It rises about 1000 times, because rates depend on the cube of the barrier.
+    - It rises about 1000 times, because rates depend on the cube of the barrier height.
   correct: 2
   explanation: >-
     RT ln 10 = 5.71 kJ/mol at 298 K, so 11.4 kJ/mol is two factors of 10: the reaction becomes about 100

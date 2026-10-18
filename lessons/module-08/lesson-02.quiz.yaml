@@ -5,9 +5,9 @@
     What went wrong, and what is the right conclusion?
   options:
     - Nothing; a positive Delta G means the reaction cannot run at 25 C.
-    - Delta S was not divided by 1000; Delta G is about -33 kJ/mol, so it is spontaneous.
+    - J was not converted to kJ; Delta G is about -33 kJ/mol, so it is spontaneous.
     - The temperature should be 25, not 298; Delta G is then about +5 kJ/mol.
-    - The sign of Delta S should be flipped; Delta G is then about -151 kJ/mol.
+    - The sign of Delta S should be flipped; Delta G is then about -151 kJ/mol instead.
   correct: 1
   explanation: >-
     Delta S is in J, Delta H in kJ. -92 - 298 x (-0.198) = -92 + 59 = -33 kJ/mol, negative, so the
@@ -19,7 +19,7 @@
   options:
     - Melting is spontaneous at all temperatures, because Delta S is positive.
     - Melting is never spontaneous, because it absorbs heat.
-    - Melting is spontaneous only below about 273 K, where T Delta S is small.
+    - Melting is spontaneous only below about 273 K, where T Delta S is small next to Delta H.
     - Melting is spontaneous only above about 273 K, where T Delta S outweighs Delta H.
   correct: 3
   explanation: >-
@@ -32,7 +32,7 @@
   options:
     - K is about 0.01, so the mixture is mostly reactants with a little product.
     - K is about 100, so the mixture is mostly products.
-    - K is about 0.99, so reactants and products are present in equal amounts.
+    - K is about 0.99, so reactants and products are present in roughly equal amounts.
     - K is zero, so no product forms at all.
   correct: 0
   explanation: >-
@@ -44,8 +44,8 @@
     runs it at 700-800 K. Why?
   options:
     - At high temperature Delta S becomes positive, so the reaction becomes more favoured.
-    - At room temperature Delta G is positive, so heating is needed to make it spontaneous.
-    - At room temperature the reaction is far too slow; heat gives a usable rate at the cost of a lower K.
+    - At room temperature Delta G is positive, so heating is needed to make the reaction spontaneous.
+    - At room temperature it is far too slow; heat gives a usable rate at the cost of a lower K.
     - At high temperature the catalyst raises K back to its room-temperature value.
   correct: 2
   explanation: >-

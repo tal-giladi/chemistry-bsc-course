@@ -4,7 +4,7 @@
     carries fixed positive groups. Which buffer pH is the sensible first choice?
   options:
     - pH 4.0, because the protein is then positive and the column holds it.
-    - pH 5.2, because at its pI the protein binds most strongly to any column.
+    - pH 5.2, because at its pI the protein binds most strongly to any kind of column.
     - pH 3.5, because extra H+ makes the carboxylate groups more negative.
     - pH 7.0, because the protein is then negative and binds the positive groups.
   correct: 3
@@ -44,7 +44,7 @@
   options:
     - Nothing, because hydrogen-bond energies simply add up in a folded protein.
     - The DSSP energy is in kcal/mol, so the true total is about 1760 kJ/mol.
-    - In the unfolded chain the same groups bond to water, so folding gains only a small difference.
+    - In the unfolded chain these groups bond to water, so the net gain is small.
     - Backbone hydrogen bonds are repulsive, so they destabilise the fold by 420 kJ/mol.
   correct: 2
   explanation: >-

@@ -4,8 +4,8 @@
     can measure this rate?
   options:
     - Taking samples by hand and quenching them in ice before analysis.
-    - A stopped-flow instrument, whose dead time is about 1 ms, with fluorescence detection.
-    - A shock tube, which heats the sample to over 1000 K in microseconds.
+    - A stopped-flow instrument (dead time about 1 ms) with fluorescence detection.
+    - A shock tube, which heats the sample to over 1000 K within a few microseconds.
     - Reading the absorbance every 10 s in an ordinary spectrophotometer.
   correct: 1
   explanation: >-
@@ -18,7 +18,7 @@
   options:
     - It has no effect, because only the slope of the ln plot matters.
     - It makes k too small, because the reaction looks as if it had barely started.
-    - It makes k too large, because late points fall steeply toward ln 0 on the plot.
+    - It makes k too large, because late points fall steeply toward ln 0.
     - It only adds scatter, which averages out in a least-squares fit.
   correct: 2
   explanation: >-
@@ -29,9 +29,9 @@
     Initial rates are 2.0, 8.1 and 31.8 (arbitrary units) at starting concentrations of 0.010, 0.020
     and 0.040 M. What is the order in this reactant?
   options:
-    - 2, because each doubling of the concentration multiplies the rate by about 4.
+    - 2, because each doubling of concentration multiplies the rate by about 4.
     - 1, because the rate rises steadily as the concentration rises.
-    - 4, because the rate changes by a factor of 4 between neighbouring runs.
+    - 4, because the rate changes by a factor of about 4 between neighbouring runs.
     - It cannot be found, because the rates are in arbitrary units.
   correct: 0
   explanation: >-

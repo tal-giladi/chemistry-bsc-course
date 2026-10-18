@@ -4,7 +4,7 @@
     ratio of about 3 to 1. What does this most likely tell you?
   options:
     - The molecule contains one bromine atom, because bromine has two isotopes.
-    - The molecule contains one chlorine atom, because ³⁵Cl and ³⁷Cl occur in about a 3 to 1 ratio.
+    - The molecule contains one chlorine atom, as ³⁵Cl and ³⁷Cl occur in about a 3 to 1 ratio.
     - The molecule contains two chlorine atoms, because each chlorine adds one peak.
     - The molecule contains carbon, because ¹³C gives a peak a third the height of the main one.
   correct: 1
@@ -18,7 +18,7 @@
   options:
     - Group 1, because the first ionisation energy is low.
     - Group 13, because there are three low values before the big jump.
-    - Group 2, because the big jump comes after the second electron is removed.
+    - Group 2, because the big jump comes after the second electron.
     - Group 14, because four ionisation energies are listed.
   correct: 2
   explanation: >-
@@ -29,8 +29,8 @@
     You draw two Lewis structures for nitrous oxide, N₂O (atoms in the order N–N–O). In one, the formal charges are
     N 0, N +1, O −1. In the other, N −1, N +1, O 0. Which is the better single structure?
   options:
-    - The first, because the negative formal charge sits on oxygen, the most electronegative atom.
-    - The second, because the terminal nitrogen should carry the negative charge.
+    - The first, because the negative charge sits on oxygen, the most electronegative atom.
+    - The second, because the terminal nitrogen should be the atom carrying the negative charge.
     - Neither, because N₂O must have zero formal charge on every atom.
     - Both are equally good, because the total formal charge is zero in each.
   correct: 0
@@ -44,8 +44,8 @@
   options:
     - CH₂Cl₂, because its two chlorines balance its two hydrogens.
     - CHCl₃, because its three chlorines spread evenly around carbon.
-    - CH₃Cl, because it has only one polar bond.
-    - CCl₄, because its four identical bonds point to the corners of a tetrahedron and cancel.
+    - CH₃Cl, because it has only one polar bond, which is too weak to matter.
+    - CCl₄, because its four equal bond dipoles cancel in a tetrahedron.
   correct: 3
   explanation: >-
     Only a fully symmetric arrangement cancels the bond dipoles. CH₂Cl₂, CHCl₃ and CH₃Cl each mix C–H and C–Cl
@@ -57,7 +57,7 @@
   options:
     - Propanol has many more electrons, so its dispersion forces are much stronger.
     - Propanol is heavier, and heavier molecules always boil higher.
-    - Propanol molecules form hydrogen bonds through their O–H groups; butane has only dispersion forces.
+    - Propanol hydrogen-bonds through its O–H group; butane has only dispersion forces.
     - Butane molecules are straight chains, so they cannot touch each other along their length.
   correct: 2
   explanation: >-
@@ -68,8 +68,8 @@
     A student mixes 4.0 g of H₂ with 16.0 g of O₂ to make water (2 H₂ + O₂ → 2 H₂O) and predicts 20.0 g of water.
     What is the most water that can form?
   options:
-    - 18.0 g, with 2.0 g of H₂ left over, because O₂ is the limiting reagent.
-    - 20.0 g, because mass is conserved in every reaction.
+    - 18.0 g, with 2.0 g of H₂ left over, as O₂ is limiting.
+    - 20.0 g, because mass is conserved in every chemical reaction.
     - 36.0 g, because 2 mol of H₂ gives 2 mol of water.
     - 9.0 g, because 0.5 mol of O₂ gives 0.5 mol of water.
   correct: 0
@@ -82,9 +82,9 @@
     CO₂ stayed dissolved than in a classmate's 15-minute run. Both used the same vinegar. What do you expect?
   options:
     - Both the rising slope and the break point are lower in the 2-minute run.
-    - The rising slope is lower in the 2-minute run, but the break point is about the same.
+    - The slope is lower in the 2-minute run, but the break point is about the same.
     - The break point moves to a larger mass of baking soda in the 2-minute run.
-    - Nothing changes, because the CO₂ formed depends only on the limiting reagent.
+    - Nothing changes, because the CO₂ formed depends only on the limiting reagent present.
   correct: 1
   explanation: >-
     Retained CO₂ makes every mass loss smaller, which lowers the rising line and the plateau. The corner is set by
@@ -109,7 +109,7 @@
     graduated cylinder. Which is better?
   options:
     - (b), because the balance is a thousand times more precise and mass is the first input.
-    - (a), because the graduated cylinder's percent-level error would dominate the budget in (b).
+    - (a), because the cylinder's percent-level error would dominate the budget in (b).
     - (b), because a graduated cylinder is made to deliver and a flask only to contain.
     - Both are equal, because the reagent purity dominates in each case.
   correct: 1
@@ -122,8 +122,8 @@
     the pipette delivers 0.5 % too much every time. What is the error in the final solution?
   options:
     - About 0.5 %, because the error comes from only one piece of glassware.
-    - Close to zero, because the three errors are random and partly cancel.
-    - About 1.5 % too concentrated, because the same bias enters every step and multiplies through.
+    - Close to zero, because the three errors are random and partly cancel each other out.
+    - About 1.5 % too concentrated, as the same bias enters every step and multiplies.
     - About 0.9 % too concentrated, because three errors add in quadrature as √3 × 0.5 %.
   correct: 2
   explanation: >-

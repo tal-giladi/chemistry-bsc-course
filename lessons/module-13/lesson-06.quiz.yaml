@@ -18,7 +18,7 @@
     pressure?
   options:
     - Because solids do not take part in the reaction at equilibrium.
-    - Because pure solids have activity 1 in their standard state, so they drop out of K.
+    - Because a pure solid has activity 1, so it drops out of K.
     - Because the concentrations of solids are too small to measure.
     - Because CO2 is the only species whose amount changes during the reaction.
   correct: 1

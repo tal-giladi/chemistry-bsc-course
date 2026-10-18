@@ -18,10 +18,10 @@
     a Lineweaver-Burk line gives Km = 3.4 mM. The lowest [S] point has the largest relative error. Which
     value should be reported, and why?
   options:
-    - The Lineweaver-Burk value, because a straight line is the more robust fit.
+    - The Lineweaver-Burk value, because a straight line is the more robust fit to rate data.
     - The average of both, because each method has its own systematic error.
     - The Lineweaver-Burk value, because it uses all points with equal weight.
-    - The nonlinear value, because 1/v gives the noisy low-[S] point the most influence on the line.
+    - The nonlinear value, because 1/v gives the noisy low-[S] point the most weight.
   correct: 3
   explanation: >-
     Taking 1/v magnifies the error of slow rates by 1/v squared, and ordinary regression then lets those

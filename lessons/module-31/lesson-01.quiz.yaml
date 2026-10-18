@@ -3,7 +3,7 @@
     You optimise a molecule with GFN2-xTB and get a total energy of -13.53 Eh. A classmate optimises
     the same molecule with B3LYP/def2-SVP in ORCA and gets -193.1 Eh. What do you conclude?
   options:
-    - B3LYP is far more stable, so the molecule is better described by DFT than by xtb.
+    - B3LYP is far more stable, so the molecule is better described by DFT than by the xtb method.
     - The two total energies use different references, so their difference means nothing chemically.
     - One of the two runs must have the wrong charge, because the energies should agree within 1 Eh.
     - The xtb run did not converge, since a converged energy for this molecule is near -193 Eh.
@@ -21,7 +21,7 @@
     - Use it, because normal termination means the program found the minimum.
     - Use it, but add the remaining gradient times the step size as a correction.
     - Do not use it yet; restart the optimisation from the last geometry until it converges.
-    - Do not use it; switch to a larger basis set, which always fixes convergence problems.
+    - Do not use it; switch to a larger basis set, which always fixes such convergence problems.
   correct: 2
   explanation: >-
     Normal termination only means the program did not crash. An unconverged optimisation stopped
@@ -45,7 +45,7 @@
     flavour compounds. Under the ORCA EULA (June 2025), what applies?
   options:
     - You need a commercial licence from FACCTs, because work-related use is neither academic nor private.
-    - You may use it freely, because ORCA is free of charge for every user who registers on the forum.
+    - You may use it freely, because ORCA is free of charge for every user who registers on the ORCA forum.
     - You may use it if you run it on your own laptop at home, which counts as private use.
     - You may use it if you publish the results in a journal, which makes the work academic.
   correct: 0
@@ -60,7 +60,7 @@
   options:
     - The structure is a minimum; negative values only mean the mode is IR inactive.
     - The structure is a minimum, but the zero-point energy will be slightly too low.
-    - The structure is a second-order saddle point, because negative values come in pairs.
+    - The structure is a second-order saddle point, because negative values always come in pairs.
     - The structure is not a minimum; there is one direction in which the energy goes down.
   correct: 3
   explanation: >-

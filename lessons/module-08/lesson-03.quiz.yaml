@@ -3,7 +3,7 @@
     For CO + H2O <=> CO2 + H2 at 1000 K, K = 0.91. A reactor holds CO and H2O at 2 bar each, CO2 at
     1 bar and H2 at 1 bar. What happens next?
   options:
-    - Nothing, because the mixture already contains all four gases.
+    - Nothing, because the mixture already contains all four of the gases.
     - The reaction runs backward, because Q is larger than K.
     - The reaction runs forward, because Q = 0.25 is smaller than K.
     - The reaction runs backward, because K is smaller than 1.
@@ -18,8 +18,8 @@
   options:
     - Accept it, because any x below 0.1 mol/L is small enough.
     - Accept it, because the shortcut is exact when K is below 1.
-    - Reject the whole ICE table and measure the composition instead.
-    - Solve exactly or numerically, because x is 12 % of 0.10, above the 5 % limit.
+    - Reject the whole ICE table and measure the equilibrium composition instead.
+    - Solve exactly or numerically; x is 12 % of 0.10, above the 5 % limit.
   correct: 3
   explanation: >-
     The check compares x with the number it was dropped from: 0.012/0.10 = 12 %, so the error is too

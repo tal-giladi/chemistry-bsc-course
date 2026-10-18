@@ -21,7 +21,7 @@
     - k of about 0.12, from averaging the two log k values and dividing by 10.
     - k of about 1.6, from averaging the two retention factors.
     - k of about 0.01, from extrapolating S to the pure organic solvent.
-    - k of about 1.0, from the straight line in log k against the fraction of organic solvent.
+    - k of about 1.0, from log k being linear in the solvent fraction.
   correct: 3
   explanation: >-
     The linear-solvent-strength model is linear in log k, so at 30 % log k is the mean of 0.44 and -0.42,
@@ -48,7 +48,7 @@
   options:
     - Run the samples, because resolution and precision are well inside their limits.
     - Widen the integration window so that the tailing peak area is captured, then continue.
-    - Stop, investigate and restore the column (or replace it), then repeat the system-suitability test.
+    - Stop, restore or replace the column, then repeat the system-suitability test.
     - Lower the acetonitrile to increase retention, which also reduces tailing.
   correct: 2
   explanation: >-

@@ -16,7 +16,7 @@
     Two modes at 0.700 and 0.720 Hz merge into one peak in a 20 s accelerometer record sampled at
     200 Hz. What separates them?
   options:
-    - Recording for about 100 s or more, since a windowed peak needs about 2/T.
+    - Recording for about 100 s or more, since a windowed peak needs 2/T.
     - Raising the sample rate to 500 Hz, which gives finer frequency steps.
     - Zero-padding the 20 s record to ten times its length before the FFT.
     - Removing the window, because windows always merge neighbouring peaks.

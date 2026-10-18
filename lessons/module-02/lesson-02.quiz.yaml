@@ -4,8 +4,8 @@
     You take (c at 30 s minus c at 0 s) divided by 30 s. How does this compare with the true
     initial rate?
   options:
-    - It is too large, because the concentration falls fastest between the first two points.
-    - It is too small, because the decay slows down so the average over 0-30 s is below the starting slope.
+    - It is too large, because the concentration falls fastest between the first two readings taken.
+    - It is too small, because the decay slows, so the 0-30 s average is below the initial slope.
     - It is exact, because the forward difference is defined at the first point.
     - It is too small only when the data are noisy, otherwise it is exact.
   correct: 1

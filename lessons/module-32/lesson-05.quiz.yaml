@@ -5,8 +5,8 @@
   options:
     - The candidate phase is present, because two matching lines are enough for a minor phase.
     - Only the two expected oxides, because unexplained peaks in a real pattern are usually noise.
-    - The unexplained peaks as instrument artefacts, because the zero shift differs from the pure samples.
-    - At least one further crystalline phase whose identity is still open, with a search-match as the next step.
+    - The unexplained peaks as instrument artefacts, because the zero shift differs from that of the pure samples.
+    - At least one further crystalline phase of still unknown identity, with a search-match as the next step.
   correct: 3
   explanation: >-
     Eight real peaks, one of them strong, are evidence for more phases, but a candidate that misses the strongest
@@ -43,7 +43,7 @@
     faculty-list elective. Which choice builds most directly on what they did?
   options:
     - Intro to Molecular Quantum Technology, because NMR spins are two-level systems.
-    - Numerical Simulation in Chemical Physics, because every chemist must write simulations.
+    - Numerical Simulation in Chemical Physics, because every modern chemist must be able to write simulations.
     - Structure Determination by Physical Methods, because it extends their spectra work to harder unknowns.
     - Symmetry and its Uses in Chemistry, because it is worth the most points.
   correct: 2

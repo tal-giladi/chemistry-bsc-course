@@ -19,7 +19,7 @@
     - It is zero, because the repeats agree perfectly with each other.
     - It cannot be estimated at all without at least ten repeats.
     - It equals 1 g, the step of the scale, used as a standard uncertainty.
-    - It is limited by resolution, so use a Type B estimate of about 1 g/√6.
+    - It is limited by resolution; use a Type B estimate of about 1 g/√6.
   correct: 3
   explanation: >-
     Identical readings show that the scale's resolution, not random scatter, limits the result. Each reading has

@@ -6,7 +6,7 @@
     - Correct, because R compounds always rotate light clockwise.
     - Wrong, because R compounds always rotate light anticlockwise.
     - Correct only in ethanol, because the solvent decides which letter applies.
-    - Not supported by the letter, because R or S is a geometry and the sign must be measured.
+    - Unsupported, because R/S is geometry and the sign must be measured.
   correct: 3
   explanation: >-
     CIP labels describe the arrangement in space; the sign of rotation is an experimental property.
@@ -18,7 +18,7 @@
     only three. Why?
   options:
     - One of the four decomposes on the column because C-Br bonds are weak.
-    - The (2R,3S) form has an internal mirror plane, so it is one achiral meso compound.
+    - The (2R,3S) form has an internal mirror plane, so it is one achiral meso form.
     - The two enantiomers co-elute, so the column counts them as one.
     - Bromine atoms are too heavy to create a stereocentre, so one centre is not real.
   correct: 1

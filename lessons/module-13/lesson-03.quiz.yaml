@@ -6,7 +6,7 @@
     - It does break the law, and that is exactly why a freezer needs electricity to run.
     - The second law applies only to gases, so a liquid freezing is not covered by it.
     - The water's entropy actually rises, because ice forms a more ordered crystal lattice.
-    - Only the total must rise; the heat released raises the surroundings' entropy by more.
+    - Only the total must rise; the released heat raises the surroundings' entropy more.
   correct: 3
   explanation: >-
     Delta S_total = Delta S_sys + Delta S_surr. Freezing releases heat q to colder surroundings, which
@@ -19,7 +19,7 @@
     - Zero, because no heat flows (q = 0) and Delta S = q/T.
     - +5.76 J/K, from a reversible isothermal path between the same states.
     - -5.76 J/K, because the gas did no work on the surroundings.
-    - +1.73 kJ/K, because Delta S = nRT ln 2 for a doubling of volume.
+    - +1.73 kJ/K, because Delta S = nRT ln 2 for any doubling of the gas volume.
   correct: 1
   explanation: >-
     Entropy is a state function, so use a reversible path: Delta S = nR ln(V2/V1) = 8.314 x ln 2 =
@@ -45,7 +45,7 @@
   options:
     - Heat always creates new entropy whenever it flows, whatever the two temperatures are.
     - The hot water gains entropy as it cools, because its molecules slow down and spread.
-    - The same heat counts for more entropy at a lower temperature, so the cold side gains more.
+    - The same heat q gives more entropy at a lower T, so the cold water gains more.
     - Stirring adds a little energy, and that energy becomes the extra entropy in the cup.
   correct: 2
   explanation: >-

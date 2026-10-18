@@ -30,8 +30,8 @@
     Peak currents of a compound rise in direct proportion to the scan rate, and the oxidation and
     reduction peaks are symmetric and almost at the same potential. What do you conclude?
   options:
-    - The compound is adsorbed on the electrode surface rather than diffusing from solution.
-    - The compound diffuses freely and its electron transfer is very fast.
+    - The compound is adsorbed on the electrode rather than diffusing from solution.
+    - The compound diffuses freely from solution and its electron transfer is very fast.
     - The solution resistance is very high, which makes the peaks symmetric.
     - The compound decomposes after reduction, so the return peak is missing.
   correct: 0
@@ -47,7 +47,7 @@
   options:
     - Report 54.9 mg/L, because external calibration has the smaller uncertainty.
     - Report 58.9 mg/L, the mean, because the true value lies between the two methods.
-    - Report 62.8 mg/L, because the matrix lowers the slope and only standard addition corrects for it.
+    - Report 62.8 mg/L, because only standard addition corrects for the matrix.
     - Report neither, because the two methods should agree within their uncertainties for a valid run.
   correct: 2
   explanation: >-

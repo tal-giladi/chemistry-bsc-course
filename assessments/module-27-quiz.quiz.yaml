@@ -19,7 +19,7 @@
   options:
     - The student is right, since Maxwell's relation holds for every non-magnetic liquid.
     - The supplier quoted εr at a different temperature, which explains a factor of twenty.
-    - Maxwell's relation needs both at one frequency; the static value includes dipole turning.
+    - Maxwell's relation needs one frequency for both; static εr includes dipole turning.
     - Acetonitrile is magnetic, so its permeability makes n smaller than √εr.
   correct: 2
   explanation: >-
@@ -70,10 +70,10 @@
     6.7 × 10³ cm³ K/mol and intercept 7.5 cm³/mol. A labmate wants to quote μ from the intercept. What do you do?
   options:
     - >-
-      Use the slope, μ = √(9ε₀k_B B/N_A) ≈ 1.05 D; the intercept is the distortion polarisation.
+      Use the slope, μ = √(9ε₀k_B B/N_A) ≈ 1.05 D; the intercept is distortion polarisation.
     - Use the intercept, because the dipole term is the temperature-independent part.
     - Use the slope, but multiply by T, since μ² must be in J.
-    - Average slope and intercept, because each contains half of the information about μ.
+    - Average slope and intercept, because each of them contains half of the information about μ.
   correct: 0
   explanation: >-
     In P = A + B/T, B = N_Aμ²/(9ε₀k_B), so the slope gives μ (here about 1.05 D, as for HCl). The intercept A is
@@ -83,8 +83,8 @@
     Applying the Debye equation to pure liquid methanol gives μ = 1.2 D; Onsager's equation gives 3.0 D; the
     gas value is 1.67 D. Which reading of these numbers is correct?
   options:
-    - The gas value is wrong, because only the liquid gives the true molecular dipole moment.
-    - Debye ignores the reaction field and undershoots; Onsager overshoots as H-bonded dipoles correlate.
+    - The gas value is wrong, because only the liquid gives the true molecular dipole moment of methanol.
+    - Debye lacks the reaction field and undershoots; Onsager overshoots as H-bonded dipoles align.
     - Onsager is exact for every liquid, so methanol's dipole really is 3.0 D in all phases.
     - Both equations fail only because the density was used in place of the molar volume.
   correct: 1

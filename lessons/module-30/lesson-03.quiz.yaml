@@ -40,9 +40,9 @@
   question: >-
     On a humid summer day a learner uses the molar mass of dry air and gets gamma = 1.418. What should they conclude?
   options:
-    - Air molecules are partly monatomic in summer, which raises gamma above 1.40.
-    - The end correction was overestimated, which inflates the fitted speed.
-    - Water vapour lowered the real molar mass, so using the dry value made gamma about 1 % too high.
+    - Air molecules are partly monatomic in summer, which raises gamma above the diatomic 1.40.
+    - The end correction was overestimated, which inflates the fitted speed and therefore gamma.
+    - Water vapour lowered the molar mass, so the dry value made gamma about 1 % too high.
     - Vibration of N2 starts to be excited at 30 C, which raises gamma.
   correct: 2
   explanation: >-
@@ -53,9 +53,9 @@
     The spectrum of your tube shows strong peaks at 170, 340 and 510 Hz. What does the 340 Hz peak tell you?
   options:
     - The tube is behaving as a closed tube with a strong second harmonic.
-    - The closed end leaks or the phone sits in the column, so the tube acts partly open.
+    - The closed end leaks or the phone sits inside, so the tube acts partly open.
     - The audio FFT has aliased the 510 Hz peak to a lower frequency.
-    - The air in the tube is warmer than the room, which adds even harmonics.
+    - The air in the tube is warmer than the room, which adds even harmonics to the spectrum.
   correct: 1
   explanation: >-
     A tube closed at one end supports only odd harmonics (1, 3, 5). An even harmonic means the boundary at the

@@ -17,7 +17,7 @@
     downward during the first 5 s, when you had pulled the phone 8 cm. What explains this?
   options:
     - The sensor saturates at high acceleration, so the first peaks read too high.
-    - Air drag grows faster than linearly with speed, so big swings lose energy faster.
+    - Air drag grows faster than linearly with speed, so big swings decay faster.
     - The spring is anharmonic, which changes the damping rate but never the frequency.
     - The fit window was too short, which always bends the start of a semi-log plot.
   correct: 1
@@ -29,7 +29,7 @@
     Windowed fits of a ringdown give 1.52 Hz at the start and 1.49 Hz near the end, while the phone
     hung steadily without twisting. What does this tell you about the restoring force?
   options:
-    - It stiffens at large stretch, so the frequency is higher when the amplitude is large.
+    - It stiffens at large stretch, so the frequency is higher at large amplitude.
     - It softens at large stretch, so the frequency is lower when the amplitude is large.
     - It is perfectly harmonic, and the drift comes from the damping slowing the motion.
     - It is harmonic, and the drift shows that the spring is losing mass during the run.
@@ -44,7 +44,7 @@
     - Because damping by collisions lowers the frequency of every higher level.
     - Because the overtone uses the reduced mass of the chlorine atom instead.
     - Because the overtone is a different normal mode with its own force constant.
-    - Because the bond softens when stretched, so the level gaps shrink as v rises.
+    - Because the bond softens when stretched, so the gaps shrink as v rises.
   correct: 3
   explanation: >-
     The Morse-like bond is an anharmonic, softening oscillator: G(v+1) - G(v) = omega_e - 2 omega_e

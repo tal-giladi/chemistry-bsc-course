@@ -6,7 +6,7 @@
   options:
     - About 0.25 s, so diffusion easily feeds the centre of the cube.
     - About 250 s, so the centre is fed slowly while cells on the way use oxygen.
-    - About 2.5 s, so oxygen arrives quickly at any depth of the cube.
+    - About 2.5 s, so oxygen arrives quickly at any depth of the cube and no cell starves.
     - About 25 000 s, so the cells on the outside starve first.
   correct: 1
   explanation: >-
@@ -20,7 +20,7 @@
   options:
     - B is too large to pass through the small pores in the membrane.
     - B is pulled back out of the cell by the positive potential inside.
-    - B is broken down chemically by the hydrophobic core of the membrane.
+    - B is broken down chemically by the hydrophobic core of the membrane as it crosses.
     - B cannot dissolve in the nonpolar core of the bilayer, so it barely enters.
   correct: 3
   explanation: >-
@@ -45,7 +45,7 @@
     150 mM, outside 4 mM; inside Na+ is 15 mM, outside 145 mM. What happens to the resting potential?
   options:
     - It becomes more negative, moving from about -70 mV towards -97 mV.
-    - It stays at -70 mV, because the Na+/K+ pump sets the potential directly.
+    - It stays at -70 mV, because the Na+/K+ pump alone sets the resting potential directly.
     - It moves towards the Na+ potential of about +61 mV, becoming less negative.
     - It jumps to exactly 0 mV, because no ions can cross the membrane any more.
   correct: 2
@@ -58,7 +58,7 @@
     groups). A student suggests a buffer at pH 9.5. What is the better plan, and why?
   options:
     - Keep pH 9.5, because a protein binds best just above its pI.
-    - Use pH 11, because the protein then carries more positive charge.
+    - Use pH 11, because the protein then carries more positive charge and binds tighter.
     - Use pH 8.9, because at its pI the protein binds every column type.
     - Use about pH 7.5, so the protein is clearly positive and binds the column.
   correct: 3
@@ -71,8 +71,8 @@
     Asp has no partner to bond or pair with. What is the most likely outcome?
   options:
     - The protein becomes more stable, since Asp can form extra hydrogen bonds.
-    - The protein is destabilised, maybe enough to unfold, since a buried charge costs energy.
-    - Nothing changes, since the backbone hydrogen bonds hold the fold on their own.
+    - The protein is destabilised, maybe unfolded, since a buried charge costs energy.
+    - Nothing changes, since the backbone hydrogen bonds hold the fold together on their own.
     - The protein's pI rises, since Asp is one of the basic amino acid residues.
   correct: 1
   explanation: >-
@@ -96,7 +96,7 @@
     In a gene the codon for residue 30 changes from TGG (Trp) to TGA. What is the effect on the
     protein, which is normally 120 residues long?
   options:
-    - A silent change, because TGG and TGA differ only in their last base.
+    - A silent change, because TGG and TGA differ only in their last base, the wobble position.
     - "A missense change: Trp30 becomes another amino acid, length stays 120."
     - "A frameshift: every residue after 30 changes, length stays about 120."
     - "A nonsense change: translation stops early, giving a 29-residue fragment."
@@ -122,7 +122,7 @@
     A brewer's yeast tank switches from aerobic growth to fermentation as oxygen runs out. To keep
     making ATP at the same rate, roughly how much faster must the yeast consume glucose?
   options:
-    - About 2 times faster, because fermentation makes 2 ATP per glucose.
+    - About 2 times faster, because fermentation makes only 2 ATP per glucose molecule.
     - The same rate, because each glucose releases the same free energy.
     - About 15 times faster, because it makes 2 ATP per glucose, not about 30.
     - About 30 times faster, because fermentation makes no ATP from glucose.

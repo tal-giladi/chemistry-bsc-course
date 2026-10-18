@@ -4,7 +4,7 @@
     C10H8 + 12 O2 -> 10 CO2 + 4 H2O(l). What is Delta_c H at 298 K (RT = 2.479 kJ/mol)?
   options:
     - -5150 kJ/mol, because a bomb measures enthalpy directly.
-    - About -5155 kJ/mol, because Delta n_gas = -2 makes Delta H more negative.
+    - About -5155 kJ/mol; Delta n_gas = -2 makes Delta H more negative.
     - About -5145 kJ/mol, because Delta n_gas = +2 makes Delta H less negative.
     - About -5185 kJ/mol, because all 14 product molecules count as gas.
   correct: 1
@@ -31,10 +31,10 @@
     N2 has Cp = 29.12 J/(mol K) at 298 K and 32.69 J/(mol K) at 1000 K. What is the best explanation
     for the rise?
   options:
-    - The N2 vibration starts to be excited at high temperature and takes up energy.
+    - The N2 vibration starts to be excited at high T and takes up energy.
     - The molecules start to rotate only above room temperature.
     - The gas stops being ideal at high temperature, so Cp - Cv is no longer R.
-    - N2 starts to dissociate into atoms, which absorbs heat.
+    - N2 starts to dissociate into atoms at high temperature, which absorbs heat.
   correct: 0
   explanation: >-
     At 298 K, N2 has translation plus rotation, Cp close to 7/2 R = 29.10. Its stiff vibration needs
@@ -47,7 +47,7 @@
   options:
     - The table value is wrong and should be replaced by -106 kJ/mol at all temperatures.
     - Reaction enthalpies never change with temperature, so the NIST integral must contain an error.
-    - Delta_r Cp is not zero, so the enthalpy changes with temperature and Kirchhoff's law is needed.
+    - Delta_r Cp is not zero, so the enthalpy changes with T and Kirchhoff's law is needed.
     - The difference comes from using kJ instead of J and would vanish with consistent units.
   correct: 2
   explanation: >-

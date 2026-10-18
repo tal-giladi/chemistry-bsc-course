@@ -18,7 +18,7 @@
   options:
     - Negative charge builds up at the benzylic carbon, so acceptors speed the reaction.
     - The reaction is insensitive to substituents, because rho is far from 1.
-    - Positive charge builds up close to the ring, so donors speed the reaction strongly.
+    - Positive charge builds up near the ring, so donors speed the reaction strongly.
     - The mechanism must be radical, because ionic reactions always have positive rho.
   correct: 2
   explanation: >-
@@ -29,8 +29,8 @@
     Phenols give rho = 2.1 with normal sigma, but 4-nitrophenol (pKa 7.15) is about 1.2 pKa units
     more acidic than the line predicts. What is the best explanation?
   options:
-    - The phenoxide charge delocalises directly onto the para nitro group, so sigma-minus applies.
-    - The nitro group is ortho to the OH group, so steric effects distort the value.
+    - The phenoxide charge delocalises onto the para nitro group, so sigma-minus applies.
+    - The nitro group is ortho to the OH group, so steric effects distort the measured value.
     - The measurement must be wrong, because a Hammett line fits every para substituent.
     - Nitro groups donate electrons by resonance, so sigma-plus applies instead.
   correct: 0

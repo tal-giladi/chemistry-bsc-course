@@ -4,7 +4,7 @@
     the molecule polar?
   options:
     - Linear like CO₂, so the two bond dipoles cancel and it is non-polar.
-    - Bent, with an angle a little under 120°, so the bond dipoles do not cancel and it is polar.
+    - Bent, a little under 120°, so the bond dipoles do not cancel and it is polar.
     - Trigonal planar, because it has three domains, so it is non-polar by symmetry.
     - Bent, with an angle near 104.5° like water, but non-polar because S and O are similar.
   correct: 1
@@ -18,7 +18,7 @@
   options:
     - The C–Cl bonds in CCl₄ are non-polar because carbon shares its electrons equally with chlorine.
     - Chloroform has a lone pair on carbon that creates the dipole moment.
-    - In the perfect tetrahedron of CCl₄ the four bond dipoles cancel; replacing one Cl by H breaks that symmetry.
+    - In tetrahedral CCl₄ the four bond dipoles cancel; replacing one Cl by H breaks that symmetry.
     - CCl₄ is linear, so its dipoles cancel, while CHCl₃ is tetrahedral.
   correct: 2
   explanation: >-
@@ -29,7 +29,7 @@
     Ethanol (CH₃CH₂OH, 46 g/mol) boils at 78 °C, while dimethyl ether (CH₃OCH₃, same formula) boils at −24 °C.
     What is the main reason?
   options:
-    - Ethanol has H bonded to O, so its molecules form hydrogen bonds with each other; the ether has no O–H.
+    - Ethanol has an O–H group, so its molecules hydrogen-bond; the ether has no O–H.
     - Ethanol has more electrons than dimethyl ether, so its dispersion forces are stronger.
     - Dimethyl ether is non-polar, so it has only dispersion forces.
     - Boiling ethanol must break its O–H bonds, which costs more energy than breaking C–O bonds.
@@ -45,7 +45,7 @@
     - I₂ forms hydrogen bonds through its lone pairs, which HCl cannot do.
     - I₂ molecules are held by covalent bonds between molecules, which are stronger than any IMF.
     - HCl breaks apart into ions in the gas, so it has no intermolecular forces at all.
-    - Dispersion grows with the number of electrons, and for I₂ it outweighs HCl's dipole–dipole forces.
+    - Dispersion grows with electron count, and for I₂ it outweighs HCl's dipole–dipole forces.
   correct: 3
   explanation: >-
     Large, polarisable electron clouds give strong dispersion forces. When molecules differ greatly in size,

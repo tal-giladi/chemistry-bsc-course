@@ -22,3 +22,5 @@ The procedure, why each step is done, the safety reasoning, what can go wrong (r
 - Verify: `node --check` every JS file; open each page headless if possible (e.g. a small node + jsdom-free smoke check is fine, or the Browser pane) with no console errors; `grep -n "http" simulations/<name>` must show no network references. Run `py scripts/check.py NN` for the modules that link to your simulation — their simulation-link errors must be gone.
 - Checkpoint: append `<name> done` to `curriculum/status/simulations.log` after each simulation; skip names already there.
 - Report back in under 100 words.
+
+Never start sub-agents of your own: the course allows at most two writing agents at a time.

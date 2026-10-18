@@ -18,7 +18,7 @@
   options:
     - Loss of the proton from the sigma-complex, because that is where the C-H bond breaks.
     - Neither, because an effect near 1 means the reaction is diffusion-controlled.
-    - Attack of the electrophile to form the sigma-complex, because the C-H bond breaks later.
+    - Attack of the electrophile to form the sigma-complex, as the C-H bond breaks later.
     - Both steps equally, because the isotope effect is between 1 and 2.
   correct: 2
   explanation: >-
@@ -43,8 +43,8 @@
     sigma_p residuals bend, with the p-methoxy point 0.4 log units below the line. What do you report?
   options:
     - Sigma_p, because both R2 values are above 0.95 and it is the standard scale.
-    - Sigma_p+, because the residuals show direct conjugation of the para donor that sigma_p misses.
-    - Neither, because an R2 below 0.99 means the Hammett equation does not apply.
+    - Sigma_p+, as the residuals show direct conjugation of the para donor that sigma_p misses.
+    - Neither, because an R2 below 0.99 means the Hammett equation does not apply to this series.
     - Sigma_p, after deleting the methoxy point as an outlier.
   correct: 1
   explanation: >-

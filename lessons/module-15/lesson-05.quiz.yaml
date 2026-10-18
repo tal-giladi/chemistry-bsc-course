@@ -43,7 +43,7 @@
     Why?
   options:
     - HBr is a stronger nucleophile than bromide, so only HBr can attack the carbon.
-    - Acid protonates the OH, so the leaving group becomes water, a weak base, instead of hydroxide.
+    - Acid protonates the OH, so the leaving group is water, a weak base, not hydroxide.
     - Sodium ions block the oxygen of ethanol, so the reaction only works without sodium.
     - Ethanol must first form a primary carbocation, and that needs strong acid to happen.
   correct: 1

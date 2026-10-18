@@ -16,8 +16,8 @@
     Two peaks have resolution 1.0. Their selectivity is 1.04 and the later one has k = 4. Which change
     is most likely to reach baseline separation quickly and cheaply?
   options:
-    - Double the column length, because doubling N doubles the resolution.
-    - Change the mobile-phase composition slightly to raise the selectivity to about 1.06.
+    - Double the column length, because doubling N doubles the resolution of the pair.
+    - Tweak the mobile-phase composition to raise selectivity to about 1.06.
     - Raise k to 20 by weakening the mobile phase a lot.
     - Halve the flow rate, because slower flow always gives more plates.
   correct: 1
@@ -42,9 +42,9 @@
     An analyst sets the carrier gas well below the optimum velocity to "give the column more time".
     What happens to the peaks?
   options:
-    - They sharpen, because mass transfer has more time to reach equilibrium.
+    - They sharpen, because mass transfer has more time to reach full equilibrium.
     - Nothing changes, because the plate height does not depend on velocity.
-    - They broaden, because longitudinal diffusion spreads each band while it waits.
+    - They broaden, because longitudinal diffusion spreads each band as it waits.
     - They split into two, because the stationary phase becomes overloaded.
   correct: 2
   explanation: >-

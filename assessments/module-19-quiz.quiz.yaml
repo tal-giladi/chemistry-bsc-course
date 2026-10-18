@@ -6,7 +6,7 @@
   options:
     - The colour reagent is used up in both, so add more reagent and read again undiluted.
     - The darker sample has a different pH, so buffer both samples and read again undiluted.
-    - Stray light caps readings near the top, so dilute both into the linear range and read again.
+    - Stray light caps high readings, so dilute both into the linear range and read again.
     - The detector is saturated by too much light, so narrow the slit and read again undiluted.
   correct: 2
   explanation: >-
@@ -20,7 +20,7 @@
     better and why?
   options:
     - Absorbance, because it is free from quenching and the proteins can be blanked out.
-    - Fluorescence, because it is read against a dark background at a second, selective wavelength.
+    - Fluorescence, read against a dark background at a second, selective wavelength.
     - Absorbance, because fluorescence is only linear above an absorbance of 0.1.
     - Fluorescence, because its signal does not depend on the concentration of the drug.
   correct: 1
@@ -36,7 +36,7 @@
     - An ionisation interference, which lanthanum suppresses by releasing electrons.
     - A spectral interference from phosphate absorbing at the calcium line.
     - A drifting hollow-cathode lamp, which lanthanum ions stabilise.
-    - "A chemical interference: phosphate held calcium in a compound that does not atomise."
+    - "A chemical interference: phosphate held calcium in a non-atomising compound."
   correct: 3
   explanation: >-
     Phosphate binds calcium into a refractory compound in the flame. Lanthanum binds the phosphate
@@ -47,7 +47,7 @@
     A weak base (pKa of its conjugate acid 9.5) must be extracted from water into an organic
     solvent, leaving neutral and acidic impurities behind as far as possible. Which plan works best?
   options:
-    - Wash at pH 2 with solvent to remove neutrals, then raise to pH 11.5 and extract the base.
+    - Wash with solvent at pH 2 to remove neutrals, then extract the base at pH 11.5.
     - Extract at pH 2, where the base is protonated and moves into the solvent.
     - Extract at pH 9.5, where half the base is neutral, with one large portion of solvent.
     - Extract at pH 7, then wash the solvent with pH 11 water to pull the base back out.
@@ -62,7 +62,7 @@
   options:
     - Rs = 2.4, because resolution grows in proportion to column length.
     - Rs = 0.8, because selectivity alone sets the resolution, not the length.
-    - Rs near 1.4 at three times the run time; changing selectivity would be cheaper.
+    - Rs near 1.4 at three times the run time; changing selectivity is cheaper.
     - Rs near 0.5, because longer columns broaden peaks more than they separate them.
   correct: 2
   explanation: >-
@@ -75,9 +75,9 @@
     save cost and time. What should the analyst expect and do?
   options:
     - The same optimum velocity, so the method can stay unchanged.
-    - A lower optimum velocity, so the flow must be reduced to keep the plates.
+    - A lower optimum velocity, so the flow must be reduced to keep the plate count.
     - No change in efficiency, but the FID will stop working without helium.
-    - "A higher, flatter optimum: raise the velocity, check resolution and revalidate."
+    - "A higher, flatter optimum: raise velocity, check resolution and revalidate."
   correct: 3
   explanation: >-
     Hydrogen diffuses faster, so its van Deemter curve is flatter and its optimum lies at higher
@@ -89,7 +89,7 @@
     linalool at 1098 and another compound at 1096 on that phase. What is the most efficient way to
     decide?
   options:
-    - Run the sample on a polar wax column and compare indices, or check the mass spectrum.
+    - Run it on a polar wax column and compare indices, or check the mass spectrum.
     - Accept linalool, because its index matches the peak exactly.
     - Re-run on the same DB-5 column with a slower ramp and compare again.
     - Report the peak as unknown, because retention indices cannot identify compounds.
@@ -103,9 +103,9 @@
     In a GC-FID assay, the internal-standard peak area is 20 % lower than usual in one sample, but
     the ratio of analyte to internal standard looks normal. What is the best interpretation?
   options:
-    - The analyte concentration is 20 % too low and must be corrected upwards.
+    - The analyte concentration is 20 % too low and must be corrected upwards by 20 %.
     - The internal standard was forgotten in that vial, so the result is invalid.
-    - Less sample was injected; the ratio has cancelled that and the result can be used.
+    - Less sample was injected; the ratio cancels that and the result can be used.
     - The FID flame has gone out, so all results of the day must be rejected.
   correct: 2
   explanation: >-
@@ -134,7 +134,7 @@
     - Cyclic voltammetry, because its peak current is proportional to concentration.
     - Potentiometry with a cadmium ion-selective electrode, because it draws no current.
     - Coulometry, because counting the total charge needs no calibration at all.
-    - Anodic stripping voltammetry, because the metal is first concentrated on the electrode.
+    - Anodic stripping voltammetry, as the metal is preconcentrated on the electrode.
   correct: 3
   explanation: >-
     Plain CV and ion-selective electrodes work at roughly micromolar levels, far above 0.5 microgram

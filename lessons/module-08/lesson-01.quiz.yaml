@@ -4,7 +4,7 @@
     24.0 C. What is the sign of q for the dissolving salt, and is the process exothermic?
   options:
     - q is positive and the process is endothermic, because the water gained heat.
-    - q is negative and the process is exothermic, because the salt gave heat to the water.
+    - q is negative and it is exothermic, because the salt gave heat to the water.
     - q is positive and the process is exothermic, because the temperature went up.
     - q is zero, because the cup is insulated and no heat leaves it.
   correct: 1
@@ -29,10 +29,10 @@
     Per gram, methane releases 55.5 kJ and ethanol 29.7 kJ when burnt to CO2 and liquid water, even
     though ethanol releases more per mole. What is the best explanation?
   options:
-    - Ethanol already contains oxygen and has a larger molar mass, so each gram holds less fuel to oxidise.
+    - Ethanol already contains oxygen and is heavier, so each gram holds less fuel to oxidise.
     - Ethanol is a liquid, and liquids always release less heat than gases per gram.
     - Methane forms more CO2 per mole than ethanol does, so it releases more heat.
-    - The table values for ethanol include evaporation of the water, which lowers them.
+    - The table values for ethanol include evaporation of the product water, which lowers them.
   correct: 0
   explanation: >-
     Per mole ethanol gives -1367 kJ, but it weighs 46 g/mol and is partly oxidised already (one O atom).

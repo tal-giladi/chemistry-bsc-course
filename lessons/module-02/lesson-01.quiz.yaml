@@ -34,8 +34,8 @@
     after a dose?
   options:
     - About 40 %, since 15 h is 2.5 times 6 h and 1/2.5 is 0.4.
-    - About 18 %, since 15 h is 2.5 half-lives and 0.5 to the power 2.5 is 0.18.
-    - About 25 %, since 15 h is a bit more than two half-lives.
+    - About 18 %, since 15 h is 2.5 half-lives and 0.5^2.5 is 0.18.
+    - About 25 %, since 15 h is a bit more than two half-lives of 6.0 h.
     - About 8 %, since the rate constant is 6.0 per hour.
   correct: 1
   explanation: >-

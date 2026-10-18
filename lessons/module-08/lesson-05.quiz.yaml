@@ -4,7 +4,7 @@
   options:
     - Iron is oxidised from +3 to 0, so Fe2O3 is the reducing agent.
     - Oxygen is reduced from 0 to -2, so it is the oxidising agent.
-    - Aluminium is reduced from 0 to +3, so it is the oxidising agent.
+    - Aluminium is reduced from 0 to +3, so it acts as the oxidising agent.
     - Aluminium is oxidised from 0 to +3, so it is the reducing agent.
   correct: 3
   explanation: >-
@@ -16,7 +16,7 @@
     Every atom balances. What is wrong?
   options:
     - Nothing; if the atoms balance, the equation is correct.
-    - The charge does not balance (+9 left, +5 right); Fe needs a coefficient of 5 on both sides.
+    - Charge does not balance (+9 left, +5 right); Fe needs a 5 on both sides.
     - The oxygen should be balanced with O2, not with water.
     - The H+ should be replaced with OH-, because permanganate reactions are basic.
   correct: 1
@@ -43,7 +43,7 @@
   options:
     - The matrix was built wrongly, because every real equation has a one-dimensional null space.
     - The equation cannot be balanced at all, so the reaction is impossible.
-    - Two independent reactions are mixed, so the ratio of H2O to H2O2 is not fixed by balancing.
+    - Two independent reactions are mixed, so balancing cannot fix the H2O to H2O2 ratio.
     - There are exactly two correct sets of coefficients, and you pick the smaller one.
   correct: 2
   explanation: >-
@@ -54,8 +54,8 @@
     You balance MnO4- -> MnO2 in basic solution. After balancing as in acid you have
     MnO4- + 4 H+ + 3 e- -> MnO2 + 2 H2O. What is the next step?
   options:
-    - Delete the 4 H+, because there is no H+ in a basic solution.
-    - Add 4 OH- to both sides, combine 4 H+ + 4 OH- into 4 H2O, and cancel water.
+    - Delete the 4 H+, because there is no free H+ at all in a basic solution like this.
+    - Add 4 OH- to both sides, turn 4 H+ + 4 OH- into 4 H2O, and cancel water.
     - Replace 4 H+ with 4 OH- on the left side only.
     - Add 4 OH- to the right side only, to balance the charge.
   correct: 1

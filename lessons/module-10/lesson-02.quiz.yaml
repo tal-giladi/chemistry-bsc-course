@@ -20,7 +20,7 @@
     - About 1.06 V, the average of the two formal potentials.
     - About 1.26 V, because the potential at equivalence is set by cerium.
     - About 0.86 V, the average of the two formal potentials minus the reference potential.
-    - About 0.68 V, because iron controls the potential until all of it is oxidised.
+    - About 0.68 V, because iron controls the potential until all of it has been oxidised to Fe3+.
   correct: 2
   explanation: >-
     E_eq = (0.68 + 1.44)/2 = 1.06 V vs SHE. Against Ag/AgCl you subtract 0.197 V, so the meter reads
@@ -42,10 +42,10 @@
   question: >-
     Why is phosphoric acid added before the periodate step in the manganese-in-steel method?
   options:
-    - To oxidise Mn2+ to permanganate faster than periodate alone can.
+    - To oxidise Mn2+ to permanganate faster than periodate alone can manage in hot acid.
     - To dissolve the carbon in the steel, which would otherwise scatter light.
     - To destroy nitrogen oxides left from the nitric acid dissolution.
-    - To bind Fe3+ in a colourless complex, so its yellow colour does not add to the absorbance.
+    - To bind Fe3+ in a colourless complex so its yellow does not add to the absorbance.
   correct: 3
   explanation: >-
     Steel is mostly iron, and Fe3+ is yellow. Phosphate complexes it and removes the colour. Nitrogen
@@ -56,9 +56,9 @@
     peaks between 19.5 and 20.0 mL. What is the best next step?
   options:
     - Report 19.75 mL, because the midpoint of the steepest step is the end point.
-    - Repeat the titration with 0.05-0.1 mL steps near 20 mL and use the second-derivative zero crossing.
+    - Repeat with 0.05-0.1 mL steps near 20 mL and use the second-derivative zero crossing.
     - Report 20.0 mL, because the end point is always at the end of the steepest step.
-    - Fit a straight line through all the points and take the volume where pH equals 7.
+    - Fit a straight line through all the points and take the volume where the pH equals 7.00.
   correct: 1
   explanation: >-
     The derivative can only locate the end point to about the step size, here 0.5 mL or 2.5 %. Small steps

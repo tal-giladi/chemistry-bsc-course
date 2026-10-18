@@ -18,7 +18,7 @@
   options:
     - The sample is pure benzil; the 5.9 ppm peak is the solvent.
     - The sample is 3.5 mol% benzoin, because the aromatic protons dilute the signal tenfold.
-    - The sample contains about 35 mol% benzoin, so recrystallise or re-oxidise before step 3.
+    - About 35 mol% benzoin remains; recrystallise or re-oxidise before step 3.
     - The sample is benzilic acid, whose OH appears at 5.9 ppm.
   correct: 2
   explanation: >-
@@ -28,9 +28,9 @@
   question: >-
     Which single observation best shows that step 3 (benzil to benzilic acid) has happened?
   options:
-    - The product is a bright yellow solid that melts near 95 °C.
+    - The product is a bright yellow crystalline solid that melts near 95 °C.
     - A one-proton singlet near 10 ppm appears in the ¹H NMR.
-    - A one-proton CH(OH) doublet appears near 5.9 ppm.
+    - A one-proton CH(OH) doublet appears near 5.9 ppm in the ¹H NMR.
     - A broad O–H at 2500–3300 cm⁻¹ and a C=O near 1715 cm⁻¹ appear.
   correct: 3
   explanation: >-
@@ -44,9 +44,9 @@
     - About 1.9 g
     - About 2.6 g
     - About 5.2 g
-    - About 10 g
+    - About 10.4 g
   correct: 2
   explanation: >-
     2.0 g is 8.76 mmol. At 36 % overall you need enough for 8.76/0.36 = 24.3 mmol at 100 %, and two
     benzaldehydes make each benzoin: 48.7 mmol, 5.2 g. 1.9 g ignores the losses, 2.6 g forgets the 2:1
-    ratio, and 10 g counts the ratio twice.
+    ratio, and 10.4 g counts the ratio twice.

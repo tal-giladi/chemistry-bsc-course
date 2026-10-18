@@ -28,8 +28,8 @@
   question: >-
     How many stereoisomers, counting enantiomers separately, does octahedral [Co(en)2Cl2]+ have?
   options:
-    - Two, cis and trans, because a chelate ring cannot create chirality.
-    - Three, because the trans form is achiral and the cis form exists as a mirror-image pair.
+    - Two, cis and trans, because a chelate ring like en can never create chirality.
+    - Three, as the trans form is achiral and the cis form is a mirror-image pair.
     - Four, because each en ligand can be oriented in two ways.
     - One, because the two en ligands force a single arrangement.
   correct: 1
@@ -55,9 +55,9 @@
     coordination chemistry?
   options:
     - Lemon juice oxidises the iron to a colourless Fe(IV) state.
-    - Lemon juice dilutes the tea, so the same complex simply looks paler.
+    - Lemon juice dilutes the tea, so the same iron complex simply looks paler.
     - The tablet's coating dissolves in acid and absorbs the colour.
-    - Acid protonates the polyphenol donors, and citrate competes for the iron.
+    - Acid protonates the polyphenol donors, and citrate competes for iron.
   correct: 3
   explanation: >-
     Fe3+ forms intensely coloured chelates with deprotonated gallate groups. Adding H+ removes the donor

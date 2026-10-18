@@ -16,7 +16,7 @@
     A structural biologist finds a metal site with two cysteine S and two histidine N in a tetrahedron,
     in a protein that binds DNA and does no chemistry. Which metal is most likely?
   options:
-    - Zn2+, a borderline, redox-inert ion that suits N and S donors and a structural role.
+    - Zn2+, a borderline, redox-inert ion suited to N and S donors.
     - Ca2+, because DNA-binding proteins need a hard ion to bind phosphate.
     - Fe3+, because tetrahedral sulfur sites always hold iron.
     - Mg2+, because it is the most abundant divalent ion in the cell.
@@ -31,7 +31,7 @@
     position of the iron?
   options:
     - The axial ligand pulls the iron towards itself and out of the ring.
-    - The iron is low-spin d6, with empty eg orbitals, so it is small enough for the ring hole.
+    - The iron is low-spin d6 with empty eg orbitals, so it fits the ring hole.
     - The iron has been oxidised to high-spin Fe(III), which is smaller and fits the hole.
     - The porphyrin is protonated, which pulls any iron into the plane.
   correct: 1
@@ -46,7 +46,7 @@
     - Neutral O2 with an unchanged double bond, held only by van der Waals contacts.
     - Superoxide, like oxy-haemoglobin, since any value below free O2 means superoxo.
     - An O-O triple bond, because a lower frequency means a stronger bond.
-    - Peroxide with bond order about 1, a weaker bond than the superoxo of haemoglobin.
+    - Peroxide with bond order about 1, weaker than haemoglobin's superoxo.
   correct: 3
   explanation: >-
     Stretching frequency falls as bond order falls. About 1105 cm-1 is superoxo (order 1.5); about 844
@@ -73,7 +73,7 @@
     - The data are noisy, and more points would make the wave disappear.
     - The fit is excellent, because the uncertainty in n is only 1 %.
     - The data are wrong at low pressure and those points should be removed.
-    - "The Hill model is too simple: the real Hill slope varies, so the misfit is systematic."
+    - The Hill model is too simple; the misfit is systematic, not random.
   correct: 3
   explanation: >-
     A structured residual pattern means the model is wrong, not the data. Real haemoglobin has a Hill
@@ -84,7 +84,7 @@
     Stored blood loses most of its 2,3-bisphosphoglycerate within a couple of weeks. Right after a large
     transfusion of such blood, what happens to O2 delivery?
   options:
-    - It falls, because the curve shifts left and the haemoglobin holds its O2 more tightly.
+    - It falls, as the curve shifts left and haemoglobin holds its O2 tighter.
     - It rises, because without 2,3-BPG the curve shifts right and releases more O2.
     - It is unchanged, because 2,3-BPG affects only fetal haemoglobin.
     - It falls, because 2,3-BPG is needed for O2 to bind in the lungs.
@@ -111,8 +111,8 @@
     the driving force from 0.7 eV to 1.5 eV makes the transfer slower. Lambda is about 0.7 eV. Why?
   options:
     - The extra driving force heats the protein and unfolds the copper site.
-    - The larger driving force lengthens the tunnelling path through the protein.
-    - The reaction has entered the Marcus inverted region, where the barrier grows again.
+    - The larger driving force lengthens the electron's tunnelling path through the protein.
+    - The reaction is in the Marcus inverted region, where the barrier grows again.
     - Copper cannot accept electrons with more than 1 eV of energy.
   correct: 2
   explanation: >-

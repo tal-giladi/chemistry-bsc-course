@@ -5,7 +5,7 @@
   options:
     - 4.0e-5 mol L-1 s-1, because v is the rate of whichever species you measure.
     - 2.0e-5 mol L-1 s-1, because N2O5 is consumed half as fast as NO2 forms.
-    - 1.0e-5 mol L-1 s-1, because v is the NO2 rate divided by its coefficient 4.
+    - 1.0e-5 mol L-1 s-1, because v is the NO2 rate over its coefficient 4.
     - 1.6e-4 mol L-1 s-1, because v is the NO2 rate times its coefficient 4.
   correct: 2
   explanation: >-
@@ -56,7 +56,7 @@
     while at 20.8 mM the fraction converted decays exponentially. Which statement fits?
   options:
     - The reaction is first order everywhere, but the high-concentration runs were too short to show it.
-    - The reaction is zero order in sucrose at high concentration and close to first order at low concentration.
+    - Zero order in sucrose at high concentration, and close to first order at low concentration.
     - The reaction is second order, because the rate stays high at high sucrose concentration.
     - The order cannot be found, because the R^2 of every plot at 333 mM is above 0.99.
   correct: 1

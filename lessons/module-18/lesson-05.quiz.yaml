@@ -28,10 +28,10 @@
     Permanganate, MnO4-, is intensely purple although manganese(VII) has no d electrons. Where does the
     colour come from?
   options:
-    - An oxygen-to-manganese charge-transfer band, which is Laporte-allowed and therefore strong.
+    - An oxygen-to-manganese charge-transfer band, which is Laporte-allowed and so strong.
     - A d-d transition of the few d electrons that remain on Mn(VII).
     - A spin-forbidden d-d band made strong by the tetrahedral shape.
-    - Colloidal manganese dioxide that always forms in permanganate solutions.
+    - Colloidal manganese dioxide that always forms in permanganate solutions and scatters light.
   correct: 0
   explanation: >-
     Mn(VII) is d0, so d-d transitions are impossible. Light moves an electron from an O lone pair into
@@ -42,10 +42,10 @@
     A 0.1 M solution of [Mn(H2O)6]2+ looks almost colourless, while a 0.1 M solution of [Cr(H2O)6]3+ is
     clearly violet. Why?
   options:
-    - Mn2+ absorbs only in the infrared, because its Delta_o is very small.
+    - Mn2+ absorbs only in the infrared, because its Delta_o is very small for a 2+ metal ion.
     - Mn2+ is d0, so it has no electrons to excite.
     - The Cr3+ band is charge transfer, while the Mn2+ band is d-d.
-    - Every d-d band of high-spin d5 must flip a spin, so it is spin- and Laporte-forbidden.
+    - Each d-d band of high-spin d5 must flip a spin, so it is spin- and Laporte-forbidden.
   correct: 3
   explanation: >-
     High-spin d5 has one electron in each d orbital; any excitation pairs two electrons and changes the
@@ -56,7 +56,7 @@
     An unknown octahedral cobalt(II) complex has a moment of 4.6 BM. Which assignment is best?
   options:
     - Low-spin d7 with one unpaired electron, raised to 4.6 BM by the ligands.
-    - High-spin d7 with three unpaired electrons, plus an orbital contribution.
+    - High-spin d7 with three unpaired electrons, plus orbital contribution.
     - High-spin d7 with four unpaired electrons, because 4.6 is close to 4.90.
     - Low-spin d6, because cobalt(II) becomes cobalt(III) in solution.
   correct: 1

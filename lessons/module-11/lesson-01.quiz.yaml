@@ -3,10 +3,10 @@
     Your supervisor sends you 30 papers on phone-based colour tests and asks which three are most relevant
     to measuring dyes in sweets. How do you start?
   options:
-    - Read each paper fully from the start, so that no important detail is missed.
+    - Read each paper fully from the start, so that no important detail or caveat is missed.
     - Read only the conclusions, since that is where the authors say what they found.
     - Do a timed first pass of each (title, abstract, headings, figures, conclusion) and rank them.
-    - Pick the papers with the most citations, because those are the most reliable ones.
+    - Pick the papers with the most citations, because those are the most reliable and relevant ones.
   correct: 2
   explanation: >-
     A 5–10 minute first pass answers the five Cs and tells you whether a paper deserves more time. Reading
@@ -31,7 +31,7 @@
     A phone method has a limit of detection 70 times higher than UV–vis. The legal limit for the dye is
     about 60 times higher than the largest amount found in any sample, and far above the phone's LOQ. What follows?
   options:
-    - The phone method is fit for checking samples against the legal limit despite its lower sensitivity.
+    - The phone method is fit for checking samples against the legal limit, though less sensitive.
     - The phone method is unusable, because a method must be at least as sensitive as the reference.
     - The phone method cannot be judged until its LOD is lowered to the UV–vis value.
     - The comparison is meaningless, because LODs from different instruments cannot be compared.

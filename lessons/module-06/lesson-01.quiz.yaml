@@ -31,7 +31,7 @@
     solution. Blood plasma is about 0.30 osmol/L. What happens?
   options:
     - Both sets stay normal, because both solutions are 0.30 mol/L.
-    - Cells in glucose shrink and cells in NaCl swell, because NaCl particles are smaller.
+    - Cells in glucose shrink and cells in NaCl swell, because NaCl particles are smaller and enter faster.
     - Both sets swell, because neither glucose nor NaCl can cross the membrane.
     - Cells in glucose stay about normal; cells in NaCl shrink, since it is about 0.6 osmol/L.
   correct: 3

@@ -43,7 +43,7 @@
     An old AA cell reads 1.55 V on the meter with nothing connected, but a clock using it stops. What
     is the most likely explanation?
   options:
-    - Its internal resistance has grown, so its voltage drops sharply once current flows.
+    - Its internal resistance has grown, so the voltage drops under load.
     - Its EMF has risen above the clock's rating, so the clock protects itself.
     - The meter reads too high because voltmeters add their own voltage.
     - The cell has reversed polarity, which a meter cannot detect.

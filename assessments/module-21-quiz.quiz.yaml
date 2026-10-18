@@ -5,8 +5,8 @@
   options:
     - About 300 K, because rotational levels are always populated up to J of about 7.
     - About 0.1 K, because only J = 0 would be populated above that.
-    - About 1000 K, because high J levels are depopulated by fast collisions.
-    - About 10 K, because then kT/hc is about 7 cm-1 and only the lowest few J are populated.
+    - About 1000 K, because the high J levels are rapidly depopulated by fast collisions.
+    - About 10 K, where kT/hc is about 7 cm-1, so only the lowest few J are populated.
   correct: 3
   explanation: >-
     Level J lies at B J(J+1): 3.8, 11.5 and 23 cm-1 for J = 1, 2, 3. At 10 K, kT/hc = 6.9 cm-1, so J = 3 and
@@ -17,7 +17,7 @@
     to the colder one, in statistical terms?
   options:
     - The hotter block has more energy, and energy spreads to equalise the amount per block.
-    - The colder block gains more entropy per joule than the hotter one loses, so total W rises.
+    - The colder block gains more entropy per joule than the hotter loses, so W rises.
     - The hotter block's atoms move faster and push energy across the boundary.
     - Microstates with equal temperatures have lower energy than the starting state.
   correct: 1
@@ -56,9 +56,9 @@
     statement about their vibrational heat capacity is right?
   options:
     - Both are zero, because vibrations only contribute above their theta_vib.
-    - Both equal R, because every vibration contributes R by equipartition at 298 K.
+    - Both equal R, because every vibration contributes R by equipartition already at 298 K.
     - Cl2 contributes more, because a stiffer bond stores more energy per quantum.
-    - Br2 contributes more, because its smaller theta_vib / T is closer to the classical limit.
+    - Br2 contributes more, as its smaller theta_vib / T is nearer the classical limit.
   correct: 3
   explanation: >-
     The Einstein function rises from 0 to R as T / theta_vib grows. At 298 K, x is 1.56 for Br2 and 2.70 for
@@ -69,7 +69,7 @@
     the right fix and why?
   options:
     - Use Q = q^N / N!, because identical gas atoms cannot be told apart.
-    - Use Q = q, because describing one atom is enough for an ideal gas.
+    - Use Q = q, because describing one atom is enough for an ideal monatomic gas.
     - Divide q by the symmetry number of argon, which is about 4.
     - Add the electronic degeneracy of argon, which lowers the entropy.
   correct: 0

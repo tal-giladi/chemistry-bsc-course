@@ -4,8 +4,8 @@
     nitrite in water with a phone. What is the most efficient plan?
   options:
     - Read the five most-cited papers in full, since citations show which ones matter.
-    - Read every introduction carefully, since that is where the relevance is explained.
-    - Give each a 5–10 minute first pass, answer the five Cs, and do a second pass only on the best few.
+    - Read every introduction carefully, since that is where the relevance to your project is explained.
+    - Give each a 5–10 minute first pass, answer the five Cs, then second-pass only the best few.
     - Read only the titles, since the abstract repeats what the title already says.
   correct: 2
   explanation: >-
@@ -16,8 +16,8 @@
     A paper's abstract says its relative errors against HPLC were "between 6 % and 16 %". In the table one
     sample reads 14.0 mg/L against an HPLC value of 12.6 mg/L, printed as 15.9 %. What is the right conclusion?
   options:
-    - That entry recomputes to 11.1 %, so the printed value is a slip worth noting, though it does not by itself overturn the method.
-    - The printed 15.9 % must be right, because peer reviewers check every number in a table.
+    - That entry recomputes to 11.1 %, a slip worth noting that does not by itself overturn the method.
+    - The printed 15.9 % must be right, because peer reviewers check every number in a results table.
     - The whole paper is unreliable, because one wrong number means the data were fabricated.
     - The two numbers cannot be compared, because relative error depends on which method is the reference.
   correct: 0
@@ -30,10 +30,10 @@
     the phone's limit of quantification, and the legal limit is higher still. Your supervisor asks whether the
     phone method can be used to screen candies against the law. What do you answer?
   options:
-    - No, because a method that is 74 times less sensitive cannot give reliable results.
+    - No, because a method that is 74 times less sensitive cannot give reliable results for dyes.
     - Only after the phone method's detection limit has been brought down to the UV–vis value.
     - No, because detection limits from different instruments cannot be compared at all.
-    - Yes, it is fit for that purpose, because the concentrations that matter lie far above its limits.
+    - Yes, it is fit for purpose, since the concentrations that matter lie far above its limits.
   correct: 3
   explanation: >-
     Fitness for purpose asks whether the method answers the question asked. Sensitivity beyond what the
@@ -45,9 +45,9 @@
     calorimetric measurement). Which do you cite?
   options:
     - The Wikipedia value, because it cites a peer-reviewed review article from 1937.
-    - The NIST entry, as the original measurement with an uncertainty, matching an independent one.
+    - The NIST entry, the original measurement with an uncertainty, matching an independent one.
     - The PubChem value, because the handbook it cites is a critically evaluated source.
-    - The mean of all three values, so that no single source is favoured over the others.
+    - The mean of all three values, so that no single source is unfairly favoured over the others.
   correct: 1
   explanation: >-
     Cite as close to the measurement as possible, with uncertainty and conditions. The PubChem number is an
@@ -59,7 +59,7 @@
   options:
     - Cite it anyway with the journal name and year, since the DOI is only an extra detail.
     - Ask the chatbot again for the DOI, and cite it if the second answer matches the first.
-    - Treat the reference as invented and do not use it unless you can find and read the paper itself.
+    - Treat it as invented and do not use it unless you can find and read the paper itself.
     - Cite a different paper from the same journal on a similar topic in its place.
   correct: 2
   explanation: >-
@@ -70,10 +70,10 @@
     A 2019 paper in a top journal supports a step in your plan. Crossref shows a "retraction" notice dated 2020
     and also a "correction" from 2019. How do you treat it?
   options:
-    - Use it, because the correction shows the authors fixed the problems before 2020.
+    - Use it, because the 2019 correction shows the authors fixed the problems before the 2020 notice.
     - Use it but cite the correction notice instead of the paper.
     - Use it, because papers in top journals are reviewed more carefully than others.
-    - Do not use it as evidence; a retraction withdraws the paper, whatever corrections came before.
+    - Do not use it as evidence; a retraction withdraws the paper, whatever corrections came first.
   correct: 3
   explanation: >-
     A retraction means the journal or authors no longer stand behind the results, so it overrides earlier
@@ -83,9 +83,9 @@
     An unfamiliar journal invites you to publish your home vinegar study, promising peer review in 72 hours for
     a fee. Its website lists no named editors. What is the best judgement?
   options:
-    - It is likely a predatory journal; check it against Think. Check. Submit. and DOAJ before going further.
+    - Likely predatory; check it against Think. Check. Submit. and DOAJ before going further.
     - It is likely fine, because fast review is a sign of an efficient editorial office.
-    - It is fine as long as the fee is lower than that of established open-access journals.
+    - It is fine as long as the fee is lower than that charged by established open-access journals.
     - It is fine if the journal's name sounds similar to a well-known chemistry journal.
   correct: 0
   explanation: >-
@@ -112,7 +112,7 @@
     - A bar chart of the six means with standard deviation error bars.
     - A pie chart showing each learner's share of the total acid found.
     - A dot plot of all thirty titrations with each mean and its 95 % confidence interval.
-    - A bar chart of the six means with the y-axis zoomed in to make differences visible.
+    - A bar chart of the six means with the y-axis zoomed in to make the differences clearly visible.
   correct: 2
   explanation: >-
     With five points per group, plotting every point shows the outlier directly; bars show only the lowered mean,
@@ -123,7 +123,7 @@
     repeatability alone is significant. Which conclusion is best supported?
   options:
     - It agrees with the label within U, though it is slightly low on repeatability alone.
-    - The measurement proves that the label value is wrong and should be corrected.
+    - The measurement proves that the label value is wrong and should be corrected by the maker.
     - The measurement proves that the vinegar contains exactly what the label says.
     - Nothing can be concluded, because the t-test and the expanded uncertainty disagree.
   correct: 0

@@ -12,3 +12,5 @@ Problem: in about 57% of quiz questions the correct option is the longest, so a 
 5. Finish: `py scripts/quiz_bias.py <first> <last>` shows ≤ 30%; `py scripts/check.py` 0 errors. Report in under 60 words.
 
 Edit only `.quiz.yaml` files in your module range.
+
+Never start sub-agents of your own: the course allows at most two writing agents at a time.

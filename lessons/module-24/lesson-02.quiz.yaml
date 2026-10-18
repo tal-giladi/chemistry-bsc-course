@@ -31,7 +31,7 @@
     mother liquor melts 6 °C lower over a wide range. Why?
   options:
     - The second crop cooled more slowly, so its crystals are larger and less dense.
-    - The impurities were concentrated in the mother liquor, so the second crop carries more of them.
+    - Impurities build up in the mother liquor, so the second crop carries more of them.
     - The second crop is a different polymorph that always melts lower.
     - The first crop took all the solvent of crystallisation, so the second crop is anhydrous.
   correct: 1
@@ -46,7 +46,7 @@
   options:
     - Heat faster so that the vapour leaves before it can mix.
     - Use a vacuum, because a lower pressure always separates liquids better.
-    - Add a fractionating column worth at least about 3 to 4 theoretical plates and distil slowly.
+    - Add a fractionating column of about 4 theoretical plates and distil slowly.
     - Collect only the first drop, which is pure lower boiler in a simple distillation.
   correct: 2
   explanation: >-

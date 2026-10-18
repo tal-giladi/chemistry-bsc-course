@@ -18,7 +18,7 @@
   options:
     - The one-site carrier, because its curve is steeper at low pressure.
     - Both release the same amount, because they share the same P50.
-    - Haemoglobin, about 65 % of its O2 against about 36 % for the one-site carrier.
+    - Haemoglobin, about 65 % of its O2 against 36 % for the one-site carrier.
     - Haemoglobin, but only because it carries four O2 per molecule instead of one.
   correct: 2
   explanation: >-
@@ -45,7 +45,7 @@
     - CO also oxidises the iron to Fe(III), so the remaining sites cannot bind O2 at all.
     - CO lowers the pH of blood and causes a strong Bohr shift to the right.
     - CO destroys 2,3-BPG, so the red cells lose all their O2 in the lungs.
-    - CO pushes the tetramers towards R, so the remaining O2 is held more tightly and released less.
+    - CO favours the R state, so the remaining O2 is held tighter and released less.
   correct: 3
   explanation: >-
     Bound CO favours the high-affinity R structure, shifting the curve of the remaining sites to the

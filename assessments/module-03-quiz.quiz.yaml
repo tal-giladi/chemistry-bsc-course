@@ -41,7 +41,7 @@
     - 6 alpha + 0 beta, since the eigenvalues add up to zero.
     - 6 alpha + 8 beta, from filling the three highest x values with two electrons each.
     - 6 alpha - 8 beta, from filling the three lowest x values with two electrons each.
-    - 6 alpha + 4 beta, from filling only the largest x value with all six electrons.
+    - 6 alpha + 4 beta, from filling only the single largest x value with all six electrons.
   correct: 1
   explanation: >-
     beta is negative, so the largest x values are the lowest orbitals. Two electrons each in x = 2, 1
@@ -51,10 +51,10 @@
     The stretch of 12C16O is near 2143 cm^-1. A student predicts the 13C16O band by assuming the same
     force constant. Roughly where should it appear?
   options:
-    - Near 2190 cm^-1, because a heavier isotope stiffens the bond.
+    - Near 2190 cm^-1, because a heavier isotope stiffens the bond and raises it.
     - Near 1978 cm^-1, because the wavenumber scales with 12/13.
     - Near 2143 cm^-1, because isotopes do not change vibrations.
-    - Near 2096 cm^-1, because it scales with the root of the reduced-mass ratio.
+    - Near 2096 cm^-1, scaling with the root of the reduced-mass ratio.
   correct: 3
   explanation: >-
     mu is 6.857 u for 12C16O and 7.172 u for 13C16O; the wavenumber goes as 1/sqrt(mu), so it falls
@@ -65,7 +65,7 @@
     0.990, 0.998 and 0.991. The three-month loss is 15 %. What do you conclude about the order?
   options:
     - >-
-      First order is most likely, but at low conversion all three plots look nearly straight.
+      First order is likely, but at low conversion all three plots look nearly straight.
     - >-
       Zero order, because its R^2 is close to the highest and it is the simplest model.
     - >-
@@ -95,7 +95,7 @@
     long until c has gone 95 % of the way to its new steady state?
   options:
     - About 10 minutes, one time constant 1/k.
-    - About 30 minutes, since 95 % takes ln 20, about 3 time constants.
+    - About 30 minutes, about 3 time constants (ln 20).
     - About 7 minutes, one half-life ln 2 / k.
     - It depends on r, so it cannot be found without the feed rate.
   correct: 1
@@ -139,7 +139,7 @@
     one eigenvalue equal to +0.05 per second. What does this tell you?
   options:
     - One species grows exponentially, which is normal in first-order networks.
-    - There is an error in the rate matrix, since a closed first-order network cannot grow.
+    - The rate matrix has an error; a closed first-order network cannot grow.
     - The positive eigenvalue belongs to the equilibrium state of the network.
     - The system oscillates with a period of 2 pi divided by 0.05 seconds.
   correct: 1

@@ -16,7 +16,7 @@
     A classmate measures gamma = 1.32 for dry air with the Clément–Desormes bottle, holding the tap open
     for about five seconds each time. What is the most likely cause of the low value?
   options:
-    - Heat flowed into the cold gas while the tap was open, so the expansion was not adiabatic.
+    - Heat flowed into the cold gas while the tap was open, so it was not adiabatic.
     - Air contains water vapour, whose extra vibrations always lower gamma below 1.35.
     - The approximation h1/(h1 - h2) underestimates gamma by several per cent.
     - The pump compressed the air adiabatically, which makes h1 too large in every trial.
@@ -42,7 +42,7 @@
     A student computes the rms speed of N2 at 298 K as 16 m/s. Which slip explains this number?
   options:
     - Using the mean speed formula instead of the rms formula.
-    - Entering the molar mass as 28.0 g/mol instead of 0.0280 kg/mol.
+    - Entering the molar mass as 28.0 g/mol, not 0.0280 kg/mol.
     - Using the Boltzmann constant in place of the gas constant.
     - Using the temperature in degrees Celsius instead of kelvin.
   correct: 1

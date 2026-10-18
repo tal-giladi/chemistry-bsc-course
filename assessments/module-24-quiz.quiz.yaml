@@ -4,7 +4,7 @@
     acid by-product (pKa 4.5) and an amine catalyst (conjugate acid pKa 10). Which wash sequence leaves
     only the product in the ethyl acetate?
   options:
-    - Wash with dilute HCl, then with aqueous NaHCO₃, then brine; dry and evaporate.
+    - Wash with dilute HCl, then aqueous NaHCO₃, then brine; dry and evaporate.
     - Wash three times with water only, because all three are partly water-soluble.
     - Wash with aqueous NaOH only, because a strong base removes everything polar.
     - Wash with brine only, then dry; the drying agent binds the acid and the amine.
@@ -20,7 +20,7 @@
   options:
     - Smell both layers; the organic one smells of solvent.
     - Assume the top layer is organic, as it usually is.
-    - Add a few drops of water and see which layer they join.
+    - Add a few water drops and see which layer they join.
     - Measure the pH of each layer with indicator paper.
   correct: 2
   explanation: >-
@@ -45,8 +45,8 @@
     iron(III) chloride. The crude yield is 94 %. What do you do next?
   options:
     - Report 94 %, since the product is dry and the yield is high.
-    - Recrystallise it, dry it, and measure the yield and melting point again.
-    - Heat it at 130 °C for an hour to drive off the salicylic acid.
+    - Recrystallise, dry, then measure the yield and melting point again.
+    - Heat it at 130 °C for an hour to drive off the remaining salicylic acid.
     - Wash it with aqueous NaOH to remove the phenol.
   correct: 1
   explanation: >-
@@ -59,7 +59,7 @@
   options:
     - 5.2 g, because water does not react with Grignard reagents.
     - 2.6 g, because water halves any organometallic reagent.
-    - 3.8 g, because 5.6 mmol of the reagent is destroyed by the water.
+    - 3.8 g, as the water destroys 5.6 mmol of the reagent.
     - 4.7 g, because water only slows the reaction down.
   correct: 2
   explanation: >-
@@ -71,7 +71,7 @@
     co-spot lane you see two touching spots at 0.43 and 0.45. What does this tell you?
   options:
     - The spots are the same compound; small Rf differences are noise.
-    - The product and starting material are different compounds, and both are present.
+    - Product and starting material are different, and both are present.
     - The plate was overloaded, which always splits one compound into two.
     - Nothing, because co-spots only work for coloured compounds.
   correct: 1
@@ -83,7 +83,7 @@
     You must separate cyclohexane (bp 81 °C) from toluene (bp 111 °C). The relative volatility is about 2.4
     and you want a distillate of 95 % cyclohexane from a 50:50 mixture. What setup do you use?
   options:
-    - A fractionating column worth at least 3–4 theoretical plates, distilling slowly.
+    - A fractionating column of about 4 theoretical plates, distilling slowly.
     - A simple distillation, heated fast so the vapour leaves before mixing.
     - A rotary evaporator, which separates any liquids with different boiling points.
     - A steam distillation, because both liquids are immiscible with water.
@@ -99,7 +99,7 @@
     - The product reacted with the acid and was destroyed.
     - The product evaporated, because the acid wash is exothermic.
     - The product dissolved in the acid, which is why that wash is used.
-    - The product floats on concentrated acid, so the student kept the acid layer.
+    - The product floats on the acid; the student kept the acid layer.
   correct: 3
   explanation: >-
     1-Bromobutane (1.27 g/mL) is below water but above concentrated sulfuric acid (1.84 g/mL). The acid
@@ -124,7 +124,7 @@
     sequence is correct?
   options:
     - The overall yield is about 70 %, the average of the steps.
-    - The overall yield is 55 %, set by the worst step.
+    - The overall yield is 55 %, since the worst step sets the limit for the sequence.
     - The overall yield is about 33 %, and step 1 is the best one to improve.
     - The overall yield is about 33 %, and step 3 is the best one to improve.
   correct: 2

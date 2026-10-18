@@ -19,7 +19,7 @@
     the most sensible next step?
   options:
     - Report two mechanisms, one at low and one at high current, because the slope changes.
-    - Report 160 mV/dec, because the high-current region is the one that matters in a fuel cell.
+    - Report 160 mV/dec, because the high-current region is the one that matters most in a working fuel cell.
     - Subtract i times 0.4 ohm cm2 from every potential and refit, then check for a mass-transport limit.
     - Average the two slopes to 115 mV/dec, because the true value lies between them.
   correct: 2
@@ -59,8 +59,8 @@
     is unnecessary because aluminium is more active than steel. What is the best reply?
   options:
     - Agree, because aluminium will always protect the steel in seawater.
-    - Disagree; aluminium's oxide film can stop it acting as an anode, and the fittings would be sacrificed.
-    - Agree, because zinc and aluminium in contact would corrode each other faster.
+    - Disagree; aluminium's oxide film may stop it acting as an anode, and the fittings would be lost.
+    - Agree, because zinc and aluminium in contact would corrode each other faster and waste the anodes.
     - Disagree, because aluminium is always a cathode for steel in seawater.
   correct: 1
   explanation: >-
@@ -73,7 +73,7 @@
     likely description?
   options:
     - An fcc phase indexed 111, 200, 220, 311, 222, with Kbeta satellites of the two strongest lines.
-    - A bcc phase indexed 110, 200, 211, 220, 310, with an impurity phase giving the two weak peaks.
+    - A bcc phase indexed 110, 200, 211, 220, 310, with a minor impurity phase giving the two weak peaks.
     - A simple cubic phase indexed 100, 110, 111, 200, 210, with Kalpha2 lines giving the weak peaks.
     - An fcc phase, with two weak lines from a second fcc phase with a slightly larger cell.
   correct: 0
@@ -98,8 +98,8 @@
     A sensor must work up to 400 K with a doping of 1e15 per cm3. Ge has Eg = 0.66 eV and Si 1.12 eV, both with
     sqrt(Nc Nv) near 1e19 per cm3 at 300 K. Which material do you choose and why?
   options:
-    - Si, because at 400 K its intrinsic carrier density stays far below the doping while Ge's reaches it.
-    - Ge, because its smaller gap gives more carriers and therefore a stronger signal.
+    - Si; at 400 K its intrinsic carrier density stays far below the doping, while Ge's reaches it.
+    - Ge, because its smaller gap gives more thermal carriers and therefore a stronger and cleaner signal.
     - Either, because n_i depends on Eg/kT and both gaps are much larger than kT.
     - Si, because indirect-gap materials have no thermal carriers at all.
   correct: 0

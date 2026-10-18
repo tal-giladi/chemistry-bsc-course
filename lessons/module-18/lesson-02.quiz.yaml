@@ -6,8 +6,8 @@
   options:
     - She should have used the second ionisation energy of potassium as well.
     - The electron affinity must be added, not subtracted, because energy is released.
-    - The formation enthalpy of KCl should enter with a positive sign as written.
-    - She used the bond enthalpy of Cl2 where the atomisation enthalpy of one Cl atom (121.3) belongs.
+    - The formation enthalpy of KCl should enter the cycle with a positive sign as written.
+    - She used the Cl2 bond enthalpy where the atomisation enthalpy of Cl (121.3) belongs.
   correct: 3
   explanation: >-
     The cycle needs one Cl atom per KCl, so the step is half the Cl-Cl bond enthalpy, 121.3 kJ/mol.
@@ -31,9 +31,9 @@
     787 kJ/mol. What is the main reason for the 3 % gap?
   options:
     - The Born-Haber cycle double-counts the ionisation energy of sodium.
-    - The model treats the ions as point charges with simple repulsion and leaves out dispersion attraction.
+    - The model treats ions as point charges with simple repulsion and omits dispersion forces.
     - The Madelung constant of rock salt is only known to about 3 %.
-    - Lattice energies are always quoted at 0 K, so the cycle at 298 K is 26 kJ/mol too high.
+    - Lattice energies are always quoted at 0 K, so the cycle value at 298 K is 26 kJ/mol too high.
   correct: 1
   explanation: >-
     Dispersion (van der Waals) attraction between the ions' electron clouds adds to the lattice energy and

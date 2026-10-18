@@ -19,7 +19,7 @@
   options:
     - NaOEt in ethanol at reflux, because heat favours the less substituted side.
     - Aqueous NaOH at room temperature, because water stabilises the less substituted enolate.
-    - LDA in THF at -78 C, which removes the more accessible CH2 proton fastest and irreversibly.
+    - LDA in THF at -78 C, which removes the accessible CH2 proton fast and irreversibly.
     - Catalytic acid, because the enol forms on the less substituted side.
   correct: 2
   explanation: >-
@@ -29,7 +29,7 @@
   question: >-
     Which target is made most directly by the malonic ester synthesis using 1-bromopropane?
   options:
-    - Pentanoic acid, CH3CH2CH2CH2COOH.
+    - Pentanoic acid, CH3(CH2)3COOH.
     - 2-Hexanone, CH3COCH2CH2CH2CH3.
     - Butanoic acid, CH3CH2CH2COOH.
     - Pentan-2-ol, CH3CH(OH)CH2CH2CH3.
@@ -45,7 +45,7 @@
     - Because ethoxide is consumed by the Williamson reaction with the ester.
     - Because the beta-keto ester product precipitates from ethanol as a neutral solid.
     - Because ethanol evaporates and shifts the equilibrium.
-    - Because ethoxide deprotonates the product's CH2 (pKa about 11), pulling the equilibrium over.
+    - Because ethoxide deprotonates the product's CH2 (pKa about 11), driving it over.
   correct: 3
   explanation: >-
     The product beta-keto ester is far more acidic than ethanol (pKa 16), so its deprotonation has

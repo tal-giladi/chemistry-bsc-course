@@ -4,7 +4,7 @@
     the starting pressure times 15 L. How does this estimate compare with the true work?
   options:
     - It is too small, because pressure rises as the gas expands.
-    - It is too large, because the pressure falls during the expansion and the true area is smaller.
+    - It is too large, because the pressure falls during the expansion.
     - It is exact, because the temperature is constant so the pressure is constant too.
     - It is too large only if the gas is not ideal.
   correct: 1
@@ -18,7 +18,7 @@
   options:
     - The average rate over the 120 s, in mol per litre per second.
     - The rate constant of the reaction, in 1/s.
-    - The change in concentration over the 120 s, in mol per litre.
+    - The change in concentration over 120 s, in mol per litre.
     - The total amount in moles, independent of the volume.
   correct: 2
   explanation: >-
@@ -42,7 +42,7 @@
     For N2 between 298 K and 500 K, using a constant Cp of 29.12 J/(mol K) gives a heat 0.5 % below
     the Shomate integral. When is the constant-Cp shortcut most likely to fail badly?
   options:
-    - For a polyatomic gas such as CO2 heated over several hundred kelvin.
+    - For a polyatomic gas like CO2 heated over several hundred kelvin.
     - For N2 heated over 10 K near room temperature.
     - For any gas heated at constant pressure rather than constant volume.
     - For a gas whose Cp is given in J/(mol K) rather than J/(g K).

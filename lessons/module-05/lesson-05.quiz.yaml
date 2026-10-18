@@ -45,7 +45,7 @@
     and does not print any versions. What two changes help most?
   options:
     - Use a relative path inside the folder, and print the package versions.
-    - Convert the notebook to PDF, and add more comments to each cell.
+    - Convert the notebook to PDF, and add more explanatory comments to each code cell.
     - Move all code into one big cell, and set a random seed.
     - Use the newest pandas release, and turn off all warnings.
   correct: 0

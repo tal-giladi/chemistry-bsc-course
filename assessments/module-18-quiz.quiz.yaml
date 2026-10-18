@@ -4,7 +4,7 @@
     cathode will be after losing two electrons. For cobalt ([Ar] 3d7 4s2), what is Co2+?
   options:
     - "[Ar] 3d5 4s2, because the last electrons added (3d) are the first removed."
-    - "[Ar] 3d7, because the 4s electrons feel a much smaller Zeff and leave first."
+    - "[Ar] 3d7, because the 4s electrons feel a smaller Zeff and leave first."
     - "[Ar] 3d6 4s1, because one electron is removed from each subshell."
     - "[Ar] 3d9, because the 4s electrons drop into 3d when the ion forms."
   correct: 1
@@ -84,9 +84,9 @@
     this contradicts crystal field theory because both are Co(III). What is the correct reasoning?
   options:
     - Fluoride oxidises cobalt to Co(IV) in [CoF6]3-, which changes the d count.
-    - Both are d6; F- gives Delta_o (13 100 cm-1) below the pairing energy, NH3 (22 870 cm-1) above it.
+    - Both are d6; F- gives Delta_o (13 100 cm-1) below the pairing energy, NH3 (22 870) above.
     - The fluoride complex is tetrahedral, so it must be high spin.
-    - Ammonia is a pi donor that pushes the eg orbitals down, forcing all electrons to pair.
+    - Ammonia is a pi donor that pushes the eg orbitals down, forcing all six d electrons to pair.
   correct: 1
   explanation: >-
     With P in the complex about 0.8 x 23 625 = 18 900 cm-1, the weak-field fluoride complex is high spin
@@ -96,7 +96,7 @@
     A geologist finds a mineral whose colour comes from octahedral Cr3+. Its spectrum shows the lowest d-d
     band at 556 nm. What are Delta_o and the expected colour?
   options:
-    - 18 000 cm-1, and the mineral looks red-purple because green-yellow light is absorbed.
+    - 18 000 cm-1, and the mineral looks red-purple as green-yellow light is absorbed.
     - 18 000 cm-1, and the mineral looks green because it absorbs at a green wavelength.
     - 5 560 cm-1, and the mineral looks yellow because the band is near yellow.
     - 1 800 cm-1, and the mineral looks colourless because d-d bands are forbidden.
@@ -124,8 +124,8 @@
   options:
     - High-spin Fe(II), d6, with four unpaired electrons.
     - Low-spin Fe(III), d5, with one unpaired electron.
-    - Low-spin Fe(II), d6, with orbital contributions raising the moment.
-    - High-spin Fe(III), d5, with five unpaired electrons and only spin-forbidden d-d bands.
+    - Low-spin Fe(II), d6, with large orbital contributions raising the moment to 5.9 BM.
+    - High-spin Fe(III), d5, with five unpaired electrons and spin-forbidden d-d bands.
   correct: 3
   explanation: >-
     5.9 BM matches the spin-only 5.92 for five unpaired electrons, which only high-spin d5 gives. High-spin

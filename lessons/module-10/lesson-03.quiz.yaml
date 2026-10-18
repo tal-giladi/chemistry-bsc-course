@@ -15,8 +15,8 @@
   question: >-
     A food lab must determine chloride in a pickle brine that is acidic (pH 3). Which method fits best?
   options:
-    - Volhard, because it is run in nitric acid where Fe3+ stays in solution as the indicator.
-    - Mohr, because chromate works best in acid where it is fully protonated.
+    - Volhard, because it runs in nitric acid, where the Fe3+ indicator stays in solution.
+    - Mohr, because chromate works best in acid, where it is fully protonated to chromic acid.
     - Mohr, after adding extra chromate to make up for the acid.
     - Fajans, because adsorption indicators do not depend on pH at all.
   correct: 0
@@ -31,7 +31,7 @@
   options:
     - A sharper end point, because more EDTA is in its protonated, more soluble forms.
     - No difference, because the formation constant of MgY2- does not depend on pH.
-    - A poor, early end point, because log K' for Mg drops to about 6.5, too weak to titrate cleanly.
+    - A poor, early end point, because log K' for Mg drops to about 6.5.
     - A late end point, because Mg(OH)2 precipitates at pH 8 and must redissolve first.
   correct: 2
   explanation: >-
@@ -54,8 +54,8 @@
     In a Volhard chloride determination the AgCl is not filtered off before the KSCN back titration. How
     does this affect the reported chloride?
   options:
-    - It is too high, because AgCl adds its own silver to the back titration.
-    - It is too low, because SCN- slowly converts AgCl to the less soluble AgSCN and uses extra titrant.
+    - It is too high, because the AgCl adds its own silver to the back titration with thiocyanate.
+    - It is too low, because SCN- converts AgCl to the less soluble AgSCN, using extra titrant.
     - It is unaffected, because the AgCl is a solid and does not take part.
     - It is too high, because the AgCl precipitate hides the red end-point colour.
   correct: 1

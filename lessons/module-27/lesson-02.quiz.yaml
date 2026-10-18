@@ -16,7 +16,7 @@
     A point-charge model of CO₂ puts −0.33 e on each O at ±1.16 Å and +0.66 e on C. What is its quadrupole
     moment Θzz?
   options:
-    - About −14 × 10⁻⁴⁰ C m², negative because the ends carry negative charge.
+    - About −14 × 10⁻⁴⁰ C m², negative since the ends carry negative charge.
     - About +14 × 10⁻⁴⁰ C m², positive because the central carbon is positive.
     - About −7 × 10⁻⁴⁰ C m², from −q d² without the factor of two.
     - Zero, because CO₂ has a centre of inversion and no dipole moment.
@@ -30,7 +30,7 @@
     molecular property best explains why cation-rich zeolites prefer CO₂?
   options:
     - CO₂ has a much larger permanent dipole when it bends, so it binds to cations as a polar molecule.
-    - CO₂'s quadrupole is about three times larger than N₂'s, so it interacts more strongly with cation fields.
+    - CO₂'s quadrupole is about three times N₂'s, so it interacts more strongly with cation fields.
     - N₂ has a positive quadrupole that is repelled by cations, while CO₂ has none at all.
     - CO₂ is heavier, so it moves more slowly through the pores and is held by friction.
   correct: 1
@@ -44,7 +44,7 @@
   options:
     - The 1.86 D value is from 1950s dielectric data and is known to be too low by about 25 %.
     - The extra dipole is needed only to reproduce the molecule's quadrupole moment correctly.
-    - Its fixed charges must also carry the polarisation a molecule gains from liquid neighbours.
+    - Its fixed charges must also carry the polarisation gained from liquid neighbours.
     - Dipole moments depend on the origin, and 2.35 D is simply the value about the oxygen atom.
   correct: 2
   explanation: >-

@@ -5,7 +5,7 @@
   options:
     - Extend the calibration line upwards, since Beer-Lambert is linear at every absorbance.
     - Report the value from the line and add a note that it is above the top standard.
-    - Dilute the sample by a known factor so it reads near 0.4-0.6, then measure and multiply back.
+    - Dilute by a known factor so it reads near 0.4-0.6, then measure and multiply back.
     - Switch to a 2 cm cell so the light passes through more of the sample.
   correct: 2
   explanation: >-
@@ -17,7 +17,7 @@
     You need to measure a nucleic acid at 260 nm. Which cuvette do you choose, and why?
   options:
     - Polystyrene, because it is disposable and avoids contamination between samples.
-    - Quartz, because glass and ordinary plastics absorb strongly below about 300 nm.
+    - Quartz, because glass and ordinary plastics absorb strongly below 300 nm.
     - Glass, because it is more transparent than quartz in the ultraviolet.
     - Any material, because the blank cancels the cell's own absorbance completely.
   correct: 1
@@ -32,8 +32,8 @@
   options:
     - The line is acceptable because R squared is above 0.98.
     - The lowest standards were contaminated and should be remade.
-    - The detector has a constant offset that a blank subtraction will remove.
-    - The response bends at high concentration, so the working range must be cut back.
+    - The detector has a constant offset that a simple blank subtraction will remove.
+    - The response bends at high concentration, so the working range must shrink.
   correct: 3
   explanation: >-
     A systematic curve in the residuals shows the straight-line model is wrong over that range, here
@@ -44,7 +44,7 @@
     Your simple spectrophotometer has a constant transmittance noise of 0.2 %T. Which reading gives
     the smallest relative error in concentration?
   options:
-    - About A = 0.43, where the error from constant transmittance noise is at its minimum.
+    - About A = 0.43, where error from constant transmittance noise is smallest.
     - About A = 0.05, because the sample barely disturbs the light beam.
     - About A = 2.0, because the absorbance signal is largest there.
     - Any reading, because constant noise gives the same relative error everywhere.

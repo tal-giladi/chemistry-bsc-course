@@ -29,8 +29,8 @@
     N2O5 decomposition at 298 K is first order at 1 bar of N2 but its rate constant falls when the
     pressure is lowered to 1 mbar. What is the best explanation?
   options:
-    - At low pressure, too few collisions energise N2O5, so activation becomes rate-limiting.
-    - At low pressure, N2O5 condenses on the walls and reacts on the surface instead.
+    - At low pressure, too few collisions energise N2O5, so activation limits the rate.
+    - At low pressure, N2O5 condenses on the vessel walls and reacts on the surface instead.
     - At low pressure, the products recombine faster and reverse the decomposition.
     - At low pressure, the activation energy of the bond fission rises.
   correct: 0

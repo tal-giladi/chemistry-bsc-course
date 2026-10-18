@@ -4,7 +4,7 @@
     you expect the stretch to move, assuming the force constant stays the same?
   options:
     - To about 4100 cm-1, because the heavier atom stores more energy.
-    - To about 2100 cm-1, because the frequency scales as one over the square root of the reduced mass.
+    - To about 2100 cm-1, because it scales as 1/sqrt(reduced mass).
     - To about 1450 cm-1, because doubling the mass halves the frequency.
     - Nowhere, because isotopes have identical chemistry and identical spectra.
   correct: 1

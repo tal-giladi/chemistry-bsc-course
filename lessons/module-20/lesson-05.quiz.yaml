@@ -3,10 +3,10 @@
     A student assigns BF3 to C3v because it has a C3 axis and three mirror planes containing it. What
     did she miss?
   options:
-    - The three C2 axes along the B-F bonds and the horizontal mirror plane, which make it D3h.
-    - The centre of inversion at boron, which makes it D3d.
+    - Three C2 axes along the B-F bonds and a horizontal mirror plane, so D3h.
+    - The centre of inversion at boron, which together with C3 makes it D3d.
     - The four C3 axes of a tetrahedron, which make it Td.
-    - Nothing; BF3 is C3v like NH3, because both have three equal bonds.
+    - Nothing; BF3 is C3v like NH3, because both have three equal bonds to the centre.
   correct: 0
   explanation: >-
     BF3 is planar. Each B-F bond is a C2 axis perpendicular to the C3, and the molecular plane is a
@@ -17,7 +17,7 @@
     It has a centre of inversion and nothing else. What is the answer?
   options:
     - Yes, because a molecule without a mirror plane always has a non-superimposable mirror image.
-    - No, because the centre of inversion is the improper axis S2, which makes it identical to its mirror image.
+    - No, because its centre of inversion is the improper axis S2, so it equals its mirror image.
     - Yes, because only molecules with a mirror plane are achiral.
     - It depends on whether the molecule has a stereocentre, which symmetry cannot tell.
   correct: 1

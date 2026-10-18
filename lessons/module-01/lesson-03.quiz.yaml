@@ -5,7 +5,7 @@
   options:
     - Erase 163 carefully and write 168 in the same place so the table stays neat.
     - Tear out the page and copy the whole entry again with the right value.
-    - Strike 163 through with one line, write 168 beside it, and add a reason and initials.
+    - Strike 163 with one line, write 168 beside it, add a reason and initials.
     - Leave 163 and correct it later in the report, where the final values belong.
   correct: 2
   explanation: >-
@@ -15,7 +15,7 @@
   question: >-
     Which notebook line is the most useful record of a weighing?
   options:
-    - "Water added to the mug: 50 g, weighed on the scale"
+    - "Water added to the mug: 50 g, weighed on the kitchen scale"
     - "Mug empty 312 g; mug + water 362 g (scale, 1 g steps)"
     - "Water about 50 g, as expected from 10 teaspoons"
     - "Mass of water 50.0 g ± 0.5 g (kitchen scale)"
@@ -29,7 +29,7 @@
     be written in the report?
   options:
     - "5.0 mL (five repeats; range 4.8–5.2 mL)"
-    - "5.000 mL, the mean of five repeats"
+    - "5.000 mL ± 0.2 mL, the mean of five repeats"
     - "5 mL"
     - "5.0000 mL ± 0.4 mL"
   correct: 0
@@ -42,7 +42,7 @@
     and what limited your accuracy. Which section should answer this?
   options:
     - The Method section.
-    - The Abstract.
+    - The Introduction section.
     - The Results section.
     - The Discussion section.
   correct: 3

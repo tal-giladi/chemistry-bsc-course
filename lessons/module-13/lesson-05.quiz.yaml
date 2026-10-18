@@ -17,8 +17,8 @@
     A block of dry ice is left on a kitchen table at 1 atm. Why does it turn straight into gas
     without forming a liquid?
   options:
-    - Its triple-point pressure (5.185 bar) is above 1 atm, so liquid CO2 cannot exist at 1 atm.
-    - Its critical temperature is below room temperature, so the liquid cannot form.
+    - Its triple-point pressure (5.185 bar) is above 1 atm, so no liquid exists at 1 atm.
+    - Its critical temperature is below room temperature, so the liquid cannot form at all.
     - Its melting line has a negative slope, like water, so pressure melts it.
     - It does melt, but the liquid evaporates too fast to be seen.
   correct: 0
@@ -46,7 +46,7 @@
   options:
     - It rises by about 0.7 K, because Delta_fus V is positive for water.
     - It falls by about 135 K, because dp/dT is -135 bar/K.
-    - It falls by about 0.7 K, because Delta_fus V is negative (dT/dp = -0.0074 K/bar).
+    - It falls by about 0.7 K, because Delta_fus V is negative for water.
     - It does not change, because solids and liquids are both incompressible.
   correct: 2
   explanation: >-

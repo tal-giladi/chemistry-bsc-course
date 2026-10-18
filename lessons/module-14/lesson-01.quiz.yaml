@@ -42,7 +42,7 @@
     The static plot of spring length against mass is flat between 0 and 50 g and then rises in a
     straight line. Which handling of the data is correct?
   options:
-    - Use only the points from 50 g up, because the spring has built-in tension below that load.
+    - Use only the points from 50 g up; the spring has built-in tension below that load.
     - Fit all points with one line, because removing data is never allowed.
     - Fit a curve through all points, because the spring is anharmonic at small loads.
     - Discard the experiment, because a spring that is not linear everywhere cannot be measured.

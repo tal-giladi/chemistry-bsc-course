@@ -5,7 +5,7 @@
   options:
     - The C-Br bond is unusually short and polar in a seven-membered ring.
     - Water adds to the double bonds and releases bromide.
-    - The cation formed, C7H7+, is aromatic with 6 pi electrons, so ionisation is favourable.
+    - The cation formed, C7H7+, is aromatic with 6 pi electrons, so it ionises easily.
     - The cation formed has 8 pi electrons, which fills the bonding orbitals.
   correct: 2
   explanation: >-
@@ -16,7 +16,7 @@
     You need 1-(3-bromophenyl)ethanone from benzene using Br2/FeBr3 and CH3COCl/AlCl3. Which order works?
   options:
     - Bromination first, because bromine directs the acetyl group to the meta position.
-    - Acylation first, because the acetyl group directs meta and Friedel-Crafts must come before it.
+    - Acylation first, since acetyl directs meta and would block a later Friedel-Crafts.
     - Either order, because both groups direct meta.
     - Neither order, because Friedel-Crafts never works on substituted benzenes.
   correct: 1
@@ -31,7 +31,7 @@
     - Propylbenzene, as expected; Friedel-Crafts alkylation does not rearrange.
     - Chlorobenzene; she should use FeCl3 instead of AlCl3.
     - No reaction; benzene needs a nitro group to react.
-    - Isopropylbenzene; she should acylate with propanoyl chloride and then reduce the ketone.
+    - Isopropylbenzene; acylate with propanoyl chloride, then reduce the ketone.
   correct: 3
   explanation: >-
     The primary carbocation-like complex rearranges by a hydride shift to the secondary cation. Acylium
@@ -41,7 +41,7 @@
     Why does nitration of anisole (methoxybenzene) give mainly the ortho and para products, and faster
     than benzene?
   options:
-    - The oxygen lone pair stabilises the sigma-complex when the positive charge sits on the ring carbon bearing OCH3.
+    - The O lone pair stabilises the sigma-complex when the charge sits on the C bearing OCH3.
     - The OCH3 group withdraws electrons by induction, which favours attack at ortho and para.
     - The methyl group of OCH3 blocks the meta positions sterically.
     - Anisole is protonated by sulfuric acid, which makes it a meta director that reacts quickly.

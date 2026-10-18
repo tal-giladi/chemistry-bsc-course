@@ -3,7 +3,7 @@
     A sealed rigid flask holds an ideal gas. You want to know how much the pressure rises per
     kelvin of warming. Which quantity answers that?
   options:
-    - The partial derivative of p with respect to T at constant n and V, equal to nR/V.
+    - The partial derivative of p with respect to T at fixed n and V, equal to nR/V.
     - The partial derivative of p with respect to T at constant p, equal to zero.
     - The partial derivative of p with respect to V at constant T, equal to -nRT/V^2.
     - The ordinary derivative dp/dT along a path where V grows with T.
@@ -16,9 +16,9 @@
     You predict a quantity f from x and y. The error terms are |df/dx| u_x = 0.30 and
     |df/dy| u_y = 0.40, and the two errors are independent. What is the combined uncertainty?
   options:
-    - 0.70, because independent error terms add.
+    - 0.70, because independent error terms add up directly.
     - 0.40, because only the larger term matters.
-    - 0.50, from the square root of 0.30 squared plus 0.40 squared.
+    - 0.50, from the root of the sum of the squares.
     - 0.35, from the average of the two terms.
   correct: 2
   explanation: >-
@@ -46,7 +46,7 @@
     - The thermometer was reading in Fahrenheit for the first few minutes.
     - Newton's law forbids any curvature, so the data must be wrong and should be discarded.
     - The room temperature was set too low in the fit, which only affects the late points.
-    - Evaporation and heating of the cold mug wall add extra early heat loss that the one-constant model ignores.
+    - Evaporation and warming of the mug wall add early heat loss the model ignores.
   correct: 3
   explanation: >-
     Early on the hot surface evaporates strongly and the mug wall is still warming up, so heat leaves

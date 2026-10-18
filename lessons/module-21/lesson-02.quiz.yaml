@@ -30,10 +30,10 @@
     A student computes the entropy of one mole of argon gas using Q = q^N instead of Q = q^N / N!.
     What goes wrong?
   options:
-    - The entropy comes out too large and not extensive, because identical atoms are counted as distinguishable.
+    - The entropy is too large and not extensive, as identical atoms are counted as distinguishable.
     - The internal energy comes out too large, because N! appears in U = kT^2 d ln Q / dT.
     - Nothing, because N! is a constant and cancels in all thermodynamic functions.
-    - The entropy comes out too small, because dividing by N! is what adds the mixing entropy.
+    - The entropy comes out too small, because dividing by N! is exactly what adds the mixing entropy.
   correct: 0
   explanation: >-
     Swapping two identical gas atoms gives the same microstate, so q^N overcounts by N!. The N! does not
@@ -45,7 +45,7 @@
   options:
     - The NIST Shomate fit is inaccurate above 1000 K, so the harmonic model is the better value.
     - N2 begins to dissociate at 1000 K, which adds a reaction heat capacity.
-    - Real vibrational levels get closer together at high v (anharmonicity), so more of them are reached.
+    - Real vibrational levels crowd together at high v (anharmonicity), so more are reached.
     - Rotational heat capacity of N2 is still rising towards R at 1000 K.
   correct: 2
   explanation: >-

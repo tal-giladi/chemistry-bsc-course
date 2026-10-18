@@ -17,8 +17,8 @@
     What makes the transition strong?
   options:
     - The g to u parity change, which overrides every spin rule.
-    - Spin-orbit coupling in the heavy iodine atoms, which mixes singlet and triplet character.
-    - The large Franck-Condon factors, which can make any forbidden transition strong.
+    - Spin-orbit coupling in the heavy iodine atoms, mixing singlet and triplet character.
+    - The large Franck-Condon factors, which can make any spin-forbidden transition strong.
     - Collisions in the vapour, which flip the electron spin during absorption.
   correct: 1
   explanation: >-
@@ -31,7 +31,7 @@
     ground-state I2?
   options:
     - 20 043 cm-1, the convergence limit itself.
-    - 27 646 cm-1, the limit plus the atomic excitation energy.
+    - 27 646 cm-1, the convergence limit plus the atomic excitation energy.
     - 4318 cm-1, the limit minus the 0-0 band at 15 725 cm-1.
     - 12 440 cm-1, the limit minus the atomic excitation energy.
   correct: 3
@@ -44,7 +44,7 @@
     A dye absorbs at 490 nm and emits at 520 nm with a lifetime of 4 ns. Exciting it at 400 nm into a
     higher state gives the same 520 nm emission. Which statement explains both observations?
   options:
-    - Fast relaxation to the lowest level of S1 before emission gives the Stokes shift and Kasha's rule.
+    - Fast relaxation to S1, v = 0, before emission gives the Stokes shift and Kasha's rule.
     - The emission is phosphorescence from T1, which always lies 30 nm below the absorption.
     - The 400 nm light is converted to 490 nm light by the solvent before the dye absorbs it.
     - The dye emits from whichever state is excited, but the solvent shifts all emission to 520 nm.

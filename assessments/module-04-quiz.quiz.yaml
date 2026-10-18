@@ -3,8 +3,8 @@
     A reaction needs to break a bond of about 1.0 eV per molecule. A colleague proposes running it by
     warming the flask from 25 C to 60 C. Thermal energy kT is about 0.026 eV at 25 C. What do you tell them?
   options:
-    - kT rises only about 12 %, still far below 1.0 eV; it helps just the rare fast molecules.
-    - kT more than doubles, which is enough for every molecule to reach 1.0 eV.
+    - kT rises only 12 %, still far below 1.0 eV; only rare fast molecules benefit.
+    - kT more than doubles, which is enough for every single molecule to reach 1.0 eV.
     - Temperature has no effect on reactions, because kT is a fixed constant.
     - At 60 C kT equals 1.0 eV, so the bond breaks in every single collision.
   correct: 0
@@ -45,7 +45,7 @@
   options:
     - 4.10 m/s2, the slope itself.
     - 0.244 m/s2, from one over the slope.
-    - 9.63 m/s2, from 4 pi squared divided by the slope.
+    - 9.63 m/s2, from 4 pi^2 over the slope.
     - 1.53 m/s2, from 2 pi divided by the slope.
   correct: 2
   explanation: >-
@@ -56,7 +56,7 @@
     Two ions sit 0.40 nm apart. You move them from vacuum into water (relative permittivity about
     78) at the same distance. Their Coulomb energy in vacuum is -350 kJ/mol. What is it in water?
   options:
-    - About -27 300 kJ/mol, because water strengthens the attraction.
+    - About -27 300 kJ/mol, because water strengthens the ionic attraction.
     - About -4.5 kJ/mol, below 2 RT, so thermal motion separates them.
     - About -350 kJ/mol, because the distance has not changed.
     - About -175 kJ/mol, because water halves the ionic attraction.
@@ -71,7 +71,7 @@
   options:
     - 106 kJ/mol, from 1.10 V times the Faraday constant.
     - 2.20 kJ/mol, from 2 times 1.10.
-    - 212 kJ/mol, from 2 times 96 485 C/mol times 1.10 V.
+    - 212 kJ/mol, from 2 x 96 485 C/mol x 1.10 V.
     - 3.5e-19 kJ/mol, from 2 times e times 1.10 V.
   correct: 2
   explanation: >-
@@ -109,8 +109,8 @@
     strongly, since "light of any wavelength carries energy". What is the best response?
   options:
     - Agreed, because every molecule absorbs every wavelength equally.
-    - Agreed, because infrared photons carry more energy than 450 nm ones.
-    - No; 450 nm (2.76 eV) matches an electronic gap that IR photons cannot reach.
+    - Agreed, because infrared photons carry even more energy than 450 nm photons.
+    - No; 450 nm (2.76 eV) matches an electronic gap IR photons cannot reach.
     - No, because molecules can only ever absorb ultraviolet light.
   correct: 2
   explanation: >-
@@ -123,7 +123,7 @@
     agree within 0.05 V. The fitted h comes out 25 % high. What is the sensible next step?
   options:
     - Report h as 25 % high and stop, since the method is approximate.
-    - Refit with and without the blue LED and report both, with the likely cause.
+    - Refit with and without the blue LED; report both with the likely cause.
     - Replace the 150 ohm resistor with a wire so the blue LED gets more current.
     - Keep only the blue LED, because blue photons give the most reliable result.
   correct: 1

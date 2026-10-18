@@ -3,8 +3,8 @@
     Seven blanks give s = 0.0015 absorbance units, and the calibration slope is 0.50 L/mg. A sample reads
     0.0060 above the mean blank. How should it be reported?
   options:
-    - As 0.012 mg/L with its uncertainty, because any signal above the blank is a result.
-    - As detected but below the LOQ, because 0.012 mg/L lies between the LOD (0.009) and the LOQ (0.030).
+    - As 0.012 mg/L with its uncertainty, because any signal above the mean blank is a valid result.
+    - As detected but below the LOQ, since 0.012 mg/L lies between the LOD and the LOQ.
     - As not detected, because the signal is below 10 times the blank standard deviation.
     - As 0.003 mg/L, because the LOD of 0.009 mg/L must be subtracted from the result.
   correct: 1
@@ -19,7 +19,7 @@
     - The fit is excellent, because R² above 0.999 proves the response is linear.
     - The blank is contaminated, because the first residual is negative.
     - The straight line is the wrong model over this range; narrow the range or fit a curve.
-    - The noise grows with concentration, so a weighted fit will remove the arch.
+    - The noise grows with concentration, so a weighted least-squares fit will remove the arch.
   correct: 2
   explanation: >-
     A systematic pattern in the residuals means the model is wrong, whatever R² says. An arch is curvature,
@@ -42,7 +42,7 @@
     Your unknowns are all near 2 mg/L. Which set of standards gives the smallest uncertainty for them?
   options:
     - 0, 10, 20, 30, 40 and 50 mg/L, to cover as wide a range as possible.
-    - Two standards at 1.9 and 2.1 mg/L, to stay as close to the unknowns as possible.
+    - Two standards at 1.9 and 2.1 mg/L, to keep the calibration as close to the unknowns as possible.
     - A single standard at 2.0 mg/L, read ten times, to average out the noise.
     - A blank and five standards from 0.5 to 4 mg/L, so the unknowns sit near the centre.
   correct: 3

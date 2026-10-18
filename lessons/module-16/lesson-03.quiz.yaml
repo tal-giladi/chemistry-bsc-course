@@ -4,8 +4,8 @@
     acetylates the amine fastest at room temperature?
   options:
     - Ethyl acetate, because ethoxide is a strong nucleophile.
-    - Acetyl chloride, because chloride is the weakest base and so the best leaving group.
-    - N,N-dimethylacetamide, because amides exchange easily with other amines.
+    - Acetyl chloride, because chloride is the weakest base and best leaving group.
+    - N,N-dimethylacetamide, because amides exchange easily with other free amines.
     - Acetic acid, because the acid protonates the amine and activates it.
   correct: 1
   explanation: >-
@@ -34,7 +34,7 @@
     - The methoxy ester, because the electron-donating OCH3 makes the oxygen a better leaving group.
     - Both at the same rate, because the leaving group (methoxide) is the same.
     - Neither, because aromatic esters are not saponified.
-    - The nitro ester, because NO2 withdraws electron density and makes the carbonyl carbon more electrophilic.
+    - The nitro ester, because electron-withdrawing NO2 makes the carbonyl carbon more electrophilic.
   correct: 3
   explanation: >-
     The rate-limiting step is hydroxide adding to the carbonyl carbon. An electron-withdrawing group

@@ -16,7 +16,7 @@
     A transporter wants to move one glucose molecule into a cell against a 1000-fold concentration
     ratio (no charge, 37 C). Can the hydrolysis of one ATP (-52 kJ/mol in the cell) pay for it?
   options:
-    - No, because moving against a gradient needs at least two ATP per molecule.
+    - No, because moving against a gradient always needs at least two ATP per molecule.
     - Yes, because the cost is RT ln 1000 = about 18 kJ/mol, well below 52 kJ/mol.
     - No, because the cost is 1000 times RT, about 2580 kJ/mol.
     - Yes, but only if the membrane potential is positive inside.
@@ -30,7 +30,7 @@
     the yeast make by fermentation?
   options:
     - About 0.12 mol, from 5.4 g of CO2 at 44 g/mol and one ATP per CO2.
-    - About 0.14 mol, from the full 6.0 g loss without the control.
+    - About 0.14 mol, from the full 6.0 g loss without subtracting the control.
     - About 0.25 mol, from two ATP per CO2.
     - About 0.016 mol, from dividing 5.4 g by the molar mass of sucrose.
   correct: 0
@@ -45,7 +45,7 @@
     - Because Asp184 is a backbone atom, and backbone atoms cannot form hydrogen bonds.
     - Because distances below 3.3 A are covalent bonds, not hydrogen bonds.
     - Because a Mn2+ ion bridges these acceptor oxygens; no hydrogen sits between them.
-    - Because aspartate is positively charged at pH 7 and repels the phosphates.
+    - Because aspartate is positively charged at pH 7 and so repels the phosphate groups.
   correct: 2
   explanation: >-
     Carboxylate and phosphate oxygens are both acceptors. They sit close together because a metal ion

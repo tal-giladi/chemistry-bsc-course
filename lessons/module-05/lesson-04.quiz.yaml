@@ -30,7 +30,7 @@
     next step are right?
   options:
     - The reader lost data, so find where; a $$ comment or a skipped line is a common cause.
-    - The difference is under 2 percent, so interpolate the missing points and continue.
+    - The difference is under 2 percent, so interpolate the ten missing points and continue as usual.
     - NPOINTS is only a hint in JCAMP-DX, so trust your count and continue.
     - The last line is always incomplete in JCAMP-DX, so add ten zeros at the end.
   correct: 0

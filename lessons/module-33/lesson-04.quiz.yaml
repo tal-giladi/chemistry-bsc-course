@@ -30,7 +30,7 @@
     - Everything, since a scientific archive is exempt from data licences.
     - Only the report, since no data or code may ever be archived with a course project.
     - Your code, results and report, the CC0 and CC BY-NC data with attribution, and links to the SDBS entries.
-    - Your code and results and the SDBS spectra, since spectra are facts and not covered by any terms.
+    - Your code and results and the SDBS spectra, since spectra are facts and so are not covered by any terms of use.
   correct: 2
   explanation: >-
     Each source keeps its own licence. CC0 and non-commercial CC BY data may be shared with attribution in a
@@ -40,8 +40,8 @@
     The package check reports that numpy is listed without a version and that the hours log has 171 hours. What
     is the best response?
   options:
-    - Pin every package with its exact version and check the log for missing or misnamed sessions before sending.
-    - Ignore both, because readers care about the result and not about versions or hours.
+    - Pin each package version and check the log for missing or misnamed sessions before sending.
+    - Ignore both, because readers care about the result and not about package versions or logged hours.
     - Add 9 hours to the analysis phase so the log reaches 180, then send the report.
     - Remove requirements.txt, since an unpinned list is worse than none at all.
   correct: 0

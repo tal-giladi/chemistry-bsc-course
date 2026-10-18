@@ -6,7 +6,7 @@
     - Yes, because ten results that agree closely cannot all share the same error.
     - Yes, as long as the standard deviation is below the uncertainty of the burette.
     - Not yet known, because the results must first be compared with a reference material.
-    - No, because a very small spread usually means a gross error was made in every run.
+    - No, because a very small spread usually means the same gross error was made in every run.
   correct: 2
   explanation: >-
     Close agreement shows precision only. A systematic error shifts every repeat by the same amount, so
@@ -45,7 +45,7 @@
   options:
     - Because a proportional error can only be found from the intercept of the line.
     - Because the coins' real masses are not certified, so coin wear and scale gain are mixed together.
-    - Because a 0.1 g scale cannot detect any error smaller than 1 %, whatever the number of coins.
+    - Because a 0.1 g kitchen scale cannot detect any error smaller than 1 %, whatever the number of coins.
     - Because ten coins are too few for a straight-line fit to give any slope uncertainty.
   correct: 1
   explanation: >-

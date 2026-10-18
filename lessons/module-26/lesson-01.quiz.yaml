@@ -3,7 +3,7 @@
     A soil bacterium lives at pH 8. Taking Ksp of Fe(OH)3 as 1e-39, what free Fe3+ concentration can it
     expect, and what does that imply?
   options:
-    - About 1e-21 M, so it must secrete a chelator such as a siderophore to obtain iron.
+    - About 1e-21 M, so it must secrete a chelator such as a siderophore.
     - About 1e-18 M, the same as at pH 7, because Ksp does not depend on pH.
     - About 1e-6 M, enough for the cell to take up free ions through a channel.
     - About 1e-15 M, because raising the pH by one unit raises free Fe3+ a thousandfold.
@@ -17,7 +17,7 @@
     starting point?
   options:
     - Three histidine nitrogens and one water, in a tetrahedron.
-    - Two cysteine sulfurs and two histidine nitrogens.
+    - Two cysteine sulfurs and two histidine nitrogens, in a tetrahedron.
     - Six or seven oxygens from carboxylates, carbonyls and water.
     - Four cysteine sulfurs arranged in a square plane.
   correct: 2

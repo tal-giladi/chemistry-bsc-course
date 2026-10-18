@@ -17,7 +17,7 @@
   options:
     - Its mass against the mass of a proton.
     - Its speed against the speed of light.
-    - Its kinetic energy against the thermal energy k_B T.
+    - Its kinetic energy against the available thermal energy k_B T of its surroundings.
     - Its de Broglie wavelength against the size of the region confining it.
   correct: 3
   explanation: >-
@@ -44,7 +44,7 @@
     - It halves, because the electron has less room to move.
     - It stays the same, because the energy depends only on the charge.
     - It about quadruples, because it scales as one over the length squared.
-    - It doubles, because momentum spread scales as one over the length.
+    - It doubles, because the momentum spread scales as one over the length of the box.
   correct: 2
   explanation: >-
     Delta p is at least hbar/(2 Delta x), and the kinetic energy goes as (Delta p)^2/2m, so halving

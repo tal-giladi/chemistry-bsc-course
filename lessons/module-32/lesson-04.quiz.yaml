@@ -41,9 +41,9 @@
     A company wants an efficient infrared LED near 870 nm. Silicon (1.12 eV, indirect) and GaAs (1.42 eV,
     direct) are available. Which do they choose?
   options:
-    - Silicon, because its smaller gap means more electrons in the conduction band to emit light.
+    - Silicon, because its smaller gap means more electrons in the conduction band that are free to emit light.
     - Silicon, because 1.12 eV corresponds to 870 nm.
-    - GaAs, because its direct gap lets electrons and holes recombine by emitting a photon without a phonon.
+    - GaAs, because its direct gap lets electron-hole pairs recombine by emitting a photon without a phonon.
     - GaAs, because a larger gap always gives brighter light at any wavelength.
   correct: 2
   explanation: >-

@@ -31,7 +31,7 @@
     swing dies away, with no sideways motion. What is the best molecular analogy?
   options:
     - A harmonic bond whose force constant grows as it cools down.
-    - A softening bond such as a Morse potential, whose level spacing shrinks at high energy.
+    - A softening, Morse-like bond, whose level spacing shrinks at high energy.
     - A bond that stiffens when stretched, so its overtones lie above twice the fundamental.
     - A damped bond, since damping always raises the frequency as the amplitude decays.
   correct: 1
@@ -83,7 +83,7 @@
     You want to separate two vibration peaks 0.05 Hz apart, near 3 Hz, using the phone
     accelerometer at 100 Hz with a Hann window. What recording do you need?
   options:
-    - About 40 s or more, because the window needs a separation of about 2/T.
+    - About 40 s or more, since the window needs a separation of about 2/T.
     - About 2 s, because the 100 Hz sample rate is far above the 3 Hz signal.
     - About 0.3 s, one period of the 3 Hz signal.
     - About 4 s, if you zero-pad the record to ten times its length.

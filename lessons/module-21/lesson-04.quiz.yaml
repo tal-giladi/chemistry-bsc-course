@@ -16,7 +16,7 @@
     Why does I2 dissociation, with Delta_r E0 = +148.8 kJ/mol, reach K = 1 at about 1450 K?
   options:
     - Above 1000 K the bond energy D0 falls, because the molecule is vibrationally excited.
-    - The ratio of accessible states strongly favours two atoms, and the Boltzmann factor grows with T.
+    - Two atoms have far more accessible states, and the Boltzmann factor grows with T.
     - Collisions at high temperature supply the bond energy, so the reaction becomes exothermic.
     - The JANAF reference state changes at 1450 K, which sets K to 1 by definition.
   correct: 1
@@ -40,10 +40,10 @@
     At 1000 K, K for I2 = 2 I is 3.1e-3. A lamp designer lowers the iodine pressure from 1 bar to 0.01 bar.
     What happens to the fraction of iodine present as atoms?
   options:
-    - It rises from about 3 % to about 27 %, because the side with more gas moles gains at low pressure.
+    - It rises from about 3 % to 27 %, as the side with more gas moles gains at low P.
     - It stays at 3 %, because K does not depend on pressure.
-    - It falls, because fewer collisions are available to break the bond.
-    - It rises to 100 %, because K is fixed and the pressure term goes to zero.
+    - It falls, because fewer collisions are available at low pressure to break the bond.
+    - It rises to 100 %, because K is fixed while the pressure term goes to zero as P falls.
   correct: 0
   explanation: >-
     alpha = sqrt(K / (K + 4 p/p°)): 0.028 at 1 bar, 0.27 at 0.01 bar. K is constant, but the composition

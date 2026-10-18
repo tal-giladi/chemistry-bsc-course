@@ -18,7 +18,7 @@
   options:
     - Downgrade NumPy globally to the 2023 version so all old tutorials work again.
     - Report a bug, because a pinned NumPy should keep every function forever.
-    - Use np.trapezoid, the documented replacement, and keep your pins as they are.
+    - Use np.trapezoid, the documented replacement, and keep your pins.
     - Install Python 3.15, because newer interpreters restore removed functions.
   correct: 2
   explanation: >-
@@ -32,7 +32,7 @@
     - Python 3.15.0, because the newest release always has the most complete package support.
     - Any version from 3.8 on, because scientific packages support every Python 3 release.
     - Python 3.14 alone is not enough, so install both and let pip choose per package.
-    - Python 3.14, because the course pins it and some packages may not have 3.15 builds yet.
+    - Python 3.14, because the course pins it and some packages may lack 3.15 builds.
   correct: 3
   explanation: >-
     Ready-made package builds often lag a new Python release by weeks. The pinned 3.14 line is

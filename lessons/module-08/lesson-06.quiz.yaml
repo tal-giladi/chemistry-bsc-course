@@ -3,7 +3,7 @@
     You build a cell from Ag+/Ag (E = +0.80 V) and Zn2+/Zn (E = -0.76 V). A classmate writes
     E cell = 2 x 0.80 - (-0.76) = 2.36 V, because two Ag+ are needed per Zn. What is the right value?
   options:
-    - 2.36 V, because the silver half-reaction is doubled.
+    - 2.36 V, because the silver half-reaction is doubled in the equation.
     - 0.04 V, because the two potentials nearly cancel.
     - 1.56 V, because potentials are not multiplied by coefficients.
     - 0.84 V, from the cathode potential plus the anode potential.
@@ -28,7 +28,7 @@
   question: >-
     A zinc nail and a copper wire in a lemon read 0.93 V. Which statement best explains the voltage?
   options:
-    - Zinc is oxidised and H+ from the acid is reduced on the copper, with Nernst corrections for the lemon.
+    - Zinc is oxidised and H+ from the acid is reduced on the copper, with Nernst corrections.
     - Zinc is oxidised and Cu2+ from the lemon is reduced, giving the Daniell value minus losses.
     - Copper is oxidised and zinc ions are reduced, because copper is the positive terminal.
     - The voltage comes from the juice's acidity alone, so any two nails of the same metal would work.
@@ -54,10 +54,10 @@
     Your lemon cell reads 0.92 V open-circuit but only 0.05 V across a 100 ohm resistor. What does that
     tell you?
   options:
-    - The multimeter is faulty, because a cell's voltage cannot change with the load.
-    - The cell has gone flat, because the reaction reached equilibrium in a second.
+    - The multimeter is faulty, because a cell's voltage cannot change with the load on it.
+    - The cell has gone flat, because the reaction reached equilibrium within about a second.
     - The resistor is reducing the zinc, which lowers the cell potential.
-    - The cell has an internal resistance of roughly 2 kilohm, so most of the voltage is lost inside it.
+    - The cell has about 2 kilohm of internal resistance, so most voltage is lost inside it.
   correct: 3
   explanation: >-
     V = E R/(R + r): 0.05 = 0.92 x 100/(100 + r) gives r of about 1.7 kilohm. Remove the load and the

@@ -4,7 +4,7 @@
     solid you add to a flask. What do you do?
   options:
     - Weigh the solid on a paper and subtract 0.3 mg from the reading.
-    - Weigh the weighing bottle with solid, tip some into the flask, weigh the bottle again, and take the difference.
+    - Weigh the bottle with solid, tip some into the flask, reweigh it, and use the difference.
     - Weigh the solid three times on the same paper and average the readings to remove the offset.
     - Use a graduated cylinder instead, because volume measurements have no offset.
   correct: 1
@@ -28,7 +28,7 @@
     An uncertainty budget for a standard gives relative uncertainties of 0.03 % (mass), 0.06 % (purity) and
     0.03 % (flask). To improve the result most, what should you change?
   options:
-    - Use a purer, certified reagent, because purity is the largest term and dominates the squared sum.
+    - Use a purer certified reagent, since purity is the largest term in the squared sum.
     - Buy a balance ten times more precise, because mass is the first input in the formula.
     - Use a Class A flask twice the size, because volume is always the limiting term.
     - Repeat the whole preparation five times, because averaging reduces every term equally.
@@ -43,8 +43,8 @@
   options:
     - It is too large, because every reading taken from above is too large.
     - None, because parallax is a random error that averages out over many titrations.
-    - It largely cancels if the bias is the same at both readings, since the volume is a difference.
-    - It is twice the parallax error, because errors add when two readings are subtracted.
+    - It largely cancels, if the bias is equal at both readings, since volume is a difference.
+    - It is twice the parallax error, because the errors add up when two readings are subtracted.
   correct: 2
   explanation: >-
     The delivered volume is a difference, so an identical bias in both readings cancels, just like a scale offset.

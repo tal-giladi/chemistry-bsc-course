@@ -16,7 +16,7 @@
     Cyclohexene reacts with Br2. A student draws cis-1,2-dibromocyclohexane. Why is that wrong?
   options:
     - Bromine adds only to one carbon, so the product is bromocyclohexane, not a dibromide.
-    - Br- opens the bromonium ion from the back, so the two Br atoms end up trans (anti addition).
+    - Br- opens the bromonium ion from the back, so the two Br atoms end up trans.
     - The intermediate is a free carbocation, so the product must be racemic cis and trans.
     - Cyclohexene rearranges to methylcyclopentene first, so a different ring is formed.
   correct: 1
@@ -31,7 +31,7 @@
     - 1-Bromopropane is too hindered for SN2; use 2-bromopropane, which reacts faster.
     - Propyne is not acidic at all; add HBr first to make it reactive.
     - The product would be an alkene, because hydroxide reduces the triple bond.
-    - Hydroxide is too weak a base (water 15.7 versus alkyne 25); use sodium amide instead.
+    - Hydroxide is too weak a base (water 15.7, alkyne 25); use sodium amide instead.
   correct: 3
   explanation: >-
     Deprotonation favours the weaker acid: water is far more acidic than propyne, so almost no

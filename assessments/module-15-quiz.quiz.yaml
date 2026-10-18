@@ -4,8 +4,8 @@
     pharmacist asks whether the drug may degrade in a humid store. What do you answer?
   options:
     - No, because the fragment is an ether, and ethers are inert to water.
-    - No, because the benzene ring protects every group attached to it from water.
-    - Yes, because it is an aryl ester, which water slowly hydrolyses to a phenol and acetic acid.
+    - No, because the benzene ring protects every group attached directly to it from water.
+    - Yes, it is an aryl ester, which water slowly hydrolyses to a phenol and acetic acid.
     - Yes, because it is a ketone, and ketones add water to form unstable alcohols.
   correct: 2
   explanation: >-
@@ -33,7 +33,7 @@
     - A racemic mixture of (2R,3R) and (2S,3S), because racemates give zero rotation.
     - The (2R,3R) enantiomer, because a single peak means one enantiomer.
     - A 1:1 mixture of all four stereoisomers, which cancel each other's rotation.
-    - The meso (2R,3S) compound, which is achiral and gives one peak and no rotation.
+    - The meso (2R,3S) compound, which is achiral, so one peak and no rotation.
   correct: 3
   explanation: >-
     A racemate would show two peaks on a chiral column; a single enantiomer would rotate light. Only
@@ -57,7 +57,7 @@
     A kinetics student runs (S)-2-bromooctane with sodium iodide in acetone. The rate doubles when
     [I-] doubles. What stereochemistry does the product, 2-iodooctane, have at first?
   options:
-    - Inverted, (R)-2-iodooctane, because a second-order rate means SN2 backside attack.
+    - Inverted, (R)-2-iodooctane, since a second-order rate means SN2 backside attack.
     - Racemic, because iodide attacks the flat carbocation from both faces.
     - Retained, (S)-2-iodooctane, because iodide replaces bromide in the same position.
     - Racemic, because acetone is protic and favours SN1 on secondary carbons.
@@ -73,7 +73,7 @@
   options:
     - Use cyclohexyl bromide in methanol with heat, because SN1 then gives the ether cleanly.
     - Use potassium tert-butoxide instead of methoxide, because it is a stronger nucleophile.
-    - Use sodium cyclohexoxide with methyl iodide, because SN2 on a methyl carbon cannot eliminate.
+    - Use sodium cyclohexoxide and methyl iodide, which has no beta-H to lose.
     - Use more methoxide, because a higher concentration favours substitution over elimination.
   correct: 2
   explanation: >-
@@ -87,8 +87,8 @@
   options:
     - Ethoxide is a bulky base, so it always gives the Hofmann product.
     - The reaction is E1, and E1 never follows Zaitsev's rule.
-    - 3-Methylcyclohexene is the more stable alkene, so Zaitsev's rule predicts it.
-    - E2 needs a trans-diaxial H; with Br axial, the C2 H is equatorial, so only the C6 H can leave.
+    - 3-Methylcyclohexene is the more stable alkene, so Zaitsev's rule predicts it as major.
+    - E2 needs an anti-periplanar H; with Br axial, only the C6 H is trans-diaxial.
   correct: 3
   explanation: >-
     In the reactive chair Br and the methyl are both axial (trans, diaxial). The H on C2 is then
@@ -99,8 +99,8 @@
     3-Methylbut-1-ene reacts with HCl. Besides 2-chloro-3-methylbutane, a large amount of
     2-chloro-2-methylbutane forms. What does this show?
   options:
-    - HCl adds anti-Markovnikov when the alkene is branched.
-    - "A carbocation intermediate: the secondary cation rearranges by a hydride shift to a tertiary one."
+    - HCl adds anti-Markovnikov when the alkene is branched next to the double bond.
+    - A carbocation that rearranges by a hydride shift from secondary to tertiary.
     - A bromonium-like chloronium ion opens at the more substituted carbon.
     - The alkene isomerised to 2-methylbut-2-ene before HCl added, through an SN2 step.
   correct: 1
@@ -127,7 +127,7 @@
     3.8 kJ/mol. For a new drug-like molecule it predicts a 2 kJ/mol preference for one conformer.
     How should you treat that number?
   options:
-    - As a useful estimate that is uncertain by a few kJ/mol, so the preference may not be real.
+    - As a useful estimate, uncertain by a few kJ/mol, so the preference may not be real.
     - As exact, because a force field that matches butane is validated for all molecules.
     - As meaningless, because force fields cannot describe conformational energies at all.
     - As a free energy, because force-field energies already include entropy and solvent.

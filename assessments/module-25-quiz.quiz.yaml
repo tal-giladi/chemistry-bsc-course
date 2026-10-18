@@ -6,7 +6,7 @@
   options:
     - Read 1.05 on the line, since the error at that absorbance is only about 5 %.
     - Fit a straight line through all points, including the stock, and read the sample on it.
-    - Dilute the drink so it reads near 0.3-0.6, measure again and multiply by the dilution factor.
+    - Dilute the drink into the 0.3-0.6 range, remeasure and multiply by the dilution.
     - Raise the exposure so that the strongest solutions become brighter and the curve straightens.
   correct: 2
   explanation: >-
@@ -17,7 +17,7 @@
     You must measure Brilliant Blue and tartrazine in a green drink with a benchtop spectrometer. Which
     pair of wavelengths gives the most reliable two-component result?
   options:
-    - 630 nm and 426 nm, where each dye has its maximum and the other absorbs little.
+    - 630 nm and 426 nm, the two maxima, where the other dye absorbs little.
     - 500 nm and 550 nm, where both dyes absorb weakly and stray light is lowest.
     - 630 nm only, then subtract a fixed fraction for the yellow dye.
     - 426 nm and 450 nm, both near the tartrazine maximum, to measure it twice.
@@ -35,7 +35,7 @@
     - Quinine degrades in concentrated tonic, so less of it survives to be measured.
     - Sulfuric acid quenches quinine more strongly at high quinine concentrations.
     - The fluorimeter's lamp intensity falls when bright samples are measured.
-    - The less diluted sample absorbs much of the excitation light (inner filter effect).
+    - The stronger sample absorbs much of the excitation light (inner filter).
   correct: 3
   explanation: >-
     Tonic absorbs about 1.2 per cm at 350 nm; at 1 + 4 the absorbance is still about 0.25, far above the
@@ -48,7 +48,7 @@
     you report?
   options:
     - 31 mg/L, because lanthanum adds absorbance at 422.7 nm and inflates the second result.
-    - 38 mg/L, because lanthanum releases calcium from phosphate and the spike confirms the method.
+    - 38 mg/L, because lanthanum frees calcium from phosphate and the spike confirms it.
     - 34.5 mg/L, the mean, with half the difference as the uncertainty.
     - Neither, because two results that differ by 20 % mean the instrument is out of calibration.
   correct: 1
@@ -63,7 +63,7 @@
     the identity?
   options:
     - Geranial, because the higher match factor wins when both scores are above 800.
-    - Neral, because the retention index agrees with neral and is 30 units away from geranial.
+    - Neral, because the retention index fits neral and is 30 units from geranial.
     - Citral, unresolved, because MS cannot distinguish E and Z isomers.
     - Not identified, because the two match factors are too close to choose.
   correct: 1
@@ -76,9 +76,9 @@
     3.5 because the separation looks best there. What is the main risk?
   options:
     - Aspirin hydrolyses to salicylic acid much faster at pH 3.5 than at pH 2.5.
-    - The C18 phase dissolves at pH 3.5, so the column wears out quickly.
+    - The C18 phase dissolves at pH 3.5, so the column wears out within a few weeks.
     - UV detection at 230 nm stops working for ionised carboxylic acids.
-    - Small pH errors change retention strongly near the pKa, so the method is not robust.
+    - Near the pKa small pH errors shift retention a lot; the method is fragile.
   correct: 3
   explanation: >-
     At pH = pKa a 0.1 pH error changes the neutral fraction, and so k, by about 11 %, and peaks can swap
@@ -90,7 +90,7 @@
     the two compounds coelute near 38 %. A colleague proposes 45 % acetonitrile to shorten the run, and
     the peaks are separated there. What should you check before accepting it?
   options:
-    - That peaks are identified by standards at 45 %, because the elution order is reversed there.
+    - That peaks are identified by standards at 45 %, as the elution order reverses.
     - That the pump pressure is lower, since higher acetonitrile always raises pressure.
     - That the column is replaced, because acetonitrile above 40 % damages C18 phases.
     - That the detection wavelength is changed, because UV spectra shift with acetonitrile.
@@ -106,7 +106,7 @@
   options:
     - A slow electron transfer, because the separation grows with scan rate.
     - A follow-up chemical reaction, because the separation depends on concentration.
-    - A nearly reversible couple whose extra separation comes mostly from uncompensated resistance.
+    - A nearly reversible couple with extra separation mainly from uncompensated resistance.
     - An adsorbed compound, because adsorbed species show concentration-dependent separations.
   correct: 2
   explanation: >-
@@ -119,7 +119,7 @@
     120 mg/L. A second batch gives 99 +/- 5 mg/L. What are the decisions?
   options:
     - Both fail, because both results are below the declared 120 mg/L.
-    - First batch pass; second inconclusive, because 94-104 mg/L straddles the 96 mg/L lower limit.
+    - First batch pass; second inconclusive, as 94-104 mg/L straddles the 96 mg/L limit.
     - Both pass, because both central values are above 96 mg/L.
     - First batch pass; second fail, because 99 mg/L is less than the declared value minus 20 mg/L.
   correct: 1
