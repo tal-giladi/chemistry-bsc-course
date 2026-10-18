@@ -1,0 +1,6 @@
+.markdown-section { max-width: 52rem; }
+.markdown-section img { max-width: 100%; }
+.markdown-section blockquote { border-left-color: #42b983; }
+.markdown-section details { margin: 1em 0; padding: .5em 1em; border: 1px solid #ddd; border-radius: 6px; }
+.markdown-section summary { cursor: pointer; font-weight: 600; }
+.markdown-section table { display: block; overflow-x: auto; }

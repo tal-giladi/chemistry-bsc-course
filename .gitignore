@@ -9,3 +9,4 @@ output/
 labs/**/data/downloaded/
 labs/**/runs/
 scratchpad/
+.claude/

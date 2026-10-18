@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self-taught Chemistry Degree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="The Technion B.Sc. in Chemistry, course by course, as a hands-on self-study path with simulated labs, real data and safe home experiments.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="preview/preview.css">
+</head>
+<body>
+  <div id="app">Loading…</div>
+  <script src="preview/preview.js"></script>
+  <script>
+    window.$docsify = {
+      name: 'Chemistry B.Sc. (self-taught)',
+      repo: 'tal-giladi/chemistry-bsc-course',
+      loadSidebar: true,
+      subMaxLevel: 0,
+      auto2top: true,
+      alias: { '/.*/_sidebar.md': '/preview/_sidebar.md' },
+      search: { placeholder: 'Search the course…', noData: 'No results.', depth: 3 },
+      copyCode: { buttonText: 'Copy', errorText: 'Error', successText: 'Copied' },
+      plugins: [window.CoursePreviewPlugin]
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@3.0.0/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+</body>
+</html>
