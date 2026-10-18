@@ -5,7 +5,7 @@
   options:
     - Vinegar is corrosive and should only be handled with gloves and a face shield.
     - PubChem must be wrong, because vinegar is sold as food in every supermarket.
-    - The classification applies to vinegar too, because the substance is the same.
+    - The classification applies to vinegar too, because the substance is the very same.
     - The data are for pure acid; at 5% the hazard is far lower, so read the label.
   correct: 3
   explanation: >-
@@ -18,8 +18,8 @@
   options:
     - Section 10, Stability and reactivity.
     - Section 9, Physical and chemical properties.
-    - Section 4, First-aid measures.
-    - Section 14, Transport information.
+    - Section 6, Accidental release measures.
+    - Section 11, Toxicological information.
   correct: 0
   explanation: >-
     Section 10 lists incompatible materials. For bleach it names acids, which release toxic chlorine gas when mixed
@@ -30,7 +30,8 @@
     What does this tell you?
   options:
     - The "Warning" product is more hazardous, because warnings come first in the GHS.
-    - The "Danger" product has a more severe hazard category than the "Warning" one.
+    - >-
+      The "Danger" product falls in a more severe hazard category than the "Warning" product.
     - The two words mean the same; the choice depends only on the manufacturer's country.
     - The "Danger" product is a physical hazard and the "Warning" one is a health hazard.
   correct: 1

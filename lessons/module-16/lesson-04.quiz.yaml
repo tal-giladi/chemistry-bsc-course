@@ -3,10 +3,10 @@
     A student mixes propanal and butanal with aqueous NaOH and hopes for one crossed aldol product.
     What should she expect?
   options:
-    - One product, because the larger aldehyde is always the donor.
+    - One product, because the larger aldehyde always acts as the donor.
     - About four aldol products, because each aldehyde can act as both donor and acceptor.
-    - No reaction, because NaOH is too weak to form any enolate.
-    - Two products, because self-aldol reactions do not happen when a second aldehyde is present.
+    - No reaction, because NaOH is too weak a base to form any enolate.
+    - Two products, as self-aldols do not happen when a second aldehyde is present.
   correct: 1
   explanation: >-
     Both aldehydes have alpha-H and both are good acceptors, so two self-aldols and two crossed aldols
@@ -44,8 +44,9 @@
   options:
     - Because ethoxide is consumed by the Williamson reaction with the ester.
     - Because the beta-keto ester product precipitates from ethanol as a neutral solid.
-    - Because ethanol evaporates and shifts the equilibrium.
-    - Because ethoxide deprotonates the product's CH2 (pKa about 11), driving it over.
+    - Because ethanol evaporates during the reaction and shifts the equilibrium.
+    - >-
+      Because ethoxide deprotonates the product's CH2, pKa about 11.
   correct: 3
   explanation: >-
     The product beta-keto ester is far more acidic than ethanol (pKa 16), so its deprotonation has

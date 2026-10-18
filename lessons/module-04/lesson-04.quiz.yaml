@@ -5,7 +5,7 @@
   options:
     - Put the meter on the 10 A range and touch the probes across the resistor.
     - Set the meter to volts, measure across the resistor, and divide by 470 ohm.
-    - Set the meter to ohms and measure the resistor while the circuit is powered.
+    - Set the meter to ohms and measure the resistor with the power on.
     - Put the meter on the 10 A range directly across the battery to read the total current.
   correct: 1
   explanation: >-
@@ -17,10 +17,10 @@
     A coulometric analysis passes 0.200 A for 600 s, reducing Ag+ to Ag (one electron per ion,
     M = 107.87 g/mol) at 100 % efficiency. How much silver is deposited?
   options:
-    - 0.067 g, from half the moles of electrons.
-    - 7.2 g, from using 10 minutes instead of 600 seconds and then multiplying by 60.
+    - 0.067 g, from taking half the moles of electrons, as if it were Cu2+.
+    - 7.2 g, from using 10 min instead of 600 s and then multiplying by 60.
     - 0.134 g, from 120 C divided by 96485 C/mol times 107.87 g/mol.
-    - 1.24 g, from 120 C times 107.87 divided by 10465.
+    - 1.24 g, from 120 C times 107.87 g/mol divided by 10465.
   correct: 2
   explanation: >-
     Q = It = 120 C, n(e) = 120/96485 = 1.24e-3 mol, and with one electron per Ag ion that is the
@@ -44,7 +44,8 @@
     is the most likely explanation?
   options:
     - Its internal resistance has grown, so the voltage drops under load.
-    - Its EMF has risen above the clock's rating, so the clock protects itself.
+    - >-
+      Its EMF has risen above the clock's rating, so the clock shuts off.
     - The meter reads too high because voltmeters add their own voltage.
     - The cell has reversed polarity, which a meter cannot detect.
   correct: 0

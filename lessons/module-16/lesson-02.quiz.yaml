@@ -5,8 +5,8 @@
   options:
     - The ketone, because its two alkyl groups make the carbonyl carbon more positive.
     - The aldehyde, as it is less hindered and less stabilised by alkyl donation.
-    - Both equally, because NaBH4 cannot tell one C=O from another.
-    - Neither, because NaBH4 only reduces esters and acids.
+    - Both equally, because NaBH4 cannot tell one kind of C=O from another at 0 C.
+    - Neither, because NaBH4 only reduces esters and carboxylic acids.
   correct: 1
   explanation: >-
     Aldehydes are more electrophilic and less crowded than ketones, the same reason formaldehyde is
@@ -17,9 +17,9 @@
     then add acetone. What happens?
   options:
     - The Grignard forms and adds to acetone to give a diol in good overall yield.
-    - The Grignard forms but adds to its own OH group to give an ether.
-    - The Grignard is protonated by the OH as it forms, so no C-C bond is made.
-    - Acetone is reduced to 2-propanol by the magnesium.
+    - The Grignard forms but adds to its own OH group to give a cyclic ether.
+    - The OH protonates the Grignard as it forms; no C-C bond is made.
+    - Acetone is reduced to 2-propanol by the magnesium metal in the flask.
   correct: 2
   explanation: >-
     Grignard reagents are bases with a conjugate acid pKa near 50; an alcohol (pKa 16) protonates them
@@ -29,7 +29,7 @@
     Which reagent pair gives an enamine rather than an imine with cyclohexanone (acid catalyst, water
     removed)?
   options:
-    - Cyclohexanone with methylamine, because it has only one methyl group on N.
+    - Cyclohexanone with methylamine, as it has only one methyl group on N.
     - Cyclohexanone with ammonia, because ammonia has three H on N.
     - Cyclohexanone with aniline, because aryl amines are less basic.
     - Cyclohexanone with pyrrolidine, as a secondary amine has only one H on N.

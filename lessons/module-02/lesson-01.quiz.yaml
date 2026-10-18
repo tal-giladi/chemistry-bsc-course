@@ -9,8 +9,7 @@
       About 21.7 kJ/mol, from dividing 49.9 kJ/mol by 2.303 for the base change.
     - >-
       About 115 kJ/mol, because a base-10 slope must be multiplied by 2.303 first.
-    - >-
-      About 6.0 kJ/mol, because the slope in kelvin is already the energy per mole.
+    - About 6.0 kJ/mol, because the slope in kelvin is already the molar energy.
   correct: 2
   explanation: >-
     A log10 plot has a slope 2.303 times smaller than the ln plot, so the ln slope is -13 816 K and
@@ -33,7 +32,7 @@
     A drug decays by first-order kinetics with a half-life of 6.0 h. What fraction is left 15 h
     after a dose?
   options:
-    - About 40 %, since 15 h is 2.5 times 6 h and 1/2.5 is 0.4.
+    - About 40 %, since 15 h is 2.5 times 6 h and 1/2.5 is simply 0.4.
     - About 18 %, since 15 h is 2.5 half-lives and 0.5^2.5 is 0.18.
     - About 25 %, since 15 h is a bit more than two half-lives of 6.0 h.
     - About 8 %, since the rate constant is 6.0 per hour.
@@ -47,9 +46,9 @@
     several concentrations. Which plot gives a straight line whose slope is n?
   options:
     - Rate against [A] on ordinary linear axes.
-    - ln(rate) against [A].
-    - Rate against 1/[A].
-    - log(rate) against log[A].
+    - ln(rate) plotted against plain [A].
+    - Rate plotted against the inverse 1/[A].
+    - log(rate) plotted against log[A].
   correct: 3
   explanation: >-
     Taking logs of a power law gives log(rate) = log k + n log[A], a straight line in log-log

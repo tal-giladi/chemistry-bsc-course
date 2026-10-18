@@ -17,7 +17,7 @@
     first order. A pharmacist asks when it will be at 50 % potency. What do you answer?
   options:
     - After 5.0 years, because it loses 10 % per year and needs to lose 50 %.
-    - After 10 years, because the half-life of a first-order process is ten times the time to lose 10 %.
+    - After 10 years, because a first-order half-life is ten times the time to lose 10 %.
     - After 3.3 years, because each year it loses a larger share of what is left.
     - After about 6.6 years, because k = -ln(0.90) per year and the half-life is ln 2 divided by k.
   correct: 3
@@ -30,8 +30,8 @@
     with visible noise, and you know the reaction is first order. Which approach gives the fairest
     comparison?
   options:
-    - Fit ln c against time for each run and compare k times c0, using all the points.
-    - Take the slope between the first two readings of each run, since that is closest to t = 0.
+    - Fit ln c against time for each run and compare k times c0, using every point of the run.
+    - Take the slope between the first two readings, since that is closest to t = 0.
     - Use central differences between neighbouring points and take the largest value of each run.
     - Interpolate extra points every 5 s and take the slope between the first two of them.
   correct: 0
@@ -58,7 +58,7 @@
     Which estimate is most defensible?
   options:
     - 37 J/(mol K) times 400 K, about 14.8 kJ, because Cp at room temperature is the standard value.
-    - The average Cp, 44 J/(mol K), times 400 K, about 17.6 kJ, a one-step trapezoid.
+    - The average Cp, 44 J/(mol K), times 400 K, about 17.6 kJ, a trapezoid.
     - 51 J/(mol K) times 400 K, about 20.4 kJ, because the hotter end dominates the heat.
     - 51 minus 37, times 400 K, about 5.6 kJ, because only the change in Cp matters.
   correct: 1
@@ -83,10 +83,10 @@
     Two energy levels differ by an energy that is 0.02 times kT. You need the fraction 1 - exp(-0.02)
     for a quick estimate and have no calculator. What do you use?
   options:
-    - About 0.98, because exp(-0.02) is about 0.02.
+    - About 0.98, because exp(-0.02) is about 0.02 for small x.
     - About 0.0002, because the error of exp(x) is about x squared over 2.
-    - About 0.2, because a 2 % energy gap gives a 20 % population change.
-    - About 0.02, because exp(-x) is about 1 - x for small x.
+    - About 0.2, because a 2 % gap gives a 20 % population change.
+    - About 0.02, because exp(-x) is about 1 - x when x is very small.
   correct: 3
   explanation: >-
     The two-term Taylor series exp(-x) = 1 - x gives 1 - exp(-x) = x = 0.02. The exact value is
@@ -109,7 +109,7 @@
     You find a liquid's density from m = 10.00 g (plus or minus 0.01 g) and V = 10.0 mL (plus or
     minus 0.2 mL). Your budget allows one better instrument. Which do you buy?
   options:
-    - A more precise volume device, as the volume term is 20 times the mass term.
+    - A better volume device, as the volume term is 20 times the mass term.
     - A more precise balance, because mass appears in the numerator of the density.
     - Neither, because the two inputs contribute equally to the uncertainty.
     - A more precise balance, because a 0.01 g error is larger than a 0.2 mL error.
@@ -122,10 +122,10 @@
     You plot dT/dt against (T - T_env) for your cooling mug. The points lie on a straight line, but
     it crosses dT/dt = 0 at T - T_env = 3 C instead of at zero. What is the most likely cause?
   options:
-    - The thermometer lags behind the water, which shifts every reading by a constant 3 C.
-    - The room was really about 3 C warmer than the T_env you entered.
+    - The thermometer lags behind the water, shifting every reading by a constant 3 C.
+    - The room was really about 3 C warmer than the T_env value you entered into the fit.
     - The cooling constant k was 3 times too large because of evaporation.
-    - Central differences shift the derivative by half a step, which moves the line sideways.
+    - Central differences shift the derivative by half a step, moving the line sideways.
   correct: 1
   explanation: >-
     Newton's law says the rate is zero when T equals the true room temperature. A zero crossing at

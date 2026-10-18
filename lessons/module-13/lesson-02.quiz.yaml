@@ -3,7 +3,8 @@
     A bomb calorimeter gives Delta_c U = -5150 kJ/mol for naphthalene, C10H8(s), which burns as
     C10H8 + 12 O2 -> 10 CO2 + 4 H2O(l). What is Delta_c H at 298 K (RT = 2.479 kJ/mol)?
   options:
-    - -5150 kJ/mol, because a bomb measures enthalpy directly.
+    - >-
+      -5150 kJ/mol, because a bomb calorimeter measures enthalpy directly.
     - About -5155 kJ/mol; Delta n_gas = -2 makes Delta H more negative.
     - About -5145 kJ/mol, because Delta n_gas = +2 makes Delta H less negative.
     - About -5185 kJ/mol, because all 14 product molecules count as gas.
@@ -17,7 +18,7 @@
     the other extrapolates the before and after lines to the firing time. Their calorimeter constants
     differ by 2 %. Whose value should be used, and why?
   options:
-    - The raw-peak value, because the thermometer reading is the direct measurement.
+    - The raw-peak value, as the thermometer reading is the direct measurement.
     - Either, because the error cancels when the unknown is measured the same way.
     - The average of both, because averaging removes systematic errors.
     - The extrapolated value, because it corrects for heat exchanged with the room.
@@ -33,7 +34,7 @@
   options:
     - The N2 vibration starts to be excited at high T and takes up energy.
     - The molecules start to rotate only above room temperature.
-    - The gas stops being ideal at high temperature, so Cp - Cv is no longer R.
+    - The gas stops being ideal at high T, so Cp - Cv is no longer R.
     - N2 starts to dissociate into atoms at high temperature, which absorbs heat.
   correct: 0
   explanation: >-

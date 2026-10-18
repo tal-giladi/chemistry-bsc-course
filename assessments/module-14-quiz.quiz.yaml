@@ -6,7 +6,8 @@
   options:
     - The phone sensor is miscalibrated, so only the static value can be reported.
     - The spring is anharmonic, so the static and dynamic constants are genuinely different.
-    - The spring's mass was left out; adding about 15 g gives about 24.8 N/m.
+    - >-
+      The spring's mass was left out; adding about 15 g of it gives about 24.8 N/m.
     - The difference is within normal scatter, so report the mean of the two values.
   correct: 2
   explanation: >-
@@ -19,7 +20,7 @@
   options:
     - A has Q about 91 and B about 18, so A gives the narrower spectral line.
     - A has Q about 20 and B about 4, because Q is the number of cycles to halve.
-    - Both have the same Q, because Q depends only on the frequency.
+    - Both have the same Q, because Q depends only on the shared 1.5 Hz frequency.
     - A has Q about 18 and B about 91, because faster decay means a sharper resonance.
   correct: 0
   explanation: >-
@@ -30,10 +31,10 @@
     A phone on a loop of elastic bands rings down; its frequency climbs from 1.97 to 2.00 Hz as the
     swing dies away, with no sideways motion. What is the best molecular analogy?
   options:
-    - A harmonic bond whose force constant grows as it cools down.
-    - A softening, Morse-like bond, whose level spacing shrinks at high energy.
-    - A bond that stiffens when stretched, so its overtones lie above twice the fundamental.
-    - A damped bond, since damping always raises the frequency as the amplitude decays.
+    - A harmonic bond whose force constant slowly grows as the bond cools down.
+    - A softening, Morse-like bond, whose level spacing shrinks at high vibrational energy.
+    - A bond that stiffens when stretched, with overtones above twice the fundamental.
+    - A damped bond, since damping always raises the frequency as it decays.
   correct: 1
   explanation: >-
     Frequency lower at large amplitude means the restoring force softens with stretch, like a real
@@ -59,7 +60,7 @@
   options:
     - Two modes failed to converge, so the calculation must be repeated.
     - The zeros are three translations and two rotations, which leaves all four vibrations.
-    - Linear molecules have 3N - 6 vibrations, so one of the 640 values is an error.
+    - Linear molecules have 3N - 6 vibrations, so one of the two 640 values must be an error.
     - The zero values are the stretches, which programs cannot compute for linear molecules.
   correct: 1
   explanation: >-
@@ -72,8 +73,8 @@
   options:
     - The symmetric stretch near 1333 per cm, because it is the strongest IR band.
     - The bend near 667 per cm, because the bend is the only mode that feels the carbon mass.
-    - The antisymmetric stretch near 2349 per cm, which is IR active and shifts with 13C.
-    - Any band, because all three modes shift equally with the carbon mass.
+    - The antisymmetric stretch near 2349 per cm, IR active and 13C-sensitive.
+    - Any band, because all three modes shift equally with the mass of the carbon.
   correct: 2
   explanation: >-
     nu3 moves the carbon strongly and absorbs IR, so 13CO2 appears near 2282 per cm, well separated.
@@ -84,8 +85,8 @@
     accelerometer at 100 Hz with a Hann window. What recording do you need?
   options:
     - About 40 s or more, since the window needs a separation of about 2/T.
-    - About 2 s, because the 100 Hz sample rate is far above the 3 Hz signal.
-    - About 0.3 s, one period of the 3 Hz signal.
+    - About 2 s, as the 100 Hz sample rate is far above the 3 Hz signal.
+    - About 0.3 s, which is one period of the 3 Hz signal.
     - About 4 s, if you zero-pad the record to ten times its length.
   correct: 0
   explanation: >-
@@ -112,7 +113,7 @@
     - At 1.5 kHz it acts like about 38 ohm, more than its 28 ohm DC value.
     - Its resistance must be exactly 28 ohm, so the fitted peak height is wrong.
     - Its inductance is zero, because the peak ratio is below 1.
-    - Its resistance does not matter, because Q depends only on L and C.
+    - Its resistance does not matter, because Q depends only on L and C here.
   correct: 0
   explanation: >-
     R_total = R/A = 10.0/0.21 = 48 ohm, so the coil contributes about 38 ohm at 1.5 kHz. Core and
@@ -125,7 +126,7 @@
     - Swap the film capacitor for an electrolytic one rated at a higher voltage.
     - Unplug the charger, run on battery, and take the earphones out first.
     - Leave everything as it is, because the circuit only draws a few milliamperes.
-    - Replace the 10 ohm resistor by a bare wire to reduce heating.
+    - Replace the 10 ohm resistor by a bare wire to reduce heating in the circuit.
   correct: 1
   explanation: >-
     The project rule is battery or USB power only, with nothing mains-powered connected, and a loud

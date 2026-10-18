@@ -3,7 +3,7 @@
     A model of acetonitrile, CH3-C≡N, shows the C-C-N angle as 180 degrees. What hybridisation
     explains that for the nitrile carbon?
   options:
-    - sp3, because the carbon makes four bonds in total counting the triple bond as three.
+    - sp3, because the carbon makes four bonds, counting the triple bond as three.
     - sp, because the carbon has two electron domains, the CH3 group and the triple bond.
     - sp2, because the triple bond leaves the carbon one unused p orbital.
     - sp3d, because a triple bond needs an extra orbital beyond the 2s and 2p set.
@@ -17,7 +17,7 @@
     does that tell you about alkenes?
   options:
     - The second bond is a sigma bond pointing away from the first, so it is weaker.
-    - The double bond is longer than the single bond, so it holds the atoms less tightly.
+    - The double bond is longer than a single bond, so it holds the atoms less firmly.
     - Alkenes are less stable than alkanes because carbon cannot make more than one bond to one atom.
     - The pi bond is weaker than the sigma bond, so it is the part that reagents attack.
   correct: 3
@@ -30,9 +30,9 @@
     is wrong with that label?
   options:
     - It is an amide N; its lone pair delocalises into C=O, so it is not basic.
-    - The N is aromatic, so it can only act as an acid in water.
+    - The N is aromatic, so it can only act as an acid in water, never a base.
     - Paracetamol has no nitrogen at all; the N in the SMILES is the phenol oxygen.
-    - Amines must carry two hydrogens on nitrogen, and this N carries only one.
+    - Amines must carry two hydrogens on nitrogen, and this N carries only a single one.
   correct: 0
   explanation: >-
     N attached to C=O is an amide. Resonance delocalises the lone pair into the carbonyl, which
@@ -43,7 +43,7 @@
     C-O-C. What is it, and why does the difference matter?
   options:
     - A ketone, because the C=O is between two carbons, so it reacts like acetone.
-    - An ether, because C-O-C is enough, so it is unreactive like diethyl ether.
+    - An ether, because C-O-C is enough, so it is just as unreactive as diethyl ether.
     - An ester, because the O is on a carbonyl carbon, so water can hydrolyse it.
     - An aldehyde, because the C=O carbon carries an oxygen, so it is easily oxidised.
   correct: 2

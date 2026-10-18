@@ -3,10 +3,10 @@
     You need N-benzylacetamide and have benzylamine plus four acetyl sources on the shelf. Which choice
     acetylates the amine fastest at room temperature?
   options:
-    - Ethyl acetate, because ethoxide is a strong nucleophile.
-    - Acetyl chloride, because chloride is the weakest base and best leaving group.
+    - Ethyl acetate, because ethoxide is a strong nucleophile that attacks fast.
+    - Acetyl chloride, since chloride is the best leaving group of the four.
     - N,N-dimethylacetamide, because amides exchange easily with other free amines.
-    - Acetic acid, because the acid protonates the amine and activates it.
+    - Acetic acid, because the acid protonates the amine and activates it for attack.
   correct: 1
   explanation: >-
     Rank by leaving-group basicity: Cl- (HCl pKa about -7) leaves far more easily than acetate,
@@ -18,9 +18,9 @@
     raises the yield the most?
   options:
     - Doubling the amount of sulfuric acid catalyst.
-    - Running the reaction for twice as long.
+    - Running the reaction for twice as long as before.
     - Removing water as it forms with a Dean-Stark trap.
-    - Adding 5 mol of water so the catalyst dissolves better.
+    - Adding 5 mol of water so the catalyst dissolves.
   correct: 2
   explanation: >-
     A catalyst and a longer time only help reach equilibrium faster; they do not move it. Removing a
@@ -31,9 +31,9 @@
     Methyl 4-nitrobenzoate and methyl 4-methoxybenzoate are saponified under identical conditions.
     Which hydrolyses faster?
   options:
-    - The methoxy ester, because the electron-donating OCH3 makes the oxygen a better leaving group.
+    - The methoxy ester, because the electron-donating OCH3 group makes the oxygen a better leaving group.
     - Both at the same rate, because the leaving group (methoxide) is the same.
-    - Neither, because aromatic esters are not saponified.
+    - Neither, because aromatic esters are not saponified by hydroxide at all.
     - The nitro ester, because electron-withdrawing NO2 makes the carbonyl carbon more electrophilic.
   correct: 3
   explanation: >-
@@ -45,8 +45,8 @@
     Aspirin has pKa 3.49. Roughly what fraction is in the neutral COOH form in the stomach at pH 1.5?
   options:
     - About 99 %, because the pH is two units below the pKa.
-    - About 50 %, because aspirin is a weak acid.
-    - About 1 %, because the pH is two units below the pKa.
+    - About 50 %, because aspirin is only a weak acid.
+    - About 1 %, because the pH is two full units below the pKa.
     - About 76 %, because aspirin is a stronger acid than acetic acid.
   correct: 0
   explanation: >-

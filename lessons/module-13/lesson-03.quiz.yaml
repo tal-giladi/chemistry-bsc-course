@@ -5,7 +5,8 @@
   options:
     - It does break the law, and that is exactly why a freezer needs electricity to run.
     - The second law applies only to gases, so a liquid freezing is not covered by it.
-    - The water's entropy actually rises, because ice forms a more ordered crystal lattice.
+    - >-
+      The water's entropy actually rises, as ice forms a more ordered crystal lattice.
     - Only the total must rise; the released heat raises the surroundings' entropy more.
   correct: 3
   explanation: >-
@@ -31,7 +32,7 @@
     possibly convert to work from each 100 kJ of heat taken in?
   options:
     - About 33 kJ, from 1 - 303/453.
-    - About 83 kJ, from 1 - 30/180.
+    - About 83 kJ, from 1 - 30/180 = 0.83.
     - About 67 kJ, from 303/453.
     - 100 kJ, because energy is conserved.
   correct: 0

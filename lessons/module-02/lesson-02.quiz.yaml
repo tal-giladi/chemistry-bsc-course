@@ -16,10 +16,12 @@
   question: >-
     For c = c0 exp(-kt), which expression is dc/dt?
   options:
-    - -k c0 exp(-kt), which equals -k c.
+    - >-
+      -k c0 exp(-kt), which equals -k c (chain rule on -kt).
     - c0 exp(-kt), because the exponential is its own derivative.
     - -kt c0 exp(-kt - 1), from the power rule on the exponent.
-    - -c0 exp(-kt) / k, from dividing by the inner derivative.
+    - >-
+      -c0 exp(-kt) / k, dividing by the inner derivative.
   correct: 0
   explanation: >-
     By the chain rule you differentiate the outer exponential (unchanged) and multiply by the
@@ -32,7 +34,7 @@
     - Use more points by interpolating between the measured ones, so the step h becomes smaller.
     - Switch to forward differences, which use only one neighbour and so pick up less noise.
     - Use a larger step, or fit a model to c(t) and differentiate the model instead.
-    - Report the rate in different units so the scatter looks smaller.
+    - Report the rate in different units, so the point-to-point scatter looks smaller.
   correct: 2
   explanation: >-
     The noise in a finite difference grows like 1/h. Interpolation does not add information, and

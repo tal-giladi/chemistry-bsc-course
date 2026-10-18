@@ -43,9 +43,9 @@
     What is the most important thing missing?
   options:
     - A neat, typed copy of the page, so it is easier to read later.
-    - The raw readings, units, instrument resolution and date.
+    - The raw readings, units, instrument resolution and the date.
     - The textbook page number where the matching value appears.
-    - A drawing of the equipment used, with the brand of each item.
+    - A drawing of the equipment, with the brand of each item.
   correct: 1
   explanation: >-
     Without raw readings, units, the instrument and its resolution, and a date, nobody can check the arithmetic,
@@ -56,7 +56,8 @@
     exclamation mark, "Warning" and H319. Which statement is correct?
   options:
     - The drain cleaner can cause severe skin burns and is the more severe hazard.
-    - The glass cleaner is more hazardous, because "Warning" is the stronger word.
+    - >-
+      The glass cleaner is more hazardous, because "Warning" is the stronger signal word.
     - Both are equally hazardous, because each carries one pictogram.
     - Neither is hazardous if used indoors, because H codes apply only to transport.
   correct: 0
@@ -71,7 +72,7 @@
     - Buy the pellets, but dissolve them only outdoors with gloves and glasses.
     - Buy the pellets, since small private purchases are outside the 1993 law.
     - Use a lab reagent only if a pharmacist checks the order before delivery.
-    - Use baking soda and a pharmacy syringe instead, and buy no lab reagents.
+    - Use baking soda and a pharmacy syringe, and buy no lab reagents.
   correct: 3
   explanation: >-
     The course uses kitchen and pharmacy materials only. Many reagents are restricted under the Hazardous
@@ -83,8 +84,8 @@
     measure a juice using the syringe marks. What happens if you skip the correction?
   options:
     - Nothing important, because averaging five repeats cancels the error.
-    - The juice density will come out about 1.4% too low every time.
-    - The juice density will come out about 1.4% too high in some repeats and low in others.
+    - The juice density will come out about 1.4% too low in every single repeat.
+    - The juice density will be 1.4% too high in some repeats, low in others.
     - The juice density will come out about 1.4% too high every time.
   correct: 1
   explanation: >-

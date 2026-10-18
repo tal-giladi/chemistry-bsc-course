@@ -3,7 +3,7 @@
     Three replicate results have a mean of 10.20 mg/L and s = 0.15 mg/L. What is the 95 % confidence
     interval of the mean?
   options:
-    - 10.20 ± 0.17 mg/L, using z = 1.96 × 0.15/√3.
+    - 10.20 ± 0.17 mg/L, using 1.96 × 0.15/√3.
     - 10.20 ± 0.37 mg/L, using 4.303 × 0.15/√3.
     - 10.20 ± 0.65 mg/L, using 4.303 × 0.15.
     - 10.20 ± 0.30 mg/L, using 2 × 0.15.
@@ -28,7 +28,8 @@
     Two methods give s = 0.90 (n = 6) and s = 0.25 (n = 6). The critical F for 5 and 5 degrees of freedom
     is 7.15. How should you compare their means?
   options:
-    - Use Welch's t-test, because F = 13 shows the variances differ.
+    - >-
+      Use Welch's t-test, because F = 13 shows the two variances clearly differ.
     - Use the pooled t-test, because both methods have the same number of results, n = 6.
     - Use the pooled t-test, because F = 3.6 is below the critical value.
     - Use Grubbs' test on the less precise method until its s matches the other one.
@@ -41,8 +42,8 @@
     Grubbs' test flags one of eight results as an outlier at the 95 % level. What should you do?
   options:
     - Remove it, run Grubbs' test again on the remaining seven, and repeat until nothing is flagged.
-    - Keep it in all cases, because removing any data is scientific misconduct.
-    - Look for a recorded cause; if removing it, report that and why, and do not re-test the rest.
+    - Keep it in all cases, because removing any data point is scientific misconduct.
+    - Look for a recorded cause; report any removal and why, and do not re-test.
     - Replace it with the mean of the other seven so that the sample size stays at eight.
   correct: 2
   explanation: >-

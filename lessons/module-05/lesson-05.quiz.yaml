@@ -6,7 +6,7 @@
   options:
     - The colleague has a different random seed, because pandas uses random numbers by default.
     - Hidden state, because cells ran out of order and possibly twice before you saved.
-    - A rounding difference, because Restart and Run All uses lower float precision.
+    - A rounding difference, because Restart and Run All uses lower floating-point precision.
     - A broken kernel on the colleague's side, because notebooks always reproduce their own outputs.
   correct: 1
   explanation: >-
@@ -17,7 +17,7 @@
     One repeat in your density data is clearly wrong: you remember spilling some solution. What is
     the reproducible way to handle it?
   options:
-    - Delete the row in the CSV and save it, so the raw file is clean for everyone.
+    - Delete the row in the CSV file, so the raw data are clean for everyone.
     - Replace the value in the CSV by the mean of the other repeats.
     - Keep the raw file and drop the row in code, with the reason in a comment.
     - Leave it in and never mention it, because excluding data is always wrong.
@@ -46,8 +46,8 @@
   options:
     - Use a relative path inside the folder, and print the package versions.
     - Convert the notebook to PDF, and add more explanatory comments to each code cell.
-    - Move all code into one big cell, and set a random seed.
-    - Use the newest pandas release, and turn off all warnings.
+    - Move all code into one big cell, and set a fixed random seed.
+    - Use the newest pandas release, and turn off all warnings so the output stays clean.
   correct: 0
   explanation: >-
     A relative path works in anyone's copy of the folder, and a version record lets others rebuild

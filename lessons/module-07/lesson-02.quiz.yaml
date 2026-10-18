@@ -16,9 +16,10 @@
     What explains this?
   options:
     - Oxygen's outer electron is in a shell farther from the nucleus than nitrogen's.
-    - Oxygen's fourth 2p electron shares an orbital and is pushed out by the repulsion.
+    - >-
+      Oxygen's fourth 2p electron is paired, and repulsion pushes it out.
     - Nitrogen's outer electron is in a 2s orbital, which lies lower in energy than any 2p orbital.
-    - Nitrogen has more neutrons, which hold the electrons more tightly.
+    - Nitrogen has more neutrons, which hold its outer electrons more tightly.
   correct: 1
   explanation: >-
     Both outer electrons are in 2p in the same shell. Oxygen's fourth 2p electron must pair with another in one
@@ -31,7 +32,7 @@
     - A 2+ ion, because the large jump comes after the second electron.
     - A 1+ ion, because the first ratio 11.9 / 6.1 is close to 2.
     - A 3+ ion, because the third value is the largest single number.
-    - A 4+ ion, because all four electrons can be removed with enough energy.
+    - A 4+ ion, because all four can be removed with enough energy.
   correct: 0
   explanation: >-
     The ratios are 2.0, 4.3 and 1.3. The big jump after the second electron means the third comes from the core,

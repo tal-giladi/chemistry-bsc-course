@@ -16,7 +16,7 @@
     What do you check first?
   options:
     - Which source is newer, since newer values replace older ones.
-    - Which value has more digits, since it is the more precise one.
+    - Which value has more digits, since it must be the more precise one.
     - Whether the water formed is liquid in one and gas in the other.
     - Whether one source made a sign error, since the two differ by about 10 %.
   correct: 2
@@ -28,10 +28,10 @@
     A reference in a draft report, "J. Chem. Educ. 2019", has a DOI that Crossref does not recognise, and the
     DOI has no typo. What is the right action?
   options:
-    - Keep it, because Crossref does not cover every chemistry journal.
+    - Keep it, because Crossref does not cover every chemistry journal there is.
     - Keep it but remove the DOI, since the authors, year and journal are enough to cite it.
     - Replace the DOI with one of a paper on a similar topic from the same journal.
-    - Treat it as possibly invented and remove it unless you can find and read the paper.
+    - Treat it as possibly invented; remove it unless you can read the paper.
   correct: 3
   explanation: >-
     Journal articles from major publishers are registered with Crossref. An unresolvable DOI with no typo is a
@@ -41,7 +41,7 @@
     Crossref shows that a paper you want to cite has a correction notice. What should you do?
   options:
     - Read the correction to see whether it changes the result you want to use.
-    - Stop citing it, because a corrected paper is no longer reliable scientific evidence.
+    - Stop citing it, as a corrected paper is no longer reliable evidence.
     - Cite it without comment, since corrections are only about formatting.
     - Cite only the correction notice, since it replaces the original paper.
   correct: 0

@@ -6,7 +6,7 @@
     - The measurement must be wrong, because a positive Delta G standard forbids any product.
     - A catalyst in the reactor has made Delta G standard negative.
     - Q is so far below K that RT ln Q outweighs +20 kJ/mol, making Delta_r G negative.
-    - At 600 K the sign of Delta G standard no longer matters, only the sign of Delta H.
+    - At 600 K the sign of Delta G standard no longer matters, only Delta H does.
   correct: 2
   explanation: >-
     Direction follows Delta_r G = Delta_r G standard + RT ln Q. A positive Delta G standard only means
@@ -16,7 +16,8 @@
     Compressing 1 mol of an ideal gas at 298 K from 1 bar to 10 bar raises its Gibbs energy by 5.7 kJ.
     By roughly how much does the same pressure rise change G of 1 mol of liquid water (18 cm3/mol)?
   options:
-    - About 16 J, because dG = V dp and the liquid's volume is tiny.
+    - >-
+      About 16 J, because dG = V dp and the liquid's molar volume is tiny.
     - About 5.7 kJ, because G changes by RT ln(p2/p1) for every substance.
     - About 0.57 kJ, because liquids are ten times less compressible than gases.
     - Zero, because liquids are incompressible and so G cannot depend on pressure.
@@ -31,8 +32,8 @@
   options:
     - The heat-capacity data must be wrong, because K cannot change by a factor of 5.
     - Both values are acceptable, because K is only ever known to a factor of 10.
-    - The error comes from using kelvin instead of Celsius in RT.
-    - Delta_r H and Delta_r S change with T via Delta_r Cp, so the shortcut fails.
+    - The error comes from using kelvin instead of Celsius in the RT term.
+    - Delta_r H and Delta_r S change with T via Delta_r Cp, so it fails.
   correct: 3
   explanation: >-
     Kirchhoff and the integral of Delta_r Cp / T move both Delta H and Delta S. Their errors partly
@@ -45,7 +46,7 @@
   options:
     - 10^-2.029 = 9.4e-3, because Kf is the K of the synthesis.
     - 10^(2 x -2.029) = 8.8e-5, because the equation as written forms 2 mol of NH3.
-    - 10^(-2.029/2) = 9.7e-2, because the equation needs half of the formation reaction.
+    - 10^(-2.029/2) = 9.7e-2, as the equation needs half of the formation reaction.
     - e^-2.029 = 0.13, because log Kf is a natural logarithm.
   correct: 1
   explanation: >-

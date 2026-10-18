@@ -3,9 +3,9 @@
     You titrate an unknown weak acid with NaOH using a pH meter. The equivalence point is at 18.40 mL and the
     pH at 9.20 mL is 4.20. What is the best estimate of the acid's pKa?
   options:
-    - About 8.4, the pH you would expect at the equivalence point.
-    - 4.20, because at half-equivalence the acid and its conjugate base are equal.
-    - 2.10, half of the pH measured at half the equivalence volume.
+    - About 8.4, the pH you would expect at the equivalence point itself.
+    - 4.20, since at half-equivalence the acid and its base are equal.
+    - 2.10, which is half of the pH measured at half the equivalence volume.
     - It cannot be found without first knowing the acid's concentration and the NaOH molarity.
   correct: 1
   explanation: >-
@@ -15,9 +15,9 @@
   question: >-
     Why is the pH at the equivalence point of acetic acid titrated with NaOH about 8.7, not 7?
   options:
-    - Because some acetic acid is always left unreacted at the equivalence point, raising pH.
+    - Because some acetic acid is always left unreacted at equivalence.
     - Because NaOH is added in a small excess to make the indicator change colour.
-    - Because the acetate formed is a weak base that makes OH⁻ from water.
+    - Because the acetate formed is a weak base that makes OH⁻ by reacting with water.
     - Because the Kw of water rises when sodium ions are present in the solution.
   correct: 2
   explanation: >-
@@ -42,7 +42,7 @@
     25.00 mL. What does the first-derivative method report, and how could you do better?
   options:
     - 25.00 mL; repeat the titration several times and average to remove the step-size error.
-    - 24.50 mL; the end point is always the volume just before the largest jump.
+    - 24.50 mL; the end point is always taken as the volume just before the largest jump.
     - 24.75 mL; nothing better is possible without a different indicator.
     - 24.75 mL; use smaller steps or interpolate the second-derivative zero crossing.
   correct: 3

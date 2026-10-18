@@ -44,8 +44,8 @@
   options:
     - Pendulum 1 lost its energy to air drag, and the others picked up a draft.
     - The release excited several normal modes, which drift out of step and beat.
-    - The rubber bands store the energy for a while and then release it to the far end.
-    - Pendulum 1 has a different natural frequency from the others, so it stops resonating.
+    - The rubber bands store the energy and later release it to the far end.
+    - Pendulum 1 has a different natural frequency, so it stops resonating.
   correct: 1
   explanation: >-
     Releasing one pendulum is a sum of normal modes. Their frequencies differ slightly, so their sum

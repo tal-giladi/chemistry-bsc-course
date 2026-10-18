@@ -3,7 +3,7 @@
     You dissolve a salt in 100 g of water in a foam cup and the temperature rises from 21.0 C to
     24.0 C. What is the sign of q for the dissolving salt, and is the process exothermic?
   options:
-    - q is positive and the process is endothermic, because the water gained heat.
+    - q is positive and the process is endothermic, because the water gained the heat.
     - q is negative and it is exothermic, because the salt gave heat to the water.
     - q is positive and the process is exothermic, because the temperature went up.
     - q is zero, because the cup is insulated and no heat leaves it.
@@ -16,10 +16,10 @@
     Using Delta_f H values CO2(g) -393.5, H2O(l) -285.8 and C3H8(g) -103.8 kJ/mol, what is
     Delta_r H for C3H8 + 5 O2 -> 3 CO2 + 4 H2O(l)?
   options:
-    - About -575.5 kJ/mol, from ignoring the coefficients 3 and 4.
+    - About -575.5 kJ/mol, from ignoring the coefficients 3 and 4 entirely.
     - About -2427.6 kJ/mol, from adding the propane value instead of subtracting it.
-    - About +2220 kJ/mol, from subtracting products from reactants.
-    - About -2220 kJ/mol, from products minus reactants with the coefficients.
+    - About +2220 kJ/mol, from subtracting the products from the reactants.
+    - About -2220 kJ/mol, products minus reactants with coefficients.
   correct: 3
   explanation: >-
     [3(-393.5) + 4(-285.8)] - [-103.8] = -2323.7 + 103.8 = -2219.9 kJ/mol. Coefficients multiply
@@ -32,7 +32,7 @@
     - Ethanol already contains oxygen and is heavier, so each gram holds less fuel to oxidise.
     - Ethanol is a liquid, and liquids always release less heat than gases per gram.
     - Methane forms more CO2 per mole than ethanol does, so it releases more heat.
-    - The table values for ethanol include evaporation of the product water, which lowers them.
+    - The table values for ethanol include evaporation of product water, which lowers them.
   correct: 0
   explanation: >-
     Per mole ethanol gives -1367 kJ, but it weighs 46 g/mol and is partly oxidised already (one O atom).

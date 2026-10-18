@@ -30,7 +30,7 @@
     To make tert-butyl methyl ether by the Williamson synthesis, which pair of reagents should you use?
   options:
     - Sodium methoxide and tert-butyl bromide, because methoxide is the better nucleophile.
-    - Methanol and tert-butyl bromide with no base, because the reaction is SN2.
+    - Methanol and tert-butyl bromide with no base, because the reaction is a plain SN2.
     - Potassium tert-butoxide and iodomethane, because SN2 needs the methyl halide.
     - Potassium tert-butoxide and tert-butyl bromide, because like reacts with like.
   correct: 2
@@ -43,7 +43,7 @@
     attack, and why?
   options:
     - At the CH2 carbon, because strong nucleophiles open epoxides by SN2 there.
-    - At the CH carbon, because the more substituted carbon carries more positive charge.
+    - At the CH carbon, as the more substituted carbon is more positive.
     - At the oxygen, because ethoxide first protonates the epoxide.
     - At both carbons equally, because the ring strain is the same at each.
   correct: 0

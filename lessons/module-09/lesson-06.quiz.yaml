@@ -2,7 +2,8 @@
   question: >-
     You need a buffer at pH 7.4 that will absorb acid from many samples. Which choice is best?
   options:
-    - "Acetic acid and acetate (pKa 4.76) in a 1 : 437 ratio, because Henderson–Hasselbalch gives pH 7.4."
+    - >-
+      Acetic acid and acetate (pKa 4.76) in a 1 : 437 ratio, as Henderson–Hasselbalch gives pH 7.4.
     - Phosphate, H₂PO₄⁻ and HPO₄²⁻ (pKa 7.20), at a concentration sized for the acid the samples add.
     - Very dilute phosphate, because a lower concentration makes the pH more stable.
     - Ammonium and ammonia (pKa 9.24), because a higher pKa resists acid better.
@@ -15,8 +16,8 @@
     Buffer A is 0.20 M acetate at pH 4.76; buffer B is 0.020 M acetate at pH 4.76. How do they compare?
   options:
     - Same pH and same capacity, since capacity depends only on the ratio of acid to base.
-    - B has the larger capacity, since dilute solutions change pH less when acid is added.
-    - Same pH, but A absorbs about ten times more acid for the same pH change.
+    - B has the larger capacity, since dilute solutions resist added acid better.
+    - Same pH, but buffer A absorbs about ten times more acid for the same pH change.
     - A has the lower pH, since the more concentrated acid releases more hydronium.
   correct: 2
   explanation: >-
@@ -26,10 +27,10 @@
   question: >-
     A sulfate sample gives 0.4668 g of BaSO₄ (233.39 g/mol). How much sulfate (96.06 g/mol) did it contain?
   options:
-    - 0.1921 g, from 0.4668 × 96.06/233.39.
-    - 1.134 g, from 0.4668 × 233.39/96.06.
+    - 0.1921 g, from 0.4668 × (96.06/233.39).
+    - 1.134 g, from 0.4668 × 233.39 divided by 96.06.
     - 0.4668 g, because the precipitate is weighed as sulfate.
-    - 0.2747 g, from 0.4668 − 0.1921.
+    - 0.2747 g, from 0.4668 − 0.1921 g.
   correct: 0
   explanation: >-
     The gravimetric factor is M(analyte)/M(precipitate) times the stoichiometric ratio, here 1 : 1, so the
@@ -41,7 +42,7 @@
   options:
     - Keep all standards and report R², because more points always give a better calibration.
     - Raise the exposure until the darkest cups look lighter, then keep using the same line.
-    - Remove the blanks, because the curvature comes from a wrong zero point.
+    - Remove the blanks, because the curvature comes from a wrong zero point on the line.
     - End the linear range below them and dilute any sample that reads in that region.
   correct: 3
   explanation: >-

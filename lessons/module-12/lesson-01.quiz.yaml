@@ -6,7 +6,7 @@
     - n = 4 to n = 2, because 434 nm is the second visible Balmer line.
     - n = 5 to n = 2, because 1/lambda divided by R_H gives 1/4 - 1/25.
     - n = 5 to n = 1, because higher levels always fall to the ground state.
-    - n = 3 to n = 2, because red and violet lines come from the same jump.
+    - n = 3 to n = 2, as red and violet lines come from the same jump.
   correct: 1
   explanation: >-
     1/lambda = 2.3032e6 per metre; divided by R_H = 1.0968e7 per metre this is 0.2100 = 1/4 - 1/25.
@@ -15,8 +15,8 @@
   question: >-
     You want to know whether quantum effects matter for a particle. Which comparison decides it?
   options:
-    - Its mass against the mass of a proton.
-    - Its speed against the speed of light.
+    - Its mass against the mass of a proton, since heavy particles behave classically.
+    - Its speed against the speed of light, which sets relativistic effects.
     - Its kinetic energy against the available thermal energy k_B T of its surroundings.
     - Its de Broglie wavelength against the size of the region confining it.
   correct: 3
@@ -29,7 +29,7 @@
     R_inf/(1 + m_e/m_p). What is the most likely cause?
   options:
     - You used air wavelengths without converting them to vacuum.
-    - You used R_inf instead of R_H in the comparison value.
+    - You used R_inf instead of R_H in the comparison value itself.
     - Hydrogen levels do not follow 1/n^2, so the slope is biased.
     - The fit needed a quadratic term to absorb the fine structure.
   correct: 0
@@ -44,7 +44,7 @@
     - It halves, because the electron has less room to move.
     - It stays the same, because the energy depends only on the charge.
     - It about quadruples, because it scales as one over the length squared.
-    - It doubles, because the momentum spread scales as one over the length of the box.
+    - It doubles, because the momentum spread scales as one over the length.
   correct: 2
   explanation: >-
     Delta p is at least hbar/(2 Delta x), and the kinetic energy goes as (Delta p)^2/2m, so halving

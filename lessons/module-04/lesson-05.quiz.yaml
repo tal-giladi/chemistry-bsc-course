@@ -6,7 +6,7 @@
     - A bright red lamp at 650 nm, because high power makes up for the colour.
     - A green lamp at 530 nm, because green light is the most energetic part of sunlight.
     - An infrared heat lamp at 1000 nm, because it warms the sample most.
-    - A violet lamp at 400 nm, because 1239.84/400 = 3.1 eV per photon.
+    - A violet lamp at 400 nm, because 1239.84/400 = 3.1 eV for each photon.
   correct: 3
   explanation: >-
     Each photon must carry the energy, and E in eV is 1239.84 divided by the wavelength in nm. Only
@@ -16,10 +16,10 @@
     You double the brightness of a monochromatic light on a metal that already emits photoelectrons.
     What changes?
   options:
-    - The number of electrons per second doubles; their maximum energy stays the same.
+    - Twice as many electrons per second, each with the same maximum energy.
     - The maximum energy of each electron doubles; their number per second stays the same.
-    - Both the number and the maximum energy of the electrons double.
-    - Nothing changes, because the frequency is the same.
+    - Both the number and the maximum energy of the emitted electrons double.
+    - Nothing changes, because the frequency and so the photon energy are the same.
   correct: 0
   explanation: >-
     Brightness is the number of photons per second, so more electrons come out. Each photon still
@@ -29,7 +29,7 @@
     In the LED practical your four turn-on voltages give a straight line against 1/lambda with
     slope 1.10e-6 V m. What value of h do you report?
   options:
-    - 1.10e-6 J s, the slope itself, read directly.
+    - 1.10e-6 J s, the slope itself.
     - 5.88e-34 J s, from slope times e/c.
     - 3.30e2 J s, from slope times c.
     - 1.76e-25 J s, from slope times e.

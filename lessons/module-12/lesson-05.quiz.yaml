@@ -3,9 +3,9 @@
     The pure rotational spectrum of a diatomic molecule shows lines spaced 3.84 per cm apart. What
     is its rotational constant B?
   options:
-    - 3.84 per cm, because the spacing equals B.
+    - 3.84 per cm, because the line spacing simply equals B.
     - 7.68 per cm, because each line is a jump of two levels.
-    - 1.92 per cm, because the lines are spaced by 2B.
+    - 1.92 per cm, because neighbouring lines are spaced by 2B.
     - 0.96 per cm, because the J(J+1) factor adds another factor of two.
   correct: 2
   explanation: >-
@@ -17,7 +17,7 @@
     not allowed?
   options:
     - l = 2, m = -2, a 3d orbital.
-    - l = 1, m = 0, a 3p orbital.
+    - l = 1, m = -1, a 3p orbital.
     - l = 0, m = 0, a 3s orbital.
     - l = 3, m = 1, a 3f orbital.
   correct: 3
@@ -31,7 +31,7 @@
     - Yes, because 2s must lie below 2p, as in the aufbau order.
     - No, in a pure 1/r potential the energy depends only on n.
     - Yes, because the centrifugal term should raise 2p by a fixed amount.
-    - No, because the solver ignores angular momentum entirely.
+    - No, because the solver simply ignores angular momentum entirely.
   correct: 1
   explanation: >-
     For one electron in a Coulomb potential, levels with the same n are degenerate. In many-electron
@@ -41,7 +41,7 @@
     A heavier isotopologue has a moment of inertia twice as large. At the same temperature, what
     happens to its most populated rotational level?
   options:
-    - It moves to higher J, about 1.4 times the J value.
+    - It moves to higher J, about 1.4 times the old J value, since B halves.
     - It stays the same, because temperature alone sets the population.
     - It moves to lower J, because the levels are farther apart.
     - It moves to J = 0, because heavier molecules do not rotate.

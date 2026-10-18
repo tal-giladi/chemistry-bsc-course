@@ -5,7 +5,7 @@
     What does this tell you?
   options:
     - The cup absorbed some of the heat, so it has a heat capacity that must be included.
-    - The thermometer reads 0.5 C low and should be recalibrated before the next calibration run.
+    - The thermometer reads 0.5 C low and should be recalibrated before the next run.
     - The hot water was not hot enough, so the experiment must be repeated at 60 C.
     - Heat was created by mixing, which raised the temperature less than expected.
   correct: 0
@@ -30,10 +30,10 @@
     A learner forgets the cup and computes Delta_sol H from 100 g of water alone, getting 15.7 kJ/mol
     instead of 17.4 kJ/mol. What kind of error is this, and in which direction?
   options:
-    - A random error, which averaging three repeats would remove.
+    - A random error, which averaging three or more repeats of the experiment would fully remove.
     - A systematic error that makes the result too low, because the cup's heat is left out.
     - A systematic error that makes the result too high, because water's c is overestimated.
-    - No error at all, because foam cups do not absorb heat.
+    - No error at all, because foam cups do not absorb any heat from the water.
   correct: 1
   explanation: >-
     The dissolving salt took heat from the cup too, so ignoring it undercounts q in every run. Repeating
@@ -46,7 +46,7 @@
     - The true value is certainly between 4.87 and 5.15 %, the 95 % confidence interval.
     - The SD of 0.05 % is the total uncertainty, so the label value of 5 % is confirmed exactly.
     - The results are too scattered to use, so the titration must be redone with a burette.
-    - The mean is 5.01 % with SD 0.05 %, but the end-point excess biases all three high.
+    - The mean is 5.01 %, SD 0.05 %, but the end-point excess biases all three high.
   correct: 3
   explanation: >-
     The SD and confidence interval describe random scatter only. A systematic excess at the end point
@@ -56,9 +56,9 @@
     Why does the red-cabbage colour stay pink for most of the vinegar titration and then change quickly
     near the end?
   options:
-    - Because the titration is a redox reaction, and the indicator changes only when all electrons are used.
+    - Because the titration is a redox reaction and the indicator waits until all electrons are used.
     - Because half-neutralised vinegar is an acetic acid/acetate buffer near pH 4.7 that resists change.
-    - Because baking soda is a strong base, so the pH jumps only at pH 7.
+    - Because baking soda is a strong base, so the pH jumps only at exactly pH 7.
     - Because CO2 bubbles carry the indicator out of the solution until the end.
   correct: 1
   explanation: >-

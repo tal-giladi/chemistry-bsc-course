@@ -7,7 +7,7 @@
     - Report them, since an RSD of 0.3 % shows that any error is far below 3 %.
     - Report them with a larger confidence interval, widened enough to cover the 3 % difference.
     - Do not report yet; a consistent 3 % shortfall is a systematic error to be found.
-    - Average more replicates until the difference from the reference disappears.
+    - Average more replicates until the difference from the reference value disappears.
   correct: 2
   explanation: >-
     Precision says nothing about bias. A difference that repeats with the same sign against a CRM is systematic;
@@ -17,7 +17,7 @@
     Five results for iron in a tablet are 50.2, 50.6, 49.9, 50.4 and 50.3 mg (mean 50.28, s = 0.26). The label
     claims 52.0 mg. With t = 2.776 for 4 degrees of freedom, what do you conclude?
   options:
-    - The tablet contains significantly less iron than claimed; the 95 % CI is 50.28 ± 0.32 mg.
+    - The tablet has significantly less iron than claimed; the 95 % CI is 50.28 ± 0.32 mg.
     - There is no significant difference, since the CI 50.28 ± 0.72 mg is close to 52.0 mg.
     - There is no significant difference, since 52.0 − 50.28 is smaller than 2.776 × 0.26 × 5.
     - The test cannot be done, because a label claim has no stated uncertainty or degrees of freedom.
@@ -33,7 +33,7 @@
     - Welch's t-test, because the two standard deviations are not identical.
     - Grubbs' test, because a difference between labs means one has an outlier.
     - A one-sample t-test of lab B against lab A's mean, treating A as the true value.
-    - The pooled two-sample t-test, because F = 1.56 is well below 7.15.
+    - The pooled two-sample t-test, because F = 1.56 is well below the critical F of 7.15.
   correct: 3
   explanation: >-
     F = 0.15²/0.12² = 1.56, so the variances can be pooled. Neither lab's mean is a certified value, so a one-sample
@@ -43,7 +43,7 @@
     A result is c = m/(M V) with u(m)/m = 0.10 %, u(V)/V = 0.40 % and u(M)/M = 0.01 %. Your budget shows the
     volume as 94 % of the variance. Management offers a balance with ten times better resolution. Is it worth it?
   options:
-    - Yes, because the mass is the first quantity measured and errors start there.
+    - Yes, because the mass is measured first and errors start there.
     - No; the combined uncertainty would fall only from about 0.41 % to 0.40 %.
     - Yes, because uncertainties add, so 0.09 % would come off the total of 0.51 %.
     - No, because mass uncertainties never matter in volumetric analysis.
@@ -57,9 +57,9 @@
     [H₃O⁺] = 6.31 × 10⁻⁴ mol/L ± 0.05 %. What is wrong, and what is the right relative uncertainty?
   options:
     - Nothing; the pH and the concentration have the same relative uncertainty.
-    - The uncertainty should be 1.6 %, which is 0.05/3.20.
+    - The uncertainty should be 1.6 %, which is 0.05 divided by 3.20.
     - It should be about 12 %, since u(c)/c = 2.303 × u(pH).
-    - It should be about 2 %, from 0.434 × 0.05.
+    - It should be about 2 %, using the factor 0.434 × 0.05.
   correct: 2
   explanation: >-
     For c = 10^(−pH) the relative uncertainty is 2.303 × 0.05 = 0.115, about 12 %. A small pH uncertainty is a large
@@ -69,7 +69,7 @@
     A lead method has a blank standard deviation of 0.0008 absorbance units and a slope of 0.040 L/µg. A drinking-water
     sample reads 0.050 µg/L. How should it be reported?
   options:
-    - Report not detected (< 0.06 µg/L), because the result is below the LOD of 3 × 0.0008/0.040.
+    - Report not detected (< 0.06 µg/L), as it is below the LOD of 3 × 0.0008/0.040.
     - Report 0.050 µg/L, because every result read from the line is a valid concentration.
     - Report detected but below the LOQ, because it is above the LOD but below the LOQ of 0.20 µg/L.
     - Report not detected (< 0.20 µg/L), because anything below the LOQ counts as zero.
@@ -83,9 +83,9 @@
     0.40 mg/L, while spikes in pure water are recovered fully. What is the best estimate, and the best method?
   options:
     - 0.82 mg/L; recovery problems affect only the spike, not the sample.
-    - About 1.0 mg/L, from 0.82/0.80; confirm it by standard additions.
+    - About 1.0 mg/L, from 0.82/0.80; confirm it by the method of standard additions.
     - About 0.66 mg/L, from 0.82 × 0.80, because the matrix adds signal.
-    - About 1.32 mg/L, from 0.82 + 0.50, because the spike shows what is missing from the sample.
+    - About 1.32 mg/L, from 0.82 + 0.50, since the spike shows what is missing.
   correct: 1
   explanation: >-
     An 80 % recovery means the matrix lowers the sensitivity, so the sample result is low by the same factor:
@@ -110,7 +110,7 @@
     worry about?
   options:
     - 5.12, with nothing to worry about, since a half-equivalence pKa is exact.
-    - 2.56, because the pKa is half the pH measured at half the end-point volume.
+    - 2.56, because the pKa is half of the pH measured at half the end-point volume.
     - 10.24, because the pKa is twice the pH measured at half the end-point volume.
     - 5.12, but a meter bias shifts it one to one; recalibrate with fresh buffers.
   correct: 3
@@ -123,7 +123,7 @@
     Which buffer is the smallest that will do?
   options:
     - 0.010 M acetate, since the buffer pH depends only on the acid-to-base ratio.
-    - 0.10 M acetate, since β ≈ 0.058 mol/L per pH limits the change to about 0.07.
+    - 0.10 M acetate, since β ≈ 0.058 mol/L per pH keeps the change near 0.07.
     - 0.10 M phosphate, since phosphate buffers always hold more acid than acetate ones.
     - 1.0 M acetate, since any buffer below 1 M fails when samples add acid to it.
   correct: 1

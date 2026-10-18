@@ -4,7 +4,7 @@
     (reversibly), the other in one sudden push against 2 bar. Which statement about the two runs is
     correct?
   options:
-    - Both need the same work, because the start and end states are the same.
+    - Both need the same work, because the start and end states are exactly the same.
     - The slow push needs more work, because it pushes for much longer against the gas.
     - The sudden push needs more work and releases more heat; Delta U = 0 for both.
     - The sudden push needs more work, so Delta U is larger for it.
@@ -32,7 +32,7 @@
   options:
     - Isothermal, because the pump is at room temperature, so q = -w.
     - Isochoric, because the pump volume is fixed, so no work is done.
-    - Reversible isothermal, because the air ends at the same pressure each time.
+    - Reversible isothermal, as the air ends at the same pressure each time.
     - Close to adiabatic, so little heat escapes and the work raises U and T.
   correct: 3
   explanation: >-

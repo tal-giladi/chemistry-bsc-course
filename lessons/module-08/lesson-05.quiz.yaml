@@ -2,7 +2,7 @@
   question: >-
     In 2 Al + Fe2O3 -> Al2O3 + 2 Fe (the thermite reaction), which statement is correct?
   options:
-    - Iron is oxidised from +3 to 0, so Fe2O3 is the reducing agent.
+    - Iron is oxidised from +3 to 0, so Fe2O3 acts as the reducing agent.
     - Oxygen is reduced from 0 to -2, so it is the oxidising agent.
     - Aluminium is reduced from 0 to +3, so it acts as the oxidising agent.
     - Aluminium is oxidised from 0 to +3, so it is the reducing agent.
@@ -15,9 +15,10 @@
     A student balances MnO4- + Fe2+ + H+ -> Mn2+ + Fe3+ + H2O as MnO4- + Fe2+ + 8 H+ -> Mn2+ + Fe3+ + 4 H2O.
     Every atom balances. What is wrong?
   options:
-    - Nothing; if the atoms balance, the equation is correct.
-    - Charge does not balance (+9 left, +5 right); Fe needs a 5 on both sides.
-    - The oxygen should be balanced with O2, not with water.
+    - Nothing; if the atoms balance, the equation is already correct.
+    - >-
+      Charge: +9 left, +5 right; Fe needs a 5 on both sides.
+    - The oxygen should be balanced with O2 gas, not with water.
     - The H+ should be replaced with OH-, because permanganate reactions are basic.
   correct: 1
   explanation: >-
@@ -56,8 +57,8 @@
   options:
     - Delete the 4 H+, because there is no free H+ at all in a basic solution like this.
     - Add 4 OH- to both sides, turn 4 H+ + 4 OH- into 4 H2O, and cancel water.
-    - Replace 4 H+ with 4 OH- on the left side only.
-    - Add 4 OH- to the right side only, to balance the charge.
+    - Replace 4 H+ with 4 OH- on the left side only, keeping the rest.
+    - Add 4 OH- to the right side only, to balance the charge, and leave the left alone.
   correct: 1
   explanation: >-
     Adding the same OH- to both sides keeps it balanced. The left gets 4 H2O, two cancel with the right,

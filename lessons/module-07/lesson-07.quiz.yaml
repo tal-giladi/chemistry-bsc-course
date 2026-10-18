@@ -3,8 +3,8 @@
     Your balance shows +0.3 mg with nothing on it, and you cannot re-zero it. You need to know exactly how much
     solid you add to a flask. What do you do?
   options:
-    - Weigh the solid on a paper and subtract 0.3 mg from the reading.
-    - Weigh the bottle with solid, tip some into the flask, reweigh it, and use the difference.
+    - Weigh the solid on a paper and subtract 0.3 mg from each balance reading.
+    - Weigh the bottle, tip solid into the flask, reweigh, and subtract.
     - Weigh the solid three times on the same paper and average the readings to remove the offset.
     - Use a graduated cylinder instead, because volume measurements have no offset.
   correct: 1
@@ -16,9 +16,9 @@
     You must make a 1/100 dilution with the smallest uncertainty. Which choice is best, using Class A glassware?
   options:
     - 1.00 mL with a 1 mL graduated pipette into a 100 mL graduated cylinder.
-    - 10.0 mL with a graduated cylinder into a 1000 mL beaker filled to the 1 L line.
+    - 10.0 mL with a graduated cylinder into a beaker filled to the 1 L line.
     - 0.250 mL with a micro-syringe into a 25 mL volumetric flask.
-    - 10.00 mL with a transfer pipette into a 1000 mL volumetric flask.
+    - 10.00 mL with a 10 mL transfer pipette, made up in a 1000 mL volumetric flask.
   correct: 3
   explanation: >-
     Transfer pipettes and volumetric flasks have the tightest tolerances, and larger volumes have smaller relative
@@ -29,7 +29,7 @@
     0.03 % (flask). To improve the result most, what should you change?
   options:
     - Use a purer certified reagent, since purity is the largest term in the squared sum.
-    - Buy a balance ten times more precise, because mass is the first input in the formula.
+    - Buy a balance ten times more precise, as mass is the first input in the formula.
     - Use a Class A flask twice the size, because volume is always the limiting term.
     - Repeat the whole preparation five times, because averaging reduces every term equally.
   correct: 0
@@ -41,8 +41,8 @@
     A student reads a burette with the eye always a little above the meniscus, at both the start and the end of a
     titration. What is the effect on the delivered volume?
   options:
-    - It is too large, because every reading taken from above is too large.
-    - None, because parallax is a random error that averages out over many titrations.
+    - It is too large, because every reading taken from above the meniscus is too large.
+    - None, because parallax is a random error that averages out over many repeated titrations.
     - It largely cancels, if the bias is equal at both readings, since volume is a difference.
     - It is twice the parallax error, because the errors add up when two readings are subtracted.
   correct: 2

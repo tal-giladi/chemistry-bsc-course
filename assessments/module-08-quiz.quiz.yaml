@@ -5,9 +5,9 @@
     roughly how much?
   options:
     - Ethanol, about 50 kJ/g, because it releases more energy per mole of oxygen used.
-    - Propane, about 50 kJ/g, against about 30 kJ/g for ethanol.
+    - Propane, about 50 kJ/g, against about 30 kJ/g for ethanol, roughly 1.7 times.
     - They are about equal, because their molar masses are nearly the same.
-    - Ethanol, about 30 kJ/g, against about 20 kJ/g for propane.
+    - Ethanol, about 30 kJ/g, against about 20 kJ/g for propane, so 1.5 times.
   correct: 1
   explanation: >-
     2220/44.1 = 50.3 kJ/g and 1367/46.1 = 29.7 kJ/g. The molar masses are similar, but propane releases
@@ -18,10 +18,10 @@
     Delta S = +110 J/(mol K); salt B with Delta H = +40 kJ/mol and Delta S = +80 J/(mol K). Which will
     actually dissolve and cool the pack at 25 C?
   options:
-    - Salt B, because its larger Delta H means more cooling.
+    - Salt B, because its larger Delta H means more cooling per mole.
     - Both, because every endothermic dissolving process is driven by entropy.
     - Salt A, since its Delta G is about -7 kJ/mol and B's about +16 kJ/mol.
-    - Neither, because an endothermic process cannot be spontaneous.
+    - Neither, because an endothermic process can never be spontaneous at any temperature.
   correct: 2
   explanation: >-
     A: 26 - 298 x 0.110 = -6.8 kJ/mol, spontaneous. B: 40 - 298 x 0.080 = +16 kJ/mol, so it barely
@@ -32,10 +32,10 @@
     CO + H2O <=> CO2 + H2, which has 2 moles of gas on each side. To convert more CO, which should she
     choose?
   options:
-    - Add excess steam, which lowers Q; pressure has no effect with equal gas moles.
+    - Add excess steam to lower Q; pressure cancels with equal gas moles.
     - Double the pressure, because compressing a gas mixture always favours the products.
-    - Either, because both raise K by the same factor.
-    - Neither, because only a catalyst can raise the conversion.
+    - Either, because doubling pressure and adding steam both raise K by the same factor.
+    - Neither, because only a catalyst can raise the conversion of CO at equilibrium.
   correct: 0
   explanation: >-
     With equal gas moles, pressure cancels from Q. Excess steam makes Q smaller than K, so more CO reacts.
@@ -47,7 +47,7 @@
   options:
     - The second batch has 25 % less H3O+, because the pH rose by a quarter.
     - The second batch has 1 mol/L less H3O+, because the pH rose by one unit.
-    - The second batch has more H3O+, because a higher pH always means a higher concentration.
+    - The second batch has more H3O+, because a higher pH means a higher concentration.
     - The second batch has one tenth of the H3O+, because each pH unit is a factor of ten.
   correct: 3
   explanation: >-
@@ -59,9 +59,11 @@
     What ratio of acetate to acetic acid should she use?
   options:
     - "1 : 1, because a buffer always has equal amounts of acid and base."
-    - "About 1.8 : 1, from 10 to the power (5.0 - 4.74)."
+    - >-
+      About 1.8 : 1, from 10 to the power (5.0 - 4.74) = 10^0.26.
     - "About 0.55 : 1, from 10 to the power (4.74 - 5.0)."
-    - "About 26 : 1, from (5.0 - 4.74) x 100."
+    - >-
+      About 26 : 1, from multiplying (5.0 - 4.74) by 100.
   correct: 1
   explanation: >-
     Henderson-Hasselbalch: 5.0 = 4.74 + log10([A-]/[HA]), so the ratio is 10^0.26 = 1.8. A pH above the
@@ -72,7 +74,7 @@
     that the atoms and charge balance, then labels dichromate the reducing agent. What is correct?
   options:
     - Dichromate is the reducing agent, because it loses oxygen atoms to ethanol.
-    - Ethanol is the oxidising agent, because it gains an oxygen atom.
+    - Ethanol is the oxidising agent, because it gains an oxygen atom from dichromate.
     - Dichromate is the oxidising agent; Cr goes from +6 to +3 and is reduced.
     - Neither, because no oxidation numbers change in this reaction.
   correct: 2
@@ -84,7 +86,7 @@
     A boat has steel (iron) fittings next to a zinc block. With E(Zn2+/Zn) = -0.76 V and
     E(Fe2+/Fe) = -0.45 V, what happens in sea water, and why do boat builders add the zinc?
   options:
-    - Zinc is oxidised and protects the iron, as its reduction potential is more negative.
+    - Zinc is oxidised instead of iron, as its potential is more negative.
     - Iron is oxidised faster, because the zinc pulls electrons away from it.
     - Nothing happens, because both metals have negative reduction potentials.
     - Zinc is reduced and plated onto the iron, which seals the steel off from the sea water.
@@ -99,7 +101,7 @@
   options:
     - pH 10.0, because the voltage rose by three units.
     - pH 6.82, because 177 mV is 0.177 pH units.
-    - pH 4.0, because 177/59 = 3 pH units below 7.
+    - pH 4.0, because 177/59 = 3, so 3 pH units below 7.00.
     - pH 1.77, because the voltage gives the pH directly.
   correct: 2
   explanation: >-

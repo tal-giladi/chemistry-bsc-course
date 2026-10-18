@@ -3,8 +3,8 @@
     A pump vibrates at 70 Hz. Your phone accelerometer samples at 100 Hz. Where does the vibration
     appear in the spectrum?
   options:
-    - At 70 Hz, because the sensor is fast enough to see it.
-    - Nowhere, because frequencies above Nyquist are simply lost.
+    - At 70 Hz, because the sensor is easily fast enough to see it.
+    - Nowhere, because frequencies above Nyquist are simply lost for good.
     - At 30 Hz, because 70 Hz lies above the 50 Hz Nyquist limit.
     - At 35 Hz, because the spectrum shows half of every frequency.
   correct: 2
@@ -16,7 +16,7 @@
     Two modes at 0.700 and 0.720 Hz merge into one peak in a 20 s accelerometer record sampled at
     200 Hz. What separates them?
   options:
-    - Recording for about 100 s or more, since a windowed peak needs 2/T.
+    - Recording for about 100 s or longer, since two windowed peaks need 2/T.
     - Raising the sample rate to 500 Hz, which gives finer frequency steps.
     - Zero-padding the 20 s record to ten times its length before the FFT.
     - Removing the window, because windows always merge neighbouring peaks.
@@ -42,7 +42,7 @@
     Your spectrum of a pure ringdown shows small extra peaks spaced evenly on both sides of the main
     one. With a Hann window they disappear. What were they?
   options:
-    - Real weak modes of the spring that the window hid.
+    - Real weak modes of the spring, which the window simply hid.
     - Aliases of the main peak from a sample rate that was too low.
     - Overtones caused by anharmonicity of the spring.
     - Side lobes from the abrupt start and end of the record.

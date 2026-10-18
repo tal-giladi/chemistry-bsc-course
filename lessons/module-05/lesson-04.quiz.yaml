@@ -19,7 +19,7 @@
     - The spectrum is in transmittance, so absorbance must be computed as 2 minus log10 of it.
     - The file is compressed, so each digit stands for a different number.
     - The x values were not multiplied by XFACTOR, which shifts every band.
-    - The stored integers were not multiplied by YFACTOR, which gives 0.979.
+    - The integers were not multiplied by YFACTOR, which gives 0.979.
   correct: 3
   explanation: >-
     JCAMP-DX stores y as integers; the true values are integer times YFACTOR. 8730 x 0.000112097
@@ -30,7 +30,7 @@
     next step are right?
   options:
     - The reader lost data, so find where; a $$ comment or a skipped line is a common cause.
-    - The difference is under 2 percent, so interpolate the ten missing points and continue as usual.
+    - The difference is under 2 percent, so interpolate the ten missing points.
     - NPOINTS is only a hint in JCAMP-DX, so trust your count and continue.
     - The last line is always incomplete in JCAMP-DX, so add ten zeros at the end.
   correct: 0
@@ -45,7 +45,7 @@
     - Commit the JCAMP file, because NIST is a government agency and all its data are public domain.
     - Commit a CSV you converted from it, because conversion makes it your own data.
     - Commit a download script plus the citation, and keep the downloaded file out of git.
-    - Paste the y values into your script as a list, because code is not covered by copyright.
+    - Paste the y values into your script, because code is not covered by copyright.
   correct: 2
   explanation: >-
     The WebBook states its data compilation is copyrighted with all rights reserved. A script that

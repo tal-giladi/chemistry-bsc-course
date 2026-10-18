@@ -3,10 +3,10 @@
     An enzyme needs a side chain that can both donate and accept a proton at pH 7.4 with little energy
     cost. Which group fits best?
   options:
-    - The amino group of lysine, pKaH about 10.5, because it is a strong base.
+    - The amino group of lysine, pKaH about 10.5, because it is a strong base at pH 7.4.
     - The imidazole of histidine, pKaH about 7, so it is partly protonated at pH 7.4.
-    - The amide of asparagine, because amides are good bases.
-    - The phenyl ring of phenylalanine, because aromatic rings accept protons easily.
+    - The amide of asparagine, because amides are good bases in water.
+    - The phenyl ring of phenylalanine, because aromatic rings accept protons very easily.
   correct: 1
   explanation: >-
     A group whose pKaH is near the pH is present in both forms, so it can shuttle protons. Lysine is
@@ -30,8 +30,8 @@
   options:
     - Nothing, because the beta anomer is the more stable one.
     - It rises to about +52.6 as some beta turns to alpha via the open chain.
-    - It falls to about -52.6 as glucose slowly converts to its mirror-image enantiomer.
-    - It rises to +112.2 as all of the beta slowly converts to the alpha anomer.
+    - It falls to about -52.6 as glucose converts to its enantiomer.
+    - It rises to +112.2 as all of the beta converts to the alpha anomer.
   correct: 1
   explanation: >-
     Mutarotation reaches the same 37 : 63 alpha : beta equilibrium from either side. Beta is more stable,
@@ -41,7 +41,7 @@
     Why is pyridine (pKaH 5.25) a much stronger base than pyrrole (pKaH 0.4), although both are aromatic
     nitrogen rings?
   options:
-    - Pyridine has one more carbon atom to donate electron density to its nitrogen.
+    - Pyridine has one more carbon to donate electron density to its nitrogen.
     - Pyrrole's nitrogen is sp3, which holds the lone pair more tightly.
     - Protonated pyridine becomes antiaromatic, which pulls the equilibrium towards it.
     - Pyridine's lone pair is outside the pi system; pyrrole's is in the sextet.

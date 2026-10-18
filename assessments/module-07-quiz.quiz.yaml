@@ -6,7 +6,7 @@
     - The molecule contains one bromine atom, because bromine has two isotopes.
     - The molecule contains one chlorine atom, as ³⁵Cl and ³⁷Cl occur in about a 3 to 1 ratio.
     - The molecule contains two chlorine atoms, because each chlorine adds one peak.
-    - The molecule contains carbon, because ¹³C gives a peak a third the height of the main one.
+    - The molecule contains carbon, as ¹³C gives a peak a third the height of the main one.
   correct: 1
   explanation: >-
     Natural chlorine is about 76 % ³⁵Cl and 24 % ³⁷Cl, so one Cl gives an M and M+2 pair near 3:1. One bromine
@@ -32,7 +32,7 @@
     - The first, because the negative charge sits on oxygen, the most electronegative atom.
     - The second, because the terminal nitrogen should be the atom carrying the negative charge.
     - Neither, because N₂O must have zero formal charge on every atom.
-    - Both are equally good, because the total formal charge is zero in each.
+    - Both structures are equally good, because the total formal charge is zero in each one.
   correct: 0
   explanation: >-
     Both have the same number of formal charges, so the tie-breaker is that negative charge belongs on the more
@@ -45,7 +45,7 @@
     - CH₂Cl₂, because its two chlorines balance its two hydrogens.
     - CHCl₃, because its three chlorines spread evenly around carbon.
     - CH₃Cl, because it has only one polar bond, which is too weak to matter.
-    - CCl₄, because its four equal bond dipoles cancel in a tetrahedron.
+    - CCl₄, as its four equal bond dipoles cancel by symmetry.
   correct: 3
   explanation: >-
     Only a fully symmetric arrangement cancels the bond dipoles. CH₂Cl₂, CHCl₃ and CH₃Cl each mix C–H and C–Cl
@@ -58,7 +58,7 @@
     - Propanol has many more electrons, so its dispersion forces are much stronger.
     - Propanol is heavier, and heavier molecules always boil higher.
     - Propanol hydrogen-bonds through its O–H group; butane has only dispersion forces.
-    - Butane molecules are straight chains, so they cannot touch each other along their length.
+    - Butane molecules are straight chains, so they cannot touch along their length.
   correct: 2
   explanation: >-
     Both molecules have 34 electrons and nearly the same mass, so dispersion is similar. The O–H group lets
@@ -83,7 +83,7 @@
   options:
     - Both the rising slope and the break point are lower in the 2-minute run.
     - The slope is lower in the 2-minute run, but the break point is about the same.
-    - The break point moves to a larger mass of baking soda in the 2-minute run.
+    - The break point moves to a larger mass of baking soda in the 2-minute run instead.
     - Nothing changes, because the CO₂ formed depends only on the limiting reagent present.
   correct: 1
   explanation: >-
@@ -95,7 +95,7 @@
     NIST data give Z = 1.05 for N₂ at these conditions. How does the true amount compare with the estimate?
   options:
     - About 5 % larger, because Z above 1 means attractions pull extra molecules in.
-    - The same, because nitrogen behaves as an ideal gas at room temperature.
+    - The same, because nitrogen behaves as an ideal gas at room temperature and above.
     - About 5 % larger, because the molecules themselves take up part of the volume.
     - About 5 % smaller, because n = PV/(ZRT) is less than PV/RT when Z is above 1.
   correct: 3
@@ -108,7 +108,7 @@
     (a) a 0.01 g pocket scale with a Class A 100 mL flask, or (b) a 0.1 mg analytical balance with a 100 mL
     graduated cylinder. Which is better?
   options:
-    - (b), because the balance is a thousand times more precise and mass is the first input.
+    - (b), because the balance is a thousand times more precise than the scale.
     - (a), because the cylinder's percent-level error would dominate the budget in (b).
     - (b), because a graduated cylinder is made to deliver and a flask only to contain.
     - Both are equal, because the reagent purity dominates in each case.
@@ -124,7 +124,7 @@
     - About 0.5 %, because the error comes from only one piece of glassware.
     - Close to zero, because the three errors are random and partly cancel each other out.
     - About 1.5 % too concentrated, as the same bias enters every step and multiplies.
-    - About 0.9 % too concentrated, because three errors add in quadrature as √3 × 0.5 %.
+    - About 0.9 % too concentrated, as three errors add in quadrature as √3 × 0.5 %.
   correct: 2
   explanation: >-
     A systematic error repeats in every step, so the factors multiply: 1.005³ ≈ 1.015. Adding in quadrature

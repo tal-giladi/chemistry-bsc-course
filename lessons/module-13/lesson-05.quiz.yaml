@@ -4,8 +4,8 @@
     Its Delta_vap H is about 40 kJ/mol. What should she do?
   options:
     - Heat it to 100 C at 1 atm and wait longer, since it will boil slowly below its boiling point.
-    - Raise the pressure, because higher pressure lowers the boiling point.
-    - Add salt to the solvent, which lowers its boiling point.
+    - Raise the pressure, because a higher applied pressure lowers the boiling point of any liquid.
+    - Add salt to the solvent, which lowers its boiling point below 100 C.
     - Lower the pressure so that its vapour pressure reaches the applied pressure below 100 C.
   correct: 3
   explanation: >-
@@ -17,10 +17,10 @@
     A block of dry ice is left on a kitchen table at 1 atm. Why does it turn straight into gas
     without forming a liquid?
   options:
-    - Its triple-point pressure (5.185 bar) is above 1 atm, so no liquid exists at 1 atm.
+    - Its triple point (5.185 bar) is above 1 atm, so no liquid forms.
     - Its critical temperature is below room temperature, so the liquid cannot form at all.
     - Its melting line has a negative slope, like water, so pressure melts it.
-    - It does melt, but the liquid evaporates too fast to be seen.
+    - It does melt, but the thin liquid layer evaporates too fast to be seen.
   correct: 0
   explanation: >-
     Liquid CO2 exists only above 5.185 bar. At 1 atm the solid is in equilibrium with the gas at
@@ -33,7 +33,7 @@
   options:
     - Two, temperature and pressure, because both are intensive variables.
     - One, because choosing the temperature fixes the pressure on the line.
-    - None, because two phases in equilibrium fix both temperature and pressure.
+    - None, as two phases in equilibrium fix both temperature and pressure.
     - Three, temperature, pressure and the amount of each phase.
   correct: 1
   explanation: >-

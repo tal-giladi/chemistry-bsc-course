@@ -3,9 +3,9 @@
     A student's variational calculation for helium reports E = -2.95 hartree, below the accurate
     value of -2.9037 hartree. What do you conclude?
   options:
-    - The trial function is better than the accurate calculation and should be published.
-    - The result is fine, because variational energies scatter around the true value.
-    - There is an error, because a variational energy can never fall below the true ground state.
+    - The trial function is better than the accurate calculation and should be published as a new record.
+    - The result is fine, because variational energies scatter randomly around the true value.
+    - There is an error, because a variational energy can never fall below the true value.
     - The difference is relativistic, so both values are correct in their own way.
   correct: 2
   explanation: >-

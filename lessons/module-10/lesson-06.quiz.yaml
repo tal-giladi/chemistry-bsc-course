@@ -4,9 +4,9 @@
     0.06 g indicator blank. Why is the corrected value better?
   options:
     - It is lower, and lower results are always closer to the true value in acid-base titrations.
-    - The blank removes the random scatter between the five trials.
+    - The blank removes the random scatter between the five separate trials.
     - The blank is the titrant the indicator needs to change colour, a systematic excess in each trial.
-    - The blank corrects for the density of the vinegar, so the result is now properly in grams per 100 mL.
+    - The blank corrects for the density of the vinegar, so the result is now in grams per 100 mL.
   correct: 2
   explanation: >-
     Every trial overshoots by the same amount the indicator needs, so the excess is systematic and does
@@ -31,7 +31,7 @@
   options:
     - The repeats differ from 5.0, but 5.0 is within the expanded uncertainty; the label is not shown wrong.
     - The vinegar is definitely below its label, because the t-test is significant at the 95 % confidence level.
-    - The vinegar matches its label exactly, because 5.0 is inside the expanded uncertainty interval.
+    - The vinegar matches its label exactly, because 5.0 lies inside the expanded uncertainty interval of the mean.
     - Nothing can be concluded, because five trials are far too few for any kind of statistical test.
   correct: 0
   explanation: >-
@@ -43,8 +43,8 @@
   options:
     - Because the standard deviation always gets smaller when more trials are added to the set.
     - Because two extra trials remove the systematic error of the end point.
-    - Because the scale resolution is divided by the number of trials.
-    - Because both the t value falls with more degrees of freedom and sqrt(n) grows.
+    - Because the scale resolution is divided by the number of trials made.
+    - Because t falls with more degrees of freedom and sqrt(n) grows.
   correct: 3
   explanation: >-
     For the same s, 4.30/sqrt(3) = 2.48 s and 2.78/sqrt(5) = 1.24 s: the interval halves. s itself does
@@ -54,8 +54,8 @@
     One of your five trials is 0.3 % higher than the other four. You remember nothing unusual about it.
     What should you do?
   options:
-    - Discard it, because it is clearly an outlier and would only inflate the standard deviation of the set.
-    - Replace it with the mean of the other four, so that n stays at five.
+    - Discard it, as it is clearly an outlier and would only inflate the standard deviation.
+    - Replace it with the mean of the other four, so that n stays at five trials.
     - Keep it unless a Grubbs test or a recorded cause justifies removal, and report what you did.
     - Discard all five and start again, because one bad trial means the method failed.
   correct: 2

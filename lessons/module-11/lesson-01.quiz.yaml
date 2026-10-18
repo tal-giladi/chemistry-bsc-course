@@ -6,7 +6,7 @@
     - Read each paper fully from the start, so that no important detail or caveat is missed.
     - Read only the conclusions, since that is where the authors say what they found.
     - Do a timed first pass of each (title, abstract, headings, figures, conclusion) and rank them.
-    - Pick the papers with the most citations, because those are the most reliable and relevant ones.
+    - Pick the papers with the most citations, as those are the most reliable and relevant.
   correct: 2
   explanation: >-
     A 5–10 minute first pass answers the five Cs and tells you whether a paper deserves more time. Reading
@@ -19,8 +19,8 @@
   options:
     - The method agrees excellently with HPLC, as the authors state.
     - The method differs from HPLC by −10 % to +17 % on five samples.
-    - The method is wrong, because a difference of 17 % proves it cannot be used.
-    - The method agrees with HPLC on average, since the positive and negative errors cancel.
+    - The method is wrong, as a 17 % difference proves it is useless.
+    - The method agrees with HPLC on average, as the positive and negative errors cancel.
   correct: 1
   explanation: >-
     Report what the data show, with numbers, and let the reader judge. "Excellent" is the authors' opinion;
@@ -34,7 +34,7 @@
     - The phone method is fit for checking samples against the legal limit, though less sensitive.
     - The phone method is unusable, because a method must be at least as sensitive as the reference.
     - The phone method cannot be judged until its LOD is lowered to the UV–vis value.
-    - The comparison is meaningless, because LODs from different instruments cannot be compared.
+    - The comparison is meaningless, because LODs from different instruments can never be compared.
   correct: 0
   explanation: >-
     Fitness for purpose asks whether a method answers the question asked. If the amounts that matter lie far
@@ -47,7 +47,8 @@
     - Ignore it, since a difference of 1–3 % from a criterion is within rounding.
     - Reject the whole paper, because any result outside a stated criterion means it is invalid.
     - Assume the criterion in the Methods is a typo, since the authors judged the results acceptable.
-    - Note that low-level recoveries miss the paper's own criterion and ask what causes the loss.
+    - >-
+      Note that low-level recoveries miss the paper's own criterion; ask why.
   correct: 3
   explanation: >-
     Checking a paper against its own criteria is one of the cheapest critical-reading tools. A small miss is

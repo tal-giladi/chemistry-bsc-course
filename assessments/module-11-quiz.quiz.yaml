@@ -5,7 +5,7 @@
   options:
     - Read the five most-cited papers in full, since citations show which ones matter.
     - Read every introduction carefully, since that is where the relevance to your project is explained.
-    - Give each a 5–10 minute first pass, answer the five Cs, then second-pass only the best few.
+    - Give each a 5–10 minute first pass, then second-pass only the best few.
     - Read only the titles, since the abstract repeats what the title already says.
   correct: 2
   explanation: >-
@@ -19,7 +19,7 @@
     - That entry recomputes to 11.1 %, a slip worth noting that does not by itself overturn the method.
     - The printed 15.9 % must be right, because peer reviewers check every number in a results table.
     - The whole paper is unreliable, because one wrong number means the data were fabricated.
-    - The two numbers cannot be compared, because relative error depends on which method is the reference.
+    - The two numbers cannot be compared, as relative error depends on which method is the reference.
   correct: 0
   explanation: >-
     (14.0 − 12.6)/12.6 = 11.1 %. Checking a paper against its own numbers is cheap and useful; a single slip
@@ -46,7 +46,7 @@
   options:
     - The Wikipedia value, because it cites a peer-reviewed review article from 1937.
     - The NIST entry, the original measurement with an uncertainty, matching an independent one.
-    - The PubChem value, because the handbook it cites is a critically evaluated source.
+    - The PubChem value, because the handbook it cites is a critically evaluated secondary source.
     - The mean of all three values, so that no single source is unfairly favoured over the others.
   correct: 1
   explanation: >-
@@ -59,7 +59,7 @@
   options:
     - Cite it anyway with the journal name and year, since the DOI is only an extra detail.
     - Ask the chatbot again for the DOI, and cite it if the second answer matches the first.
-    - Treat it as invented and do not use it unless you can find and read the paper itself.
+    - Treat it as invented; do not use it unless you find and read the paper.
     - Cite a different paper from the same journal on a similar topic in its place.
   correct: 2
   explanation: >-
@@ -70,8 +70,8 @@
     A 2019 paper in a top journal supports a step in your plan. Crossref shows a "retraction" notice dated 2020
     and also a "correction" from 2019. How do you treat it?
   options:
-    - Use it, because the 2019 correction shows the authors fixed the problems before the 2020 notice.
-    - Use it but cite the correction notice instead of the paper.
+    - Use it, because the 2019 correction shows the problems were fixed before the 2020 notice.
+    - Use it, but cite the correction notice instead of the original paper.
     - Use it, because papers in top journals are reviewed more carefully than others.
     - Do not use it as evidence; a retraction withdraws the paper, whatever corrections came first.
   correct: 3
@@ -96,10 +96,10 @@
     Your five titrations give a mean of 4.9483 % w/w, SD 0.0210 %, 95 % CI half-width 0.0261 %. How do you
     write the result?
   options:
-    - 4.9483 ± 0.0261 % w/w, to keep all the digits that were calculated.
+    - 4.9483 ± 0.0261 % w/w, keeping every calculated digit.
     - 4.948 ± 0.026 % w/w (mean ± 95 % CI, n = 5).
-    - 4.95 % w/w, very close to the label, with small errors.
-    - 4.948 ± 0.021 % w/w, which is the uncertainty of the mean.
+    - 4.95 % w/w, very close to the label value.
+    - 4.948 ± 0.021 % w/w, the uncertainty of the mean.
   correct: 1
   explanation: >-
     Round the uncertainty to two significant figures and the value to the same decimal place, and say what the
@@ -109,10 +109,11 @@
     Six learners each did five titrations; one learner's mean is pulled down by a single spilled titration. Which
     figure lets a reader see this best?
   options:
-    - A bar chart of the six means with standard deviation error bars.
-    - A pie chart showing each learner's share of the total acid found.
-    - A dot plot of all thirty titrations with each mean and its 95 % confidence interval.
-    - A bar chart of the six means with the y-axis zoomed in to make the differences clearly visible.
+    - A bar chart of the six means, each with standard deviation error bars.
+    - >-
+      A pie chart showing each learner's share of the total amount of acid found.
+    - A dot plot of all thirty titrations, with each mean and 95 % CI.
+    - A bar chart of the six means with the y-axis zoomed in to show the differences.
   correct: 2
   explanation: >-
     With five points per group, plotting every point shows the outlier directly; bars show only the lowered mean,
@@ -123,7 +124,7 @@
     repeatability alone is significant. Which conclusion is best supported?
   options:
     - It agrees with the label within U, though it is slightly low on repeatability alone.
-    - The measurement proves that the label value is wrong and should be corrected by the maker.
+    - The measurement proves that the label value is wrong and must be corrected.
     - The measurement proves that the vinegar contains exactly what the label says.
     - Nothing can be concluded, because the t-test and the expanded uncertainty disagree.
   correct: 0

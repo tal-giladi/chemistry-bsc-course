@@ -16,7 +16,7 @@
     A transporter wants to move one glucose molecule into a cell against a 1000-fold concentration
     ratio (no charge, 37 C). Can the hydrolysis of one ATP (-52 kJ/mol in the cell) pay for it?
   options:
-    - No, because moving against a gradient always needs at least two ATP per molecule.
+    - No, because moving against a gradient always needs at least two ATP.
     - Yes, because the cost is RT ln 1000 = about 18 kJ/mol, well below 52 kJ/mol.
     - No, because the cost is 1000 times RT, about 2580 kJ/mol.
     - Yes, but only if the membrane potential is positive inside.
@@ -42,7 +42,7 @@
     In the ATP site of PDB 1ATP your distance script lists Asp184 OD2 within 3.0 A of three phosphate
     oxygens. Why should you not count these as three hydrogen bonds?
   options:
-    - Because Asp184 is a backbone atom, and backbone atoms cannot form hydrogen bonds.
+    - Because Asp184 is a backbone atom, and backbone atoms can never form hydrogen bonds.
     - Because distances below 3.3 A are covalent bonds, not hydrogen bonds.
     - Because a Mn2+ ion bridges these acceptor oxygens; no hydrogen sits between them.
     - Because aspartate is positively charged at pH 7 and so repels the phosphate groups.

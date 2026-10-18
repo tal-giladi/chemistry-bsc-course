@@ -3,9 +3,9 @@
     A pH electrode was calibrated badly and reads every pH 0.05 units too high. A weak-acid titration is
     analysed with a Gran plot. What happens to the results?
   options:
-    - Both the end-point volume and Ka are wrong by about 12 %.
+    - Both the end-point volume and Ka are wrong, each by about 12 %.
     - The end-point volume is still right, but Ka from the slope comes out wrong.
-    - The end-point volume is wrong, but Ka is right because the slope is unaffected.
+    - The end-point volume is wrong, but Ka is right as the slope is unaffected.
     - Neither is affected, because Gran plots cancel all electrode errors.
   correct: 1
   explanation: >-
@@ -30,7 +30,7 @@
     In the same titration, the meter reads 0.485 V vs Ag/AgCl at exactly half the equivalence volume.
     What does that tell you?
   options:
-    - The formal potential of Fe3+/Fe2+ in this medium is about 0.68 V vs SHE.
+    - The formal potential of Fe3+/Fe2+ in this medium is about 0.68 V vs the SHE.
     - The cerium solution has decomposed, because the potential should be 1.06 V.
     - Half of the cerium has been reduced, so E equals the cerium formal potential.
     - The electrode is faulty, because the standard potential of Fe3+/Fe2+ is 0.771 V.
@@ -43,9 +43,9 @@
     Why is phosphoric acid added before the periodate step in the manganese-in-steel method?
   options:
     - To oxidise Mn2+ to permanganate faster than periodate alone can manage in hot acid.
-    - To dissolve the carbon in the steel, which would otherwise scatter light.
-    - To destroy nitrogen oxides left from the nitric acid dissolution.
-    - To bind Fe3+ in a colourless complex so its yellow does not add to the absorbance.
+    - To dissolve the carbon in the steel, which would otherwise scatter the light.
+    - To destroy the nitrogen oxides left over from the nitric acid dissolution.
+    - To bind Fe3+ as a colourless complex so its yellow adds no absorbance.
   correct: 3
   explanation: >-
     Steel is mostly iron, and Fe3+ is yellow. Phosphate complexes it and removes the colour. Nitrogen
@@ -58,7 +58,7 @@
     - Report 19.75 mL, because the midpoint of the steepest step is the end point.
     - Repeat with 0.05-0.1 mL steps near 20 mL and use the second-derivative zero crossing.
     - Report 20.0 mL, because the end point is always at the end of the steepest step.
-    - Fit a straight line through all the points and take the volume where the pH equals 7.00.
+    - Fit a straight line through all the points and take the volume where pH is 7.00.
   correct: 1
   explanation: >-
     The derivative can only locate the end point to about the step size, here 0.5 mL or 2.5 %. Small steps

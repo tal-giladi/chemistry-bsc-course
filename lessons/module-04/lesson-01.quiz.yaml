@@ -5,7 +5,7 @@
   options:
     - Nothing; 16.3 m/s is right because N2 is a heavy diatomic molecule.
     - The temperature should have been in Celsius, which gives a larger answer.
-    - The molar mass was entered as 28.0 g/mol instead of 0.0280 kg/mol.
+    - The molar mass was entered as 28.0 g/mol instead of as 0.0280 kg/mol.
     - The formula needs Boltzmann's constant instead of R, which gives a larger answer.
   correct: 2
   explanation: >-
@@ -16,10 +16,10 @@
     A potential-energy curve U(r) for two atoms has its minimum at 0.13 nm. At r = 0.15 nm the
     curve rises with positive slope. Which way does the force on the atoms point there?
   options:
-    - Towards smaller r, pulling the atoms together, since F = -dU/dr is negative.
+    - Towards smaller r, pulling the atoms together, as F = -dU/dr.
     - Towards larger r, pushing the atoms apart, because the slope is positive.
     - There is no force, because the force is zero everywhere except at the minimum.
-    - Towards larger r, because stretched bonds always break.
+    - Towards larger r, because a stretched bond is always about to break.
   correct: 0
   explanation: >-
     The force is minus the slope. A positive slope gives a negative force, pointing towards smaller
@@ -32,7 +32,7 @@
     - Collisions break about 0.6 % of HCl bonds every second at room temperature.
     - A typical collision has far too little energy, so heat alone does not break HCl.
     - The bond breaks after about 170 collisions, because the energies add up.
-    - The comparison is meaningless, because eV and kT measure different kinds of energy.
+    - The comparison is meaningless, as eV and kT measure different kinds of energy.
   correct: 1
   explanation: >-
     Both numbers are energies per molecule, so they compare directly. A ratio of about 170 means

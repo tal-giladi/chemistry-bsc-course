@@ -4,8 +4,8 @@
   options:
     - About 9800 Hz, from 1 over the square root of LC.
     - About 1560 Hz, from 1 over 2 pi times the square root of LC.
-    - About 4.9 Hz, from 1 over 2 pi times LC.
-    - About 49 Hz, from the same formula with the inductance entered as 22 H.
+    - About 4.9 Hz, from 1 over 2 pi times LC, without the root.
+    - About 49 Hz, from the same formula with L entered as 22 H.
   correct: 1
   explanation: >-
     f0 = 1/(2 pi sqrt(LC)) = 1/(2 pi sqrt(0.022 x 4.7e-7)) = 1/(2 pi x 1.017e-4) = 1565 Hz. The
@@ -16,7 +16,7 @@
     above 1/sqrt(2) of its peak?
   options:
     - Between 960 and 2240 Hz, because the band is Q times f0 divided by 2.5.
-    - Between 1500 and 1700 Hz, because the band is always about 200 Hz wide.
+    - Between 1500 and 1700 Hz, as the band is always 200 Hz wide.
     - Between about 1310 and 1950 Hz, a bandwidth of f0/Q = 640 Hz.
     - Between 640 and 4000 Hz, from f0 divided and multiplied by Q.
   correct: 2
@@ -31,7 +31,7 @@
     - The phone output sags near resonance, so VR alone distorts the curve's shape.
     - The meter is more accurate at high frequency, so VR readings there are too large.
     - Q depends on Vin, so a single reading always gives the wrong Q.
-    - The resistor heats up near resonance, which changes R during the sweep.
+    - The resistor heats up near resonance, which changes R noticeably during the sweep.
   correct: 0
   explanation: >-
     The source has internal resistance, so Vin is lowest at resonance where the circuit impedance is
@@ -40,7 +40,7 @@
   question: >-
     Which pair correctly matches the RLC circuit to a mass on a spring with damping?
   options:
-    - Resistance is like the mass, and capacitance is like the friction.
+    - Resistance is like the mass, and capacitance is like the friction force.
     - Capacitance is like the mass, and inductance is like the stiffness.
     - Inductance is like the friction, and resistance is like the stiffness.
     - Inductance is like the mass, and 1/C is like the spring stiffness.

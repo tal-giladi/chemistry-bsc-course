@@ -6,7 +6,7 @@
     - The sodium carbonate is reacting with oxygen in the oven and gaining mass.
     - The scale is drifting upwards, so it should be recalibrated with a known mass before continuing.
     - The sample is warm when weighed and takes up water as it cools; cooling must be standardised.
-    - The baking soda was impure, and the impurity absorbs CO2 from the oven air.
+    - The baking soda was impure, and the impurity slowly absorbs CO2 and water vapour from the oven air.
   correct: 2
   explanation: >-
     Warm objects read light because of rising air, and dry Na2CO3 picks up water vapour as it cools. Cool
@@ -29,7 +29,7 @@
     An analyst precipitates sulfate as BaSO4 quickly from a cold, concentrated solution and filters it
     right away. Which problem is she most likely to see?
   options:
-    - A low result, because BaSO4 is very soluble in cold, concentrated sulfate solution.
+    - A low result, as BaSO4 is very soluble in cold, concentrated solution.
     - Co-precipitated impurities and fine crystals that pass through the filter.
     - No problem, because the gravimetric factor corrects for the crystal size.
     - A low result, because cold solutions cannot reach constant mass.
@@ -43,9 +43,9 @@
     sample. How many moles of HCl were present, assuming 100 % current efficiency?
   options:
     - 2.50e-5 mol, because two electrons are needed per hydroxide ion.
-    - 4.825 mol, the charge in coulombs.
+    - 4.825 mol, the charge in coulombs read as moles.
     - 5.00e-2 mol, because the current is in milliamperes.
-    - 5.00e-5 mol, from Q = It divided by F.
+    - 5.00e-5 mol, from Q = It divided by F, one electron per OH-.
   correct: 3
   explanation: >-
     Q = 0.01000 A x 482.5 s = 4.825 C; 4.825/96485 = 5.00e-5 mol of electrons. Water reduction gives one
@@ -57,8 +57,8 @@
   options:
     - The current efficiency was 99.5 %; some charge went to a side reaction like hydrogen evolution.
     - The copper was oxidised back into solution, so the result is 0.6 % too low and must be corrected.
-    - The Faraday constant is inaccurate at this level of precision.
-    - The cathode was weighed wet, so the mass is too high.
+    - The Faraday constant is inaccurate at this level of precision, so the 0.6 % gap is simply meaningless.
+    - The cathode was weighed while still wet, so the copper mass found is too high.
   correct: 0
   explanation: >-
     0.1572/0.1581 = 99.5 %. In electrogravimetry you weigh the copper, so the mass is the result; the

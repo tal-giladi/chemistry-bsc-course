@@ -17,8 +17,8 @@
     ends and positive in the middle. What does this mean?
   options:
     - The fit is excellent, because R² above 0.999 proves the response is linear.
-    - The blank is contaminated, because the first residual is negative.
-    - The straight line is the wrong model over this range; narrow the range or fit a curve.
+    - The blank is contaminated, because the first residual is the negative one.
+    - The line is the wrong model here; narrow the range or fit a curve.
     - The noise grows with concentration, so a weighted least-squares fit will remove the arch.
   correct: 2
   explanation: >-
@@ -30,8 +30,8 @@
     in pure water is fully recovered. What is the best next step?
   options:
     - Use the method of standard additions, because the sample matrix lowers the sensitivity.
-    - Prepare the external standards more carefully, because their concentrations must be wrong.
-    - Multiply every result by 5.0/4.1, because recoveries are always constant across samples.
+    - Prepare the external standards more carefully, as their concentrations must be wrong.
+    - Multiply every result by 5.0/4.1, as recoveries are always constant across samples.
     - Measure more blanks, because a low recovery means the LOD is too high.
   correct: 0
   explanation: >-

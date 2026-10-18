@@ -4,7 +4,7 @@
     kappa = 10 per nm, how would the current change if the feedback loop were switched off?
   options:
     - It would roughly double, because the gap shrinks by about a third.
-    - It would rise about 55 times, because the current goes as exp(-2 kappa d).
+    - It would rise about 55 times, since I scales as exp(-2 kappa d).
     - It would rise about 7 times, because the current goes as exp(-kappa d).
     - It would not change, because tunnelling does not depend on the gap.
   correct: 1
@@ -18,8 +18,8 @@
   options:
     - The hydrogen crosses the barrier mainly by tunnelling rather than over the top.
     - The deuterium bond is weaker, so the reaction follows a different mechanism.
-    - The zero-point energy difference alone explains a factor of 60 at room temperature.
-    - The reaction is diffusion controlled, so isotopes and temperature do not matter.
+    - The zero-point energy difference alone explains a factor of 60 at 25 C.
+    - The reaction is diffusion controlled, so isotope and temperature hardly matter.
   correct: 0
   explanation: >-
     Zero-point energy differences give H/D ratios up to about 7. A much larger ratio together with a
@@ -30,7 +30,7 @@
     what is it for a deuteron through the same barrier?
   options:
     - 5e-5, half the proton value because the mass doubles.
-    - 1e-8, the proton value squared because the mass doubles.
+    - 1e-8, the proton value squared as the mass doubles.
     - 1e-4, the same, because both particles carry the same charge.
     - About 2e-6, the proton value to the power of about 1.4.
   correct: 3
@@ -42,10 +42,10 @@
     The inversion splitting of NH3 is 0.79 per cm and that of ND3 is 0.053 per cm. What does a
     smaller splitting mean physically?
   options:
-    - ND3 has a lower barrier, so the two wells merge into one.
+    - ND3 has a lower barrier, so its two wells merge into one single well.
     - The deuterated molecule tunnels between its two shapes about 15 times more slowly.
-    - ND3 is planar, so it has no double well and no splitting to measure.
-    - The heavier atoms vibrate faster, so the levels move closer together.
+    - ND3 is planar, so it has no double well and so no inversion splitting to measure at all.
+    - The heavier atoms vibrate faster, so the two levels move closer together in energy.
   correct: 1
   explanation: >-
     The splitting divided by h is the flipping frequency between the two pyramids: 23.8 GHz for NH3

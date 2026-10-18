@@ -4,8 +4,7 @@
     mainly at one of the wavelengths. A new technician proposes 430 nm and 450 nm instead, because
     the signals are bigger. What do you tell them?
   options:
-    - >-
-      Fine, because larger absorbances always give smaller relative errors in both concentrations.
+    - Fine, because larger absorbances always give smaller relative errors.
     - >-
       Fine, as long as the cuvette path length is the same at both wavelengths.
     - >-
@@ -38,9 +37,9 @@
     A Hückel calculation for a molecule gives eigenvalues x = 2.0, 1.0, 1.0, -1.0, -1.0, -2.0 and
     the molecule has six pi electrons. What is its total pi energy?
   options:
-    - 6 alpha + 0 beta, since the eigenvalues add up to zero.
+    - 6 alpha + 0 beta, since the six eigenvalues add up to exactly zero.
     - 6 alpha + 8 beta, from filling the three highest x values with two electrons each.
-    - 6 alpha - 8 beta, from filling the three lowest x values with two electrons each.
+    - 6 alpha - 8 beta, from filling the three lowest x values with two electrons in each.
     - 6 alpha + 4 beta, from filling only the single largest x value with all six electrons.
   correct: 1
   explanation: >-
@@ -51,10 +50,10 @@
     The stretch of 12C16O is near 2143 cm^-1. A student predicts the 13C16O band by assuming the same
     force constant. Roughly where should it appear?
   options:
-    - Near 2190 cm^-1, because a heavier isotope stiffens the bond and raises it.
+    - Near 2190 cm^-1, because a heavier isotope stiffens the bond.
     - Near 1978 cm^-1, because the wavenumber scales with 12/13.
     - Near 2143 cm^-1, because isotopes do not change vibrations.
-    - Near 2096 cm^-1, scaling with the root of the reduced-mass ratio.
+    - Near 2096 cm^-1, scaling as 1/sqrt(reduced mass).
   correct: 3
   explanation: >-
     mu is 6.857 u for 12C16O and 7.172 u for 13C16O; the wavenumber goes as 1/sqrt(mu), so it falls
@@ -68,8 +67,7 @@
       First order is likely, but at low conversion all three plots look nearly straight.
     - >-
       Zero order, because its R^2 is close to the highest and it is the simplest model.
-    - >-
-      Second order, because it gives the second-highest R^2 and degradation is bimolecular.
+    - Second order, as it gives the second-highest R^2 and degradation is bimolecular.
     - >-
       The order cannot be judged from integrated rate laws, only from initial rates.
   correct: 0
@@ -81,9 +79,10 @@
     You integrate a stiff rate system (one step a million times faster than another) with
     solve_ivp's default RK45. It runs for minutes and takes millions of tiny steps. What do you change?
   options:
-    - Switch to Euler's method with a large fixed step to speed it up.
+    - >-
+      Switch to Euler's method with a large fixed step to save time.
     - Loosen rtol to 1e-1 so that RK45 can take longer steps.
-    - Use an implicit method such as LSODA, BDF or Radau.
+    - Switch to an implicit stiff solver such as LSODA, BDF or Radau.
     - Request fewer output points with t_eval so the solver does less work.
   correct: 2
   explanation: >-
@@ -94,9 +93,9 @@
     A reactor is fed so that dc/dt = r - k c with k = 0.10 per minute. After a feed change, how
     long until c has gone 95 % of the way to its new steady state?
   options:
-    - About 10 minutes, one time constant 1/k.
+    - About 10 minutes, one time constant 1/k of the system.
     - About 30 minutes, about 3 time constants (ln 20).
-    - About 7 minutes, one half-life ln 2 / k.
+    - About 7 minutes, one half-life (ln 2 / k).
     - It depends on r, so it cannot be found without the feed rate.
   correct: 1
   explanation: >-
@@ -123,8 +122,7 @@
   options:
     - >-
       No, too late; B peaks after about 7.9 hours and some of it has decomposed by 24 hours.
-    - >-
-      Yes, because it allows about ten half-lives of the first step and so collects the most B.
+    - Yes, because it allows ten half-lives of the first step and so collects the most B.
     - >-
       No, too early; B peaks after one time constant of the slow step, 50 hours.
     - >-
@@ -140,7 +138,8 @@
   options:
     - One species grows exponentially, which is normal in first-order networks.
     - The rate matrix has an error; a closed first-order network cannot grow.
-    - The positive eigenvalue belongs to the equilibrium state of the network.
+    - >-
+      The positive eigenvalue belongs to the network's equilibrium state.
     - The system oscillates with a period of 2 pi divided by 0.05 seconds.
   correct: 1
   explanation: >-

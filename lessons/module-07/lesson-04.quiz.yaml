@@ -5,8 +5,8 @@
   options:
     - Linear like CO₂, so the two bond dipoles cancel and it is non-polar.
     - Bent, a little under 120°, so the bond dipoles do not cancel and it is polar.
-    - Trigonal planar, because it has three domains, so it is non-polar by symmetry.
-    - Bent, with an angle near 104.5° like water, but non-polar because S and O are similar.
+    - Trigonal planar, as it has three domains, so it is non-polar by symmetry.
+    - Bent, near 104.5° like water, but non-polar because S and O are similar.
   correct: 1
   explanation: >-
     Two bonds plus one lone pair are three domains, so the electron-domain geometry is trigonal planar and the
@@ -42,10 +42,11 @@
     A student ranks boiling points by polarity only and predicts that HCl (polar, 18 electrons) boils higher than
     I₂ (non-polar, 106 electrons). Iodine is in fact a solid that boils at 184 °C. What did the student miss?
   options:
-    - I₂ forms hydrogen bonds through its lone pairs, which HCl cannot do.
+    - I₂ forms hydrogen bonds through its lone pairs, which HCl molecules cannot do at all.
     - I₂ molecules are held by covalent bonds between molecules, which are stronger than any IMF.
     - HCl breaks apart into ions in the gas, so it has no intermolecular forces at all.
-    - Dispersion grows with electron count, and for I₂ it outweighs HCl's dipole–dipole forces.
+    - >-
+      Dispersion grows with electron count and for I₂ beats HCl's dipole forces.
   correct: 3
   explanation: >-
     Large, polarisable electron clouds give strong dispersion forces. When molecules differ greatly in size,
@@ -55,8 +56,8 @@
     Xenon tetrafluoride, XeF₄, has four Xe–F bonds and two lone pairs on xenon. Where do the lone pairs go, and
     what is the shape?
   options:
-    - Next to each other at 90°, giving a seesaw shape.
-    - On opposite sides of xenon, giving a square planar shape.
+    - Next to each other at 90°, which gives a seesaw shape.
+    - On opposite sides of xenon, 180° apart, giving a square planar shape.
     - In the equatorial plane, giving a T shape with one F missing.
     - On the same side of the molecule, giving a square pyramidal shape.
   correct: 1

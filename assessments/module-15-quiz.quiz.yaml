@@ -5,7 +5,7 @@
   options:
     - No, because the fragment is an ether, and ethers are inert to water.
     - No, because the benzene ring protects every group attached directly to it from water.
-    - Yes, it is an aryl ester, which water slowly hydrolyses to a phenol and acetic acid.
+    - Yes, an aryl ester, which water slowly hydrolyses to a phenol.
     - Yes, because it is a ketone, and ketones add water to form unstable alcohols.
   correct: 2
   explanation: >-
@@ -19,7 +19,7 @@
   options:
     - About 5 %, because the equatorial-to-axial ratio is exp(7.6/2.48), about 21.
     - About 50 %, because ring flips make both chairs equally populated.
-    - About 33 %, because there are three axial positions on each face of the ring.
+    - About 33 %, as there are three axial positions on each face of the ring.
     - Below 0.01 %, because any axial group is too strained to be populated.
   correct: 0
   explanation: >-
@@ -32,7 +32,8 @@
   options:
     - A racemic mixture of (2R,3R) and (2S,3S), because racemates give zero rotation.
     - The (2R,3R) enantiomer, because a single peak means one enantiomer.
-    - A 1:1 mixture of all four stereoisomers, which cancel each other's rotation.
+    - >-
+      A 1:1 mix of all four stereoisomers, which cancel each other's rotation.
     - The meso (2R,3S) compound, which is achiral, so one peak and no rotation.
   correct: 3
   explanation: >-
@@ -57,7 +58,7 @@
     A kinetics student runs (S)-2-bromooctane with sodium iodide in acetone. The rate doubles when
     [I-] doubles. What stereochemistry does the product, 2-iodooctane, have at first?
   options:
-    - Inverted, (R)-2-iodooctane, since a second-order rate means SN2 backside attack.
+    - Inverted, (R)-2-iodooctane, as second-order kinetics means SN2.
     - Racemic, because iodide attacks the flat carbocation from both faces.
     - Retained, (S)-2-iodooctane, because iodide replaces bromide in the same position.
     - Racemic, because acetone is protic and favours SN1 on secondary carbons.
@@ -73,7 +74,7 @@
   options:
     - Use cyclohexyl bromide in methanol with heat, because SN1 then gives the ether cleanly.
     - Use potassium tert-butoxide instead of methoxide, because it is a stronger nucleophile.
-    - Use sodium cyclohexoxide and methyl iodide, which has no beta-H to lose.
+    - Use sodium cyclohexoxide and methyl iodide, so the SN2 is on a methyl carbon with no beta-H.
     - Use more methoxide, because a higher concentration favours substitution over elimination.
   correct: 2
   explanation: >-
@@ -129,7 +130,7 @@
   options:
     - As a useful estimate, uncertain by a few kJ/mol, so the preference may not be real.
     - As exact, because a force field that matches butane is validated for all molecules.
-    - As meaningless, because force fields cannot describe conformational energies at all.
+    - As meaningless, as force fields cannot describe conformational energies at all.
     - As a free energy, because force-field energies already include entropy and solvent.
   correct: 0
   explanation: >-

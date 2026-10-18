@@ -19,7 +19,7 @@
     - The fit is excellent, because a large chi-square means the model explains a lot of the data.
     - The parameter uncertainties are too large and can be divided by 4.8.
     - The model is wrong or the stated sigmas are too small; inspect the residual plot.
-    - Nothing, because reduced chi-square is meaningful only for straight lines.
+    - Nothing, because a reduced chi-square is meaningful only for fitting straight lines.
   correct: 2
   explanation: >-
     With 22 degrees of freedom, values near 1 are expected and 4.8 is far outside the normal range.
@@ -45,8 +45,9 @@
     quotes k with an uncertainty of 0.0004 per minute. What does a Monte Carlo test most likely show?
   options:
     - It scatters more than 0.0004, because noisy points count as much as precise ones.
-    - The unweighted k scatters exactly 0.0004, because curve_fit's covariance is always exact.
-    - The unweighted k scatters less than 0.0004, because more noise averages out faster.
+    - >-
+      The unweighted k scatters exactly 0.0004, as curve_fit's covariance is exact.
+    - The unweighted k scatters less than 0.0004, as more noise averages out faster.
     - The scatter cannot be tested, because the true k of real data is unknown.
   correct: 0
   explanation: >-

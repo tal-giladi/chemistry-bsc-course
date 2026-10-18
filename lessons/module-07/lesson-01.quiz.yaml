@@ -18,7 +18,7 @@
   options:
     - ⁷¹Ga, at about 60%, because the atomic weight is above 69.
     - The two are equal, because the atomic weight is near the middle of the range.
-    - ⁷¹Ga, at about 80%, because heavier isotopes are more stable.
+    - ⁷¹Ga, at about 80%, because heavier isotopes are always more stable.
     - ⁶⁹Ga, at about 60%, because the atomic weight is closer to 68.926.
   correct: 3
   explanation: >-
@@ -42,7 +42,7 @@
   options:
     - Because ³⁵Cl is radioactive, so its mass slowly changes over time.
     - Because the mass of a single isotope can only be measured to four digits.
-    - Because the isotope mix varies a little between natural sources.
+    - Because the isotope mix varies a little from one natural source of chlorine to another.
     - Because chlorine is a gas and gas masses are always rounded to two decimals.
   correct: 2
   explanation: >-

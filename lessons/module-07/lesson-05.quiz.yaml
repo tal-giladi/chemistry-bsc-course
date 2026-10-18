@@ -17,9 +17,9 @@
     most likely explanation?
   options:
     - The reaction made more product than the limiting reagent allows, because the excess reagent also reacted.
-    - The student used the wrong molar mass for the limiting reagent, which always raises the yield.
+    - The student used the wrong molar mass for the limiting reagent, which always raises the calculated yield.
     - The product is still wet with solvent or contains impurities, so it weighs more than pure product would.
-    - Yields above 100 % are normal when one reagent is in large excess.
+    - Yields above 100 % are normal when one reagent is in large excess, as the excess adds mass.
   correct: 2
   explanation: >-
     The limiting reagent caps the amount of product, so more than 100 % is impossible for pure, dry product.
@@ -30,9 +30,9 @@
     acid concentration you get from the break point and from the plateau?
   options:
     - Both are about 12 % too low, because every mass loss is 12 % too small.
-    - The break point is 12 % too low, but the plateau is unaffected because the acid is in excess there.
+    - The break point is 12 % too low, but the plateau is fine, as acid is in excess there.
     - Neither is affected, because dissolved CO₂ still counts as reacted acid.
-    - The plateau is about 12 % low, but the break point barely moves; it marks when the acid runs out.
+    - The plateau is about 12 % low, but the break point barely moves.
   correct: 3
   explanation: >-
     The same fraction is lost from every point, which lowers both lines but not where they meet. The plateau
@@ -43,8 +43,8 @@
     Na₂CO₃ + 2 HCl → 2 NaCl + H₂O + CO₂. What mass of Na₂CO₃ do you need?
   options:
     - 0.265 g, because 5.00 mmol of HCl needs 2.50 mmol of Na₂CO₃.
-    - 0.530 g, because 5.00 mmol of HCl needs the same 5.00 mmol of Na₂CO₃.
-    - 265 g, because 0.200 × 25.0 = 5.00 mol of HCl.
+    - 0.530 g, because 5.00 mmol of HCl needs 5.00 mmol of Na₂CO₃.
+    - 265 g, because 0.200 × 25.0 gives 5.00 mol of HCl.
     - 1.06 g, because 5.00 mmol of HCl needs 10.0 mmol of Na₂CO₃.
   correct: 0
   explanation: >-

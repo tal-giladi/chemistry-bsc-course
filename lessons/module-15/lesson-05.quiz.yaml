@@ -3,7 +3,7 @@
     Doubling the azide concentration leaves the initial rate of a substitution on a tertiary
     chloride unchanged. What does that tell you?
   options:
-    - Azide is too weak a nucleophile to react, so the product must come from the solvent alone.
+    - Azide is too weak a nucleophile to react, so the product comes from the solvent alone.
     - The reaction is SN2, because tertiary substrates react in one concerted step.
     - "The reaction is SN1: the nucleophile enters after the rate-determining ionisation step."
     - The azide has already been used up, so its concentration no longer matters.
@@ -32,7 +32,7 @@
     - Water attacked the back of C2 by SN2, which moved the OH group to the next carbon.
     - The starting material was mislabelled, because substitution never changes the carbon skeleton.
     - The OH group migrated after the reaction, because alcohols equilibrate in hot water.
-    - A secondary carbocation formed and a hydride shift turned it into a tertiary one.
+    - A secondary carbocation formed, and a hydride shift turned it into a tertiary one.
   correct: 3
   explanation: >-
     SN1 conditions give a carbocation at C2. The H on C3 moves with its pair, giving the more
@@ -42,7 +42,7 @@
     Ethanol does not react with sodium bromide, but it does give bromoethane in concentrated HBr.
     Why?
   options:
-    - HBr is a stronger nucleophile than bromide, so only HBr can attack the carbon.
+    - HBr is a stronger nucleophile than bromide, so only HBr itself can attack the carbon.
     - Acid protonates the OH, so the leaving group is water, a weak base, not hydroxide.
     - Sodium ions block the oxygen of ethanol, so the reaction only works without sodium.
     - Ethanol must first form a primary carbocation, and that needs strong acid to happen.

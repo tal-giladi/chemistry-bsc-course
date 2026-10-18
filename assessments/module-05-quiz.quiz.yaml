@@ -5,7 +5,7 @@
     What should the group do first?
   options:
     - Rewrite the script without numpy and scipy, so that versions no longer matter.
-    - Keep using the laptop where it works, since that one must have the correct versions.
+    - Keep using the laptop where it works, since that one must have the correct package versions.
     - Agree on one Python version and a pinned requirements file, rebuild each venv, and rerun.
     - Upgrade every package on both laptops to the newest release and accept whatever comes out.
   correct: 2
@@ -17,9 +17,9 @@
     You compute k = A exp(-Ea/(R T)) with Ea as an array of 5 values and T as an array of 40
     temperatures, and you want a 5-by-40 table. Which preparation is correct?
   options:
-    - Reshape Ea to a column of shape (5, 1) and keep T as shape (40,).
+    - Reshape Ea to a (5, 1) column and keep T as shape (40,).
     - Reshape T to a column of shape (40, 1) and keep Ea as shape (5,).
-    - Repeat T eight times so both arrays have 40 elements, then divide element by element.
+    - Repeat T eight times so both arrays have 40 elements, then divide.
     - Loop over the 40 temperatures and append each result to a Python list.
   correct: 0
   explanation: >-
@@ -33,7 +33,7 @@
     - np.trapezoid only works on one-dimensional arrays, so loop over the rows.
     - The speeds must be in km/s, because large x values overflow the trapezoid rule.
     - The function should be np.trapz, which handles two-dimensional arrays correctly.
-    - It integrates over temperature; use axis=-1, where the speeds are.
+    - It integrates over temperature instead; use axis=-1, the axis where the speeds lie.
   correct: 3
   explanation: >-
     axis=0 sums across the three temperatures at each speed, giving 2501 meaningless numbers.
@@ -61,7 +61,7 @@
     - Treat slope and intercept as independent, because that gives the safest, largest uncertainty.
     - Use only the slope uncertainty, because the intercept is close to zero.
     - Propagate using correlated_values from the fit covariance, or the textbook formula.
-    - Report the R squared of the line as the uncertainty of the concentration.
+    - Report the R squared of the calibration line as the uncertainty of the concentration.
   correct: 2
   explanation: >-
     Slope and intercept errors partly cancel in a prediction near the centre of the data. Keeping
@@ -88,7 +88,7 @@
     - DELTAX, because a wrong x step changes the height of every band.
     - TITLE, because a wrong compound name means the wrong file was downloaded.
     - XUNITS, because micrometres instead of wavenumbers would raise the peak.
-    - YFACTOR, because the stored integers must be scaled by it.
+    - YFACTOR, because the stored integers must be multiplied by it to get true y.
   correct: 3
   explanation: >-
     JCAMP-DX stores scaled integers. Forgetting YFACTOR (around 1e-4 in NIST files) inflates every
@@ -126,7 +126,7 @@
     diet drink near 0 percent. What is the best decision?
   options:
     - Use the straight line, because R squared above 0.99 is the usual acceptance rule.
-    - Use the straight line, but double the uncertainty to cover the misfit.
+    - Use the straight line, but double its uncertainty to cover the visible misfit.
     - Drop the 0 and 30 percent standards, because they cause the large residuals.
     - Use a quadratic, since the line misfits the ends where the diet drink lies.
   correct: 3

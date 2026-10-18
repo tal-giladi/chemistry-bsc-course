@@ -3,8 +3,8 @@
     Your five water repeats give 1.012, 1.011, 1.012, 1.012 and 1.011 g/mL using the syringe marks.
     Water at your temperature is 0.9975 g/mL. What is the best next step?
   options:
-    - Do ten more repeats, so that the mean moves closer to 0.9975 g/mL.
-    - Calculate a calibration factor from the water and apply it to the sugar results.
+    - Do ten more repeats, so that the mean of all fifteen moves closer to 0.9975 g/mL.
+    - Calculate a calibration factor from the water and apply it to the sugar.
     - Discard the water data, since it clearly contains a mistake, and start again.
     - Report 1.012 g/mL as the density of water at this temperature, since it is precise.
   correct: 1
@@ -19,7 +19,8 @@
     - It is zero, because the repeats agree perfectly with each other.
     - It cannot be estimated at all without at least ten repeats.
     - It equals 1 g, the step of the scale, used as a standard uncertainty.
-    - It is limited by resolution; use a Type B estimate of about 1 g/√6.
+    - >-
+      It is limited by the scale's resolution; use a Type B estimate of about 1 g/√6.
   correct: 3
   explanation: >-
     Identical readings show that the scale's resolution, not random scatter, limits the result. Each reading has
@@ -42,7 +43,7 @@
     You measure 1.091 ± 0.004 g/mL (standard uncertainty) for a 20% sugar solution. The reference at your
     temperature is 1.080 g/mL. What do you conclude?
   options:
-    - It agrees, because the two values differ by only about 1%.
+    - It agrees, because the two values differ by only about one percent.
     - It agrees, because 1.091 rounds to 1.09, close to 1.08.
     - It disagrees, with |z| near 3, so check your procedure for a bias.
     - It disagrees, so the reference value must be for a different temperature.

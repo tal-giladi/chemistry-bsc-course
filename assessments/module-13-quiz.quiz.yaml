@@ -4,7 +4,7 @@
     cooling (close to reversible isothermal) or fast without cooling. Per mole of gas at 298 K, the
     slow route needs RT ln 10 = 5.7 kJ. What can you say about the fast route?
   options:
-    - It needs exactly 5.7 kJ as well, because the start and end pressures are the same.
+    - It needs exactly 5.7 kJ as well, as the start and end pressures are the same.
     - It needs less work, because there is no time for any heat to leak away from the gas.
     - It needs more work, and the gas comes out hot, since the fast push is adiabatic.
     - It needs no work at all, because no heat is exchanged with the surroundings.
@@ -19,9 +19,9 @@
     publishing an enthalpy of combustion?
   options:
     - Yes, Delta n_gas = 57 - 81.5 = -24.5, so Delta H is about 61 kJ/mol more negative.
-    - No, because a sealed bomb calorimeter measures the enthalpy change directly.
+    - No, because a sealed bomb calorimeter measures the enthalpy change of combustion directly.
     - Yes, Delta n_gas = 57 + 55 - 81.5 = +30.5 mol, so Delta H is less negative than Delta U.
-    - No, because the correction RT is only 2.5 J/mol and negligible.
+    - No, because the correction RT is only 2.5 J/mol and so negligible here.
   correct: 0
   explanation: >-
     A sealed bomb gives Delta U. Only gases count: 57 - 81.5 = -24.5, and Delta n RT = -24.5 x 2.479
@@ -35,7 +35,7 @@
     - None, because enthalpies of reaction do not depend on temperature at all.
     - About 40 J/mol, because Delta Cp is given in J/(mol K) and is small.
     - About 400 kJ/mol, because the temperature rises by about 400 K above the table.
-    - About 13-18 kJ/mol; by Kirchhoff the reaction is more exothermic at 700 K.
+    - About 13-18 kJ/mol; by Kirchhoff it is more exothermic at 700 K.
   correct: 3
   explanation: >-
     Delta H(700) = Delta H(298) + integral of Delta Cp dT. With -40 J/(mol K) over 400 K that is about
@@ -45,10 +45,10 @@
     A geothermal engineer proposes a plant using water at 120 C with cooling at 30 C, and promises 35 %
     efficiency. Should an investor believe it?
   options:
-    - Yes, because 35 % is well below the 100 % ceiling allowed by the first law.
+    - Yes, because 35 % is well below the first-law ceiling of 100 %.
     - No, the Carnot limit is 1 - 303/393 = 23 %, so 35 % is impossible.
-    - Yes, because the Carnot limit is 1 - 30/120 = 75 %.
-    - No, because heat engines cannot work below 100 C.
+    - Yes, because the Carnot limit is 1 - 30/120, which is 75 %.
+    - No, because heat engines cannot work at all below 100 C.
   correct: 1
   explanation: >-
     The second law caps any heat engine at 1 - T_c/T_h in kelvin: 1 - 303.15/393.15 = 0.23. Using
@@ -58,9 +58,9 @@
     Two litres of gas, one of N2 and one of O2, at the same T and p, are separated by a partition
     that is then removed. The gases mix. What is the entropy change, and is the reverse possible?
   options:
-    - Zero, because no heat flows and no work is done.
+    - Zero, because no heat flows and no work is done on the gas.
     - Positive, -nR sum x ln x; spontaneous unmixing would lower total entropy.
-    - Negative, because mixing makes the gas more uniform and therefore more ordered.
+    - Negative, because mixing makes the gas more uniform and so more ordered.
     - Positive, but the reverse also happens often because both have the same probability.
   correct: 1
   explanation: >-
@@ -72,8 +72,8 @@
     Q = 6e-7 (K = 9e-5). An operator says no product can form. What is the correct analysis?
   options:
     - The operator is right, because a positive Delta G standard means the reaction cannot run.
-    - The reaction runs backwards, because Q is far below 1.
-    - The reaction is at equilibrium, because Q and K are both small numbers.
+    - The reaction runs backwards, because Q is many orders of magnitude below 1.
+    - The reaction is at equilibrium, because Q and K are both very small numbers below 1.
     - Delta G = 54 + RT ln Q = 54 - 83 = -29 kJ/mol, so product forms until Q reaches K.
   correct: 3
   explanation: >-
@@ -87,7 +87,7 @@
     - About 363 K (90 C), from the Clausius-Clapeyron equation.
     - About 373 K, because boiling points do not depend on pressure.
     - About 393 K, because lower pressure raises the boiling point.
-    - About 261 K, from multiplying 373 K by 0.70.
+    - About 261 K, from multiplying 373 K by the pressure ratio 0.70.
   correct: 0
   explanation: >-
     1/T2 = 1/373 - (R/Delta H) ln(0.70/1.013) = 0.002681 + 0.0000749 = 0.002756, so T2 = 363 K. Lower
@@ -99,8 +99,8 @@
   options:
     - It must be above the triple-point pressure, so that the ice melts gently first.
     - It must be exactly 1 atm, so that the ice stays solid throughout the drying.
-    - It must be below the vapour pressure of ice at -30 C, so the ice sublimes.
-    - Any pressure works, because ice sublimes at every pressure when it is below 0 C.
+    - It must be below the vapour pressure of ice at -30 C, so that the ice sublimes.
+    - Any pressure works, as ice sublimes at every pressure when it is below 0 C.
   correct: 2
   explanation: >-
     Below the triple point the liquid cannot exist; ice sublimes when the surrounding water vapour

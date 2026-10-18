@@ -4,7 +4,7 @@
     Roughly how long would it take to cross a cell ten times wider, 200 micrometres?
   options:
     - About 2 s, because the time grows in proportion to the distance.
-    - About 0.6 s, because the time grows with the square root of the distance.
+    - About 0.6 s, because the time grows with the root of the distance.
     - About 20 s, because the time grows with the square of the distance.
     - About 0.2 s, because the diffusion coefficient does not change.
   correct: 2
@@ -18,8 +18,8 @@
   options:
     - The neutral nonpolar one, because it can dissolve in the oily core of the bilayer.
     - The charged one, because the inside of the cell is negative and attracts it through the lipid.
-    - Both equally, because the membrane is only 5 to 10 nm thick.
-    - The charged one, because charged molecules are more soluble in water on both sides.
+    - Both equally, because the membrane is only 5 to 10 nm thick in total.
+    - The charged one, because charged molecules dissolve better in water on both sides.
   correct: 0
   explanation: >-
     To cross, a molecule must pass through a nonpolar core of permittivity about 2. Moving a charge
@@ -30,9 +30,9 @@
     You place red blood cells in a 0.30 mol/L glucose solution, and others in a 0.30 mol/L NaCl
     solution. Blood plasma is about 0.30 osmol/L. What happens?
   options:
-    - Both sets stay normal, because both solutions are 0.30 mol/L.
+    - Both sets stay normal, because both solutions are 0.30 mol/L in solute.
     - Cells in glucose shrink and cells in NaCl swell, because NaCl particles are smaller and enter faster.
-    - Both sets swell, because neither glucose nor NaCl can cross the membrane.
+    - Both sets swell, because neither glucose nor NaCl can cross the membrane, so water moves in.
     - Cells in glucose stay about normal; cells in NaCl shrink, since it is about 0.6 osmol/L.
   correct: 3
   explanation: >-
@@ -43,8 +43,8 @@
     A cell has Na+ at 15 mM inside and 145 mM outside. What is the Na+ Nernst potential at 37 C
     (RT/F = 26.7 mV), inside relative to outside?
   options:
-    - About -61 mV, from ln(15/145).
-    - About +61 mV, from 26.7 mV times ln(145/15).
+    - About -61 mV, from 26.7 mV times ln(15/145).
+    - About +61 mV, from 26.7 mV x ln(145/15).
     - About +26 mV, from 26.7 mV times log10(145/15).
     - About +258 mV, from 26.7 mV times 145/15.
   correct: 1

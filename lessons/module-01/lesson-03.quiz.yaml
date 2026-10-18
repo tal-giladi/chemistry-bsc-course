@@ -3,7 +3,7 @@
     While filling in your notebook you realise you wrote 163 g, but the scale showed 168 g.
     What is the correct way to fix it?
   options:
-    - Erase 163 carefully and write 168 in the same place so the table stays neat.
+    - Erase 163 carefully and write 168 in its place so the table stays neat.
     - Tear out the page and copy the whole entry again with the right value.
     - Strike 163 with one line, write 168 beside it, add a reason and initials.
     - Leave 163 and correct it later in the report, where the final values belong.
@@ -17,7 +17,7 @@
   options:
     - "Water added to the mug: 50 g, weighed on the kitchen scale"
     - "Mug empty 312 g; mug + water 362 g (scale, 1 g steps)"
-    - "Water about 50 g, as expected from 10 teaspoons"
+    - Water about 50 g, as expected from adding 10 teaspoons
     - "Mass of water 50.0 g ± 0.5 g (kitchen scale)"
   correct: 1
   explanation: >-
@@ -28,10 +28,10 @@
     Your five repeats of a volume measurement are 4.8, 5.1, 4.9, 5.2 and 5.0 mL. How should the result
     be written in the report?
   options:
-    - "5.0 mL (five repeats; range 4.8–5.2 mL)"
+    - 5.0 mL, range 4.8–5.2 mL (n = 5)
     - "5.000 mL ± 0.2 mL, the mean of five repeats"
-    - "5 mL"
-    - "5.0000 mL ± 0.4 mL"
+    - 5 mL, rounded to a whole number for clarity
+    - 5.0000 mL ± 0.4 mL, the full calculator mean
   correct: 0
   explanation: >-
     The repeats already differ in the first decimal place, so one decimal is the honest precision.
@@ -42,7 +42,7 @@
     and what limited your accuracy. Which section should answer this?
   options:
     - The Method section.
-    - The Introduction section.
+    - The Abstract section.
     - The Results section.
     - The Discussion section.
   correct: 3

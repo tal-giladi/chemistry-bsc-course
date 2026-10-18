@@ -5,7 +5,7 @@
   options:
     - Yes, because ten results that agree closely cannot all share the same error.
     - Yes, as long as the standard deviation is below the uncertainty of the burette.
-    - Not yet known, because the results must first be compared with a reference material.
+    - Not yet known; it must first be checked against a reference material.
     - No, because a very small spread usually means the same gross error was made in every run.
   correct: 2
   explanation: >-
@@ -16,10 +16,10 @@
     A CRM is certified at 50.0 ± 0.4 mg/kg (k = 2). Six results give a mean of 49.2 mg/kg with s = 0.6 mg/kg.
     Using the z-score from the lesson, what do you conclude?
   options:
-    - The bias of −0.8 mg/kg is real, since z is about 2.5 and above 2.
-    - There is no evidence of bias, since 0.8 is smaller than the expanded uncertainty plus s.
-    - The bias is real, since any difference from a certified value proves a systematic error.
-    - There is no evidence of bias, since z = 0.8/√(0.6² + 0.2²) ≈ 1.3.
+    - The bias of −0.8 mg/kg is real, since z = 0.8/0.32 is about 2.5, which is above 2.
+    - There is no evidence of bias, since 0.8 is below the expanded uncertainty plus s.
+    - The bias is real, since any gap from a certified value proves a systematic error.
+    - There is no evidence of bias, since z = 0.8/√(0.6² + 0.2²) is about 1.3.
   correct: 0
   explanation: >-
     The combined standard uncertainty is √(0.6²/6 + 0.2²) = 0.32 mg/kg, so z = 0.8/0.32 ≈ 2.5. Divide U by k and
@@ -31,7 +31,7 @@
     error is this, and which samples does it hurt most?
   options:
     - A proportional error, which hurts all samples by the same percentage.
-    - A random error, which hurts the largest samples most because they scatter more.
+    - A random error, which hurts the largest samples most as they scatter more.
     - A proportional error, which hurts the largest samples most because the slope is fixed.
     - A constant error, which hurts the smallest samples most in relative terms.
   correct: 3
@@ -46,7 +46,7 @@
     - Because a proportional error can only be found from the intercept of the line.
     - Because the coins' real masses are not certified, so coin wear and scale gain are mixed together.
     - Because a 0.1 g kitchen scale cannot detect any error smaller than 1 %, whatever the number of coins.
-    - Because ten coins are too few for a straight-line fit to give any slope uncertainty.
+    - Because ten coins are far too few for a straight-line fit to give any meaningful slope uncertainty.
   correct: 1
   explanation: >-
     The slope equals the true coin mass times the scale's gain. Without a reference mass whose value you trust,

@@ -6,7 +6,7 @@
   options:
     - 1.4 K, because the pure-water reading should simply be ignored.
     - 1.1 K, because the offset must be subtracted from the salt reading only.
-    - 1.7 K, because the same thermometer's offset cancels in the difference.
+    - 1.7 K, as the thermometer offset cancels in the difference.
     - 1.86 K, because the measured value must equal the ideal prediction.
   correct: 2
   explanation: >-
@@ -18,7 +18,7 @@
     pressure?
   options:
     - Because solids do not take part in the reaction at equilibrium.
-    - Because a pure solid has activity 1, so it drops out of K.
+    - Because a pure solid has activity 1, however much is present, so it drops out of K.
     - Because the concentrations of solids are too small to measure.
     - Because CO2 is the only species whose amount changes during the reaction.
   correct: 1
@@ -30,9 +30,9 @@
     A student calculates the ionic strength of a 0.010 mol/kg MgSO4 solution as 0.010 and gets a
     mean activity coefficient of 0.79. What went wrong?
   options:
-    - Nothing; MgSO4 behaves like NaCl at the same molality.
+    - Nothing; MgSO4 behaves just like NaCl at the same molality.
     - The limiting law should use the molar mass of MgSO4 instead of the charges.
-    - Activity coefficients of ions are always above 1, so the sign is wrong.
+    - Activity coefficients of ions are always above 1, so the sign is off.
     - The charges were ignored; I = 0.040 and |z+z-| = 4, giving about 0.39.
   correct: 3
   explanation: >-
@@ -46,7 +46,7 @@
   options:
     - Use 1.44, because the shortcut ignores how Delta H and Delta S change with T.
     - Use 0.91, because the 298 K table values are the most reliable data available.
-    - Average the two, because both methods carry about the same size of error.
+    - Average the two, because both methods carry about the same size of systematic error.
     - Neither, because K cannot be calculated from tables and must be measured.
   correct: 0
   explanation: >-

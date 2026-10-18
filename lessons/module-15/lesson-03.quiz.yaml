@@ -4,7 +4,7 @@
     How do you judge that statement?
   options:
     - Correct, because R compounds always rotate light clockwise.
-    - Wrong, because R compounds always rotate light anticlockwise.
+    - Wrong, because R compounds always rotate plane-polarised light anticlockwise.
     - Correct only in ethanol, because the solvent decides which letter applies.
     - Unsupported, because R/S is geometry and the sign must be measured.
   correct: 3
@@ -18,8 +18,8 @@
     only three. Why?
   options:
     - One of the four decomposes on the column because C-Br bonds are weak.
-    - The (2R,3S) form has an internal mirror plane, so it is one achiral meso form.
-    - The two enantiomers co-elute, so the column counts them as one.
+    - (2R,3S) has an internal mirror plane, so it is a meso form.
+    - The two enantiomers co-elute, so the column counts them as one peak.
     - Bromine atoms are too heavy to create a stereocentre, so one centre is not real.
   correct: 1
   explanation: >-
@@ -30,10 +30,10 @@
     A sample of (S)-carvone with pure [alpha] = +60.0 degrees gives an observed specific rotation of
     +54.0 degrees. What is its composition?
   options:
-    - 95 % S and 5 % R, because the enantiomeric excess is 90 %.
-    - 90 % S and 10 % R, because the rotation ratio equals the fraction of S.
-    - 54 % S and 46 % R, because the rotation is read directly as a percentage.
-    - 100 % S, because a racemate would give exactly zero and this is far from zero.
+    - 95 % S and 5 % R, because the enantiomeric excess, 54.0/60.0, is 90 %.
+    - 90 % S and 10 % R, as the rotation ratio equals the fraction of S.
+    - 54 % S and 46 % R, as the rotation is read directly as a percentage.
+    - 100 % S, because a racemate would give zero and this is far from it.
   correct: 0
   explanation: >-
     ee = 54.0/60.0 = 90 %, which is x_S - x_R. With x_S + x_R = 1 this gives 95 % S and 5 % R.

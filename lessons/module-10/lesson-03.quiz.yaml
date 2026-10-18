@@ -17,8 +17,8 @@
   options:
     - Volhard, because it runs in nitric acid, where the Fe3+ indicator stays in solution.
     - Mohr, because chromate works best in acid, where it is fully protonated to chromic acid.
-    - Mohr, after adding extra chromate to make up for the acid.
-    - Fajans, because adsorption indicators do not depend on pH at all.
+    - Mohr, after adding extra chromate to make up for the acid present.
+    - Fajans, because adsorption indicators never depend on the pH of the sample solution at all.
   correct: 0
   explanation: >-
     In acid, chromate becomes HCrO4-, so the Mohr end point comes late. Volhard is designed for acidic
@@ -42,8 +42,8 @@
     A 50.00 mL water sample needs 10.00 mL of 0.01000 M EDTA at pH 10. What is its hardness?
   options:
     - 80 mg/L as Ca, because hardness is reported as calcium.
-    - 200 mg/L as CaCO3.
-    - 20 mg/L as CaCO3, because the sample volume is five times the titrant volume.
+    - 200 mg/L as CaCO3, from 2.000 mmol/L of Ca + Mg times 100.09.
+    - 20 mg/L as CaCO3, because the sample is five times larger.
     - 100 mg/L as CaCO3, because 0.1 mmol of EDTA was used.
   correct: 1
   explanation: >-

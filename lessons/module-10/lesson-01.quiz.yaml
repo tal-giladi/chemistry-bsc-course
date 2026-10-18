@@ -5,7 +5,7 @@
     difference?
   options:
     - The NaOH was not standardised, so one of the two results is affected by its wrong concentration.
-    - Methyl red changes colour in the buffered region, when only about two thirds of the acid has reacted.
+    - Methyl red changes in the buffer region, with only two thirds of the acid used.
     - Phenolphthalein overshoots by about 9 mL, because it needs a large excess of base before it turns pink.
     - Acetic acid evaporates during the slower methyl red titration and less base is needed.
   correct: 1
@@ -17,7 +17,7 @@
   question: >-
     For 0.1 M HCl titrated with 0.1 M NaOH, which statement about indicator choice is correct?
   options:
-    - Only phenolphthalein works, because the equivalence point of this titration lies above pH 8.
+    - Only phenolphthalein works, as the equivalence point of this titration lies above pH 8.
     - Only bromothymol blue works, because the equivalence point is exactly pH 7.
     - Methyl red, bromothymol blue, phenol red and phenolphthalein all give errors under 0.1 %.
     - No visual indicator works, so a pH electrode is needed for a strong acid.
@@ -47,7 +47,7 @@
     - Solid NaOH takes up water and CO2 from the air, so the weighed mass is not all NaOH.
     - NaOH reacts with the glass of the volumetric flask, so the volume is not exactly 1 L.
     - KHP titrations are required by law for every solution made in a laboratory.
-    - The NaOH concentration rises over time as water evaporates through the bottle cap.
+    - The NaOH concentration rises over time as water slowly evaporates through the bottle cap.
   correct: 0
   explanation: >-
     NaOH is hygroscopic and absorbs CO2, so it is not a primary standard. KHP is pure, stable and
@@ -58,7 +58,7 @@
     of titrant. What does this mean for your results?
   options:
     - The drop size does not matter because the titrant is weighed, not measured by volume.
-    - The end point is known only to about 0.6 %; repeats agreeing much better than that are luck.
+    - The end point is known only to about 0.6 %; repeats that agree better are luck.
     - The drop is too small to see, so you should switch to adding titrant 1 mL at a time.
     - Each result will be 0.6 % high, so you must subtract the mass of one drop from every titration.
   correct: 1

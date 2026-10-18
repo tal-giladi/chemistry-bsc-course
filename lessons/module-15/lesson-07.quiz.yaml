@@ -28,7 +28,7 @@
     A plan makes hex-2-yne by treating propyne with NaOH and then 1-bromopropane. Why does it fail,
     and what is the fix?
   options:
-    - 1-Bromopropane is too hindered for SN2; use 2-bromopropane, which reacts faster.
+    - 1-Bromopropane is too hindered for SN2; use 2-bromopropane, which is faster.
     - Propyne is not acidic at all; add HBr first to make it reactive.
     - The product would be an alkene, because hydroxide reduces the triple bond.
     - Hydroxide is too weak a base (water 15.7, alkyne 25); use sodium amide instead.
@@ -58,7 +58,7 @@
   options:
     - Whether boron went to the more substituted carbon, since that changes only stereochemistry.
     - Whether H and OH were added to the same face, which makes OH trans to the methyl group.
-    - Whether you included the boron atom, since the product of hydroboration keeps it.
+    - Whether you included the boron atom, since the product of hydroboration always keeps it.
     - Whether a hydride shift happened, since rearrangements change only R and S labels.
   correct: 1
   explanation: >-

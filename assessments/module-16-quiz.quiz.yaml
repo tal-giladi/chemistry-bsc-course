@@ -18,7 +18,7 @@
   options:
     - LiAlH4 in ether, then water, because it is the standard carbonyl reducer.
     - CH3MgBr, then acid, because Grignard reagents prefer ketones to esters.
-    - NaBH4 in methanol, because it reduces ketones but not esters.
+    - NaBH4 in methanol, because it reduces ketones but leaves an ester alone.
     - H2 over Pd/C, because under mild conditions it reduces every C=O bond.
   correct: 2
   explanation: >-
@@ -30,7 +30,7 @@
     and gets 66 % ester. Management wants about 90 % with the same catalyst. Which plan works?
   options:
     - Use three equivalents of the alcohol, or remove water as it forms.
-    - Double the reaction time, because the reaction has not finished.
+    - Double the reaction time, because the reaction has simply not finished yet.
     - Double the sulfuric acid, because more catalyst shifts the equilibrium.
     - Add water at the start, because it dissolves the catalyst better.
   correct: 0
@@ -43,7 +43,7 @@
     conditions do you use before adding CH3I?
   options:
     - Sodium ethoxide in ethanol at reflux, which gives the more stable enolate.
-    - Aqueous NaOH at room temperature, because the CH3 side is more acidic.
+    - Aqueous NaOH at room temperature, because the CH3 side is the more acidic one.
     - A trace of acid, because the less substituted enol forms first and reacts.
     - LDA in THF at -78 C, which quickly removes the less hindered CH3 proton.
   correct: 3
@@ -56,7 +56,7 @@
     condensation product forms, and why?
   options:
     - Cinnamaldehyde; only acetaldehyde can enolise, and benzaldehyde accepts it.
-    - 2-Butenal, because acetaldehyde reacts only with itself under these conditions.
+    - 2-Butenal, as acetaldehyde reacts only with itself under these conditions.
     - Acetophenone, because the enolate attacks the ring of benzaldehyde.
     - No product, because benzaldehyde has no alpha-H and stops the reaction.
   correct: 0
@@ -82,8 +82,8 @@
     blood pH 7.4, what is its main charge state?
   options:
     - Neutral, because aromatic nitrogens and amines stay unprotonated in blood.
-    - Doubly charged, because both nitrogens carry lone pairs.
-    - Neutral, because amines are protonated only below pH 4.
+    - Doubly charged, because both nitrogens carry lone pairs that take up protons.
+    - Neutral, because amines are protonated only below about pH 4.
     - Singly charged on the alkylamine, with the pyridine mostly neutral.
   correct: 3
   explanation: >-
@@ -94,9 +94,9 @@
     Methyl alpha-D-glucopyranoside is dissolved in neutral water and its optical rotation is followed
     for three hours. What do you expect?
   options:
-    - No change, because the anomeric carbon is an acetal and the ring cannot open.
+    - No change, as the anomeric carbon is an acetal and cannot open.
     - The rotation drifts to the glucose value of +52.6, as in mutarotation.
-    - The rotation drifts to zero, because the glucoside racemises.
+    - The rotation drifts to zero, because the glucoside slowly racemises.
     - The rotation falls steadily, because the glucoside hydrolyses in neutral water.
   correct: 0
   explanation: >-
@@ -109,7 +109,7 @@
   options:
     - Only the first works, because phenylacetone has no reactive carbonyl group.
     - Both are valid disconnections at the carbinol carbon; pick by cost and supply.
-    - Neither works, because tertiary alcohols cannot be made with Grignard reagents.
+    - Neither works, as tertiary alcohols cannot be made with Grignard reagents.
     - Only the second works, because benzylic halides cannot form Grignard reagents.
   correct: 1
   explanation: >-
@@ -122,7 +122,7 @@
     the first starting material?
   options:
     - Plan A, because 6 steps in total is fewer than 9 steps in total.
-    - Neither, because both plans use 80 % steps and so give the same yield.
+    - Neither, because both plans use 80 % steps and so must give the same yield.
     - Plan B, as its longest linear path is 5 steps (33 %) against 6 (26 %).
     - Plan A, because joining two fragments always loses half the material.
   correct: 2

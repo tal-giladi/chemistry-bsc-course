@@ -29,7 +29,7 @@
     In Mol* you click residue 28 in ubiquitin's alpha-helix. Which backbone hydrogen bonds do you
     expect this residue to make?
   options:
-    - Its C=O to the N-H of residue 32, and its N-H to the C=O of residue 24.
+    - Its C=O to the N-H of residue 32, its N-H to the C=O of residue 24.
     - Its C=O to the N-H of residue 29, and its N-H to the C=O of residue 27.
     - Only side-chain hydrogen bonds, because helix backbones point into the solvent.
     - Its C=O to the N-H of residue 60, because helices bond to distant strands.
@@ -45,7 +45,7 @@
     - Nothing, because hydrogen-bond energies simply add up in a folded protein.
     - The DSSP energy is in kcal/mol, so the true total is about 1760 kJ/mol.
     - In the unfolded chain these groups bond to water, so the net gain is small.
-    - Backbone hydrogen bonds are repulsive, so they destabilise the fold by 420 kJ/mol.
+    - Backbone hydrogen bonds are repulsive, so they destabilise the fold.
   correct: 2
   explanation: >-
     Folding swaps hydrogen bonds to water for internal ones and pays an entropy cost to fix the chain.

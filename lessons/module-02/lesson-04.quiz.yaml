@@ -3,10 +3,11 @@
     A student uses [H+] = sqrt(Ka C) for an acid with Ka = 1.0e-3 at C = 0.020 M and gets
     [H+] = 4.5e-3 M. What should they conclude?
   options:
-    - The answer is fine, because Ka is much smaller than 1.
-    - The answer is fine, because the pH error of a square-root shortcut is always below 0.01.
-    - The shortcut is not safe, because x/C is about 22 %, so the quadratic must be solved.
-    - The shortcut is not safe, because Ka is larger than C.
+    - The answer is fine, because Ka is much smaller than 1 here.
+    - >-
+      The answer is fine, because the shortcut's pH error is always tiny.
+    - Not safe, because x/C is about 22 %; solve the quadratic.
+    - The shortcut is not safe, because Ka is larger than C here.
   correct: 2
   explanation: >-
     The check compares x with C: 4.5e-3 / 0.020 is 22 %, far above 5 % (C/Ka = 20, far below 400).
@@ -15,10 +16,10 @@
   question: >-
     Which two-term approximation is correct for small x?
   options:
-    - ln(x) is about x.
-    - exp(x) is about x.
+    - ln(x) is roughly equal to x.
+    - exp(x) is roughly equal to x.
     - sqrt(1 + x) is about 1 + 2x.
-    - ln(1 + x) is about x.
+    - ln(1 + x) is roughly equal to x.
   correct: 3
   explanation: >-
     The expansion is around x = 0 for ln(1 + x): ln(1 + x) = x - x^2/2 + ... . exp(x) is about
@@ -28,10 +29,10 @@
     You measure product concentration during the first 2 % of a first-order reaction and it rises
     in a straight line with time. Why is a straight line expected here?
   options:
-    - Because 1 - exp(-kt) is about kt when kt is small.
-    - Because first-order reactions become zero-order once the product starts to form.
+    - Because 1 - exp(-kt) is about kt when kt is small, so conversion is linear.
+    - Because first-order reactions turn zero-order once product starts to form.
     - Because the rate constant k grows linearly with time at the start.
-    - Because the logarithm of concentration is linear in time for all reactions.
+    - Because the logarithm of concentration is linear in time for every reaction.
   correct: 0
   explanation: >-
     The Taylor series exp(-kt) = 1 - kt + ... gives a conversion of about kt for small kt. That is
@@ -41,10 +42,10 @@
     A bond's potential energy V(r) has its minimum at r_e. Why does the vibration near r_e behave
     like a mass on a spring?
   options:
-    - Because V(r) is exactly a parabola for every chemical bond.
+    - Because V(r) is exactly a parabola for every chemical bond at all distances.
     - Because V'(r_e) = 0 at the minimum, so the first non-constant term is quadratic.
     - Because the first Taylor term V'(r_e)(r - r_e) is linear in the displacement, like Hooke's law.
-    - Because the cubic term of the expansion cancels the quadratic one near r_e.
+    - Because the cubic term of the expansion exactly cancels the quadratic one near r_e.
   correct: 1
   explanation: >-
     The linear term vanishes at a minimum, so V is approximately V(r_e) + (1/2) V''(r_e)(r - r_e)^2,

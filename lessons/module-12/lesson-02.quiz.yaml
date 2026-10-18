@@ -3,9 +3,9 @@
     An electron in a box absorbs at 400 nm for the n = 1 to n = 2 transition. The box is made
     1.5 times longer. Where does the same transition absorb now?
   options:
-    - 600 nm, because the wavelength scales with the box length.
+    - 600 nm, because the wavelength simply scales with the length of the box.
     - 900 nm, because the energy gap scales as one over the length squared.
-    - 267 nm, because a longer box raises the energy of every level.
+    - 267 nm, because making the box longer raises the energy of every level.
     - 400 nm, because the quantum numbers of the transition are unchanged.
   correct: 1
   explanation: >-
@@ -18,7 +18,7 @@
   options:
     - n = 1 to n = 2, the two lowest levels of the box.
     - n = 8 to n = 9, because there are eight electrons.
-    - n = 4 to n = 5, from the highest filled to the lowest empty level.
+    - n = 4 to n = 5, from the HOMO to the LUMO.
     - n = 3 to n = 4, because the top level is only half filled.
   correct: 2
   explanation: >-
@@ -30,7 +30,7 @@
     points, for a box whose exact E1 is 0.37603 eV. What do you expect with 100 points?
   options:
     - About 0.37600 eV, because the error drops about four times per halving of the spacing.
-    - About 0.37615 eV, because the numerical value will overshoot the exact one at fine grids.
+    - About 0.37615 eV, because the numerical value will overshoot the exact one.
     - About 0.37597 eV, because the error halves each time the spacing halves.
     - Exactly 0.37603 eV, because 100 points resolve the sine wave completely.
   correct: 0
@@ -44,7 +44,7 @@
   options:
     - The energy rises, because the particle must push against softer walls.
     - Nothing changes as long as the walls are higher than the ground-state energy.
-    - The wavefunction becomes zero exactly at the walls, but with a sharper curvature.
+    - The wavefunction becomes zero exactly at the walls, but with a much sharper curvature.
     - The energy falls and the wavefunction leaks into the walls with an exponential tail.
   correct: 3
   explanation: >-

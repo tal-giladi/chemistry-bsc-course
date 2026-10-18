@@ -4,8 +4,8 @@
     Which use of that time will help you most to remember the lesson next month?
   options:
     - Read the lesson a second time and highlight the key sentences.
-    - Copy the key takeaways neatly into your notebook while the page is still open.
-    - Close the page and do the hands-on problems without looking at the answers.
+    - Copy the key takeaways neatly into your notebook, page still open.
+    - Close the page and redo the problems without looking.
     - Watch a video on the same topic to see it explained a second way.
   correct: 2
   explanation: >-
@@ -19,7 +19,7 @@
     - They understand the experiments and data, but still need supervised bench training.
     - They are ready, because the simulations teach everything a real lab teaches.
     - They are ready for analytical labs, but not for organic synthesis labs.
-    - They need a degree certificate, but their practical bench skills are already complete.
+    - They need a degree certificate, but their bench skills are already complete.
   correct: 0
   explanation: >-
     Simulations teach procedure, reasoning, safety and data analysis, but not hand skills, reagent handling,
@@ -42,7 +42,7 @@
     You finished lesson 01.2 on Monday. Which review schedule follows the spaced-review advice in this lesson?
   options:
     - Review it again on Monday evening, then never again.
-    - Review it every evening for the next seven days.
+    - Review it every single evening for the next seven days.
     - Review it once, the night before the module quiz.
     - Review it Wednesday, next Monday and a month later.
   correct: 3

@@ -5,7 +5,7 @@
   options:
     - 0.112 bar, because the Celsius and kelvin scales have the same step size.
     - 0.0112 bar, because the volume should be converted to cubic metres first.
-    - 12.5 bar, because R must be used in J/(mol K) with the volume in litres.
+    - 12.5 bar, because R must be in J/(mol K) with V in litres.
     - 1.25 bar, because T must be 300.15 K, about eleven times larger.
   correct: 3
   explanation: >-
@@ -15,9 +15,9 @@
   question: >-
     At 50 bar and 320 K the compressibility factor of CO₂ is 0.77. What does this tell you?
   options:
-    - Attractions between the molecules dominate, so the gas occupies less volume than an ideal gas.
-    - The CO₂ molecules take up 23 % of the container, so the gas is harder to compress than an ideal gas.
-    - The gas is 77 % ideal, so 23 % of the CO₂ has condensed into liquid.
+    - Attractions dominate, so the gas takes up less volume than an ideal gas.
+    - The molecules take up 23 % of the container, so the gas is harder to compress.
+    - The gas is 77 % ideal, so 23 % of the CO₂ has already condensed into liquid.
     - The pressure gauge reads 23 % too low, because real gases hit the walls less often.
   correct: 0
   explanation: >-
@@ -31,7 +31,7 @@
     - 1.4 bar, because the total pressure must stay at the oxygen limit.
     - 3.2 bar, because each 10 % of oxygen allows one more bar.
     - 4.4 bar, because the oxygen limit is divided by its mole fraction.
-    - 0.45 bar, because the oxygen limit is multiplied by its mole fraction.
+    - 0.45 bar, as the oxygen limit is multiplied by its mole fraction.
   correct: 2
   explanation: >-
     Dalton's law gives p(O₂) = x(O₂) P, so P = 1.4 / 0.32 = 4.4 bar, about 34 m of sea water.

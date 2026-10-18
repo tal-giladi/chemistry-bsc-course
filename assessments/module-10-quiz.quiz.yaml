@@ -4,7 +4,7 @@
     proposes methyl red because "it is the indicator we use for HCl". What do you tell her?
   options:
     - Methyl red is fine, because any indicator works once the NaOH has been properly standardised.
-    - Use methyl orange instead, because its colour-change range is closer to the pKa of lactic acid.
+    - Use methyl orange instead, because its colour-change range is much closer to the pKa of lactic acid.
     - Use phenolphthalein; the weak-acid jump is above pH 7 and methyl red changes in the buffer region.
     - Use bromothymol blue, because the equivalence point of every acid-base titration is exactly pH 7.00.
   correct: 2
@@ -29,7 +29,7 @@
     An automatic titrator reports end points from the first-derivative peak. Its pH electrode reads 0.1
     unit high because the calibration buffer was old. Which reported values are affected?
   options:
-    - Both the end-point volume and the pKa at half-equivalence shift by the same small percentage.
+    - Both the end-point volume and the pKa shift by the same small percentage.
     - Neither, because the titrator recalibrates itself at every titration.
     - Only the end-point volume, because the derivative is very sensitive to offsets.
     - The pKa read at half-equivalence is 0.1 too high, but the end-point volume is unchanged.
@@ -55,7 +55,7 @@
     A pickling-brine lab needs chloride in samples at pH 3. A trainee runs the Mohr method directly. What
     will happen, and what is the better plan?
   options:
-    - Low, since AgCl dissolves in acid; add more silver nitrate and repeat at the same pH.
+    - Low, since AgCl dissolves in acid; add more silver nitrate and repeat it at the same pH.
     - High, since chromate turns into HCrO4- and the end point is late; use Volhard instead.
     - Correct, since the Mohr method works at any pH below 10 without change.
     - High, since Fe(OH)3 precipitates in the brine and adsorbs chloride; filter the sample first.
@@ -68,9 +68,9 @@
     A 100.0 mL tap-water sample needs 18.40 mL of 0.01000 M EDTA at pH 10 and 13.20 mL at pH 12.5. What
     are the total hardness and the magnesium concentration?
   options:
-    - 184 mg/L as CaCO3; magnesium 52 mg/L.
+    - 184 mg/L as CaCO3; magnesium 52 mg/L as CaCO3.
     - 74 mg/L as Ca; magnesium 132 mg/L as CaCO3.
-    - 132 mg/L as CaCO3; magnesium 0 mg/L, since pH 12.5 titrates both ions.
+    - 132 mg/L as CaCO3; magnesium 0 mg/L, as pH 12.5 titrates both.
     - 184 mg/L as CaCO3; magnesium 12.6 mg/L.
   correct: 3
   explanation: >-
@@ -82,7 +82,7 @@
     and the crucible was never heated to constant mass. Which result do you expect?
   options:
     - "Unreliable: warm, it reads light and may hold water; cool and weigh to constant mass."
-    - A high result, because warm BaSO4 takes up extra sulfate and moisture from the oven air.
+    - A high result, because warm BaSO4 takes up extra sulfate and moisture from the air.
     - A correct result, because BaSO4 is insoluble and its mass cannot change at all.
     - A low result only, which the gravimetric factor corrects when you calculate.
   correct: 0
@@ -95,8 +95,8 @@
     (one I2, two electrons, per molecule). The end point comes after 386.0 s. How much ascorbic acid was there?
   options:
     - 2.00e-5 mol, because one electron is transferred per molecule.
-    - 1.93 mol, the charge in coulombs.
-    - 1.00e-5 mol, from Q = It divided by 2F.
+    - 1.93 mol, the charge in coulombs taken as moles.
+    - 1.00e-5 mol, from Q = It divided by 2F for two electrons.
     - 5.00e-6 mol, because each I2 needs four electrons.
   correct: 2
   explanation: >-
@@ -110,7 +110,7 @@
     - The slope is too low, so every reading should be multiplied by 1.3.
     - Al3+ or Fe3+ in the sample bind fluoride; the chelator in TISAB frees it.
     - Standard addition always reads 30 % high, so the first, direct result is correct.
-    - Fluoride evaporates as HF from untreated samples during the measurement.
+    - Fluoride evaporates as HF from untreated samples during the measurement itself.
   correct: 1
   explanation: >-
     Without TISAB, fluoride bound to Al3+ or Fe3+ is invisible to the electrode and the ionic strength and
@@ -120,10 +120,11 @@
     Two students titrate the same vinegar five times each. A: mean 4.97, SD 0.02, no blank. B: mean 4.95,
     SD 0.06, with blank. The true value is 4.95. Which statement is right?
   options:
-    - A is better in every way, because a smaller SD always means a more accurate and trustworthy mean.
-    - B is worse in every way, because its SD is three times larger.
+    - A is better in every way, because a smaller SD always means a more accurate mean.
+    - >-
+      B is worse in every way, because its SD is three times larger than A's.
     - Both are equally good, because both means are within 1 % of the true value of 4.95.
-    - A is more precise but biased high; B is less precise but unbiased thanks to the blank.
+    - A is precise but biased high; B is less precise but unbiased.
   correct: 3
   explanation: >-
     Precision (small SD) and accuracy (no bias) are different. A's results share the indicator excess that

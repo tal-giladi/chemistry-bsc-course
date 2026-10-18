@@ -18,7 +18,7 @@
   options:
     - The stopwatch was slow; g is wrong by the size of the intercept.
     - The swings were too small; g is too large and must be corrected.
-    - Every length had the same offset; g from the slope is still fine.
+    - Every length had the same small offset; g from the slope is still fine.
     - The string stretched under load; g cannot be found from these data.
   correct: 2
   explanation: >-

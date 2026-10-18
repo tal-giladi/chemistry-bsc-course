@@ -28,7 +28,7 @@
     You repeat a measurement 5 times and take the mean. You then divide by the exact factor 1000 to change units.
     Which statement about sig figs is correct?
   options:
-    - Neither the 5 repeats nor the factor 1000 limits the sig figs.
+    - Neither the 5 repeats nor the exact factor 1000 limits the sig figs.
     - The result can have at most 1 sig fig, because 5 has only one digit.
     - The result can have at most 1 sig fig, because 1000 has one non-zero digit.
     - The result keeps 4 sig figs, because 1000 is written with four digits.
@@ -54,7 +54,7 @@
     Why has the kilogram, since 2019, no longer been defined by a metal cylinder kept near Paris?
   options:
     - Because the cylinder was lost, so a new standard had to be made from water.
-    - Because it is now defined by fixing the value of the Planck constant.
+    - Because it is now defined by fixing the exact value of the Planck constant.
     - Because it is now defined as the mass of exactly one litre of pure water.
     - Because it is now defined by the mass of one mole of carbon-12 atoms.
   correct: 1

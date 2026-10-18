@@ -3,7 +3,7 @@
     A colleague says CO2 cannot be a greenhouse gas because it is a symmetric, non-polar molecule.
     What is the best reply?
   options:
-    - She is right; only polar molecules such as water absorb infrared light.
+    - She is right; only polar molecules such as water can absorb infrared light at all.
     - The bend and antisymmetric stretch make the dipole oscillate, so they absorb IR.
     - CO2 absorbs only because of collisions with water, which give it a temporary dipole.
     - All vibrations absorb IR, so symmetry has nothing to do with it.
@@ -18,7 +18,7 @@
     - The antisymmetric stretch, because both bonds keep their force constants.
     - The bend, because bending depends only on the angle, not on masses.
     - The symmetric stretch, because carbon does not move in that mode.
-    - None of the bands, because every mode depends on the total mass.
+    - None of the bands, because every mode depends on the total molecular mass.
   correct: 2
   explanation: >-
     In nu1 the two oxygens move oppositely and the carbon stays at the centre of mass, so omega1^2 =
@@ -29,9 +29,9 @@
     1.762. Which change to the model fixes this with the fewest new parameters?
   options:
     - Add a bond-bond interaction constant, so in-phase and out-of-phase stretches differ.
-    - Replace the oxygen mass by the reduced mass of one C=O bond.
-    - Add a bending constant, because the bend couples strongly to the stretches in a linear molecule.
-    - Use the harmonic wavenumbers instead, because anharmonicity explains the whole difference.
+    - Replace the oxygen mass by the reduced mass of a single C=O bond.
+    - Add a bending constant, as the bend couples strongly to the stretches.
+    - Use the harmonic wavenumbers instead, as anharmonicity explains the difference.
   correct: 0
   explanation: >-
     A term k12 s1 s2 makes the symmetric stretch stiffer (k + k12) and the antisymmetric one softer

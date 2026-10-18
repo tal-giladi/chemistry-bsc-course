@@ -3,9 +3,10 @@
     A synthesis plan uses sodium hydroxide in water to turn ethyne (pKa 25) into its acetylide.
     Water has pKa 15.7 in the same table. Will the step work?
   options:
-    - Yes, because hydroxide is a strong base and removes any proton faster than water can return it.
-    - No, because log K = 15.7 - 25 = -9.3, so almost no acetylide forms; use a base such as amide.
-    - Yes, because ethyne's sp carbon makes it more acidic than water.
+    - Yes, because hydroxide is a strong base and removes any proton quickly.
+    - No; log K = -9.3, so almost no acetylide forms; use amide.
+    - >-
+      Yes, because ethyne's sp carbon makes it far more acidic than water.
     - No, because hydroxide reacts with the triple bond instead of the hydrogen.
   correct: 1
   explanation: >-
@@ -19,7 +20,7 @@
     - Nothing, because the proton moves towards the oxygen during the reaction.
     - The arrow should be fishhook-shaped, because a proton carries only one electron.
     - The arrow should end on the hydrogen of water, because protons attack hydrogens.
-    - Arrows show electron pairs, so it must start at a lone pair on O and end at H+.
+    - Arrows show electron pairs, so it must start at a lone pair on O and end at the H+.
   correct: 3
   explanation: >-
     Curved arrows track electrons, not atoms. H+ has no electrons; the new O-H bond comes from an
@@ -44,7 +45,7 @@
   options:
     - Sodium hydroxide, because a stronger base gives a cleaner separation of both acids.
     - Plain water, because benzoic acid is already more acidic than phenol and dissolves alone.
-    - Sodium hydrogen carbonate; K is about 150 for benzoic acid and 0.0002 for phenol.
+    - Sodium hydrogen carbonate; K is about 150 for benzoic acid and 0.0002 for the phenol.
     - Ammonium chloride, because the ammonium ion deprotonates carboxylic acids selectively.
   correct: 2
   explanation: >-

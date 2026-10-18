@@ -17,7 +17,7 @@
     A computed potential-energy curve for a new diatomic molecule has a minimum at 0.150 nm and is
     steepest at 0.190 nm. You stretch the bond to 0.170 nm. What is true about the force there?
   options:
-    - It is zero, because the bond is still shorter than the steepest point.
+    - It is zero, because the bond is still shorter than the steepest point of the curve.
     - It points towards larger r, because the energy is higher than at the minimum.
     - It is the largest restoring force the bond can give at any length.
     - It pulls the atoms back towards 0.150 nm and is weaker than at 0.190 nm.
@@ -31,7 +31,7 @@
     The reduced masses are about 0.957 u for HF and 1.821 u for DF. Which value is right?
   options:
     - About 2175 cm-1, from scaling by the ratio of the reduced masses.
-    - About 3000 cm-1, from scaling by the square root of the mass ratio.
+    - About 3000 cm-1, from scaling by the root of the mass ratio.
     - About 4140 cm-1, because isotopes do not change the bond at all.
     - About 7880 cm-1, from scaling up by the ratio of the reduced masses.
   correct: 1
@@ -46,7 +46,7 @@
     - 4.10 m/s2, the slope itself.
     - 0.244 m/s2, from one over the slope.
     - 9.63 m/s2, from 4 pi^2 over the slope.
-    - 1.53 m/s2, from 2 pi divided by the slope.
+    - 1.53 m/s2, from 2 pi over the slope.
   correct: 2
   explanation: >-
     T squared = (4 pi squared / g) L, so g = 39.48 / 4.10 = 9.63 m/s2. That is about 2 % below
@@ -95,7 +95,7 @@
     You need to know how much copper a 0.250 A current deposits from Cu2+ in 20.0 minutes, for a
     coulometry check. What is the expected mass?
   options:
-    - 0.0988 g, from 300 C over 96 485 C/mol, halved, times 63.5 g/mol.
+    - 0.0988 g, from 300 C over 96 485 C/mol, halved for Cu2+, times 63.5 g/mol.
     - 0.198 g, from 300 C over 96 485 C/mol times 63.5 g/mol.
     - 0.00165 g, from 5.0 C over 96 485 C/mol, halved, times 63.5 g/mol.
     - 0.0494 g, from 300 C over 96 485 C/mol, quartered, times 63.5 g/mol.

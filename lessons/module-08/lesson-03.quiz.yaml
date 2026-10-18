@@ -3,7 +3,7 @@
     For CO + H2O <=> CO2 + H2 at 1000 K, K = 0.91. A reactor holds CO and H2O at 2 bar each, CO2 at
     1 bar and H2 at 1 bar. What happens next?
   options:
-    - Nothing, because the mixture already contains all four of the gases.
+    - Nothing, because the mixture already contains all four gases.
     - The reaction runs backward, because Q is larger than K.
     - The reaction runs forward, because Q = 0.25 is smaller than K.
     - The reaction runs backward, because K is smaller than 1.
@@ -57,8 +57,8 @@
   options:
     - It is negative, about -24 kJ/mol, because K changes with temperature.
     - It is zero, because K is greater than 1 at both temperatures.
-    - It is positive, about +24 kJ/mol, because K rises on heating.
-    - It is positive, about +2.4 kJ/mol, from ln 4 divided by the temperature change.
+    - It is positive, about +24 kJ/mol, because K rises when the mixture is heated.
+    - It is positive, about +2.4 kJ/mol, from ln 4 over the temperature change.
   correct: 2
   explanation: >-
     ln(8/2) = -(Delta H/R)(1/350 - 1/300), so Delta H = 8.314 x 1.386 / 4.76e-4 = 24 kJ/mol. K rising

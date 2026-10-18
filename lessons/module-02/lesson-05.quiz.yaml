@@ -5,7 +5,7 @@
   options:
     - The partial derivative of p with respect to T at fixed n and V, equal to nR/V.
     - The partial derivative of p with respect to T at constant p, equal to zero.
-    - The partial derivative of p with respect to V at constant T, equal to -nRT/V^2.
+    - The partial derivative of p with respect to V at fixed T, equal to -nRT/V^2.
     - The ordinary derivative dp/dT along a path where V grows with T.
   correct: 0
   explanation: >-
@@ -29,10 +29,10 @@
     In your cooling-curve error budget, the k term is 32 s and the room-temperature term is 14 s
     for the time to reach 60 C. Which change would improve the prediction most?
   options:
-    - Buying a more precise room thermometer.
+    - Buying a more precise thermometer for the room temperature.
     - Recording a longer, cleaner cooling curve to pin down k.
-    - Weighing the water on a more precise scale.
-    - Reading the mug temperature every 10 s instead of every 60 s for the first minute only.
+    - Weighing the water on a more precise kitchen scale.
+    - Reading the mug every 10 s instead of 60 s during the first minute.
   correct: 1
   explanation: >-
     The k term dominates, so reducing the uncertainty in k pays off most. A better room thermometer
@@ -43,7 +43,7 @@
     Your real cooling data give a log plot of ln(T - T_env) against time that curves downward
     during the first few minutes and is straight afterwards. What is the most likely reason?
   options:
-    - The thermometer was reading in Fahrenheit for the first few minutes.
+    - The thermometer was reading in Fahrenheit, not Celsius, for the first few minutes.
     - Newton's law forbids any curvature, so the data must be wrong and should be discarded.
     - The room temperature was set too low in the fit, which only affects the late points.
     - Evaporation and warming of the mug wall add early heat loss the model ignores.

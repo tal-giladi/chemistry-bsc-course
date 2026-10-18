@@ -16,9 +16,9 @@
     You deuterate the O-H group of a molecule with an O-H stretch at 3600 per cm. Treating it as a
     diatomic with reduced mass close to the H or D mass, where should the O-D stretch appear?
   options:
-    - Near 1800 per cm, because the mass doubles.
-    - Near 3600 per cm, because the bond and force constant are unchanged.
-    - Near 5090 per cm, because a heavier atom vibrates faster.
+    - Near 1800 per cm, because the mass of the moving atom doubles.
+    - Near 3600 per cm, because the bond and its force constant are unchanged by deuteration.
+    - Near 5090 per cm, because a heavier atom vibrates faster on the same bond.
     - Near 2620 per cm, because the wavenumber scales as one over the square root of mu.
   correct: 3
   explanation: >-
@@ -41,10 +41,10 @@
     A C-H bond is fully broken in the rate-determining step. The C-H and C-D stretches are 2900 and
     2100 per cm. What is the largest isotope effect zero-point energy alone predicts at 298 K?
   options:
-    - About 2, because the masses differ by a factor of two.
-    - About 1.4, the square root of the mass ratio.
+    - About 2, because the masses of H and D differ by a factor of two.
+    - About 1.4, which is the square root of the D to H mass ratio.
     - About 7, from exp of the zero-point difference over RT.
-    - About 50, because deuterium cannot tunnel.
+    - About 50, because deuterium cannot tunnel through the barrier at all.
   correct: 2
   explanation: >-
     The zero-point difference is (2900 - 2100)/2 = 400 per cm = 4.8 kJ/mol. exp(4.8/2.48) is about

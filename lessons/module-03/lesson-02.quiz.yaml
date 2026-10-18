@@ -4,7 +4,8 @@
     for butadiene. Which two values describe the occupied orbitals of the ground state?
   options:
     - 1.618 and 0.618, because beta is negative, so larger x is lower energy.
-    - -1.618 and -0.618, because eigh lists the lowest energies first.
+    - >-
+      -1.618 and -0.618, because np.linalg.eigh lists the lowest energies first.
     - 0.618 and -0.618, because the frontier orbitals are always nearest zero.
     - -1.618 and 1.618, because the outer values are the bonding pair.
   correct: 0
@@ -18,8 +19,8 @@
   options:
     - 3 and 2, the diagonal and off-diagonal entries.
     - 6 and 0, from adding and subtracting the rows.
-    - 5 and 1, from (3 - lambda) squared equal to 4.
-    - 9 and 4, the squares of the entries.
+    - 5 and 1, from (3 - lambda)^2 = 4.
+    - 9 and 4, the squares of the two entries.
   correct: 2
   explanation: >-
     det(A - lambda I) = (3 - lambda)^2 - 4 = 0 gives 3 - lambda = plus or minus 2, so lambda = 1 or
@@ -31,8 +32,7 @@
   options:
     - >-
       The eigenvalues of K are frequencies already, so you should not take the square root.
-    - >-
-      K must be mass-weighted first, dividing each entry by sqrt(m_i m_j).
+    - K must be mass-weighted first, dividing each entry by sqrt(m_i m_j) before diagonalising.
     - >-
       Force constants must be in kJ/mol, so K has to be converted before diagonalising it.
     - >-
@@ -48,7 +48,7 @@
   options:
     - Both are equally stabilised, since they have the same number of pi electrons.
     - Hexatriene is more stable, because a chain has more freedom than a ring.
-    - The difference is meaningless, because beta has different values for rings.
+    - The difference is meaningless, because beta takes other values in rings.
     - The ring roughly doubles the stabilisation, showing benzene's aromaticity.
   correct: 3
   explanation: >-
