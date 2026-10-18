@@ -1,0 +1,5 @@
+/* nmr: page-specific styles (shared ones are in ../common/sim.css) */
+[hidden] { display: none !important; }
+#nmr-plot { cursor: crosshair; }
+fieldset.cands { border: 1px solid var(--line); border-radius: 6px; padding: 4px 10px; margin: 6px 0; }
+fieldset.cands .row { margin: 2px 0; }

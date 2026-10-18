@@ -67,9 +67,9 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - [x] spectrometer
 - [x] chromatography
 - [x] voltammetry
-- [ ] nmr
-- [ ] organic-bench
-- [ ] ir-esr
+- [x] nmr
+- [x] organic-bench
+- [x] ir-esr
 
 ## After modules
 - [x] merge glossary-inbox → glossary.md; research-inbox → references/research-log.md (scripts/merge_inboxes.py)
@@ -128,3 +128,5 @@ Titles/paths: `scripts/manifest.py` (regenerates `_sidebar.md`).
 - sims batch 3 done (oscillators, rlc, quantum-box, boltzmann); batch 5 spawned.
 - sims batch 4 done (spectrometer, chromatography, voltammetry).
 - QA: glossary (1003 terms) + research log merged; 25 unquoted quiz options fixed (dry run flagged); 07.7 burette parallax fixed. Dry run: only organic-bench links left.
+- sims batch 5 done (nmr, organic-bench, ir-esr). check.py 0 errors; Academy dry run 0 problems. QA open: correct option is the longest in 57% of 1063 questions; rebalancing by agents.
+- [ ] QA: quiz length bias — correct option longest in 57.1% (target <= 30%)

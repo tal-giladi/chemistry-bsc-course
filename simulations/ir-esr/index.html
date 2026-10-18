@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IR and ESR spectrometer</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="ir-esr.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>IR and ESR spectrometer</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="ir" aria-controls="tab-ir" id="tabbtn-ir">IR: HCl band</button>
+    <button type="button" data-tab="esr" aria-controls="tab-esr" id="tabbtn-esr">ESR: radicals and the H atom</button>
+  </div>
+
+  <!-- ===================== IR ===================== -->
+  <section id="tab-ir" aria-labelledby="tabbtn-ir">
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Sample and cell</h2>
+          <div class="field"><label for="ir-band">Band</label>
+            <select id="ir-band">
+              <option value="1">fundamental v = 1 ← 0 (near 2886 cm⁻¹)</option>
+              <option value="2">first overtone v = 2 ← 0 (near 5668 cm⁻¹, about 50 × weaker)</option>
+            </select>
+          </div>
+          <div class="field"><label for="ir-T">Gas temperature T / K</label><output id="ir-T-out" for="ir-T">300</output>
+            <input type="range" id="ir-T" min="100" max="1000" step="10" value="300"></div>
+          <div class="field"><label for="ir-p">HCl pressure / mbar</label><output id="ir-p-out" for="ir-p">100</output>
+            <input type="range" id="ir-p" min="1" max="1000" step="1" value="100"></div>
+          <div class="field"><label for="ir-L">Path length</label>
+            <select id="ir-L">
+              <option value="10" selected>10 cm cell</option>
+              <option value="100">1 m (multi-pass cell)</option>
+              <option value="1000">10 m (multi-pass cell)</option>
+            </select>
+          </div>
+          <div class="row"><label><input type="checkbox" id="ir-iso" checked> include H³⁷Cl (natural chlorine, 24.2 %)</label></div>
+          <div class="row"><label><input type="checkbox" id="ir-D" checked> centrifugal distortion D</label></div>
+          <div class="row"><label><input type="checkbox" id="ir-hw" checked> Herman–Wallis factor (R a little stronger than P)</label></div>
+        </div>
+        <div class="panel">
+          <h2>Spectrometer</h2>
+          <div class="field"><label for="ir-res">Resolution / cm⁻¹</label>
+            <select id="ir-res">
+              <option value="4" selected>4 (like the 1964 NIST chart)</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+              <option value="0.5">0.5</option>
+              <option value="0.25">0.25</option>
+              <option value="0.1">0.1</option>
+            </select>
+          </div>
+          <div class="field"><label for="ir-scans">Scans averaged</label>
+            <select id="ir-scans"><option>1</option><option>4</option><option selected>16</option><option>64</option><option>256</option></select>
+          </div>
+          <div class="field"><label for="ir-lo">View from / cm⁻¹</label><input type="number" id="ir-lo" step="1" value="2650"></div>
+          <div class="field"><label for="ir-hi">View to / cm⁻¹</label><input type="number" id="ir-hi" step="1" value="3080"></div>
+          <div class="row">
+            <button type="button" id="ir-whole">Whole band</button>
+            <button type="button" id="ir-centre">Band centre</button>
+            <button type="button" id="ir-r8">R(7)–R(10)</button>
+          </div>
+          <div class="row"><label><input type="checkbox" id="ir-labels" checked> label H³⁵Cl lines</label><label><input type="checkbox" id="ir-trans"> show transmittance</label></div>
+          <div class="row"><button type="button" id="ir-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono" id="ir-seed"></span>. Computed in <span id="ir-time"></span>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Spectrum</h2>
+          <canvas id="ir-plot" class="plot tall" aria-label="Infrared absorbance spectrum of HCl gas against wavenumber"></canvas>
+          <div id="ir-warn" aria-live="polite"></div>
+          <div class="kv small" id="ir-out" aria-live="polite"></div>
+          <div class="row"><button type="button" id="ir-csv">Spectrum (CSV)</button></div>
+        </div>
+        <div class="panel">
+          <h2>Peaks, assignment and fit</h2>
+          <p class="small">Finds the maxima in the view, assigns each to the nearest predicted line, fits the H³⁵Cl lines to ν̃(m) = ν̃₀ + (B′ + B″)m + (B′ − B″)m² − 4Dm³ and makes a Boltzmann plot of the heights.</p>
+          <div class="row"><button type="button" class="primary" id="ir-fit">Find peaks and fit</button>
+            <label><input type="checkbox" id="ir-misnumber"> number the P branch from the wrong gap (|m| one too large)</label></div>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="ir-peaks"><thead><tr><th>#</th><th>ν̃ / cm⁻¹</th><th>A</th><th>assignment</th><th>m</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="ir-fitout"></div>
+          <div class="cols-2">
+            <canvas id="ir-resid" class="plot short" aria-label="Residuals of the cubic fit against m"></canvas>
+            <canvas id="ir-boltz" class="plot short" aria-label="Boltzmann plot of line heights against lower-level rotational energy"></canvas>
+          </div>
+          <div class="row"><button type="button" id="ir-pcsv">Peaks (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The procedure</summary>
+        <ol>
+          <li>Evacuate the 10 cm cell and record the background: the spectrometer's own response, the windows and water vapour are divided out.</li>
+          <li>Fill with 50–100 mbar of HCl in a fume hood. Low pressure keeps the lines narrow (pressure broadening) and the strong lines below saturation.</li>
+          <li>Choose the resolution: 0.5 cm⁻¹ separates the 2.1 cm⁻¹ isotope doublets; 0.1 cm⁻¹ gives positions to better than 0.01 cm⁻¹. Average 16–64 scans.</li>
+          <li>Ratio to the background and convert to absorbance A = −log₁₀(I/I₀).</li>
+          <li>For the overtone, about 50 times weaker, use a longer path (multi-pass cell) or a higher pressure; then pump out through a base trap.</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>Each line is ν̃(m) = ν̃₀ + (B′ + B″)m + (B′ − B″)m² − 2(D′ + D″)m³ with m = J + 1 (R) or −J (P). The cubic term is the centrifugal distortion: about 3 cm⁻¹ at R(10), many times the line width, so a high-resolution fit needs it.</li>
+          <li>Heights follow |m| ν̃ e<sup>−hcF₀(J″)/k<sub>B</sub>T</sup>; ln[A/(|m|ν̃)] against F₀(J″) is a line of slope −hc/k<sub>B</sub>T. If the numbering were wrong by one J, the plot would split by branch.</li>
+          <li>H³⁷Cl has ω<sub>e</sub> scaled by ρ = 0.999243 and B by ρ²: a free check of the whole analysis.</li>
+          <li>Fundamental and overtone centres give ω<sub>e</sub>x<sub>e</sub> = (2ν̃₀₁ − ν̃₀₂)/2 and ω<sub>e</sub> = ν̃₀₁ + 2ω<sub>e</sub>x<sub>e</sub>.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>HCl gas is H280 (gas under pressure), H314 (severe burns and eye damage) and H331 (toxic if inhaled) (PubChem CID 313). It is handled from a small cylinder on a vacuum line in a fume hood, with goggles and gloves, and pumped out through a base trap, never vented. With a trace of moisture it etches the water-soluble KBr or NaCl windows, so the cell is dried first. This is a lab-only experiment.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Saturation: at high pressure or a long path the strongest lines absorb everything at their centre; the tops go flat and noisy, the lines look broader and the doublets merge even at high resolution. Keep peak absorbance below about 1.</li>
+          <li>Coarse resolution blurs each doublet into one peak and pulls every position towards the ³⁷Cl partner: constants come out about 1 % off, as in lesson 20.3.</li>
+          <li>Numbering from the wrong gap: the fit residuals jump between the branches and the band centre moves by about 2B. Try the check box.</li>
+          <li>Too few scans or too short a path for the overtone: the lines vanish into the noise.</li>
+          <li>A leaky cell lets in air and water; water lines appear between the HCl lines (not modelled here).</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the spectrum or the peak list and analyse it with <span class="mono">labs/module-30/lesson01_hcl.py</span> (or the Module 20 script for the 4 cm⁻¹ case). The fit gives ν̃₀, B″, B′ and D with standard uncertainties from the least-squares covariance; r<sub>e</sub> follows from B<sub>e</sub> = B₀ + α<sub>e</sub>/2 with μ = 0.979593 u. Heights of saturated or blended lines bias the Boltzmann temperature low or high; fitting line areas is better.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== ESR ===================== -->
+  <section id="tab-esr" aria-labelledby="tabbtn-esr" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Sample</h2>
+          <div class="field"><label for="esr-mode">System</label>
+            <select id="esr-mode">
+              <option value="radical">radical in a matrix (first-order hyperfine)</option>
+              <option value="hydrogen">hydrogen atom (exact Breit–Rabi)</option>
+            </select>
+          </div>
+          <div class="field" id="esr-g-row"><label for="esr-g">g factor (free electron 2.00232; CH₃• 2.00255)</label><input type="number" id="esr-g" step="0.00001" min="1" max="6" value="2.00255"></div>
+          <div id="esr-groups">
+            <h3>Magnetic nuclei (equivalent sets)</h3>
+            <div class="nuc-row">
+              <label for="esr-n1">Set 1: number</label><input type="number" id="esr-n1" min="0" max="8" step="1" value="0">
+              <button type="button" id="esr-minus1" aria-label="remove one nucleus from set 1">−</button><button type="button" id="esr-plus1" aria-label="add one nucleus to set 1">+</button>
+              <label for="esr-t1" class="visually-hidden">Set 1 nucleus</label>
+              <select id="esr-t1"><option value="H">¹H (I = ½)</option><option value="D">²H (I = 1)</option><option value="N">¹⁴N (I = 1)</option><option value="C13">¹³C (I = ½)</option></select>
+              <label for="esr-a1">a / mT</label><input type="number" id="esr-a1" step="0.001" min="0" value="2.304">
+            </div>
+            <div class="nuc-row">
+              <label for="esr-n2">Set 2: number</label><input type="number" id="esr-n2" min="0" max="8" step="1" value="0">
+              <button type="button" id="esr-minus2" aria-label="remove one nucleus from set 2">−</button><button type="button" id="esr-plus2" aria-label="add one nucleus to set 2">+</button>
+              <label for="esr-t2" class="visually-hidden">Set 2 nucleus</label>
+              <select id="esr-t2"><option value="H">¹H (I = ½)</option><option value="D">²H (I = 1)</option><option value="N">¹⁴N (I = 1)</option><option value="C13">¹³C (I = ½)</option></select>
+              <label for="esr-a2">a / mT</label><input type="number" id="esr-a2" step="0.001" min="0" value="2.24">
+            </div>
+            <div class="nuc-row">
+              <label for="esr-n3">Set 3: number</label><input type="number" id="esr-n3" min="0" max="8" step="1" value="0">
+              <button type="button" id="esr-minus3" aria-label="remove one nucleus from set 3">−</button><button type="button" id="esr-plus3" aria-label="add one nucleus to set 3">+</button>
+              <label for="esr-t3" class="visually-hidden">Set 3 nucleus</label>
+              <select id="esr-t3"><option value="H">¹H (I = ½)</option><option value="D">²H (I = 1)</option><option value="N" selected>¹⁴N (I = 1)</option><option value="C13">¹³C (I = ½)</option></select>
+              <label for="esr-a3">a / mT</label><input type="number" id="esr-a3" step="0.001" min="0" value="1.5">
+            </div>
+            <p class="small muted">Changing ¹H to ²H keeps the spin density and scales a by g<sub>d</sub>/g<sub>p</sub> = 0.1535. Ethyl radical: 2 H at 2.24 mT and 3 H at 2.69 mT.</p>
+          </div>
+          <div class="field"><label for="esr-w">Line width ΔB<sub>pp</sub> / mT</label><input type="number" id="esr-w" step="0.01" min="0.005" value="0.06"></div>
+          <div class="field"><label for="esr-shape">Line shape</label><select id="esr-shape"><option value="lorentz">Lorentzian (liquid, fast tumbling)</option><option value="gauss">Gaussian (solid, unresolved couplings)</option></select></div>
+        </div>
+        <div class="panel">
+          <h2>Spectrometer</h2>
+          <div class="field"><label for="esr-band">Band</label>
+            <select id="esr-band"><option value="">custom</option><option value="9.45" selected>X band 9.45 GHz</option><option value="9.5">X band 9.5 GHz</option><option value="35">Q band 35 GHz</option></select>
+          </div>
+          <div class="field"><label for="esr-nu">Microwave frequency / GHz</label><input type="number" id="esr-nu" step="0.0001" min="1" max="100" value="9.45"></div>
+          <div class="field"><label for="esr-mod">Modulation amplitude / mT</label><input type="number" id="esr-mod" step="0.005" min="0.001" value="0.01"></div>
+          <div class="field"><label for="esr-P">Microwave power / mW</label><input type="number" id="esr-P" step="0.1" min="0.01" max="200" value="0.5"></div>
+          <div class="field"><label for="esr-scans">Scans averaged</label><select id="esr-scans"><option>1</option><option>4</option><option selected>16</option><option>64</option></select></div>
+          <div class="field"><label for="esr-c">Sweep centre / mT</label><input type="number" id="esr-c" step="0.1" value="337.2"></div>
+          <div class="field"><label for="esr-span">Sweep width / mT</label><input type="number" id="esr-span" step="1" min="0.5" value="12"></div>
+          <div class="row"><button type="button" id="esr-auto">Centre the sweep</button><button type="button" id="esr-rerun">Re-run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono" id="esr-seed"></span>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <h2>Derivative spectrum</h2>
+          <canvas id="esr-plot" class="plot tall" aria-label="First-derivative ESR spectrum against magnetic field"></canvas>
+          <div class="kv small" id="esr-out" aria-live="polite"></div>
+          <div class="row"><button type="button" id="esr-csv">Spectrum (CSV)</button></div>
+        </div>
+        <div class="panel">
+          <h2>Find the lines and fit g and a</h2>
+          <p class="small">Each line centre is the zero crossing between a maximum and the next minimum. A straight line of centre against line index gives a (slope) and B₀ (intercept), so g = hν/(μ<sub>B</sub>B₀).</p>
+          <div class="row"><button type="button" class="primary" id="esr-find">Find lines and fit</button></div>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="esr-lines"><thead><tr><th>#</th><th>B / mT</th><th>peak to peak</th><th>ΔB<sub>pp</sub> / mT</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="kv" id="esr-fitout"></div>
+          <canvas id="esr-fitplot" class="plot short" aria-label="Line centres against line index with the fitted straight line"></canvas>
+          <div class="row"><button type="button" id="esr-lcsv">Lines (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn">
+        <summary>The procedure</summary>
+        <ol>
+          <li>Make the radical where it lives long enough: CH₃• by photolysing CH₃I frozen at 77 K or irradiating cold hydrocarbons; H atoms trapped in irradiated frozen acids or quartz.</li>
+          <li>Tune the cavity to the microwave frequency and set the power low, below saturation.</li>
+          <li>Set the modulation amplitude below about a third of ΔB<sub>pp</sub>.</li>
+          <li>Sweep the field through resonance and record the lock-in signal: the first derivative of the absorption.</li>
+          <li>Calibrate the field with an NMR gaussmeter and the frequency with a counter, or with a standard such as DPPH (g = 2.0036).</li>
+        </ol>
+      </details>
+      <details class="learn">
+        <summary>Why each step is done</summary>
+        <ul>
+          <li>The two spin states differ by only 0.32 cm⁻¹ at 0.34 T, so their populations are almost equal (Boltzmann factor 0.9985 at room temperature): the signal is small and needs field modulation and a lock-in amplifier, which give the derivative.</li>
+          <li>Hyperfine splittings are fixed in field; g differences scale with the frequency. Recording at two bands tells them apart.</li>
+          <li>a measures spin density at the nucleus: the Fermi contact term for s orbitals, spin polarisation and McConnell's a<sub>H</sub> = Qρ (|Q| ≈ 2.3 mT) for π radicals.</li>
+          <li>When a is not small compared with B₀ (the H atom), use the exact Breit–Rabi levels; the second-order shift is −a²[I(I+1) − m<sub>I</sub>²]/2B₀.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Safety reasoning</summary>
+        <p>The bridge emits microwaves: never look into an open waveguide. The electromagnet's field attracts steel tools and affects pacemakers. Liquid nitrogen causes frostbite and can displace oxygen in a small room. Radicals are often made with UV lamps or radiation sources, each under its own rules. ESR is a lab-only technique.</p>
+      </details>
+      <details class="learn">
+        <summary>What can go wrong</summary>
+        <ul>
+          <li>Overmodulation (modulation above about ΔB<sub>pp</sub>/3): more signal at first, then broad, distorted lines whose heights no longer follow 1 : 3 : 3 : 1.</li>
+          <li>Saturation (too much power): the line broadens and the signal falls instead of rising.</li>
+          <li>Reading a centre at a maximum instead of at the zero crossing.</li>
+          <li>Using n + 1 for nuclei with I &gt; ½: deuterium and ¹⁴N need 2nI + 1.</li>
+          <li>Taking the midpoint of the hydrogen doublet as B₀: g comes out 2.0137 instead of 2.0023.</li>
+        </ul>
+      </details>
+      <details class="learn">
+        <summary>Data analysis</summary>
+        <p>Export the spectrum and run <span class="mono">labs/module-30/lesson02_esr.py</span> on it, or use the line finder here. The straight-line fit gives a and B₀ with standard uncertainties; g follows from g = hν/(μ<sub>B</sub>B₀) (CODATA 2022 h and μ<sub>B</sub>). Compare intensities by double integration when the lines have different widths; peak-to-peak heights only work for equal widths.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    Constants: CODATA 2022 (h, c, k<sub>B</sub>, u, μ<sub>B</sub>, μ<sub>N</sub>, g<sub>e</sub>, g<sub>p</sub>, g<sub>d</sub>; NIST). HCl: NIST Chemistry WebBook diatomic constants of H³⁵Cl (ω<sub>e</sub> 2990.9463, ω<sub>e</sub>x<sub>e</sub> 52.8186, ω<sub>e</sub>y<sub>e</sub> 0.22437, B<sub>e</sub> 10.593416, α<sub>e</sub> 0.307181, D<sub>e</sub> 5.3194 × 10⁻⁴ cm⁻¹); H³⁷Cl by isotope scaling with NIST atomic masses; ³⁵Cl abundance 0.7576 (IUPAC). Band strength, broadening and Herman–Wallis coefficients are approximate model values of the right size. Methyl radical g = 2.00255, |a<sub>H</sub>| = 2.304 mT (Fessenden and Schuler 1963); hydrogen hyperfine frequency 1420.405 751 768 MHz; Breit and Rabi (1931).
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="ir-esr-esr.js"></script>
+<script src="ir-esr.js"></script>
+</body>
+</html>

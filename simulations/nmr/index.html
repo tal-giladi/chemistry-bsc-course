@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proton NMR spectrometer</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="nmr.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Proton NMR spectrometer</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="sim-grid">
+    <div>
+      <div class="panel">
+        <h2>Sample</h2>
+        <div class="field"><label for="nmr-mol">Compound</label>
+          <select id="nmr-mol">
+            <optgroup label="Known compounds">
+              <option value="bromoethane">bromoethane (ethyl group)</option>
+              <option value="chloropropane">2-chloropropane (isopropyl group)</option>
+              <option value="nitropropane">1-nitropropane</option>
+              <option value="butanoic">butanoic acid</option>
+              <option value="isobutyric">2-methylpropanoic acid</option>
+              <option value="ab">AB pair (two coupled protons)</option>
+            </optgroup>
+            <optgroup label="Exercise">
+              <option value="unknown">unknown: identify it</option>
+            </optgroup>
+          </select>
+        </div>
+        <p class="small muted">Solvent CDCl₃ with TMS (δ = 0). The residual CHCl₃ gives a small singlet at 7.26 ppm.</p>
+        <div class="row"><label><input type="checkbox" id="nmr-wet"> wet CDCl₃ (water singlet near 1.56 ppm)</label></div>
+      </div>
+      <div class="panel">
+        <h2>Spectrometer</h2>
+        <div class="field"><label for="nmr-field">Proton frequency (field)</label><output id="nmr-field-out" for="nmr-field">60 MHz</output>
+          <input type="range" id="nmr-field" min="0.69897" max="2.95424" step="0.001" value="1.77815"></div>
+        <div class="field"><label for="nmr-lw">Line width / Hz (shimming)</label>
+          <select id="nmr-lw"><option value="0.3">0.3 (excellent)</option><option value="0.8" selected>0.8 (good)</option><option value="2">2 (poor)</option><option value="5">5 (very poor)</option></select>
+        </div>
+        <div class="field"><label for="nmr-scans">Scans averaged</label>
+          <select id="nmr-scans"><option>1</option><option>4</option><option selected>16</option><option>64</option><option>256</option></select>
+        </div>
+        <div class="field"><label for="nmr-lo">View from / ppm</label><input type="number" id="nmr-lo" step="0.05" value="-0.5"></div>
+        <div class="field"><label for="nmr-hi">View to / ppm</label><input type="number" id="nmr-hi" step="0.05" value="5"></div>
+        <div class="row"><button type="button" id="nmr-full">Full spectrum</button><button type="button" id="nmr-zoom">Zoom to next signal</button></div>
+        <div class="row"><label><input type="checkbox" id="nmr-int" checked> integral curve</label><label><input type="checkbox" id="nmr-fo"> n+1 sticks</label></div>
+        <div class="row"><button type="button" id="nmr-rerun">Re-run (new seed)</button></div>
+        <p class="small muted">Seed: <span class="mono" id="nmr-seed"></span>.</p>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <h2>Spectrum</h2>
+        <canvas id="nmr-plot" class="plot tall" aria-label="Proton NMR spectrum, chemical shift decreasing to the right. Click two points to measure a spacing."></canvas>
+        <p class="small" id="nmr-measure" aria-live="polite"></p>
+        <div class="row"><button type="button" id="nmr-clear">Clear markers</button><button type="button" id="nmr-csv">Spectrum (CSV)</button></div>
+        <div class="kv small" id="nmr-out" aria-live="polite"></div>
+      </div>
+      <div class="panel" id="nmr-unknown" hidden>
+        <h2>Unknown</h2>
+        <p>Formula: <strong id="nmr-u-formula"></strong></p>
+        <p class="small">Read every signal first. Then choose:</p>
+        <fieldset class="cands"><legend class="visually-hidden">Candidate structures</legend><div id="nmr-u-cands"></div></fieldset>
+        <div class="row"><button type="button" class="primary" id="nmr-u-check">Check my answer</button><button type="button" id="nmr-u-show">Show the answer</button><button type="button" id="nmr-u-new">New unknown</button></div>
+        <div id="nmr-u-result" aria-live="polite"></div>
+        <div id="nmr-u-assign" hidden>
+          <h3>Assignment</h3>
+          <div class="table-wrap"><table class="data" id="nmr-u-table"><thead><tr><th>δ / ppm</th><th>integral</th><th>multiplicity</th><th>J / Hz</th><th>assignment</th></tr></thead><tbody></tbody></table></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Peaks and integrals</h2>
+        <div class="row"><button type="button" class="primary" id="nmr-find">Find peaks and integrals</button></div>
+        <div class="cols-2">
+          <div class="table-wrap scroll-y">
+            <table class="data" id="nmr-peaks"><thead><tr><th>#</th><th>δ / ppm</th><th>ν / Hz</th><th>Δ to previous / Hz</th><th>height</th></tr></thead><tbody></tbody></table>
+          </div>
+          <div class="table-wrap scroll-y">
+            <table class="data" id="nmr-ints"><thead><tr><th>#</th><th>region / ppm</th><th>relative integral</th><th>note</th></tr></thead><tbody></tbody></table>
+          </div>
+        </div>
+        <p class="small muted">Integrals are relative (smallest sample signal = 1). Scale them to the molecular formula yourself.</p>
+        <div class="log" id="nmr-log" aria-live="polite"></div>
+        <div class="row"><button type="button" id="nmr-pcsv">Peaks (CSV)</button><button type="button" id="nmr-icsv">Integrals (CSV)</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel soft">
+    <h2>How to use this, and why</h2>
+    <details class="learn">
+      <summary>The procedure</summary>
+      <ol>
+        <li>Dissolve 5–20 mg of sample in about 0.6 mL of deuterated solvent (CDCl₃) with a little TMS, filter it into a clean 5 mm tube to a depth of about 4 cm.</li>
+        <li>Insert the tube, lock on the deuterium signal of the solvent and shim the field until the lines are narrow.</li>
+        <li>Pulse, record the free induction decay, average scans and Fourier-transform it into the spectrum (lesson 14.5).</li>
+        <li>Reference TMS to 0 ppm, phase and integrate.</li>
+        <li>Read every signal: shift δ, integral, multiplicity and J; then assign.</li>
+      </ol>
+    </details>
+    <details class="learn">
+      <summary>Why each step is done</summary>
+      <ul>
+        <li>Deuterated solvent: its own protons would swamp the sample's; the deuterium signal keeps the field locked.</li>
+        <li>δ = (ν − ν<sub>TMS</sub>)/ν<sub>spectrometer</sub> × 10⁶ is the same on every instrument; J in Hz is the same at every field, so multiplets get narrower in ppm as the field rises.</li>
+        <li>Shimming makes the field the same across the sample: poor shimming broadens every line and hides small couplings.</li>
+        <li>More scans improve the signal-to-noise ratio as √N, which matters for the small outer lines of a septet.</li>
+        <li>n equivalent neighbours give n+1 lines with Pascal heights only when Δν/J is above about 10; below that the exact spin Hamiltonian, which this simulation solves, gives roofing and extra lines.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Safety reasoning</summary>
+      <p>The magnet is always on: steel tools, gas cylinders and chairs can fly into it, and the stray field affects pacemakers and erases cards, so there is a 5-gauss line nobody with an implant crosses. A quench boils off liquid helium, which can displace oxygen in the room. CDCl₃ is harmful if swallowed or inhaled and is a suspected carcinogen (chloroform): prepare samples in a fume hood with gloves. NMR tubes are thin glass and cut hands when they break.</p>
+    </details>
+    <details class="learn">
+      <summary>What can go wrong</summary>
+      <ul>
+        <li>Counting the protons of the signal itself in n+1: a CH₂ next to a CH₃ is a quartet.</li>
+        <li>Reading integrals as absolute numbers: they are ratios; scale them to the formula.</li>
+        <li>Taking the CHCl₃ peak at 7.26 for an aromatic proton, or the water peak at 1.56 for an alkyl group.</li>
+        <li>Missing the outer lines of a septet in the noise and calling it a quintet.</li>
+        <li>Treating a second-order multiplet as first order: if the lines lean towards a partner and the count is wrong, compare Δν with J.</li>
+        <li>Expecting OH and NH protons to split their neighbours: they exchange, so they are broad and unsplit.</li>
+      </ul>
+    </details>
+    <details class="learn">
+      <summary>Data analysis</summary>
+      <p>Export the peak list and take differences in Hz between neighbouring lines of a multiplet: their mean is J, and the scatter (with the digital resolution, about a quarter of the line width) is its uncertainty. Partners share J within that uncertainty. Export the integrals, divide by the smallest and scale to the formula from lesson 17.1; integrals carry a few per cent of error from noise and baseline, so round to whole protons only when the formula agrees. The spectrum CSV can be read with <span class="mono">labs/module-17/lesson03_nmr1h.py</span>-style code.</p>
+    </details>
+  </div>
+
+  <footer class="sim-footer">
+    Exact spin-Hamiltonian calculation (product basis, block diagonalisation by total M<sub>z</sub>, Jacobi eigenvalues). γ/2π(¹H) = 42.577 MHz T⁻¹ (CODATA 2022). Shifts and couplings are rounded typical values (OpenStax Organic Chemistry ch. 13; H. Reich's NMR tables) chosen to match lessons 17.3 and 17.5, not copied from SDBS; residual CHCl₃ 7.26 ppm and water 1.56 ppm in CDCl₃ (Fulmer et al. 2010).
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="nmr-engine.js"></script>
+<script src="nmr.js"></script>
+</body>
+</html>

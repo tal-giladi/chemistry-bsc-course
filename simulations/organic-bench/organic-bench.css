@@ -1,0 +1,19 @@
+/* organic-bench: page-specific styles (shared ones are in ../common/sim.css) */
+[hidden] { display: none !important; }
+.subtabs button { font-size: 0.86rem; }
+.tall-log { max-height: 240px; }
+.log .good { color: var(--good); }
+.log .warn { color: var(--warn); }
+.log .bad { color: var(--bad); }
+.log .muted { color: var(--muted); }
+canvas.tlc { width: 100%; max-width: 340px; height: 260px; display: block; border-radius: 6px; }
+canvas.funnel { width: 150px; height: 230px; flex: 0 0 150px; }
+.funnel-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; }
+.funnel-row .kv { flex: 1 1 200px; }
+ol.steps { padding-left: 1.4em; margin: 8px 0; font-size: 0.88rem; }
+ol.steps li { margin: 2px 0; color: var(--muted); }
+ol.steps li.done { color: var(--ink); }
+ol.steps li.current { color: var(--accent); font-weight: 600; }
+.step-card { border-left: 4px solid var(--accent); }
+table.cards td { white-space: normal; text-align: left; vertical-align: top; }
+#s-tlc-table td, #s-nmr-table td, #s-ir-table td { white-space: normal; }

@@ -1,0 +1,5 @@
+/* ir-esr: page-specific styles (shared ones are in ../common/sim.css) */
+[hidden] { display: none !important; }
+.nuc-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin: 6px 0; padding: 4px 0; border-bottom: 1px dashed var(--line); }
+.nuc-row input[type="number"] { width: 5.2em; }
+.nuc-row button { min-width: 2.2em; padding-left: 6px; padding-right: 6px; }

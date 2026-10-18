@@ -66,7 +66,7 @@
  *
  * Plotting (canvas, HiDPI, theme-aware, redraws on resize and theme change)
  *   const p = Sim.plot(canvas, {xLabel, yLabel, xMin, xMax, yMin, yMax, logY, logX, legend:true,
- *                                 pad:{l,r,t,b}})
+ *                                 pad:{l,r,t,b}, xReverse})   xReverse: x grows to the left (NMR ppm, IR cm-1)
  *   p.draw(series[], overrides?)   series: {data:[[x,y],...], type:'line'|'points'|'bars'|'step'|'area',
  *                                  color:'s1'..'s6' or CSS colour, width, dash:[..], size, label,
  *                                  err:[u,...] (y error bars), hidden}
@@ -588,9 +588,10 @@
       var fy = cfg.logY ? function (v) { return Math.log10(v); } : function (v) { return v; };
       var X0 = fx(x0), X1 = fx(x1), Y0 = fy(y0), Y1 = fy(y1);
       var pw = Math.max(10, W - L - Rr), ph = Math.max(10, H - T - B);
-      function px(x) { return L + (fx(x) - X0) / (X1 - X0) * pw; }
+      var rev = !!cfg.xReverse;
+      function px(x) { var f = (fx(x) - X0) / (X1 - X0); return L + (rev ? 1 - f : f) * pw; }
       function py(y) { return T + ph - (fy(y) - Y0) / (Y1 - Y0) * ph; }
-      map = { px: px, py: py, L: L, T: T, pw: pw, ph: ph, X0: X0, X1: X1, Y0: Y0, Y1: Y1, logX: cfg.logX, logY: cfg.logY };
+      map = { px: px, py: py, L: L, T: T, pw: pw, ph: ph, X0: X0, X1: X1, Y0: Y0, Y1: Y1, logX: cfg.logX, logY: cfg.logY, rev: rev };
 
       // grid and ticks
       ctx.font = "11px " + (getComputedStyle(document.body).fontFamily || "sans-serif");
@@ -764,7 +765,9 @@
       toPx: function (x, y) { return map ? [map.px(x), map.py(y)] : [0, 0]; },
       fromPx: function (X, Y) {
         if (!map) return [0, 0];
-        var xv = map.X0 + (X - map.L) / map.pw * (map.X1 - map.X0);
+        var fxp = (X - map.L) / map.pw;
+        if (map.rev) fxp = 1 - fxp;
+        var xv = map.X0 + fxp * (map.X1 - map.X0);
         var yv = map.Y0 + (map.T + map.ph - Y) / map.ph * (map.Y1 - map.Y0);
         return [map.logX ? Math.pow(10, xv) : xv, map.logY ? Math.pow(10, yv) : yv];
       }

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organic synthesis bench</title>
+<link rel="stylesheet" href="../common/sim.css">
+<link rel="stylesheet" href="organic-bench.css">
+</head>
+<body>
+<div class="sim-wrap">
+  <header class="sim-header">
+    <h1>Organic synthesis bench</h1>
+    <span data-sim-label></span>
+  </header>
+
+  <section id="preset"></section>
+
+  <div class="tabs" id="tabs">
+    <button type="button" data-tab="tech" aria-controls="tab-tech" id="tabbtn-tech">Techniques</button>
+    <button type="button" data-tab="synth" aria-controls="tab-synth" id="tabbtn-synth">Syntheses</button>
+  </div>
+
+  <!-- ===================== TECHNIQUES ===================== -->
+  <section id="tab-tech" aria-labelledby="tabbtn-tech">
+    <div class="tabs subtabs" id="tech-tabs">
+      <button type="button" data-tab="t-reflux" aria-controls="pane-reflux" id="tb-reflux">Reflux</button>
+      <button type="button" data-tab="t-extract" aria-controls="pane-extract" id="tb-extract">Extraction and drying</button>
+      <button type="button" data-tab="t-recryst" aria-controls="pane-recryst" id="tb-recryst">Recrystallisation</button>
+      <button type="button" data-tab="t-distil" aria-controls="pane-distil" id="tb-distil">Distillation</button>
+      <button type="button" data-tab="t-tlc" aria-controls="pane-tlc" id="tb-tlc">TLC</button>
+      <button type="button" data-tab="t-mp" aria-controls="pane-mp" id="tb-mp">Melting point</button>
+    </div>
+
+    <div id="pane-reflux" class="sim-grid" aria-labelledby="tb-reflux">
+      <div class="panel">
+        <h2>Assemble a reflux</h2>
+        <p class="small">A reaction in 50 mL of ethanol (bp 78 °C) in a round-bottomed flask with a vertical condenser.</p>
+        <div class="field"><label for="t-rf-stir">Boiling aid (before heating)</label><select id="t-rf-stir"><option value="bar">stirrer bar, stirring</option><option value="chips">two boiling chips</option><option value="none">none</option></select></div>
+        <div class="field"><label for="t-rf-water">Condenser water</label><select id="t-rf-water"><option value="bottom">in at the bottom, out at the top</option><option value="top">in at the top, out at the bottom</option><option value="none">not connected</option></select></div>
+        <div class="field"><label for="t-rf-top">Top of the condenser</label><select id="t-rf-top"><option value="open">open (or a drying tube)</option><option value="stopper">closed with a stopper</option></select></div>
+        <div class="field"><label for="t-rf-heat">Heat source</label><select id="t-rf-heat"><option value="mantle">heating mantle</option><option value="flame">Bunsen burner</option></select></div>
+        <div class="field"><label for="t-rf-level">Heat setting</label><select id="t-rf-level"><option value="gentle">gentle: reflux ring in the lower third</option><option value="high">high: ring climbs to the top</option><option value="low">too low: no boiling</option></select></div>
+        <div class="row"><button type="button" class="primary" id="t-rf-go">Heat for 60 min</button></div>
+      </div>
+      <div class="panel">
+        <h2>What happens</h2>
+        <div class="kv" id="t-rf-out" aria-live="polite"></div>
+        <div class="log tall-log" id="t-rf-log" aria-live="polite"></div>
+        <p class="small muted">Watch MIT's Digital Lab Techniques Manual, Video 17: Refluxing a Reaction.</p>
+      </div>
+    </div>
+
+    <div id="pane-extract" class="sim-grid" aria-labelledby="tb-extract" hidden>
+      <div class="panel">
+        <h2>Separatory funnel</h2>
+        <p class="small">1.00 g benzoic acid (pKa 4.20) and 1.00 g benzophenone (neutral) in 50 mL diethyl ether. Goal: pure, dry benzophenone, and the acid recovered.</p>
+        <div class="field"><label for="t-ex-reagent">Wash with</label><select id="t-ex-reagent"><option value="water">water</option><option value="bicarb">saturated NaHCO₃ (pH 8.3)</option><option value="naoh">1 M NaOH (pH 13)</option><option value="brine">brine (saturated NaCl)</option></select></div>
+        <div class="field"><label for="t-ex-vol">Volume / mL</label><input type="number" id="t-ex-vol" min="1" max="100" step="1" value="15"></div>
+        <div class="field"><label for="t-ex-shake">Shaking</label><select id="t-ex-shake"><option value="gentle">gentle inversions</option><option value="vigorous">vigorous, 1 min</option></select></div>
+        <div class="row"><label><input type="checkbox" id="t-ex-vent" checked> vent after the first inversion and often</label></div>
+        <div class="field"><label for="t-ex-keep">Your ether (product) layer is</label><select id="t-ex-keep"><option value="top">the top layer</option><option value="bottom">the bottom layer</option></select></div>
+        <div class="row"><button type="button" class="primary" id="t-ex-wash">Wash</button><button type="button" id="t-ex-drop">Drop test</button><button type="button" id="t-ex-wait">Wait 10 min</button><button type="button" id="t-ex-brine">Add 5 mL brine</button></div>
+        <div class="field"><label for="t-ex-agent">Drying agent</label><select id="t-ex-agent"><option value="MgSO4">anhydrous MgSO₄ (fast, fine powder)</option><option value="Na2SO4">anhydrous Na₂SO₄ (slower, granular)</option></select></div>
+        <div class="row"><button type="button" id="t-ex-dry">Add one spatula (0.5 g)</button><button type="button" id="t-ex-evap">Filter and evaporate</button></div>
+        <div class="row"><button type="button" id="t-ex-acid">Acidify the aqueous extracts and extract</button><button type="button" id="t-ex-reset">Start again</button></div>
+      </div>
+      <div class="panel">
+        <h2>Funnel and contents</h2>
+        <div class="funnel-row">
+          <canvas id="t-ex-funnel" class="funnel" aria-label="Separatory funnel with the ether layer on top and the aqueous layer below"></canvas>
+          <div class="kv small" id="t-ex-state" aria-live="polite"></div>
+        </div>
+        <p class="small">Densities: diethyl ether 0.71, ethyl acetate 0.90, water 1.00, brine 1.2, dichloromethane 1.33 g/mL.</p>
+        <div class="log tall-log" id="t-ex-log" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div id="pane-recryst" class="sim-grid" aria-labelledby="tb-recryst" hidden>
+      <div class="panel">
+        <h2>Recrystallise crude acetanilide</h2>
+        <p class="small">2.00 g of acetanilide (mp 114.3 °C) with 0.15 g of a coloured, soluble impurity and a little insoluble dust.</p>
+        <div class="table-wrap"><table class="data"><thead><tr><th>solvent</th><th>bp / °C</th><th>hot / g mL⁻¹</th><th>cold / g mL⁻¹</th></tr></thead>
+          <tbody><tr><td>water</td><td>100</td><td>0.050</td><td>0.0054</td></tr><tr><td>ethanol</td><td>78</td><td>≈ 1</td><td>≈ 0.29</td></tr><tr><td>hexane</td><td>69</td><td>≈ 0.003</td><td>≈ 0.0005</td></tr><tr><td>xylenes</td><td>≈ 140</td><td>≈ 0.25</td><td>≈ 0.02</td></tr></tbody></table></div>
+        <p class="small muted">Water: PubChem (1 g in 185 mL cold, 20 mL boiling). Others approximate.</p>
+        <div class="field"><label for="t-rc-solvent">Solvent</label><select id="t-rc-solvent"><option value="water">water</option><option value="ethanol">ethanol</option><option value="hexane">hexane</option><option value="xylene">xylenes</option></select></div>
+        <div class="field"><label for="t-rc-vol">Boiling solvent / mL</label><input type="number" id="t-rc-vol" min="1" max="500" step="1" value="44"></div>
+        <div class="row"><label><input type="checkbox" id="t-rc-hot" checked> hot gravity filtration</label></div>
+        <div class="field"><label for="t-rc-cool">Cooling</label><select id="t-rc-cool"><option value="slow">slowly to room temperature, then ice</option><option value="ice">straight into ice</option><option value="rt">room temperature only</option></select></div>
+        <div class="field"><label for="t-rc-wash">Wash on the Büchner funnel</label><select id="t-rc-wash"><option value="ice">2 × 3 mL ice-cold solvent</option><option value="warm">2 × 3 mL warm solvent</option><option value="none">no wash</option></select></div>
+        <div class="field"><label for="t-rc-dry">Before weighing</label><select id="t-rc-dry"><option value="dry">dry to constant mass</option><option value="wet">weigh wet</option></select></div>
+        <div class="row"><button type="button" class="primary" id="t-rc-go">Recrystallise</button></div>
+      </div>
+      <div class="panel">
+        <h2>Result</h2>
+        <div class="kv" id="t-rc-out" aria-live="polite"></div>
+        <div class="log" id="t-rc-log" aria-live="polite"></div>
+        <div class="table-wrap scroll-y"><table class="data" id="t-rc-runs"><thead><tr><th>#</th><th>solvent</th><th>mL</th><th>hot filt.</th><th>cooling</th><th>wash</th><th>dried</th><th>mass / g</th><th>recovery / %</th><th>mp / °C</th><th>appearance</th></tr></thead><tbody></tbody></table></div>
+        <div class="row"><button type="button" id="t-rc-csv">Runs (CSV)</button></div>
+      </div>
+    </div>
+
+    <div id="pane-distil" class="sim-grid" aria-labelledby="tb-distil" hidden>
+      <div class="panel">
+        <h2>Distil cyclohexane and toluene</h2>
+        <p class="small">50 mL of an equimolar mixture: cyclohexane bp 80.7 °C, toluene bp 110.6 °C, only 30 °C apart.</p>
+        <div class="field"><label for="t-ds-app">Apparatus</label><select id="t-ds-app"><option value="simple">simple distillation</option><option value="vigreux">Vigreux column (about 3 theoretical plates)</option><option value="packed">packed column (about 6 plates)</option></select></div>
+        <div class="field"><label for="t-ds-rate">Heating</label><select id="t-ds-rate"><option value="slow">slow: about 1 drop per second</option><option value="fast">fast</option></select></div>
+        <div class="field"><label for="t-ds-therm">Thermometer bulb</label><select id="t-ds-therm"><option value="level">level with the side arm</option><option value="high">above the side arm</option><option value="low">low, near the flask</option></select></div>
+        <div class="row"><button type="button" class="primary" id="t-ds-frac">Collect the next 5 mL</button><button type="button" id="t-ds-dry">Keep going to dryness</button><button type="button" id="t-ds-reset">New distillation</button></div>
+        <div class="log" id="t-ds-log" aria-live="polite"></div>
+      </div>
+      <div class="panel">
+        <h2>Head temperature and distillate</h2>
+        <canvas id="t-ds-plot" class="plot" aria-label="Head temperature and distillate composition against volume collected"></canvas>
+        <div class="table-wrap scroll-y"><table class="data" id="t-ds-table"><thead><tr><th>fraction</th><th>volume / mL</th><th>head T / °C</th><th>% cyclohexane (mol, GC)</th></tr></thead><tbody></tbody></table></div>
+        <div class="row"><button type="button" id="t-ds-csv">Fractions (CSV)</button></div>
+      </div>
+    </div>
+
+    <div id="pane-tlc" class="sim-grid" aria-labelledby="tb-tlc" hidden>
+      <div class="panel">
+        <h2>Follow the oxidation of benzoin to benzil</h2>
+        <p class="small">Silica plate with fluorescent indicator, UV 254 nm. Lanes: starting material (SM), co-spot (co), reaction mixture (RM).</p>
+        <div class="field"><label for="t-tlc-time">Reaction time</label><select id="t-tlc-time"><option value="0">0 min</option><option value="15">15 min</option><option value="30" selected>30 min</option><option value="60">60 min</option><option value="120">120 min</option></select></div>
+        <div class="field"><label for="t-tlc-eluent">Eluent</label><select id="t-tlc-eluent"><option value="0">100 % hexane</option><option value="0.1">10 % ethyl acetate in hexane</option><option value="0.2" selected>20 % ethyl acetate in hexane</option><option value="0.5">50 % ethyl acetate in hexane</option><option value="1">100 % ethyl acetate</option></select></div>
+        <div class="field"><label for="t-tlc-spot">Spotting</label><select id="t-tlc-spot"><option value="small">small spots, dried between applications</option><option value="big">one big, concentrated blob</option></select></div>
+        <div class="row"><label><input type="checkbox" id="t-tlc-front" checked> mark the solvent front at once</label></div>
+        <div class="row"><button type="button" class="primary" id="t-tlc-run">Run the plate</button></div>
+        <p class="small" id="t-tlc-note" aria-live="polite"></p>
+      </div>
+      <div class="panel">
+        <h2>Plate</h2>
+        <canvas id="t-tlc-canvas" class="tlc" aria-label="TLC plate with three lanes"></canvas>
+        <div class="table-wrap"><table class="data" id="t-tlc-table"><thead><tr><th>lane</th><th>distance / mm</th><th>Rf</th><th>note</th></tr></thead><tbody></tbody></table></div>
+        <div class="row"><button type="button" id="t-tlc-csv">Spots (CSV)</button></div>
+      </div>
+    </div>
+
+    <div id="pane-mp" class="sim-grid" aria-labelledby="tb-mp" hidden>
+      <div class="panel">
+        <h2>Melting point apparatus</h2>
+        <p class="small">Benzoic acid melts at 122.4 °C (Δ<sub>fus</sub>H = 18.0 kJ/mol, NIST). Report a range: first liquid to clear melt.</p>
+        <div class="field"><label for="t-mp-sample">Sample</label><select id="t-mp-sample">
+          <option value="pure">pure benzoic acid</option><option value="impure">benzoic acid with 5 mol% impurity</option><option value="wet">benzoic acid, not dried</option>
+          <option value="x">white solid X</option><option value="mixx">X mixed 1 : 1 with authentic benzoic acid</option><option value="mixsame">your benzoic acid mixed 1 : 1 with authentic benzoic acid</option></select></div>
+        <div class="field"><label for="t-mp-rate">Heating rate near the melt / °C min⁻¹</label><select id="t-mp-rate"><option>1</option><option selected>2</option><option>5</option><option>10</option></select></div>
+        <div class="field"><label for="t-mp-pack">Capillary</label><select id="t-mp-pack"><option value="good">2–3 mm, finely ground, packed</option><option value="loose">10 mm, loosely packed</option></select></div>
+        <div class="row"><button type="button" class="primary" id="t-mp-go">Measure</button></div>
+        <p class="small" id="t-mp-note" aria-live="polite"></p>
+      </div>
+      <div class="panel">
+        <h2>Readings</h2>
+        <div class="table-wrap scroll-y"><table class="data" id="t-mp-table"><thead><tr><th>#</th><th>sample</th><th>°C/min</th><th>capillary</th><th>range / °C</th><th>width</th></tr></thead><tbody></tbody></table></div>
+        <div class="row"><button type="button" id="t-mp-csv">Readings (CSV)</button></div>
+      </div>
+    </div>
+
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn"><summary>The procedures</summary>
+        <ul>
+          <li><strong>Reflux:</strong> stirrer or chips first, condenser water in at the bottom, top open, mantle or bath, ring in the lower third.</li>
+          <li><strong>Extraction:</strong> identify layers by density and the drop test, vent often, keep every layer; NaHCO₃ pulls carboxylic acids into water (D falls about tenfold per pH unit above the pKa); several small portions beat one large one; brine, then a drying agent until free-flowing.</li>
+          <li><strong>Recrystallisation:</strong> minimum boiling solvent, hot filtration if needed, slow cooling, ice-cold wash, dry to constant mass. Best recovery (m − s<sub>cold</sub>V)/m.</li>
+          <li><strong>Distillation:</strong> each boil–condense cycle is one theoretical plate; close boilers need a column and slow heating; bulb level with the side arm; never to dryness.</li>
+          <li><strong>TLC:</strong> pencil start line, small spots, closed chamber, co-spot lane, mark the front at once, Rf = spot/front.</li>
+          <li><strong>Melting point:</strong> 2–3 mm of dry, fine solid, fast to 15 °C below, then 1–2 °C/min; mixed melting point for identity.</li>
+        </ul>
+      </details>
+      <details class="learn"><summary>Why each step is done</summary>
+        <ul>
+          <li>Reflux holds a reaction at a fixed, reproducible temperature for hours without losing solvent; with E<sub>a</sub> = 80 kJ/mol the rate rises about 150-fold from 25 to 80 °C.</li>
+          <li>The pH switches benzoic acid between layers: at pH 3 D ≈ 70, at pH 8.3 D ≈ 0.006.</li>
+          <li>Slow crystal growth excludes impurities; a solvent that boils above the compound's melting point makes it oil out.</li>
+          <li>Raoult's law makes the vapour richer in the more volatile liquid, but one stage takes 50 % cyclohexane only to about 71 %.</li>
+          <li>Polar compounds stick to polar silica (low Rf); a more polar eluent moves everything up.</li>
+          <li>An impurity that dissolves in the melt lowers and broadens the melting range (ΔT ≈ RT<sub>m</sub>²x/Δ<sub>fus</sub>H).</li>
+        </ul>
+      </details>
+      <details class="learn"><summary>Safety reasoning</summary>
+        <p>Diethyl ether is extremely flammable (H224) and its heavy vapour creeps to hot plates: no flames, work in the hood. Closed systems under heat or CO₂ build pressure: vent the funnel, keep the reflux open. Superheated liquids bump: chips or stirring before heating, never into a hot liquid. Distilling to dryness overheats residues and concentrates peroxides. Concentrated acids and bases burn (H314). None of this can be done at home; the home activities in Module 24 use only kitchen materials.</p>
+      </details>
+      <details class="learn"><summary>What can go wrong</summary>
+        <ul>
+          <li>Bumping, solvent boiling out of the condenser, a stopper blown out of a funnel.</li>
+          <li>Throwing away the layer that holds the product; an emulsion from vigorous shaking with base (fix: wait, swirl, brine).</li>
+          <li>A wet product from stopping the drying agent while it still clumps.</li>
+          <li>Too much recrystallisation solvent (low recovery), crash cooling (impure), oiling out.</li>
+          <li>A simple distillation for liquids 30 °C apart; a thermometer in the wrong place.</li>
+          <li>Overloaded TLC spots that streak; a front that was never marked; heating a melting point too fast.</li>
+        </ul>
+      </details>
+      <details class="learn"><summary>Data analysis</summary>
+        <p>Export the runs and readings as CSV. Compare recoveries with the solubility limit (labs/module-24/lesson02_purification.py), the distillation fractions with the Fenske estimate N<sub>min</sub> = ln[(x<sub>D</sub>/(1 − x<sub>D</sub>))((1 − x<sub>B</sub>)/x<sub>B</sub>)]/ln α (α ≈ 2.42), and the melting points with the ideal depression (lesson03_purity.py). Rf values repeat within about ±0.02 on one plate; compare only on the same plate, with a co-spot. Thermometer readings carry about ±0.5 °C, and a heating rate of 10 °C/min adds a lag of several degrees.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== SYNTHESES ===================== -->
+  <section id="tab-synth" aria-labelledby="tabbtn-synth" hidden>
+    <div class="sim-grid">
+      <div>
+        <div class="panel">
+          <h2>Synthesis</h2>
+          <div class="field"><label for="s-pick">Choose</label>
+            <select id="s-pick">
+              <option value="aspirin">aspirin (24.4)</option>
+              <option value="sn2">SN2: 1-bromobutane (24.5)</option>
+              <option value="grignard">Grignard: triphenylmethanol (24.5)</option>
+              <option value="aldol">aldol: dibenzalacetone (24.5)</option>
+              <option value="multistep">multi-step: benzoin → benzil → benzilic acid (24.6)</option>
+            </select>
+          </div>
+          <p class="small" id="s-intro"></p>
+          <ol class="steps" id="s-steps"></ol>
+          <div class="row"><button type="button" id="s-restart">New run (new seed)</button></div>
+          <p class="small muted">Seed: <span class="mono" id="s-seed"></span>.</p>
+        </div>
+        <div class="panel">
+          <h2>Reagent cards</h2>
+          <div class="table-wrap"><table class="data cards"><thead><tr><th>reagent</th><th>amount</th><th>hazards (GHS)</th></tr></thead><tbody id="s-cards"></tbody></table></div>
+        </div>
+      </div>
+      <div>
+        <div class="panel step-card">
+          <h2 id="s-step-title"></h2>
+          <p class="small" id="s-step-why"></p>
+          <div id="s-controls"></div>
+          <div class="row"><button type="button" class="primary" id="s-go">Do this step</button><button type="button" id="s-check">Check the product now</button></div>
+          <div class="log tall-log" id="s-log" aria-live="polite"></div>
+          <div class="kv small" id="s-state"></div>
+          <div class="row"><button type="button" id="s-log-csv">Run log (CSV)</button></div>
+        </div>
+        <div class="panel" id="s-analysis" hidden>
+          <h2>Product check</h2>
+          <div class="kv" id="s-res" aria-live="polite"></div>
+          <p class="small" id="s-overall"></p>
+          <div class="field"><label for="s-rate">Melting point heating rate / °C min⁻¹</label><select id="s-rate"><option>2</option><option>10</option></select></div>
+          <h3>TLC</h3>
+          <div class="cols-2">
+            <div>
+              <canvas id="s-tlc" class="tlc" aria-label="TLC plate of starting material, co-spot and product"></canvas>
+            </div>
+            <div>
+              <div class="field"><label for="s-eluent">Eluent</label><select id="s-eluent"><option value="0">hexane</option><option value="0.1">10 % EtOAc in hexane</option><option value="0.2" selected>20 % EtOAc in hexane</option><option value="0.5">50 % EtOAc in hexane</option></select></div>
+              <div class="field"><label for="s-viz">Visualise</label><select id="s-viz"><option value="uv">UV 254 nm</option><option value="iodine">iodine stain</option></select></div>
+              <div class="table-wrap"><table class="data" id="s-tlc-table"><thead><tr><th>lane</th><th>mm</th><th>Rf</th><th></th></tr></thead><tbody></tbody></table></div>
+            </div>
+          </div>
+          <h3>IR: key bands</h3>
+          <canvas id="s-ir" class="plot short" aria-label="Sketch of the IR spectrum drawn from the key bands"></canvas>
+          <div class="table-wrap"><table class="data" id="s-ir-table"><thead><tr><th>band / cm⁻¹</th><th>strength</th><th>assignment</th></tr></thead><tbody></tbody></table></div>
+          <h3>¹H NMR: key peaks</h3>
+          <canvas id="s-nmr" class="plot short" aria-label="Sketch of the proton NMR spectrum drawn from the key peaks"></canvas>
+          <div class="table-wrap"><table class="data" id="s-nmr-table"><thead><tr><th>δ / ppm</th><th>mult.</th><th>J / Hz</th><th>integral</th><th>assignment</th></tr></thead><tbody></tbody></table></div>
+          <p class="small muted" id="s-nmr-solvent"></p>
+          <p class="small muted">The sketches are drawn from typical literature band positions and shifts, not copied from a database. Compare them with the real spectra in the NIST WebBook and SDBS as the lesson asks.</p>
+          <div class="row"><button type="button" class="primary" id="s-save">Save this check to the runs table</button></div>
+        </div>
+        <div class="panel">
+          <h2>Runs</h2>
+          <div class="table-wrap scroll-y"><table class="data" id="s-runs"><thead><tr><th>#</th><th>synthesis</th><th>stage</th><th>mass / g</th><th>yield / %</th><th>mp or bp</th><th>tests</th><th>verdict</th></tr></thead><tbody></tbody></table></div>
+          <div class="row"><button type="button" id="s-runs-csv">Runs (CSV)</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel soft">
+      <h2>How to use this, and why</h2>
+      <details class="learn"><summary>The procedure</summary>
+        <p>Read the introduction and the reagent cards, and write the amounts and hazards in your notebook. Then take the steps in order: each offers the choices a student makes at the bench. 'Check the product now' gives the mass and yield, the melting range, chemical tests, a TLC with a co-spot of the starting material, and the IR and ¹H NMR key peaks of what you actually have (product plus whatever came with it). Save each check to the runs table, then repeat with deliberate mistakes.</p>
+      </details>
+      <details class="learn"><summary>Why each step is done</summary>
+        <ul>
+          <li>Excess of the cheap reagent pushes the reaction to completion; the limiting reagent sets the theoretical yield.</li>
+          <li>Quenching, washing and drying each remove one kind of impurity: excess reagent, acids or salts, water.</li>
+          <li>Recrystallisation trades yield for purity; only a pure, dry product gives an honest yield.</li>
+          <li>FeCl₃ answers "is the phenol gone?", the melting point "is it pure and dry?", IR and NMR "did the right bond form?".</li>
+          <li>In a sequence, every intermediate is checked before it is used: impurities travel and multiply.</li>
+        </ul>
+      </details>
+      <details class="learn"><summary>Safety reasoning</summary>
+        <p>Acetic anhydride is flammable and corrosive and its vapour attacks eyes and lungs; concentrated sulfuric and nitric acids cause severe burns, and nitric acid releases toxic NO₂; diethyl ether is extremely flammable; bromobenzene is toxic if inhaled; magnesium releases hydrogen with water; NaOH and KOH are corrosive. Every synthesis here needs a fume hood, goggles, gloves and supervised waste disposal. None of them can be done at home.</p>
+      </details>
+      <details class="learn"><summary>What can go wrong</summary>
+        <ul>
+          <li>Water in the reagents or glassware: destroyed anhydride or Grignard reagent, low yield.</li>
+          <li>Overheating: by-products, elimination, colour; bumping without boiling chips.</li>
+          <li>Keeping the wrong layer (the 1-bromobutane layer switches between washes).</li>
+          <li>Filtering warm, washing with warm solvent: product lost in the filtrate.</li>
+          <li>Weighing wet: yield over 100 % and a low melting point. Carrying an impure intermediate forward.</li>
+          <li>Wrong stoichiometry in the aldol: the mono product (1 : 1) or an oily excess of benzaldehyde (3 : 1).</li>
+        </ul>
+      </details>
+      <details class="learn"><summary>Data analysis</summary>
+        <p>Theoretical yield = moles of limiting reagent × M(product) (× ½ for the benzoin condensation); percent yield = mass/theoretical; atom economy = M(product)/ΣM(reactants). Export the runs table and use labs/module-24/lesson04_aspirin.py, lesson05_reactions.py and lesson06_practical.py. Quantify a contaminant from NMR integrals by scaling to a group both compounds share (for benzil and benzoin the 10 aromatic H): the 5.95 ppm integral is then the mole fraction of benzoin. Masses carry about ±0.01 g; a melting range wider than 2 °C or ending more than 2 °C low means impure.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    Physical data and hazards: PubChem compound pages and the NIST Chemistry WebBook (as in labs/module-24/org24.py); benzoic acid fusion data NIST (Ginnings and Furukawa 1953); other enthalpies of fusion from Walden's rule. Antoine constants: NIST WebBook. Partition data: PubChem pKa and log K<sub>ow</sub>. Spectra are described by typical key bands and shifts (OpenStax Organic Chemistry), never copied from SDBS. Rates, losses and recoveries are model values tuned to typical teaching-lab results (lessons 24.1–24.6). R from CODATA 2022.
+  </footer>
+</div>
+<script src="../common/sim.js"></script>
+<script src="ob-core.js"></script>
+<script src="ob-tech.js"></script>
+<script src="ob-synth.js"></script>
+<script src="ob-bench.js"></script>
+</body>
+</html>
