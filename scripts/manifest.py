@@ -253,4 +253,7 @@ def sidebar():
 if __name__ == "__main__":
     root = Path(__file__).resolve().parent.parent
     (root / "_sidebar.md").write_text(sidebar(), encoding="utf-8", newline="\n")
+    # The GitHub Pages preview (docsify) needs root-absolute links; the Academy reads _sidebar.md.
+    import re
+    (root / "preview/_sidebar.md").write_text(re.sub(r"\]\(([a-zA-Z])", r"](/\1", sidebar()), encoding="utf-8", newline="\n")
     print(f"{len(list(lessons()))} lessons, {len(MODULES)} modules")
